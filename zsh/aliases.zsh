@@ -1,0 +1,92 @@
+# Alias Management and ZSH Configuration
+alias adump='alias | tee $ZSH_CUSTOM/aliases.dump; ls -lah $ZSH_CUSTOM/aliases.dump'                   # Dump all aliases to file and show it
+alias al='alias | perl -pe "s/=/\x23/" | column -x -s$(printf "\x23") -t | cut -c-$(tput cols) | fzf'  # Fuzzy find aliases
+alias als='less -C $ZSH_CUSTOM/aliases.zsh'                                                            # View aliases file
+alias ag='alias | grep'                                                                                # Search aliases
+
+# ZSH Custom Directory Management
+alias zc='cd $ZSH_CUSTOM/'                                                                            # Go to ZSH custom dir
+alias zcc='z=$ZSH_CUSTOM/aliases.zsh; echo Sourcing $z; source $z'                                    # Source aliases file
+alias zca='echo "Add custom alias: Ctrl-C to cancel, or copy and paste, then Ctrl-D when done."; cat >> $ZSH_CUSTOM/aliases.zsh; zcc'  # Add new alias interactively
+alias zcv='vi $ZSH_CUSTOM/aliases.zsh; zcc'                                                           # Edit and source aliases
+alias zrc='vi $HOME/.zshrc; source $HOME/.zshrc'                                                      # Edit and source zshrc
+
+# Directory Stack Operations
+alias po='popd'                # Pop directory from stack
+alias pu='pushd'               # Push directory to stack
+alias dro='pushd -1; dirs -v'  # Rotate directory stack and show
+
+# File Listing Enhancements
+alias llt='ll -tr'                           # List by time, reversed
+alias lls='ll -sr'                           # List by size, reversed
+alias t='f() { tree -C $* | less -FRX }; f'  # Tree view with color in less
+# alias t='tree'
+
+# File Finding and Searching
+alias find=gfind               # Use GNU find
+alias fdi="fd -I"              # fd ignore gitignore
+alias jg="rg -t js -g '*.gs'"  # Search in Google Apps Script files
+
+# Homebrew
+alias bd='f() { brew search . | xargs brew desc 2>/dev/null | grep -i -E "$1" | fzf };f'  # Fuzzy search brew packages with descriptions
+
+# Development Tools
+alias clp='clear; clasp pull; git diff; gst'  # Clear, pull Google Apps Script, show git changes
+
+# Dotbare Management
+alias dots='dotbare'          # Dotbare shortcut
+alias dotss='dotbare status'  # Dotbare status
+alias dbs='dotbare status'    # Dotbare status (short)
+alias dbh='dotbare --help'    # Dotbare help
+#alias dbu='find $HOME -maxdepth 1 -name .\* -type d \! -name .  -exec tree -L 2 -C {} \; | less -C'
+alias dbu='find $HOME -maxdepth 1 -name .\* \! -name .  -exec tree -L 2 -C {} \; | less -C'  # Show dotfile tree
+alias dbls='dotbare ls-files' # List dotbare tracked files
+
+# Timestamp Functions
+alias ts='f() { base="${1%%.*}"; ext="${1#*.}"; delimiter="${2:-__}"; if [ "$base" = "$ext" ]; then echo "${base}${delimiter}$(date +%Y%m%dT%H%M)"; else echo "${base}${delimiter}$(date +%Y%m%dT%H%M).${ext}"; fi; }; f'       # Add timestamp (HHMM) to filename
+alias tss='f() { base="${1%%.*}"; ext="${1#*.}"; delimiter="${2:-__}"; if [ "$base" = "$ext" ]; then echo "${base}${delimiter}$(date +%Y%m%dT%H%M%S)"; else echo "${base}${delimiter}$(date +%Y%m%dT%H%M%S).${ext}"; fi; }; f'  # Add timestamp with seconds to filename
+alias tsd='f() { base="${1%%.*}"; ext="${1#*.}"; delimiter="${2:-__}"; if [ "$base" = "$ext" ]; then echo "${base}${delimiter}$(date +%Y%m%d)"; else echo "${base}${delimiter}$(date +%Y%m%d).${ext}"; fi; }; f'                # Add date to filename
+
+# Image Processing
+alias extract_images='f() { grep -oP "\[image\d+\]: <data:image/\w+;base64,\K[^>]*" "$1" | nl | while read -r num img_data; do echo $img_data | base64 --decode > image${num}.png; done }; f'  # Extract base64 encoded images from file
+alias extract_images_py='f() { python -c "import re, base64; [open(f\"{m[0]}.png\", \"wb\").write(base64.b64decode(m[1])) for m in re.findall(r\"\\[(image\\d+)\\]: <data:image/\\w+;base64,([A-Za-z0-9+/=]+)>\", open(\"$1\").read())]" }; f'  # Python version of image extraction
+
+# Graphviz
+alias dotopen='dotopen() { dot -Tpng "$1" -o "${1%.dot}.png" && open "${1%.dot}.png"; }; dotopen'     # Convert and open dot file
+
+# Git and Github Repository Management
+alias gro='open $(git remote get-url origin)'                                                         # Open repo in browser
+alias gitpullall='for d in */; do echo -n "$d..."; (cd "$d" && git pull --all); done'                 # Pull all repos in current dir
+alias gclones='for url in $(<urls.list); do echo $i; git clone "$url" "${url:t}__${url:h:t}" ; done'  # Clone repos from urls.list with namespaced dirs
+alias ghrepos='f() { 
+    OWNER="${1}"; 
+    [[ "$OWNER" =~ ^https?://(www\.)?github\.com/(.+)/?$ ]] && OWNER="${BASH_REMATCH[2]}";
+    mkdir -p "$OWNER";
+    cd "$OWNER";
+    gh repo list "$OWNER" --json name,description,url,createdAt,updatedAt,stargazerCount,forkCount,languages,owner --limit 100 | 
+    tee repos.json | 
+    jq ".[].url" -r | 
+    tee repos.list;
+    echo "Created $OWNER/repos.list - run \"cd $OWNER && gcll\" to clone all repos";
+    cd ..;
+    unset -f f; 
+}; f'  # List all repos for a GitHub user/org
+alias ghfork='f() { repo=$1; owner=$(basename $(dirname "$repo")); name=$(basename "$repo"); gh repo fork "$repo" --clone; mv "$name" "${name}__${owner}"; }; f'  # Fork and clone with namespaced dir
+alias gcl='f() { 
+    url=$1; 
+    git clone "$url" "${url:t}"; 
+}; f'
+gcll() { local filename="${1:-repos.list}"; while read -r i; do echo "$i"; gcl "$i"; done < "$filename"; }  # Clone all repos from list file
+
+# Git Ignore and File Management
+alias giglv='cat .git/info/exclude'                                                                           # View local gitignore
+alias gigl='function _gigl() { for f in "$@"; do echo "$f" >> .git/info/exclude; done; giglv }; _gigl'        # Add to local gitignore
+alias gigau='function _gigau() { for f in "$@"; do git update-index --assume-unchanged "$f"; done }; _gigau'  # Mark files as assume-unchanged
+alias gigwt='function _gigwt() { for f in "$@"; do git update-index --skip-worktree "$f"; done }; _gigwt'     # Mark files as skip-worktree
+alias gigauv='git ls-files -v | grep "^[a-z]"'                                                                # List assume-unchanged files
+alias gigwtv='git ls-files -v | grep "^[S]"'                                                                  # List skip-worktree files
+
+# Git Shortcuts
+alias gi='git init'       # Initialize git repo
+alias gcom='git gcommit'  # Custom git commit
+alias gcoma='git ac'      # Git add and commit
