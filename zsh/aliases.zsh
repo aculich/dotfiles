@@ -19,12 +19,13 @@ alias dro='pushd -1; dirs -v'  # Rotate directory stack and show
 # File Listing Enhancements
 alias llt='ll -tr'                           # List by time, reversed
 alias lls='ll -sr'                           # List by size, reversed
-alias t='f() { tree -C $* | less -FRX }; f'  # Tree view with color in less
+alias t='f() { tree -a -I .git -C $* | less -FRX }; f'  # Tree view with color in less
 # alias t='tree'
 
 # File Finding and Searching
 alias find=gfind               # Use GNU find
 alias fdi="fd -I"              # fd ignore gitignore
+alias fda="fd -H"              # fd show all hidden files
 alias jg="rg -t js -g '*.gs'"  # Search in Google Apps Script files
 
 # Homebrew
