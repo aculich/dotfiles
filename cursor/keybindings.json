@@ -204,3 +204,7 @@
         "when": "inFileBrowser"
     }
 ]
+
+// NOTES:
+// defaults write -g ApplePressAndHoldEnabled -bool false                         // disable accept popup on press and hold
+// defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false // disable insert period on double space
