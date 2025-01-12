@@ -20,7 +20,8 @@ if [ ! -d "$GCOP_DIR" ]; then
     echo "Installing gcop from GitHub..."
     mkdir -p "$HOME/tools"
     git clone https://github.com/Undertone0809/gcop.git "$GCOP_DIR"
-    (cd "$GCOP_DIR" && make install)  # Update if gcop has specific installation steps
+    #(cd "$GCOP_DIR" && make install)  # Update if gcop has specific installation steps
+    pip install gcop
 else
     echo "gcop is already installed at $GCOP_DIR"
 fi
