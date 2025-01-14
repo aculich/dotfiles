@@ -49,5 +49,6 @@
         }
     ],
     "editor.accessibilitySupport": "off",
-    "editor.renderWhitespace": "none"
+    "editor.renderWhitespace": "none",
+    "git.autofetch": true
 }
