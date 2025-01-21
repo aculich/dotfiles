@@ -50,5 +50,8 @@
     ],
     "editor.accessibilitySupport": "off",
     "editor.renderWhitespace": "none",
-    "git.autofetch": true
+    "git.autofetch": true,
+    "magit.forge-enabled": true,
+    "magit.code-path": "cursor",
+    "terminal.integrated.inheritEnv": false
 }
