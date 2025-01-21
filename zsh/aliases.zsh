@@ -1,7 +1,7 @@
 # Alias Management and ZSH Configuration
 alias adump='alias | tee $ZSH_CUSTOM/aliases.dump; ls -lah $ZSH_CUSTOM/aliases.dump'                   # Dump all aliases to file and show it
 alias al='alias | perl -pe "s/=/\x23/" | column -x -s$(printf "\x23") -t | cut -c-$(tput cols) | fzf'  # Fuzzy find aliases
-alias als='less -C $ZSH_CUSTOM/aliases.zsh'                                                            # View aliases file
+#alias als='less -C $ZSH_CUSTOM/aliases.zsh'                                                            # View aliases file
 alias ag='alias | grep'                                                                                # Search aliases
 
 # ZSH Custom Directory Management
@@ -24,7 +24,7 @@ alias t='local f; f(){ tree -a -I .git -C $* | less -FRX }; f'  # Tree view with
 
 # File Finding and Searching
 alias find=gfind               # Use GNU find
-alias fdi="fd -I"              # fd ignore gitignore
+alias fdi="fd -HI"             # fd ignore gitignore
 alias fda="fd -H"              # fd show all hidden files
 alias jg="rg -t js -g '*.gs'"  # Search in Google Apps Script files
 
@@ -83,8 +83,11 @@ alias gigau='local f; f() { for f in "$@"; do git update-index --assume-unchange
 alias gigwt='local f; f() { for f in "$@"; do git update-index --skip-worktree "$f"; done }; f'     # Mark files as skip-worktree
 alias gigauv='git ls-files -v | grep "^[a-z]"'                                                                # List assume-unchanged files
 alias gigwtv='git ls-files -v | grep "^[S]"'                                                                  # List skip-worktree files
-
+alias current_branch='git rev-parse --abbrev-ref HEAD'
+alias gbsu='git branch --set-upstream-to=origin/$(current_branch) $(current_branch)'
+ 
 # Git Shortcuts
 alias gi='git init'       # Initialize git repo
 alias gcom='git gcommit'  # Custom git commit
 alias gcoma='git ac'      # Git add and commit
+alias ged='git diff HEAD~1 | llm -s "explain changes from last commit"'
