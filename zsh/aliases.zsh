@@ -90,7 +90,7 @@ alias gbsu='git branch --set-upstream-to=origin/$(current_branch) $(current_bran
 alias gi='git init'       # Initialize git repo
 alias gcom='git gcommit'  # Custom git commit
 alias gcoma='git ac'      # Git add and commit
-alias ged='git diff HEAD~1 | llm -s "explain changes from last commit"'
+alias ged='git diff HEAD~1 | llm -m 4o-mini -s "explain changes from last commit"'
 
 alias pc='pbcopy'
 
