@@ -4,22 +4,22 @@
     {
         "key": "ctrl+h",
         "command": "workbench.action.navigateLeft",
-        "when": "!inQuickOpen && !suggestWidgetVisible && !parameterHintsVisible && !isInDiffEditor"
+        "when": "!terminalFocus && !inQuickOpen && !suggestWidgetVisible && !parameterHintsVisible && !isInDiffEditor"
     },
     {
         "key": "ctrl+j",
         "command": "workbench.action.navigateDown",
-        "when": "!codeActionMenuVisible && !inQuickOpen && !suggestWidgetVisible && !parameterHintsVisible"
+        "when": "!terminalFocus && !codeActionMenuVisible && !inQuickOpen && !suggestWidgetVisible && !parameterHintsVisible"
     },
     {
         "key": "ctrl+k",
         "command": "workbench.action.navigateUp",
-        "when": "!codeActionMenuVisible && !inQuickOpen && !suggestWidgetVisible && !parameterHintsVisible"
+        "when": "!terminalFocus && !codeActionMenuVisible && !inQuickOpen && !suggestWidgetVisible && !parameterHintsVisible"
     },
     {
         "key": "ctrl+l",
         "command": "workbench.action.navigateRight",
-        "when": "!codeActionMenuVisible && !inQuickOpen && !suggestWidgetVisible && !parameterHintsVisible && !isInDiffEditor"
+        "when": "!terminalFocus && !codeActionMenuVisible && !inQuickOpen && !suggestWidgetVisible && !parameterHintsVisible && !isInDiffEditor"
     },
 
     // Quick Navigation for diff view
@@ -198,12 +198,18 @@
         "command": "file-browser.stepOut",
         "when": "inFileBrowser"
     },
+    // {
+    //     "key": "ctrl+l",
+    //     "command": "file-browser.stepIn",
+    //     "when": "inFileBrowser"
+    // },
     {
         "key": "ctrl+l",
-        "command": "file-browser.stepIn",
-        "when": "inFileBrowser"
+        "when": "terminalFocus",
+        "command": "-workbench.action.showActivityBar"
     }
 ]
+
 
 // NOTES:
 // defaults write -g ApplePressAndHoldEnabled -bool false                         // disable accept popup on press and hold
