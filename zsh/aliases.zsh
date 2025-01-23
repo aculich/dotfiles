@@ -8,7 +8,7 @@ alias ag='alias | grep'                                                         
 alias zc='cd $ZSH_CUSTOM/'                                                                            # Go to ZSH custom dir
 alias zcc='z=$ZSH_CUSTOM/aliases.zsh; echo Sourcing $z; source $z'                                    # Source aliases file
 alias zca='echo "Add custom alias: Ctrl-C to cancel, or copy and paste, then Ctrl-D when done."; cat >> $ZSH_CUSTOM/aliases.zsh; zcc'  # Add new alias interactively
-alias zcv='vi $ZSH_CUSTOM/aliases.zsh; zcc'                                                           # Edit and source aliases
+alias zcv='vi $ZSH_CUSTOM/aliases.zsh; zcc; (cd ~/dotfiles/zsh; git add aliases.zsh; gcom)'              # Edit and source aliases
 alias zrc='vi $HOME/.zshrc; source $HOME/.zshrc'                                                      # Edit and source zshrc
 
 # Directory Stack Operations
@@ -91,3 +91,6 @@ alias gi='git init'       # Initialize git repo
 alias gcom='git gcommit'  # Custom git commit
 alias gcoma='git ac'      # Git add and commit
 alias ged='git diff HEAD~1 | llm -s "explain changes from last commit"'
+
+alias pc='pbcopy'
+
