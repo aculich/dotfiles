@@ -1,6 +1,3 @@
-Here's the markdown table with the third column (Command) removed as per your request:
-
-```markdown
 | Alias                  | Explanation                                                                                                       |
 |------------------------|-------------------------------------------------------------------------------------------------------------------|
 | gk                     | Lists all branches and tags, showing detailed information.                                                      |
@@ -218,5 +215,4 @@ Here's the markdown table with the third column (Command) removed as per your re
 | gigau                  | Locally updates the index to treat specified files as unchanged.                                               |
 | gigl                   | Adds specified files to the Git ignore list.                                                                   |
 | gigwt                  | Locally updates the index to skip tracking specified files.                                                     |
-```
 

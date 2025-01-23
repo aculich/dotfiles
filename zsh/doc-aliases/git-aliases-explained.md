@@ -1,6 +1,3 @@
-Here's a markdown table that summarizes the provided Git aliases with clear explanations and their corresponding commands:
-
-```markdown
 | Alias                  | Explanation                                                                                                       | Command                                                                                   |
 |------------------------|-------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
 | gk                     | Lists all branches and tags, showing detailed information.                                                      | `gitk --all --branches &!`                                                              |
@@ -218,7 +215,3 @@ Here's a markdown table that summarizes the provided Git aliases with clear expl
 | gigau                  | Locally updates the index to treat specified files as unchanged.                                               | `for f in "$@"; do git update-index --assume-unchanged "$f"; done`                       |
 | gigl                   | Adds specified files to the Git ignore list.                                                                   | `for f in "$@"; do echo "$f" >> .git/info/exclude; done; giglv`                           |
 | gigwt                  | Locally updates the index to skip tracking specified files.                                                     | `for f in "$@"; do git update-index --skip-worktree "$f"; done`                           |
-
-```
-
-This table includes all the aliases provided, accompanied by meaningful explanations that distinguish between similar commands or concepts, ensuring clarity for users who may be new to Git or the shortcuts defined.
