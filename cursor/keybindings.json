@@ -207,6 +207,12 @@
         "key": "ctrl+l",
         "when": "terminalFocus",
         "command": "-workbench.action.showActivityBar"
+    },
+
+    // https://docs.cursor.com/features/generate-commit-message
+    {
+        "key": "cmd+m",
+        "command": "cursor.generateGitCommitMessage"
     }
 ]
 
