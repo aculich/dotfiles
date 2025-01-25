@@ -53,5 +53,7 @@
     "git.autofetch": true,
     "magit.forge-enabled": true,
     "magit.code-path": "cursor",
-    "terminal.integrated.inheritEnv": false
+    "terminal.integrated.inheritEnv": false,
+    "magit.display-buffer-function": "same-column",
+    "magit.quick-switch-enabled": true
 }
