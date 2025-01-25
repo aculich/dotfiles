@@ -213,6 +213,7 @@
     {
         "key": "cmd+m",
         "command": "cursor.generateGitCommitMessage"
+        // "when": "scm.inputBoxFocus"
     },
     {
         "key": "ctrl+x d",
@@ -227,6 +228,22 @@
         "command": "workbench.action.terminal.sendSequence", 
         "args": {
             "text": "\u001b."  // ESC + . sequence
+        },
+        "when": "terminalFocus"
+    },
+    {
+        "key": "alt+b",
+        "command": "workbench.action.terminal.sendSequence", 
+        "args": {
+            "text": "\u001bb"  // ESC + . sequence
+        },
+        "when": "terminalFocus"
+    },
+    {
+        "key": "alt+f",
+        "command": "workbench.action.terminal.sendSequence", 
+        "args": {
+            "text": "\u001bf"  // ESC + . sequence
         },
         "when": "terminalFocus"
     },
