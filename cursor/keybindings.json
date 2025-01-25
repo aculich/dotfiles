@@ -218,6 +218,17 @@
         "key": "ctrl+x d",
         "command": "extension.dired.open",
         "when": "editorTextFocus && !inDebugRepl"
+    },
+    // Enable Alt+. to jump to definition in terminal
+    // This sends the escape sequence \u001b (ESC) followed by . 
+    // which is the standard key sequence for "go to definition" in many shells
+    {
+        "key": "alt+.",
+        "command": "workbench.action.terminal.sendSequence", 
+        "args": {
+            "text": "\u001b."  // ESC + . sequence
+        },
+        "when": "terminalFocus"
     }
 ]
 
