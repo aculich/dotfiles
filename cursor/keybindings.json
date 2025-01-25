@@ -213,6 +213,11 @@
     {
         "key": "cmd+m",
         "command": "cursor.generateGitCommitMessage"
+    },
+    {
+        "key": "ctrl+x d",
+        "command": "extension.dired.open",
+        "when": "editorTextFocus && !inDebugRepl"
     }
 ]
 
