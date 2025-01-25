@@ -236,3 +236,5 @@
 // NOTES:
 // defaults write -g ApplePressAndHoldEnabled -bool false                         // disable accept popup on press and hold
 // defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false // disable insert period on double space
+// defaults write -g KeyRepeat -int 1                                            // set keyboard repeat rate to fastest
+// defaults write -g InitialKeyRepeat -int 10                                    // set key repeat delay to shortest
