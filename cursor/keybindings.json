@@ -229,6 +229,15 @@
             "text": "\u001b."  // ESC + . sequence
         },
         "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+x ctrl+f",
+        "command": "workbench.action.quickOpen"
+    },
+    {
+        "key": "ctrl+x ctrl+f",
+        "command": "-workbench.action.quickOpen",
+        "when": "!terminalFocus"
     }
 ]
 
