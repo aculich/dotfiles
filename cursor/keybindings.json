@@ -215,6 +215,12 @@
         "command": "cursor.generateGitCommitMessage"
         // "when": "scm.inputBoxFocus"
     },
+    // https://docs.cursor.com/features/generate-commit-message
+    {
+        "key": "ctrl+shift+m",
+        "command": "cursor.generateGitCommitMessage",
+        "when": "workbench.scm.active"
+    },
     {
         "key": "ctrl+x d",
         "command": "extension.dired.open",
@@ -253,8 +259,22 @@
     },
     {
         "key": "ctrl+x ctrl+f",
+        "command": "workbench.action.quickOpen",
+        "when": "focusedView == 'workbench.panel.composerViewPane2.view'"
+    },
+    {
+        "key": "ctrl+x ctrl+f",
+        "command": "workbench.action.quickOpen",
+        "when": "focusedView == 'workbench.panel.aichat.view'"
+    },
+    {
+        "key": "ctrl+x ctrl+f",
         "command": "-workbench.action.quickOpen",
         "when": "!terminalFocus"
+    },
+    {
+        "key": "ctrl+shift+m",
+        "command": "-editor.action.toggleTabFocusMode"
     }
 ]
 
