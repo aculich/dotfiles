@@ -12,7 +12,7 @@ alias zcv='vi $ZSH_CUSTOM/aliases.zsh; zcc; (cd ~/dotfiles/zsh; git add aliases.
 alias zrc='vi $HOME/.zshrc; source $HOME/.zshrc'                                                      # Edit and source zshrc
 
 # Directory Stack Operations
-alias po='popd'                # Pop directory from stack
+alias po='popd; dirs -v'       # Pop directory from stack
 alias pu='pushd'               # Push directory to stack
 alias dro='pushd -1; dirs -v'  # Rotate directory stack and show
 
