@@ -55,5 +55,9 @@
     "magit.code-path": "cursor",
     "terminal.integrated.inheritEnv": false,
     "magit.display-buffer-function": "same-column",
-    "magit.quick-switch-enabled": true
+    "magit.quick-switch-enabled": true,
+    "extensions.autoUpdate": true,
+    "extensions.autoCheckUpdates": true,
+    "extensions.verifySignature": false,
+    "geminicodeassist.project": ""
 }
