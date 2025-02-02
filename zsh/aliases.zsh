@@ -95,7 +95,7 @@ alias gcoma='git ac'      # Git add and commit
 alias ged='git diff HEAD~1 | llm -m 4o-mini -s "explain changes from last commit"'
 
 alias pc='pbcopy'
-nf() {
+nf() { # next file in date sequence YYYY-MM-DD-X 
     local filename="$1"  # Get the filename from the first argument
     local extension="${filename##*.}"  # Extract the file extension
     local base="${filename%.*}-$(date +%Y-%m-%d)"  # Create the base name with the current date
@@ -110,7 +110,7 @@ nf() {
     touch "${base}-${i}.${extension}"
     echo "Created file: ${base}-${i}.${extension}"
 }
-lf() {
+lf() { # latest file in date sequence YYYY-MM-DD-X
     local filename="$1"  # Get the base filename from the first argument
     local extension="${filename##*.}"  # Extract the file extension
     local base="${filename%.*}-$(date +%Y-%m-%d)"  # Base name with the current date
