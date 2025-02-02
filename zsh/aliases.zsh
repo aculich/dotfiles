@@ -56,7 +56,8 @@ alias extract_images_py='local f; f() { python -c "import re, base64; [open(f\"{
 alias dotopen='local f; f() { dot -Tpng "$1" -o "${1%.dot}.png" && open "${1%.dot}.png"; }; f'     # Convert and open dot file
 
 # Git and Github Repository Management
-alias gro='open $(git remote get-url origin)'                                                         # Open repo in browser
+#alias gro='open $(git remote get-url origin)'                                                         # Open repo in browser
+alias gro='open ${(S)${${(M)$(git remote get-url origin)#git@github.com:*}#git@github.com:}#https://github.com/} | sed "s/\.git$//"'
 alias grp='git remote get-url origin | pbcopy; pbpaste'                                               # Copy git remote to paste buffer
 alias gitpullall='for d in */; do echo -n "$d..."; (cd "$d" && git pull --all); done'                 # Pull all repos in current dir
 alias gclones='for url in $(<urls.list); do echo $i; git clone "$url" "${url:t}__${url:h:t}" ; done'  # Clone repos from urls.list with namespaced dirs
