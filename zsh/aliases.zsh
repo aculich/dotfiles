@@ -98,7 +98,7 @@ alias pc='pbcopy'
 
 date_file_with_increment() {
     local action="$1"   # "nf" (new file) or "lf" (latest file)
-    local filename="$2" # Base filename
+    local filename="${2:-untitled.txt}"  # Default to "untitled.txt" if no filename is provided
     local extension="${filename##*.}"
     local base="${filename%.*}-$(date +%Y-%m-%d)"
     local i=0
@@ -108,15 +108,8 @@ date_file_with_increment() {
     latest_file=$(ls -v "${base}"-*.${extension} 2>/dev/null | tail -n 1)
 
     if [[ "$action" == "lf" ]]; then
-        # Return the latest file if found
-        if [[ -n "$latest_file" ]]; then
-            echo "$latest_file"
-        else
-            echo "No matching files found for ${base}-*.${extension}" >&2
-            return 1
-        fi
+        echo "${latest_file:-$base-0.$extension}"  # If no file exists, return the first expected filename
     elif [[ "$action" == "nf" ]]; then
-        # Determine the next available file index
         if [[ -n "$latest_file" ]]; then
             i=$(( ${latest_file##*-} ))  # Extract the last number from the latest file
             ((i++))  # Increment to get the next available index
