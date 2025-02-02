@@ -104,6 +104,9 @@ date_file_with_increment() {
     local i=0
     local latest_file
 
+    # Enable NULL_GLOB temporarily to avoid errors if no files exist
+    setopt LOCAL_OPTIONS NULL_GLOB
+
     # Find the latest existing file
     latest_file=$(ls -v "${base}"-*.${extension} 2>/dev/null | tail -n 1)
 
@@ -128,4 +131,3 @@ date_file_with_increment() {
 
 nf() { date_file_with_increment "nf" "$1"; }  # Create the next available file with a date-based sequence
 lf() { date_file_with_increment "lf" "$1"; }  # Get the latest file in the date-based sequence
-
