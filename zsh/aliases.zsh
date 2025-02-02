@@ -124,7 +124,7 @@ date_file_with_increment() {
 
         local new_file="${base}-${i}.${extension}"
         touch "$new_file"
-        echo "Created file: $new_file"
+        echo "$new_file"
     else
         echo "Invalid action. Use 'nf' to create a new file or 'lf' to find the latest file." >&2
         return 1
