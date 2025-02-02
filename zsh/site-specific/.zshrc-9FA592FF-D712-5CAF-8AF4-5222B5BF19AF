@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="random" # set by `omz`
+ZSH_THEME="cloud" # set by `omz`
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -70,8 +70,9 @@ ZSH_THEME="random" # set by `omz`
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(alias-finder aliases brew catimg colorize command-not-found common-aliases docker docker-compose fzf gcloud git gh docker gitignore history iterm2 macos magic-enter minikube python asdf pip qrcode rsync ssh tmux web-search z zsh-git-fzf fancy-ctrl-z)
 
+#plugins=(alias-finder aliases brew catimg colorize command-not-found common-aliases docker docker-compose fzf gcloud git gh docker gitignore history iterm2 macos magic-enter minikube python asdf pip qrcode rsync ssh tmux web-search z zsh-git-fzf fancy-ctrl-z dirhistory man per-directory-history zsh-interactive-cd zsh-navigation-tools tldr)
+plugins=(alias-finder aliases brew catimg colorize command-not-found common-aliases docker docker-compose fzf gcloud git gh docker gitignore history iterm2 macos magic-enter minikube python asdf pip qrcode rsync ssh tmux web-search z zsh-git-fzf fancy-ctrl-z tldr)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
