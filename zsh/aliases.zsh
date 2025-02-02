@@ -111,8 +111,10 @@ date_file_with_increment() {
         echo "${latest_file:-$base-0.$extension}"  # If no file exists, return the first expected filename
     elif [[ "$action" == "nf" ]]; then
         if [[ -n "$latest_file" ]]; then
-            i=$(( ${latest_file##*-} ))  # Extract the last number from the latest file
-            ((i++))  # Increment to get the next available index
+            # Extract the last number in the sequence using Zsh-compatible regex matching
+            if [[ "$latest_file" =~ ${base}-([0-9]+)\.${extension} ]]; then
+                i=$(( match[1] + 1 ))  # Use Zsh's match array instead of BASH_REMATCH
+            fi
         fi
 
         local new_file="${base}-${i}.${extension}"
