@@ -94,7 +94,7 @@ alias gi='git init'       # Initialize git repo
 alias gcom='git gcommit'  # Custom git commit
 alias gcoma='git ac'      # Git add and commit
 alias ged='git diff HEAD~1 | llm -m 4o-mini -s "explain changes from last commit"'
-alias gpdl='git push --dry-run && git log --oneline --decorate @{push}..HEAD'
+alias gpdl='(git push --dry-run; echo; git log --oneline --decorate @{push}..HEAD) | less -R'
 
 alias pc='pbcopy'
 
