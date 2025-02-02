@@ -95,35 +95,42 @@ alias gcoma='git ac'      # Git add and commit
 alias ged='git diff HEAD~1 | llm -m 4o-mini -s "explain changes from last commit"'
 
 alias pc='pbcopy'
-nf() { # next file in date sequence YYYY-MM-DD-X 
-    local filename="$1"  # Get the filename from the first argument
-    local extension="${filename##*.}"  # Extract the file extension
-    local base="${filename%.*}-$(date +%Y-%m-%d)"  # Create the base name with the current date
+
+date_file_with_increment() {
+    local action="$1"   # "nf" (new file) or "lf" (latest file)
+    local filename="$2" # Base filename
+    local extension="${filename##*.}"
+    local base="${filename%.*}-$(date +%Y-%m-%d)"
     local i=0
-
-    # Increment the index until a unique filename is found
-    while [[ -e "${base}-${i}.${extension}" ]]; do
-        ((i++))
-    done
-
-    # Create the new file
-    touch "${base}-${i}.${extension}"
-    echo "Created file: ${base}-${i}.${extension}"
-}
-lf() { # latest file in date sequence YYYY-MM-DD-X
-    local filename="$1"  # Get the base filename from the first argument
-    local extension="${filename##*.}"  # Extract the file extension
-    local base="${filename%.*}-$(date +%Y-%m-%d)"  # Base name with the current date
-
-    # Find the latest file based on the highest increment number
     local latest_file
+
+    # Find the latest existing file
     latest_file=$(ls -v "${base}"-*.${extension} 2>/dev/null | tail -n 1)
 
-    if [[ -n "$latest_file" ]]; then
-        echo "$latest_file"
+    if [[ "$action" == "lf" ]]; then
+        # Return the latest file if found
+        if [[ -n "$latest_file" ]]; then
+            echo "$latest_file"
+        else
+            echo "No matching files found for ${base}-*.${extension}" >&2
+            return 1
+        fi
+    elif [[ "$action" == "nf" ]]; then
+        # Determine the next available file index
+        if [[ -n "$latest_file" ]]; then
+            i=$(( ${latest_file##*-} ))  # Extract the last number from the latest file
+            ((i++))  # Increment to get the next available index
+        fi
+
+        local new_file="${base}-${i}.${extension}"
+        touch "$new_file"
+        echo "Created file: $new_file"
     else
-        echo "No matching files found for ${base}-*.${extension}" >&2
+        echo "Invalid action. Use 'nf' to create a new file or 'lf' to find the latest file." >&2
         return 1
     fi
 }
+
+nf() { date_file_with_increment "nf" "$1"; }  # Create the next available file with a date-based sequence
+lf() { date_file_with_increment "lf" "$1"; }  # Get the latest file in the date-based sequence
 
