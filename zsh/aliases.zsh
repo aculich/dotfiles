@@ -61,19 +61,38 @@ alias gro='open ${$(git remote get-url origin):gs/git@github.com:/https:\/\/gith
 alias grp='git remote get-url origin | pbcopy; pbpaste'                                               # Copy git remote to paste buffer
 alias gitpullall='for d in */; do echo -n "$d..."; (cd "$d" && git pull --all); done'                 # Pull all repos in current dir
 alias gclones='for url in $(<urls.list); do echo $i; git clone "$url" "${url:t}__${url:h:t}" ; done'  # Clone repos from urls.list with namespaced dirs
-alias ghrepos='local f; f() { 
-    OWNER="${1}"; 
-    [[ "$OWNER" =~ ^https?://(www\.)?github\.com/(.+)/?$ ]] && OWNER="${BASH_REMATCH[2]}";
-    mkdir -p "$OWNER";
-    cd "$OWNER";
-    gh repo list "$OWNER" --json name,description,url,createdAt,updatedAt,stargazerCount,forkCount,languages,owner --limit 100 | 
-    tee repos.json | 
-    jq ".[].url" -r | 
-    tee repos.list;
-    echo "Created $OWNER/repos.list - run \"cd $OWNER && gcll\" to clone all repos";
-    cd ..;
-    unset -f f; 
-}; f'  # List all repos for a GitHub user/org
+
+alias ghrepos='
+local f
+f() {
+  # Save the original directory
+  local orig_dir="$(pwd)"
+  
+  # Extract the owner name if the argument is a URL
+  local OWNER="$1"
+  [[ "$OWNER" =~ ^https?://(www\.)?github\.com/(.+)/?$ ]] && OWNER="${BASH_REMATCH[2]}"
+  
+  # Create a directory for the owner and change into it
+  mkdir -p "$OWNER"
+  cd "$OWNER" || return
+  
+  # List the repositories and process the output
+  gh repo list "$OWNER" --json name,description,url,createdAt,updatedAt,stargazerCount,forkCount,languages,owner --limit 100 |
+    tee repos.json |
+    jq ".[].url" -r |
+    tee repos.list
+  
+  echo "Created $OWNER/repos.list - run \"cd $OWNER && gcll\" to clone all repos"
+  
+  # Return to the original directory
+  cd "$orig_dir" || return
+  
+  unset -f f
+}
+f
+'
+
+
 alias ghfork='local f; f() { repo=$1; owner=$(basename $(dirname "$repo")); name=$(basename "$repo"); gh repo fork "$repo" --clone; mv "$name" "${name}__${owner}"; }; f'  # Fork and clone with namespaced dir
 alias gcl='local f; f() { url=$1; git clone "$url" "${url:t}"; }; f'
 alias gcls='local f; f() { url=$1; git clone --depth=1 --no-single-branch "$url" "${url:t}"; }; f'
