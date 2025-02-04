@@ -226,6 +226,11 @@
         "command": "extension.dired.open",
         "when": "editorTextFocus && !inDebugRepl"
     },
+    {
+        "key": "ctrl+x d",
+        "command": "extension.dired.open",
+        "when": "inputFocus && editorLangId == 'chat'"
+    },
     // Enable Alt+. to jump to definition in terminal
     // This sends the escape sequence \u001b (ESC) followed by . 
     // which is the standard key sequence for "go to definition" in many shells
@@ -265,7 +270,28 @@
     {
         "key": "ctrl+x ctrl+f",
         "command": "workbench.action.quickOpen",
+        "when": "inputFocus && editorLangId == 'plaintext'"
+    },
+    {
+        "key": "ctrl+x ctrl+f",
+        "command": "workbench.action.quickOpen",
         "when": "focusedView == 'workbench.panel.aichat.view'"
+    },
+    // https://marketplace.visualstudio.com/items?itemName=YuTengjing.vscode-classic-experience
+    // https://github.com/tjx666/vscode-classic-experience
+    {
+        "key": "ctrl+x ctrl+f",
+        "command": "workbench.action.quickOpen",
+        "when": "!editorFocus && !terminalFocus"
+        // "when": "composerBarIsVisible"
+        // "when": "aichat.view.focused"
+        // "when": "view.workbench.panel.aichat.view.visible && focusedView == 'workbench.panel.aichat.view'"
+        // "when": "view.workbench.panel.aichat.view.visible"
+    },
+    {
+        "key": "ctrl+x ctrl+f",
+        "command": "workbench.action.quickOpen",
+        "when": "inputFocus && editorLangId == 'chat'"
     },
     {
         "key": "ctrl+x ctrl+f",
