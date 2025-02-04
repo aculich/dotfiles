@@ -279,7 +279,7 @@
     },
     // https://marketplace.visualstudio.com/items?itemName=YuTengjing.vscode-classic-experience
     // https://github.com/tjx666/vscode-classic-experience
-    {
+    { // FIXME: this is not working no matter what I try
         "key": "ctrl+x ctrl+f",
         "command": "workbench.action.quickOpen",
         "when": "!editorFocus && !terminalFocus"
