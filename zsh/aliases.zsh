@@ -24,6 +24,7 @@ alias t='local f; f(){ tree -a -I .git -C $* | less -FRX }; f'  # Tree view with
 
 # File Finding and Searching
 alias find=gfind               # Use GNU find
+unalias fd                     # brew install fd
 alias fdi="fd -HI"             # fd ignore gitignore
 alias fda="fd -H"              # fd show all hidden files
 alias jg="rg -t js -g '*.gs'"  # Search in Google Apps Script files
