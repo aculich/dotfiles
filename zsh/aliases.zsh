@@ -157,3 +157,4 @@ alias ndu='ncdu -1xo- > $(nf ncdu.jsonl); ncdu -f $(lf ncdu.jsonl)'
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+# defaults write -g AppleLocale "en_US.UTF-8"
