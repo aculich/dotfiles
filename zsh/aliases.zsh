@@ -154,3 +154,6 @@ date_file_with_increment() {
 nf() { date_file_with_increment "nf" "$1"; }  # Create the next available file with a date-based sequence
 lf() { date_file_with_increment "lf" "$1"; }  # Get the latest file in the date-based sequence
 alias ndu='ncdu -1xo- > $(nf ncdu.jsonl); ncdu -f $(lf ncdu.jsonl)'
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
