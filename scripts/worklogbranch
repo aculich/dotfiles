@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+
+# feat: add worklogbranch script for git branch and worktree management
+
+# - Generate a branch and worktree based on the current committer's email
+# - Automatically find the latest commit by the current committer
+# - Create a branch and worktree with a predictable naming convention
+
+# This script simplifies the process of creating personalized branches and
+# worktrees in git repositories, making it easier for developers to manage their
+# work across different contexts.
+
+
+# Get the username portion of the most recent commit's email
+USER_EMAIL=$(git log --format='%ae' | head -n 1)
+USER_NAME=${USER_EMAIL%%@*}  # Extract username from email
+
+# Get the repository name
+REPO_NAME=$(basename "$(git rev-parse --show-toplevel)")
+
+# Construct branch and worktree name
+BRANCH_NAME="${USER_NAME}"
+WORKTREE_DIR="../../${REPO_NAME}_${USER_NAME}"
+
+# Create a new branch at the first commit from this user
+COMMIT_HASH=$(git log --format='%H %ae' --reverse | awk -v user="$USER_EMAIL" '$2 == user { print $1; exit }')
+
+if [ -z "$COMMIT_HASH" ]; then
+  echo "No commits found for user: $USER_EMAIL"
+  exit 1
+fi
+
+# Create branch at the specific commit
+git branch "$BRANCH_NAME" "$COMMIT_HASH"
+
+# Add worktree
+git worktree add "$WORKTREE_DIR" "$BRANCH_NAME"
+
+echo "Created branch '$BRANCH_NAME' at commit '$COMMIT_HASH' and worktree at '$WORKTREE_DIR'"
