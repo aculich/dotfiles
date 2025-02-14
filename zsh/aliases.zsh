@@ -79,9 +79,28 @@ alias gclones='for url in $(<urls.list); do echo $i; git clone "$url" "${url:t}_
 #
 # Note: Requires GitHub CLI (gh) and jq to be installed
 alias ghrepos='local f; f() {
+  # Require an argument
+  if [[ -z "$1" ]]; then
+    echo "Error: Please provide a GitHub username or organization"
+    echo "Usage: ghrepos USERNAME or ghrepos https://github.com/USERNAME"
+    return 1
+  }
+
   # Extract the owner name if the argument is a URL
   local OWNER="$1"
-  [[ "$OWNER" =~ ^https?://(www\.)?github\.com/(.+)/?$ ]] && OWNER="${BASH_REMATCH[2]}"
+  # Remove any @ prefix
+  OWNER="${OWNER#@}"
+  # Extract owner from URL if present
+  if [[ "$OWNER" =~ ^https?://(www\.)?github\.com/([^/]+)(/.*)?$ ]]; then
+    OWNER="${BASH_REMATCH[2]}"
+  fi
+
+  # Validate owner name
+  if [[ ! "$OWNER" =~ ^[A-Za-z0-9][A-Za-z0-9-]*$ ]]; then
+    echo "Error: Invalid GitHub username or organization: $OWNER"
+    echo "Username must contain only alphanumeric characters or hyphens, and cannot begin with a hyphen"
+    return 1
+  }
   
   # Use subshell to avoid changing current directory for the user
   (
@@ -91,6 +110,12 @@ alias ghrepos='local f; f() {
     
     # List the repositories and save full info
     gh repo list "$OWNER" --json name,description,url,createdAt,updatedAt,stargazerCount,forkCount,languages,owner --limit 100 > repos.json
+    
+    # Check if we got any repositories
+    if [[ ! -s repos.json ]]; then
+      echo "Error: No repositories found for $OWNER"
+      return 1
+    }
     
     # Process each repository
     jq -r ".[] | [.name, .url] | @tsv" repos.json | while read -r name url; do
