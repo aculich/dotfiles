@@ -63,15 +63,20 @@ alias grp='git remote get-url origin | pbcopy; pbpaste'                         
 alias gitpullall='for d in */; do echo -n "$d..."; (cd "$d" && git pull --all); done'                 # Pull all repos in current dir
 alias gclones='for url in $(<urls.list); do echo $i; git clone "$url" "${url:t}__${url:h:t}" ; done'  # Clone repos from urls.list with namespaced dirs
 
-# Clone a GitHub repository with all its branches in separate directories
-# Usage: ghtreebranch owner/repo or ghtreebranch https://github.com/owner/repo
-# For each branch in the repo:
-#   1. Gets branch names using GitHub API directly
-#   2. Clones that specific branch into a separate directory using --single-branch
-#   3. Directory will be named after the repo and branch
-alias ghtreebranch='local f; f() { 
+# Clone a GitHub repository with branches in separate directories
+# Usage: ghdirbranch owner/repo or ghdirbranch https://github.com/owner/repo
+# Pros:
+#   - Complete isolation between branches
+#   - Simple to understand - each branch is a separate directory
+#   - Can have different git configs per branch
+#   - Good for CI/CD testing
+# Cons:
+#   - Uses more disk space (separate .git for each)
+#   - No shared git history
+#   - Need to update remotes separately
+#   - Slower initial setup (multiple downloads)
+alias ghdirbranch='local f; f() { 
     local repo="$1"
-    # Handle full URLs by extracting owner/repo
     if [[ "$repo" =~ "github.com" ]]; then
         repo=${repo#*github.com/}
         repo=${repo%.git}
@@ -79,7 +84,6 @@ alias ghtreebranch='local f; f() {
     local owner=$(dirname "$repo")
     local name=$(basename "$repo")
     
-    # Get all branches using the GitHub API
     gh api "repos/$repo/branches" --jq ".[].name" | 
         while read -r branch; do
             local dir="${name}__${branch}"
@@ -88,6 +92,46 @@ alias ghtreebranch='local f; f() {
         done
 }; f'
 
+# Clone a GitHub repository using git worktree for branches
+# Usage: ghworkbranch owner/repo or ghworkbranch https://github.com/owner/repo
+# Pros:
+#   - More disk efficient (single .git directory)
+#   - Maintains shared git history
+#   - Faster branch creation
+#   - Better git integration
+#   - Single remote management
+# Cons:
+#   - Cannot checkout same branch multiple times
+#   - All worktrees share git config
+#   - More complex git concept to understand
+#   - Main worktree deletion can break structure
+alias ghworkbranch='local f; f() {
+    local repo="$1"
+    if [[ "$repo" =~ "github.com" ]]; then
+        repo=${repo#*github.com/}
+        repo=${repo%.git}
+    fi
+    local owner=$(dirname "$repo")
+    local name=$(basename "$repo")
+    
+    # Clone the main repo first
+    echo "Cloning main repository..."
+    gh repo clone "$repo" "${name}__main"
+    cd "${name}__main" || return
+    
+    # Create worktrees for each branch
+    gh api "repos/$repo/branches" --jq ".[].name" | 
+        while read -r branch; do
+            if [[ "$branch" != "main" && "$branch" != "master" ]]; then
+                local worktree_path="../${name}__${branch}"
+                echo "Creating worktree for branch: $branch in $worktree_path"
+                git worktree add "$worktree_path" "$branch"
+            fi
+        done
+    
+    # Return to original directory
+    cd .. || return
+}; f'
 
 alias ghrepos='
 local f
