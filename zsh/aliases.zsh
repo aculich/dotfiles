@@ -63,6 +63,21 @@ alias grp='git remote get-url origin | pbcopy; pbpaste'                         
 alias gitpullall='for d in */; do echo -n "$d..."; (cd "$d" && git pull --all); done'                 # Pull all repos in current dir
 alias gclones='for url in $(<urls.list); do echo $i; git clone "$url" "${url:t}__${url:h:t}" ; done'  # Clone repos from urls.list with namespaced dirs
 
+# Clone or update all repositories for a GitHub user/organization
+# Usage: ghrepos USERNAME or ghrepos https://github.com/USERNAME
+# 
+# This command will:
+# 1. Create a directory named after the GitHub user/org
+# 2. Get a list of all their public repositories (up to 100)
+# 3. For each repository:
+#    - If it doesn't exist locally: clone it
+#    - If it exists: pull latest changes
+#
+# Example:
+#   ghrepos microsoft      # Clone/update Microsoft's repos
+#   ghrepos https://github.com/google  # Clone/update Google's repos
+#
+# Note: Requires GitHub CLI (gh) and jq to be installed
 alias ghrepos='local f; f() {
   # Extract the owner name if the argument is a URL
   local OWNER="$1"
@@ -93,7 +108,6 @@ alias ghrepos='local f; f() {
   
   unset -f f
 }; f'
-
 
 # Clone a GitHub repository with branches in separate directories
 # Usage: ghdirbranch owner/repo or ghdirbranch https://github.com/owner/repo
