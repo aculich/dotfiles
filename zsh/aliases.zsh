@@ -66,10 +66,22 @@ alias gclones='for url in $(<urls.list); do echo $i; git clone "$url" "${url:t}_
 # Clone a GitHub repository with all its branches in separate directories
 # Usage: ghtreebranch owner/repo
 # For each branch in the repo:
-#   1. Gets branch name using GitHub CLI's repo view command with JSON output
+#   1. Gets branch names using GitHub CLI's repo view command with JSON output
 #   2. Clones that specific branch into a separate directory using --single-branch
-#   3. Directory will be named after the repo and contain only that branch's files
-alias ghtreebranch='local f; f() { repo=$1; owner=$(basename $(dirname "$repo")); name=$(basename "$repo"); gh repo view "$repo" --json tree --jq ".[].name" | xargs -I {} gh repo clone "$repo" -- --branch {} --single-branch; }; f'
+#   3. Directory will be named after the repo and branch
+alias ghtreebranch='local f; f() { 
+    local repo="$1"
+    local owner=$(basename $(dirname "$repo"))
+    local name=$(basename "$repo")
+    
+    # Get all branches using the correct JSON field
+    gh repo view "$repo" --json refs --jq ".refs.nodes[].name" | 
+        while read -r branch; do
+            local dir="${name}__${branch}"
+            echo "Cloning branch: $branch into $dir"
+            gh repo clone "$repo" "$dir" -- --branch "$branch" --single-branch
+        done
+}; f'
 
 
 alias ghrepos='
