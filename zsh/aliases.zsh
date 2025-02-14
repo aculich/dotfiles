@@ -63,6 +63,15 @@ alias grp='git remote get-url origin | pbcopy; pbpaste'                         
 alias gitpullall='for d in */; do echo -n "$d..."; (cd "$d" && git pull --all); done'                 # Pull all repos in current dir
 alias gclones='for url in $(<urls.list); do echo $i; git clone "$url" "${url:t}__${url:h:t}" ; done'  # Clone repos from urls.list with namespaced dirs
 
+# Clone a GitHub repository with all its branches in separate directories
+# Usage: ghtreebranch owner/repo
+# For each branch in the repo:
+#   1. Gets branch name using GitHub CLI's repo view command with JSON output
+#   2. Clones that specific branch into a separate directory using --single-branch
+#   3. Directory will be named after the repo and contain only that branch's files
+alias ghtreebranch='local f; f() { repo=$1; owner=$(basename $(dirname "$repo")); name=$(basename "$repo"); gh repo view "$repo" --json tree --jq ".[].name" | xargs -I {} gh repo clone "$repo" -- --branch {} --single-branch; }; f'
+
+
 alias ghrepos='
 local f
 f() {
