@@ -65,6 +65,7 @@ alias gclones='for url in $(<urls.list); do echo $i; git clone "$url" "${url:t}_
 
 # Clone or update all repositories for a GitHub user/organization
 # Usage: ghrepos USERNAME or ghrepos https://github.com/USERNAME
+#        ghrepos git@github.com:USERNAME/REPO.git
 # 
 # This command will:
 # 1. Create a directory named after the GitHub user/org
@@ -76,6 +77,7 @@ alias gclones='for url in $(<urls.list); do echo $i; git clone "$url" "${url:t}_
 # Example:
 #   ghrepos microsoft      # Clone/update Microsoft's repos
 #   ghrepos https://github.com/google  # Clone/update Google's repos
+#   ghrepos git@github.com:owner/repo.git  # Clone/update from SSH URL
 #
 # Note: Requires GitHub CLI (gh) and jq to be installed
 alias ghrepos='local f; f() {
@@ -84,15 +86,18 @@ alias ghrepos='local f; f() {
     echo "Error: Please provide a GitHub username or organization"
     echo "Usage: ghrepos USERNAME or ghrepos https://github.com/USERNAME"
     return 1
-  }
+  fi
 
   # Extract the owner name if the argument is a URL
   local OWNER="$1"
-  # Remove any @ prefix
+  # Remove any @ prefix if it exists as a standalone
   OWNER="${OWNER#@}"
-  # Extract owner from URL if present
+  # Extract owner from HTTPS URL if present
   if [[ "$OWNER" =~ ^https?://(www\.)?github\.com/([^/]+)(/.*)?$ ]]; then
     OWNER="${BASH_REMATCH[2]}"
+  # Extract owner from SSH URL if present
+  elif [[ "$OWNER" =~ ^git@github\.com:([^/]+)(/.*)?\.git$ ]]; then
+    OWNER="${BASH_REMATCH[1]}"
   fi
 
   # Validate owner name
@@ -100,7 +105,7 @@ alias ghrepos='local f; f() {
     echo "Error: Invalid GitHub username or organization: $OWNER"
     echo "Username must contain only alphanumeric characters or hyphens, and cannot begin with a hyphen"
     return 1
-  }
+  fi
   
   # Use subshell to avoid changing current directory for the user
   (
@@ -115,7 +120,7 @@ alias ghrepos='local f; f() {
     if [[ ! -s repos.json ]]; then
       echo "Error: No repositories found for $OWNER"
       return 1
-    }
+    fi
     
     # Process each repository
     jq -r ".[] | [.name, .url] | @tsv" repos.json | while read -r name url; do
