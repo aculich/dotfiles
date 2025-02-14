@@ -98,12 +98,12 @@ f() {
   echo "Processing input: $OWNER"
   
   # Extract owner from HTTPS URL if present
-  if [[ "$OWNER" =~ ^https?://(www\.)?github\.com/([^/]+)(/.*)?$ ]]; then
-    OWNER="${BASH_REMATCH[2]}"
+  if [[ "$OWNER" =~ "^https?://(www\.)?github\.com/([^/]+)(/.*)?$" ]]; then
+    OWNER="$match[2]"
     echo "Extracted from HTTPS URL: $OWNER"
   # Extract owner from SSH URL if present
-  elif [[ "$OWNER" =~ ^git@github\.com:([^/]+)(/.*)?\.git$ ]]; then
-    OWNER="${BASH_REMATCH[1]}"
+  elif [[ "$OWNER" =~ "^git@github\.com:([^/]+)(/.*)?\.git$" ]]; then
+    OWNER="$match[1]"
     echo "Extracted from SSH URL: $OWNER"
   fi
 
@@ -111,7 +111,7 @@ f() {
   echo "Final owner: $OWNER"
 
   # Validate owner name
-  if [[ -z "$OWNER" || ! "$OWNER" =~ ^[A-Za-z0-9][A-Za-z0-9-]*$ ]]; then
+  if [[ -z "$OWNER" || ! "$OWNER" =~ "^[A-Za-z0-9][A-Za-z0-9-]*$" ]]; then
     echo "Error: Invalid GitHub username or organization: $OWNER"
     echo "Username must contain only alphanumeric characters or hyphens, and cannot begin with a hyphen"
     return 1
