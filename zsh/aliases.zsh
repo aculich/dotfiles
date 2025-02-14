@@ -63,35 +63,37 @@ alias grp='git remote get-url origin | pbcopy; pbpaste'                         
 alias gitpullall='for d in */; do echo -n "$d..."; (cd "$d" && git pull --all); done'                 # Pull all repos in current dir
 alias gclones='for url in $(<urls.list); do echo $i; git clone "$url" "${url:t}__${url:h:t}" ; done'  # Clone repos from urls.list with namespaced dirs
 
-alias ghrepos='
-local f
-f() {
-  # Save the original directory
-  local orig_dir="$(pwd)"
-  
+alias ghrepos='local f; f() {
   # Extract the owner name if the argument is a URL
   local OWNER="$1"
   [[ "$OWNER" =~ ^https?://(www\.)?github\.com/(.+)/?$ ]] && OWNER="${BASH_REMATCH[2]}"
   
-  # Create a directory for the owner and change into it
-  mkdir -p "$OWNER"
-  cd "$OWNER" || return
-  
-  # List the repositories and process the output
-  gh repo list "$OWNER" --json name,description,url,createdAt,updatedAt,stargazerCount,forkCount,languages,owner --limit 100 |
-    tee repos.json |
-    jq ".[].url" -r |
-    tee repos.list
-  
-  echo "Created $OWNER/repos.list - run \"cd $OWNER && gcll\" to clone all repos"
-  
-  # Return to the original directory
-  cd "$orig_dir" || return
+  # Use subshell to avoid changing current directory for the user
+  (
+    # Create and enter directory for the owner
+    mkdir -p "$OWNER"
+    cd "$OWNER" || return
+    
+    # List the repositories and save full info
+    gh repo list "$OWNER" --json name,description,url,createdAt,updatedAt,stargazerCount,forkCount,languages,owner --limit 100 > repos.json
+    
+    # Process each repository
+    jq -r ".[] | [.name, .url] | @tsv" repos.json | while read -r name url; do
+      if [[ -d "$name" ]]; then
+        echo "Updating existing repository: $name"
+        (cd "$name" && git pull --quiet)
+      else
+        echo "Cloning new repository: $name"
+        git clone --quiet "$url" "$name"
+      fi
+    done
+    
+    echo "Finished processing repositories for $OWNER"
+  )
   
   unset -f f
-}
-f
-'
+}; f'
+
 
 # Clone a GitHub repository with branches in separate directories
 # Usage: ghdirbranch owner/repo or ghdirbranch https://github.com/owner/repo
