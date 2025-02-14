@@ -80,7 +80,8 @@ alias gclones='for url in $(<urls.list); do echo $i; git clone "$url" "${url:t}_
 #   ghrepos git@github.com:owner/repo.git  # Clone/update from SSH URL
 #
 # Note: Requires GitHub CLI (gh) and jq to be installed
-alias ghrepos='local f; f() {
+alias ghrepos='
+f() {
   # Require an argument
   if [[ -z "$1" ]]; then
     echo "Error: Please provide a GitHub username or organization"
@@ -92,16 +93,25 @@ alias ghrepos='local f; f() {
   local OWNER="$1"
   # Remove any @ prefix if it exists as a standalone
   OWNER="${OWNER#@}"
+  
+  # Debug output
+  echo "Processing input: $OWNER"
+  
   # Extract owner from HTTPS URL if present
   if [[ "$OWNER" =~ ^https?://(www\.)?github\.com/([^/]+)(/.*)?$ ]]; then
     OWNER="${BASH_REMATCH[2]}"
+    echo "Extracted from HTTPS URL: $OWNER"
   # Extract owner from SSH URL if present
   elif [[ "$OWNER" =~ ^git@github\.com:([^/]+)(/.*)?\.git$ ]]; then
     OWNER="${BASH_REMATCH[1]}"
+    echo "Extracted from SSH URL: $OWNER"
   fi
 
+  # Debug output
+  echo "Final owner: $OWNER"
+
   # Validate owner name
-  if [[ ! "$OWNER" =~ ^[A-Za-z0-9][A-Za-z0-9-]*$ ]]; then
+  if [[ -z "$OWNER" || ! "$OWNER" =~ ^[A-Za-z0-9][A-Za-z0-9-]*$ ]]; then
     echo "Error: Invalid GitHub username or organization: $OWNER"
     echo "Username must contain only alphanumeric characters or hyphens, and cannot begin with a hyphen"
     return 1
@@ -135,9 +145,7 @@ alias ghrepos='local f; f() {
     
     echo "Finished processing repositories for $OWNER"
   )
-  
-  unset -f f
-}; f'
+}; f "$@"'
 
 # Clone a GitHub repository with branches in separate directories
 # Usage: ghdirbranch owner/repo or ghdirbranch https://github.com/owner/repo
