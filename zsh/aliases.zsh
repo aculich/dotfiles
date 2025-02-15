@@ -132,6 +132,10 @@ f() {
       return 1
     fi
     
+    # Generate the URLs-only list file
+    jq -r ".[].url" repos.json > repos.list
+    echo "Created $OWNER/repos.list with repository URLs"
+    
     # Process each repository
     jq -r ".[] | [.name, .url] | @tsv" repos.json | while read -r name url; do
       if [[ -d "$name" ]]; then
