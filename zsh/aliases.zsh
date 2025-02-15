@@ -235,6 +235,9 @@ alias gigauv='git ls-files -v | grep "^[a-z]"'                                  
 alias gigwtv='git ls-files -v | grep "^[S]"'                                                                  # List skip-worktree files
 alias current_branch='git rev-parse --abbrev-ref HEAD'
 alias gbsu='git branch --set-upstream-to=origin/$(current_branch) $(current_branch)'
+# alias gbaa='git branch -a'  # Remove or comment out old alias
+alias gbaa='git for-each-ref --sort=-committerdate refs/heads/ refs/remotes/ --format="%(committerdate:short) %(committerdate:iso8601) %(committerdate:relative)%09%(refname:short)"'
+alias gbaaa='git for-each-ref --sort=committerdate refs/heads/ refs/remotes/ --format="%(committerdate:short) %(committerdate:iso8601) %(committerdate:relative)%09%(refname:short)"'
 
 alias gwtb='local f; f() {
     # Require both arguments
