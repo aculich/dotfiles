@@ -287,7 +287,7 @@ export LANG=en_US.UTF-8
 # defaults write -g AppleLocale "en_US.UTF-8"
 
 # Helper function to check directory existence and git repo status
-function continue_git_setup() {
+continue_git_setup() {
     local repo_url="$1"
     if [ -z "$repo_url" ]; then
         echo "❌ Please provide a repository URL"
