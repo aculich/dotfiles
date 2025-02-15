@@ -235,11 +235,53 @@ alias gigauv='git ls-files -v | grep "^[a-z]"'                                  
 alias gigwtv='git ls-files -v | grep "^[S]"'                                                                  # List skip-worktree files
 alias current_branch='git rev-parse --abbrev-ref HEAD'
 alias gbsu='git branch --set-upstream-to=origin/$(current_branch) $(current_branch)'
+
 alias gwtb='local f; f() {
-    local branch="${1:-$(current_branch)}"
-    local base_dir="${2:-${PWD:t}}"
+    # Require both arguments
+    local repo_path="${1:?Must provide path to repository}"
+    local branch="${2:?Must provide branch name}"
+    local base_dir="${3:-${repo_path:t}}"  # Use repo name as default base_dir
     local safe_branch="${branch//\//_}"
-    git worktree add "../${base_dir}__${safe_branch}" "${branch}"
+    
+    # Ensure repo_path is a git repository
+    if [[ ! -d "$repo_path/.git" ]]; then
+        echo "Error: $repo_path is not a git repository" >&2
+        return 1
+    }
+    
+    # If creating a new branch
+    if ! git -C "$repo_path" show-ref --verify --quiet "refs/heads/$branch"; then
+        echo "Creating new branch: $branch"
+        git -C "$repo_path" worktree add -b "$branch" "${PWD}/${base_dir}__${safe_branch}"
+    else
+        # For existing branches
+        echo "Using existing branch: $branch"
+        git -C "$repo_path" worktree add "${PWD}/${base_dir}__${safe_branch}" "$branch"
+    fi
+}; f'
+
+# Convert current repo to bare and move working files to a worktree
+alias gwtbare='local f; f() {
+    local current_branch=$(current_branch)
+    local base_dir=${PWD:t}
+    local safe_branch="${current_branch//\//_}"
+    
+    # Store current state
+    git add -A
+    git stash push -u -m "Stashing before bare conversion"
+    
+    # Move .git up one level and make it bare
+    mv .git "../${base_dir}.git"
+    git -C "../${base_dir}.git" config --bool core.bare true
+    
+    # Remove current directory and create new worktree
+    cd ..
+    rm -rf "$base_dir"
+    git -C "${base_dir}.git" worktree add "${base_dir}__${safe_branch}" "$current_branch"
+    
+    # Apply stashed changes if any
+    cd "${base_dir}__${safe_branch}"
+    git stash pop 2>/dev/null || true
 }; f'
 
 # Git Shortcuts
