@@ -338,13 +338,11 @@ continue_git_setup() {
         return 1
     }
     
-    # Check if default branch exists locally
-    git show-ref --verify --quiet "refs/heads/$default_branch" || {
-        print "🔄 Checking out $default_branch branch..."
-        git checkout "$default_branch" || {
-            print "❌ Checkout failed!"
-            return 1
-        }
+    # Force checkout of default branch
+    print "🔄 Checking out $default_branch branch..."
+    git checkout "$default_branch" -f || {
+        print "❌ Checkout failed!"
+        return 1
     }
     
     print "⬆️ Pulling latest changes..."
