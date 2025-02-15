@@ -235,7 +235,13 @@ alias gigauv='git ls-files -v | grep "^[a-z]"'                                  
 alias gigwtv='git ls-files -v | grep "^[S]"'                                                                  # List skip-worktree files
 alias current_branch='git rev-parse --abbrev-ref HEAD'
 alias gbsu='git branch --set-upstream-to=origin/$(current_branch) $(current_branch)'
- 
+alias gwtb='local f; f() {
+    local branch="${1:-$(current_branch)}"
+    local base_dir="${2:-${PWD:t}}"
+    local safe_branch="${branch//\//_}"
+    git worktree add "../${base_dir}__${safe_branch}" "${branch}"
+}; f'
+
 # Git Shortcuts
 alias gi='git init'       # Initialize git repo
 alias gcom='git gcommit'  # Custom git commit
