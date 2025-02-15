@@ -288,22 +288,20 @@ export LANG=en_US.UTF-8
 
 # Helper function to check directory existence and git repo status
 continue_git_setup() {
-    typeset repo_url=$1
-    if [ -z "$repo_url" ]; then
-        echo "❌ Please provide a repository URL"
-        echo "Usage: setup-repo <repository_url>"
-        return 1
-    }
-
+    emulate -L zsh
+    setopt err_exit
+    
+    : ${1:?"❌ Please provide a repository URL\nUsage: setup-repo <repository_url>"}
+    
     # Extract repo name from URL
-    typeset repo_name
-    repo_name=${${repo_url:t}%.git}
+    repo_name=${1:t}
+    repo_name=${repo_name%.git}
     
     echo "🔍 Checking current state for $repo_name..."
     
     if [ ! -d "$repo_name" ]; then
         echo "📥 Starting fresh clone..."
-        git clone --depth 1 --no-checkout "$repo_url" || {
+        git clone --depth 1 --no-checkout "$1" || {
             echo "❌ Clone failed!"
             return 1
         }
@@ -320,7 +318,6 @@ continue_git_setup() {
     }
     
     # Detect default branch
-    typeset default_branch
     default_branch=$(git remote show origin | grep 'HEAD branch' | cut -d' ' -f5)
     
     # Check if default branch exists locally
