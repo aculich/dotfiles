@@ -285,3 +285,58 @@ alias ndu='ncdu -1xo- > $(nf ncdu.jsonl); ncdu -f $(lf ncdu.jsonl)'
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 # defaults write -g AppleLocale "en_US.UTF-8"
+
+# Helper function to check directory existence and git repo status
+function continue_git_setup() {
+    local repo_url="$1"
+    if [ -z "$repo_url" ]; then
+        echo "❌ Please provide a repository URL"
+        echo "Usage: setup-repo <repository_url>"
+        return 1
+    }
+
+    # Extract repo name from URL
+    local repo_name=$(basename "$repo_url" .git)
+    
+    echo "🔍 Checking current state for $repo_name..."
+    
+    if [ ! -d "$repo_name" ]; then
+        echo "📥 Starting fresh clone..."
+        git clone --depth 1 --no-checkout "$repo_url" || {
+            echo "❌ Clone failed!"
+            return 1
+        }
+    fi
+    
+    cd "$repo_name" || {
+        echo "❌ Failed to change directory to $repo_name!"
+        return 1
+    }
+    
+    if ! git rev-parse --git-dir > /dev/null 2>&1; then
+        echo "❌ Not a git repository! Something went wrong with the clone."
+        return 1
+    }
+    
+    # Detect default branch
+    local default_branch=$(git remote show origin | grep 'HEAD branch' | cut -d' ' -f5)
+    
+    # Check if default branch exists locally
+    if ! git show-ref --verify --quiet "refs/heads/$default_branch"; then
+        echo "🔄 Checking out $default_branch branch..."
+        git checkout "$default_branch" || {
+            echo "❌ Checkout failed!"
+            return 1
+        }
+    fi
+    
+    echo "⬆️ Pulling latest changes..."
+    git pull --rebase --autostash || {
+        echo "❌ Pull failed!"
+        return 1
+    }
+    
+    echo "✅ Setup completed successfully!"
+}
+
+alias setup-repo='continue_git_setup'
