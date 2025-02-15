@@ -247,7 +247,7 @@ alias gwtb='local f; f() {
     if [[ ! -d "$repo_path/.git" ]]; then
         echo "Error: $repo_path is not a git repository" >&2
         return 1
-    }
+    fi
     
     # If creating a new branch
     if ! git -C "$repo_path" show-ref --verify --quiet "refs/heads/$branch"; then
