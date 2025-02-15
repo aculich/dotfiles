@@ -289,53 +289,71 @@ export LANG=en_US.UTF-8
 # Helper function to check directory existence and git repo status
 continue_git_setup() {
     emulate -L zsh
-    setopt err_exit
+    setopt err_exit local_options local_traps
     
-    : ${1:?"❌ Please provide a repository URL\nUsage: setup-repo <repository_url>"}
-    
-    # Extract repo name from URL
-    repo_name=${1:t}
-    repo_name=${repo_name%.git}
-    
-    echo "🔍 Checking current state for $repo_name..."
-    
-    if [ ! -d "$repo_name" ]; then
-        echo "📥 Starting fresh clone..."
-        git clone --depth 1 --no-checkout "$1" || {
-            echo "❌ Clone failed!"
-            return 1
-        }
-    fi
-    
-    cd "$repo_name" || {
-        echo "❌ Failed to change directory to $repo_name!"
+    [[ -z "$1" ]] && {
+        print "❌ Please provide a repository URL"
+        print "Usage: setup-repo <repository_url>"
         return 1
     }
     
-    if ! git rev-parse --git-dir > /dev/null 2>&1; then
-        echo "❌ Not a git repository! Something went wrong with the clone."
+    # Extract repo name from URL
+    typeset repo_name
+    repo_name=${${1:t}%.git}
+    
+    print "🔍 Checking current state for $repo_name..."
+    
+    [[ ! -d "$repo_name" ]] && {
+        print "📥 Starting fresh clone..."
+        git clone --depth 1 --no-checkout "$1" || {
+            print "❌ Clone failed!"
+            return 1
+        }
+    }
+    
+    cd "$repo_name" || {
+        print "❌ Failed to change directory to $repo_name!"
+        return 1
+    }
+    
+    git rev-parse --git-dir > /dev/null 2>&1 || {
+        print "❌ Not a git repository! Something went wrong with the clone."
         return 1
     }
     
     # Detect default branch
-    default_branch=$(git remote show origin | grep 'HEAD branch' | cut -d' ' -f5)
+    typeset default_branch remote_info
+    remote_info=("${(f)$(git remote show origin)}")
+    default_branch=''
     
-    # Check if default branch exists locally
-    if ! git show-ref --verify --quiet "refs/heads/$default_branch"; then
-        echo "🔄 Checking out $default_branch branch..."
-        git checkout "$default_branch" || {
-            echo "❌ Checkout failed!"
-            return 1
-        }
-    fi
+    for line in $remote_info; do
+        if [[ "$line" = *"HEAD branch:"* ]]; then
+            default_branch=${line##*: }
+            break
+        fi
+    done
     
-    echo "⬆️ Pulling latest changes..."
-    git pull --rebase --autostash || {
-        echo "❌ Pull failed!"
+    [[ -z "$default_branch" ]] && {
+        print "❌ Could not detect default branch!"
         return 1
     }
     
-    echo "✅ Setup completed successfully!"
+    # Check if default branch exists locally
+    git show-ref --verify --quiet "refs/heads/$default_branch" || {
+        print "🔄 Checking out $default_branch branch..."
+        git checkout "$default_branch" || {
+            print "❌ Checkout failed!"
+            return 1
+        }
+    }
+    
+    print "⬆️ Pulling latest changes..."
+    git pull --rebase --autostash || {
+        print "❌ Pull failed!"
+        return 1
+    }
+    
+    print "✅ Setup completed successfully!"
 }
 
 alias setup-repo='continue_git_setup'
