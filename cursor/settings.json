@@ -59,5 +59,8 @@
     "extensions.autoUpdate": true,
     "extensions.autoCheckUpdates": true,
     "extensions.verifySignature": false,
-    "geminicodeassist.project": ""
+    "specstory.showDeveloperTools": true,
+    "specstory.helpUsImprove": false,
+    "editor.defaultFoldingRangeProvider": "vscode.markdown-language-features",
+    "editor.defaultFormatter": "vscode.markdown-language-features"
 }
