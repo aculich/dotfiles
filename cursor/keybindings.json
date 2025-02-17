@@ -301,6 +301,11 @@
     {
         "key": "ctrl+shift+m",
         "command": "-editor.action.toggleTabFocusMode"
+    },
+    {
+        "key": "shift+cmd+c",
+        "command": "workbench.action.terminal.copyLastCommandAndLastCommandOutput",
+        "when": "terminalFocus"
     }
 ]
 
