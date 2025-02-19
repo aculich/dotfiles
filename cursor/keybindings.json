@@ -306,7 +306,29 @@
         "key": "shift+cmd+c",
         "command": "workbench.action.terminal.copyLastCommandAndLastCommandOutput",
         "when": "terminalFocus"
-    }
+    },
+
+    // https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-speech
+    {
+        "key": "alt+shift+u",
+        "command": "workbench.action.chat.startVoiceChat",
+        "when": "!voiceChatInProgress"
+    },
+    {
+        "key": "alt+shift+u",
+        "command": "workbench.action.chat.stopListeningAndSubmit",
+        "when": "voiceChatInProgress"
+    },
+    {
+        "key": "alt+shift+d",
+        "command": "workbench.action.editorDictation.start",
+        "when": "!editorDictation.inProgress"
+    },
+    {
+        "key": "alt+shift+d",
+        "command": "workbench.action.editorDictation.stop",
+        "when": "editorDictation.inProgress"
+    }    
 ]
 
 
