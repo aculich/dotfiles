@@ -62,5 +62,9 @@
     "specstory.showDeveloperTools": true,
     "specstory.helpUsImprove": false,
     "editor.defaultFoldingRangeProvider": "vscode.markdown-language-features",
-    "editor.defaultFormatter": "vscode.markdown-language-features"
+    "editor.defaultFormatter": "vscode.markdown-language-features",
+    "geminicodeassist.project": "",
+    "gitTreeCompare.diffMode": "merge",
+    "makefile.configureOnOpen": true,
+    "redhat.telemetry.enabled": true
 }
