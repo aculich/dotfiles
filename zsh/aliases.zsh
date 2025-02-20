@@ -415,3 +415,27 @@ alias zh='cd ~/"$(find ~ -maxdepth 1 -type d -not -path "*/\.*" -printf "%P\n" 2
 alias d='dirs -v | head -n 10'  # Show directory stack (limit to 10)
 alias pd='pushd "$(find . -type d -not -path "*/\.*" 2>/dev/null | fzf --preview "tree -L 1 {}" --height 40%)"'  # Push directory with fzf
 alias pz='pushd "$(z -l | sort -rn | cut -c 12- | fzf --height 40% --reverse --tac)"'  # Push z directory with fzf
+
+# FZF + Z keybindings
+bindkey '^[z' _zz_widget  # Alt-z for zz (z with fzf)
+bindkey '^[p' _pz_widget  # Alt-p for pz (pushd with z+fzf)
+bindkey '^[d' _zd_widget  # Alt-d for zd (find subdirectory)
+
+# Create the widget functions
+function _zz_widget() {
+    BUFFER="zz"  # Set the command
+    zle accept-line  # Execute it
+}
+zle -N _zz_widget
+
+function _pz_widget() {
+    BUFFER="pz"
+    zle accept-line
+}
+zle -N _pz_widget
+
+function _zd_widget() {
+    BUFFER="zd"
+    zle accept-line
+}
+zle -N _zd_widget
