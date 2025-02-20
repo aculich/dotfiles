@@ -405,3 +405,13 @@ continue_git_setup() {
 }
 
 alias setup-repo='continue_git_setup'
+
+# Enhanced directory navigation with z and fzf
+alias zz='z -l | sort -rn | cut -c 12- | fzf --height 40% --reverse --tac | read selected && cd "$selected"'  # Interactive z with fzf
+alias zd='cd "$(find . -type d -not -path "*/\.*" 2>/dev/null | fzf --preview "tree -L 1 {}" --height 40%)"'  # Find and cd to subdirectory
+alias zh='cd ~/"$(find ~ -maxdepth 1 -type d -not -path "*/\.*" -printf "%P\n" 2>/dev/null | fzf --height 40%)"'  # Fuzzy cd to ~/directory
+
+# Enhanced directory stack operations
+alias d='dirs -v | head -n 10'  # Show directory stack (limit to 10)
+alias pd='pushd "$(find . -type d -not -path "*/\.*" 2>/dev/null | fzf --preview "tree -L 1 {}" --height 40%)"'  # Push directory with fzf
+alias pz='pushd "$(z -l | sort -rn | cut -c 12- | fzf --height 40% --reverse --tac)"'  # Push z directory with fzf
