@@ -229,6 +229,7 @@ gcll() { local filename="${1:-repos.list}"; while read -r i; do echo "$i"; gcls 
 # Git Ignore and File Management
 alias giglv='cat .git/info/exclude'                                                                           # View local gitignore
 alias gigl='local f; f() { for f in "$@"; do echo "$f" >> .git/info/exclude; done; giglv }; f'        # Add to local gitignore
+alias gigld='local f; f() { local file=".git/info/exclude"; local lines=$(cat "$file" | fzf -m); [[ -n "$lines" ]] && echo "$lines" | while read -r line; do sed -i "" "/^$line\$/d" "$file"; done; giglv }; f'  # Remove from local gitignore with fzf
 alias gigau='local f; f() { for f in "$@"; do git update-index --assume-unchanged "$f"; done }; f'  # Mark files as assume-unchanged
 alias gigwt='local f; f() { for f in "$@"; do git update-index --skip-worktree "$f"; done }; f'     # Mark files as skip-worktree
 alias gigauv='git ls-files -v | grep "^[a-z]"'                                                                # List assume-unchanged files
