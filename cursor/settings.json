@@ -66,5 +66,12 @@
     "geminicodeassist.project": "",
     "gitTreeCompare.diffMode": "merge",
     "makefile.configureOnOpen": true,
-    "redhat.telemetry.enabled": true
+    "redhat.telemetry.enabled": true,
+    "cursor.aipreview.enabled": true,
+    "cursor.cmdk.useThemedDiffBackground": true,
+    "cursor.composer.agentLoopOnLints": false,
+    "cursor.composer.cmdPFilePicker2": true,
+    "cursor.composer.shouldShowMarkdownHoverParticipantActions2": true,
+    "cursor.diffs.useCharacterLevelDiffs": true,
+    "github-actions.workflows.pinned.refresh.enabled": true
 }
