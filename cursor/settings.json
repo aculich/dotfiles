@@ -73,5 +73,7 @@
     "cursor.composer.cmdPFilePicker2": true,
     "cursor.composer.shouldShowMarkdownHoverParticipantActions2": true,
     "cursor.diffs.useCharacterLevelDiffs": true,
-    "github-actions.workflows.pinned.refresh.enabled": true
+    "github-actions.workflows.pinned.refresh.enabled": true,
+    "geminicodeassist.beta.enableGeneratedCodeDocumentationView": true,
+    "cursor.cpp.enablePartialAccepts": true
 }
