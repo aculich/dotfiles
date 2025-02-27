@@ -226,6 +226,8 @@ alias ghfork='local f; f() { repo=$1; owner=$(basename $(dirname "$repo")); name
 alias gcl='local f; f() { url=$1; git clone "$url" "${url:t}"; }; f'
 alias gcls='local f; f() { url=$1; git clone --depth=1 --no-single-branch "$url" "${url:t}"; }; f'
 gcll() { local filename="${1:-repos.list}"; while read -r i; do echo "$i"; gcls "$i"; done < "$filename"; }  # Clone all repos from list file
+alias cls="chrome-cli list links"
+alias clst="chrome-cli list tablinks"
 alias ghls="chrome-cli list links | grep github | cut -f2 -d ' ' | grep -v github.com/search | perl -pe 's|\?.*||'"
 alias ghcl="chrome-cli list links | grep github | cut -f2 -d ' ' | grep -v github.com/search | perl -pe 's|\?.*||' | xargs -L1 git clone"
 alias og='organize-github'     # Preview mode
