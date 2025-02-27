@@ -53,8 +53,9 @@ alias tsd='local f; f() { base="${1%%.*}"; ext="${1#*.}"; delimiter="${2:-__}"; 
 alias extract_images='local f; f() { grep -oP "\[image\d+\]: <data:image/\w+;base64,\K[^>]*" "$1" | nl | while read -r num img_data; do echo $img_data | base64 --decode > image${num}.png; done }; f'  # Extract base64 encoded images from file
 alias extract_images_py='local f; f() { python -c "import re, base64; [open(f\"{m[0]}.png\", \"wb\").write(base64.b64decode(m[1])) for m in re.findall(r\"\\[(image\\d+)\\]: <data:image/\\w+;base64,([A-Za-z0-9+/=]+)>\", open(\"$1\").read())]" }; f'  # Python version of image extraction
 
-# Graphviz
+# Misc
 alias dotopen='local f; f() { dot -Tpng "$1" -o "${1%.dot}.png" && open "${1%.dot}.png"; }; f'     # Convert and open dot file
+alias cl='chrome-cli list links'
 
 # Git and Github Repository Management
 #alias gro='open $(git remote get-url origin)'                                                         # Open repo in browser
