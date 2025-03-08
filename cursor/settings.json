@@ -76,7 +76,6 @@
     "cursor.cpp.enablePartialAccepts": true,
     "cursor.general.gitGraphIndexing": "enabled",
     "cursor.composer.agentLoopOnLints": false,
-    "magit.forge-enabled": true,
     "vs-kubernetes": {
         "vs-kubernetes.crd-code-completion": "disabled"
     },
@@ -91,5 +90,6 @@
     ],
     "workbench.editorAssociations": {
         "git-rebase-todo": "default"
-    }
+    },
+    "magit.forge-enabled": true
 }
