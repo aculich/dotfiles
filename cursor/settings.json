@@ -51,7 +51,6 @@
     "editor.accessibilitySupport": "off",
     "editor.renderWhitespace": "none",
     "git.autofetch": true,
-    "magit.forge-enabled": true,
     "magit.code-path": "cursor",
     "terminal.integrated.inheritEnv": false,
     "magit.display-buffer-function": "same-column",
@@ -69,11 +68,28 @@
     "redhat.telemetry.enabled": true,
     "cursor.aipreview.enabled": true,
     "cursor.cmdk.useThemedDiffBackground": true,
-    "cursor.composer.agentLoopOnLints": false,
     "cursor.composer.cmdPFilePicker2": true,
     "cursor.composer.shouldShowMarkdownHoverParticipantActions2": true,
     "cursor.diffs.useCharacterLevelDiffs": true,
     "github-actions.workflows.pinned.refresh.enabled": true,
     "geminicodeassist.beta.enableGeneratedCodeDocumentationView": true,
-    "cursor.cpp.enablePartialAccepts": true
+    "cursor.cpp.enablePartialAccepts": true,
+    "cursor.general.gitGraphIndexing": "enabled",
+    "cursor.composer.agentLoopOnLints": false,
+    "magit.forge-enabled": true,
+    "vs-kubernetes": {
+        "vs-kubernetes.crd-code-completion": "disabled"
+    },
+    "editor.largeFileOptimizations": false,
+    "keybindingMode.letterCommandMapping": [
+        "a,workbench.action.toggleSidebarVisibility",
+        "j,scrollPageDown",
+        "k,scrollPageUp",
+        "a,workbench.action.toggleSidebarVisibility",
+        "t,gitlens.toggleFileBlame",
+        "g,git-graph.view"
+    ],
+    "workbench.editorAssociations": {
+        "git-rebase-todo": "default"
+    }
 }

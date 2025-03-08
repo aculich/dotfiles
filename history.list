@@ -1,0 +1,162 @@
+    1  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    2  cat >> ~/.zprofile
+    3  vi ~/.zprofile
+    4      echo >> /Users/me/.zprofile\n    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/me/.zprofile\n    eval "$(/opt/homebrew/bin/brew shellenv)"\n
+    5  cat .zprofile
+    6  ls -la
+    7  cat setup.sh
+    8  ./setup.sh
+    9  ll
+   10  brew install --cask iterm2 rectangle raycast karabiner-elements shortcat shottr
+   11  brew install docker
+   12  rehash
+   13  docker
+   14  docker desktop
+   15  brew search docker
+   16  brew install --cask docker
+   17  /Applications/Docker.app
+   18  open /Applications/Docker.app
+   19  brew uninstall docker
+   20  brew install --cask docker
+   21  open /Applications/Docker.app
+   22  brew search cursor
+   23  brew install --cask cursor
+   24* cursor
+   25* mkdir projects
+   26* cd projects
+   27* ll
+   28* git clone https://github.com/aculich/GroceryDB-private
+   29* git clone git@github.com:aculich/GroceryDB-private.git
+   30* cursor .
+   31* docker compose up
+   32* git checkout feature/wip | cat
+   33* cd GroceryDB-private && git checkout feature/wip | cat
+   34* docker compose up
+   35* open -a "Google Chrome" http://127.0.0.1:8888/lab
+   36* docker ps
+   37* docker ps -a
+   38* docker compose up -d
+   39* docker ps
+   40* curl -I http://localhost:8888/lab
+   41* wget -qO- http://localhost:8888/lab
+   42* curl -L http://localhost:8888/lab
+   43* docker logs grocerydb-private-jupyter-1
+   44* open -a Safari http://localhost:8888/lab
+   45* docker exec grocerydb-private-jupyter-1 pip install nbconvert
+   46* docker exec grocerydb-private-jupyter-1 jupyter nbconvert --to notebook --execute /app/code/ingredient_counts_figure_S13.ipynb --output /app/code/output/ingredient_counts_figure_S13_executed.ipynb
+   47* docker compose down && docker compose build && docker compose up -d
+   48* docker exec grocerydb-private-jupyter-1 jupyter nbconvert --to notebook --execute /app/code/ingredient_counts_figure_S13.ipynb --output /app/code/output/ingredient_counts_figure_S13_executed.ipynb
+   49* docker compose down && docker compose build && docker compose up -d
+   50* docker exec grocerydb-private-jupyter-1 jupyter nbconvert --to notebook --execute /app/code/ingredient_counts_figure_S13.ipynb --output /app/code/output/ingredient_counts_figure_S13_executed.ipynb
+   51* docker exec grocerydb-private-jupyter-1 cp /app/data/GroceryDB_foods.csv /app/code/
+   52* docker exec grocerydb-private-jupyter-1 jupyter nbconvert --to notebook --execute /app/code/ingredient_counts_figure_S13.ipynb --output /app/code/output/ingredient_counts_figure_S13_executed.ipynb
+   53* docker exec grocerydb-private-jupyter-1 sh -c "cd /app/data && unzip UpdatedProductIngredients_11_15.zip && cp UpdatedProductIngredients_11_15.json /app/code/"
+   54* docker exec grocerydb-private-jupyter-1 apt-get update && docker exec grocerydb-private-jupyter-1 apt-get install -y unzip
+   55* docker exec grocerydb-private-jupyter-1 sh -c "cd /app/data && unzip UpdatedProductIngredients_11_15.zip && cp UpdatedProductIngredients_11_15.json /app/code/"
+   56* docker exec grocerydb-private-jupyter-1 jupyter nbconvert --to notebook --execute /app/code/ingredient_counts_figure_S13.ipynb --output /app/code/output/ingredient_counts_figure_S13_executed.ipynb
+   57* docker exec grocerydb-private-jupyter-1 jupyter nbconvert --to notebook --execute /app/code/GroceryDB_IngTree_figures.ipynb --output /app/code/output/GroceryDB_IngTree_figures_executed.ipynb
+   58* docker compose down && docker compose build && docker compose up -d
+   59* cd GroceryDB-private && docker compose down && docker compose build && docker compose up -d
+   60* docker exec grocerydb-private-jupyter-1 sh -c "cd /app/data && cp GroceryDB_IgFPro.csv /app/code/ && cp GroceryDB_training_dataset_SRFNDSS_2001_2018_NOVA123_multi_compositions_12Nutrients.csv /app/code/"
+   61* docker exec grocerydb-private-jupyter-1 jupyter nbconvert --to notebook --execute /app/code/ingredient_counts_figure_S13.ipynb --output /app/code/output/ingredient_counts_figure_S13_executed.ipynb
+   62* docker exec grocerydb-private-jupyter-1 jupyter nbconvert --to notebook --execute /app/code/GroceryDB_IngTree_figures.ipynb --output /app/code/output/GroceryDB_IngTree_figures_executed.ipynb
+   63* docker exec grocerydb-private-jupyter-1 jupyter nbconvert --to notebook --execute /app/code/GroceryDB_IgFPro_figures.ipynb --output /app/code/output/GroceryDB_IgFPro_figures_executed.ipynb
+   64* docker exec grocerydb-private-jupyter-1 jupyter nbconvert --to notebook --execute /app/code/GroceryDB_Categories_PricePerCal_figures.ipynb --output /app/code/output/GroceryDB_Categories_PricePerCal_figures_executed.ipynb
+   65* cd GroceryDB-private && docker exec grocerydb-private-jupyter-1 ls -l /app/code/output/
+   66* docker logs grocerydb-private-jupyter-1 | grep -i error
+   67* docker exec grocerydb-private-jupyter-1 ps aux | grep nbconvert
+   68* docker exec grocerydb-private-jupyter-1 ls -la /app/code/output/ && echo "=== Errors ===" && docker logs grocerydb-private-jupyter-1 2>&1 | grep -A 5 "Error:"
+   69* docker exec grocerydb-private-jupyter-1 jupyter nbconvert --to notebook --execute --debug /app/code/ingredient_counts_figure_S13.ipynb --output /app/code/output/ingredient_counts_figure_S13_executed.ipynb
+   70* docker exec grocerydb-private-jupyter-1 python3 -c "import json; import glob; [print(cell['source']) for nb in glob.glob('/app/code/*.ipynb') for cell in json.load(open(nb))['cells'] if cell['cell_type']=='code' and any(line.startswith('import') or line.startswith('from') for line in cell['source'].split('\n'))]"
+   71* docker exec grocerydb-private-jupyter-1 mkdir -p /app/code/output/figures
+   72* cd GroceryDB-private && docker exec grocerydb-private-jupyter-1 timeout 300 jupyter nbconvert --to notebook --execute --ExecutePreprocessor.timeout=300 /app/code/ingredient_counts_figure_S13.ipynb --output /app/code/output/ingredient_counts_figure_S13_executed.ipynb
+   73* docker exec grocerydb-private-mongodb-1 mongosh --eval "db.stats()"
+   74* docker exec grocerydb-private-jupyter-1 python3 /app/code/import_data.py
+   75* docker exec grocerydb-private-jupyter-1 jupyter nbconvert --to notebook --execute --ExecutePreprocessor.timeout=600 /app/code/ingredient_counts_figure_S13.ipynb --output /app/code/output/ingredient_counts_figure_S13_executed.ipynb
+   76* docker exec grocerydb-private-jupyter-1 jupyter nbconvert --to notebook --execute --ExecutePreprocessor.timeout=600 /app/code/GroceryDB_IgFPro_figures.ipynb --output /app/code/output/GroceryDB_IgFPro_figures_executed.ipynb
+   77* cd GroceryDB-private && docker exec grocerydb-private-jupyter-1 ls -l /app/code/output/
+   78* gst
+   79* gd
+   80* cd GroceryDB-private
+   81* gst
+   82* git add . && git commit -m "Fix MongoDB connection strings and update requirements.txt with missing dependencies. Successfully run all notebooks and generate figures." | cat
+   83* docker exec grocerydb-private-jupyter-1 python3 -c "from pymongo import MongoClient; client = MongoClient('mongodb://mongodb:27017/'); db = client.GroceryDB; print('Collections:', db.list_collection_names()); for coll in db.list_collection_names(): print(f'\n{coll} count:', db[coll].count_documents({}))"
+   84* docker exec grocerydb-private-jupyter-1 python3 -c "from pymongo import MongoClient; client = MongoClient('mongodb://mongodb:27017/'); db = client.GroceryDB; print('Collections:', db.list_collection_names())"
+   85* docker exec grocerydb-private-jupyter-1 jupyter nbconvert --to notebook --execute --ExecutePreprocessor.timeout=600 /app/code/Nutrition_Price_Analysis.ipynb --output /app/code/output/Nutrition_Price_Analysis_executed.ipynb
+   86* docker exec grocerydb-private-jupyter-1 python3 -c "import nbformat as nbf; nb = nbf.v4.new_notebook(); nb.cells = [nbf.v4.new_markdown_cell('# Nutrition and Price Analysis\n\nThis notebook explores relationships between nutritional value, price, and ingredient complexity in grocery products.'), nbf.v4.new_code_cell('import pandas as pd\nimport numpy as np\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nimport plotly.express as px\nfrom pymongo import MongoClient\n\n# Connect to MongoDB\nclient = MongoClient(\"mongodb://mongodb:27017/\")\ndb = client.GroceryDB')]; nbf.write(nb, '/app/code/Nutrition_Analysis.ipynb')"
+   87* docker exec grocerydb-private-jupyter-1 jupyter nbconvert --to notebook --execute --ExecutePreprocessor.timeout=600 /app/code/Nutrition_Analysis.ipynb --output /app/code/output/Nutrition_Analysis_executed.ipynb
+   88* docker exec grocerydb-private-jupyter-1 ls -l /app/code/output/
+   89* docker exec grocerydb-private-jupyter-1 cat /app/code/output/Nutrition_Analysis_executed.ipynb
+   90* docker exec grocerydb-private-jupyter-1 jupyter nbconvert --to notebook --execute --ExecutePreprocessor.timeout=600 /app/code/Nutrition_Analysis.ipynb --output /app/code/output/Nutrition_Analysis_executed.ipynb
+   91* docker exec grocerydb-private-jupyter-1 pip list
+   92* docker exec grocerydb-private-jupyter-1 jupyter nbconvert --to notebook --execute --debug --ExecutePreprocessor.timeout=600 /app/code/Nutrition_Analysis.ipynb --output /app/code/output/Nutrition_Analysis_executed.ipynb
+   93* docker exec grocerydb-private-jupyter-1 python3 -c "from pymongo import MongoClient; client = MongoClient('mongodb://mongodb:27017/'); db = client.GroceryDB; foods = list(db.foods.find()); print(f'Found {len(foods)} food items')"
+   94* docker exec grocerydb-private-jupyter-1 jupyter nbconvert --to notebook --execute --ExecutePreprocessor.timeout=600 /app/code/Nutrition_Analysis_v2.ipynb --output /app/code/output/Nutrition_Analysis_v2_executed.ipynb
+   95* docker exec grocerydb-private-jupyter-1 python3 /app/code/nutrition_analysis.py
+   96* docker exec grocerydb-private-jupyter-1 pip install seaborn
+   97* gst
+   98* gcoma
+   99* git status
+  100* git add README.md code/Nutrition_Analysis.ipynb code/nutrition_analysis.py && git commit -m "feat: Add nutrition analysis tools and documentation - Add scripts for visualizations and analysis"
+  101* docker ps
+  102* docker logs grocerydb-private-jupyter-1 2>&1 | grep "http://127.0.0.1:8888/lab?token=" | tail -n 1
+  103* docker logs grocerydb-private-jupyter-1
+  104* docker exec grocerydb-private-jupyter-1 ls -l /app/code/
+  105* open http://localhost:8888/lab/tree/code/Nutrition_Analysis.ipynb http://localhost:8888/lab/tree/code/GroceryDB_IgFPro_figures.ipynb http://localhost:8888/lab/tree/code/GroceryDB_IngTree_figures.ipynb http://localhost:8888/lab/tree/code/ingredient_counts_figure_S13.ipynb http://localhost:8888/lab/tree/code/GroceryDB_Categories_PricePerCal_figures.ipynb
+  106* open http://localhost:8888/lab/tree/code/Tree_Metrics_Performance_Test.ipynb
+  107* docker exec grocerydb-private-jupyter-1 jupyter notebook create code/Tree_Metrics_Performance_Test.ipynb
+  108* docker exec grocerydb-private-jupyter-1 python3 /app/code/tree_metrics_speedup.py
+  109* git add OPTIMIZE.md && git commit -m "docs: Add performance optimization analysis and recommendations for ingredient tree processing"
+  110* cd GroceryDB-private && git add OPTIMIZE.md && git commit -m "docs: Add performance optimization analysis and recommendations for ingredient tree processing"
+  111* docker exec grocerydb-private-jupyter-1 python3 -c "import multiprocessing; print(f'Available CPU cores: {multiprocessing.cpu_count()}')"
+  112* docker exec grocerydb-private-jupyter-1 python3 /app/code/tree_metrics_parallel.py
+  113* docker exec grocerydb-private-jupyter-1 python3 /app/code/tree_metrics_parallel_mmap.py
+  114* docker exec grocerydb-private-jupyter-1 pip install pyarrow psutil
+  115* docker exec grocerydb-private-jupyter-1 python3 /app/code/tree_metrics_optimized_v3.py
+  116  gst
+  117  history
+  118  ll
+    1  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   10  brew install --cask iterm2 rectangle raycast karabiner-elements shortcat shottr
+   11  brew install docker
+   16  brew install --cask docker
+   19  brew uninstall docker
+   20  brew install --cask docker
+   23  brew install --cask cursor
+   80  cat > install-extensions.sh
+   81  chmod 755 install-extensions.sh
+   82  ./install-extensions.sh
+   85  ./install-extensions.sh
+   89  cat install-extensions.sh
+   92  cursor --install-extension vscodevim.vim
+   93  cursor --install-extension vscodevim.vim --help
+   94  cursor --install-extension vscodevim.vim --help | grep -i sig
+   95  cursor --install-extension vscodevim.vim
+   96  vi install-extensions.sh
+   97  ./install-extensions.sh
+  100  vi install-extensions.sh
+  101  ./install-extensions.sh
+  102  vi install-extensions.sh
+  103  ./install-extensions.sh
+  105* chmod +x install-extensions.sh && ./install-extensions.sh
+  106* ./install-extensions.sh
+  107* code --install-extension foo
+  108* code --install-extension bierner.markdown-mermaid
+  109* vscode --install-extension bierner.markdown-mermaid
+  113* ./install-extensions.sh
+  118* brew install gfind
+  119* vscode --install-extension bierner.markdown-mermaid
+  120* code --install-extension bierner.markdown-mermaid
+  122* ./install-extensions.sh
+  126* vi install-extensions.sh
+  133* cat missing.list | xargs -L1 cursor --install-extension
+  135* cat missing.list | xargs -L1 cursor --install-extension
+  154* brew install direnv
+  200  brew install tmux
+  202  brew install dotbare pygmentize
+  203  brew install dotbare dotter
+  204  brew install dotbare pygmentize
+  205  pip install pygmentize
+  208  brew install ≥
+  209  brew install pygments
+  211  history | grep install

@@ -328,12 +328,84 @@
         "key": "alt+shift+d",
         "command": "workbench.action.editorDictation.stop",
         "when": "editorDictation.inProgress"
-    }    
+    },
+    {
+        "key": "shift+alt+c",
+        "command": "workbench.action.terminal.copyLastCommand"
+    },
+    {
+        "key": "cmd+r cmd+p",
+        "command": "workbench.action.toggleMaximizedPanel"
+    },
+    {
+        "key": "cmd+r cmd+h",
+        "command": "workbench.action.maximizeEditorHideSidebar"
+    },
+    
 ]
 
-
 // NOTES:
+// open "x-apple.systempreferences:com.apple.Keyboard-Settings"                  // open Keyboard settings panel
 // defaults write -g ApplePressAndHoldEnabled -bool false                         // disable accept popup on press and hold
 // defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false // disable insert period on double space
 // defaults write -g KeyRepeat -int 1                                            // set keyboard repeat rate to fastest
 // defaults write -g InitialKeyRepeat -int 10                                    // set key repeat delay to shortest
+
+// Input Menu and Text Settings:
+// open "x-apple.systempreferences:com.apple.Keyboard-Settings.textinput"        // open Text Input settings panel
+// open "x-apple.systempreferences:com.apple.Language-Region-Settings"           // open Language & Region settings
+
+// Option Key Settings:
+// open "x-apple.systempreferences:com.apple.Keyboard-Settings.modifier"         // open Modifier Keys settings
+// defaults write -g com.apple.keyboard.modifiermapping.1452-566-0 -array-add '<dict><key>HIDKeyboardModifierMappingSrc</key><integer>30064771129</integer><key>HIDKeyboardModifierMappingDst</key><integer>30064771113</integer></dict>'  // Set Left Option to Esc+
+
+// Check current modifier mappings:
+// hidutil property --get "UserKeyMapping"                                      // show current key mappings
+// defaults -currentHost read -g com.apple.keyboard.modifiermapping            // read modifier key mappings
+
+// Reset modifier mappings:
+// defaults -currentHost delete -g com.apple.keyboard.modifiermapping          // reset all modifier mappings
+
+// defaults write com.apple.TextInputMenu visible -bool false                    // hide input menu from menu bar
+// defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false           // disable automatic spelling correction
+// defaults write -g NSAutomaticCapitalizationEnabled -bool false               // disable automatic capitalization
+// defaults write -g NSAutomaticTextCompletionEnabled -bool false               // disable inline predictive text
+// defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false // disable period on double-space
+// defaults write -g NSAutomaticQuoteSubstitutionEnabled -bool false            // disable smart quotes
+// defaults write -g NSAutomaticDashSubstitutionEnabled -bool false             // disable smart dashes
+
+// After changing settings:
+// killall SystemUIServer                                                        // restart UI to apply changes
+
+// Open Keyboard Shortcuts Settings:
+// open "x-apple.systempreferences:com.apple.Keyboard-Settings.shortcuts"        // open Keyboard Shortcuts panel
+// open "x-apple.systempreferences:com.apple.Keyboard-Settings.modifier"         // open Modifier Keys panel
+
+// Read current settings:
+// defaults read -g ApplePressAndHoldEnabled                                     // check press-and-hold setting
+// defaults read -g KeyRepeat                                                    // check key repeat rate
+// defaults read -g InitialKeyRepeat                                            // check key repeat delay
+// defaults read -g NSAutomaticSpellingCorrectionEnabled                        // check spelling correction
+// defaults read -g NSAutomaticCapitalizationEnabled                            // check auto capitalization
+// defaults read -g NSAutomaticTextCompletionEnabled                            // check predictive text
+// defaults read -g NSAutomaticQuoteSubstitutionEnabled                         // check smart quotes
+// defaults read -g NSAutomaticDashSubstitutionEnabled                          // check smart dashes
+// defaults read NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled           // check double-space period
+
+// List all defaults for an app/domain:
+// defaults read com.apple.TextInputMenu                                        // read all TextInput settings
+// defaults read -g                                                            // read all global settings
+// defaults find KeyRepeat                                                     // find all domains containing a key
+
+// Export/Backup current defaults:
+// defaults domains | tr ',' '\n' | xargs -I{} sh -c 'echo "Domain: {}"; defaults read {}'  // list ALL defaults
+// defaults export com.apple.TextInputMenu /tmp/text_input_defaults.plist      // export specific domain
+// defaults export -g /tmp/global_defaults.plist                               // export global defaults
+
+// Note: There's no direct way to see original default values if they've been changed.
+// You can either:
+// 1. Check on a fresh macOS installation
+// 2. Create a new user account to see defaults
+// 3. Reset all defaults: defaults delete domain-name
+
+
