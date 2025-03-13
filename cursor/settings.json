@@ -91,5 +91,13 @@
     "workbench.editorAssociations": {
         "git-rebase-todo": "default"
     },
-    "magit.forge-enabled": true
+    "magit.forge-enabled": true,
+    "workbench.colorTheme": "Abyss",
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    // GitHub Multiple Credential Provider (MCP) Configuration
+    "github.gitAuthentication": true,
+    "github.gitProtocol": "https",
+    "github.multipleMCP": true
 }
