@@ -99,5 +99,9 @@
     // GitHub Multiple Credential Provider (MCP) Configuration
     "github.gitAuthentication": true,
     "github.gitProtocol": "https",
-    "github.multipleMCP": true
+    "github.multipleMCP": true,
+    
+    // Anthropic Model Context Protocol Configuration
+    "cursor.experimental.anthropic.claude.modelContextProtocol": true,
+    "cursor.experimental.anthropic.claude.modelContextProtocolPath": "~/Library/Application Support/Cursor/User/mcp/config.json"
 }
