@@ -92,7 +92,7 @@
         "git-rebase-todo": "default"
     },
     "magit.forge-enabled": true,
-    "workbench.colorTheme": "Abyss",
+    "workbench.colorTheme": "Default High Contrast Light",
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
@@ -103,5 +103,12 @@
     
     // Anthropic Model Context Protocol Configuration
     "cursor.experimental.anthropic.claude.modelContextProtocol": true,
-    "cursor.experimental.anthropic.claude.modelContextProtocolPath": "~/Library/Application Support/Cursor/User/mcp/config.json"
+    "cursor.experimental.anthropic.claude.modelContextProtocolPath": "~/Library/Application Support/Cursor/User/mcp/config.json",
+    "update.releaseTrack": "prerelease",
+    "remote.SSH.configFile": "/Users/me/.ssh/config",
+    "sshfs.configs": [
+        {
+            "name": "sshfs"
+        }
+    ]
 }
