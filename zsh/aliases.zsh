@@ -1,15 +1,17 @@
 # Alias Management and ZSH Configuration
 alias adump='alias | tee $ZSH_CUSTOM/aliases.dump; ls -lah $ZSH_CUSTOM/aliases.dump'                   # Dump all aliases to file and show it
 alias al='alias | perl -pe "s/=/\x23/" | column -x -s$(printf "\x23") -t | cut -c-$(tput cols) | fzf'  # Fuzzy find aliases
-#alias als='less -C $ZSH_CUSTOM/aliases.zsh'                                                            # View aliases file
+#alias als='less -C $ZSH_CUSTOM/aliases.zsh'                                                           # View aliases file
 alias ag='alias | grep'                                                                                # Search aliases
 
 # ZSH Custom Directory Management
-alias zc='cd $ZSH_CUSTOM/'                                                                            # Go to ZSH custom dir
-alias zcc='z=$ZSH_CUSTOM/aliases.zsh; echo Sourcing $z; source $z'                                    # Source aliases file
+alias zc='cd $ZSH_CUSTOM/'                                                                             # Go to ZSH custom dir
+alias zcc='z=$ZSH_CUSTOM/aliases.zsh; echo Sourcing $z; source $z'                                     # Source aliases file
 alias zca='echo "Add custom alias: Ctrl-C to cancel, or copy and paste, then Ctrl-D when done."; cat >> $ZSH_CUSTOM/aliases.zsh; zcc'  # Add new alias interactively
-alias zcv='vi $ZSH_CUSTOM/aliases.zsh; zcc; (cd ~/dotfiles/zsh; git add aliases.zsh; gcom)'              # Edit and source aliases
-alias zrc='vi $HOME/.zshrc; source $HOME/.zshrc'                                                      # Edit and source zshrc
+alias zcv='vi $ZSH_CUSTOM/aliases.zsh; zcc; (cd ~/dotfiles/zsh; git add aliases.zsh; gcom)'            # Edit and source aliases
+alias zcvc='cursor $ZSH_CUSTOM/aliases.zsh'                                                            # Edit and source aliases
+alias zrc='vi $HOME/.zshrc; source $HOME/.zshrc'                                                       # Edit and source zshrc
+alias zrcc='cursor $HOME/.zshrc'                                                                       # Edit and source zshrc
 
 # Directory Stack Operations
 alias po='popd; dirs -v'       # Pop directory from stack
@@ -56,7 +58,11 @@ alias extract_images_py='local f; f() { python -c "import re, base64; [open(f\"{
 # Misc
 alias dotopen='local f; f() { dot -Tpng "$1" -o "${1%.dot}.png" && open "${1%.dot}.png"; }; f'     # Convert and open dot file
 alias cl='chrome-cli list links'
-
+# Sample filename output: filename__20220101T1200
+# If the file has an extension, the timestamp will be added before the extension
+# For example, if the file is 'filename.txt', the output will be 'filename__20220101T1200.txt'
+alias cptime='local f; f() { base="${1%%.*}"; ext="${1#*.}"; delimiter="${2:-__}"; if [ "$base" = "$ext" ]; then cp $1 "${base}${delimiter}$(date -r $1 +%Y%m%dT%H%M)"; else cp $1 "${base}${delimiter}$(date -r $1 +%Y%m%dT%H%M).${ext}"; fi; }; f' # copy file to same name with timestamp
+alias cpnow='local f; f() { base="${1%%.*}"; ext="${1#*.}"; delimiter="${2:-__}"; if [ "$base" = "$ext" ]; then cp $1 "${base}${delimiter}$(date +%Y%m%dT%H%M)"; else cp $1 "${base}${delimiter}$(date +%Y%m%dT%H%M).${ext}"; fi; }; f' # copy file to same name with current time as timestamp
 # Git and Github Repository Management
 #alias gro='open $(git remote get-url origin)'                                                         # Open repo in browser
 alias gro='open ${$(git remote get-url origin):gs/git@github.com:/https:\/\/github.com\//}'           # Open repo in browser and ensure https url
