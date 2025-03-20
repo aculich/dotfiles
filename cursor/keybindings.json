@@ -341,7 +341,14 @@
         "key": "cmd+r cmd+h",
         "command": "workbench.action.maximizeEditorHideSidebar"
     },
-    
+    {
+        "key": "cmd+;",
+        "command": "editor.action.insertSnippet",
+        "args": {
+            "snippet": "${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DAY}"
+        },
+        "when": "editorTextFocus && editorLangId == 'markdown'"
+    }
 ]
 
 // NOTES:
