@@ -254,11 +254,18 @@ alias gbsu='git branch --set-upstream-to=origin/$(current_branch) $(current_bran
 alias gbaa='git --paginate for-each-ref --sort=-committerdate refs/heads/ refs/remotes/ --format="%(committerdate:short) %(committerdate:iso8601) %(committerdate:relative)%09%(refname:short)"'
 alias gbaaa='git --paginate for-each-ref --sort=committerdate refs/heads/ refs/remotes/ --format="%(committerdate:short) %(committerdate:iso8601) %(committerdate:relative)%09%(refname:short)"'
 
+# Alias 'gwtb' creates or uses a git worktree for a specified branch in a given repository.
+# Usage: gwtb <repo_path> <branch_name> [base_dir] [source_branch]
+# - repo_path: Path to the git repository.
+# - branch_name: Name of the branch to create or use.
+# - base_dir: Optional. Base directory name for the worktree; defaults to the repository name.
+# - source_branch: Optional. The branch from which a new branch will be created; defaults to the currently checked out branch.
 alias gwtb='local f; f() {
     # Require both arguments
     local repo_path="${1:?Must provide path to repository}"
     local branch="${2:?Must provide branch name}"
     local base_dir="${3:-${repo_path:t}}"  # Use repo name as default base_dir
+    local source_branch="${4:-$(git -C "$repo_path" rev-parse --abbrev-ref HEAD)}"
     local safe_branch="${branch//\//_}"
     
     # Ensure repo_path is a git repository
@@ -269,8 +276,8 @@ alias gwtb='local f; f() {
     
     # If creating a new branch
     if ! git -C "$repo_path" show-ref --verify --quiet "refs/heads/$branch"; then
-        echo "Creating new branch: $branch"
-        git -C "$repo_path" worktree add -b "$branch" "${PWD}/${base_dir}__${safe_branch}"
+        echo "Creating new branch: $branch from $source_branch"
+        git -C "$repo_path" worktree add -b "$branch" "${PWD}/${base_dir}__${safe_branch}" "$source_branch"
     else
         # For existing branches
         echo "Using existing branch: $branch"
