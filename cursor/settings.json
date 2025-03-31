@@ -104,11 +104,33 @@
     // Anthropic Model Context Protocol Configuration
     "cursor.experimental.anthropic.claude.modelContextProtocol": true,
     "cursor.experimental.anthropic.claude.modelContextProtocolPath": "~/Library/Application Support/Cursor/User/mcp/config.json",
-    "update.releaseTrack": "prerelease",
     "remote.SSH.configFile": "/Users/me/.ssh/config",
     "sshfs.configs": [
         {
             "name": "sshfs"
         }
-    ]
+    ],
+    "project-scopes.globalExclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true
+    },
+    "githubPullRequests.experimental.chat": true,
+    "githubPullRequests.experimental.notificationsView": true,
+    "githubPullRequests.experimental.useQuickChat": true,
+    "githubPullRequests.notifications": "pullRequests",
+    "specstory.helpUsImprove": false,
+    "specstory.derivedCursorRules.enabled": true,
+    "cursor.composer.shouldAllowCustomModes": true,
+    "cursor.composer.shouldChimeAfterChatFinishes": true,
+    "cursor.terminal.usePreviewBox": true,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "svelte.enable-ts-plugin": true,
+    "workbench.colorTheme": "Default High Contrast Light",
+    "update.releaseTrack": "prerelease"
 }
