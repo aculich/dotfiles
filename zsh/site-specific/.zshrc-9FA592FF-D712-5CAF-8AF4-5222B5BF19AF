@@ -154,3 +154,14 @@ load-nvmrc() {
 }
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
+
+# Added by Windsurf
+export PATH="/Users/me/.codeium/windsurf/bin:$PATH"
+
+# bun completions
+[ -s "/Users/me/.bun/_bun" ] && source "/Users/me/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
