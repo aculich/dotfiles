@@ -1,4 +1,6 @@
 [
+
+    
     // https://vspacecode.github.io/docs/bonus/
     // Quick Window Navigation: To navigate all the windows including slide and bottom pane with Ctrl-h/j/k/l, you can merge the following config system's key bindings to your keybindings.json file.
     {
@@ -348,6 +350,14 @@
             "snippet": "${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}"
         },
         "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+i",
+        "command": "composerMode.agent"
+    },
+    {
+        "key": "cmd+i",
+        "command": "composerMode.agent"
     }
 ]
 
