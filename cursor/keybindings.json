@@ -358,6 +358,11 @@
     {
         "key": "cmd+i",
         "command": "composerMode.agent"
+    },
+    {
+        "key": "shift+cmd+space",
+        "command": "vspacecode-expanded.space",
+        "when": "!editorTextFocus"
     }
 ]
 
