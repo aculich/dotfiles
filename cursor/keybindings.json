@@ -363,6 +363,14 @@
         "key": "shift+cmd+space",
         "command": "vspacecode-expanded.space",
         "when": "!editorTextFocus"
+    },
+    { // pass through Ctrl+X to terminal session
+        "key": "ctrl+x ctrl+x",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {
+            "text": "\u0018\u0018" // send ctrl+x passthru
+        },
+        "when": "terminalFocus"
     }
 ]
 
