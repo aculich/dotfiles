@@ -12,6 +12,8 @@ alias zcv='vi $ZSH_CUSTOM/aliases.zsh; zcc; (cd ~/dotfiles/zsh; git add aliases.
 alias zcvc='cursor $ZSH_CUSTOM/aliases.zsh'                                                            # Edit and source aliases
 alias zrc='vi $HOME/.zshrc; source $HOME/.zshrc'                                                       # Edit and source zshrc
 alias zrcc='cursor $HOME/.zshrc'                                                                       # Edit and source zshrc
+alias ee='vi $HOME/.envrc'
+alias eec='cursor $HOME/.envrc'
 
 # Directory Stack Operations
 alias po='popd; dirs -v'       # Pop directory from stack
