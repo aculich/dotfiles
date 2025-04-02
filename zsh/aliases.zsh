@@ -257,6 +257,29 @@ alias gbsu='git branch --set-upstream-to=origin/$(current_branch) $(current_bran
 alias gbaa='git --paginate for-each-ref --sort=-committerdate refs/heads/ refs/remotes/ --format="%(committerdate:short) %(committerdate:iso8601) %(committerdate:relative)%09%(refname:short)"'
 alias gbaaa='git --paginate for-each-ref --sort=committerdate refs/heads/ refs/remotes/ --format="%(committerdate:short) %(committerdate:iso8601) %(committerdate:relative)%09%(refname:short)"'
 
+# Use `export GIT_PAGER='less -F -X'` for the current session.
+# Use `git config --global core.pager 'less -F -X'` to set it globally.
+# Use `--paginate` with specific commands as needed.
+export GIT_PAGER='cat' # by default turn the git pager off unless we explicitly turn it on for a session (so it doesn't mess up cursor!)
+alias gpage='toggle_git_pager -v'  # Toggle git pager with verbose output
+
+# Git pager configuration
+function set_git_pager() {
+  [[ "$TERM_PROGRAM" =~ ^(vscode|cursor)$ ]] && export GIT_PAGER='cat' || export GIT_PAGER='less -FRX'
+  [[ "$1" == "-v" ]] && echo "Pager mode: ${GIT_PAGER}"
+}
+
+function toggle_git_pager() {
+  export GIT_PAGER=$([[ "${GIT_PAGER:0:3}" == "cat" ]] && echo "less -FRX" || echo "cat")
+  [[ "$1" == "-v" ]] && echo "Pager mode: ${GIT_PAGER}"
+}
+
+# Set initial pager based on terminal
+set_git_pager
+
+# Add hook to update pager when terminal changes
+function chpwd() { set_git_pager }
+
 # Alias 'gwtb' creates or uses a git worktree for a specified branch in a given repository.
 # Usage: gwtb <repo_path> <branch_name> [base_dir] [source_branch]
 # - repo_path: Path to the git repository.
