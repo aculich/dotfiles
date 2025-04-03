@@ -278,7 +278,10 @@ function toggle_git_pager() {
 set_git_pager
 
 # Add hook to update pager when terminal changes
-function chpwd() { set_git_pager }
+#function chpwd() { set_git_pager }
+
+alias pwd='/bin/pwd -L | tee >(tr -d "\n" | pbcopy)' # Copies the logical current directory path to the clipboard
+alias pwp='/bin/pwd -P | tee >(tr -d "\n" | pbcopy)' # Copies the physical current directory path, with symlinks resolved, to the clipboard
 
 # Alias 'gwtb' creates or uses a git worktree for a specified branch in a given repository.
 # Usage: gwtb <repo_path> <branch_name> [base_dir] [source_branch]
