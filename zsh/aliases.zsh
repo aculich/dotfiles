@@ -67,9 +67,9 @@ alias cl='chrome-cli list links'
 alias cptime='local f; f() { base="${1%%.*}"; ext="${1#*.}"; delimiter="${2:-__}"; if [ "$base" = "$ext" ]; then cp $1 "${base}${delimiter}$(date -r $1 +%Y%m%dT%H%M)"; else cp $1 "${base}${delimiter}$(date -r $1 +%Y%m%dT%H%M).${ext}"; fi; }; f' # copy file to same name with timestamp
 alias cpnow='local f; f() { base="${1%%.*}"; ext="${1#*.}"; delimiter="${2:-__}"; if [ "$base" = "$ext" ]; then cp $1 "${base}${delimiter}$(date +%Y%m%dT%H%M)"; else cp $1 "${base}${delimiter}$(date +%Y%m%dT%H%M).${ext}"; fi; }; f' # copy file to same name with current time as timestamp
 # Git and Github Repository Management
-#alias gro='open $(git remote get-url origin)'                                                         # Open repo in browser
+#alias gro='open $(git remote get-url origin)'                                                        # Open repo in browser
 alias gro='open ${$(git remote get-url origin):gs/git@github.com:/https:\/\/github.com\//}'           # Open repo in browser and ensure https url
-alias grp='git remote get-url origin | tee >(tr -d "\n" | pbcopy)'                                               # Copy git remote to paste buffer
+alias grp='git remote get-url origin | tee >(tr -d "\n" | pbcopy)'                                    # Copy git remote to paste buffer
 alias gitpullall='for d in */; do echo -n "$d..."; (cd "$d" && git pull --all); done'                 # Pull all repos in current dir
 alias gclones='for url in $(<urls.list); do echo $i; git clone "$url" "${url:t}__${url:h:t}" ; done'  # Clone repos from urls.list with namespaced dirs
 
