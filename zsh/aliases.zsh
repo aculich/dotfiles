@@ -72,6 +72,14 @@ alias gro='open ${$(git remote get-url origin):gs/git@github.com:/https:\/\/gith
 alias grp='git remote get-url origin | tee >(tr -d "\n" | pbcopy)'                                    # Copy git remote to paste buffer
 alias gitpullall='for d in */; do echo -n "$d..."; (cd "$d" && git pull --all); done'                 # Pull all repos in current dir
 alias gclones='for url in $(<urls.list); do echo $i; git clone "$url" "${url:t}__${url:h:t}" ; done'  # Clone repos from urls.list with namespaced dirs
+alias gtimemachine='local f; f() { 
+    local file="${1:?Must provide filename}"
+    for commit in $(git log --reverse --pretty=format:"%h" "$file"); do 
+        echo -e "\n=== Commit Details ===\n"
+        git log -1 --pretty=format:"Hash: %h%nAuthor: %an <%ae>%nDate: %ad%nSubject: %s%n%n" "$commit"
+        git show "$commit":"$file" | less
+    done 
+}; f'
 
 # Clone or update all repositories for a GitHub user/organization
 # Usage: ghrepos USERNAME or ghrepos https://github.com/USERNAME
