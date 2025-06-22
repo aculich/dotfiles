@@ -52,7 +52,6 @@
     "editor.renderWhitespace": "none",
     "git.autofetch": true,
     "magit.code-path": "cursor",
-    "terminal.integrated.inheritEnv": false,
     "magit.display-buffer-function": "same-column",
     "magit.quick-switch-enabled": true,
     "extensions.autoUpdate": true,
@@ -122,9 +121,6 @@
     "githubPullRequests.experimental.useQuickChat": true,
     "githubPullRequests.notifications": "pullRequests",
     "specstory.helpUsImprove": false,
-    "cursor.composer.shouldAllowCustomModes": true,
-    "cursor.composer.shouldChimeAfterChatFinishes": true,
-    "cursor.terminal.usePreviewBox": true,
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
@@ -135,5 +131,9 @@
     "diffEditor.maxComputationTime": 0,
     "editor.multiCursorModifier": "ctrlCmd",
     "workbench.colorTheme": "Default Dark+",
+    "cursor.composer.shouldAllowCustomModes": true,
+    "cursor.composer.shouldChimeAfterChatFinishes": true,
+    "cursor.terminal.usePreviewBox": true,
+    "terminal.integrated.inheritEnv": false,
     "terminal.integrated.shellIntegration.enabled": false
 }
