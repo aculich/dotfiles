@@ -63,7 +63,7 @@
     "editor.defaultFoldingRangeProvider": "vscode.markdown-language-features",
     "editor.defaultFormatter": "vscode.markdown-language-features",
     "geminicodeassist.project": "",
-    "gitTreeCompare.diffMode": "merge",
+    "gitTreeCompare.diffMode": "full",
     "makefile.configureOnOpen": true,
     "redhat.telemetry.enabled": true,
     "cursor.aipreview.enabled": true,
@@ -92,7 +92,6 @@
         "git-rebase-todo": "default"
     },
     "magit.forge-enabled": true,
-    "workbench.colorTheme": "Default High Contrast Light",
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
@@ -123,7 +122,6 @@
     "githubPullRequests.experimental.useQuickChat": true,
     "githubPullRequests.notifications": "pullRequests",
     "specstory.helpUsImprove": false,
-    "specstory.derivedCursorRules.enabled": true,
     "cursor.composer.shouldAllowCustomModes": true,
     "cursor.composer.shouldChimeAfterChatFinishes": true,
     "cursor.terminal.usePreviewBox": true,
@@ -131,6 +129,11 @@
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "svelte.enable-ts-plugin": true,
-    "workbench.colorTheme": "Default High Contrast Light",
-    "update.releaseTrack": "prerelease"
+    "update.releaseTrack": "prerelease",
+    "workbench.editor.enablePreview": false,
+    "specstory.derivedRules.enabled": false,
+    "diffEditor.maxComputationTime": 0,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "workbench.colorTheme": "Default Dark+",
+    "terminal.integrated.shellIntegration.enabled": false
 }
