@@ -135,5 +135,13 @@
     "cursor.composer.shouldChimeAfterChatFinishes": true,
     "cursor.terminal.usePreviewBox": true,
     "terminal.integrated.inheritEnv": false,
-    "terminal.integrated.shellIntegration.enabled": false
+
+    // Agent Mode Terminal Ignores ZSH Profile Setting and Forces Bash
+    // https://forum.cursor.com/t/agent-mode-terminal-ignores-zsh-profile-setting-and-forces-bash/68663/7
+    "terminal.integrated.shellIntegration.enabled": false,
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "terminal.integrated.automationProfile.osx": {
+      "path": "/bin/zsh",
+      "args": ["-l"]
+    }
 }
