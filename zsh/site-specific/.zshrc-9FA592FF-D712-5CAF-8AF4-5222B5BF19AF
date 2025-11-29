@@ -155,17 +155,21 @@ fi
 autoload -U add-zsh-hook
 load-nvmrc() {
   # Check if nvm is available (either loaded or as wrapper function)
-  if ! command -v nvm &> /dev/null && ! type nvm &> /dev/null; then
-    # NVM not available yet - skip (will be called again when nvm is loaded)
+  # The wrapper function should always be available, but check anyway
+  if ! type nvm &> /dev/null; then
+    # NVM wrapper not available - skip (shouldn't happen, but be safe)
     return 0
   fi
   
   # Check if nvm_find_nvmrc function exists (from nvm.sh)
+  # This function only exists after nvm.sh is loaded
   if ! type nvm_find_nvmrc &> /dev/null; then
-    # NVM not fully loaded yet - skip
+    # NVM not fully loaded yet - the wrapper will load it when we call nvm
+    # But we can't call nvm_find_nvmrc yet, so skip for now
     return 0
   fi
   
+  # Now it's safe to call nvm - the wrapper will ensure it's loaded
   local node_version="$(nvm version 2>/dev/null)"
   local nvmrc_path="$(nvm_find_nvmrc 2>/dev/null)"
 

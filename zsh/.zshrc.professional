@@ -80,7 +80,14 @@ fi
 export NVM_DIR="$HOME/.nvm"
 
 # Helper function to load NVM (used by lazy loaders)
+# Try multiple paths since nvm can be installed in different ways
 _load_nvm() {
+    # Try NVM_DIR first (standard nvm installation)
+    if [[ -s "$NVM_DIR/nvm.sh" ]]; then
+        source "$NVM_DIR/nvm.sh"
+        return 0
+    fi
+    # Try brew prefix (if installed via Homebrew)
     if [[ -s "$(brew --prefix nvm)/nvm.sh" ]]; then
         source "$(brew --prefix nvm)/nvm.sh"
         return 0
@@ -90,39 +97,64 @@ _load_nvm() {
 
 # Create nvm wrapper function early (before direnv or site-specific configs)
 # This prevents "command not found: nvm" errors during startup
-if [[ "$IS_IDE_TERMINAL" == true ]]; then
-    # In IDE terminals: create wrapper that lazy-loads NVM
-    nvm() {
-        # Load NVM if not already loaded
-        if ! type nvm &> /dev/null || [[ "$(type nvm)" != *"function"* ]]; then
+# IMPORTANT: Create wrapper for ALL terminals, not just IDE terminals
+# Site-specific configs may call nvm before it's loaded
+nvm() {
+    # Check if NVM is already loaded by checking for nvm_find_nvmrc function
+    # This function only exists after nvm.sh is loaded
+    if ! type nvm_find_nvmrc &> /dev/null; then
+        # NVM not loaded yet - remove this wrapper and load the real nvm
+        unfunction nvm 2>/dev/null || true
+        _load_nvm || return 1
+        # After _load_nvm, nvm is now the real function from nvm.sh
+        # Call it with the original arguments
+        nvm "$@"
+    else
+        # NVM is already loaded - nvm should be the real function
+        # But if we're still in the wrapper, something went wrong
+        # Try to get the real nvm function
+        if [[ "$(type nvm 2>/dev/null)" == *"_load_nvm"* ]] || [[ "$(type nvm 2>/dev/null)" == *"nvm() {"* ]]; then
+            # We're still in the wrapper - force reload
+            unfunction nvm 2>/dev/null || true
             _load_nvm || return 1
         fi
         # Call the real nvm function
         nvm "$@"
-    }
-    
-    # Also create node/npm/npx wrappers early
+    fi
+}
+
+# Also create node/npm/npx wrappers for lazy loading in IDE terminals
+if [[ "$IS_IDE_TERMINAL" == true ]]; then
     node() {
-        if ! type nvm &> /dev/null || [[ "$(type nvm)" != *"function"* ]]; then
+        # Load NVM if not already loaded
+        if ! type nvm &> /dev/null; then
             _load_nvm || return 1
         fi
+        # Remove wrapper functions (NVM is now loaded)
         unfunction node npm npx 2>/dev/null || true
+        # Call the real node command
         command node "$@"
     }
     
     npm() {
-        if ! type nvm &> /dev/null || [[ "$(type nvm)" != *"function"* ]]; then
+        # Load NVM if not already loaded
+        if ! type nvm &> /dev/null; then
             _load_nvm || return 1
         fi
+        # Remove wrapper functions (NVM is now loaded)
         unfunction node npm npx 2>/dev/null || true
+        # Call the real npm command
         command npm "$@"
     }
     
     npx() {
-        if ! type nvm &> /dev/null || [[ "$(type nvm)" != *"function"* ]]; then
+        # Load NVM if not already loaded
+        if ! type nvm &> /dev/null; then
             _load_nvm || return 1
         fi
+        # Remove wrapper functions (NVM is now loaded)
         unfunction node npm npx 2>/dev/null || true
+        # Call the real npx command
         command npx "$@"
     }
 fi
