@@ -195,29 +195,37 @@ op_signin_cached() {
     local account_email="${1:-aculich@gmail.com}"
     local session_file="$HOME/.op_session"
     
-    echo "Signing in to 1Password..."
-    echo "Account: $account_email"
-    echo ""
-    
     # Check if already signed in (might have valid session)
     # First check cached file
     local existing_token
     existing_token=$(op_get_session_token 2>/dev/null)
     if [[ -n "$existing_token" ]]; then
-        echo "✓ Already signed in (using cached session token)"
+        # Already have a valid cached token
+        if [[ -t 1 ]]; then
+            # Only print if running interactively (not from direnv)
+            echo "✓ Already signed in (using cached session token)"
+        fi
         return 0
     fi
     
     # If op account list works, we have a session but no cached token
     # Try to extract it using --raw (might work if session is still valid)
     if op account list &> /dev/null; then
-        echo "Note: 1Password session exists but token not cached." >&2
-        echo "Attempting to extract token..." >&2
+        if [[ -t 1 ]]; then
+            echo "Note: 1Password session exists but token not cached." >&2
+            echo "Attempting to extract token..." >&2
+        fi
     fi
     
-    echo "This will prompt for biometric authentication (e.g., Touch ID)."
-    echo "Please authenticate when prompted..."
-    echo ""
+    # Only show prompts if running interactively (not from direnv)
+    if [[ -t 1 ]]; then
+        echo "Signing in to 1Password..."
+        echo "Account: $account_email"
+        echo ""
+        echo "This will prompt for biometric authentication (e.g., Touch ID)."
+        echo "Please authenticate when prompted..."
+        echo ""
+    fi
     
     # Get account UUID and user UUID from email (needed for --account flag and env var name)
     local account_uuid
@@ -283,39 +291,82 @@ op_signin_cached() {
     
     # Method 2: If --raw didn't work, try running signin and checking env vars
     if [[ -z "$session_token" ]]; then
-        echo "Note: Using interactive sign-in method..." >&2
+        if [[ -t 1 ]]; then
+            echo "Note: Using interactive sign-in method..." >&2
+        fi
         
         # Run signin (this will show biometric prompt and set OP_SESSION_* env var)
         # The env var name is OP_SESSION_<user_uuid>, not account_uuid!
-        if op signin --account "$account_uuid" 2>&1; then
-            # Look for OP_SESSION_* environment variable
-            # IMPORTANT: op signin sets OP_SESSION_<user_uuid>, not account_uuid!
-            local env_var_name=""
-            if [[ -n "$user_uuid" ]]; then
-                env_var_name="OP_SESSION_${user_uuid}"
+        # IMPORTANT: We need to run this in the current shell context, not a subshell
+        # So we can't use command substitution - we run it directly
+        local signin_success=false
+        
+        # Try --raw first (might work if biometric prompt cooperates)
+        # Note: --raw might hang if it needs interactive input, so we try it first
+        local raw_token=""
+        # Try to get raw token (use timeout if available, otherwise just try)
+        if command -v timeout &> /dev/null || command -v gtimeout &> /dev/null; then
+            local timeout_cmd=$(command -v timeout || command -v gtimeout)
+            raw_token=$($timeout_cmd 30 op signin --account "$account_uuid" --raw 2>&1 || echo "")
+        else
+            # No timeout command - just try it (might hang on interactive prompt)
+            raw_token=$(op signin --account "$account_uuid" --raw 2>&1 || echo "")
+        fi
+        
+        if [[ -n "$raw_token" ]] && \
+           [[ ${#raw_token} -gt 30 ]] && \
+           [[ ! "$raw_token" =~ "[Ee][Rr][Rr][Oo][Rr]" ]] && \
+           [[ ! "$raw_token" =~ "Usage:" ]] && \
+           [[ ! "$raw_token" =~ "not found" ]] && \
+           [[ ! "$raw_token" =~ "cancel" ]]; then
+            session_token=$(echo "$raw_token" | tr -d '\n\r \t')
+            if op account list --session "$session_token" &> /dev/null; then
+                signin_success=true
             fi
-            
-            # Try to get the value using parameter expansion
-            # In zsh, we can use ${(P)var} to get the value of a variable named by another variable
-            if [[ -n "$env_var_name" ]] && [[ -n "${(P)env_var_name:-}" ]]; then
-                session_token="${(P)env_var_name}"
-            else
-                # Try finding any OP_SESSION_* variable that works
+        fi
+        
+        # If --raw didn't work, try interactive signin
+        if [[ "$signin_success" != true ]]; then
+            if op signin --account "$account_uuid" 2>&1; then
+                signin_success=true
+                
+                # Immediately look for OP_SESSION_* environment variable
+                # IMPORTANT: op signin sets OP_SESSION_<user_uuid>, not account_uuid!
+                local env_var_name=""
+                if [[ -n "$user_uuid" ]]; then
+                    env_var_name="OP_SESSION_${user_uuid}"
+                fi
+                
+                # Try to get the value using eval (works in both bash and zsh)
+                # This must be done immediately after signin in the same shell
+                if [[ -n "$env_var_name" ]]; then
+                    eval "session_token=\$$env_var_name" 2>/dev/null || session_token=""
+                fi
+                
+                # If that didn't work, try finding any OP_SESSION_* variable that works
                 # This is a fallback in case the variable name format is different
-                for var_name in ${(k)parameters}; do
-                    if [[ "$var_name" =~ "^OP_SESSION_" ]]; then
-                        local test_token="${(P)var_name}"
+                if [[ -z "$session_token" ]]; then
+                    # Get all environment variables and check for OP_SESSION_*
+                    for var_line in $(env | grep "^OP_SESSION_"); do
+                        local var_name="${var_line%%=*}"
+                        local test_token="${var_line#*=}"
                         if [[ -n "$test_token" ]] && \
                            [[ ${#test_token} -gt 30 ]] && \
                            op account list --session "$test_token" &> /dev/null; then
                             session_token="$test_token"
                             break
                         fi
-                    fi
-                done
+                    done
+                fi
+            else
+                error_output="Sign-in command failed"
+                signin_success=false
             fi
-        else
-            error_output="Sign-in command failed"
+        fi
+        
+        # If signin succeeded but we still don't have a token, that's an error
+        if [[ "$signin_success" == true ]] && [[ -z "$session_token" ]]; then
+            error_output="Sign-in succeeded but could not extract session token from environment"
         fi
         
         # If still no token, report error
