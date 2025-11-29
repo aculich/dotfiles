@@ -36,13 +36,15 @@ op_load_secret() {
 # Usage: op_load_item "vault_name" "item_name" [vault_id]
 # Exports all fields from the item as environment variables
 # Uses session token caching to avoid repeated unlock prompts
+# Returns 0 on success, 1 on failure
 op_load_item() {
     local vault="${1:?Vault name required}"
     local item="${2:?Item name required}"
     local vault_id="${3:-}"
+    local verbose="${4:-false}"  # Set to "true" for debug output
     
     if ! command -v op &> /dev/null; then
-        echo "Error: 1Password CLI (op) not found" >&2
+        [[ "$verbose" == "true" ]] && echo "Error: 1Password CLI (op) not found" >&2
         return 1
     fi
     
@@ -50,8 +52,7 @@ op_load_item() {
     local session_token
     session_token=$(op_get_session_token 2>/dev/null)
     if [[ -z "$session_token" ]]; then
-        # Don't fail loudly - just return silently
-        # User can manually run: op signin
+        [[ "$verbose" == "true" ]] && echo "Error: No 1Password session token. Run: op_signin_cached" >&2
         return 1
     fi
     
@@ -71,21 +72,50 @@ op_load_item() {
     
     # Get all fields from the item using session token
     local fields
-    fields=$(op item get "$item" $vault_arg --session "$session_token" --format json 2>/dev/null | \
-        jq -r '.fields[]? | select(.id != "notesPlain") | "\(.label)=\(.value)"' 2>/dev/null)
+    local item_json
+    item_json=$(op item get "$item" $vault_arg --session "$session_token" --format json 2>/dev/null)
     
-    if [[ -z "$fields" ]]; then
-        echo "Warning: Could not load item ${vault}/${item}" >&2
+    if [[ -z "$item_json" ]]; then
+        [[ "$verbose" == "true" ]] && echo "Error: Could not retrieve item '${item}' from vault '${vault}'" >&2
         return 1
     fi
     
+    fields=$(echo "$item_json" | jq -r '.fields[]? | select(.id != "notesPlain") | "\(.label)=\(.value)"' 2>/dev/null)
+    
+    if [[ -z "$fields" ]]; then
+        [[ "$verbose" == "true" ]] && echo "Warning: Item '${item}' has no fields to load" >&2
+        return 1
+    fi
+    
+    # Count fields for logging
+    local field_count
+    field_count=$(echo "$fields" | wc -l | tr -d ' ')
+    
     # Export each field as an environment variable
+    # In direnv context, we need to ensure exports are visible
+    local exported_count=0
     while IFS='=' read -r label value; do
+        # Skip empty lines
+        [[ -z "$label" ]] && continue
+        
         # Convert label to valid env var name (uppercase, replace spaces with underscores)
         local env_var
         env_var=$(echo "$label" | tr '[:lower:]' '[:upper:]' | tr ' ' '_' | tr -cd '[:alnum:]_')
+        
+        # Remove quotes from value if present
+        value="${value#\"}"
+        value="${value%\"}"
+        value="${value#\'}"
+        value="${value%\'}"
+        
+        # Export the variable
         export "$env_var=$value"
+        ((exported_count++))
+        
+        [[ "$verbose" == "true" ]] && echo "Exported: $env_var" >&2
     done <<< "$fields"
+    
+    [[ "$verbose" == "true" ]] && echo "Loaded $exported_count environment variables from 1Password" >&2
     
     return 0
 }
@@ -98,7 +128,7 @@ op_get_session_token() {
     local session_token=""
     
     # Check if we have a cached session token
-    if [[ -f "$session_file" ]]; then
+    if [[ -f "$session_file" ]] && [[ -s "$session_file" ]]; then
         # Get file age in seconds
         session_age=$(($(date +%s) - $(stat -f %m "$session_file" 2>/dev/null || stat -c %Y "$session_file" 2>/dev/null || echo 0)))
         
@@ -120,7 +150,13 @@ op_get_session_token() {
             fi
             # Bad cached token - remove it
             rm -f "$session_file"
+        else
+            # Session file too old, clean up
+            rm -f "$session_file"
         fi
+    elif [[ -f "$session_file" ]] && [[ ! -s "$session_file" ]]; then
+        # Empty session file - remove it
+        rm -f "$session_file"
     fi
     
     # Check if OP_SESSION_* environment variable is already set
@@ -156,37 +192,147 @@ op_signin_cached() {
     echo "Account: $account_email"
     echo ""
     
-    # Sign in (this will prompt for unlock)
-    if op signin &> /dev/null; then
-        # Get the session token from environment
-        local account_id
-        account_id=$(op account list 2>/dev/null | grep -i "$account_email" | awk '{print $3}' | head -1)
-        
-        if [[ -n "$account_id" ]]; then
-            local env_var_name="OP_SESSION_${account_id}"
-            eval "local session_token=\$$env_var_name" 2>/dev/null
-            if [[ -n "$session_token" ]] && [[ ${#session_token} -gt 30 ]]; then
-                # Cache it
-                echo "$session_token" > "$session_file"
-                chmod 600 "$session_file"
-                echo "✓ Session token cached for 30 minutes"
-                return 0
-            fi
-        fi
-        
-        # Try to get raw token as fallback
-        local raw_token
-        raw_token=$(op signin --raw 2>/dev/null)
-        if [[ -n "$raw_token" ]] && [[ ${#raw_token} -gt 30 ]] && [[ ! "$raw_token" =~ "[Ee][Rr][Rr][Oo][Rr]" ]]; then
-            echo "$raw_token" > "$session_file"
-            chmod 600 "$session_file"
-            echo "✓ Session token cached for 30 minutes"
+    # Check if already signed in (might have valid session)
+    if op account list &> /dev/null; then
+        local existing_token
+        existing_token=$(op_get_session_token 2>/dev/null)
+        if [[ -n "$existing_token" ]]; then
+            echo "✓ Already signed in (using existing session)"
             return 0
         fi
     fi
     
-    echo "✗ Failed to cache session token"
-    return 1
+    echo "This will prompt for biometric authentication (e.g., Touch ID)."
+    echo "Please authenticate when prompted..."
+    echo ""
+    
+    # Get account UUID from email (needed for --account flag)
+    local account_uuid
+    if command -v jq &> /dev/null; then
+        account_uuid=$(op account list --format json 2>/dev/null | \
+            jq -r ".[] | select(.email == \"$account_email\") | .account_uuid" 2>/dev/null | head -1)
+    else
+        # Fallback: try to get from account list output
+        account_uuid=$(op account list 2>/dev/null | grep -i "$account_email" | awk '{print $3}' | head -1)
+    fi
+    
+    if [[ -z "$account_uuid" ]]; then
+        echo "Error: Account '$account_email' not found in 1Password accounts." >&2
+        echo "Available accounts:" >&2
+        op account list 2>&1 | grep -v "^URL" >&2
+        return 1
+    fi
+    
+    # Sign in with --account flag
+    # This will prompt for biometric unlock but won't ask which account
+    # Try --raw first, fall back to checking environment variables
+    
+    local session_token
+    local error_output
+    
+    # Method 1: Try --raw (works best if biometric prompt cooperates)
+    # Capture stderr separately to see any errors
+    session_token=$(op signin --account "$account_uuid" --raw 2>/dev/null)
+    
+    # Check if we got a valid token from --raw
+    if [[ -n "$session_token" ]] && \
+       [[ ${#session_token} -gt 30 ]] && \
+       [[ ! "$session_token" =~ "[Ee][Rr][Rr][Oo][Rr]" ]] && \
+       [[ ! "$session_token" =~ "Usage:" ]] && \
+       [[ ! "$session_token" =~ "not found" ]]; then
+        # Success with --raw method
+        session_token=$(echo "$session_token" | tr -d '\n\r \t')
+        
+        # Verify it works
+        if op account list --session "$session_token" &> /dev/null; then
+            # Token is valid, use it
+            :
+        else
+            # Token invalid, clear it and try alternative
+            session_token=""
+        fi
+    else
+        # --raw didn't work or returned invalid token
+        session_token=""
+    fi
+    
+    # Method 2: If --raw didn't work, try running signin and checking env vars
+    if [[ -z "$session_token" ]]; then
+        echo "Note: Using interactive sign-in method..." >&2
+        
+        # Run signin (this will show biometric prompt and set OP_SESSION_* env var)
+        # We need to run this in a way that preserves the environment
+        if op signin --account "$account_uuid" 2>&1; then
+            # Look for OP_SESSION_* environment variable
+            # The variable name is OP_SESSION_<account_uuid>
+            local env_var_name="OP_SESSION_${account_uuid}"
+            
+            # Try to get the value using parameter expansion
+            # In zsh, we can use ${(P)var} to get the value of a variable named by another variable
+            if [[ -n "${(P)env_var_name:-}" ]]; then
+                session_token="${(P)env_var_name}"
+            else
+                # Try finding any OP_SESSION_* variable that works
+                for var_name in ${(k)parameters}; do
+                    if [[ "$var_name" =~ "^OP_SESSION_" ]]; then
+                        local test_token="${(P)var_name}"
+                        if [[ -n "$test_token" ]] && \
+                           [[ ${#test_token} -gt 30 ]] && \
+                           op account list --session "$test_token" &> /dev/null; then
+                            session_token="$test_token"
+                            break
+                        fi
+                    fi
+                done
+            fi
+        else
+            error_output="Sign-in command failed"
+        fi
+        
+        # If still no token, report error
+        if [[ -z "$session_token" ]]; then
+            echo "Error: Failed to sign in to 1Password" >&2
+            if [[ -n "$error_output" ]]; then
+                echo "Details: $error_output" >&2
+            fi
+            echo "" >&2
+            echo "Troubleshooting:" >&2
+            echo "1. Make sure 1Password app is running" >&2
+            echo "2. Try manually: op signin --account $account_uuid" >&2
+            echo "3. Complete the biometric authentication when prompted" >&2
+            echo "4. Check if biometric authentication is enabled in 1Password settings" >&2
+            return 1
+        fi
+    fi
+    
+    # Check if we got a valid token (not an error message)
+    if [[ -z "$session_token" ]] || \
+       [[ "$session_token" =~ "[Ee][Rr][Rr][Oo][Rr]" ]] || \
+       [[ "$session_token" =~ "Usage:" ]] || \
+       [[ "$session_token" =~ "not found" ]] || \
+       [[ ${#session_token} -lt 30 ]]; then
+        echo "Error: Failed to get valid session token from 1Password" >&2
+        if [[ -n "$session_token" ]]; then
+            echo "Received: ${session_token:0:50}..." >&2
+        fi
+        return 1
+    fi
+    
+    # Verify the token works
+    if ! op account list --session "$session_token" &> /dev/null; then
+        echo "Error: Session token is invalid" >&2
+        return 1
+    fi
+    
+    # Cache the token
+    echo "$session_token" > "$session_file"
+    chmod 600 "$session_file"
+    
+    echo "✓ 1Password session token cached for 30 minutes."
+    echo "  Account: $account_email"
+    echo "  Account UUID: $account_uuid"
+    
+    return 0
 }
 
 # Check if 1Password CLI is authenticated
