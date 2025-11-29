@@ -99,43 +99,60 @@ fi
 # Node Version Manager (nvm) - Lazy loaded for IDE terminals
 export NVM_DIR="$HOME/.nvm"
 
-# Lazy load NVM wrapper function (loads NVM on first use)
-nvm() {
-    # Remove this function and load the real NVM
-    unfunction nvm
-    
-    # Load NVM if it exists
+# Helper function to load NVM (used by lazy loaders)
+_load_nvm() {
     if [[ -s "$(brew --prefix nvm)/nvm.sh" ]]; then
         source "$(brew --prefix nvm)/nvm.sh"
+        return 0
     fi
-    
-    # Call the real nvm command
-    nvm "$@"
+    return 1
 }
 
-# Lazy load node/npm/npx (they trigger NVM loading)
 if [[ "$IS_IDE_TERMINAL" == true ]]; then
     # In IDE terminals: lazy load NVM
     # Create wrapper functions that load NVM on first use
-    node() {
-        unfunction node npm npx
-        if [[ -s "$(brew --prefix nvm)/nvm.sh" ]]; then
-            source "$(brew --prefix nvm)/nvm.sh"
+    
+    # nvm wrapper (loads NVM, then calls real nvm)
+    nvm() {
+        # Load NVM if not already loaded
+        if ! type nvm &> /dev/null || [[ "$(type nvm)" != *"function"* ]]; then
+            _load_nvm || return 1
         fi
+        # Call the real nvm function
+        nvm "$@"
+    }
+    
+    # node/npm/npx wrappers (load NVM, then call real command)
+    node() {
+        # Load NVM if not already loaded
+        if ! type nvm &> /dev/null || [[ "$(type nvm)" != *"function"* ]]; then
+            _load_nvm || return 1
+        fi
+        # Remove wrapper functions (NVM is now loaded)
+        unfunction node npm npx 2>/dev/null || true
+        # Call the real node command
         command node "$@"
     }
+    
     npm() {
-        unfunction node npm npx
-        if [[ -s "$(brew --prefix nvm)/nvm.sh" ]]; then
-            source "$(brew --prefix nvm)/nvm.sh"
+        # Load NVM if not already loaded
+        if ! type nvm &> /dev/null || [[ "$(type nvm)" != *"function"* ]]; then
+            _load_nvm || return 1
         fi
+        # Remove wrapper functions (NVM is now loaded)
+        unfunction node npm npx 2>/dev/null || true
+        # Call the real npm command
         command npm "$@"
     }
+    
     npx() {
-        unfunction node npm npx
-        if [[ -s "$(brew --prefix nvm)/nvm.sh" ]]; then
-            source "$(brew --prefix nvm)/nvm.sh"
+        # Load NVM if not already loaded
+        if ! type nvm &> /dev/null || [[ "$(type nvm)" != *"function"* ]]; then
+            _load_nvm || return 1
         fi
+        # Remove wrapper functions (NVM is now loaded)
+        unfunction node npm npx 2>/dev/null || true
+        # Call the real npx command
         command npx "$@"
     }
 else

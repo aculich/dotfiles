@@ -327,36 +327,63 @@ op_signin_cached() {
         
         # If --raw didn't work, try interactive signin
         if [[ "$signin_success" != true ]]; then
+            # Run op signin - this will set OP_SESSION_* environment variable
+            # IMPORTANT: We must run this in the current shell, not a subshell
+            # So we can't use command substitution - we run it directly and check env after
+            
+            # First, clear any existing OP_SESSION_* variables to avoid confusion
+            unset $(env | grep -o '^OP_SESSION_[^=]*' || true) 2>/dev/null || true
+            
+            # Run signin (this sets OP_SESSION_<user_uuid> in current shell)
             if op signin --account "$account_uuid" 2>&1; then
                 signin_success=true
                 
-                # Immediately look for OP_SESSION_* environment variable
-                # IMPORTANT: op signin sets OP_SESSION_<user_uuid>, not account_uuid!
-                local env_var_name=""
+                # Immediately check for OP_SESSION_* variables in the current shell
+                # Method 1: Try using the known user_uuid with zsh parameter expansion
                 if [[ -n "$user_uuid" ]]; then
-                    env_var_name="OP_SESSION_${user_uuid}"
+                    local env_var_name="OP_SESSION_${user_uuid}"
+                    # In zsh, use ${(P)var_name} to expand variable by name
+                    local test_token="${(P)env_var_name:-}"
+                    if [[ -n "$test_token" ]] && \
+                       [[ ${#test_token} -gt 30 ]] && \
+                       op account list --session "$test_token" &> /dev/null; then
+                        session_token="$test_token"
+                    fi
                 fi
                 
-                # Try to get the value using eval (works in both bash and zsh)
-                # This must be done immediately after signin in the same shell
-                if [[ -n "$env_var_name" ]]; then
-                    eval "session_token=\$$env_var_name" 2>/dev/null || session_token=""
-                fi
-                
-                # If that didn't work, try finding any OP_SESSION_* variable that works
-                # This is a fallback in case the variable name format is different
+                # Method 2: Search all OP_SESSION_* variables using printenv
                 if [[ -z "$session_token" ]]; then
-                    # Get all environment variables and check for OP_SESSION_*
-                    for var_line in $(env | grep "^OP_SESSION_"); do
-                        local var_name="${var_line%%=*}"
-                        local test_token="${var_line#*=}"
-                        if [[ -n "$test_token" ]] && \
-                           [[ ${#test_token} -gt 30 ]] && \
-                           op account list --session "$test_token" &> /dev/null; then
-                            session_token="$test_token"
-                            break
-                        fi
-                    done
+                    # Use printenv to get all OP_SESSION_* variables
+                    local op_session_vars
+                    op_session_vars=$(printenv | grep "^OP_SESSION_" || true)
+                    if [[ -n "$op_session_vars" ]]; then
+                        while IFS='=' read -r var_name var_value; do
+                            # Skip empty lines
+                            [[ -z "$var_name" ]] && continue
+                            
+                            # Clean the value (remove any whitespace)
+                            var_value=$(echo "$var_value" | tr -d '\n\r \t')
+                            
+                            # Test if this token works
+                            if [[ -n "$var_value" ]] && \
+                               [[ ${#var_value} -gt 30 ]] && \
+                               op account list --session "$var_value" &> /dev/null; then
+                                session_token="$var_value"
+                                break
+                            fi
+                        done <<< "$op_session_vars"
+                    fi
+                fi
+                
+                # Method 3: Try eval as fallback (for compatibility)
+                if [[ -z "$session_token" ]] && [[ -n "$user_uuid" ]]; then
+                    local env_var_name="OP_SESSION_${user_uuid}"
+                    eval "test_token=\$$env_var_name" 2>/dev/null || test_token=""
+                    if [[ -n "$test_token" ]] && \
+                       [[ ${#test_token} -gt 30 ]] && \
+                       op account list --session "$test_token" &> /dev/null; then
+                        session_token="$test_token"
+                    fi
                 fi
             else
                 error_output="Sign-in command failed"
