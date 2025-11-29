@@ -246,8 +246,9 @@ alias gcls='local f; f() { url=$1; git clone --depth=1 --no-single-branch "$url"
 gcll() { local filename="${1:-repos.list}"; while read -r i; do echo "$i"; gcls "$i"; done < "$filename"; }  # Clone all repos from list file
 alias cls="chrome-cli list links | fzf"
 alias clst="chrome-cli list tablinks | fzf"
-alias ghls="chrome-cli list links | grep github | cut -f2 -d ' ' | grep -v github.com/search | perl -pe 's|\?.*||'"
-alias ghcl="chrome-cli list links | grep github | cut -f2 -d ' ' | grep -v github.com/search | perl -pe 's|\?.*||' | xargs -L1 git clone"
+alias ghls="chrome-cli list links | grep 'github.com/' | cut -f2 -d ' ' | grep -v github.com/search | perl -pe 's|\?.*||'"
+alias ghlsc="ghls | sed 's/^[0-9]*|//; s|\(https://github\.com/[^/]*/[^/]*\).*|\1|; s|\(https://gist\.github\.com/[^/]*/[^/]*\).*|\1|; s|/$||' | tee urls.list-2025-09-03 | sort -u | tee -a urls.list"
+alias ghcl="ghlsc | xargs -L1 git clone"
 alias og='organize-github'     # Preview mode
 alias ogf='organize-github -f' # Force mode
 alias ogl='fd -td -d2 | fzf'
@@ -352,6 +353,13 @@ alias gcom='git gcommit'  # Custom git commit
 alias gcoma='git ac'      # Git add and commit
 alias ged='git diff HEAD~1 | llm -m 4o-mini -s "explain changes from last commit"'
 alias gp='(git push --dry-run; echo; git log --oneline --decorate @{push}..HEAD) | less -R -F'
+alias gdm='git diff main...HEAD'
+alias gdms='git diff main...HEAD | less -R -F'
+alias gdmsm='git diff main...HEAD | less -R -F | llm -m 4o-mini -s "explain changes from main to HEAD"'
+alias gdl='git log --oneline --decorate main...HEAD' # List commits from main to HEAD
+alias gdls='git diff --name-only main...HEAD' # List files changed in commits from main to HEAD
+alias glls='git log --oneline --decorate --name-only main...HEAD' # List files changed in commits from main to HEAD
+alias gs='git status --untracked-files=no ' # since I never use ghostscript from the command line, it's okay that this overshadows it
 
 alias pc='pbcopy'
 

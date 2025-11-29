@@ -1,0 +1,54 @@
+# .envrc - Project Environment Variables
+# This file is loaded by direnv when you enter this directory
+# 
+# SECURITY: This file uses 1Password CLI to securely load secrets
+# Never commit secrets directly to this file!
+#
+# Setup:
+# 1. Ensure you're signed in to 1Password: op signin --account aculich@gmail.com
+# 2. Allow direnv in this directory: direnv allow
+#
+# ============================================================================
+# 1PASSWORD CONFIGURATION
+# ============================================================================
+# Set your vault and item names here
+export OP_VAULT="${OP_VAULT:-Development}"
+export OP_ITEM="${OP_ITEM:-Development API Keys}"
+
+# ============================================================================
+# LOAD SECRETS FROM 1PASSWORD
+# ============================================================================
+# Load all secrets from the 1Password item
+# This requires the op_load_item function from ~/dotfiles/zsh/functions.zsh
+if command -v op_load_item &> /dev/null; then
+    op_load_item "$OP_VAULT" "$OP_ITEM" || true
+else
+    echo "Warning: op_load_item function not found. Source ~/dotfiles/zsh/functions.zsh" >&2
+fi
+
+# Alternative: Load individual secrets
+# op_load_secret "$OP_VAULT" "$OP_ITEM" "OPENAI_API_KEY" "OPENAI_API_KEY"
+# op_load_secret "$OP_VAULT" "$OP_ITEM" "GITHUB_TOKEN" "GITHUB_TOKEN"
+
+# ============================================================================
+# PROJECT-SPECIFIC ENVIRONMENT VARIABLES (Non-secret)
+# ============================================================================
+# Add project-specific, non-sensitive environment variables here
+# Examples:
+# export PROJECT_NAME="my-project"
+# export PROJECT_ENV="development"
+# export NODE_ENV="development"
+# export DEBUG="*"
+
+# ============================================================================
+# TOOL-SPECIFIC CONFIGURATIONS
+# ============================================================================
+# Example: Google Cloud
+# use_google_cloud "default"
+
+# Example: Python virtual environment
+# layout python3
+
+# Example: Node.js version (via asdf, nvm, etc.)
+# use nodejs 20.0.0
+

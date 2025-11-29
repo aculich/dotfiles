@@ -1,147 +1,24 @@
 {
-    "window.commandCenter": 1,
-    // Vim easymotion is required for Jump menu - <SPC> j
-    "vim.easymotion": true,
-    // Use system clipboard for vim
-    "vim.useSystemClipboard": true,
-    // Trigger the main which key menu with in the active editor with vim
-    // This cannot be put into keybindings.json because it will
-    // create conflict with Vim.
-    // https://github.com/stevenguh/spacecode/issues/3
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": ["<space>"],
-            "commands": ["vspacecode.space"]
-        },
-        {
-            "before": [","],
-            "commands": [
-                "vspacecode.space",
-                {
-                    "command": "whichkey.triggerKey",
-                    "args": "m"
-                }
-            ]
-        }
-    ],
-    "vim.visualModeKeyBindingsNonRecursive": [
-        {
-            "before": ["<space>"],
-            "commands": ["vspacecode.space"]
-        },
-        {
-            "before": [","],
-            "commands": [
-                "vspacecode.space",
-                {
-                    "command": "whichkey.triggerKey",
-                    "args": "m"
-                }
-            ]
-        },
-        {
-            "before": [">"],
-            "commands": ["editor.action.indentLines"]
-        },
-        {
-            "before": ["<"],
-            "commands": ["editor.action.outdentLines"]
-        }
-    ],
-    "editor.accessibilitySupport": "off",
-    "editor.renderWhitespace": "none",
-    "git.autofetch": true,
-    "magit.code-path": "cursor",
-    "magit.display-buffer-function": "same-column",
-    "magit.quick-switch-enabled": true,
-    "extensions.autoUpdate": true,
-    "extensions.autoCheckUpdates": true,
-    "extensions.verifySignature": false,
-    "specstory.showDeveloperTools": true,
-    "specstory.helpUsImprove": false,
-    "editor.defaultFoldingRangeProvider": "vscode.markdown-language-features",
-    "editor.defaultFormatter": "vscode.markdown-language-features",
-    "geminicodeassist.project": "",
-    "gitTreeCompare.diffMode": "full",
-    "makefile.configureOnOpen": true,
     "redhat.telemetry.enabled": true,
-    "cursor.aipreview.enabled": true,
-    "cursor.cmdk.useThemedDiffBackground": true,
-    "cursor.composer.cmdPFilePicker2": true,
-    "cursor.composer.shouldShowMarkdownHoverParticipantActions2": true,
-    "cursor.diffs.useCharacterLevelDiffs": true,
-    "github-actions.workflows.pinned.refresh.enabled": true,
-    "geminicodeassist.beta.enableGeneratedCodeDocumentationView": true,
-    "cursor.cpp.enablePartialAccepts": true,
-    "cursor.general.gitGraphIndexing": "enabled",
-    "cursor.composer.agentLoopOnLints": false,
-    "vs-kubernetes": {
-        "vs-kubernetes.crd-code-completion": "disabled"
+    "yaml.schemas": {
+        "file:///Users/me/.vscode/extensions/continue.continue-1.2.3-darwin-arm64/config-yaml-schema.json": [
+            ".continue/**/*.yaml"
+        ]
     },
-    "editor.largeFileOptimizations": false,
-    "keybindingMode.letterCommandMapping": [
-        "a,workbench.action.toggleSidebarVisibility",
-        "j,scrollPageDown",
-        "k,scrollPageUp",
-        "a,workbench.action.toggleSidebarVisibility",
-        "t,gitlens.toggleFileBlame",
-        "g,git-graph.view"
-    ],
-    "workbench.editorAssociations": {
-        "git-rebase-todo": "default"
-    },
-    "magit.forge-enabled": true,
-    "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    // GitHub Multiple Credential Provider (MCP) Configuration
-    "github.gitAuthentication": true,
-    "github.gitProtocol": "https",
-    "github.multipleMCP": true,
-    
-    // Anthropic Model Context Protocol Configuration
-    "cursor.experimental.anthropic.claude.modelContextProtocol": true,
-    "cursor.experimental.anthropic.claude.modelContextProtocolPath": "~/Library/Application Support/Cursor/User/mcp/config.json",
-    "remote.SSH.configFile": "/Users/me/.ssh/config",
-    "sshfs.configs": [
-        {
-            "name": "sshfs"
-        }
-    ],
+    "github.copilot.nextEditSuggestions.enabled": true,
     "project-scopes.globalExclude": {
         "**/.git": true,
         "**/.svn": true,
         "**/.hg": true,
-        "**/CVS": true,
         "**/.DS_Store": true,
         "**/Thumbs.db": true
     },
-    "githubPullRequests.experimental.chat": true,
-    "githubPullRequests.experimental.notificationsView": true,
-    "githubPullRequests.experimental.useQuickChat": true,
-    "githubPullRequests.notifications": "pullRequests",
-    "specstory.helpUsImprove": false,
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "svelte.enable-ts-plugin": true,
-    "update.releaseTrack": "prerelease",
-    "workbench.editor.enablePreview": false,
-    "specstory.derivedRules.enabled": false,
-    "diffEditor.maxComputationTime": 0,
-    "editor.multiCursorModifier": "ctrlCmd",
-    "workbench.colorTheme": "Default Dark+",
-    "cursor.composer.shouldAllowCustomModes": true,
-    "cursor.composer.shouldChimeAfterChatFinishes": true,
-    "cursor.terminal.usePreviewBox": true,
-    "terminal.integrated.inheritEnv": false,
-
-    // Agent Mode Terminal Ignores ZSH Profile Setting and Forces Bash
-    // https://forum.cursor.com/t/agent-mode-terminal-ignores-zsh-profile-setting-and-forces-bash/68663/7
-    "terminal.integrated.shellIntegration.enabled": false,
-    "terminal.integrated.defaultProfile.osx": "zsh",
-    "terminal.integrated.automationProfile.osx": {
-      "path": "/bin/zsh",
-      "args": ["-l"]
-    }
+    "editor.accessibilitySupport": "off",
+    "docker.extension.enableComposeLanguageServer": false,
+    "makefile.configureOnOpen": true,
+    "specstory.cloudSync.enabled": "always",
+    "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
+    "python.terminal.useEnvFile": true,
+    "git.autofetch": true,
+    "claudeCode.preferredLocation": "panel"
 }

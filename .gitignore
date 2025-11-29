@@ -1,2 +1,6 @@
 .DS_Store
 upstream/
+.vscode/extensions/*
+.op_session
+.envrc
+*.backup.*

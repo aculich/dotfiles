@@ -1,0 +1,83 @@
+---
+description: Cursor rules derived by SpecStory from the project AI interaction history
+globs: *
+---
+
+## PROJECT OVERVIEW
+
+## CODE STYLE
+
+## FOLDER ORGANIZATION
+
+## TECH STACK
+- Node.js (for scripts)
+- Python (for scripts)
+- TypeScript (for scripts)
+- JavaScript (for scripts)
+- Go (for scripts)
+- R (for scripts)
+- Shell (for scripts)
+- @modelcontextprotocol/server-github
+- @modelcontextprotocol/server-git
+- @modelcontextprotocol/server-gitlab
+
+## PROJECT-SPECIFIC STANDARDS
+
+## WORKFLOW & RELEASE RULES
+- Restart Cursor completely after making configuration changes.  Use `killall Cursor && open -a Cursor` (macOS) or the equivalent for your operating system.  **User confirmation required before using `killall` command.**
+- Install MCP servers using `npm install -g @modelcontextprotocol/server-github @modelcontextprotocol/server-git @modelcontextprotocol/server-gitlab`
+- Use `npm install -g @modelcontextprotocol/server-github@latest` to update the GitHub MCP server. Update other MCP servers as needed using `npm install -g @modelcontextprotocol/server-git@latest` and `npm install -g @modelcontextprotocol/server-gitlab@latest`.
+
+
+## REFERENCE EXAMPLES
+- To create a new file:  ```Create a new file called test.md in my current repository```
+- To list open issues: ```List the open issues in the modelcontextprotocol/servers repository```
+- To create a new file and add content using MCP: ```Create a new file called test-mcp.md in the current repository with the content "Testing MCP integration"```
+- To verify MCP integration, create a file and commit/push using the following commands:
+ ```bash
+git add test-mcp.md
+git commit -m "test: Add MCP integration test file"
+git push origin main
+```
+- To check GitHub remote configuration:
+```bash
+git remote -v | cat
+```
+- To determine the latest Cursor version location, perform a search across all project directories.  Also check the two MCP configuration locations detailed in PROJECT DOCUMENTATION & CONTEXT SYSTEM.
+
+
+## PROJECT DOCUMENTATION & CONTEXT SYSTEM
+- Version: 2025.1.17 (Released January 17, 2025)  (modelcontextprotocol/servers repository)
+- Version: 2025.4.1 (Added MCP integration verification steps)
+- Version: 2025.4.2 (Added clarification on determining latest Cursor version location)
+- Version: 2025.4.3 (Added MCP server setup instructions for Git, GitHub, and GitLab)
+- Version: 2025.4.4 (Updated MCP server installation instructions to use npm instead of npx for improved reliability)
+- Version: 2025.4.5 (Updated MCP server installation and configuration instructions based on 2025-04-01_01-41-latest-cursor-mcp-configuration-and-server-setup.md)
+- Version: 2025.4.6 (Added clarification on using npx vs. node for MCP server commands)
+- MCP Configuration Locations:
+    1. User-wide configuration (recommended for user-specific settings, applies to all projects): `~/.cursor/mcp.json`
+    2. Project-specific configuration: `.cursor/mcp.json` (within the project directory)
+    3. Cursor application configuration (system-wide): `~/Library/Application Support/Cursor/User/mcp/config.json`
+
+
+## DEBUGGING
+- To enable debug logging in Cursor, add these settings to `cursor/settings.json`:
+ ```json
+ {
+  "cursor.experimental.anthropic.claude.debug": true,
+  "cursor.experimental.anthropic.claude.logLevel": "debug"
+ }
+ ```
+- Check Cursor's Developer Tools (Cmd+Option+I on Mac, Ctrl+Shift+I on Windows/Linux) for MCP-related logs in the Console tab.  If the logs directory does not exist, ensure the MCP servers are properly installed.
+- To 100% verify MCP usage, examine Cursor's debug logs for MCP-related activity after enabling debug logging.  The logs will show the commands executed via MCP.  Use `cat ~/Library/Application\ Support/Cursor/User/logs/main.log | grep -i mcp | tail -50` to view the last 50 lines of MCP-related logs.
+- The error `spawn npx ENOENT` indicates that the `npx` command couldn't be found. Use  `/opt/homebrew/opt/node@20/bin/npx` or equivalent path if `npx` is not globally available.  Use `node -e "require('@modelcontextprotocol/server-github')" ` style configuration for each server.  Error -32000 indicates connection issues; check network connectivity and permissions.  "Failed to create client" error using the direct `node` method may require further investigation.
+
+
+## FINAL DOs AND DON'Ts
+- Ensure your GitHub token has the necessary permissions (`repo` and `read:org` scopes).  Also ensure your GitLab token has the necessary permissions.
+- Restart Cursor completely after making configuration changes. Use `killall Cursor && open -a Cursor` (macOS) or the equivalent for your operating system. **User confirmation required before using `killall` command.**
+- Regularly update the MCP server: `npm install -g @modelcontextprotocol/server-github@latest`  Also update other MCP servers as needed using `npm install -g @modelcontextprotocol/server-git@latest` and `npm install -g @modelcontextprotocol/server-gitlab@latest`.
+- Verify MCP integration by checking Cursor's debug logs for MCP-related activity.
+- When unsure of the latest Cursor version location, conduct a thorough search across all project directories and check the MCP configuration files.
+- For GitLab MCP server setup, generate a personal access token from GitLab (User Settings > Access Tokens) and replace `"YOUR_GITLAB_TOKEN_HERE"` with your token in the `~/.cursor/mcp.json` file.  The preferred location for user-specific MCP configurations is `~/.cursor/mcp.json`.
+- To install MCP servers reliably, use `npm install -g @modelcontextprotocol/server-github @modelcontextprotocol/server-git @modelcontextprotocol/server-gitlab`.  Consider using the `node -e "require('@modelcontextprotocol/server-github')" ` style configuration for each server for improved reliability.  Ensure that the `python` command is available in the system's PATH.  If using Anaconda, create a symbolic link using `ln -s $(which python3) ~/.local/bin/python`.

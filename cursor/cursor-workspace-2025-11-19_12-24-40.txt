@@ -1,0 +1,387 @@
+
+Version:          Cursor 2.1.0 (e4a384a82071fdda72d3442dffc0bcd25a8dfaf0, 2025-11-19T06:32:16.968Z)
+OS Version:       Darwin arm64 24.6.0
+CPUs:             Apple M3 Max (14 x 2400)
+Memory (System):  96.00GB (0.14GB free)
+Load (avg):       145, 69, 114
+VM:               0%
+Screen Reader:    yes
+Process Argv:     
+GPU Status:       2d_canvas:                              enabled
+                  direct_rendering_display_compositor:    disabled_off_ok
+                  gpu_compositing:                        enabled
+                  multiple_raster_threads:                enabled_on
+                  opengl:                                 enabled_on
+                  rasterization:                          enabled
+                  raw_draw:                               disabled_off_ok
+                  skia_graphite:                          enabled_on
+                  trees_in_viz:                           disabled_off
+                  video_decode:                           enabled
+                  video_encode:                           enabled
+                  webgl:                                  enabled
+                  webgl2:                                 enabled
+                  webgpu:                                 enabled
+                  webnn:                                  disabled_off
+
+CPU %	Mem MB	   PID	Process
+   58	   492	 88412	cursor main
+   11	    98	 88415	   gpu-process
+    0	     0	 88417	   utility-network-service
+   17	   393	 88424	window [1] (chrome-recovery-report.md — dotfiles)
+    3	   295	 88425	window [2] (capture.sh — bmad-adk)
+    4	   295	 88426	window [3] (TODO.md — blueplane-project)
+    9	   393	 88427	window [4] (FileBrowserCard.tsx — yt-downloader-cloudrun)
+   89	   983	 88428	window [5] (workspace-snapshot.sh — continuous-ai)
+   29	   393	 88429	window [6] (location-confirmation-wizard.tsx — umpire-empire)
+    1	   295	 88430	window [7] (features.md — traub-umpire-empire)
+   11	   393	 88431	window [8] (SpecStory.md — peeq-lavender-voice)
+    1	   295	 88432	window [9] (DEV.md — crb-nexus-deep-libguide)
+    4	   393	 88433	window [10] (NEXT.md — bp-telemetry-experimental)
+    4	   393	 88434	window [11] (SpecStory.md — rrid-softr-migration)
+   37	   786	 88436	window [12] (AUDIENCE.md — peeq-crb-nexus)
+    1	   295	 88437	window [13] (PROMPT-SUMMARY.md — simon)
+    1	   295	 88438	window [14] (SUPERPROMPT.md — peeq-talent)
+    1	   197	 88439	window [15] (talentbridge-idea)
+    1	   295	 88440	window [16] (Cursor Settings — browser-automation)
+   47	   590	 88441	window [17] (Review: Fill in prompt sections and review — browserbase-quickstart)
+   25	   590	 88442	window [18] (Review: Improve mission brief and navigation interface — peeq-talent-firebase)
+    1	   295	 88443	window [19] (.cursorrules — best-practices)
+    1	   295	 88444	window [20] (SpecStory.md — aging)
+    3	   295	 88445	window [21] (Makefile — docker-shared-services)
+    1	   295	 88446	window [22] (docker-compose-networking.yml — infra)
+    1	   295	 88447	window [23] (_quarto.yml — ern-cpc)
+    3	   295	 88448	window [24] (BAHFA Audience.md — cpc-anti-displacement)
+    3	   393	 88449	window [25] (index.qmd — ern-hprm)
+    0	    98	 88510	shared-process
+    0	    98	 88511	fileWatcher [18]
+    1	    98	 88517	ptyHost
+    0	     0	  1049	     /bin/zsh -il
+    0	     0	  1185	     /bin/zsh -i
+    0	     0	  1499	     /bin/zsh -il
+    0	     0	  1503	     /bin/zsh -il
+    0	     0	  1506	     /bin/zsh -il
+    0	     0	  1526	     /bin/zsh -il
+    0	     0	  1712	     /bin/zsh -il
+    0	     0	  2140	     /bin/zsh -il
+    0	     0	 56082	       /bin/bash ./workspace-snapshot.sh
+    0	     0	 57025	         /bin/bash ./workspace-snapshot.sh
+    0	     0	 57026	           zsh ./dump-cursor-windows.sh
+    0	     0	 57028	             bash /opt/homebrew/bin/cursor --status
+    1	    98	 57034	               electron-nodejs (cli.js )
+    0	     0	  2298	     /bin/zsh -i
+    0	     0	  3129	     /bin/zsh -il
+    0	     0	  6713	     /bin/zsh -i
+    0	     0	  6714	     /bin/zsh -il
+    0	     0	  9693	     /bin/zsh -il
+    0	     0	 11234	     /bin/zsh -il
+    0	     0	 54832	     /bin/zsh -i
+    0	     0	 88741	     /bin/zsh -il
+    0	     0	 88742	     /bin/zsh -il
+    0	     0	 88743	     /bin/zsh -il
+    0	     0	 88764	     /bin/zsh -l
+    0	     0	 88765	     /bin/zsh -il
+    0	     0	 88767	     /bin/zsh -il
+    0	     0	 88769	     /bin/zsh -il
+    0	     0	 88771	     /bin/zsh -il
+    0	     0	 88772	     /bin/zsh -il
+    0	     0	 89154	     /bin/zsh -il
+    0	     0	 89157	     /bin/zsh -il
+    0	     0	 91187	     /bin/zsh -il
+    0	     0	 91189	     /bin/zsh -il
+    0	     0	 91190	     /bin/zsh -il
+    0	     0	 91192	     /bin/zsh -il
+    0	     0	 92155	     /bin/zsh -il
+    0	     0	 92166	     /bin/zsh -il
+    0	     0	 92168	     /bin/zsh -il
+    0	     0	 92283	     /bin/zsh -i
+    0	     0	 92414	     /bin/zsh -il
+    0	     0	 92415	     /bin/zsh -il
+    0	     0	 92458	     /bin/zsh -il
+    0	     0	 92588	     /bin/zsh -il
+    0	     0	 92633	     /bin/zsh -il
+    0	     0	 92636	     /bin/zsh -il
+    0	     0	 92650	     /bin/zsh -il
+    0	    98	 88543	fileWatcher [10]
+    0	    98	 88544	fileWatcher [1]
+    0	    98	 88545	fileWatcher [25]
+    0	    98	 88546	fileWatcher [21]
+    0	    98	 88547	fileWatcher [8]
+    0	    98	 88548	fileWatcher [12]
+    0	    98	 88549	fileWatcher [20]
+    0	    98	 88550	fileWatcher [13]
+    0	    98	 88551	fileWatcher [3]
+    0	    98	 88552	fileWatcher [5]
+    0	    98	 88553	fileWatcher [11]
+   28	   197	 88554	extensionHost [25]
+    0	     0	 99944	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=88554
+   28	   393	 88555	extensionHost [8]
+    0	     0	 92270	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=88555
+    0	     0	 92557	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.43-universal/bin/macos-aarch64/codex app-server
+    0	     0	 92560	     electron-nodejs (eslintServer.js )
+    0	    98	 92561	     electron-nodejs (languageserver.js )
+    0	     0	 93531	     <defunct>
+    0	     0	 93532	     <defunct>
+    0	     0	 93538	     <defunct>
+    0	     0	 93545	     <defunct>
+    0	     0	 93549	     <defunct>
+    0	     0	 93550	     <defunct>
+    0	     0	 93555	     <defunct>
+    0	     0	 93557	     <defunct>
+    0	     0	 93560	     <defunct>
+    0	     0	 93564	     <defunct>
+    0	     0	 93580	     <defunct>
+    0	     0	 93586	     <defunct>
+    0	     0	 93589	     <defunct>
+    0	     0	 93595	     <defunct>
+    0	     0	 93807	     <defunct>
+    0	     0	 93827	     <defunct>
+    0	     0	 93943	     <defunct>
+    0	     0	 93973	     <defunct>
+    0	     0	 94210	     <defunct>
+    0	     0	 94231	     <defunct>
+    0	     0	 94242	     <defunct>
+    0	     0	 94253	     <defunct>
+    0	     0	 94306	     <defunct>
+    0	     0	 94356	     <defunct>
+    0	     0	 94386	     <defunct>
+    0	     0	 94449	     <defunct>
+    0	     0	 94457	     <defunct>
+    0	     0	 94520	     <defunct>
+    0	     0	 94561	     <defunct>
+    0	     0	 94593	     <defunct>
+    0	     0	 94660	     <defunct>
+    0	     0	 94671	     <defunct>
+    0	     0	 94767	     <defunct>
+    0	     0	 94796	     <defunct>
+    0	     0	 94879	     <defunct>
+    0	     0	 95041	     <defunct>
+    0	     0	 95135	     <defunct>
+    0	     0	 96753	     <defunct>
+    0	     0	 96820	     <defunct>
+    0	     0	 96903	     <defunct>
+    0	     0	 96909	     <defunct>
+    0	     0	 96911	     <defunct>
+    0	     0	 96926	     <defunct>
+    0	     0	 96927	     <defunct>
+    0	     0	 96943	     <defunct>
+    0	     0	 96983	     <defunct>
+    0	     0	 96989	     <defunct>
+    0	     0	 96993	     <defunct>
+    0	     0	 97000	     <defunct>
+    0	    98	 98465	     electron-nodejs (tailwindServer.js )
+    0	     0	 99940	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=88555
+   28	   590	 88556	extensionHost [5]
+    0	     0	 92525	     electron-nodejs (server-node.js )
+   28	   197	 88557	extensionHost [20]
+    0	     0	 92206	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=88557
+    0	     0	 92422	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.43-universal/bin/macos-aarch64/codex app-server
+    0	     0	 92433	     electron-nodejs (eslintServer.js )
+    0	    98	 92434	     electron-nodejs (languageserver.js )
+   29	   393	 88558	extensionHost [18]
+   29	   197	 88559	extensionHost [11]
+    0	     0	 92232	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=88559
+    0	     0	 92465	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.43-universal/bin/macos-aarch64/codex app-server
+    0	     0	 92485	     electron-nodejs (languageserver.js )
+    0	     0	 92486	     electron-nodejs (eslintServer.js )
+    0	     0	 93295	     <defunct>
+    0	     0	 93322	     <defunct>
+    0	     0	 93334	     <defunct>
+    0	     0	 93347	     <defunct>
+    0	     0	 93350	     <defunct>
+    0	     0	 93361	     <defunct>
+    0	     0	 93367	     <defunct>
+    0	     0	 93377	     <defunct>
+    0	     0	 93383	     <defunct>
+    0	     0	 93389	     <defunct>
+    0	     0	 93397	     <defunct>
+    0	     0	 93399	     <defunct>
+    0	     0	 93404	     <defunct>
+    0	     0	 93405	     <defunct>
+    0	   197	 88560	extensionHost [1]
+    0	     0	 99943	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=88560
+    0	   295	 88561	extensionHost [10]
+    0	    98	 88562	extensionHost [21]
+    0	     0	 98748	     <defunct>
+    0	     0	 98765	     <defunct>
+    0	     0	 98766	     <defunct>
+    0	     0	 98773	     <defunct>
+    0	     0	 98777	     <defunct>
+    0	     0	 98778	     <defunct>
+    0	     0	 98782	     <defunct>
+    0	     0	 98790	     <defunct>
+    0	     0	 98793	     <defunct>
+    0	     0	 99301	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.43-universal/bin/macos-aarch64/codex app-server
+    0	    98	 99315	     electron-nodejs (languageserver.js )
+    0	    98	 88563	fileWatcher [7]
+    0	    98	 88564	fileWatcher [24]
+    0	    98	 88565	fileWatcher [23]
+    0	    98	 88570	fileWatcher [9]
+    0	    98	 88573	fileWatcher [4]
+    0	    98	 88577	fileWatcher [22]
+    0	    98	 88578	fileWatcher [6]
+    0	    98	 88579	fileWatcher [17]
+    0	    98	 88580	fileWatcher [16]
+    0	    98	 88581	fileWatcher [19]
+    0	    98	 88582	fileWatcher [15]
+    0	    98	 88583	fileWatcher [14]
+    0	    98	 88584	fileWatcher [2]
+    0	    98	 88740	extensionHost [22]
+    0	   393	 89162	extensionHost [7]
+    0	   197	 89357	extensionHost [23]
+    0	   197	 91050	extensionHost [9]
+    0	    98	 91060	extensionHost [13]
+    1	   295	 91077	extensionHost [12]
+    0	   197	 91180	extensionHost [17]
+    0	   197	 91182	extensionHost [24]
+    4	   393	 91319	extensionHost [6]
+   45	   393	 91320	extensionHost [4]
+    0	    98	 91788	extensionHost [19]
+    0	    98	 92161	extensionHost [16]
+    0	    98	 92165	extensionHost [20]
+    0	    98	 92186	extensionHost [11]
+    0	    98	 92190	extensionHost [8]
+    0	    98	 92198	extensionHost [3]
+    0	    98	 92241	extensionHost [15]
+    0	    98	 92250	extensionHost [21]
+    0	    98	 99929	extensionHost [25]
+    0	    98	 99930	extensionHost [1]
+    0	    98	 99938	extensionHost [14]
+
+Workspace Stats: 
+|  Window (index.qmd — ern-hprm)
+|  Window (BAHFA Audience.md — cpc-anti-displacement)
+|  Window (_quarto.yml — ern-cpc)
+|  Window (docker-compose-networking.yml — infra)
+|  Window (Makefile — docker-shared-services)
+|  Window (SpecStory.md — aging)
+|  Window (.cursorrules — best-practices)
+|  Window (Review: Improve mission brief and navigation interface — peeq-talent-firebase)
+|  Window (Review: Fill in prompt sections and review — browserbase-quickstart)
+|  Window (Cursor Settings — browser-automation)
+|  Window (talentbridge-idea)
+|  Window (SUPERPROMPT.md — peeq-talent)
+|  Window (PROMPT-SUMMARY.md — simon)
+|  Window (AUDIENCE.md — peeq-crb-nexus)
+|  Window (SpecStory.md — rrid-softr-migration)
+|  Window (NEXT.md — bp-telemetry-experimental)
+|  Window (DEV.md — crb-nexus-deep-libguide)
+|  Window (SpecStory.md — peeq-lavender-voice)
+|  Window (features.md — traub-umpire-empire)
+|  Window (location-confirmation-wizard.tsx — umpire-empire)
+|  Window (workspace-snapshot.sh — continuous-ai)
+|  Window (FileBrowserCard.tsx — yt-downloader-cloudrun)
+|  Window (TODO.md — blueplane-project)
+|  Window (capture.sh — bmad-adk)
+|  Window (chrome-recovery-report.md — dotfiles)
+|    Folder (talentbridge-idea): 35 files
+|      File types: mhtml(27) md(3) cursorindexingignore(1) gitignore(1)
+|                  json(1)
+|      Conf files:
+|    Folder (simon): 58 files
+|      File types: md(25) mhtml(5) mp4(5) vtt(4) pdf(2) txt(2) DS_Store(1)
+|                  cursorindexingignore(1) gitignore(1) json(1)
+|      Conf files:
+|    Folder (docker-shared-services): 62 files
+|      File types: yml(18) md(6) json(5) yaml(4) png(3) gitignore(3) pem(2)
+|                  cursorindexingignore(1) editorconfig(1) env(1)
+|      Conf files: github-actions(8) makefile(1) dockerfile(1)
+|    Folder (infra): 144 files
+|      File types: yml(35) md(20) json(10) yaml(8) gitignore(6) png(6) sh(4)
+|                  pem(4) env(3) cursorindexingignore(2)
+|      Conf files: makefile(2) dockerfile(2)
+|    Folder (ern-hprm): 1210 files
+|      File types: r(359) sh(97) R(77) out(60) js(53) Rout(52) css(46) png(42)
+|                  rds(39) md(38)
+|      Conf files:
+|    Folder (crb-nexus-deep-libguide): 4709 files
+|      File types: md(3496) js(374) map(273) json(174) tsx(69) pack(57) ts(46)
+|                  html(13) meta(12) rsc(11)
+|      Conf files: package.json(3) cursorrules(1) tsconfig.json(1)
+|    Folder (umpire-empire): 5090 files
+|      File types: md(3514) js(555) map(448) json(162) tsx(137) ts(35) png(32)
+|                  webp(19) css(6) sh(5)
+|      Conf files: package.json(3) settings.json(1) tsconfig.json(1)
+|    Folder (continuous-ai): more than 108214 files
+|      File types: json(8232) eml(8022) md(3542) txt(31) py(9) jsonl(7) log(3)
+|                  DS_Store(2) gitignore(2) html(2)
+|      Conf files: settings.json(1)
+|    Folder (peeq-talent-firebase): 1790 files
+|      File types: js(627) map(513) json(212) tsx(93) png(62) md(50) ts(41)
+|                  pdf(6) DS_Store(5) mhtml(3)
+|      Conf files: package.json(3) tsconfig.json(1)
+|    Folder (cpc-anti-displacement): 652 files
+|      File types: js(108) png(107) md(57) css(50) py(23) R(18) html(17)
+|                  Rmd(16) pdf(9) docx(8)
+|      Conf files:
+|    Folder (browserbase-quickstart): 1031 files
+|      File types: ts(400) mdx(94) py(81) md(58) json(39) svg(32) png(26)
+|                  example(14) yml(11) gitignore(9)
+|      Conf files: package.json(10) tsconfig.json(10) cursorrules(4)
+|                  dockerfile(1) settings.json(1)
+|    Folder (aging): 849 files
+|      File types: py(74) db(68) xlsx(66) png(54) md(50) csv(45) pickle(42)
+|                  log(41) txt(40) docx(16)
+|      Conf files:
+|    Folder (best-practices): 3080 files
+|      File types: md(1299) png(515) jpg(411) svg(51) py(45) yml(45) txt(35)
+|                  pdf(34) json(32) html(25)
+|      Conf files: cursorrules(1) dockerfile(1) package.json(1) makefile(1)
+|    Folder (bp-telemetry-experimental): 7946 files
+|      File types: md(3165) pyc(1538) py(1512) pyi(753) so(257) typed(30)
+|                  txt(29) dylib(18) c(16) js(7)
+|      Conf files: package.json(1) tsconfig.json(1)
+|    Folder (traub-umpire-empire): 11097 files
+|      File types: md(7036) js(1022) py(721) map(612) json(349) tsx(286)
+|                  ts(106) png(59) html(36) meta(30)
+|      Conf files: package.json(16) settings.json(3) tsconfig.json(2)
+|    Folder (rrid-softr-migration): more than 24039 files
+|      File types: svg(11004) md(3175) jpg(1314) py(1165) dat(1068) pyc(705)
+|                  json(596) pyi(65) proto(63) txt(38)
+|      Conf files:
+|    Folder (browser-automation): 4645 files
+|      File types: ts(993) py(972) tsx(341) md(261) png(195) js(151) json(140)
+|                  mdx(132) j2(54) svg(52)
+|      Conf files: package.json(36) tsconfig.json(30) dockerfile(6)
+|                  cursorrules(4) settings.json(1) webpack.config.js(1)
+|    Folder (peeq-lavender-voice): 7463 files
+|      File types: md(3715) png(790) json(563) py(304) js(279) tsx(171)
+|                  ts(141) map(114) html(70) jpg(33)
+|      Conf files: package.json(12) dockerfile(5) tsconfig.json(4)
+|                  github-actions(1)
+|    Folder (yt-downloader-cloudrun): 17474 files
+|      File types: py(4986) pyc(4962) md(3560) json(577) pyi(356) txt(85)
+|                  typed(80) go(76) png(73) tsx(67)
+|      Conf files: package.json(5) dockerfile(4) tsconfig.json(2)
+|                  devcontainer.json(1) launch.json(1) makefile(1)
+|    Folder (blueplane-project): more than 20750 files
+|      File types: md(6868) py(3565) pyc(3359) pyi(1537) so(510) json(417)
+|                  svg(384) js(156) mp3(122) txt(109)
+|      Conf files: package.json(110) tsconfig.json(6) launch.json(5)
+|                  settings.json(4) tasks.json(3) makefile(1)
+|    Folder (peeq-crb-nexus): more than 20659 files
+|      File types: py(5624) pyc(5621) md(3175) pyi(638) h(212) txt(173)
+|                  so(164) f90(122) typed(94) csv(64)
+|      Conf files: package.json(1)
+|    Folder (peeq-talent): 14891 files
+|      File types: js(2064) ts(1479) py(1069) yaml(957) pyc(855) png(780)
+|                  tsx(686) md(612) json(581) map(513)
+|      Conf files: package.json(58) tsconfig.json(43) settings.json(6)
+|                  webpack.config.js(5) dockerfile(4) launch.json(3)
+|                  jsconfig.json(1) makefile(1) tasks.json(1)
+|    Folder (bmad-adk): 16519 files
+|      File types: md(4097) py(4004) pyc(2502) html(510) java(360) ts(305)
+|                  js(252) yaml(238) go(225) json(154)
+|      Conf files: package.json(10) dockerfile(7) tsconfig.json(7)
+|                  settings.json(2) makefile(2)
+|    Folder (ern-cpc): more than 20868 files
+|      File types: py(4285) pyc(4273) pyi(2197) js(1387) dat(1070) json(288)
+|                  map(286) scss(217) css(177) bcmap(168)
+|      Conf files: package.json(14) webpack.config.js(1) makefile(1)
+|    Folder (dotfiles): more than 21306 files
+|      File types: hpp(4831) md(4275) json(879) zsh(712) xml(639) h(594)
+|                  cpp(472) ipp(462) yaml(427) zsh-theme(290)
+|      Conf files: makefile(76) cmake(20) settings.json(10) package.json(5)
+|                  devcontainer.json(2) webpack.config.js(2) tsconfig.json(2)
+|                  dockerfile(1) gulp.js(1)
+
+

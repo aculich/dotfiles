@@ -1,0 +1,550 @@
+
+Version:          Cursor 2.1.26 (f628a4761be40b8869ca61a6189cafd14756dff0, 2025-11-24T05:39:06.655Z)
+OS Version:       Darwin arm64 24.6.0
+CPUs:             Apple M3 Max (14 x 2400)
+Memory (System):  96.00GB (0.08GB free)
+Load (avg):       59, 42, 40
+VM:               0%
+Screen Reader:    yes
+Process Argv:     
+GPU Status:       2d_canvas:                              enabled
+                  direct_rendering_display_compositor:    disabled_off_ok
+                  gpu_compositing:                        enabled
+                  multiple_raster_threads:                enabled_on
+                  opengl:                                 enabled_on
+                  rasterization:                          enabled
+                  raw_draw:                               disabled_off_ok
+                  skia_graphite:                          enabled_on
+                  trees_in_viz:                           disabled_off
+                  video_decode:                           enabled
+                  video_encode:                           enabled
+                  webgl:                                  enabled
+                  webgl2:                                 enabled
+                  webgpu:                                 enabled
+                  webnn:                                  disabled_off
+
+CPU %	Mem MB	   PID	Process
+    3	   393	  6508	cursor main
+    3	    98	  6513	   gpu-process
+    0	     0	  6515	   utility-network-service
+    0	    98	  6517	window [1] (DEV.md — murmur-muse)
+    0	   197	  6518	window [2] (TECHSTACK.md — aistudio-cidr-idea-expander)
+    2	   197	  6519	window [3] (SCHEMA.md — rrid-softr-migration)
+    0	    98	  6520	window [4] (extract_schema.py — airtable-backups)
+    0	    98	  6521	window [5] (2025-04-01_10-47-comparing-docker-vs-docker-compose-for-baserow-installation.md — baserow)
+    0	    98	  6522	window [6] (rrid)
+    2	   295	  6523	window [7] (TECHSTACK.md — peeq-lavender-voice)
+    0	    98	  6580	shared-process
+    0	     0	  6581	fileWatcher [6]
+    0	    98	  6582	ptyHost
+    0	     0	  2866	     /bin/zsh -il
+    0	     0	  4749	     /bin/zsh -il
+    0	     0	  6210	     /bin/zsh -il
+    0	     0	  6624	     /bin/zsh -l
+    0	     0	  6673	     /bin/zsh -il
+    0	     0	 49518	       npm run dev
+    0	     0	 49542	         node /Users/me/projects/cidr-grants-antigravity/upstream/aistudio-cidr-idea-expander/node_modules/.bin/vite
+    0	     0	 49569	           /Users/me/projects/cidr-grants-antigravity/upstream/aistudio-cidr-idea-expander/node_modules/@esbuild/darwin-arm64/bin/esbuild --service=0.25.12 --ping
+    0	     0	  6676	     /bin/zsh -il
+    0	     0	  6677	     /bin/zsh -il
+    0	     0	  6683	     /bin/zsh -il
+    0	     0	  6688	     /bin/zsh -il
+    0	     0	  6691	     /bin/zsh -il
+    0	     0	  6882	     /bin/zsh -i
+    0	     0	  6888	     /bin/zsh -i
+    0	     0	  7072	     /bin/zsh -i
+    0	     0	  7128	     /bin/zsh -il
+    0	     0	  7639	     /bin/zsh -il
+    0	     0	  8539	     /bin/zsh -i
+    0	     0	  8597	     /bin/zsh -il
+    0	     0	 13639	     /bin/zsh -il
+    0	     0	 20449	     /bin/zsh -i
+    0	     0	 22228	     /bin/zsh -il
+    0	     0	 23519	     /bin/zsh -i
+    0	     0	 23674	     /bin/zsh -il
+    0	     0	 27032	     /bin/zsh -il
+    0	     0	 27171	     /bin/zsh -il
+    0	     0	 27172	     /bin/zsh -il
+    0	     0	 29226	     /bin/zsh -il
+    0	     0	 39121	     /bin/zsh -il
+    0	     0	 46960	     /bin/zsh -il
+    0	     0	 47379	     /bin/zsh -il
+    0	     0	 47583	     /bin/zsh -il
+    0	     0	 47586	     /bin/zsh -il
+    0	     0	 48793	     /bin/zsh -il
+    0	     0	 48983	     /bin/zsh -il
+    0	     0	 49855	     /bin/zsh -il
+    0	     0	 51810	     /bin/zsh -il
+    0	     0	 53188	     /bin/zsh -i
+    0	     0	 66740	     /bin/zsh -il
+    0	     0	 74233	     /bin/zsh -l
+    0	     0	 74234	     /bin/zsh -il
+    0	     0	 85162	     /bin/zsh -il
+    0	     0	 86454	     /bin/zsh -il
+    0	     0	 86674	     /bin/zsh -i
+    0	     0	 87746	     /bin/zsh -il
+    0	     0	 87846	     /bin/zsh -il
+    0	     0	 91972	     /bin/zsh -il
+    0	     0	 94643	     /bin/zsh -il
+    0	     0	 94876	     /bin/zsh -il
+    0	     0	 94985	     /bin/zsh -i
+    0	     0	 95633	     /bin/zsh -il
+    0	     0	 96245	       /bin/bash ./workspace-snapshot.sh
+    0	     0	 98426	         /bin/bash ./workspace-snapshot.sh
+    0	     0	 98427	           zsh ./dump-cursor-windows.sh
+    0	     0	 98429	             bash /opt/homebrew/bin/cursor --status
+    3	    98	 98435	               electron-nodejs (cli.js )
+    0	    98	  6583	extensionHost [2]
+    0	     0	  6835	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=6583
+    0	     0	  7333	     electron-nodejs (eslintServer.js )
+    0	     0	  7987	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=6583
+    0	     0	 52772	     npm exec @notionhq/notion-mcp-server
+    0	     0	 52859	       node /Users/me/.npm/_npx/2e5266eea15d0ccd/node_modules/.bin/notion-mcp-server
+    0	     0	 53504	     npm exec repomix --mcp
+    0	     0	 53550	       /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	    98	  6584	extensionHost [6]
+    0	     0	  6742	     /Users/me/.cursor/extensions/hashicorp.terraform-2.37.6-darwin-arm64/bin/terraform-ls serve
+    0	     0	  6919	     electron-nodejs (bin.js )
+    0	     0	  6943	     electron-nodejs (server-node.js )
+    0	     0	 19553	     tsserver[5.9.2]: syntax
+    0	     0	 19554	     tsserver[5.9.2]: semantic
+    0	     0	 19555	       /Applications/Cursor.app/Contents/Resources/app/resources/helpers/node /Applications/Cursor.app/Contents/Resources/app/extensions/node_modules/typescript/lib/typingsInstaller.js --globalTypingsCacheLocation /Users/me/Library/Caches/typescript/5.9 --enableTelemetry --typesMapLocation /Applications/Cursor.app/Contents/Resources/app/extensions/node_modules/typescript/lib/typesMap.json --validateDefaultNpmLocation
+    0	     0	 52728	     npm exec @notionhq/notion-mcp-server
+    0	     0	 52959	       node /Users/me/.npm/_npx/2e5266eea15d0ccd/node_modules/.bin/notion-mcp-server
+    0	     0	 53204	     npm exec repomix --mcp
+    0	     0	 53287	       /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+   98	     0	  6585	extensionHost [4]
+    0	     0	  6816	     /Users/me/.cursor/extensions/ms-python.python-2025.6.1-darwin-arm64/python-env-tools/bin/pet server
+    0	     0	  6861	     /Applications/Cursor.app/Contents/Resources/app/resources/helpers/node --max-old-space-size=32768 /Users/me/.cursor/extensions/anysphere.cursorpyright-1.0.10/dist/server.js --cancellationReceive=file:8db260cb151777920ebb27fa9fbae778881a3b5697 --node-ipc --clientProcessId=6585
+    0	     0	  7542	     npm exec @notionhq/notion-mcp-server
+    0	     0	 12183	       node /Users/me/.npm/_npx/2e5266eea15d0ccd/node_modules/.bin/notion-mcp-server
+    0	    98	  6586	extensionHost [1]
+    0	     0	  6747	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=6586
+    0	     0	  6988	     electron-nodejs (eslintServer.js )
+    0	     0	  7093	     electron-nodejs (tailwindServer.js )
+    0	     0	  7688	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=6586
+    0	     0	 52800	     npm exec @notionhq/notion-mcp-server
+    0	     0	 52979	       node /Users/me/.npm/_npx/2e5266eea15d0ccd/node_modules/.bin/notion-mcp-server
+    0	     0	 53213	     npm exec repomix --mcp
+    0	     0	 53375	       /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	    98	  6587	extensionHost [5]
+    0	     0	  6775	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=6587
+    0	     0	  8837	     electron-nodejs (eslintServer.js )
+    0	     0	  9062	     electron-nodejs (tailwindServer.js )
+    0	     0	 52769	     npm exec @notionhq/notion-mcp-server
+    0	     0	 53079	       node /Users/me/.npm/_npx/2e5266eea15d0ccd/node_modules/.bin/notion-mcp-server
+    0	     0	 53436	     npm exec repomix --mcp
+    0	     0	 53474	       /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+  100	     0	  6588	extensionHost [7]
+    0	     0	  6788	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=6588
+    0	     0	  7392	     /Users/me/.cursor/extensions/hashicorp.terraform-2.37.6-darwin-arm64/bin/terraform-ls serve
+    0	     0	  7986	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=6588
+    0	     0	  9775	     electron-nodejs (server-node.js )
+    0	     0	 11194	     npm exec @notionhq/notion-mcp-server
+    0	     0	 13634	       node /Users/me/.npm/_npx/2e5266eea15d0ccd/node_modules/.bin/notion-mcp-server
+    0	     0	 11195	     electron-nodejs (eslintServer.js )
+    0	     0	 11228	     electron-nodejs (tailwindServer.js )
+    0	     0	 43987	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/html-language-features/server/dist/node/htmlServerMain --node-ipc --clientProcessId=6588
+  100	     0	  6589	extensionHost [3]
+    0	     0	  6789	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=6589
+    0	     0	  6872	     /Users/me/.cursor/extensions/ms-python.python-2025.6.1-darwin-arm64/python-env-tools/bin/pet server
+    0	     0	  7334	     electron-nodejs (eslintServer.js )
+    0	     0	  7525	     electron-nodejs (tailwindServer.js )
+    0	     0	  6590	fileWatcher [3]
+    0	     0	  6591	fileWatcher [5]
+    0	     0	  6592	fileWatcher [7]
+    0	     0	  6593	fileWatcher [1]
+    0	     0	  6594	fileWatcher [4]
+    0	     0	  6595	fileWatcher [2]
+    0	     0	  6623	extensionHost [6]
+    0	     0	  6626	extensionHost [1]
+    0	     0	  6629	extensionHost [5]
+    0	     0	  6632	extensionHost [4]
+    0	     0	  6633	extensionHost [3]
+    0	     0	  6648	extensionHost [7]
+    0	     0	  6686	extensionHost [2]
+    2	  1081	  6805	window [12] (Analytics Service Refactor: Independent SQLite → DuckDB Pipeline by aculich · Pull Request #29 · blueplane-ai/bp-telemetry-core · GitHub — bp-telemetry-core)
+    0	     0	  6806	fileWatcher [12]
+    0	    98	  6807	extensionHost [12]
+    0	     0	  6931	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=6807
+    0	     0	  7036	     /Users/me/.cursor/extensions/ms-python.python-2025.6.1-darwin-arm64/python-env-tools/bin/pet server
+    0	     0	  7421	     electron-nodejs (eslintServer.js )
+    0	     0	 29317	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=6807
+    0	     0	 36208	     electron-nodejs (languageserver.js )
+    0	     0	 52774	     npm exec @notionhq/notion-mcp-server
+    0	     0	 53059	       node /Users/me/.npm/_npx/2e5266eea15d0ccd/node_modules/.bin/notion-mcp-server
+    0	     0	 53267	     npm exec repomix --mcp
+    0	     0	 53415	       /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 69172	     /Applications/Cursor.app/Contents/Resources/app/resources/helpers/node --max-old-space-size=32768 /Users/me/.cursor/extensions/anysphere.cursorpyright-1.0.10/dist/server.js --cancellationReceive=file:27a913bdc1443998c4af466a50c8b7ad79c2cf81f2 --node-ipc --clientProcessId=6807
+    0	     0	  6808	extensionHost [12]
+    0	     0	 19563	     /bin/zsh -o extendedglob -c snap=$(command cat <&3); builtin unsetopt aliases 2>/dev/null; builtin unalias -m '*' 2>/dev/null || true; builtin setopt extendedglob; builtin eval "$snap" && { builtin unsetopt nounset 2>/dev/null || true; builtin export PWD="$(builtin pwd)"; builtin setopt aliases 2>/dev/null; builtin eval "$1" < /dev/null; }; COMMAND_EXIT_CODE=$?; dump_zsh_state >&4; builtin exit $COMMAND_EXIT_CODE -- cd /Users/me/projects/blueplane-project/blueplane-ai/bp-telemetry-core && python scripts/start_server.py
+    0	     0	 19588	       python scripts/start_server.py
+    0	   492	  7111	window [18] (Bay Area Housing Precarity Risk Model – HPRM 2.0 — ern-hprm)
+    0	    98	  7124	extensionHost [18]
+    0	     0	  7343	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=7124
+    0	     0	  7868	     electron-nodejs (server-node.js )
+    0	     0	  8166	     npm exec @notionhq/notion-mcp-server
+    0	     0	  9103	       node /Users/me/.npm/_npx/2e5266eea15d0ccd/node_modules/.bin/notion-mcp-server
+    0	     0	  8167	     electron-nodejs (eslintServer.js )
+    0	     0	  8249	     electron-nodejs (tailwindServer.js )
+    0	     0	  8840	     npm exec repomix --mcp
+    0	     0	  8915	       /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 20424	     /Users/me/.cursor/extensions/ms-python.python-2025.6.1-darwin-arm64/python-env-tools/bin/pet server
+    0	     0	 20425	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/html-language-features/server/dist/node/htmlServerMain --node-ipc --clientProcessId=7124
+    0	     0	 20436	     /Applications/Cursor.app/Contents/Resources/app/resources/helpers/node --max-old-space-size=32768 /Users/me/.cursor/extensions/anysphere.cursorpyright-1.0.10/dist/server.js --cancellationReceive=file:cf45ca1c3d311d85096dd35f3c2e4ae15dae872e83 --node-ipc --clientProcessId=7124
+    0	     0	  7126	fileWatcher [18]
+    0	   393	  7153	window [24] (README.md — storycraft)
+    0	     0	  7162	extensionHost [18]
+    0	    98	  7167	extensionHost [24]
+    0	     0	  7252	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=7167
+    0	     0	  7285	     /Users/me/.cursor/extensions/hashicorp.terraform-2.37.6-darwin-arm64/bin/terraform-ls serve
+    0	     0	  7395	     electron-nodejs (eslintServer.js )
+    0	     0	  7416	     npm exec @notionhq/notion-mcp-server
+    0	     0	  7873	       node /Users/me/.npm/_npx/2e5266eea15d0ccd/node_modules/.bin/notion-mcp-server
+    0	     0	  7462	     electron-nodejs (tailwindServer.js )
+    0	     0	  7668	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=7167
+    0	     0	  8936	     npm exec repomix --mcp
+    0	     0	  8974	       /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	  7170	fileWatcher [24]
+    0	     0	  7190	extensionHost [24]
+    0	   197	 19119	window [26] (Preview DRAFT_ Balance Al_ The Trust Layer for the Al Economy.md — consorvia-community)
+    0	    98	 19130	extensionHost [26]
+    0	     0	 19281	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=19130
+    0	     0	 19654	     electron-nodejs (server-node.js )
+    0	     0	 20192	     npm exec @notionhq/notion-mcp-server
+    0	     0	 21686	       node /Users/me/.npm/_npx/2e5266eea15d0ccd/node_modules/.bin/notion-mcp-server
+    0	     0	 20195	     electron-nodejs (eslintServer.js )
+    0	     0	 21709	     npm exec repomix --mcp
+    0	     0	 21732	       /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 23514	     /Users/me/.cursor/extensions/ms-python.python-2025.6.1-darwin-arm64/python-env-tools/bin/pet server
+    0	     0	 23516	     /Applications/Cursor.app/Contents/Resources/app/resources/helpers/node --max-old-space-size=32768 /Users/me/.cursor/extensions/anysphere.cursorpyright-1.0.10/dist/server.js --cancellationReceive=file:8ed72e0ece21be541be12e239dad93006a443d2ba8 --node-ipc --clientProcessId=19130
+    0	     0	 19131	fileWatcher [26]
+    0	     0	 19143	extensionHost [26]
+    0	    98	 25658	window [27] (Preview README.md — md2googleslides__googleworkspace)
+    0	    98	 25687	extensionHost [27]
+    0	     0	 25799	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=25687
+    0	     0	 26790	     electron-nodejs (server-node.js )
+    0	     0	 26846	     electron-nodejs (eslintServer.js )
+    0	     0	 26855	     npm exec @notionhq/notion-mcp-server
+    0	     0	 26929	       node /Users/me/.npm/_npx/2e5266eea15d0ccd/node_modules/.bin/notion-mcp-server
+    0	     0	 26941	     npm exec repomix --mcp
+    0	     0	 26970	       /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 27033	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=25687
+    0	     0	 25711	extensionHost [27]
+    0	     0	 25824	fileWatcher [27]
+    0	   197	 27152	window [30] (behind-the-scenes-spec.md — peeq-talent-firebase)
+    0	     0	 27168	fileWatcher [30]
+    0	    98	 27169	extensionHost [30]
+    0	     0	 27391	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=27169
+    0	     0	 27732	     npm exec @notionhq/notion-mcp-server
+    0	     0	 29969	       node /Users/me/.npm/_npx/2e5266eea15d0ccd/node_modules/.bin/notion-mcp-server
+    0	     0	 30812	     electron-nodejs (eslintServer.js )
+    0	    98	 30813	     electron-nodejs (tailwindServer.js )
+    0	     0	 30814	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=27169
+    0	     0	 30855	     npm exec repomix --mcp
+    0	     0	 30904	       /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	    98	 27231	extensionHost [30]
+    0	    98	 34187	   window
+    0	     0	 36082	   window
+    0	    98	 39096	window [19] (cidr-grants-antigravity)
+    0	     0	 39105	fileWatcher [19]
+    0	    98	 39106	extensionHost [19]
+    0	     0	 39235	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=39106
+    0	     0	 39492	     npm exec @notionhq/notion-mcp-server
+    0	     0	 41539	       node /Users/me/.npm/_npx/2e5266eea15d0ccd/node_modules/.bin/notion-mcp-server
+    0	     0	 42782	     electron-nodejs (eslintServer.js )
+    0	     0	 42802	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=39106
+    0	     0	 42812	     electron-nodejs (tailwindServer.js )
+    0	     0	 44412	     npm exec repomix --mcp
+    0	     0	 44738	       /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 39120	extensionHost [19]
+    0	    98	 40801	   window
+    0	    98	 45325	window [20] (NEXT.md — bp-telemetry-experimental)
+    3	   393	 46442	window [15] (Preview QUICK_REFERENCE.md — jahndaux-cuzcollab)
+    0	     0	 47020	fileWatcher [15]
+    6	    98	 47026	extensionHost [15]
+    0	     0	 48169	     electron-nodejs (tailwindServer.js )
+    0	     0	 51825	     electron-nodejs (eslintServer.js )
+    0	     0	 51827	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=47026
+    0	     0	 52683	     npm exec @notionhq/notion-mcp-server
+    0	     0	 52899	       node /Users/me/.npm/_npx/2e5266eea15d0ccd/node_modules/.bin/notion-mcp-server
+    0	     0	 53249	     npm exec repomix --mcp
+    0	     0	 53387	       /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 54190	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=47026
+    0	     0	 47031	extensionHost [15]
+    0	   197	 47580	window [13] (expanded-prompt.md — discursive-rambler)
+    0	     0	 47581	fileWatcher [13]
+    0	    98	 47582	extensionHost [13]
+    0	     0	 47750	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=47582
+    0	     0	 47978	     electron-nodejs (eslintServer.js )
+    0	     0	 50434	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/html-language-features/server/dist/node/htmlServerMain --node-ipc --clientProcessId=47582
+    0	     0	 52779	     npm exec @notionhq/notion-mcp-server
+    0	     0	 53019	       node /Users/me/.npm/_npx/2e5266eea15d0ccd/node_modules/.bin/notion-mcp-server
+    0	     0	 53445	     npm exec repomix --mcp
+    0	     0	 53495	       /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 47592	extensionHost [13]
+    0	    98	 49326	extensionHost [20]
+    0	     0	 52929	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=49326
+    0	     0	 53128	     /Users/me/.cursor/extensions/ms-python.python-2025.6.1-darwin-arm64/python-env-tools/bin/pet server
+    0	     0	 53263	     electron-nodejs (eslintServer.js )
+    0	     0	 53276	     npm exec @notionhq/notion-mcp-server
+    0	     0	 56491	       node /Users/me/.npm/_npx/2e5266eea15d0ccd/node_modules/.bin/notion-mcp-server
+    0	     0	 56632	     npm exec repomix --mcp
+    0	     0	 56677	       /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 56694	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=49326
+    0	     0	 49403	fileWatcher [20]
+    0	     0	 50315	extensionHost [20]
+    0	    98	 63634	window [8] (Preview CARB_CMAS_Proposal.md — peeq-carb)
+    0	    98	 63635	extensionHost [8]
+    0	     0	 63689	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=63635
+    0	     0	 63918	     electron-nodejs (eslintServer.js )
+    0	     0	 63636	extensionHost [8]
+    0	     0	 63745	fileWatcher [8]
+    0	    98	 63748	   window
+    0	    98	 63992	window [9] (peeq-envisioning)
+    0	     0	 63993	fileWatcher [9]
+    0	    98	 63994	extensionHost [9]
+    0	     0	 64016	extensionHost [9]
+    1	   197	 68125	window [31] (Review: Analyze code base and tech stack — fourth-waiv-ai)
+    0	     0	 68946	fileWatcher [31]
+    0	    98	 68986	extensionHost [31]
+    0	     0	 69645	     npm exec @notionhq/notion-mcp-server
+    0	     0	 70257	       node /Users/me/.npm/_npx/2e5266eea15d0ccd/node_modules/.bin/notion-mcp-server
+    0	     0	 69921	     electron-nodejs (eslintServer.js )
+    0	     0	 69929	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=68986
+    0	    98	 69940	     electron-nodejs (tailwindServer.js )
+    0	     0	 69983	     npm exec repomix --mcp
+    0	     0	 70098	       /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	    98	 69059	extensionHost [31]
+    0	    98	 74227	window [10] (Preview MANIFEST.md — anythingllm-quickstart)
+    0	    98	 74228	extensionHost [10]
+    0	     0	 74306	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=74228
+    0	     0	 74571	     electron-nodejs (bin.js )
+    0	     0	 74572	     /Users/me/.cursor/extensions/hashicorp.terraform-2.37.6-darwin-arm64/bin/terraform-ls serve
+    0	     0	 74712	     electron-nodejs (server-node.js )
+    0	     0	 74795	     electron-nodejs (eslintServer.js )
+    0	     0	 75298	     electron-nodejs (tailwindServer.js )
+    0	     0	 91687	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=74228
+    0	     0	 74229	extensionHost [10]
+    0	     0	 74232	fileWatcher [10]
+    0	   197	 84038	window [28] (500: Internal Server Error — umpire-empire)
+    0	    98	 84041	extensionHost [28]
+    0	     0	 84163	     tsserver[5.9.2]: syntax
+    0	     0	 84164	     tsserver[5.9.2]: semantic
+    0	     0	 84506	       /Applications/Cursor.app/Contents/Resources/app/resources/helpers/node /Applications/Cursor.app/Contents/Resources/app/extensions/node_modules/typescript/lib/typingsInstaller.js --globalTypingsCacheLocation /Users/me/Library/Caches/typescript/5.9 --enableTelemetry --typesMapLocation /Applications/Cursor.app/Contents/Resources/app/extensions/node_modules/typescript/lib/typesMap.json --validateDefaultNpmLocation
+    0	     0	 84166	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=84041
+    0	     0	 84320	     electron-nodejs (eslintServer.js )
+    0	     0	 84332	     npm exec @notionhq/notion-mcp-server
+    0	     0	 84873	       node /Users/me/.npm/_npx/2e5266eea15d0ccd/node_modules/.bin/notion-mcp-server
+    0	     0	 84376	     electron-nodejs (tailwindServer.js )
+    0	     0	 84684	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=84041
+    0	     0	 84800	     npm exec repomix --mcp
+    0	     0	 84831	       /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 84042	fileWatcher [28]
+    0	     0	 84087	extensionHost [28]
+    0	   492	 86370	window [29] (Preview FEATURE_STATUS_REPORT.md — traub-umpire-empire)
+    0	     0	 86436	fileWatcher [29]
+    0	    98	 86437	extensionHost [29]
+    0	     0	 86615	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=86437
+    0	     0	 86649	     /Users/me/.cursor/extensions/ms-python.python-2025.6.1-darwin-arm64/python-env-tools/bin/pet server
+    0	     0	 87034	     electron-nodejs (eslintServer.js )
+    0	     0	 87051	     npm exec @notionhq/notion-mcp-server
+    0	     0	 87650	       node /Users/me/.npm/_npx/2e5266eea15d0ccd/node_modules/.bin/notion-mcp-server
+    0	     0	 87094	     electron-nodejs (tailwindServer.js )
+    0	     0	 87692	     npm exec repomix --mcp
+    0	     0	 87736	       /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 99097	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=86437
+    0	     0	 86501	extensionHost [29]
+    0	    98	 87190	window [16] (4thwaiv-consulting)
+    0	     0	 87254	fileWatcher [16]
+    0	    98	 87257	extensionHost [16]
+    0	     0	 87643	     npm exec @notionhq/notion-mcp-server
+    0	     0	 87743	       node /Users/me/.npm/_npx/2e5266eea15d0ccd/node_modules/.bin/notion-mcp-server
+    0	     0	 87919	     npm exec repomix --mcp
+    0	     0	 87947	       /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 87261	extensionHost [16]
+    0	   197	 87348	window [22] (REPOMIX_ANALYSIS.md — vertex-playground)
+    0	     0	 87376	fileWatcher [22]
+    0	    98	 87377	extensionHost [22]
+    0	     0	 87697	     /Users/me/.cursor/extensions/hashicorp.terraform-2.37.6-darwin-arm64/bin/terraform-ls serve
+    0	     0	 87784	     npm exec @notionhq/notion-mcp-server
+    0	     0	 88071	       node /Users/me/.npm/_npx/2e5266eea15d0ccd/node_modules/.bin/notion-mcp-server
+    0	     0	 88291	     electron-nodejs (eslintServer.js )
+    0	     0	 88293	     electron-nodejs (tailwindServer.js )
+    0	     0	 88294	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=87377
+    0	     0	 88784	     npm exec repomix --mcp
+    0	     0	 88823	       /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 87379	extensionHost [22]
+    1	   197	 94631	window [11] (ANTIGRAVITY_DIAGNOSTICS_SUMMARY.md — blueplane-project)
+    0	    98	 94633	extensionHost [11]
+    0	     0	 94880	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=94633
+    0	     0	 94939	     /Users/me/.cursor/extensions/ms-python.python-2025.6.1-darwin-arm64/python-env-tools/bin/pet server
+    0	     0	 95201	     electron-nodejs (eslintServer.js )
+    0	     0	 95325	     electron-nodejs (tailwindServer.js )
+    0	     0	 94634	extensionHost [11]
+    0	     0	 94640	fileWatcher [11]
+    1	   295	 94850	window [14] (session_capture.py — continuous-ai)
+    0	    98	 94873	extensionHost [14]
+    0	     0	 95392	     /Users/me/.cursor/extensions/hashicorp.terraform-2.37.6-darwin-arm64/bin/terraform-ls serve
+    0	     0	 99816	     electron-nodejs (server-node.js )
+    0	     0	 94874	fileWatcher [14]
+    0	     0	 94950	extensionHost [14]
+    0	     0	 97794	   window
+
+Workspace Stats: 
+|  Window (Review: Analyze code base and tech stack — fourth-waiv-ai)
+|  Window (behind-the-scenes-spec.md — peeq-talent-firebase)
+|  Window (Preview FEATURE_STATUS_REPORT.md — traub-umpire-empire)
+|  Window (500: Internal Server Error — umpire-empire)
+|  Window (Preview README.md — md2googleslides__googleworkspace)
+|  Window (Preview DRAFT_ Balance Al_ The Trust Layer for the Al Economy.md — consorvia-community)
+|  Window (2025-09-08_23-55Z-close-repo-and-document-commit-histories.md — storycraft-forks)
+|  Window (REPOMIX_ANALYSIS.md — vertex-playground)
+|  Window (NEXT.md — bp-telemetry-experimental)
+|  Window (cidr-grants-antigravity)
+|  Window (Bay Area Housing Precarity Risk Model – HPRM 2.0 — ern-hprm)
+|  Window (_quarto.yml — ern-cpc)
+|  Window (4thwaiv-consulting)
+|  Window (Preview QUICK_REFERENCE.md — jahndaux-cuzcollab)
+|  Window (session_capture.py — continuous-ai)
+|  Window (expanded-prompt.md — discursive-rambler)
+|  Window (Analytics Service Refactor: Independent SQLite → DuckDB Pipeline by aculich · Pull Request #29 · blueplane-ai/bp-telemetry-core · GitHub — bp-telemetry-core)
+|  Window (ANTIGRAVITY_DIAGNOSTICS_SUMMARY.md — blueplane-project)
+|  Window (Preview MANIFEST.md — anythingllm-quickstart)
+|  Window (peeq-envisioning)
+|  Window (Preview CARB_CMAS_Proposal.md — peeq-carb)
+|  Window (TECHSTACK.md — peeq-lavender-voice)
+|  Window (rrid)
+|  Window (2025-04-01_10-47-comparing-docker-vs-docker-compose-for-baserow-installation.md — baserow)
+|  Window (extract_schema.py — airtable-backups)
+|  Window (SCHEMA.md — rrid-softr-migration)
+|  Window (TECHSTACK.md — aistudio-cidr-idea-expander)
+|  Window (README.md — storycraft)
+|  Window (DEV.md — murmur-muse)
+|    Folder (aistudio-cidr-idea-expander): 24 files
+|      File types: json(5) ts(4) md(3) gitignore(2) tsx(2)
+|                  cursorindexingignore(1) backup(1) html(1)
+|      Conf files: package.json(1) tsconfig.json(1)
+|    Folder (peeq-envisioning): 50 files
+|      File types: md(11) pptx(11) pdf(3) docx(2) gz(2) txt(2) html(2) png(2)
+|                  DS_Store(1) cursorindexingignore(1)
+|      Conf files:
+|    Folder (discursive-rambler): 46 files
+|      File types: md(17) mdc(10) mhtml(2) zip(2) cursorindexingignore(1)
+|                  gitignore(1) json(1) html(1)
+|      Conf files:
+|    Folder (md2googleslides__googleworkspace): 123 files
+|      File types: ts(22) js(21) map(17) png(11) json(8) md(6) yml(4)
+|                  gitignore(2) babelrc(1) cursorindexingignore(1)
+|      Conf files: github-actions(3) package.json(1) tsconfig.json(1)
+|    Folder (murmur-muse): 397 files
+|      File types: js(120) map(103) tsx(48) json(43) ts(13) md(6) gitignore(2)
+|                  css(2) ico(2) cursorindexingignore(1)
+|      Conf files: package.json(2) tsconfig.json(1)
+|    Folder (jahndaux-cuzcollab): 232 files
+|      File types: tsx(55) py(24) md(17) ts(11) json(9) png(8) js(6) pyc(6)
+|                  txt(5) gz(4)
+|      Conf files: dockerfile(3) package.json(3) tsconfig.json(1)
+|    Folder (bp-telemetry-core): 322 files
+|      File types: py(106) md(66) pyc(56) json(5) js(5) map(5) ts(5)
+|                  gitignore(4) yaml(4) cursorindexingignore(1)
+|      Conf files: package.json(1) tsconfig.json(1)
+|    Folder (fourth-waiv-ai): 433 files
+|      File types: ts(135) tsx(92) md(39) png(36) json(19) jpg(14) js(8)
+|                  html(4) sh(3) gitignore(2)
+|      Conf files: package.json(5) tsconfig.json(5) settings.json(1)
+|    Folder (4thwaiv-consulting): 464 files
+|      File types: ts(135) tsx(92) md(41) png(37) json(20) jpg(14) js(8)
+|                  mp4(5) html(4) gitignore(3)
+|      Conf files: package.json(5) tsconfig.json(5) settings.json(1)
+|    Folder (umpire-empire): 4223 files
+|      File types: md(3515) js(189) tsx(137) map(128) json(60) ts(35) png(32)
+|                  css(5) sh(5) gitignore(2)
+|      Conf files: package.json(3) settings.json(1) tsconfig.json(1)
+|    Folder (ern-hprm): 1212 files
+|      File types: r(359) sh(97) R(77) out(60) js(53) Rout(52) css(46) png(42)
+|                  md(39) rds(39)
+|      Conf files:
+|    Folder (storycraft-forks): 1115 files
+|      File types: py(278) md(100) tsx(59) ts(56) json(51) png(49) mdx(37)
+|                  go(28) mp3(28) gitignore(23)
+|      Conf files: package.json(7) dockerfile(4) tsconfig.json(2)
+|    Folder (peeq-talent-firebase): 2487 files
+|      File types: js(938) map(735) json(296) tsx(94) md(81) png(62) ts(49)
+|                  mhtml(7) pdf(7) DS_Store(5)
+|      Conf files: package.json(3) tsconfig.json(1)
+|    Folder (cidr-grants-antigravity): 1655 files
+|      File types: json(284) js(266) map(190) png(113) tsx(98) rsc(72) ts(64)
+|                  csv(52) md(50) html(30)
+|      Conf files: package.json(14) tsconfig.json(9) settings.json(1)
+|    Folder (peeq-carb): 2634 files
+|      File types: py(864) pyc(863) gz(148) h(83) txt(44) pyi(35) pxi(26)
+|                  typed(21) dylib(19) so(19)
+|      Conf files:
+|    Folder (storycraft): 2291 files
+|      File types: py(526) md(194) json(143) js(132) ts(123) tsx(118) png(86)
+|                  mp3(56) go(56) gitignore(47)
+|      Conf files: package.json(16) dockerfile(8) tsconfig.json(4)
+|    Folder (bp-telemetry-experimental): 7946 files
+|      File types: md(3165) pyc(1538) py(1512) pyi(753) so(257) typed(30)
+|                  txt(29) dylib(18) c(16) js(7)
+|      Conf files: package.json(1) tsconfig.json(1)
+|    Folder (vertex-playground): 2578 files
+|      File types: py(524) png(260) md(191) jpg(173) ts(129) tsx(116) json(88)
+|                  js(51) mp3(45) gitignore(35)
+|      Conf files: package.json(11) dockerfile(8) tsconfig.json(6)
+|                  jsconfig.json(1) launch.json(1) settings.json(1)
+|                  tasks.json(1) makefile(1)
+|    Folder (consorvia-community): 2771 files
+|      File types: json(672) go(537) png(233) js(125) jpg(103) md(71) py(60)
+|                  css(31) ts(22) pdf(22)
+|      Conf files: makefile(3) dockerfile(2) package.json(1) tsconfig.json(1)
+|                  launch.json(1) settings.json(1) devcontainer.json(1)
+|    Folder (rrid-softr-migration): more than 25135 files
+|      File types: svg(9915) md(3193) jpg(1314) py(1166) dat(1068) json(765)
+|                  pyc(705) js(366) map(255) rsc(69)
+|      Conf files: package.json(5) tsconfig.json(1)
+|    Folder (peeq-lavender-voice): 7503 files
+|      File types: md(3730) png(790) json(566) py(304) js(279) tsx(177)
+|                  ts(147) map(114) html(72) jpg(33)
+|      Conf files: package.json(13) tsconfig.json(5) dockerfile(5)
+|                  github-actions(1)
+|    Folder (traub-umpire-empire): 19236 files
+|      File types: md(7061) py(3933) pyc(3211) json(842) js(657) pyi(337)
+|                  map(292) tsx(286) ts(106) jpg(91)
+|      Conf files: package.json(16) settings.json(3) tsconfig.json(2)
+|    Folder (baserow): 10119 files
+|      File types: py(2264) json(1936) pyc(1255) vue(992) js(662) scss(399)
+|                  svg(136) zip(124) md(117) po(110)
+|      Conf files: dockerfile(21) makefile(6) package.json(5) jsconfig.json(4)
+|                  launch.json(1) settings.json(1)
+|    Folder (continuous-ai): more than 108231 files
+|      File types: json(8231) eml(8021) md(3544) txt(31) py(9) jsonl(7) log(3)
+|                  DS_Store(2) gitignore(2) html(2)
+|      Conf files: settings.json(1)
+|    Folder (blueplane-project): more than 20830 files
+|      File types: md(6905) py(3498) pyc(3346) pyi(1537) so(510) json(420)
+|                  svg(384) js(161) mp3(122) txt(110)
+|      Conf files: package.json(110) tsconfig.json(6) launch.json(5)
+|                  settings.json(4) tasks.json(3) makefile(1)
+|    Folder (airtable-backups): 4937 files
+|      File types: json(2452) log(48) md(26) html(20) png(12) py(9) zip(4)
+|                  docx(3) gitignore(2) pyc(2)
+|      Conf files:
+|    Folder (ern-cpc): more than 20868 files
+|      File types: py(4285) pyc(4273) pyi(2197) js(1387) dat(1070) json(288)
+|                  map(286) scss(217) css(177) bcmap(168)
+|      Conf files: package.json(14) webpack.config.js(1) makefile(1)
+|    Folder (rrid): more than 20193 files
+|      File types: py(4547) pyc(4477) json(3104) pyi(372) js(266) md(135)
+|                  map(122) so(99) txt(75) proto(62)
+|      Conf files: package.json(12) dockerfile(4) tsconfig.json(3)
+|    Folder (anythingllm-quickstart): more than 24749 files
+|      File types: yaml(5003) py(2948) ts(1062) ipynb(829) js(792) mdx(565)
+|                  png(559) md(414) jsx(366) json(329)
+|      Conf files: package.json(66) tsconfig.json(28) dockerfile(13) cmake(13)
+|                  makefile(11) settings.json(8) jsconfig.json(4)
+|                  devcontainer.json(3) launch.json(2) tasks.json(1)
+|                  tslint.json(1) webpack.config.js(1)
+
+

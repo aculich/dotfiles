@@ -169,3 +169,18 @@ load-nvmrc
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 eval "$(direnv hook zsh)"
+export PATH=/Users/me/.local/bin:/Users/me/.bun/bin:/Users/me/.codeium/windsurf/bin:/opt/homebrew/opt/postgresql@17/bin:/Users/me/.local/bin:/opt/homebrew/share/google-cloud-sdk/bin:/Users/me/.local/bin:/Users/me/.bun/bin:/Users/me/.codeium/windsurf/bin:/opt/homebrew/opt/postgresql@17/bin:/Users/me/.local/bin:/opt/homebrew/share/google-cloud-sdk/bin:/Users/me/.nvm/versions/node/v20.19.0/bin:/opt/anaconda3/bin:/opt/anaconda3/condabin:/Users/me/.local/bin:/Users/me/.bun/bin:/Users/me/.codeium/windsurf/bin:/opt/homebrew/opt/postgresql@17/bin:/Users/me/.local/bin:/opt/homebrew/share/google-cloud-sdk/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/Applications/quarto/bin:/Users/me/Library/Android/sdk/emulator:/Users/me/Library/Android/sdk/platform-tools:/Users/me/Library/Android/sdk/tools:/Users/me/Library/Android/sdk/tools/bin:/Users/me/.fzf/bin:/Users/me/Library/Android/sdk/emulator:/Users/me/Library/Android/sdk/platform-tools:/Users/me/Library/Android/sdk/tools:/Users/me/Library/Android/sdk/tools/bin:/Users/me/Library/Android/sdk/emulator:/Users/me/Library/Android/sdk/platform-tools:/Users/me/Library/Android/sdk/tools:/Users/me/Library/Android/sdk/tools/bin:/opt/homebrew/share/google-cloud-sdk/bin/
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
+eval "$(pyenv virtualenv-init -)"
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/me/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
+source ~/.cargo/env
+export PATH="/opt/homebrew/opt/openjdk@21/bin:$PATH"
+export PATH="/opt/homebrew/opt/openjdk@21/bin:$PATH"
+source ~/.cargo/env
+source ~/.nvm/nvm.sh && nvm use 22

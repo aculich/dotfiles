@@ -267,7 +267,7 @@
     {
         "key": "ctrl+x ctrl+f",
         "command": "workbench.action.quickOpen",
-        "when": "focusedView == 'workbench.panel.composerViewPane2.view'"
+        "when": "composerFocused || focusedView =~ /^workbench.panel.aichat.view/"
     },
     {
         "key": "ctrl+x ctrl+f",
@@ -371,15 +371,85 @@
             "text": "\u0018\u0018" // send ctrl+x passthru
         },
         "when": "terminalFocus"
+    },
+    {
+        "key": "shift+cmd+p",
+        "command": "workbench.action.showCommands",
+        "when": "composerFocused || focusedView =~ /^workbench.panel.aichat.view/"
+    },
+
+    // https://github.com/JacksonKearl/vscode-search-editor-apply-changes?tab=readme-ov-file#keybindings
+    {
+        "key": "cmd+s",
+        "command": "searchEditorApplyChanges.apply",
+        "when": "inSearchEditor"
+    },
+    {
+        "key": "shift+enter",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {
+            "text": "\\\r\n"
+        },
+        "when": "terminalFocus"
+    },
+    {
+        "key": "cmd+i",
+        "command": "composerMode.agent"
     }
+
 ]
 
 // NOTES:
+
+// CHECK CURRENT SETTINGS (run these commands to see current values):
+// defaults read -g ApplePressAndHoldEnabled                                    // check press-and-hold setting
+// defaults read NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled            // check double-space period
+// defaults read -g KeyRepeat                                                   // check key repeat rate
+// defaults read -g InitialKeyRepeat                                            // check key repeat delay
+//
+// ORIGINAL macOS DEFAULTS (before any changes):
+// - ApplePressAndHoldEnabled: true (1) - press-and-hold shows accent menu by default
+// - NSAutomaticPeriodSubstitutionEnabled: true (1) - double-space inserts period by default
+// - KeyRepeat: 6 (medium speed) - typical default repeat rate (UI range: 2-120, lower = faster)
+// - InitialKeyRepeat: 25 (medium delay) - typical default delay before repeat starts (UI range: 15-300, lower = shorter)
+//
+// MINIMUM VALUES (via defaults, below UI minimums):
+// - KeyRepeat: 1 is the absolute fastest (UI minimum is 2, but 1 works via defaults)
+// - InitialKeyRepeat: 1 is the absolute shortest (UI minimum is 15, but 1 works via defaults)
+//
+// NOTE: If a setting returns "does not exist", it means it's using the system default.
+// To reset to defaults: defaults delete -g SettingName
+//
+// CURRENT STATE (as of last check):
+// - ApplePressAndHoldEnabled: 0 (false) - modified from default
+// - NSAutomaticPeriodSubstitutionEnabled: 0 (false) - modified from default
+// - KeyRepeat: 1 (fastest, absolute minimum) - modified from default
+// - InitialKeyRepeat: 1 (shortest, absolute minimum, below UI min of 15) - modified from default
+
+// READ CURRENT VALUES FIRST:
+// defaults read -g KeyRepeat                                                   // check current repeat rate (lower = faster, 1 = fastest)
+// defaults read -g InitialKeyRepeat                                           // check current repeat delay (lower = shorter, 1 = shortest)
+//
+// NOTE: UI minimums are KeyRepeat=2 and InitialKeyRepeat=15, but via defaults we can set:
+// - KeyRepeat: 1 is the absolute fastest (cannot go lower)
+// - InitialKeyRepeat: 1 is the absolute shortest delay (below UI minimum, may cause very fast repeats)
+//
+// IMPORTANT: After running defaults write commands, you MUST apply changes by:
+// 1. Log out and back in (fastest method), OR
+// 2. Restart your Mac, OR
+// 3. Restart loginwindow: killall loginwindow (less disruptive, but may close some apps)
+// The settings are written immediately, but won't take effect until you restart the session.
+
+// APPLY KEYBOARD SETTINGS (run these commands, then log out/in or restart):
 // open "x-apple.systempreferences:com.apple.Keyboard-Settings"                  // open Keyboard settings panel
 // defaults write -g ApplePressAndHoldEnabled -bool false                         // disable accept popup on press and hold
 // defaults write NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled -bool false // disable insert period on double space
-// defaults write -g KeyRepeat -int 1                                            // set keyboard repeat rate to fastest
-// defaults write -g InitialKeyRepeat -int 10                                    // set key repeat delay to shortest
+// defaults write -g KeyRepeat -int 5                                            // set keyboard repeat rate (lower = faster, 1 = fastest)
+// defaults write -g InitialKeyRepeat -int 5                                     // set key repeat delay (lower = shorter, 1 = shortest)
+//
+// TO APPLY CHANGES IMMEDIATELY (after running defaults write commands above):
+// killall loginwindow                                                           // restart loginwindow to apply keyboard settings (less disruptive than full logout)
+// OR simply log out and back in (fastest method)
 
 // Input Menu and Text Settings:
 // open "x-apple.systempreferences:com.apple.Keyboard-Settings.textinput"        // open Text Input settings panel
@@ -428,6 +498,7 @@
 // defaults find KeyRepeat                                                     // find all domains containing a key
 
 // Export/Backup current defaults:
+
 // defaults domains | tr ',' '\n' | xargs -I{} sh -c 'echo "Domain: {}"; defaults read {}'  // list ALL defaults
 // defaults export com.apple.TextInputMenu /tmp/text_input_defaults.plist      // export specific domain
 // defaults export -g /tmp/global_defaults.plist                               // export global defaults
@@ -438,4 +509,21 @@
 // 2. Create a new user account to see defaults
 // 3. Reset all defaults: defaults delete domain-name
 
+//// From Vim Extension setting: https://marketplace.cursorapi.com/items/?itemName=vscodevim.vim
 
+// defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false              # For VS Code
+// defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false      # For VS Code Insider
+// defaults write com.vscodium ApplePressAndHoldEnabled -bool false                      # For VS Codium
+// defaults write com.microsoft.VSCodeExploration ApplePressAndHoldEnabled -bool false   # For VS Codium Exploration users
+// defaults write com.exafunction.windsurf ApplePressAndHoldEnabled -bool false          # For Windsurf
+// defaults write com.todesktop.230313mzl4w4u92 ApplePressAndHoldEnabled -bool false     # For Cursor
+// defaults delete -g ApplePressAndHoldEnabled                                           # If necessary, reset global default
+// defaults write -g ApplePressAndHoldEnabled -bool false                                # Set global default to false
+
+// Explanation:
+// - ApplePressAndHoldEnabled controls whether holding a key shows the accent/character picker (true)
+//   or produces a continuous key repeat (false).
+// - VSCodeVim relies on fast, continuous key repeat for motions (e.g., holding h/j/k/l to move),
+//   so each editor's bundle ID is configured with ApplePressAndHoldEnabled = false.
+// - The final command removes any global override so the system-wide behavior can remain at
+//   its macOS default, while these editor-specific settings ensure proper Vim-style key repeat.
