@@ -134,22 +134,29 @@ op_get_session_token() {
         
         # Use cached token if less than 30 minutes old (1800 seconds)
         if [[ $session_age -lt 1800 ]]; then
-            session_token=$(cat "$session_file" 2>/dev/null | head -1 | tr -d '\n\r')
+            # Read token and clean it up (remove all whitespace, newlines, etc.)
+            session_token=$(cat "$session_file" 2>/dev/null | tr -d '\n\r \t' | head -c 200)
             
             # Verify it's not an error message and is a valid token
             if [[ -n "$session_token" ]] && \
                [[ ${#session_token} -gt 30 ]] && \
                [[ ! "$session_token" =~ "[Ee][Rr][Rr][Oo][Rr]" ]] && \
                [[ ! "$session_token" =~ "found no accounts" ]] && \
-               [[ ! "$session_token" =~ "Usage:" ]]; then
+               [[ ! "$session_token" =~ "Usage:" ]] && \
+               [[ ! "$session_token" =~ "Warning:" ]] && \
+               [[ ! "$session_token" =~ "Error:" ]]; then
                 # Verify token still works
                 if op account list --session "$session_token" &> /dev/null; then
                     echo "$session_token"
                     return 0
+                else
+                    # Token doesn't work anymore, remove it
+                    rm -f "$session_file"
                 fi
+            else
+                # Bad cached token - remove it
+                rm -f "$session_file"
             fi
-            # Bad cached token - remove it
-            rm -f "$session_file"
         else
             # Session file too old, clean up
             rm -f "$session_file"
@@ -193,27 +200,38 @@ op_signin_cached() {
     echo ""
     
     # Check if already signed in (might have valid session)
+    # First check cached file
+    local existing_token
+    existing_token=$(op_get_session_token 2>/dev/null)
+    if [[ -n "$existing_token" ]]; then
+        echo "✓ Already signed in (using cached session token)"
+        return 0
+    fi
+    
+    # If op account list works, we have a session but no cached token
+    # Try to extract it using --raw (might work if session is still valid)
     if op account list &> /dev/null; then
-        local existing_token
-        existing_token=$(op_get_session_token 2>/dev/null)
-        if [[ -n "$existing_token" ]]; then
-            echo "✓ Already signed in (using existing session)"
-            return 0
-        fi
+        echo "Note: 1Password session exists but token not cached." >&2
+        echo "Attempting to extract token..." >&2
     fi
     
     echo "This will prompt for biometric authentication (e.g., Touch ID)."
     echo "Please authenticate when prompted..."
     echo ""
     
-    # Get account UUID from email (needed for --account flag)
+    # Get account UUID and user UUID from email (needed for --account flag and env var name)
     local account_uuid
+    local user_uuid
     if command -v jq &> /dev/null; then
         account_uuid=$(op account list --format json 2>/dev/null | \
             jq -r ".[] | select(.email == \"$account_email\") | .account_uuid" 2>/dev/null | head -1)
+        user_uuid=$(op account list --format json 2>/dev/null | \
+            jq -r ".[] | select(.email == \"$account_email\") | .user_uuid" 2>/dev/null | head -1)
     else
         # Fallback: try to get from account list output
         account_uuid=$(op account list 2>/dev/null | grep -i "$account_email" | awk '{print $3}' | head -1)
+        # User UUID is in a different column, need to parse differently
+        user_uuid=$(op account list 2>/dev/null | grep -i "$account_email" | awk '{print $4}' | head -1)
     fi
     
     if [[ -z "$account_uuid" ]]; then
@@ -231,17 +249,23 @@ op_signin_cached() {
     local error_output
     
     # Method 1: Try --raw (works best if biometric prompt cooperates)
-    # Capture stderr separately to see any errors
-    session_token=$(op signin --account "$account_uuid" --raw 2>/dev/null)
+    # Note: --raw might not work well with interactive biometric prompts
+    # Capture both stdout and stderr to see what's happening
+    local raw_output
+    local raw_error
+    raw_output=$(op signin --account "$account_uuid" --raw 2>&1)
+    local raw_exit=$?
     
     # Check if we got a valid token from --raw
-    if [[ -n "$session_token" ]] && \
-       [[ ${#session_token} -gt 30 ]] && \
-       [[ ! "$session_token" =~ "[Ee][Rr][Rr][Oo][Rr]" ]] && \
-       [[ ! "$session_token" =~ "Usage:" ]] && \
-       [[ ! "$session_token" =~ "not found" ]]; then
+    if [[ $raw_exit -eq 0 ]] && \
+       [[ -n "$raw_output" ]] && \
+       [[ ${#raw_output} -gt 30 ]] && \
+       [[ ! "$raw_output" =~ "[Ee][Rr][Rr][Oo][Rr]" ]] && \
+       [[ ! "$raw_output" =~ "Usage:" ]] && \
+       [[ ! "$raw_output" =~ "not found" ]] && \
+       [[ ! "$raw_output" =~ "cancel" ]]; then
         # Success with --raw method
-        session_token=$(echo "$session_token" | tr -d '\n\r \t')
+        session_token=$(echo "$raw_output" | tr -d '\n\r \t')
         
         # Verify it works
         if op account list --session "$session_token" &> /dev/null; then
@@ -253,6 +277,7 @@ op_signin_cached() {
         fi
     else
         # --raw didn't work or returned invalid token
+        # This is expected if biometric prompt doesn't work with --raw
         session_token=""
     fi
     
@@ -261,18 +286,22 @@ op_signin_cached() {
         echo "Note: Using interactive sign-in method..." >&2
         
         # Run signin (this will show biometric prompt and set OP_SESSION_* env var)
-        # We need to run this in a way that preserves the environment
+        # The env var name is OP_SESSION_<user_uuid>, not account_uuid!
         if op signin --account "$account_uuid" 2>&1; then
             # Look for OP_SESSION_* environment variable
-            # The variable name is OP_SESSION_<account_uuid>
-            local env_var_name="OP_SESSION_${account_uuid}"
+            # IMPORTANT: op signin sets OP_SESSION_<user_uuid>, not account_uuid!
+            local env_var_name=""
+            if [[ -n "$user_uuid" ]]; then
+                env_var_name="OP_SESSION_${user_uuid}"
+            fi
             
             # Try to get the value using parameter expansion
             # In zsh, we can use ${(P)var} to get the value of a variable named by another variable
-            if [[ -n "${(P)env_var_name:-}" ]]; then
+            if [[ -n "$env_var_name" ]] && [[ -n "${(P)env_var_name:-}" ]]; then
                 session_token="${(P)env_var_name}"
             else
                 # Try finding any OP_SESSION_* variable that works
+                # This is a fallback in case the variable name format is different
                 for var_name in ${(k)parameters}; do
                     if [[ "$var_name" =~ "^OP_SESSION_" ]]; then
                         local test_token="${(P)var_name}"
@@ -324,13 +353,32 @@ op_signin_cached() {
         return 1
     fi
     
-    # Cache the token
-    echo "$session_token" > "$session_file"
+    # Cache the token - ensure we write it correctly
+    # Remove any existing file first to avoid issues
+    rm -f "$session_file"
+    echo -n "$session_token" > "$session_file"
     chmod 600 "$session_file"
+    
+    # Verify the file was written correctly
+    if [[ ! -f "$session_file" ]] || [[ ! -s "$session_file" ]]; then
+        echo "Error: Failed to write session token to cache file" >&2
+        return 1
+    fi
+    
+    # Verify we can read it back
+    local cached_token
+    cached_token=$(cat "$session_file" 2>/dev/null | tr -d '\n\r')
+    if [[ "$cached_token" != "$session_token" ]]; then
+        echo "Warning: Cached token doesn't match original token" >&2
+        # Try to fix it
+        echo -n "$session_token" > "$session_file"
+        chmod 600 "$session_file"
+    fi
     
     echo "✓ 1Password session token cached for 30 minutes."
     echo "  Account: $account_email"
     echo "  Account UUID: $account_uuid"
+    echo "  Token cached to: $session_file"
     
     return 0
 }
