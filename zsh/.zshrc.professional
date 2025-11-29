@@ -49,6 +49,76 @@ if [[ -f "$ZSH/oh-my-zsh.sh" ]]; then
 fi
 
 # ============================================================================
+# IDE DETECTION (VERY EARLY - before direnv and other tools)
+# ============================================================================
+# Detect if we're running in an IDE terminal (Cursor, VSCode, Antigravity)
+# In IDE terminals, we use minimal config for fast startup
+# MUST be before direnv hook and site-specific configs to prevent nvm calls
+IS_IDE_TERMINAL=false
+if [[ "$TERM_PROGRAM" == "cursor" ]] || \
+   [[ "$TERM_PROGRAM" == "vscode" ]] || \
+   [[ "$TERM_PROGRAM" == "antigravity" ]] || \
+   [[ -n "$CURSOR_SHELL_INTEGRATION" ]] || \
+   [[ -n "$VSCODE_INJECTION" ]]; then
+    IS_IDE_TERMINAL=true
+fi
+
+# ============================================================================
+# NVM WRAPPER SETUP (Before anything that might call nvm)
+# ============================================================================
+# Set up NVM_DIR and create wrapper functions BEFORE direnv or site-specific configs
+# This ensures nvm() is available even if something tries to call it early
+export NVM_DIR="$HOME/.nvm"
+
+# Helper function to load NVM (used by lazy loaders)
+_load_nvm() {
+    if [[ -s "$(brew --prefix nvm)/nvm.sh" ]]; then
+        source "$(brew --prefix nvm)/nvm.sh"
+        return 0
+    fi
+    return 1
+}
+
+# Create nvm wrapper function early (before direnv or site-specific configs)
+# This prevents "command not found: nvm" errors during startup
+if [[ "$IS_IDE_TERMINAL" == true ]]; then
+    # In IDE terminals: create wrapper that lazy-loads NVM
+    nvm() {
+        # Load NVM if not already loaded
+        if ! type nvm &> /dev/null || [[ "$(type nvm)" != *"function"* ]]; then
+            _load_nvm || return 1
+        fi
+        # Call the real nvm function
+        nvm "$@"
+    }
+    
+    # Also create node/npm/npx wrappers early
+    node() {
+        if ! type nvm &> /dev/null || [[ "$(type nvm)" != *"function"* ]]; then
+            _load_nvm || return 1
+        fi
+        unfunction node npm npx 2>/dev/null || true
+        command node "$@"
+    }
+    
+    npm() {
+        if ! type nvm &> /dev/null || [[ "$(type nvm)" != *"function"* ]]; then
+            _load_nvm || return 1
+        fi
+        unfunction node npm npx 2>/dev/null || true
+        command npm "$@"
+    }
+    
+    npx() {
+        if ! type nvm &> /dev/null || [[ "$(type nvm)" != *"function"* ]]; then
+            _load_nvm || return 1
+        fi
+        unfunction node npm npx 2>/dev/null || true
+        command npx "$@"
+    }
+fi
+
+# ============================================================================
 # DIRENV SETUP (Before other env tools)
 # ============================================================================
 # Direnv must be hooked early to work with project-specific .envrc files
@@ -71,6 +141,7 @@ DOTFILES_ZSH="$HOME/dotfiles/zsh"
 [[ -f "$DOTFILES_ZSH/aliases.zsh" ]] && source "$DOTFILES_ZSH/aliases.zsh"
 
 # Environment-specific configs (site-specific, machine-specific)
+# NOTE: These configs might call nvm, so nvm wrapper must be defined above
 if [[ -d "$DOTFILES_ZSH/site-specific" ]]; then
     # Source machine-specific config if it exists
     MACHINE_ID=$(system_profiler SPHardwareDataType 2>/dev/null | grep "Hardware UUID" | awk '{print $3}')
@@ -79,83 +150,12 @@ if [[ -d "$DOTFILES_ZSH/site-specific" ]]; then
 fi
 
 # ============================================================================
-# IDE DETECTION (Early - before loading heavy tools)
-# ============================================================================
-# Detect if we're running in an IDE terminal (Cursor, VSCode, Antigravity)
-# In IDE terminals, we use minimal config for fast startup
-IS_IDE_TERMINAL=false
-if [[ "$TERM_PROGRAM" == "cursor" ]] || \
-   [[ "$TERM_PROGRAM" == "vscode" ]] || \
-   [[ "$TERM_PROGRAM" == "antigravity" ]] || \
-   [[ -n "$CURSOR_SHELL_INTEGRATION" ]] || \
-   [[ -n "$VSCODE_INJECTION" ]]; then
-    IS_IDE_TERMINAL=true
-fi
-
-# ============================================================================
 # DEVELOPMENT TOOLS
 # ============================================================================
 
-# Node Version Manager (nvm) - Lazy loaded for IDE terminals
-export NVM_DIR="$HOME/.nvm"
-
-# Helper function to load NVM (used by lazy loaders)
-_load_nvm() {
-    if [[ -s "$(brew --prefix nvm)/nvm.sh" ]]; then
-        source "$(brew --prefix nvm)/nvm.sh"
-        return 0
-    fi
-    return 1
-}
-
-if [[ "$IS_IDE_TERMINAL" == true ]]; then
-    # In IDE terminals: lazy load NVM
-    # Create wrapper functions that load NVM on first use
-    
-    # nvm wrapper (loads NVM, then calls real nvm)
-    nvm() {
-        # Load NVM if not already loaded
-        if ! type nvm &> /dev/null || [[ "$(type nvm)" != *"function"* ]]; then
-            _load_nvm || return 1
-        fi
-        # Call the real nvm function
-        nvm "$@"
-    }
-    
-    # node/npm/npx wrappers (load NVM, then call real command)
-    node() {
-        # Load NVM if not already loaded
-        if ! type nvm &> /dev/null || [[ "$(type nvm)" != *"function"* ]]; then
-            _load_nvm || return 1
-        fi
-        # Remove wrapper functions (NVM is now loaded)
-        unfunction node npm npx 2>/dev/null || true
-        # Call the real node command
-        command node "$@"
-    }
-    
-    npm() {
-        # Load NVM if not already loaded
-        if ! type nvm &> /dev/null || [[ "$(type nvm)" != *"function"* ]]; then
-            _load_nvm || return 1
-        fi
-        # Remove wrapper functions (NVM is now loaded)
-        unfunction node npm npx 2>/dev/null || true
-        # Call the real npm command
-        command npm "$@"
-    }
-    
-    npx() {
-        # Load NVM if not already loaded
-        if ! type nvm &> /dev/null || [[ "$(type nvm)" != *"function"* ]]; then
-            _load_nvm || return 1
-        fi
-        # Remove wrapper functions (NVM is now loaded)
-        unfunction node npm npx 2>/dev/null || true
-        # Call the real npx command
-        command npx "$@"
-    }
-else
+# Node Version Manager (nvm) - Already set up above for IDE terminals
+# For regular terminals, load NVM immediately
+if [[ "$IS_IDE_TERMINAL" != true ]]; then
     # In regular terminals: load NVM immediately
     if [[ -s "$(brew --prefix nvm)/nvm.sh" ]]; then
         source "$(brew --prefix nvm)/nvm.sh"

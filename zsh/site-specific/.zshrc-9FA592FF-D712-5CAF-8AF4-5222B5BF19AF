@@ -141,31 +141,54 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# NVM setup - respect IDE terminal lazy loading
+# In IDE terminals, NVM is lazy-loaded via wrapper functions in .zshrc.professional
+# Only load NVM directly if we're NOT in an IDE terminal
+if [[ "${IS_IDE_TERMINAL:-false}" != "true" ]]; then
+    export NVM_DIR="$HOME/.nvm"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+fi
 
 # Auto-switch node version when .nvmrc is present
+# Only set up if NVM is available (either loaded or via wrapper)
 autoload -U add-zsh-hook
 load-nvmrc() {
-  local node_version="$(nvm version)"
-  local nvmrc_path="$(nvm_find_nvmrc)"
+  # Check if nvm is available (either loaded or as wrapper function)
+  if ! command -v nvm &> /dev/null && ! type nvm &> /dev/null; then
+    # NVM not available yet - skip (will be called again when nvm is loaded)
+    return 0
+  fi
+  
+  # Check if nvm_find_nvmrc function exists (from nvm.sh)
+  if ! type nvm_find_nvmrc &> /dev/null; then
+    # NVM not fully loaded yet - skip
+    return 0
+  fi
+  
+  local node_version="$(nvm version 2>/dev/null)"
+  local nvmrc_path="$(nvm_find_nvmrc 2>/dev/null)"
 
   if [ -n "$nvmrc_path" ]; then
-    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")" 2>/dev/null)
 
     if [ "$nvmrc_node_version" = "N/A" ]; then
       nvm install
     elif [ "$nvmrc_node_version" != "$node_version" ]; then
       nvm use
     fi
-  elif [ "$node_version" != "$(nvm version default)" ]; then
+  elif [ -n "$node_version" ] && [ "$node_version" != "$(nvm version default 2>/dev/null)" ]; then
     echo "Reverting to nvm default version"
     nvm use default
   fi
 }
 add-zsh-hook chpwd load-nvmrc
-load-nvmrc
+
+# Only call load-nvmrc immediately if NVM is already loaded
+# In IDE terminals, this will be called when NVM is lazy-loaded
+if [[ "${IS_IDE_TERMINAL:-false}" != "true" ]] && command -v nvm &> /dev/null; then
+    load-nvmrc
+fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 eval "$(direnv hook zsh)"
