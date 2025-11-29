@@ -14,6 +14,15 @@
 # 5. .zlogout - Sourced when login shell exits
 
 # ============================================================================
+# FUNCTION NESTING LIMIT (Very early - before any tools that use nested functions)
+# ============================================================================
+# Set FUNCNEST early to prevent "maximum nested function level" errors
+# NVM and other tools use deeply nested function calls
+# Default is usually 50, but nvm can exceed this
+# Note: Also set in .zshenv, but ensure it's set here too for safety
+export FUNCNEST="${FUNCNEST:-100}"
+
+# ============================================================================
 # PATH SETUP (Early - before other tools)
 # ============================================================================
 # Homebrew (must be first for Apple Silicon)

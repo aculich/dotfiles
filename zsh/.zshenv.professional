@@ -25,3 +25,8 @@ export LANG=en_US.UTF-8
 # Editor (for git commits, etc.)
 export EDITOR="${EDITOR:-code}"
 
+# Function nesting limit (prevents "maximum nested function level" errors)
+# NVM and other tools use deeply nested function calls, so we need a higher limit
+# Default is usually 50, but nvm can exceed this
+export FUNCNEST=100
+
