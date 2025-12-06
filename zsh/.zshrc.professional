@@ -20,8 +20,9 @@ if [[ "$ZSH_PROFILE_STARTUP" == "true" ]]; then
     
     if (( ${+EPOCHREALTIME} )); then
         # EPOCHREALTIME: capture current value explicitly
-        ZSH_START_TIME=${EPOCHREALTIME}
-        ZSH_LAST_TIME=${EPOCHREALTIME}
+        # EPOCHREALTIME is in seconds since epoch (e.g., 1765037980.453)
+        typeset -gF ZSH_START_TIME=${EPOCHREALTIME}
+        typeset -gF ZSH_LAST_TIME=${EPOCHREALTIME}
     else
         # SECONDS: already a float, starts at 0 when shell starts
         ZSH_START_TIME=$SECONDS
@@ -37,10 +38,13 @@ if [[ "$ZSH_PROFILE_STARTUP" == "true" ]]; then
         
         if (( ${+EPOCHREALTIME} )); then
             # EPOCHREALTIME: get current value and calculate difference
-            current_time=${EPOCHREALTIME}
-            # Calculate elapsed time in milliseconds
-            elapsed=$(( (current_time - ZSH_LAST_TIME) * 1000 ))
-            total_elapsed=$(( (current_time - ZSH_START_TIME) * 1000 ))
+            # EPOCHREALTIME is in seconds since epoch, so calculate difference first, then convert to ms
+            typeset -F current_time=${EPOCHREALTIME}
+            typeset -F elapsed_seconds=$(( current_time - ZSH_LAST_TIME ))
+            typeset -F total_seconds=$(( current_time - ZSH_START_TIME ))
+            # Convert to milliseconds
+            elapsed=$(( elapsed_seconds * 1000 ))
+            total_elapsed=$(( total_seconds * 1000 ))
         else
             # SECONDS: already in seconds, calculate difference in milliseconds
             current_time=$SECONDS
@@ -319,7 +323,7 @@ if [[ "$IS_IDE_TERMINAL" == true ]]; then
     # Note: We still load plugins, but they're lighter in IDE context
     
     # Don't load 1Password secrets automatically in IDE terminals
-    # (User can load manually if needed: op_load_item "Development" "Development API Keys")
+    # (User can load manually if needed: op_load_item "develop" "apikeys")
 fi
 
 # iTerm2 shell integration
