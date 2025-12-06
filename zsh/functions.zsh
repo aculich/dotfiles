@@ -30,11 +30,16 @@ op_load_secret() {
         return 1
     fi
     
-    # Ensure we're signed in to the correct account
+    # Check if we can access 1Password (desktop app integration or existing session)
+    # Try to use desktop app integration first (no prompts if app is unlocked)
     if ! op account list --account "$account_uuid" &> /dev/null; then
-        echo "Not signed in to 1Password account: $account_email" >&2
-        echo "Signing in..." >&2
-        op_signin_simple "$account_email" || return 1
+        # Try desktop app integration (uses system keychain/Touch ID)
+        # This will silently use Touch ID if the desktop app is running and unlocked
+        if ! op signin --account "$account_uuid" --raw &> /dev/null; then
+            echo "Error: Could not access 1Password. Please unlock 1Password app first." >&2
+            echo "The desktop app uses macOS system keychain/Touch ID for automatic unlocking." >&2
+            return 1
+        fi
     fi
     
     # Use op read with --account flag (more reliable)
@@ -76,11 +81,23 @@ op_load_item() {
         return 1
     fi
     
-    # Ensure we're signed in to the correct account
+    # Check if we can access 1Password via desktop app integration
+    # The desktop app uses macOS system keychain/Touch ID for automatic unlocking
+    # When you log into your Mac, the 1Password app can be configured to unlock automatically
+    # The CLI will use that unlocked session without prompting
     if ! op account list --account "$account_uuid" &> /dev/null; then
-        [[ "$verbose" == "true" ]] && echo "Not signed in to 1Password account: $account_email" >&2
-        [[ "$verbose" == "true" ]] && echo "Signing in..." >&2
-        op_signin_simple "$account_email" || return 1
+        # Try to use desktop app integration silently (no prompts)
+        # This will use the unlocked desktop app session if available
+        # If desktop app is locked, this will fail silently (user should unlock app manually)
+        # The --raw flag gets a token, but we don't need it - just check if we can access
+        # Actually, let's just try a simple read operation - if desktop app is unlocked, it works
+        # If not, fail silently (don't prompt)
+        if ! op vault list --account "$account_uuid" &> /dev/null; then
+            # Desktop app not available or locked - fail silently
+            # User should unlock 1Password app manually (it uses system keychain/Touch ID)
+            [[ "$verbose" == "true" ]] && echo "1Password desktop app is locked. Please unlock it manually." >&2
+            return 1
+        fi
     fi
     
     # Use vault ID if provided, otherwise use vault name
@@ -612,11 +629,16 @@ op_list_item_fields() {
         return 1
     fi
     
-    # Ensure we're signed in to the correct account
+    # Check if we can access 1Password (desktop app integration or existing session)
+    # Try to use desktop app integration first (no prompts if app is unlocked)
     if ! op account list --account "$account_uuid" &> /dev/null; then
-        echo "Not signed in to 1Password account: $account_email" >&2
-        echo "Signing in..." >&2
-        op_signin_simple "$account_email" || return 1
+        # Try desktop app integration (uses system keychain/Touch ID)
+        # This will silently use Touch ID if the desktop app is running and unlocked
+        if ! op signin --account "$account_uuid" --raw &> /dev/null; then
+            echo "Error: Could not access 1Password. Please unlock 1Password app first." >&2
+            echo "The desktop app uses macOS system keychain/Touch ID for automatic unlocking." >&2
+            return 1
+        fi
     fi
     
     # Set OP_ACCOUNT for this command
@@ -680,6 +702,57 @@ op_check_apikeys() {
     op_list_item_fields "develop" "apikeys" "${1:-}"
 }
 
+# List just the field names (clean, simple output)
+# Usage: op_list_fields "vault_name" "item_name" [account_email]
+# Example: op_list_fields "develop" "apikeys"
+op_list_fields() {
+    local vault="${1:?Vault name required}"
+    local item="${2:?Item name required}"
+    local account_email="${3:-${OP_ACCOUNT:-${OP_DEFAULT_ACCOUNT}}}"
+    
+    if ! command -v op &> /dev/null; then
+        echo "Error: 1Password CLI (op) not found" >&2
+        return 1
+    fi
+    
+    # Get account UUID
+    local account_uuid
+    account_uuid=$(_op_get_account_uuid "$account_email")
+    
+    if [[ -z "$account_uuid" ]]; then
+        echo "Error: Account '$account_email' not found" >&2
+        return 1
+    fi
+    
+    # Ensure we're signed in
+    if ! op account list --account "$account_uuid" &> /dev/null; then
+        op_signin_simple "$account_email" || return 1
+    fi
+    
+    # Get item JSON
+    local item_json
+    item_json=$(op item get "$item" --vault "$vault" --account "$account_uuid" --format json 2>/dev/null)
+    
+    if [[ -z "$item_json" ]]; then
+        echo "Error: Could not retrieve item '$item' from vault '$vault'" >&2
+        return 1
+    fi
+    
+    # Extract and display field names only
+    if command -v jq &> /dev/null; then
+        echo "$item_json" | jq -r '.fields[]? | select(.label) | .label' 2>/dev/null | sort
+    else
+        echo "Install jq for better output: brew install jq" >&2
+        echo "$item_json"
+    fi
+}
+
+# Quick list of fields in develop/apikeys (most common use case)
+# Usage: op_list_apikeys [account_email]
+op_list_apikeys() {
+    op_list_fields "develop" "apikeys" "${1:-}"
+}
+
 # Inspect vault structure and configuration
 # Usage: op_inspect_vault [vault_name] [account_email]
 # Default: inspects "develop" vault with default account
@@ -704,11 +777,16 @@ op_inspect_vault() {
         return 1
     fi
     
-    # Ensure we're signed in to the correct account
+    # Check if we can access 1Password (desktop app integration or existing session)
+    # Try to use desktop app integration first (no prompts if app is unlocked)
     if ! op account list --account "$account_uuid" &> /dev/null; then
-        echo "Not signed in to 1Password account: $account_email" >&2
-        echo "Signing in..." >&2
-        op_signin_simple "$account_email" || return 1
+        # Try desktop app integration (uses system keychain/Touch ID)
+        # This will silently use Touch ID if the desktop app is running and unlocked
+        if ! op signin --account "$account_uuid" --raw &> /dev/null; then
+            echo "Error: Could not access 1Password. Please unlock 1Password app first." >&2
+            echo "The desktop app uses macOS system keychain/Touch ID for automatic unlocking." >&2
+            return 1
+        fi
     fi
     
     echo "Using account: $account_email (UUID: $account_uuid)"
@@ -803,11 +881,16 @@ op_inspect_item() {
         return 1
     fi
     
-    # Ensure we're signed in to the correct account
+    # Check if we can access 1Password (desktop app integration or existing session)
+    # Try to use desktop app integration first (no prompts if app is unlocked)
     if ! op account list --account "$account_uuid" &> /dev/null; then
-        echo "Not signed in to 1Password account: $account_email" >&2
-        echo "Signing in..." >&2
-        op_signin_simple "$account_email" || return 1
+        # Try desktop app integration (uses system keychain/Touch ID)
+        # This will silently use Touch ID if the desktop app is running and unlocked
+        if ! op signin --account "$account_uuid" --raw &> /dev/null; then
+            echo "Error: Could not access 1Password. Please unlock 1Password app first." >&2
+            echo "The desktop app uses macOS system keychain/Touch ID for automatic unlocking." >&2
+            return 1
+        fi
     fi
     
     echo "Using account: $account_email (UUID: $account_uuid)"
@@ -980,11 +1063,16 @@ op_inject_envrc() {
         return 1
     fi
     
-    # Ensure we're signed in to the correct account
+    # Check if we can access 1Password (desktop app integration or existing session)
+    # Try to use desktop app integration first (no prompts if app is unlocked)
     if ! op account list --account "$account_uuid" &> /dev/null; then
-        echo "Not signed in to 1Password account: $account_email" >&2
-        echo "Signing in..." >&2
-        op_signin_simple "$account_email" || return 1
+        # Try desktop app integration (uses system keychain/Touch ID)
+        # This will silently use Touch ID if the desktop app is running and unlocked
+        if ! op signin --account "$account_uuid" --raw &> /dev/null; then
+            echo "Error: Could not access 1Password. Please unlock 1Password app first." >&2
+            echo "The desktop app uses macOS system keychain/Touch ID for automatic unlocking." >&2
+            return 1
+        fi
     fi
     
     # Use op inject to load secrets (with --account flag for reliability)

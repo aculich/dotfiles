@@ -12,21 +12,23 @@ export ZSH_PROFILE_STARTUP="${ZSH_PROFILE_STARTUP:-true}"
 
 # Initialize timing variables (must be very early)
 if [[ "$ZSH_PROFILE_STARTUP" == "true" ]]; then
-    # Use EPOCHREALTIME if available (zsh 5.3.4+), otherwise use SECONDS
-    # EPOCHREALTIME is in seconds since epoch, SECONDS is seconds since shell start
-    # Declare as global float variables
+    # Use EPOCHREALTIME if available (more precise), otherwise SECONDS
+    # EPOCHREALTIME is in seconds since epoch, but we'll calculate differences correctly
     typeset -gF ZSH_START_TIME
     typeset -gF ZSH_LAST_TIME
     
     if (( ${+EPOCHREALTIME} )); then
-        # EPOCHREALTIME: capture current value explicitly
-        # EPOCHREALTIME is in seconds since epoch (e.g., 1765037980.453)
-        typeset -gF ZSH_START_TIME=${EPOCHREALTIME}
-        typeset -gF ZSH_LAST_TIME=${EPOCHREALTIME}
+        # EPOCHREALTIME: capture start time (will use for calculating differences)
+        # EPOCHREALTIME is in seconds since epoch (e.g., 1765038675.818)
+        ZSH_START_TIME=${EPOCHREALTIME}
+        ZSH_LAST_TIME=${EPOCHREALTIME}
     else
-        # SECONDS: already a float, starts at 0 when shell starts
+        # SECONDS: starts at 0 when shell starts, but may not update immediately
+        # Use a small delay to ensure SECONDS has started counting
         ZSH_START_TIME=$SECONDS
         ZSH_LAST_TIME=$SECONDS
+        # Force a tiny delay to ensure SECONDS starts incrementing
+        sleep 0.001 2>/dev/null || true
     fi
     
     # Helper function to display timing
@@ -36,18 +38,34 @@ if [[ "$ZSH_PROFILE_STARTUP" == "true" ]]; then
         local elapsed
         local total_elapsed
         
+        # Use EPOCHREALTIME if available, otherwise SECONDS
         if (( ${+EPOCHREALTIME} )); then
-            # EPOCHREALTIME: get current value and calculate difference
-            # EPOCHREALTIME is in seconds since epoch, so calculate difference first, then convert to ms
-            typeset -F current_time=${EPOCHREALTIME}
-            typeset -F elapsed_seconds=$(( current_time - ZSH_LAST_TIME ))
-            typeset -F total_seconds=$(( current_time - ZSH_START_TIME ))
-            # Convert to milliseconds
-            elapsed=$(( elapsed_seconds * 1000 ))
-            total_elapsed=$(( total_seconds * 1000 ))
+            # EPOCHREALTIME: calculate difference correctly
+            current_time=${EPOCHREALTIME}
+            # Ensure variables are initialized (should be set at startup)
+            if (( ! ${+ZSH_START_TIME} )); then
+                ZSH_START_TIME=$current_time
+            fi
+            if (( ! ${+ZSH_LAST_TIME} )); then
+                ZSH_LAST_TIME=$current_time
+            fi
+            # Calculate difference in seconds, then convert to milliseconds
+            # Use zsh's float arithmetic
+            typeset -F diff_elapsed=$(( current_time - ZSH_LAST_TIME ))
+            typeset -F diff_total=$(( current_time - ZSH_START_TIME ))
+            elapsed=$(( diff_elapsed * 1000 ))
+            total_elapsed=$(( diff_total * 1000 ))
         else
-            # SECONDS: already in seconds, calculate difference in milliseconds
+            # SECONDS: starts at 0, simpler calculation
             current_time=$SECONDS
+            # Ensure variables are initialized
+            if (( ! ${+ZSH_START_TIME} )); then
+                ZSH_START_TIME=$current_time
+            fi
+            if (( ! ${+ZSH_LAST_TIME} )); then
+                ZSH_LAST_TIME=$current_time
+            fi
+            # Calculate differences and convert to milliseconds
             elapsed=$(( (current_time - ZSH_LAST_TIME) * 1000 ))
             total_elapsed=$(( (current_time - ZSH_START_TIME) * 1000 ))
         fi
@@ -324,6 +342,7 @@ if [[ "$IS_IDE_TERMINAL" == true ]]; then
     
     # Don't load 1Password secrets automatically in IDE terminals
     # (User can load manually if needed: op_load_item "develop" "apikeys")
+    # Note: Secrets are loaded automatically via direnv in ~/.envrc
 fi
 
 # iTerm2 shell integration
@@ -480,7 +499,8 @@ if [[ "$ZSH_PROFILE_STARTUP" == "true" ]]; then
     
     if (( ${+EPOCHREALTIME} )); then
         final_time=${EPOCHREALTIME}
-        total_time=$(( (final_time - ZSH_START_TIME) * 1000 ))
+        typeset -F diff_total=$(( final_time - ZSH_START_TIME ))
+        total_time=$(( diff_total * 1000 ))
     else
         final_time=$SECONDS
         total_time=$(( (final_time - ZSH_START_TIME) * 1000 ))
