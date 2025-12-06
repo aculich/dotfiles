@@ -14,17 +14,35 @@ op_load_secret() {
     local item="${2:?Item name required}"
     local field="${3:?Field name required}"
     local env_var="${4:-$field}"
+    local account_email="${5:-${OP_ACCOUNT:-${OP_DEFAULT_ACCOUNT}}}"
     
     if ! command -v op &> /dev/null; then
         echo "Error: 1Password CLI (op) not found" >&2
         return 1
     fi
     
+    # Get account UUID (this is what works in the test script)
+    local account_uuid
+    account_uuid=$(_op_get_account_uuid "$account_email")
+    
+    if [[ -z "$account_uuid" ]]; then
+        echo "Error: Account '$account_email' not found" >&2
+        return 1
+    fi
+    
+    # Ensure we're signed in to the correct account
+    if ! op account list --account "$account_uuid" &> /dev/null; then
+        echo "Not signed in to 1Password account: $account_email" >&2
+        echo "Signing in..." >&2
+        op_signin_simple "$account_email" || return 1
+    fi
+    
+    # Use op read with --account flag (more reliable)
     local secret
-    secret=$(op read "op://${vault}/${item}/${field}" 2>/dev/null)
+    secret=$(op read "op://${vault}/${item}/${field}" --account "$account_uuid" 2>/dev/null)
     
     if [[ -z "$secret" ]]; then
-        echo "Warning: Could not load secret op://${vault}/${item}/${field}" >&2
+        echo "Warning: Could not load secret op://${vault}/${item}/${field} from account $account_email" >&2
         return 1
     fi
     
@@ -33,50 +51,53 @@ op_load_secret() {
 }
 
 # Load multiple secrets from a 1Password item
-# Usage: op_load_item "vault_name" "item_name" [vault_id]
+# Usage: op_load_item "vault_name" "item_name" [vault_id] [account_email]
 # Exports all fields from the item as environment variables
-# Uses session token caching to avoid repeated unlock prompts
+# Uses account UUID approach (more reliable than session tokens)
 # Returns 0 on success, 1 on failure
 op_load_item() {
     local vault="${1:?Vault name required}"
     local item="${2:?Item name required}"
     local vault_id="${3:-}"
-    local verbose="${4:-false}"  # Set to "true" for debug output
+    local account_email="${4:-${OP_ACCOUNT:-${OP_DEFAULT_ACCOUNT}}}"
+    local verbose="${5:-false}"  # Set to "true" for debug output
     
     if ! command -v op &> /dev/null; then
         [[ "$verbose" == "true" ]] && echo "Error: 1Password CLI (op) not found" >&2
         return 1
     fi
     
-    # Get or create session token (cached for 30 minutes)
-    local session_token
-    session_token=$(op_get_session_token 2>/dev/null)
-    if [[ -z "$session_token" ]]; then
-        [[ "$verbose" == "true" ]] && echo "Error: No 1Password session token. Run: op_signin_cached" >&2
+    # Get account UUID (this is what works in the test script)
+    local account_uuid
+    account_uuid=$(_op_get_account_uuid "$account_email")
+    
+    if [[ -z "$account_uuid" ]]; then
+        [[ "$verbose" == "true" ]] && echo "Error: Account '$account_email' not found" >&2
         return 1
     fi
     
-    # Use vault ID if provided, otherwise try to resolve vault name
+    # Ensure we're signed in to the correct account
+    if ! op account list --account "$account_uuid" &> /dev/null; then
+        [[ "$verbose" == "true" ]] && echo "Not signed in to 1Password account: $account_email" >&2
+        [[ "$verbose" == "true" ]] && echo "Signing in..." >&2
+        op_signin_simple "$account_email" || return 1
+    fi
+    
+    # Use vault ID if provided, otherwise use vault name
     local vault_arg
     if [[ -n "$vault_id" ]]; then
         vault_arg="--vault $vault_id"
     else
-        # If multiple vaults with same name, use first one
-        vault_id=$(op vault list --session "$session_token" 2>/dev/null | grep -i "^[^ ]*[[:space:]]*$vault" | head -1 | awk '{print $1}')
-        if [[ -n "$vault_id" ]]; then
-            vault_arg="--vault $vault_id"
-        else
-            vault_arg="--vault $vault"
-        fi
+        vault_arg="--vault $vault"
     fi
     
-    # Get all fields from the item using session token
+    # Get all fields from the item using --account flag (this is what works)
     local fields
     local item_json
-    item_json=$(op item get "$item" $vault_arg --session "$session_token" --format json 2>/dev/null)
+    item_json=$(op item get "$item" $vault_arg --account "$account_uuid" --format json 2>/dev/null)
     
     if [[ -z "$item_json" ]]; then
-        [[ "$verbose" == "true" ]] && echo "Error: Could not retrieve item '${item}' from vault '${vault}'" >&2
+        [[ "$verbose" == "true" ]] && echo "Error: Could not retrieve item '${item}' from vault '${vault}' in account '${account_email}'" >&2
         return 1
     fi
     
@@ -929,10 +950,11 @@ op_signin_simple() {
 # ============================================================================
 
 # Load secrets using op inject pattern (faster and more reliable)
-# Usage: op_inject_envrc [template_file]
-# Default: looks for .env.1password in current directory
+# Usage: op_inject_envrc [template_file] [account_email]
+# Default: looks for .env.1password in current directory, uses default account
 op_inject_envrc() {
     local template_file="${1:-.env.1password}"
+    local account_email="${2:-${OP_ACCOUNT:-${OP_DEFAULT_ACCOUNT}}}"
     
     if ! command -v op &> /dev/null; then
         echo "Error: 1Password CLI (op) not found" >&2
@@ -946,32 +968,34 @@ op_inject_envrc() {
         return 1
     fi
     
-    # Ensure we're signed in
-    # Check if we have a valid session
-    if ! op account list &> /dev/null; then
-        echo "Not signed in to 1Password. Signing in..." >&2
-        if ! op_signin_simple; then
-            echo "Failed to sign in. Cannot proceed with secret injection." >&2
-            return 1
-        fi
+    # Get account UUID (needed for --account flag)
+    local account_uuid
+    account_uuid=$(_op_get_account_uuid "$account_email")
+    
+    if [[ -z "$account_uuid" ]]; then
+        echo "Error: Account '$account_email' not found" >&2
+        echo ""
+        echo "Available accounts:" >&2
+        op account list >&2
+        return 1
     fi
     
-    # Verify we can actually access 1Password
-    # Try a simple read to ensure session is working
-    if ! op vault list &> /dev/null; then
-        echo "Warning: 1Password session may be invalid. Attempting to re-authenticate..." >&2
-        op_signin_simple || return 1
+    # Ensure we're signed in to the correct account
+    if ! op account list --account "$account_uuid" &> /dev/null; then
+        echo "Not signed in to 1Password account: $account_email" >&2
+        echo "Signing in..." >&2
+        op_signin_simple "$account_email" || return 1
     fi
     
-    # Use op inject to load secrets
+    # Use op inject to load secrets (with --account flag for reliability)
     # This is faster than op read and handles session automatically
     local temp_output
     local error_output
     temp_output=$(mktemp)
     error_output=$(mktemp)
     
-    # Run op inject and capture both stdout and stderr
-    if op inject -i "$template_file" > "$temp_output" 2> "$error_output"; then
+    # Run op inject with --account flag (this is what works in the test script)
+    if op inject -i "$template_file" --account "$account_uuid" > "$temp_output" 2> "$error_output"; then
         # Check if output is empty (might indicate an error)
         if [[ ! -s "$temp_output" ]]; then
             echo "Error: op inject returned empty output" >&2
@@ -999,7 +1023,7 @@ op_inject_envrc() {
             echo "1. Verify you're signed in: op account list" >&2
             echo "2. Check template file format (should use op:// references)" >&2
             echo "3. Verify vault/item/field names are correct" >&2
-            echo "4. Try manually: op inject -i '$template_file'" >&2
+            echo "4. Try manually: op inject -i '$template_file' --account $account_uuid" >&2
         fi
         rm -f "$temp_output" "$error_output"
         return 1
