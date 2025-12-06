@@ -13,12 +13,19 @@ export ZSH_PROFILE_STARTUP="${ZSH_PROFILE_STARTUP:-true}"
 # Initialize timing variables (must be very early)
 if [[ "$ZSH_PROFILE_STARTUP" == "true" ]]; then
     # Use EPOCHREALTIME if available (zsh 5.3.4+), otherwise use SECONDS
+    # EPOCHREALTIME is in seconds since epoch, SECONDS is seconds since shell start
+    # Declare as global float variables
+    typeset -gF ZSH_START_TIME
+    typeset -gF ZSH_LAST_TIME
+    
     if (( ${+EPOCHREALTIME} )); then
-        typeset -F ZSH_START_TIME=$EPOCHREALTIME
-        typeset -F ZSH_LAST_TIME=$EPOCHREALTIME
+        # EPOCHREALTIME: capture current value explicitly
+        ZSH_START_TIME=${EPOCHREALTIME}
+        ZSH_LAST_TIME=${EPOCHREALTIME}
     else
-        typeset -F ZSH_START_TIME=$SECONDS
-        typeset -F ZSH_LAST_TIME=$SECONDS
+        # SECONDS: already a float, starts at 0 when shell starts
+        ZSH_START_TIME=$SECONDS
+        ZSH_LAST_TIME=$SECONDS
     fi
     
     # Helper function to display timing
@@ -29,10 +36,13 @@ if [[ "$ZSH_PROFILE_STARTUP" == "true" ]]; then
         local total_elapsed
         
         if (( ${+EPOCHREALTIME} )); then
-            current_time=$EPOCHREALTIME
+            # EPOCHREALTIME: get current value and calculate difference
+            current_time=${EPOCHREALTIME}
+            # Calculate elapsed time in milliseconds
             elapsed=$(( (current_time - ZSH_LAST_TIME) * 1000 ))
             total_elapsed=$(( (current_time - ZSH_START_TIME) * 1000 ))
         else
+            # SECONDS: already in seconds, calculate difference in milliseconds
             current_time=$SECONDS
             elapsed=$(( (current_time - ZSH_LAST_TIME) * 1000 ))
             total_elapsed=$(( (current_time - ZSH_START_TIME) * 1000 ))
@@ -42,6 +52,7 @@ if [[ "$ZSH_PROFILE_STARTUP" == "true" ]]; then
         printf "\033[0;36m[%s]\033[0m elapsed: \033[0;33m%.3fms\033[0m (total: \033[0;32m%.3fms\033[0m)\n" \
             "$section_name" "$elapsed" "$total_elapsed" >&2
         
+        # Update global variable
         ZSH_LAST_TIME=$current_time
     }
     
@@ -122,7 +133,6 @@ if [[ "$TERM_PROGRAM" == "cursor" ]] || \
    [[ -n "$CURSOR_SHELL_INTEGRATION" ]] || \
    [[ -n "$VSCODE_INJECTION" ]]; then
     IS_IDE_TERMINAL=true
-    echo "$TERM_PROGRAM | $CURSOR_SHELL_INTEGRATION | $VSCODE_INJECTION | $IS_IDE_TERMINAL"
 fi
 
 # ============================================================================
@@ -237,59 +247,59 @@ DOTFILES_ZSH="$HOME/dotfiles/zsh"
 # Aliases (loaded after Oh My Zsh so they can override plugin aliases)
 [[ -f "$DOTFILES_ZSH/aliases.zsh" ]] && source "$DOTFILES_ZSH/aliases.zsh"
 
-# Environment-specific configs (site-specific, machine-specific)
-# NOTE: These configs might call nvm, so nvm wrapper must be defined above
-if [[ -d "$DOTFILES_ZSH/site-specific" ]]; then
-    # Source machine-specific config if it exists
-    MACHINE_ID=$(system_profiler SPHardwareDataType 2>/dev/null | grep "Hardware UUID" | awk '{print $3}')
-    [[ -n "$MACHINE_ID" && -f "$DOTFILES_ZSH/site-specific/.zshrc-$MACHINE_ID" ]] && \
-        source "$DOTFILES_ZSH/site-specific/.zshrc-$MACHINE_ID"
-fi
+# # Environment-specific configs (site-specific, machine-specific)
+# # NOTE: These configs might call nvm, so nvm wrapper must be defined above
+# if [[ -d "$DOTFILES_ZSH/site-specific" ]]; then
+#     # Source machine-specific config if it exists
+#     MACHINE_ID=$(system_profiler SPHardwareDataType 2>/dev/null | grep "Hardware UUID" | awk '{print $3}')
+#     [[ -n "$MACHINE_ID" && -f "$DOTFILES_ZSH/site-specific/.zshrc-$MACHINE_ID" ]] && \
+#         source "$DOTFILES_ZSH/site-specific/.zshrc-$MACHINE_ID"
+# fi
 
 # ============================================================================
 # DEVELOPMENT TOOLS
 # ============================================================================
 _zsh_profile_section "DEVELOPMENT TOOLS"
 
-# Node Version Manager (nvm) - Already set up above for IDE terminals
-# For regular terminals, load NVM immediately
-if [[ "$IS_IDE_TERMINAL" != true ]]; then
-    # In regular terminals: load NVM immediately
-    if [[ -s "$(brew --prefix nvm)/nvm.sh" ]]; then
-        source "$(brew --prefix nvm)/nvm.sh"
-    fi
-fi
+# # Node Version Manager (nvm) - Already set up above for IDE terminals
+# # For regular terminals, load NVM immediately
+# if [[ "$IS_IDE_TERMINAL" != true ]]; then
+#     # In regular terminals: load NVM immediately
+#     if [[ -s "$(brew --prefix nvm)/nvm.sh" ]]; then
+#         source "$(brew --prefix nvm)/nvm.sh"
+#     fi
+# fi
 
-# Python/pipx
-if command -v pipx &> /dev/null; then
-    export PATH="$PATH:$(pipx list --short 2>/dev/null | head -1 | xargs dirname 2>/dev/null || echo $HOME/.local/bin)"
-fi
+# # Python/pipx
+# if command -v pipx &> /dev/null; then
+#     export PATH="$PATH:$(pipx list --short 2>/dev/null | head -1 | xargs dirname 2>/dev/null || echo $HOME/.local/bin)"
+# fi
 
-# Conda - Lazy loaded for IDE terminals
-if [[ "$IS_IDE_TERMINAL" == true ]]; then
-    # In IDE terminals: lazy load Conda
-    conda() {
-        unfunction conda
-        if command -v conda &> /dev/null; then
-            eval "$(conda shell.zsh hook 2>/dev/null)"
-            conda config --set auto_activate_base false 2>/dev/null || true
-        fi
-        command conda "$@"
-    }
-else
-    # In regular terminals: load Conda immediately
-    if command -v conda &> /dev/null; then
-        eval "$(conda shell.zsh hook 2>/dev/null)"
-        conda config --set auto_activate_base false 2>/dev/null || true
-    fi
-fi
+# # Conda - Lazy loaded for IDE terminals
+# if [[ "$IS_IDE_TERMINAL" == true ]]; then
+#     # In IDE terminals: lazy load Conda
+#     conda() {
+#         unfunction conda
+#         if command -v conda &> /dev/null; then
+#             eval "$(conda shell.zsh hook 2>/dev/null)"
+#             conda config --set auto_activate_base false 2>/dev/null || true
+#         fi
+#         command conda "$@"
+#     }
+# else
+#     # In regular terminals: load Conda immediately
+#     if command -v conda &> /dev/null; then
+#         eval "$(conda shell.zsh hook 2>/dev/null)"
+#         conda config --set auto_activate_base false 2>/dev/null || true
+#     fi
+# fi
 
-# Bun
-if [[ -d "$HOME/.bun" ]]; then
-    export BUN_INSTALL="$HOME/.bun"
-    export PATH="$BUN_INSTALL/bin:$PATH"
-    [[ -s "$BUN_INSTALL/_bun" ]] && source "$BUN_INSTALL/_bun"
-fi
+# # Bun
+# if [[ -d "$HOME/.bun" ]]; then
+#     export BUN_INSTALL="$HOME/.bun"
+#     export PATH="$BUN_INSTALL/bin:$PATH"
+#     [[ -s "$BUN_INSTALL/_bun" ]] && source "$BUN_INSTALL/_bun"
+# fi
 
 # ============================================================================
 # TERMINAL INTEGRATIONS
@@ -322,17 +332,48 @@ fi
 # COMPLETION SETUP
 # ============================================================================
 _zsh_profile_section "COMPLETION SETUP"
-# Docker completions
+
+# WHAT COMPLETION DOES:
+# The zsh completion system provides intelligent tab-completion for commands,
+# arguments, options, and file paths. It's one of zsh's most powerful features.
+#
+# PERFORMANCE IMPACT:
+# - compinit: ~590ms (21% of startup) - Initializes completion system
+# - compdump: ~257ms (9% of startup) - Loads cached completion definitions
+# - Total: ~850ms (30% of startup time)
+#
+# WHY IT'S IMPORTANT:
+# - Saves significant time during daily use (tab completion is used constantly)
+# - Prevents typos and errors in commands
+# - Provides discoverability of command options
+# - Worth the startup cost for the productivity gains
+#
+# OPTIMIZATION STRATEGY:
+# 1. Cache completion definitions (compdump) - only regenerate if >24h old
+# 2. Skip security checks with -C flag when cache is fresh (saves ~100ms)
+# 3. Load only essential completions (Docker, etc.) - avoid loading unused ones
+# 4. Consider lazy-loading completions for rarely-used tools
+
+# Add custom completion directories to fpath (before compinit)
+# Docker completions (if installed)
 if [[ -d "$HOME/.docker/completions" ]]; then
     fpath=("$HOME/.docker/completions" $fpath)
 fi
 
 # Initialize completion system
 autoload -Uz compinit
-# Only regenerate compdump if older than 24 hours (faster startup)
-if [[ -n "$HOME/.zcompdump"(#qN.mh+24) ]]; then
+
+# Performance optimization: Only regenerate compdump if older than 24 hours
+# - compinit: Full initialization with security checks (~590ms)
+# - compinit -C: Skip security checks, use cached compdump (~100ms faster)
+# The glob qualifier (#qN.mh+24) checks if file exists and is >24h old
+if [[ ! -f "$HOME/.zcompdump" ]] || [[ -n "$HOME/.zcompdump"(#qN.mh+24) ]]; then
+    # Cache is missing or stale (>24h old) - regenerate with full security checks
+    # This takes longer (~590ms) but ensures completions are up-to-date
     compinit
 else
+    # Cache is fresh (<24h old) - use fast path with -C flag
+    # This skips security checks and saves ~100ms (runs in ~490ms)
     compinit -C
 fi
 
@@ -340,15 +381,61 @@ fi
 # HISTORY CONFIGURATION
 # ============================================================================
 _zsh_profile_section "HISTORY CONFIGURATION"
-export HISTSIZE=10000
-export SAVEHIST=10000
+
+# WHAT HISTORY DOES:
+# Zsh history stores your command-line commands, allowing you to:
+# - Search through past commands (Ctrl+R, up/down arrows)
+# - Reuse commands without retyping
+# - Learn from your command patterns
+# - Audit what commands were run (with timestamps)
+#
+# PERFORMANCE IMPACT:
+# - History loading: ~20-50ms (minimal, but can grow with large history files)
+# - History size: 10,000 entries is a good balance (not too large, not too small)
+# - Large history files (>50k entries) can slow down history search
+#
+# WHY IT'S IMPORTANT:
+# - Saves significant time by reusing commands
+# - Prevents retyping long/complex commands
+# - Provides command discovery and learning
+# - Enables auditing with timestamps (EXTENDED_HISTORY)
+#
+# OPTIMIZATION STRATEGY:
+# 1. Use reasonable history size (10k entries = ~2-3MB file)
+# 2. Remove duplicates to keep history clean
+# 3. Ignore space-prefixed commands (for sensitive operations)
+# 4. Append immediately (INC_APPEND_HISTORY) instead of sharing (SHARE_HISTORY)
+# 5. Enable extended history for timestamps (useful for auditing)
+
+# History file location and size
 export HISTFILE="$HOME/.zsh_history"
-setopt SHARE_HISTORY          # Share history between sessions
-setopt HIST_IGNORE_DUPS        # Don't record duplicates
-setopt HIST_IGNORE_ALL_DUPS   # Remove older duplicates
-setopt HIST_FIND_NO_DUPS      # Don't show duplicates in search
-setopt HIST_IGNORE_SPACE      # Ignore commands starting with space
-setopt HIST_VERIFY            # Show command before executing
+export HISTSIZE=10000   # Number of commands to keep in memory
+export SAVEHIST=10000   # Number of commands to save to history file
+
+# Core history options
+setopt EXTENDED_HISTORY         # Save timestamps (format: ': <beginning time>:<elapsed seconds>;<command>')
+                                # Enables auditing: 'history -E' shows full timestamps
+                                # Example: ': 1704067200:0;ls -la'
+
+setopt INC_APPEND_HISTORY       # Append commands to history file immediately (not on exit)
+                                # Better than SHARE_HISTORY: each session has its own in-memory history
+                                # but writes are shared, so you get benefits without session interference
+
+# Duplicate handling (keeps history clean)
+setopt HIST_IGNORE_DUPS         # Don't record duplicate commands (consecutive)
+setopt HIST_IGNORE_ALL_DUPS     # Remove older duplicate entries, keeping only the latest
+setopt HIST_EXPIRE_DUPS_FIRST   # Expire duplicate entries first when trimming history
+setopt HIST_FIND_NO_DUPS        # Don't show duplicates in history search (Ctrl+R)
+
+# Privacy and convenience
+setopt HIST_IGNORE_SPACE        # Don't save commands that start with a space
+                                # Useful for sensitive commands: ' secret-command' won't be saved
+
+setopt HIST_REDUCE_BLANKS       # Remove unnecessary whitespace from history entries
+                                # 'ls   -la' becomes 'ls -la' in history
+
+setopt HIST_VERIFY              # Show command from history before executing
+                                # Prevents accidental execution of wrong commands
 
 # ============================================================================
 # MISC CONFIGURATIONS
@@ -388,7 +475,7 @@ if [[ "$ZSH_PROFILE_STARTUP" == "true" ]]; then
     local total_time
     
     if (( ${+EPOCHREALTIME} )); then
-        final_time=$EPOCHREALTIME
+        final_time=${EPOCHREALTIME}
         total_time=$(( (final_time - ZSH_START_TIME) * 1000 ))
     else
         final_time=$SECONDS
@@ -397,4 +484,3 @@ if [[ "$ZSH_PROFILE_STARTUP" == "true" ]]; then
     
     printf "Total startup time: %.3fms\n" "$total_time" >&2
 fi
-
