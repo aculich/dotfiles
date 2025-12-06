@@ -240,10 +240,11 @@ alias ghworkbranch='local f; f() {
 }; f'
 
 alias ghfork='local f; f() { repo=$1; owner=$(basename $(dirname "$repo")); name=$(basename "$repo"); gh repo fork "$repo" --clone; mv "$name" "${name}__${owner}"; }; f'  # Fork and clone with namespaced dir
-alias gcl='local f; f() { url=$1; git clone "$url" "${url:t}"; }; f'
-alias gclo='local f; f() { url=$1; git clone "$url" "${url:h:t}/${url:t}"; }; f'
-alias gcls='local f; f() { url=$1; git clone --depth=1 --no-single-branch "$url" "${url:t}"; }; f'
-gcll() { local filename="${1:-repos.list}"; while read -r i; do echo "$i"; gcls "$i"; done < "$filename"; }  # Clone all repos from list file
+alias gcl='local f; f() { url=$1; git clone "$url" "${url:t}"; }; f'                  # Clone into last path segment (repo name)
+alias gclo='local f; f() { url=$1; git clone "$url" "${url:h:t}/${url:t}"; }; f'      # Clone into directory (user/repo)
+alias gcls='local f; f() { url=$1; git clone --depth=1 --no-single-branch "$url" "${url:t}"; }; f'  # Shallow clone all branches
+alias gcl_='local f; f() { url=$1; owner=$(basename $(dirname "$url")); name=$(basename "$url" .git); git clone "$url" "${name}__${owner}"; }; f'  # Clone into namespaced dir (repo__owner)
+gcll() { local filename="${1:-urls.list}"; while read -r i; do echo "$i"; gcls "$i"; done < "$filename"; }  # Clone all repos from urls.list file
 alias cls="chrome-cli list links | fzf"
 alias clst="chrome-cli list tablinks | fzf"
 alias ghls="chrome-cli list links | grep 'github.com/' | cut -f2 -d ' ' | grep -v github.com/search | perl -pe 's|\?.*||'"
