@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 # Populate 1Password item with secrets from backup .envrc
-# This script adds all fields to the existing "Development API Keys" item
+# This script adds all fields to the existing "apikeys" item
 
 set -euo pipefail
 
 ENVRC_BACKUP="$HOME/dotfiles/archive/old-configs-20251128_180919/.envrc"
 VAULT_ID="y5l42cppvgu22o2obesu4ctla4"
 ITEM_ID="yshcei6tjnutzbow46mx5ypu3y"
-ITEM_NAME="Development API Keys"
+ITEM_NAME="apikeys"
 
 # Colors
 RED='\033[0;31m'
@@ -193,7 +193,7 @@ if [[ "$FINAL_COUNT" -ge $((8 + ${#SECRETS[@]} - 5)) ]]; then
     echo ""
     echo "Test loading secrets:"
     echo "  source ~/dotfiles/zsh/functions.zsh"
-    echo "  op_load_item \"Development\" \"Development API Keys\" \"$VAULT_ID\""
+    echo "  op_load_item \"develop\" \"apikeys\" \"$VAULT_ID\""
 else
     echo -e "${YELLOW}⚠ Some fields may be missing${NC}"
     echo "Check the item in 1Password app to verify."

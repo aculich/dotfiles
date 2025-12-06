@@ -62,25 +62,25 @@ echo "Available vaults:"
 op vault list
 echo ""
 echo "Which vault should we use for development credentials?"
-echo "1) Use existing 'Development' vault (recommended)"
-echo "2) Create new 'Development' vault"
+echo "1) Use existing 'develop' vault (recommended)"
+echo "2) Create new 'develop' vault"
 echo "3) Use different vault"
 read -p "Choice [1]: " VAULT_CHOICE
 VAULT_CHOICE=${VAULT_CHOICE:-1}
 
 if [[ "$VAULT_CHOICE" == "1" ]]; then
-    # Use first Development vault found
-    VAULT_NAME=$(op vault list | grep -i "Development" | head -1 | awk '{print $2}')
+    # Use first develop vault found
+    VAULT_NAME=$(op vault list | grep -i "develop" | head -1 | awk '{print $2}')
     if [[ -z "$VAULT_NAME" ]]; then
-        echo "No Development vault found, creating one..."
-        VAULT_NAME="Development"
+        echo "No develop vault found, creating one..."
+        VAULT_NAME="develop"
         op vault create "$VAULT_NAME" --description "Development API keys and credentials" || {
             echo -e "${RED}Error: Could not create vault${NC}"
             exit 1
         }
     fi
 elif [[ "$VAULT_CHOICE" == "2" ]]; then
-    VAULT_NAME="Development"
+    VAULT_NAME="develop"
     # Check if exists first
     if op vault list | grep -q "^[^ ]*[[:space:]]*$VAULT_NAME"; then
         echo -e "${YELLOW}Vault '$VAULT_NAME' already exists${NC}"
@@ -109,7 +109,7 @@ echo "Vault: $VAULT_NAME (ID: $VAULT_ID)"
 echo ""
 
 # Item name
-ITEM_NAME="Development API Keys"
+ITEM_NAME="apikeys"
 read -p "Item name [$ITEM_NAME]: " INPUT_ITEM
 ITEM_NAME=${INPUT_ITEM:-$ITEM_NAME}
 

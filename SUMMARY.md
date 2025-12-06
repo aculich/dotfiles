@@ -96,9 +96,9 @@ I've created a comprehensive, professional development environment setup that ad
    op signin --account aculich@gmail.com
    ```
 
-3. **Create Development vault** (if needed):
+3. **Create develop vault** (if needed):
    ```bash
-   op vault create "Development" --description "Development API keys and credentials"
+   op vault create "develop" --description "Development API keys and credentials"
    ```
 
 4. **Migrate your secrets**:
@@ -137,7 +137,7 @@ After setup, verify everything works:
 dev_check
 
 # Test 1Password loading
-op_load_item "Development" "Development API Keys"
+op_load_item "develop" "apikeys"
 echo $OPENAI_API_KEY  # Should show value from 1Password
 
 # Test direnv
@@ -150,7 +150,7 @@ direnv allow
 
 ### 1Password Integration
 
-- **Vault Structure**: Recommended to use "Development" vault for dev credentials
+- **Vault Structure**: Recommended to use "develop" vault for dev credentials
 - **Item Organization**: One item per project or group of related keys
 - **Automatic Loading**: Secrets load automatically via direnv
 

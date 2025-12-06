@@ -8,7 +8,7 @@
 
 # Load a secret from 1Password into an environment variable
 # Usage: op_load_secret "vault_name" "item_name" "field_name" "env_var_name"
-# Example: op_load_secret "Development" "API Keys" "OPENAI_API_KEY" "OPENAI_API_KEY"
+# Example: op_load_secret "develop" "apikeys" "OPENAI_API_KEY" "OPENAI_API_KEY"
 op_load_secret() {
     local vault="${1:?Vault name required}"
     local item="${2:?Item name required}"
@@ -561,7 +561,7 @@ op_inject_envrc() {
     if [[ ! -f "$template_file" ]]; then
         echo "Error: Template file '$template_file' not found" >&2
         echo "Create a template file with op:// references, e.g.:" >&2
-        echo "  OPENAI_API_KEY=op://Development/API Keys/OPENAI_API_KEY" >&2
+        echo "  OPENAI_API_KEY=op://develop/apikeys/OPENAI_API_KEY" >&2
         return 1
     fi
     
@@ -597,8 +597,8 @@ op_inject_envrc() {
 # Generate a .envrc template that uses 1Password
 # Usage: op_direnv_template "vault_name" "item_name"
 op_direnv_template() {
-    local vault="${1:-Development}"
-    local item="${2:-API Keys}"
+    local vault="${1:-develop}"
+    local item="${2:-apikeys}"
     
     cat <<EOF
 # .envrc - Environment variables loaded via direnv

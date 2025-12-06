@@ -12,13 +12,13 @@ op signin --account aculich@gmail.com
 op vault list
 
 # List items in a vault
-op item list --vault Development
+op item list --vault develop
 
 # Get a secret
-op read "op://Development/API Keys/OPENAI_API_KEY"
+op read "op://develop/apikeys/OPENAI_API_KEY"
 
 # Create a new item
-op item create --vault Development --title "New API Keys" --category API_CREDENTIAL
+op item create --vault develop --title "New API Keys" --category API_CREDENTIAL
 ```
 
 ### Direnv Operations
@@ -44,10 +44,10 @@ direnv deny
 dev_check
 
 # Load secrets from 1Password (in zsh)
-op_load_item "Development" "API Keys"
+op_load_item "develop" "apikeys"
 
 # Load a single secret
-op_load_secret "Development" "API Keys" "OPENAI_API_KEY" "OPENAI_API_KEY"
+op_load_secret "develop" "apikeys" "OPENAI_API_KEY" "OPENAI_API_KEY"
 
 # Reload zsh config
 reload_zsh
@@ -86,10 +86,10 @@ op signout
 op signin --account aculich@gmail.com
 
 # Verify item exists
-op item get "Development API Keys" --vault Development
+op item get "apikeys" --vault develop
 
 # Test loading manually
-op_load_item "Development" "API Keys"
+op_load_item "develop" "apikeys"
 echo $OPENAI_API_KEY
 ```
 
@@ -137,7 +137,7 @@ cp ~/.envrc ~/.envrc.backup.$(date +%Y%m%d)
 
 1. **Never commit secrets** - Use 1Password for all API keys
 2. **Use project .envrc** - Each project should have its own `.envrc`
-3. **Separate vaults** - Use "Development" for dev, "Personal" for personal
+3. **Separate vaults** - Use "develop" for dev, "Personal" for personal
 4. **Version control configs** - Keep dotfiles in git, not secrets
 5. **Test in new terminal** - Always test config changes in a fresh terminal
 

@@ -134,7 +134,7 @@ add-zsh-hook chpwd load_project_secrets
 load_global_secrets() {
     if [[ -f ~/.op_session ]] && [[ -s ~/.op_session ]]; then
         source ~/dotfiles/zsh/functions.zsh
-        op_load_item "Development" "Development API Keys" "y5l42cppvgu22o2obesu4ctla4"
+        op_load_item "develop" "apikeys" "y5l42cppvgu22o2obesu4ctla4"
     fi
 }
 
@@ -160,8 +160,8 @@ my-project/
 ```bash
 # .env.1password - Template file (commit to git)
 # Use op inject to generate .env from this
-OPENAI_API_KEY=op://Development/Project API Keys/OPENAI_API_KEY
-DATABASE_URL=op://Development/Project API Keys/DATABASE_URL
+OPENAI_API_KEY=op://develop/apikeys/OPENAI_API_KEY
+DATABASE_URL=op://develop/apikeys/DATABASE_URL
 ```
 
 **.envrc:**

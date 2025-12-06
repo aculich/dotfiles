@@ -40,8 +40,8 @@ op signin --account aculich@gmail.com
 # Verify authentication
 op account list
 
-# Create a Development vault (if it doesn't exist)
-op vault create "Development" --description "Development API keys and credentials"
+# Create a develop vault (if it doesn't exist)
+op vault create "develop" --description "Development API keys and credentials"
 ```
 
 ## Step 3: Migrate Existing Secrets
@@ -53,7 +53,7 @@ If you have secrets in `~/.envrc`, migrate them to 1Password:
 ~/dotfiles/scripts/migrate-secrets-to-1password.sh
 
 # Or manually create items in 1Password
-# Then use: op item create --vault "Development" --title "API Keys" --category API_CREDENTIAL
+# Then use: op item create --vault "develop" --title "apikeys" --category API_CREDENTIAL
 ```
 
 ## Step 4: Install Zsh Configuration
@@ -101,8 +101,8 @@ Example `.envrc`:
 
 ```bash
 # Load secrets from 1Password
-export OP_VAULT="Development"
-export OP_ITEM="My Project API Keys"
+export OP_VAULT="develop"
+export OP_ITEM="apikeys"
 
 # Load the secrets
 op_load_item "$OP_VAULT" "$OP_ITEM"
@@ -189,7 +189,7 @@ op signin --account aculich@gmail.com
 
 # Check vault/item names
 op vault list
-op item list --vault Development
+op item list --vault develop
 ```
 
 ### Direnv Not Loading

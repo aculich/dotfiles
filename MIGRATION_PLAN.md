@@ -61,8 +61,8 @@ This document outlines the step-by-step migration from your current setup to the
 
 1. **Create 1Password Vault Structure**
    ```bash
-   # Create Development vault
-   op vault create "Development" --description "Development API keys and credentials"
+   # Create develop vault
+   op vault create "develop" --description "Development API keys and credentials"
    
    # Optional: Create separate vaults
    op vault create "Personal" --description "Personal credentials"
@@ -77,17 +77,17 @@ This document outlines the step-by-step migration from your current setup to the
    
    **Option B: Manual Migration**
    - Open 1Password app
-   - Create new item: "Development API Keys"
+   - Create new item: "apikeys"
    - Add each secret as a field
    - Use field labels matching environment variable names
 
 3. **Verify Secrets in 1Password**
    ```bash
    # List items
-   op item list --vault Development
+   op item list --vault develop
    
    # View an item
-   op item get "Development API Keys" --vault Development --format json | jq
+   op item get "apikeys" --vault develop --format json | jq
    ```
 
 ### Phase 3: Configuration Migration

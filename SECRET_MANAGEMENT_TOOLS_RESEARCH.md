@@ -272,7 +272,7 @@ brew install sops
 
 # Configure 1Password backend
 export SOPS_1PASSWORD_ACCOUNT="aculich@gmail.com"
-export SOPS_1PASSWORD_VAULT="Development"
+export SOPS_1PASSWORD_VAULT="develop"
 
 # Encrypt secrets file
 sops --encrypt --in-place .env.secrets
@@ -307,8 +307,8 @@ op signin --account aculich@gmail.com
 
 # Create template file
 cat > .env.1password <<EOF
-OPENAI_API_KEY=op://Development/API Keys/OPENAI_API_KEY
-DATABASE_URL=op://Development/API Keys/DATABASE_URL
+OPENAI_API_KEY=op://develop/apikeys/OPENAI_API_KEY
+DATABASE_URL=op://develop/apikeys/DATABASE_URL
 EOF
 ```
 

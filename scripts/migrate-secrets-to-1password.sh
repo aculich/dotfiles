@@ -58,13 +58,13 @@ echo ""
 
 # Vault selection
 echo "Which vault should we use for development credentials?"
-echo "1) Create new 'Development' vault (recommended)"
+echo "1) Create new 'develop' vault (recommended)"
 echo "2) Use existing vault"
 read -p "Choice [1]: " VAULT_CHOICE
 VAULT_CHOICE=${VAULT_CHOICE:-1}
 
 if [[ "$VAULT_CHOICE" == "1" ]]; then
-    VAULT_NAME="Development"
+    VAULT_NAME="develop"
     # Check if vault exists, create if not
     if ! op vault list | grep -q "^$VAULT_NAME"; then
         echo "Creating vault: $VAULT_NAME"
@@ -84,7 +84,7 @@ echo "Vault: $VAULT_NAME"
 echo ""
 
 # Item name
-ITEM_NAME="Development API Keys"
+ITEM_NAME="apikeys"
 read -p "Item name [$ITEM_NAME]: " INPUT_ITEM
 ITEM_NAME=${INPUT_ITEM:-$ITEM_NAME}
 
@@ -180,7 +180,7 @@ $(IFS=$'\n'
 }
 EOF
 
-# Get vault ID (use first Development vault if multiple exist)
+# Get vault ID (use first develop vault if multiple exist)
 VAULT_ID=$(op vault list | grep -i "^[^ ]*[[:space:]]*$VAULT_NAME" | head -1 | awk '{print $1}')
 if [[ -z "$VAULT_ID" ]]; then
     echo -e "${RED}Error: Could not find vault '$VAULT_NAME'${NC}"

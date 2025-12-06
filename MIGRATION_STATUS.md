@@ -12,12 +12,12 @@
    - Archive: `~/dotfiles/archive/old-configs-20251128_180919/`
 
 3. **1Password Setup**: 
-   - Vault created: Development (ID: y5l42cppvgu22o2obesu4ctla4)
-   - Item created: "Development API Keys" (ID: yshcei6tjnutzbow46mx5ypu3y)
+   - Vault created: develop (ID: y5l42cppvgu22o2obesu4ctla4)
+   - Item created: "apikeys" (ID: yshcei6tjnutzbow46mx5ypu3y)
    - ⚠️ **Issue**: The item was created but custom fields weren't added properly
 
 4. **.envrc Updated**: Configured to use 1Password
-   - Points to: Development vault, "Development API Keys" item
+   - Points to: develop vault, "apikeys" item
    - Uses vault ID to avoid ambiguity
 
 ## ⚠️ Known Issues
@@ -26,7 +26,7 @@
    - The op CLI JSON import didn't work as expected
    - Item exists but only has template fields (username, credential, etc.)
 
-2. **Multiple Development Vaults**: 3 Development vaults exist
+2. **Multiple develop Vaults**: 3 develop vaults exist
    - Using: y5l42cppvgu22o2obesu4ctla4 (first one)
    - Others can be deleted or ignored
 
@@ -35,8 +35,8 @@
 ### Option 1: Manual Field Addition (Recommended for Now)
 
 1. Open 1Password app
-2. Go to Development vault
-3. Open "Development API Keys" item
+2. Go to develop vault
+3. Open "apikeys" item
 4. Add custom fields for each secret:
    - Field name: API key name (e.g., "OPENAI_API_KEY")
    - Field type: Password/Concealed
@@ -75,7 +75,7 @@ exec zsh
 dev_check
 
 # Test 1Password (once item has fields)
-op_load_item "Development" "Development API Keys" "y5l42cppvgu22o2obesu4ctla4"
+op_load_item "develop" "apikeys" "y5l42cppvgu22o2obesu4ctla4"
 ```
 
 ## Rollback

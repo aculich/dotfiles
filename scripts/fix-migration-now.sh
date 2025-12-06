@@ -5,11 +5,11 @@
 set -euo pipefail
 
 ENVRC_BACKUP="$HOME/dotfiles-backup-20251128_180919/.envrc"
-VAULT_NAME="Development"
-VAULT_ID=$(op vault list | grep -i "Development" | head -1 | awk '{print $1}')
+VAULT_NAME="develop"
+VAULT_ID=$(op vault list | grep -i "develop" | head -1 | awk '{print $1}')
 
 if [[ -z "$VAULT_ID" ]]; then
-    echo "Error: Could not find Development vault"
+    echo "Error: Could not find develop vault"
     exit 1
 fi
 
@@ -22,7 +22,7 @@ echo "Creating document item with all secrets..."
 # Create a formatted document with all secrets
 TEMP_DOC=$(mktemp)
 cat > "$TEMP_DOC" <<'EOFDOC'
-# Development API Keys
+# apikeys
 
 This document contains all API keys and credentials migrated from ~/.envrc.
 
@@ -54,14 +54,14 @@ done < "$ENVRC_BACKUP"
 echo "Creating document item in 1Password..."
 op item create \
     --category "Document" \
-    --title "Development API Keys - Migration Backup" \
+    --title "apikeys - Migration Backup" \
     --vault "$VAULT_ID" \
     "notesPlain=$(cat $TEMP_DOC)" 2>/dev/null && {
     echo "✓ Document item created"
     echo ""
     echo "Next: Create an 'API Credential' item manually in 1Password app"
-    echo "  Name: 'Development API Keys'"
-    echo "  Vault: Development"
+    echo "  Name: 'apikeys'"
+    echo "  Vault: develop"
     echo "  Then add each field from the document item"
 } || {
     echo "⚠ Could not create document item"

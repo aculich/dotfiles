@@ -50,8 +50,8 @@ echo "Available vaults:"
 op vault list
 echo ""
 
-read -p "Vault name [Development]: " VAULT_NAME
-VAULT_NAME=${VAULT_NAME:-Development}
+read -p "Vault name [develop]: " VAULT_NAME
+VAULT_NAME=${VAULT_NAME:-develop}
 
 # Verify vault exists
 if ! op vault list | grep -q "^$VAULT_NAME"; then
@@ -67,8 +67,8 @@ if ! op vault list | grep -q "^$VAULT_NAME"; then
 fi
 
 echo ""
-read -p "Item name [Development API Keys]: " ITEM_NAME
-ITEM_NAME=${ITEM_NAME:-Development API Keys}
+read -p "Item name [apikeys]: " ITEM_NAME
+ITEM_NAME=${ITEM_NAME:-apikeys}
 
 # Verify item exists (optional)
 if op item get "$ITEM_NAME" --vault "$VAULT_NAME" &> /dev/null; then

@@ -22,7 +22,7 @@ A professional, secure, and maintainable development environment setup following
 2. **Set up 1Password**:
    ```bash
    op signin --account aculich@gmail.com
-   op vault create "Development" --description "Development API keys"
+   op vault create "develop" --description "Development API keys"
    ```
 
 3. **Migrate existing secrets** (if you have them):

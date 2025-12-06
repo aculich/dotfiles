@@ -55,7 +55,7 @@ direnv allow
 op_signin_cached
 
 # Option 2: Load secrets directly (if already signed in)
-op_load_item "Development" "Development API Keys"
+op_load_item "develop" "apikeys"
 
 # Option 3: Use direnv (after signing in)
 direnv allow

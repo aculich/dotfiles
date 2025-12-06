@@ -5,8 +5,8 @@
 set -euo pipefail
 
 ENVRC_BACKUP="$HOME/dotfiles-backup-20251128_180919/.envrc"
-VAULT_NAME="Development"
-ITEM_NAME="Development API Keys"
+VAULT_NAME="develop"
+ITEM_NAME="apikeys"
 
 # Colors
 RED='\033[0;31m'
@@ -26,10 +26,10 @@ echo ""
 echo "Source: $ENVRC_BACKUP"
 echo ""
 
-# Get vault ID (use first Development vault)
-VAULT_ID=$(op vault list | grep -i "Development" | head -1 | awk '{print $1}')
+# Get vault ID (use first develop vault)
+VAULT_ID=$(op vault list | grep -i "develop" | head -1 | awk '{print $1}')
 if [[ -z "$VAULT_ID" ]]; then
-    echo -e "${RED}Error: Could not find Development vault${NC}"
+    echo -e "${RED}Error: Could not find develop vault${NC}"
     exit 1
 fi
 

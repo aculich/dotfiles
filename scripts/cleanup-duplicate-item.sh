@@ -11,16 +11,16 @@ echo "=========================================="
 echo ""
 
 # Find both items
-DEVELOPMENT_ITEM=$(op item list --vault "$VAULT_ID" --format json | jq -r '.[] | select(.title == "Development API Keys") | .id' | head -1)
+DEVELOPMENT_ITEM=$(op item list --vault "$VAULT_ID" --format json | jq -r '.[] | select(.title == "apikeys") | .id' | head -1)
 UNTITLED_ITEM=$(op item list --vault "$VAULT_ID" --format json | jq -r '.[] | select(.title == "Untitled APICredential") | .id' | head -1)
 
 if [[ -z "$DEVELOPMENT_ITEM" ]]; then
-    echo "Error: 'Development API Keys' item not found!"
+    echo "Error: 'apikeys' item not found!"
     exit 1
 fi
 
 echo "Found items:"
-echo "  ✓ Development API Keys: $DEVELOPMENT_ITEM"
+echo "  ✓ apikeys: $DEVELOPMENT_ITEM"
 
 if [[ -n "$UNTITLED_ITEM" ]]; then
     echo "  ⚠ Untitled APICredential: $UNTITLED_ITEM"
@@ -31,7 +31,7 @@ if [[ -n "$UNTITLED_ITEM" ]]; then
     UNTITLED_COUNT=$(op item get "$UNTITLED_ITEM" --vault "$VAULT_ID" --format json 2>/dev/null | jq '.fields | length' || echo "0")
     
     echo "Field counts:"
-    echo "  Development API Keys: $DEV_COUNT fields"
+    echo "  apikeys: $DEV_COUNT fields"
     echo "  Untitled APICredential: $UNTITLED_COUNT fields"
     echo ""
     
