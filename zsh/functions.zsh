@@ -484,6 +484,387 @@ op_check_auth() {
 }
 
 # ============================================================================
+# 1PASSWORD ACCOUNT MANAGEMENT
+# ============================================================================
+
+# Default 1Password account (can be overridden with OP_ACCOUNT env var)
+export OP_DEFAULT_ACCOUNT="${OP_DEFAULT_ACCOUNT:-aculich@gmail.com}"
+
+# Get the account to use (from env var, default, or parameter)
+# Usage: _op_get_account [account_email]
+_op_get_account() {
+    local account="${1:-${OP_ACCOUNT:-${OP_DEFAULT_ACCOUNT}}}"
+    echo "$account"
+}
+
+# List all configured 1Password accounts
+# Usage: op_list_accounts
+op_list_accounts() {
+    if ! command -v op &> /dev/null; then
+        echo "Error: 1Password CLI (op) not found" >&2
+        return 1
+    fi
+    
+    echo "Configured 1Password Accounts:"
+    echo "================================="
+    op account list 2>/dev/null || {
+        echo "Error: Could not list accounts. You may need to sign in first." >&2
+        return 1
+    }
+    echo ""
+    echo "Current default: ${OP_DEFAULT_ACCOUNT}"
+    echo "Current OP_ACCOUNT: ${OP_ACCOUNT:-not set}"
+}
+
+# Set the default 1Password account
+# Usage: op_set_account "aculich@gmail.com"
+op_set_account() {
+    local account="${1:?Account email required}"
+    
+    if ! command -v op &> /dev/null; then
+        echo "Error: 1Password CLI (op) not found" >&2
+        return 1
+    fi
+    
+    # Verify account exists
+    if ! op account list 2>/dev/null | grep -q "$account"; then
+        echo "Error: Account '$account' not found in configured accounts" >&2
+        echo ""
+        echo "Available accounts:" >&2
+        op account list >&2
+        return 1
+    fi
+    
+    export OP_DEFAULT_ACCOUNT="$account"
+    export OP_ACCOUNT="$account"
+    
+    echo "✓ Set default 1Password account to: $account"
+    echo ""
+    echo "To make this permanent, add to your ~/.zshenv:"
+    echo "  export OP_DEFAULT_ACCOUNT=\"$account\""
+    echo "  export OP_ACCOUNT=\"$account\""
+}
+
+# Get account UUID from email
+# Usage: _op_get_account_uuid "aculich@gmail.com"
+_op_get_account_uuid() {
+    local account_email="${1:?Account email required}"
+    local account_uuid
+    
+    if command -v jq &> /dev/null; then
+        account_uuid=$(op account list --format json 2>/dev/null | \
+            jq -r ".[] | select(.email == \"$account_email\") | .account_uuid" 2>/dev/null | head -1)
+    else
+        account_uuid=$(op account list 2>/dev/null | grep -i "$account_email" | awk '{print $3}' | head -1)
+    fi
+    
+    echo "$account_uuid"
+}
+
+# ============================================================================
+# 1PASSWORD ITEM INSPECTION HELPERS
+# ============================================================================
+
+# List all fields in a 1Password item
+# Usage: op_list_item_fields "vault_name" "item_name" [account_email]
+# Example: op_list_item_fields "develop" "apikeys"
+# Example: op_list_item_fields "develop" "apikeys" "aculich@gmail.com"
+op_list_item_fields() {
+    local vault="${1:?Vault name required}"
+    local item="${2:?Item name required}"
+    local account_email="${3:-${OP_ACCOUNT:-${OP_DEFAULT_ACCOUNT}}}"
+    
+    if ! command -v op &> /dev/null; then
+        echo "Error: 1Password CLI (op) not found" >&2
+        return 1
+    fi
+    
+    # Get account UUID
+    local account_uuid
+    account_uuid=$(_op_get_account_uuid "$account_email")
+    
+    if [[ -z "$account_uuid" ]]; then
+        echo "Error: Account '$account_email' not found" >&2
+        echo ""
+        echo "Available accounts:" >&2
+        op account list >&2
+        return 1
+    fi
+    
+    # Ensure we're signed in to the correct account
+    if ! op account list --account "$account_uuid" &> /dev/null; then
+        echo "Not signed in to 1Password account: $account_email" >&2
+        echo "Signing in..." >&2
+        op_signin_simple "$account_email" || return 1
+    fi
+    
+    # Set OP_ACCOUNT for this command
+    local old_op_account="${OP_ACCOUNT:-}"
+    export OP_ACCOUNT="$account_uuid"
+    
+    echo "Fields in 1Password item: $vault/$item"
+    echo "=========================================="
+    
+    echo "Using account: $account_email (UUID: $account_uuid)"
+    echo ""
+    
+    # Get item details in JSON format (use --account flag)
+    local item_json
+    item_json=$(op item get "$item" --vault "$vault" --account "$account_uuid" --format json 2>/dev/null)
+    
+    # Restore OP_ACCOUNT
+    if [[ -n "$old_op_account" ]]; then
+        export OP_ACCOUNT="$old_op_account"
+    else
+        unset OP_ACCOUNT
+    fi
+    
+    if [[ -z "$item_json" ]]; then
+        echo "Error: Could not retrieve item '$item' from vault '$vault' in account '$account_email'" >&2
+        echo "Troubleshooting:" >&2
+        echo "1. Verify account: op account list" >&2
+        echo "2. Verify vault name: op vault list --account $account_uuid" >&2
+        echo "3. Verify item name: op item list --vault '$vault' --account $account_uuid" >&2
+        return 1
+    fi
+    
+    # Extract fields using jq if available
+    if command -v jq &> /dev/null; then
+        echo ""
+        echo "Field names (for use in op:// references):"
+        echo "-------------------------------------------"
+        echo "$item_json" | jq -r '.fields[]? | "\(.label // .id) = \(.type // "unknown")"' 2>/dev/null || \
+        echo "$item_json" | jq -r '.fields[]? | .label // .id' 2>/dev/null
+        
+        echo ""
+        echo "Full item structure:"
+        echo "-------------------------------------------"
+        echo "$item_json" | jq '.' 2>/dev/null
+    else
+        # Fallback: show raw JSON
+        echo ""
+        echo "Item JSON (install 'jq' for better formatting):"
+        echo "-------------------------------------------"
+        echo "$item_json"
+        echo ""
+        echo "Install jq for better output: brew install jq"
+    fi
+    
+    return 0
+}
+
+# Quick check: Show what fields are available in develop/apikeys
+# Usage: op_check_apikeys [account_email]
+op_check_apikeys() {
+    op_list_item_fields "develop" "apikeys" "${1:-}"
+}
+
+# Inspect vault structure and configuration
+# Usage: op_inspect_vault [vault_name] [account_email]
+# Default: inspects "develop" vault with default account
+op_inspect_vault() {
+    local vault="${1:-develop}"
+    local account_email="${2:-${OP_ACCOUNT:-${OP_DEFAULT_ACCOUNT}}}"
+    
+    if ! command -v op &> /dev/null; then
+        echo "Error: 1Password CLI (op) not found" >&2
+        return 1
+    fi
+    
+    # Get account UUID
+    local account_uuid
+    account_uuid=$(_op_get_account_uuid "$account_email")
+    
+    if [[ -z "$account_uuid" ]]; then
+        echo "Error: Account '$account_email' not found" >&2
+        echo ""
+        echo "Available accounts:" >&2
+        op account list >&2
+        return 1
+    fi
+    
+    # Ensure we're signed in to the correct account
+    if ! op account list --account "$account_uuid" &> /dev/null; then
+        echo "Not signed in to 1Password account: $account_email" >&2
+        echo "Signing in..." >&2
+        op_signin_simple "$account_email" || return 1
+    fi
+    
+    echo "Using account: $account_email (UUID: $account_uuid)"
+    echo ""
+    
+    echo "=========================================="
+    echo "1Password Vault Inspection: $vault"
+    echo "=========================================="
+    echo ""
+    
+    # List all vaults first (for this account)
+    echo "Available Vaults:"
+    echo "----------------"
+    op vault list --account "$account_uuid" 2>/dev/null || {
+        echo "Error: Could not list vaults" >&2
+        return 1
+    }
+    echo ""
+    
+    # Get vault details
+    echo "Vault Details:"
+    echo "---------------"
+    local vault_info
+    vault_info=$(op vault get "$vault" --account "$account_uuid" --format json 2>/dev/null)
+    
+    if [[ -z "$vault_info" ]]; then
+        echo "Error: Vault '$vault' not found" >&2
+        echo ""
+        echo "Available vaults:" >&2
+        op vault list >&2
+        return 1
+    fi
+    
+    if command -v jq &> /dev/null; then
+        echo "$vault_info" | jq -r '
+            "Name: \(.name // "N/A")
+ID: \(.id // "N/A")
+Description: \(.description // "N/A")
+Type: \(.type // "N/A")
+Created: \(.created_at // "N/A")
+Updated: \(.updated_at // "N/A")"
+        '
+    else
+        echo "$vault_info"
+    fi
+    echo ""
+    
+    # List items in vault
+    echo "Items in Vault:"
+    echo "---------------"
+    local items
+    items=$(op item list --vault "$vault" --account "$account_uuid" --format json 2>/dev/null)
+    
+    if [[ -z "$items" ]]; then
+        echo "No items found in vault '$vault'"
+        return 0
+    fi
+    
+    if command -v jq &> /dev/null; then
+        echo "$items" | jq -r '.[] | "  • \(.title // .id) (ID: \(.id))"'
+        echo ""
+        echo "Total items: $(echo "$items" | jq '. | length')"
+    else
+        op item list --vault "$vault"
+    fi
+    echo ""
+}
+
+# Show detailed information about a specific item
+# Usage: op_inspect_item "vault_name" "item_name" [account_email]
+# Example: op_inspect_item "develop" "apikeys"
+# Example: op_inspect_item "develop" "apikeys" "aculich@gmail.com"
+op_inspect_item() {
+    local vault="${1:?Vault name required}"
+    local item="${2:?Item name required}"
+    local account_email="${3:-${OP_ACCOUNT:-${OP_DEFAULT_ACCOUNT}}}"
+    
+    if ! command -v op &> /dev/null; then
+        echo "Error: 1Password CLI (op) not found" >&2
+        return 1
+    fi
+    
+    # Get account UUID
+    local account_uuid
+    account_uuid=$(_op_get_account_uuid "$account_email")
+    
+    if [[ -z "$account_uuid" ]]; then
+        echo "Error: Account '$account_email' not found" >&2
+        echo ""
+        echo "Available accounts:" >&2
+        op account list >&2
+        return 1
+    fi
+    
+    # Ensure we're signed in to the correct account
+    if ! op account list --account "$account_uuid" &> /dev/null; then
+        echo "Not signed in to 1Password account: $account_email" >&2
+        echo "Signing in..." >&2
+        op_signin_simple "$account_email" || return 1
+    fi
+    
+    echo "Using account: $account_email (UUID: $account_uuid)"
+    echo ""
+    
+    echo "=========================================="
+    echo "1Password Item Inspection: $vault/$item"
+    echo "=========================================="
+    echo ""
+    
+    # Get item details (use --account flag)
+    local item_json
+    item_json=$(op item get "$item" --vault "$vault" --account "$account_uuid" --format json 2>/dev/null)
+    
+    if [[ -z "$item_json" ]]; then
+        echo "Error: Item '$item' not found in vault '$vault' in account '$account_email'" >&2
+        echo ""
+        echo "Available items in vault '$vault':" >&2
+        op item list --vault "$vault" --account "$account_uuid" >&2
+        return 1
+    fi
+    
+    if command -v jq &> /dev/null; then
+        echo "Item Information:"
+        echo "------------------"
+        echo "$item_json" | jq -r '
+            "Title: \(.title // "N/A")
+ID: \(.id // "N/A")
+Category: \(.category // "N/A")
+Created: \(.created_at // "N/A")
+Updated: \(.updated_at // "N/A")
+Vault: \(.vault.id // "N/A")"
+        '
+        echo ""
+        
+        echo "Fields (for use in op:// references):"
+        echo "-------------------------------------"
+        echo "$item_json" | jq -r '.fields[]? | 
+            if .label then 
+                "  • \(.label) (type: \(.type // "unknown"))"
+            else 
+                "  • \(.id) (type: \(.type // "unknown"))"
+            end
+        ' | sort
+        
+        echo ""
+        echo "Field Count: $(echo "$item_json" | jq '.fields | length')"
+        echo ""
+        
+        echo "Full JSON Structure:"
+        echo "--------------------"
+        echo "$item_json" | jq '.'
+    else
+        echo "Item JSON (install 'jq' for better formatting):"
+        echo "-------------------------------------------"
+        echo "$item_json"
+        echo ""
+        echo "Install jq for better output: brew install jq"
+    fi
+    
+    return 0
+}
+
+# Quick inspection of develop vault and apikeys item
+# Usage: op_inspect_develop [account_email]
+op_inspect_develop() {
+    local account_email="${1:-${OP_ACCOUNT:-${OP_DEFAULT_ACCOUNT}}}"
+    echo "Inspecting develop vault and apikeys item..."
+    echo "Using account: $account_email"
+    echo ""
+    op_inspect_vault "develop" "$account_email"
+    echo ""
+    echo "=========================================="
+    echo ""
+    op_inspect_item "develop" "apikeys" "$account_email"
+}
+
+# ============================================================================
 # SIMPLIFIED 1PASSWORD SIGNIN (FIXED VERSION)
 # ============================================================================
 
@@ -566,26 +947,61 @@ op_inject_envrc() {
     fi
     
     # Ensure we're signed in
+    # Check if we have a valid session
     if ! op account list &> /dev/null; then
         echo "Not signed in to 1Password. Signing in..." >&2
+        if ! op_signin_simple; then
+            echo "Failed to sign in. Cannot proceed with secret injection." >&2
+            return 1
+        fi
+    fi
+    
+    # Verify we can actually access 1Password
+    # Try a simple read to ensure session is working
+    if ! op vault list &> /dev/null; then
+        echo "Warning: 1Password session may be invalid. Attempting to re-authenticate..." >&2
         op_signin_simple || return 1
     fi
     
     # Use op inject to load secrets
     # This is faster than op read and handles session automatically
     local temp_output
+    local error_output
     temp_output=$(mktemp)
+    error_output=$(mktemp)
     
-    if op inject -i "$template_file" > "$temp_output" 2>/dev/null; then
+    # Run op inject and capture both stdout and stderr
+    if op inject -i "$template_file" > "$temp_output" 2> "$error_output"; then
+        # Check if output is empty (might indicate an error)
+        if [[ ! -s "$temp_output" ]]; then
+            echo "Error: op inject returned empty output" >&2
+            if [[ -s "$error_output" ]]; then
+                echo "Error details:" >&2
+                cat "$error_output" >&2
+            fi
+            rm -f "$temp_output" "$error_output"
+            return 1
+        fi
+        
         # Source the output
         set -a
         source "$temp_output"
         set +a
-        rm -f "$temp_output"
+        rm -f "$temp_output" "$error_output"
         return 0
     else
         echo "Error: Failed to inject secrets from '$template_file'" >&2
-        rm -f "$temp_output"
+        if [[ -s "$error_output" ]]; then
+            echo "Error details:" >&2
+            cat "$error_output" >&2
+        else
+            echo "Troubleshooting:" >&2
+            echo "1. Verify you're signed in: op account list" >&2
+            echo "2. Check template file format (should use op:// references)" >&2
+            echo "3. Verify vault/item/field names are correct" >&2
+            echo "4. Try manually: op inject -i '$template_file'" >&2
+        fi
+        rm -f "$temp_output" "$error_output"
         return 1
     fi
 }

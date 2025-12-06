@@ -45,3 +45,11 @@ export EDITOR="${EDITOR:-code}"
 # Default is usually 50, but nvm can exceed this
 export FUNCNEST=100
 
+# ============================================================================
+# 1PASSWORD DEFAULT ACCOUNT
+# ============================================================================
+# Set default 1Password account to use for CLI operations
+# This ensures all op commands use the correct account when multiple are configured
+export OP_DEFAULT_ACCOUNT="aculich@gmail.com"
+export OP_ACCOUNT="aculich@gmail.com"
+
