@@ -7,14 +7,29 @@
 # ESSENTIAL PATH SETUP
 # ============================================================================
 # Homebrew (Apple Silicon first, then Intel)
+# Use explicit PATH addition as fallback to ensure it works in all environments
 if [[ -f /opt/homebrew/bin/brew ]]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
+    # Explicitly add Homebrew bin to PATH as fallback
+    [[ ":$PATH:" != *":/opt/homebrew/bin:"* ]] && export PATH="/opt/homebrew/bin:$PATH"
 elif [[ -f /usr/local/bin/brew ]]; then
     eval "$(/usr/local/bin/brew shellenv)"
+    # Explicitly add Homebrew bin to PATH as fallback
+    [[ ":$PATH:" != *":/usr/local/bin:"* ]] && export PATH="/usr/local/bin:$PATH"
 fi
 
 # User local bin (pipx, etc.)
 export PATH="$HOME/.local/bin:$PATH"
+
+# Anaconda/Miniconda bin directory (for tools like yt-dlp)
+# Add to PATH without full conda initialization for faster startup
+if [[ -d /opt/anaconda3/bin ]]; then
+    export PATH="/opt/anaconda3/bin:$PATH"
+elif [[ -d "$HOME/anaconda3/bin" ]]; then
+    export PATH="$HOME/anaconda3/bin:$PATH"
+elif [[ -d "$HOME/miniconda3/bin" ]]; then
+    export PATH="$HOME/miniconda3/bin:$PATH"
+fi
 
 # ============================================================================
 # BASIC ENVIRONMENT VARIABLES
