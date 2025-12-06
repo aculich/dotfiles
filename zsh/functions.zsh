@@ -484,6 +484,113 @@ op_check_auth() {
 }
 
 # ============================================================================
+# SIMPLIFIED 1PASSWORD SIGNIN (FIXED VERSION)
+# ============================================================================
+
+# Simplified signin that relies on 1Password's built-in session management
+# This avoids the token extraction issues
+# Usage: op_signin_simple [account_email]
+op_signin_simple() {
+    local account_email="${1:-aculich@gmail.com}"
+    
+    if ! command -v op &> /dev/null; then
+        echo "Error: 1Password CLI (op) not found" >&2
+        return 1
+    fi
+    
+    # Check if already signed in
+    if op account list &> /dev/null; then
+        if [[ -t 1 ]]; then
+            echo "✓ Already signed in to 1Password"
+        fi
+        return 0
+    fi
+    
+    # Get account UUID
+    local account_uuid
+    if command -v jq &> /dev/null; then
+        account_uuid=$(op account list --format json 2>/dev/null | \
+            jq -r ".[] | select(.email == \"$account_email\") | .account_uuid" 2>/dev/null | head -1)
+    else
+        account_uuid=$(op account list 2>/dev/null | grep -i "$account_email" | awk '{print $3}' | head -1)
+    fi
+    
+    if [[ -z "$account_uuid" ]]; then
+        echo "Error: Account '$account_email' not found" >&2
+        return 1
+    fi
+    
+    # Sign in - let 1Password handle session management
+    # This will prompt for biometric auth if needed
+    if [[ -t 1 ]]; then
+        echo "Signing in to 1Password..."
+        echo "Account: $account_email"
+        echo "Please authenticate when prompted..."
+    fi
+    
+    if op signin --account "$account_uuid" &> /dev/null; then
+        if [[ -t 1 ]]; then
+            echo "✓ Successfully signed in to 1Password"
+        fi
+        return 0
+    else
+        echo "Error: Failed to sign in to 1Password" >&2
+        echo "Troubleshooting:" >&2
+        echo "1. Make sure 1Password app is running" >&2
+        echo "2. Enable 'Connect with 1Password CLI' in 1Password Settings > Developer" >&2
+        echo "3. Try manually: op signin --account $account_uuid" >&2
+        return 1
+    fi
+}
+
+# ============================================================================
+# OP INJECT PATTERN (RECOMMENDED FOR DIRENV)
+# ============================================================================
+
+# Load secrets using op inject pattern (faster and more reliable)
+# Usage: op_inject_envrc [template_file]
+# Default: looks for .env.1password in current directory
+op_inject_envrc() {
+    local template_file="${1:-.env.1password}"
+    
+    if ! command -v op &> /dev/null; then
+        echo "Error: 1Password CLI (op) not found" >&2
+        return 1
+    fi
+    
+    if [[ ! -f "$template_file" ]]; then
+        echo "Error: Template file '$template_file' not found" >&2
+        echo "Create a template file with op:// references, e.g.:" >&2
+        echo "  OPENAI_API_KEY=op://Development/API Keys/OPENAI_API_KEY" >&2
+        return 1
+    fi
+    
+    # Ensure we're signed in
+    if ! op account list &> /dev/null; then
+        echo "Not signed in to 1Password. Signing in..." >&2
+        op_signin_simple || return 1
+    fi
+    
+    # Use op inject to load secrets
+    # This is faster than op read and handles session automatically
+    local temp_output
+    temp_output=$(mktemp)
+    
+    if op inject -i "$template_file" > "$temp_output" 2>/dev/null; then
+        # Source the output
+        set -a
+        source "$temp_output"
+        set +a
+        rm -f "$temp_output"
+        return 0
+    else
+        echo "Error: Failed to inject secrets from '$template_file'" >&2
+        rm -f "$temp_output"
+        return 1
+    fi
+}
+
+# ============================================================================
 # DIRENV + 1PASSWORD HELPERS
 # ============================================================================
 
