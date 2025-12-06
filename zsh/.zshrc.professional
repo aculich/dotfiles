@@ -4,6 +4,54 @@
 # Last updated: 2025-11-28
 
 # ============================================================================
+# STARTUP PROFILING CONFIGURATION
+# ============================================================================
+# Set to 'true' to display timing information for each section during startup
+# Set to 'false' or unset to disable timing display
+export ZSH_PROFILE_STARTUP="${ZSH_PROFILE_STARTUP:-true}"
+
+# Initialize timing variables (must be very early)
+if [[ "$ZSH_PROFILE_STARTUP" == "true" ]]; then
+    # Use EPOCHREALTIME if available (zsh 5.3.4+), otherwise use SECONDS
+    if (( ${+EPOCHREALTIME} )); then
+        typeset -F ZSH_START_TIME=$EPOCHREALTIME
+        typeset -F ZSH_LAST_TIME=$EPOCHREALTIME
+    else
+        typeset -F ZSH_START_TIME=$SECONDS
+        typeset -F ZSH_LAST_TIME=$SECONDS
+    fi
+    
+    # Helper function to display timing
+    _zsh_profile_section() {
+        local section_name="$1"
+        local current_time
+        local elapsed
+        local total_elapsed
+        
+        if (( ${+EPOCHREALTIME} )); then
+            current_time=$EPOCHREALTIME
+            elapsed=$(( (current_time - ZSH_LAST_TIME) * 1000 ))
+            total_elapsed=$(( (current_time - ZSH_START_TIME) * 1000 ))
+        else
+            current_time=$SECONDS
+            elapsed=$(( (current_time - ZSH_LAST_TIME) * 1000 ))
+            total_elapsed=$(( (current_time - ZSH_START_TIME) * 1000 ))
+        fi
+        
+        # Format: [section] elapsed: X.XXXms (total: Y.YYYms)
+        printf "\033[0;36m[%s]\033[0m elapsed: \033[0;33m%.3fms\033[0m (total: \033[0;32m%.3fms\033[0m)\n" \
+            "$section_name" "$elapsed" "$total_elapsed" >&2
+        
+        ZSH_LAST_TIME=$current_time
+    }
+    
+    _zsh_profile_section "START"
+else
+    # Dummy function when profiling is disabled (no-op)
+    _zsh_profile_section() { : }
+fi
+
+# ============================================================================
 # INITIALIZATION ORDER
 # ============================================================================
 # This file follows the proper zsh initialization order:
@@ -16,6 +64,7 @@
 # ============================================================================
 # FUNCTION NESTING LIMIT (Very early - before any tools that use nested functions)
 # ============================================================================
+_zsh_profile_section "FUNCTION NESTING LIMIT"
 # Set FUNCNEST early to prevent "maximum nested function level" errors
 # NVM and other tools use deeply nested function calls
 # Default is usually 50, but nvm can exceed this
@@ -25,6 +74,7 @@ export FUNCNEST="${FUNCNEST:-100}"
 # ============================================================================
 # PATH SETUP (Early - before other tools)
 # ============================================================================
+_zsh_profile_section "PATH SETUP"
 # Homebrew (must be first for Apple Silicon)
 if [[ -f /opt/homebrew/bin/brew ]]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -38,6 +88,7 @@ export PATH="$HOME/.local/bin:$PATH"
 # ============================================================================
 # OH-MY-ZSH SETUP
 # ============================================================================
+_zsh_profile_section "OH-MY-ZSH SETUP"
 export ZSH="$HOME/.oh-my-zsh"
 
 # Set theme (can be overridden by powerlevel10k if installed)
@@ -46,7 +97,7 @@ ZSH_THEME="${ZSH_THEME:-robbyrussell}"
 # Plugins - carefully curated for performance
 plugins=(
     git
-    direnv
+#    direnv
     zsh-autosuggestions
     zsh-syntax-highlighting
     fzf
@@ -60,6 +111,7 @@ fi
 # ============================================================================
 # IDE DETECTION (VERY EARLY - before direnv and other tools)
 # ============================================================================
+_zsh_profile_section "IDE DETECTION"
 # Detect if we're running in an IDE terminal (Cursor, VSCode, Antigravity)
 # In IDE terminals, we use minimal config for fast startup
 # MUST be before direnv hook and site-specific configs to prevent nvm calls
@@ -70,11 +122,13 @@ if [[ "$TERM_PROGRAM" == "cursor" ]] || \
    [[ -n "$CURSOR_SHELL_INTEGRATION" ]] || \
    [[ -n "$VSCODE_INJECTION" ]]; then
     IS_IDE_TERMINAL=true
+    echo "$TERM_PROGRAM | $CURSOR_SHELL_INTEGRATION | $VSCODE_INJECTION | $IS_IDE_TERMINAL"
 fi
 
 # ============================================================================
 # NVM WRAPPER SETUP (Before anything that might call nvm)
 # ============================================================================
+_zsh_profile_section "NVM WRAPPER SETUP"
 # Set up NVM_DIR and create wrapper functions BEFORE direnv or site-specific configs
 # This ensures nvm() is available even if something tries to call it early
 export NVM_DIR="$HOME/.nvm"
@@ -162,6 +216,7 @@ fi
 # ============================================================================
 # DIRENV SETUP (Before other env tools)
 # ============================================================================
+_zsh_profile_section "DIRENV SETUP"
 # Direnv must be hooked early to work with project-specific .envrc files
 # Silence direnv verbose output for cleaner terminal
 export DIRENV_LOG_FORMAT=""
@@ -172,6 +227,7 @@ fi
 # ============================================================================
 # CUSTOM CONFIGURATION MODULES
 # ============================================================================
+_zsh_profile_section "CUSTOM CONFIGURATION MODULES"
 # Source modular configuration files from dotfiles repo
 DOTFILES_ZSH="$HOME/dotfiles/zsh"
 
@@ -193,6 +249,7 @@ fi
 # ============================================================================
 # DEVELOPMENT TOOLS
 # ============================================================================
+_zsh_profile_section "DEVELOPMENT TOOLS"
 
 # Node Version Manager (nvm) - Already set up above for IDE terminals
 # For regular terminals, load NVM immediately
@@ -237,6 +294,7 @@ fi
 # ============================================================================
 # TERMINAL INTEGRATIONS
 # ============================================================================
+_zsh_profile_section "TERMINAL INTEGRATIONS"
 
 # IDE Terminal Optimizations (Cursor, VSCode, Antigravity)
 if [[ "$IS_IDE_TERMINAL" == true ]]; then
@@ -263,6 +321,7 @@ fi
 # ============================================================================
 # COMPLETION SETUP
 # ============================================================================
+_zsh_profile_section "COMPLETION SETUP"
 # Docker completions
 if [[ -d "$HOME/.docker/completions" ]]; then
     fpath=("$HOME/.docker/completions" $fpath)
@@ -280,6 +339,7 @@ fi
 # ============================================================================
 # HISTORY CONFIGURATION
 # ============================================================================
+_zsh_profile_section "HISTORY CONFIGURATION"
 export HISTSIZE=10000
 export SAVEHIST=10000
 export HISTFILE="$HOME/.zsh_history"
@@ -293,6 +353,7 @@ setopt HIST_VERIFY            # Show command before executing
 # ============================================================================
 # MISC CONFIGURATIONS
 # ============================================================================
+_zsh_profile_section "MISC CONFIGURATIONS"
 
 # Locale
 export LC_ALL=en_US.UTF-8
@@ -310,6 +371,7 @@ fi
 # ============================================================================
 # POST-INITIALIZATION
 # ============================================================================
+_zsh_profile_section "POST-INITIALIZATION"
 # Load powerlevel10k instant prompt if available (must be last)
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
@@ -318,5 +380,21 @@ fi
 # Load p10k config if theme is powerlevel10k
 if [[ "$ZSH_THEME" == "powerlevel10k/powerlevel10k" ]] && [[ -f "$HOME/.p10k.zsh" ]]; then
     source "$HOME/.p10k.zsh"
+fi
+
+# Display final startup time if profiling is enabled
+if [[ "$ZSH_PROFILE_STARTUP" == "true" ]]; then
+    local final_time
+    local total_time
+    
+    if (( ${+EPOCHREALTIME} )); then
+        final_time=$EPOCHREALTIME
+        total_time=$(( (final_time - ZSH_START_TIME) * 1000 ))
+    else
+        final_time=$SECONDS
+        total_time=$(( (final_time - ZSH_START_TIME) * 1000 ))
+    fi
+    
+    printf "Total startup time: %.3fms\n" "$total_time" >&2
 fi
 
