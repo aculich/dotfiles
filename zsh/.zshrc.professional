@@ -20,15 +20,13 @@ if [[ "$ZSH_PROFILE_STARTUP" == "true" ]]; then
     if (( ${+EPOCHREALTIME} )); then
         # EPOCHREALTIME: capture start time (will use for calculating differences)
         # EPOCHREALTIME is in seconds since epoch (e.g., 1765038675.818)
-        ZSH_START_TIME=${EPOCHREALTIME}
-        ZSH_LAST_TIME=${EPOCHREALTIME}
+        # Initialize as global float variables
+        typeset -gF ZSH_START_TIME=${EPOCHREALTIME}
+        typeset -gF ZSH_LAST_TIME=${EPOCHREALTIME}
     else
-        # SECONDS: starts at 0 when shell starts, but may not update immediately
-        # Use a small delay to ensure SECONDS has started counting
-        ZSH_START_TIME=$SECONDS
-        ZSH_LAST_TIME=$SECONDS
-        # Force a tiny delay to ensure SECONDS starts incrementing
-        sleep 0.001 2>/dev/null || true
+        # SECONDS: starts at 0 when shell starts
+        typeset -gF ZSH_START_TIME=$SECONDS
+        typeset -gF ZSH_LAST_TIME=$SECONDS
     fi
     
     # Helper function to display timing
@@ -42,15 +40,16 @@ if [[ "$ZSH_PROFILE_STARTUP" == "true" ]]; then
         if (( ${+EPOCHREALTIME} )); then
             # EPOCHREALTIME: calculate difference correctly
             current_time=${EPOCHREALTIME}
-            # Ensure variables are initialized (should be set at startup)
+            # Ensure variables are initialized (should be set at startup, but be safe)
+            # Don't check for == 0 since EPOCHREALTIME is never 0, just check if unset
             if (( ! ${+ZSH_START_TIME} )); then
-                ZSH_START_TIME=$current_time
+                typeset -gF ZSH_START_TIME=$current_time
             fi
             if (( ! ${+ZSH_LAST_TIME} )); then
-                ZSH_LAST_TIME=$current_time
+                typeset -gF ZSH_LAST_TIME=$current_time
             fi
             # Calculate difference in seconds, then convert to milliseconds
-            # Use zsh's float arithmetic
+            # Use zsh's float arithmetic - ensure we're using global variables
             typeset -F diff_elapsed=$(( current_time - ZSH_LAST_TIME ))
             typeset -F diff_total=$(( current_time - ZSH_START_TIME ))
             elapsed=$(( diff_elapsed * 1000 ))
@@ -74,8 +73,8 @@ if [[ "$ZSH_PROFILE_STARTUP" == "true" ]]; then
         printf "\033[0;36m[%s]\033[0m elapsed: \033[0;33m%.3fms\033[0m (total: \033[0;32m%.3fms\033[0m)\n" \
             "$section_name" "$elapsed" "$total_elapsed" >&2
         
-        # Update global variable
-        ZSH_LAST_TIME=$current_time
+        # Update global variable (must be global float)
+        typeset -gF ZSH_LAST_TIME=$current_time
     }
     
     _zsh_profile_section "START"

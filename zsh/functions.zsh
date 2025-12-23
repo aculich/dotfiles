@@ -83,18 +83,21 @@ op_load_item() {
     
     # Check if we can access 1Password via desktop app integration
     # The desktop app uses macOS system keychain/Touch ID for automatic unlocking
-    # When you log into your Mac, the 1Password app can be configured to unlock automatically
-    # The CLI will use that unlocked session without prompting
+    # When the desktop app is unlocked, the CLI can use that session without prompting
+    # We check by trying a simple operation - if it works, desktop app is unlocked
+    # If it fails, we don't prompt (fail silently) - user should unlock app manually
+    
+    # First, check if we already have a valid session (no prompt)
     if ! op account list --account "$account_uuid" &> /dev/null; then
-        # Try to use desktop app integration silently (no prompts)
-        # This will use the unlocked desktop app session if available
-        # If desktop app is locked, this will fail silently (user should unlock app manually)
-        # The --raw flag gets a token, but we don't need it - just check if we can access
-        # Actually, let's just try a simple read operation - if desktop app is unlocked, it works
-        # If not, fail silently (don't prompt)
-        if ! op vault list --account "$account_uuid" &> /dev/null; then
+        # No session - check if desktop app is available and unlocked
+        # Try a simple operation that won't prompt if desktop app is unlocked
+        # If desktop app is locked, this will fail silently (no prompt)
+        # The key is: if desktop app is unlocked, op commands work without prompting
+        # If it's locked, we fail silently rather than prompting
+        if ! op vault list --account "$account_uuid" &> /dev/null 2>&1; then
             # Desktop app not available or locked - fail silently
             # User should unlock 1Password app manually (it uses system keychain/Touch ID)
+            # Don't prompt here - let the user unlock the app manually
             [[ "$verbose" == "true" ]] && echo "1Password desktop app is locked. Please unlock it manually." >&2
             return 1
         fi
@@ -1063,14 +1066,19 @@ op_inject_envrc() {
         return 1
     fi
     
-    # Check if we can access 1Password (desktop app integration or existing session)
-    # Try to use desktop app integration first (no prompts if app is unlocked)
+    # Check if we can access 1Password via desktop app integration
+    # The desktop app uses macOS system keychain/Touch ID for automatic unlocking
+    # When the desktop app is unlocked, the CLI can use that session without prompting
+    # We check by trying a simple operation - if it works, desktop app is unlocked
+    # IMPORTANT: Don't call op signin here - it will prompt even if desktop app is unlocked
+    # Instead, just try the operation - if desktop app is unlocked, it works silently
     if ! op account list --account "$account_uuid" &> /dev/null; then
-        # Try desktop app integration (uses system keychain/Touch ID)
-        # This will silently use Touch ID if the desktop app is running and unlocked
-        if ! op signin --account "$account_uuid" --raw &> /dev/null; then
-            echo "Error: Could not access 1Password. Please unlock 1Password app first." >&2
-            echo "The desktop app uses macOS system keychain/Touch ID for automatic unlocking." >&2
+        # No session - check if desktop app is available and unlocked
+        # Try a simple operation that won't prompt if desktop app is unlocked
+        # If desktop app is locked, this will fail silently (no prompt)
+        if ! op vault list --account "$account_uuid" &> /dev/null 2>&1; then
+            # Desktop app not available or locked - fail silently (no prompt)
+            # User should unlock 1Password app manually
             return 1
         fi
     fi
@@ -1116,6 +1124,265 @@ op_inject_envrc() {
         rm -f "$temp_output" "$error_output"
         return 1
     fi
+}
+
+# Inject all environment variables from a 1Password item into the current shell
+# Usage: op_inject_all "vault_name" "item_name" [account_email]
+# Example: op_inject_all "develop" "apikeys"
+# This loads all fields from the item and exports them as environment variables
+op_inject_all() {
+    local vault="${1:?Vault name required}"
+    local item="${2:?Item name required}"
+    local account_email="${3:-${OP_ACCOUNT:-${OP_DEFAULT_ACCOUNT}}}"
+    
+    if ! command -v op &> /dev/null; then
+        echo "Error: 1Password CLI (op) not found" >&2
+        return 1
+    fi
+    
+    # Use existing op_load_item function which already handles all the complexity
+    if op_load_item "$vault" "$item" "" "$account_email" "false"; then
+        echo "✓ Injected all environment variables from 1Password item: $vault/$item" >&2
+        return 0
+    else
+        echo "Error: Failed to inject environment variables from $vault/$item" >&2
+        return 1
+    fi
+}
+
+# Dump environment variables from a 1Password item to a .env file (with credentials)
+# Usage: op_dump_env "vault_name" "item_name" [output_file] [account_email]
+# Example: op_dump_env "develop" "apikeys" ".env"
+# Example: op_dump_env "develop" "apikeys" ".env.local"
+op_dump_env() {
+    local vault="${1:?Vault name required}"
+    local item="${2:?Item name required}"
+    local output_file="${3:-.env}"
+    local account_email="${4:-${OP_ACCOUNT:-${OP_DEFAULT_ACCOUNT}}}"
+    
+    if ! command -v op &> /dev/null; then
+        echo "Error: 1Password CLI (op) not found" >&2
+        return 1
+    fi
+    
+    # Get account UUID
+    local account_uuid
+    account_uuid=$(_op_get_account_uuid "$account_email")
+    
+    if [[ -z "$account_uuid" ]]; then
+        echo "Error: Account '$account_email' not found" >&2
+        echo ""
+        echo "Available accounts:" >&2
+        op account list >&2
+        return 1
+    fi
+    
+    # Check if we can access 1Password
+    if ! op account list --account "$account_uuid" &> /dev/null; then
+        if ! op vault list --account "$account_uuid" &> /dev/null 2>&1; then
+            echo "Error: Could not access 1Password. Please unlock 1Password app first." >&2
+            return 1
+        fi
+    fi
+    
+    # Get item JSON
+    local item_json
+    item_json=$(op item get "$item" --vault "$vault" --account "$account_uuid" --format json 2>/dev/null)
+    
+    if [[ -z "$item_json" ]]; then
+        echo "Error: Could not retrieve item '${item}' from vault '${vault}'" >&2
+        return 1
+    fi
+    
+    # Check if jq is available
+    if ! command -v jq &> /dev/null; then
+        echo "Error: jq is required for this function. Install it with: brew install jq" >&2
+        return 1
+    fi
+    
+    # Extract fields and write to .env file
+    # Match the pattern used in op_load_item but handle null labels
+    # Use printf to avoid shell interpretation issues with special characters
+    local fields
+    local jq_stderr
+    jq_stderr=$(mktemp)
+    fields=$(printf '%s\n' "$item_json" | jq -r '.fields[]? | select(.id != "notesPlain") | select((.label // .id) != null and (.label // .id) != "") | "\(.label // .id)=\(.value // "")"' 2>"$jq_stderr")
+    local jq_exit_code=$?
+    
+    # Check if jq command succeeded and produced output
+    if [[ $jq_exit_code -ne 0 ]] || [[ -z "$fields" ]]; then
+        echo "Warning: Item '${item}' has no fields to dump or jq parsing failed" >&2
+        if [[ -s "$jq_stderr" ]]; then
+            echo "jq error output:" >&2
+            cat "$jq_stderr" >&2
+        fi
+        echo "Debug: Checking item structure..." >&2
+        # Try a simpler jq query to see what we have
+        printf '%s\n' "$item_json" | jq -r '.fields | length' 2>&1 | head -1
+        printf '%s\n' "$item_json" | jq -r '.fields[]? | .id' 2>&1 | head -10
+        rm -f "$jq_stderr"
+        return 1
+    fi
+    rm -f "$jq_stderr"
+    
+    # Write to file
+    # Disable xtrace/verbose mode to prevent variable assignments from being printed
+    {
+        set +x 2>/dev/null
+        setopt +o xtrace 2>/dev/null
+        
+        echo "# Environment variables from 1Password: $vault/$item"
+        echo "# Generated: $(date)"
+        echo "# WARNING: This file contains sensitive credentials. Do not commit to version control!"
+        echo ""
+        
+        local env_var
+        while IFS='=' read -r label value; do
+            # Skip empty lines
+            [[ -z "$label" ]] && continue
+            
+            # Convert label to valid env var name (uppercase, replace spaces with underscores)
+            env_var=$(echo "$label" | tr '[:lower:]' '[:upper:]' | tr ' ' '_' | tr -cd '[:alnum:]_')
+            
+            # Remove quotes from value if present
+            value="${value#\"}"
+            value="${value%\"}"
+            value="${value#\'}"
+            value="${value%\'}"
+            
+            # Escape special characters in value for .env format
+            # Escape backslashes, quotes, and newlines
+            value=$(echo "$value" | sed 's/\\/\\\\/g' | sed 's/"/\\"/g' | sed ':a;N;$!ba;s/\n/\\n/g')
+            
+            # Write VAR=value (quote if contains spaces or special chars)
+            if [[ "$value" =~ [[:space:]] ]] || [[ "$value" =~ [\"\$\`] ]]; then
+                echo "${env_var}=\"${value}\""
+            else
+                echo "${env_var}=${value}"
+            fi
+        done <<< "$fields"
+    } > "$output_file"
+    
+    local field_count
+    field_count=$(echo "$fields" | wc -l | tr -d ' ')
+    
+    echo "✓ Dumped $field_count environment variables to $output_file (with credentials)"
+    echo "  WARNING: This file contains sensitive data. Do not commit to version control!"
+    
+    return 0
+}
+
+# Dump environment variable template from a 1Password item to a .env file (without credentials)
+# Usage: op_dump_env_template "vault_name" "item_name" [output_file] [account_email]
+# Example: op_dump_env_template "develop" "apikeys" ".env.template"
+# Example: op_dump_env_template "develop" "apikeys" ".env.example"
+op_dump_env_template() {
+    local vault="${1:?Vault name required}"
+    local item="${2:?Item name required}"
+    local output_file="${3:-.env.template}"
+    local account_email="${4:-${OP_ACCOUNT:-${OP_DEFAULT_ACCOUNT}}}"
+    
+    if ! command -v op &> /dev/null; then
+        echo "Error: 1Password CLI (op) not found" >&2
+        return 1
+    fi
+    
+    # Get account UUID
+    local account_uuid
+    account_uuid=$(_op_get_account_uuid "$account_email")
+    
+    if [[ -z "$account_uuid" ]]; then
+        echo "Error: Account '$account_email' not found" >&2
+        echo ""
+        echo "Available accounts:" >&2
+        op account list >&2
+        return 1
+    fi
+    
+    # Check if we can access 1Password
+    if ! op account list --account "$account_uuid" &> /dev/null; then
+        if ! op vault list --account "$account_uuid" &> /dev/null 2>&1; then
+            echo "Error: Could not access 1Password. Please unlock 1Password app first." >&2
+            return 1
+        fi
+    fi
+    
+    # Get item JSON
+    local item_json
+    item_json=$(op item get "$item" --vault "$vault" --account "$account_uuid" --format json 2>/dev/null)
+    
+    if [[ -z "$item_json" ]]; then
+        echo "Error: Could not retrieve item '${item}' from vault '${vault}'" >&2
+        return 1
+    fi
+    
+    # Check if jq is available
+    if ! command -v jq &> /dev/null; then
+        echo "Error: jq is required for this function. Install it with: brew install jq" >&2
+        return 1
+    fi
+    
+    # Extract fields and write template to .env file
+    # Match the pattern used in op_load_item but extract only label/id
+    # Use printf to avoid shell interpretation issues with special characters
+    local fields
+    local jq_stderr
+    jq_stderr=$(mktemp)
+    fields=$(printf '%s\n' "$item_json" | jq -r '.fields[]? | select(.id != "notesPlain") | select((.label // .id) != null and (.label // .id) != "") | (.label // .id)' 2>"$jq_stderr")
+    local jq_exit_code=$?
+    
+    # Check if jq command succeeded and produced output
+    if [[ $jq_exit_code -ne 0 ]] || [[ -z "$fields" ]]; then
+        echo "Warning: Item '${item}' has no fields to dump or jq parsing failed" >&2
+        if [[ -s "$jq_stderr" ]]; then
+            echo "jq error output:" >&2
+            cat "$jq_stderr" >&2
+        fi
+        echo "Debug: Checking item structure..." >&2
+        # Try a simpler jq query to see what we have
+        printf '%s\n' "$item_json" | jq -r '.fields | length' 2>&1 | head -1
+        printf '%s\n' "$item_json" | jq -r '.fields[]? | .id' 2>&1 | head -10
+        rm -f "$jq_stderr"
+        return 1
+    fi
+    rm -f "$jq_stderr"
+    
+    # Write template to file
+    # Disable xtrace/verbose mode to prevent variable assignments from being printed
+    {
+        set +x 2>/dev/null
+        setopt +o xtrace 2>/dev/null
+        
+        echo "# Environment variable template from 1Password: $vault/$item"
+        echo "# Generated: $(date)"
+        echo "# This file contains variable names only (no credentials)"
+        echo "# Fill in the values or use 1Password CLI to inject them"
+        echo ""
+        echo "# To load these variables from 1Password, use:"
+        echo "#   op_inject_all \"$vault\" \"$item\""
+        echo "# Or use op inject with a template file containing op:// references"
+        echo ""
+        
+        local env_var
+        while IFS= read -r label; do
+            # Skip empty lines
+            [[ -z "$label" ]] && continue
+            
+            # Convert label to valid env var name (uppercase, replace spaces with underscores)
+            env_var=$(echo "$label" | tr '[:lower:]' '[:upper:]' | tr ' ' '_' | tr -cd '[:alnum:]_')
+            
+            # Write VAR= with placeholder
+            echo "${env_var}="
+        done <<< "$fields"
+    } > "$output_file"
+    
+    local field_count
+    field_count=$(echo "$fields" | wc -l | tr -d ' ')
+    
+    echo "✓ Dumped $field_count environment variable names to $output_file (template, no credentials)"
+    echo "  This file is safe to commit to version control"
+    
+    return 0
 }
 
 # ============================================================================
