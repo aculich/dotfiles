@@ -1,0 +1,84 @@
+{
+  "mcpServers": {
+    "Notion": {
+      "command": "~/.nvm/versions/node/v22.16.0/bin/npx",
+      "args": [
+        "-y",
+        "@notionhq/notion-mcp-server"
+      ],
+      "env": {
+        "NOTION_TOKEN": "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"
+      }
+    },
+    "Nanobrowser": {
+      "url": "http://localhost:9666/mcp",
+      "headers": {}
+    },
+    "context7": {
+      "url": "https://mcp.context7.com/mcp",
+      "headers": {
+        "CONTEXT7_API_KEY": "ctx7sk-cfcc26b9-098c-4d6b-8a27-c0d046f26164"
+      }
+    },
+    "hf-mcp-server": {
+      "url": "https://huggingface.co/mcp?login",
+      "headers": {}
+    },
+    "github": {
+      "url": "https://api.githubcopilot.com/mcp/",
+      "headers": {
+        "Authorization": "Bearer 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"
+      }
+    },
+    "Hugging Face": {
+      "url": "https://hf.co/mcp",
+      "headers": {}
+    },
+    "Browser Use": {
+      "url": "https://docs.browser-use.com/mcp",
+      "headers": {}
+    },
+    "heypresto": {
+      "url": "https://www.heypresto.ai/mcp",
+      "headers": {}
+    },
+    "repomix": {
+      "command": "/opt/homebrew/bin/repomix",
+      "args": [
+        "--mcp"
+      ]
+    },
+    "chrome-devtools": {
+      "command": "~/.nvm/versions/node/v22.16.0/bin/npx -y chrome-devtools-mcp@latest",
+      "env": {},
+      "args": []
+    },
+    "anythingllm": {
+      "command": "~/.nvm/versions/node/v22.16.0/bin/npx",
+      "args": [
+        "-y",
+        "anythingllm-mcp-server@2.0.0"
+      ],
+      "env": {
+        "ANYTHINGLLM_API_KEY": "J04CGBG-DV24205-KNWY7YQ-1B1W63M",
+        "ANYTHINGLLM_BASE_URL": "http://localhost:3001"
+      }
+    },
+    "Limitless": {
+      "url": "https://api.limitless.ai/mcp",
+      "headers": {}
+    },
+    "gcloud": {
+      "command": "~/.nvm/versions/node/v22.16.0/bin/npx",
+      "args": [
+        "-y",
+        "@google-cloud/gcloud-mcp"
+      ],
+      "env": {
+        "GOOGLE_CLOUD_PROJECT": "default-1234",
+        "GCP_PROJECT_ID": "default-1234",
+        "PATH": "/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+      }
+    }
+  }
+}

@@ -20,7 +20,8 @@
     "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
     "python.terminal.useEnvFile": true,
     "git.autofetch": true,
-    "claudeCode.preferredLocation": "panel",
+    "claudeCode.preferredLocation": "sidebar",
     "specstory.derivedRules.enabled": false,
-    "specstory.showDeveloperTools": true
+    "specstory.showDeveloperTools": true,
+    "workbench.colorTheme": "Default Dark+"
 }
