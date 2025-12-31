@@ -226,5 +226,3 @@ activate-mcp-toolbox web-dev
 - Zero global MCP conflicts
 
 **SLOW Tracking:**
-
-- Daily scans completed 90%+ of days
