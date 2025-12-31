@@ -1,0 +1,44 @@
+{
+  "mcpServers": {
+    "github": {
+      "url": "https://api.githubcopilot.com/mcp/",
+      "headers": {
+        "Authorization": "Bearer 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"
+      }
+    },
+    "Notion": {
+      "command": "~/.nvm/versions/node/v22.16.0/bin/npx",
+      "args": [
+        "-y",
+        "@notionhq/notion-mcp-server"
+      ],
+      "env": {
+        "NOTION_TOKEN": "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"
+      }
+    },
+    "repomix": {
+      "command": "/opt/homebrew/bin/repomix",
+      "args": [
+        "--mcp"
+      ]
+    },
+    "context7": {
+      "url": "https://mcp.context7.com/mcp",
+      "headers": {
+        "CONTEXT7_API_KEY": "ctx7sk-cfcc26b9-098c-4d6b-8a27-c0d046f26164"
+      }
+    },
+    "gcloud": {
+      "command": "~/.nvm/versions/node/v22.16.0/bin/npx",
+      "args": [
+        "-y",
+        "@google-cloud/gcloud-mcp"
+      ],
+      "env": {
+        "GOOGLE_CLOUD_PROJECT": "default-1234",
+        "GCP_PROJECT_ID": "default-1234",
+        "PATH": "/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+      }
+    }
+  }
+}

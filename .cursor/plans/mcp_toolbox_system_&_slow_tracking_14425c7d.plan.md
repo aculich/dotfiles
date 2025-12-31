@@ -4,22 +4,22 @@ overview: Create a project-specific MCP toolbox system for quick wins, plus a st
 todos:
   - id: toolbox-structure
     content: Create /Users/me/dotfiles/cursor/mcp-toolboxes/ directory and extract MCPs from disabled config into logical toolbox JSON files (web-dev, cloud-infra, ai-research, full-stack)
-    status: pending
+    status: completed
   - id: activation-script
     content: Create activate-mcp-toolbox.sh script that copies toolbox config to .cursor/mcp.json in current project
-    status: pending
+    status: completed
   - id: toolbox-docs
     content: Create README.md documenting toolbox system, usage patterns, and when to use each toolbox
-    status: pending
+    status: completed
   - id: landscape-structure
     content: Create /Users/me/tools/toolchain-2026/mcp-landscape/ with daily-scans/, weekly-synthesis/, operationalizations/, wonderment/ directories
-    status: pending
+    status: completed
   - id: baseline-landscape
     content: "Create initial landscape baseline document capturing Dec 31, 2025 state: governance, security, ecosystem, key players"
-    status: pending
+    status: completed
   - id: tracking-sources
     content: Set up watchlists and source feeds for daily scanning (GitHub, HN, official docs, community forums)
-    status: pending
+    status: in_progress
   - id: scanning-automation
     content: Create scan-mcp-landscape.sh script for automated daily scanning and capture
     status: pending
@@ -223,6 +223,3 @@ activate-mcp-toolbox web-dev
 
 - Can activate a toolbox in < 30 seconds
 - Toolboxes cover 80% of common use cases
-- Zero global MCP conflicts
-
-**SLOW Tracking:**

@@ -1,0 +1,26 @@
+{
+  "mcpServers": {
+    "Nanobrowser": {
+      "url": "http://localhost:9666/mcp",
+      "headers": {}
+    },
+    "Browser Use": {
+      "url": "https://docs.browser-use.com/mcp",
+      "headers": {}
+    },
+    "chrome-devtools": {
+      "command": "~/.nvm/versions/node/v22.16.0/bin/npx",
+      "args": [
+        "-y",
+        "chrome-devtools-mcp@latest"
+      ],
+      "env": {}
+    },
+    "repomix": {
+      "command": "/opt/homebrew/bin/repomix",
+      "args": [
+        "--mcp"
+      ]
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "mcpServers": {
+    "gcloud": {
+      "command": "~/.nvm/versions/node/v22.16.0/bin/npx",
+      "args": [
+        "-y",
+        "@google-cloud/gcloud-mcp"
+      ],
+      "env": {
+        "GOOGLE_CLOUD_PROJECT": "default-1234",
+        "GCP_PROJECT_ID": "default-1234",
+        "PATH": "/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+      }
+    },
+    "github": {
+      "url": "https://api.githubcopilot.com/mcp/",
+      "headers": {
+        "Authorization": "Bearer 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"
+      }
+    },
+    "repomix": {
+      "command": "/opt/homebrew/bin/repomix",
+      "args": [
+        "--mcp"
+      ]
+    }
+  }
+}

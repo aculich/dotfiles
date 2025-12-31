@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "context7": {
+      "url": "https://mcp.context7.com/mcp",
+      "headers": {
+        "CONTEXT7_API_KEY": "ctx7sk-cfcc26b9-098c-4d6b-8a27-c0d046f26164"
+      }
+    },
+    "repomix": {
+      "command": "/opt/homebrew/bin/repomix",
+      "args": [
+        "--mcp"
+      ]
+    }
+  }
+}
