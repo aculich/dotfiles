@@ -1,3 +1,9 @@
+# History Management (per-shell history by default, shared on demand)
+alias hload='fc -RI ~/.zsh_history'          # Load shared history into current session
+alias hsearch='grep -a --color=auto'          # Search history file: hsearch "pattern" ~/.zsh_history
+alias hall='cat ~/.zsh_history | grep -a'     # Search all history: hall "pattern"
+alias hf='cat ~/.zsh_history | grep -a | fzf' # Fuzzy search all history
+
 # Alias Management and ZSH Configuration
 alias adump='alias | tee $ZSH_CUSTOM/aliases.dump; ls -lah $ZSH_CUSTOM/aliases.dump'                   # Dump all aliases to file and show it
 alias al='alias | perl -pe "s/=/\x23/" | column -x -s$(printf "\x23") -t | cut -c-$(tput cols) | fzf'  # Fuzzy find aliases

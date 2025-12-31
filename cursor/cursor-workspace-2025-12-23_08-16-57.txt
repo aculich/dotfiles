@@ -1,0 +1,707 @@
+
+Version:          Cursor 2.2.43 (32cfbe848b35d9eb320980195985450f244b3030, 2025-12-19T06:06:44.644Z)
+OS Version:       Darwin arm64 25.1.0
+CPUs:             Apple M3 Max (14 x 2400)
+Memory (System):  96.00GB (0.17GB free)
+Load (avg):       874, 24, 980
+VM:               0%
+Screen Reader:    yes
+Process Argv:     
+GPU Status:       2d_canvas:                              enabled
+                  direct_rendering_display_compositor:    disabled_off_ok
+                  gpu_compositing:                        enabled
+                  multiple_raster_threads:                enabled_on
+                  opengl:                                 enabled_on
+                  rasterization:                          enabled
+                  raw_draw:                               disabled_off_ok
+                  skia_graphite:                          enabled_on
+                  trees_in_viz:                           disabled_off
+                  video_decode:                           enabled
+                  video_encode:                           enabled
+                  webgl:                                  enabled
+                  webgl2:                                 enabled
+                  webgpu:                                 enabled
+                  webnn:                                  disabled_off
+
+CPU %	Mem MB	   PID	Process
+    5	   393	  5556	cursor main
+  155	   295	  5561	   gpu-process
+    0	    98	  5563	   utility-network-service
+   21	   393	  5565	window [1] (Veracity and Provenance Visualization Interfaces - Deep Research Fast — ai-veracity-chains)
+    6	   295	  5566	window [2] (Browser — rrid-app-frontend)
+   31	   295	  5567	window [3] (Browser — crb-nexus-deep-libguide)
+    7	   393	  5568	window [4] (DIAGRAMS.md — peeq-crb-nexus)
+    5	   295	  5569	window [5] (Browser — cidr-grants-antigravity)
+    6	   295	  5570	window [6] (Browser — aistudio-cidr-idea-expander)
+    6	   295	  5571	window [7] (CiDR_logos_v10.007.png — cidr-org)
+    5	   295	  5572	window [8] (Preview USERS.md — openpaper)
+    6	   295	  5573	window [9] (Preview DIAGRAMS.md — peeq-ocr-mike-stajura)
+   11	   295	  5574	window [10] (Browser — peeq-talent-firebase)
+    6	   295	  5575	window [11] (openpaper-links-tab-export-2025-12-14T03-08-24.md — rrid)
+    6	   295	  5576	window [12] (EMAIL-VENDOR-RFQ.md — ucb-vibeaccess)
+    6	   295	  5577	window [13] (ASSEMENT-REPORT.md — lam-eda)
+    8	   295	  5578	window [14] (Browser — lam-starter-scaffold)
+    1	   295	  5579	window [15] (Kurt Vonnegut on how to write a short story.en_operationalized.md — writing-quality)
+    8	   295	  5580	window [16] (Review: Set up Android Auto development environ... — grounded-automaps-pasadena)
+    0	    98	  5581	window [17] (open_app.sh — omi)
+    2	   197	  5582	window [18] (2025-12-13-workos-delve-soc2.md — blog-drafts)
+    6	   295	  5585	window [19] (okpe_diagram_generation_analysis_and_improvement_4623d3ce.plan.md — nav-fund-proposal)
+    8	   295	  5586	window [20] (GMT20251209-185920_Recording.transcript.vtt — crb-vision)
+    7	   393	  5587	window [21] (FUTURESTORY.md — chyp-app)
+    0	    98	  5624	shared-process
+    0	    98	  5625	fileWatcher [2]
+    0	    98	  5626	fileWatcher [3]
+    0	    98	  5628	fileWatcher [6]
+    0	    98	  5635	fileWatcher [13]
+    0	    98	  5636	fileWatcher [10]
+    0	    98	  5639	   window
+    0	    98	  5640	   window
+    0	    98	  5648	fileWatcher [5]
+    0	    98	  5654	   window
+    0	    98	  5657	   window
+    0	    98	  5658	fileWatcher [8]
+    0	    98	  5660	fileWatcher [16]
+    0	    98	  5661	fileWatcher [1]
+    0	    98	  5663	fileWatcher [4]
+    0	    98	  5664	fileWatcher [9]
+    0	    98	  5667	fileWatcher [21]
+    0	    98	  5669	fileWatcher [20]
+    1	    98	  5674	fileWatcher [14]
+    0	    98	  5677	fileWatcher [12]
+    0	    98	  5678	fileWatcher [7]
+    0	    98	  5679	fileWatcher [18]
+    0	    98	  5680	fileWatcher [11]
+    0	    98	  5681	fileWatcher [19]
+    0	    98	  5708	fileWatcher [15]
+    0	    98	  5711	   window
+    0	    98	  5720	fileWatcher [17]
+    1	   197	  5721	extensionHost [1]
+    0	     0	  8925	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.56-universal/bin/macos-aarch64/codex app-server
+    0	    98	  8932	     electron-nodejs (languageserver.js )
+    0	    98	  8933	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.4.0-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=5721
+    0	    98	  8939	     electron-nodejs (gitWorker.js )
+    0	     0	  8991	     /Users/me/.cursor/extensions/redhat.java-1.50.0-darwin-arm64/jre/21.0.9-macosx-aarch64/bin/java -Dfile.encoding=UTF-8 --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.prefs/java.util.prefs=ALL-UNNAMED --add-opens=java.base/java.nio.charset=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED -classpath /Users/me/.cursor/extensions/vscjava.vscode-gradle-3.17.1-universal/lib/gradle-server.jar com.github.badsyntax.gradle.GradleServer --port=57500 --startBuildServer=true --languageServerPipePath=/private/var/folders/sz/h_dnm51s04bgq0r18kld34600000gn/T/90b8fa3d9672931cdbfeeb17c8192b2b.sock --pipeName=/private/var/folders/sz/h_dnm51s04bgq0r18kld34600000gn/T/3a76d739f0bb7be85ef9c6c97f65a836.sock --bundleDir=/Users/me/.cursor/extensions/vscjava.vscode-gradle-3.17.1-universal/server
+    0	    98	 10534	     /Users/me/.cursor/extensions/redhat.java-1.50.0-darwin-arm64/jre/21.0.9-macosx-aarch64/bin/java --add-modules=ALL-SYSTEM --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/sun.nio.fs=ALL-UNNAMED -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Djava.import.generatesMetadataFilesAtProjectRoot=false -DDetectVMInstallationsJob.disabled=true -Dfile.encoding=utf8 -XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx2G -Xms100m -Xlog:disable -javaagent:/Users/me/.cursor/extensions/redhat.java-1.50.0-darwin-arm64/lombok/lombok-1.18.39-4050.jar -jar /Users/me/.cursor/extensions/redhat.java-1.50.0-darwin-arm64/server/plugins/org.eclipse.equinox.launcher_1.7.100.v20251111-0406.jar -configuration /Users/me/Library/Application Support/Cursor/User/globalStorage/redhat.java/1.50.0/config_ss_mac -data /Users/me/Library/Application Support/Cursor/User/workspaceStorage/973a23357721fec34af1834e6262bad3/redhat.java/ss_ws --pipe=/private/var/folders/sz/h_dnm51s04bgq0r18kld34600000gn/T/lsp-3b220c8651deacd7acdc0aca54a9d517.sock
+    1	    98	 10681	     /Users/me/.cursor/extensions/redhat.java-1.50.0-darwin-arm64/jre/21.0.9-macosx-aarch64/bin/java --add-modules=ALL-SYSTEM --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/sun.nio.fs=ALL-UNNAMED -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Djava.import.generatesMetadataFilesAtProjectRoot=false -DDetectVMInstallationsJob.disabled=true -Dfile.encoding=utf8 -XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx2G -Xms100m -Xlog:disable -javaagent:/Users/me/.cursor/extensions/redhat.java-1.50.0-darwin-arm64/lombok/lombok-1.18.39-4050.jar -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/Users/me/Library/Application Support/Cursor/User/workspaceStorage/973a23357721fec34af1834e6262bad3/redhat.java -Daether.dependencyCollector.impl=bf -jar /Users/me/.cursor/extensions/redhat.java-1.50.0-darwin-arm64/server/plugins/org.eclipse.equinox.launcher_1.7.100.v20251111-0406.jar -configuration /Users/me/Library/Application Support/Cursor/User/globalStorage/redhat.java/1.50.0/config_mac -data /Users/me/Library/Application Support/Cursor/User/workspaceStorage/973a23357721fec34af1834e6262bad3/redhat.java/jdt_ws --pipe=/private/var/folders/sz/h_dnm51s04bgq0r18kld34600000gn/T/lsp-b36bc0b764d6b0f21c6b6181668d9c44.sock
+    0	    98	 12555	     electron-nodejs (tailwindServer.js )
+    0	    98	 12842	     electron-nodejs (server-node.js )
+    0	    98	 19349	     electron-nodejs (eslintServer.js )
+    0	    98	 19363	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=5721
+    2	   197	  5722	extensionHost [18]
+    0	    98	  9194	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=5722
+    0	     0	  9838	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.56-universal/bin/macos-aarch64/codex app-server
+    0	    98	  9840	     electron-nodejs (eslintServer.js )
+    0	    98	  9841	     electron-nodejs (languageserver.js )
+    0	    98	  9842	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.4.0-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=5722
+    0	    98	  9852	     electron-nodejs (gitWorker.js )
+    3	   197	  5723	extensionHost [11]
+    0	    98	  7372	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=5723
+    1	     0	  7438	     /Users/me/.cursor/extensions/hashicorp.terraform-2.37.6-darwin-arm64/bin/terraform-ls serve
+    0	    98	  7453	     electron-nodejs (bin.js )
+    0	    98	  7675	     electron-nodejs (server-node.js )
+    0	     0	  8194	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.56-universal/bin/macos-aarch64/codex app-server
+    0	    98	  8212	     electron-nodejs (gitWorker.js )
+    0	    98	  8217	     electron-nodejs (languageserver.js )
+    0	    98	  8219	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.4.0-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=5723
+    0	    98	  8221	     electron-nodejs (eslintServer.js )
+    0	    98	  9111	     electron-nodejs (tailwindServer.js )
+    2	   197	  5724	extensionHost [20]
+    0	     0	  9650	     /Users/me/.cursor/extensions/ms-python.python-2025.6.1-darwin-arm64/python-env-tools/bin/pet server
+    0	     0	 10383	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.56-universal/bin/macos-aarch64/codex app-server
+    0	    98	 10401	     electron-nodejs (languageserver.js )
+    0	    98	 10404	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.4.0-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=5724
+    0	    98	 10437	     electron-nodejs (gitWorker.js )
+    7	   295	  5725	ptyHost
+    0	     0	  5804	     /bin/bash --init-file /Applications/Cursor.app/Contents/Resources/app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh
+    0	     0	  5819	     /bin/zsh -il
+    0	     0	  5820	     /bin/zsh -il
+    0	     0	  5827	     /bin/zsh -il
+    0	     0	  5832	     /bin/zsh -il
+    0	     0	  5834	     /bin/zsh -il
+    0	     0	  5835	     /bin/zsh -il
+    0	     0	  5836	     /bin/zsh -il
+    0	     0	  5837	     /bin/zsh -il
+    0	     0	  5838	     /bin/zsh -il
+    0	     0	  5839	     /bin/zsh -il
+    0	     0	  5840	     /bin/zsh -il
+    0	     0	  5842	     /bin/zsh -il
+    0	     0	  5843	     /bin/zsh -il
+    0	     0	  5844	     /bin/zsh -il
+    0	     0	  5845	     /bin/zsh -il
+    0	     0	  5846	     /bin/zsh -il
+    0	     0	  5847	     /bin/zsh -il
+    0	     0	  5848	     /bin/zsh -il
+    0	     0	  5850	     /bin/zsh -il
+    0	     0	  5851	     /bin/zsh -il
+    0	     0	  5852	     /bin/zsh -il
+    0	     0	  5853	     /bin/zsh -il
+    0	     0	  5854	     /bin/zsh -il
+    0	     0	  5855	     /bin/zsh -il
+    0	     0	  5856	     /bin/zsh -il
+    0	     0	  5857	     /bin/zsh -il
+    0	     0	 29683	       /bin/zsh -il
+    0	     0	 31106	         (zsh)
+    0	     0	  5858	     /bin/zsh -il
+    0	     0	  5859	     /bin/zsh -il
+    0	     0	 15317	       /opt/homebrew/bin/direnv export zsh
+    0	     0	 15462	         /opt/homebrew/opt/bash/bin/bash -c eval "$("/opt/homebrew/bin/direnv" stdlib)" && __main__ source_env $'/Users/me/projects/rrid/.envrc'
+    1	    98	 16372	           /Library/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python /opt/homebrew/Caskroom/gcloud-cli/529.0.0/google-cloud-sdk/lib/gcloud.py config configurations activate rrid
+    0	     0	  5860	     /bin/zsh -il
+    0	     0	  5862	     /bin/zsh -il
+    0	     0	  5863	     /bin/zsh -il
+    0	     0	  5867	     /bin/zsh -il
+    0	     0	  5874	     /bin/zsh -il
+    0	     0	  5875	     /bin/zsh -il
+    0	     0	  5921	     /bin/zsh -il
+    0	     0	  5923	     /bin/zsh -il
+    0	     0	  7298	     /bin/zsh -il
+    0	     0	 30191	       /bin/zsh -il
+    0	     0	 31128	         (zsh)
+    0	     0	  7299	     /bin/zsh -il
+    0	     0	 31014	       /bin/zsh -il
+    0	     0	 31088	         (git)
+    0	     0	 31095	       <defunct>
+    0	     0	  7301	     /bin/zsh -il
+    0	     0	 30415	       /bin/zsh -il
+    0	     0	 31104	         /bin/zsh -il
+    0	     0	 31123	           (zsh)
+    0	     0	 31084	       /bin/zsh -il
+    0	     0	  7305	     /bin/zsh -il
+    0	     0	 30664	       /bin/zsh -il
+    0	     0	  7307	     /bin/zsh -il
+    0	     0	 30510	       /bin/zsh -il
+    0	     0	 31038	         /bin/zsh -il
+    0	     0	 31065	           (zsh)
+    0	     0	 31069	             (git)
+    0	     0	 31036	       /bin/zsh -il
+    0	     0	  7327	     /bin/zsh -il
+    0	     0	 30633	       /bin/zsh -il
+    0	     0	 31129	       (zsh)
+    0	     0	  7335	     /bin/zsh -il
+    0	     0	 21688	       /opt/homebrew/bin/direnv export zsh
+    0	     0	 22088	         /opt/homebrew/opt/bash/bin/bash -c eval "$("/opt/homebrew/bin/direnv" stdlib)" && __main__ source_env $'/Users/me/projects/rrid/.envrc'
+    2	     0	 24064	           /Library/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python /opt/homebrew/Caskroom/gcloud-cli/529.0.0/google-cloud-sdk/lib/gcloud.py config configurations activate rrid
+    1	     0	  7337	     /bin/zsh -il
+    1	     0	  7338	     /bin/zsh -il
+    0	     0	 31040	       (direnv)
+    0	     0	  7339	     /bin/zsh -il
+    0	     0	 31076	       /bin/zsh -il
+    0	     0	 31125	         (zsh)
+    0	     0	  7340	     /bin/zsh -il
+    0	     0	  7341	     /bin/zsh -il
+    0	     0	 30976	       /bin/zsh -il
+    0	     0	 31099	         (zsh)
+    0	     0	 31110	           (git)
+    0	     0	  7376	     /bin/zsh -il
+    0	     0	 31041	       /bin/zsh -il
+    1	     0	  7381	     /bin/zsh -il
+    0	     0	 31085	       /bin/zsh -il
+    0	     0	 31100	         git rev-parse --git-dir
+    0	     0	  7384	     /bin/zsh -il
+    0	     0	 30661	       /bin/zsh -il
+    0	     0	  7393	     /bin/zsh -il
+    0	     0	  7394	     /bin/zsh -il
+    0	     0	 26399	       /bin/zsh -il
+    0	     0	  7395	     /bin/zsh -il
+    0	     0	 20289	       /opt/homebrew/bin/direnv export zsh
+    0	     0	 20354	         /opt/homebrew/opt/bash/bin/bash -c eval "$("/opt/homebrew/bin/direnv" stdlib)" && __main__ source_env $'/Users/me/projects/rrid/.envrc'
+    0	    98	 20675	           /Library/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python /opt/homebrew/Caskroom/gcloud-cli/529.0.0/google-cloud-sdk/lib/gcloud.py config configurations activate rrid
+    0	     0	  7398	     /bin/zsh -il
+    0	     0	 27162	       /bin/zsh -il
+    0	     0	 31127	         (zsh)
+    0	     0	  8034	     /bin/zsh -i
+    0	     0	 29863	       (zsh)
+    0	     0	 30646	         (zsh)
+    0	     0	 30859	           (zsh)
+    0	     0	 30923	             <defunct>
+    0	     0	 30643	       /bin/zsh -i
+    0	     0	  8268	     /bin/zsh -i
+    0	     0	 30708	       /opt/homebrew/bin/direnv export zsh
+    0	     0	 30946	         /opt/homebrew/opt/bash/bin/bash -c eval "$("/opt/homebrew/bin/direnv" stdlib)" && __main__ source_env $'/Users/me/.envrc'
+    0	     0	 31007	           (direnv)
+    0	     0	  8366	     /bin/zsh -il
+    0	     0	 24906	       /opt/homebrew/bin/direnv export zsh
+    0	     0	 24964	         /opt/homebrew/opt/bash/bin/bash -c eval "$("/opt/homebrew/bin/direnv" stdlib)" && __main__ source_env $'/Users/me/projects/rrid/.envrc'
+    1	     0	 25341	           /Library/Frameworks/Python.framework/Versions/3.12/Resources/Python.app/Contents/MacOS/Python /opt/homebrew/Caskroom/gcloud-cli/529.0.0/google-cloud-sdk/lib/gcloud.py config configurations activate rrid
+    0	     0	  8681	     /bin/zsh -il
+    0	     0	  8918	     /bin/zsh -i
+    0	     0	  9310	     /bin/zsh -i
+    0	     0	 30142	       /bin/zsh -i
+    0	     0	 31124	         (zsh)
+    0	     0	  9725	     /bin/zsh -i
+    0	     0	 30297	       /bin/zsh -i
+    2	     0	 10902	     /bin/zsh -i
+    0	     0	 11049	     /bin/zsh -il
+    0	     0	 27394	       /bin/zsh -il
+    0	     0	 27415	         /bin/zsh -il
+    0	     0	 30231	       /opt/homebrew/bin/direnv export zsh
+    0	     0	 30428	         /opt/homebrew/opt/bash/bin/bash -c eval "$("/opt/homebrew/bin/direnv" stdlib)" && __main__ source_env $'/Users/me/.envrc'
+    0	     0	 31086	           (bash)
+    0	     0	 11459	     /bin/zsh -il
+    0	     0	 11948	     /bin/zsh -il
+    0	     0	 29840	       /bin/zsh -il
+    0	     0	 29901	         /bin/zsh -il
+    0	     0	 12018	     /bin/zsh -il
+    0	     0	 30379	       /opt/homebrew/bin/direnv export zsh
+    0	     0	 30511	         /opt/homebrew/opt/bash/bin/bash -c eval "$("/opt/homebrew/bin/direnv" stdlib)" && __main__ source_env $'/Users/me/.envrc'
+    0	     0	 12498	     /bin/zsh -il
+    1	     0	 13177	     /bin/zsh -il
+    0	     0	 29753	       /bin/zsh -il
+    0	     0	 29833	         /bin/zsh -il
+    0	     0	 14267	     /bin/zsh -il
+    0	     0	 18550	     /bin/zsh -il
+    0	     0	 30145	       /opt/homebrew/bin/direnv export zsh
+    0	     0	 30441	         /opt/homebrew/opt/bash/bin/bash -c eval "$("/opt/homebrew/bin/direnv" stdlib)" && __main__ source_env $'/Users/me/.envrc'
+    0	     0	 31090	           (bash)
+    0	     0	 26598	     (ps)
+    0	     0	 27421	     (ps)
+    0	     0	 27947	     (ps)
+    0	     0	 28157	     (ps)
+    2	     0	 28430	     (ps)
+    0	     0	 28431	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 28432	     (ps)
+    0	     0	 28433	     (ps)
+    1	     0	 28434	     (ps)
+    0	     0	 28436	     (ps)
+    1	     0	 28443	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 28484	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 28626	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 28643	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 28694	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 28786	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 28792	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 28800	     (ps)
+    1	     0	 28924	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 28999	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 29161	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 29195	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 29211	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 29241	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 29245	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 29282	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 29285	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 29305	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 29336	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 29412	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 29424	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 29425	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 29454	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 29471	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 29473	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 29481	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 29494	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 29495	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 29512	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 29522	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 29526	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 29551	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 29622	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 29630	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 29647	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 29655	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 29663	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 29708	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 29759	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 29765	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 29779	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 29836	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 29866	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 29868	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 29877	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 29881	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 29889	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 29928	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 29936	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 29940	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 29942	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 29968	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 29969	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 29982	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 29986	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 30003	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 30107	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 30108	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 30143	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 30151	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 30162	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 30166	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 30167	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 30169	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 30185	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 30195	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 30220	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 30226	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 30255	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 30281	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 30283	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 30292	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 30316	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 30317	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 30320	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 30370	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    2	     0	 30371	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 30372	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 30374	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 30377	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 30402	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 30405	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 30407	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 30408	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    2	     0	 30419	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 30423	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 30433	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 30444	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 30449	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    2	     0	 30453	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 30463	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 30492	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 30493	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 30538	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 30540	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 30548	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 30575	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 30586	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 30594	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 30607	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 30611	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 30612	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 30613	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 30615	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 30620	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 30621	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 30778	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 30797	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 30800	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 30804	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 30837	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 30866	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 30870	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 30883	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 30888	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 30911	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 30913	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 30914	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 30916	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 30919	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 30928	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 30929	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 30934	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 30936	     (which)
+    0	     0	 31045	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 31046	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 31047	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 31048	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 31051	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 31052	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 31054	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 31055	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 31071	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 31117	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    1	     0	 31119	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 31120	     /bin/sh -c /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 31121	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 31130	     (sh)
+    0	     0	 31131	     (sh)
+    1	     0	 31132	     (sh)
+    0	     0	 31133	     (sh)
+    0	   197	  5726	extensionHost [12]
+    0	    98	  8648	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=5726
+    0	     0	  9115	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.56-universal/bin/macos-aarch64/codex app-server
+    0	    98	  9121	     electron-nodejs (eslintServer.js )
+    0	    98	  9123	     electron-nodejs (languageserver.js )
+    0	    98	  9126	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.4.0-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=5726
+    0	    98	  9127	     electron-nodejs (gitWorker.js )
+    1	   197	  5727	extensionHost [8]
+    0	    98	  7562	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=5727
+    0	     0	  8600	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.56-universal/bin/macos-aarch64/codex app-server
+    0	    98	  8602	     electron-nodejs (languageserver.js )
+    0	    98	  8612	     electron-nodejs (gitWorker.js )
+    0	    98	  8613	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.4.0-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=5727
+    0	    98	 10977	     electron-nodejs (eslintServer.js )
+    0	    98	 11473	     electron-nodejs (server-node.js )
+    0	    98	 11502	     electron-nodejs (tailwindServer.js )
+    0	    98	  5728	extensionHost [8]
+    1	   197	  5729	extensionHost [13]
+    0	    98	  7921	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=5729
+    0	     0	  7993	     /Users/me/.cursor/extensions/ms-python.python-2025.6.1-darwin-arm64/python-env-tools/bin/pet server
+    0	    98	  8035	     electron-nodejs (bin.js )
+    0	    98	  8387	     electron-nodejs (eslintServer.js )
+    0	    98	  8388	     electron-nodejs (languageserver.js )
+    0	     0	  8389	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.56-universal/bin/macos-aarch64/codex app-server
+    1	    98	  8390	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.4.0-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=5729
+    0	    98	  8402	     electron-nodejs (gitWorker.js )
+    0	    98	  5730	extensionHost [13]
+    1	   197	  5731	extensionHost [2]
+    0	    98	  8285	     electron-nodejs (bin.js )
+    0	     0	  9296	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.56-universal/bin/macos-aarch64/codex app-server
+    0	    98	  9302	     electron-nodejs (eslintServer.js )
+    0	    98	  9303	     electron-nodejs (languageserver.js )
+    2	    98	  9304	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.4.0-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=5731
+    0	    98	  9307	     electron-nodejs (gitWorker.js )
+    0	    98	  9343	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=5731
+    0	    98	  9437	     electron-nodejs (tailwindServer.js )
+    0	    98	  5733	extensionHost [2]
+    0	    98	  5734	extensionHost [12]
+    1	   197	  5735	extensionHost [16]
+    0	     0	  8493	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.56-universal/bin/macos-aarch64/codex app-server
+    0	    98	  8497	     electron-nodejs (languageserver.js )
+    0	    98	  8499	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.4.0-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=5735
+    0	    98	  8500	     electron-nodejs (gitWorker.js )
+    0	     0	  8789	     /Users/me/.cursor/extensions/redhat.java-1.50.0-darwin-arm64/jre/21.0.9-macosx-aarch64/bin/java -Dfile.encoding=UTF-8 --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.prefs/java.util.prefs=ALL-UNNAMED --add-opens=java.base/java.nio.charset=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED -classpath /Users/me/.cursor/extensions/vscjava.vscode-gradle-3.17.1-universal/lib/gradle-server.jar com.github.badsyntax.gradle.GradleServer --port=57429 --startBuildServer=true --languageServerPipePath=/private/var/folders/sz/h_dnm51s04bgq0r18kld34600000gn/T/f1252e5020f0e41cb2e131f62760d318.sock --pipeName=/private/var/folders/sz/h_dnm51s04bgq0r18kld34600000gn/T/b3f5f458479b73f775ed56e728fff53f.sock --bundleDir=/Users/me/.cursor/extensions/vscjava.vscode-gradle-3.17.1-universal/server
+    0	    98	  9213	     /Users/me/.cursor/extensions/redhat.java-1.50.0-darwin-arm64/jre/21.0.9-macosx-aarch64/bin/java --add-modules=ALL-SYSTEM --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/sun.nio.fs=ALL-UNNAMED -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Djava.import.generatesMetadataFilesAtProjectRoot=false -DDetectVMInstallationsJob.disabled=true -Dfile.encoding=utf8 -XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx4G -Xms100m -Xlog:disable -javaagent:/Users/me/.cursor/extensions/redhat.java-1.50.0-darwin-arm64/lombok/lombok-1.18.39-4050.jar -jar /Users/me/.cursor/extensions/redhat.java-1.50.0-darwin-arm64/server/plugins/org.eclipse.equinox.launcher_1.7.100.v20251111-0406.jar -configuration /Users/me/Library/Application Support/Cursor/User/globalStorage/redhat.java/1.50.0/config_ss_mac -data /Users/me/Library/Application Support/Cursor/User/workspaceStorage/d7c927fe0ee1268f5359e0885d1a7205/redhat.java/ss_ws --pipe=/private/var/folders/sz/h_dnm51s04bgq0r18kld34600000gn/T/lsp-e56c20596a0bface2d6051835f4517e4.sock
+    2	    98	  9539	     /Users/me/.cursor/extensions/redhat.java-1.50.0-darwin-arm64/jre/21.0.9-macosx-aarch64/bin/java --add-modules=ALL-SYSTEM --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/sun.nio.fs=ALL-UNNAMED -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Djava.import.generatesMetadataFilesAtProjectRoot=false -DDetectVMInstallationsJob.disabled=true -Dfile.encoding=utf8 -XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx4G -Xms100m -Xlog:disable -javaagent:/Users/me/.cursor/extensions/redhat.java-1.50.0-darwin-arm64/lombok/lombok-1.18.39-4050.jar -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/Users/me/Library/Application Support/Cursor/User/workspaceStorage/d7c927fe0ee1268f5359e0885d1a7205/redhat.java -Daether.dependencyCollector.impl=bf -jar /Users/me/.cursor/extensions/redhat.java-1.50.0-darwin-arm64/server/plugins/org.eclipse.equinox.launcher_1.7.100.v20251111-0406.jar -configuration /Users/me/Library/Application Support/Cursor/User/globalStorage/redhat.java/1.50.0/config_mac -data /Users/me/Library/Application Support/Cursor/User/workspaceStorage/d7c927fe0ee1268f5359e0885d1a7205/redhat.java/jdt_ws --pipe=/private/var/folders/sz/h_dnm51s04bgq0r18kld34600000gn/T/lsp-643b2a9ac1b25a555e37f0c4844d0fee.sock
+    0	    98	 14756	     electron-nodejs (server-node.js )
+    0	    98	  5736	extensionHost [16]
+    1	   197	  5737	extensionHost [15]
+    0	    98	  8114	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=5737
+    0	     0	  8143	     /Users/me/.cursor/extensions/ms-python.python-2025.6.1-darwin-arm64/python-env-tools/bin/pet server
+    0	     0	  8755	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.56-universal/bin/macos-aarch64/codex app-server
+    0	    98	  8757	     electron-nodejs (eslintServer.js )
+    0	    98	  8758	     electron-nodejs (languageserver.js )
+    0	    98	  8760	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.4.0-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=5737
+    0	    98	  8763	     electron-nodejs (gitWorker.js )
+    2	   197	  5738	extensionHost [7]
+    0	     0	  9530	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.56-universal/bin/macos-aarch64/codex app-server
+    0	    98	  9533	     electron-nodejs (languageserver.js )
+    0	    98	  9535	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.4.0-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=5738
+    0	    98	  9538	     electron-nodejs (gitWorker.js )
+    2	   197	  5739	extensionHost [14]
+    0	    98	  8042	     electron-nodejs (bin.js )
+    0	     0	  8724	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.56-universal/bin/macos-aarch64/codex app-server
+    0	    98	  8733	     electron-nodejs (languageserver.js )
+    1	    98	  8735	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.4.0-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=5739
+    0	    98	  8736	     electron-nodejs (gitWorker.js )
+    0	    98	  8795	     electron-nodejs (eslintServer.js )
+    0	    98	  8866	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=5739
+    0	    98	  9076	     electron-nodejs (tailwindServer.js )
+    1	   197	  5740	extensionHost [10]
+    0	     0	 11359	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.56-universal/bin/macos-aarch64/codex app-server
+    0	    98	 11362	     electron-nodejs (eslintServer.js )
+    0	    98	 11363	     electron-nodejs (languageserver.js )
+    0	    98	 11364	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.4.0-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=5740
+    0	    98	 11376	     electron-nodejs (gitWorker.js )
+    0	    98	 11391	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=5740
+    0	    98	 11484	     electron-nodejs (tailwindServer.js )
+    0	    98	  5741	extensionHost [10]
+    2	   197	  5742	extensionHost [17]
+    0	     0	  8451	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.56-universal/bin/macos-aarch64/codex app-server
+    0	    98	  8454	     electron-nodejs (gitWorker.js )
+    0	    98	  8462	     electron-nodejs (languageserver.js )
+    0	    98	  8464	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.4.0-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=5742
+    0	    98	  9451	     electron-nodejs (tailwindServer.js )
+    0	     0	 10492	     /Users/me/.cursor/extensions/redhat.java-1.50.0-darwin-arm64/jre/21.0.9-macosx-aarch64/bin/java -Dfile.encoding=UTF-8 --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.prefs/java.util.prefs=ALL-UNNAMED --add-opens=java.base/java.nio.charset=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED -classpath /Users/me/.cursor/extensions/vscjava.vscode-gradle-3.17.1-universal/lib/gradle-server.jar com.github.badsyntax.gradle.GradleServer --port=58201 --startBuildServer=true --languageServerPipePath=/private/var/folders/sz/h_dnm51s04bgq0r18kld34600000gn/T/066cb7cc5dfbebc15d02c3c0b8044c65.sock --pipeName=/private/var/folders/sz/h_dnm51s04bgq0r18kld34600000gn/T/6cf9479ec965f38653f0f819f871feb4.sock --bundleDir=/Users/me/.cursor/extensions/vscjava.vscode-gradle-3.17.1-universal/server
+    1	    98	 11110	     /Users/me/.cursor/extensions/redhat.java-1.50.0-darwin-arm64/jre/21.0.9-macosx-aarch64/bin/java --add-modules=ALL-SYSTEM --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/sun.nio.fs=ALL-UNNAMED -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Djava.import.generatesMetadataFilesAtProjectRoot=false -DDetectVMInstallationsJob.disabled=true -Dfile.encoding=utf8 -XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx2G -Xms100m -Xlog:disable -javaagent:/Users/me/.cursor/extensions/redhat.java-1.50.0-darwin-arm64/lombok/lombok-1.18.39-4050.jar -jar /Users/me/.cursor/extensions/redhat.java-1.50.0-darwin-arm64/server/plugins/org.eclipse.equinox.launcher_1.7.100.v20251111-0406.jar -configuration /Users/me/Library/Application Support/Cursor/User/globalStorage/redhat.java/1.50.0/config_ss_mac -data /Users/me/Library/Application Support/Cursor/User/workspaceStorage/701bf55c733dce99782ad1f57d7f9c8f/redhat.java/ss_ws --pipe=/private/var/folders/sz/h_dnm51s04bgq0r18kld34600000gn/T/lsp-58b7b8206f8c3b87035717020f5456ea.sock
+    1	    98	 11898	     /Users/me/.cursor/extensions/redhat.java-1.50.0-darwin-arm64/jre/21.0.9-macosx-aarch64/bin/java --add-modules=ALL-SYSTEM --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/sun.nio.fs=ALL-UNNAMED -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Djava.import.generatesMetadataFilesAtProjectRoot=false -DDetectVMInstallationsJob.disabled=true -Dfile.encoding=utf8 -XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx2G -Xms100m -Xlog:disable -javaagent:/Users/me/.cursor/extensions/redhat.java-1.50.0-darwin-arm64/lombok/lombok-1.18.39-4050.jar -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/Users/me/Library/Application Support/Cursor/User/workspaceStorage/701bf55c733dce99782ad1f57d7f9c8f/redhat.java -Daether.dependencyCollector.impl=bf -jar /Users/me/.cursor/extensions/redhat.java-1.50.0-darwin-arm64/server/plugins/org.eclipse.equinox.launcher_1.7.100.v20251111-0406.jar -configuration /Users/me/Library/Application Support/Cursor/User/globalStorage/redhat.java/1.50.0/config_mac -data /Users/me/Library/Application Support/Cursor/User/workspaceStorage/701bf55c733dce99782ad1f57d7f9c8f/redhat.java/jdt_ws --pipe=/private/var/folders/sz/h_dnm51s04bgq0r18kld34600000gn/T/lsp-c88fd2eafaa3bc506785a3b053179673.sock
+    0	    98	 17131	     electron-nodejs (eslintServer.js )
+    0	    98	 17140	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=5742
+    1	   197	  5743	extensionHost [21]
+    0	    98	  9249	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=5743
+    0	     0	  9285	     /Users/me/.cursor/extensions/ms-python.python-2025.6.1-darwin-arm64/python-env-tools/bin/pet server
+    0	     0	  9963	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.56-universal/bin/macos-aarch64/codex app-server
+    0	    98	  9974	     electron-nodejs (eslintServer.js )
+    0	    98	  9975	     electron-nodejs (languageserver.js )
+    0	    98	  9976	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.4.0-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=5743
+    0	    98	  9989	     electron-nodejs (gitWorker.js )
+    0	    98	 10319	     electron-nodejs (tailwindServer.js )
+    0	    98	  5744	extensionHost [21]
+    0	     0	  7229	     /bin/zsh -o extendedglob -ilc #!/usr/bin/env zsh\012\012# Usage:\012#   source dump_zsh_state.zsh\012#   dump_zsh_state\012# Or execute directly (captures a subshell's state):\012#   ./dump_zsh_state.zsh\012\012# Define a function so sourcing won't alter caller state; emulate locally inside\012function dump_zsh_state() {\012  emulate -L zsh -o errreturn -o pipefail\012  set -u\012\012\012  # Helper to log timing, only if DUMP_ZSH_STATE_TIMING is set\012  if [[ -n "${DUMP_ZSH_STATE_TIMING:-}" ]]; then\012    # Timing setup\012    typeset start_time=${EPOCHREALTIME}\012    typeset step_start=${EPOCHREALTIME}\012    _log_timing() {\012      typeset step_name="$1"\012      typeset now=${EPOCHREALTIME}\012      typeset step_duration=$((now - step_start))\012      typeset total_duration=$((now - start_time))\012      builtin printf "[TIMING] %-20s: %6.3fs (total: %6.3fs)\012" "$step_name" "$step_duration" "$total_duration" >&2\012      step_start=$now\012    }\012  else\012    _log_timing() { :; }\012  fi\012\012  # Ensure parameter arrays are available\012  builtin zmodload -F zsh/parameter p:parameters p:options p:functions p:aliases p:galiases p:saliases 2>/dev/null || true\012  _log_timing "zmodload"\012\012  # Helper to print a line to stdout\012  _emit() {\012    builtin print -r -- "$1"\012  }\012\012  # Helper to safely encode and emit unsafe values\012  _emit_encoded() {\012    local content="$1"\012    local var_name="$2"\012    if [[ -n "$content" ]]; then\012      # Use here-document to avoid argument list length limits entirely\012      builtin printf 'cursor_snap_%s=$(command base64 -d <<'''CURSOR_SNAP_EOF_%s'''\012' "$var_name" "$var_name"\012      command base64 <<<"$content" | command tr -d '\012'\012      builtin printf '\012CURSOR_SNAP_EOF_%s\012' "$var_name"\012      builtin printf ')\012'\012      builtin printf 'eval "$cursor_snap_%s"\012' "$var_name"\012    fi\012  }\012\012  _log_timing "init"\012\012  # Header\012  _emit "$PWD"\012\012  _emit "# zsh state dump generated on $(command date +'%Y-%m-%d %H:%M:%S %z')"\012  _log_timing "header"\012\012  # Working directory\012  _log_timing "working_dir"\012\012  # Environment variables (exported)\012  local env_vars\012  env_vars=$(builtin typeset -xp 2>/dev/null || true)\012  _emit_encoded "$env_vars" "ENV_VARS_B64"\012  _log_timing "env_variables"\012\012  # Options (replayable as setopt lines; exclude nounset which we enable locally)\012  local zsh_opts\012  zsh_opts=$(setopt 2>/dev/null | command grep -v '^nounset$' | command awk '{printf "builtin setopt %s 2>/dev/null || true\n", $0}' || true)\012  _emit_encoded "$zsh_opts" "ZSH_OPTS_B64"\012  _log_timing "options"\012\012  # Functions: dump all functions at once (much faster than individual processing)\012  local all_functions\012  all_functions=$(builtin typeset -f 2>/dev/null || true)\012  _emit_encoded "$all_functions" "FUNCTIONS_B64"\012  _log_timing "functions"\012\012  # Aliases (regular, global, and suffix)\012  {\012    builtin alias -L 2>/dev/null || true\012    builtin alias -gL 2>/dev/null || true\012    builtin alias -sL 2>/dev/null || true\012  }\012  _log_timing "aliases"\012\012  # Done\012  _emit "# end of zsh state dump"\012  _log_timing "finalize"\012}\012 builtin printf '__CURSOR_STATE_MARKER__\n'; dump_zsh_state
+    0	     0	 31039	       base64
+    2	     0	 31050	       tr -d \012
+    1	   197	  5745	extensionHost [5]
+    0	     0	 10278	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.56-universal/bin/macos-aarch64/codex app-server
+    0	    98	 10294	     electron-nodejs (languageserver.js )
+    0	    98	 10295	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.4.0-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=5745
+    0	    98	 10307	     electron-nodejs (gitWorker.js )
+    0	    98	  5746	extensionHost [5]
+    1	   197	  5747	extensionHost [3]
+    0	     0	  9312	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.56-universal/bin/macos-aarch64/codex app-server
+    0	    98	  9313	     electron-nodejs (languageserver.js )
+    0	    98	  9322	     electron-nodejs (gitWorker.js )
+    0	    98	  9323	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.4.0-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=5747
+    0	    98	  5748	extensionHost [3]
+    3	   197	  5749	extensionHost [6]
+    0	     0	  8054	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.56-universal/bin/macos-aarch64/codex app-server
+    0	    98	  8060	     electron-nodejs (languageserver.js )
+    0	    98	  8063	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.4.0-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=5749
+    0	    98	  8090	     electron-nodejs (gitWorker.js )
+    0	    98	  8211	     electron-nodejs (eslintServer.js )
+    0	    98	  8256	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=5749
+    2	   197	  5750	extensionHost [9]
+    0	    98	  8109	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=5750
+    0	     0	  8216	     /Users/me/.cursor/extensions/ms-python.python-2025.6.1-darwin-arm64/python-env-tools/bin/pet server
+    0	     0	  9642	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.56-universal/bin/macos-aarch64/codex app-server
+    0	    98	  9684	     electron-nodejs (languageserver.js )
+    0	    98	  9728	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.4.0-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=5750
+    0	    98	  9729	     electron-nodejs (gitWorker.js )
+    0	    98	  9824	     electron-nodejs (eslintServer.js )
+    0	    98	  9875	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=5750
+    0	    98	 10673	     electron-nodejs (tailwindServer.js )
+    0	    98	  5751	extensionHost [6]
+    0	    98	  5752	extensionHost [9]
+    1	   197	  5753	extensionHost [4]
+    0	    98	 10369	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=5753
+    0	     0	 10856	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.56-universal/bin/macos-aarch64/codex app-server
+    0	    98	 10857	     electron-nodejs (eslintServer.js )
+    0	    98	 10859	     electron-nodejs (languageserver.js )
+    0	    98	 10865	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.4.0-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=5753
+    0	    98	 10866	     electron-nodejs (gitWorker.js )
+    0	    98	 11597	     electron-nodejs (tailwindServer.js )
+    0	    98	 13784	     electron-nodejs (server-node.js )
+    0	    98	  5754	extensionHost [4]
+    1	   197	  5755	extensionHost [19]
+    0	     0	  8746	     /Users/me/.cursor/extensions/ms-python.python-2025.6.1-darwin-arm64/python-env-tools/bin/pet server
+    0	     0	 10791	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.56-universal/bin/macos-aarch64/codex app-server
+    0	    98	 10792	     electron-nodejs (languageserver.js )
+    0	    98	 10793	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.4.0-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=5755
+    0	    98	 10798	     electron-nodejs (gitWorker.js )
+    0	    98	  5763	extensionHost [1]
+    0	    98	  5766	extensionHost [20]
+    0	    98	  5767	extensionHost [14]
+    0	    98	  5768	extensionHost [11]
+    0	    98	  5769	extensionHost [7]
+    0	    98	  5770	extensionHost [18]
+    0	     0	  8595	     /bin/zsh -o extendedglob -ilc #!/usr/bin/env zsh\012\012# Usage:\012#   source dump_zsh_state.zsh\012#   dump_zsh_state\012# Or execute directly (captures a subshell's state):\012#   ./dump_zsh_state.zsh\012\012# Define a function so sourcing won't alter caller state; emulate locally inside\012function dump_zsh_state() {\012  emulate -L zsh -o errreturn -o pipefail\012  set -u\012\012\012  # Helper to log timing, only if DUMP_ZSH_STATE_TIMING is set\012  if [[ -n "${DUMP_ZSH_STATE_TIMING:-}" ]]; then\012    # Timing setup\012    typeset start_time=${EPOCHREALTIME}\012    typeset step_start=${EPOCHREALTIME}\012    _log_timing() {\012      typeset step_name="$1"\012      typeset now=${EPOCHREALTIME}\012      typeset step_duration=$((now - step_start))\012      typeset total_duration=$((now - start_time))\012      builtin printf "[TIMING] %-20s: %6.3fs (total: %6.3fs)\012" "$step_name" "$step_duration" "$total_duration" >&2\012      step_start=$now\012    }\012  else\012    _log_timing() { :; }\012  fi\012\012  # Ensure parameter arrays are available\012  builtin zmodload -F zsh/parameter p:parameters p:options p:functions p:aliases p:galiases p:saliases 2>/dev/null || true\012  _log_timing "zmodload"\012\012  # Helper to print a line to stdout\012  _emit() {\012    builtin print -r -- "$1"\012  }\012\012  # Helper to safely encode and emit unsafe values\012  _emit_encoded() {\012    local content="$1"\012    local var_name="$2"\012    if [[ -n "$content" ]]; then\012      # Use here-document to avoid argument list length limits entirely\012      builtin printf 'cursor_snap_%s=$(command base64 -d <<'''CURSOR_SNAP_EOF_%s'''\012' "$var_name" "$var_name"\012      command base64 <<<"$content" | command tr -d '\012'\012      builtin printf '\012CURSOR_SNAP_EOF_%s\012' "$var_name"\012      builtin printf ')\012'\012      builtin printf 'eval "$cursor_snap_%s"\012' "$var_name"\012    fi\012  }\012\012  _log_timing "init"\012\012  # Header\012  _emit "$PWD"\012\012  _emit "# zsh state dump generated on $(command date +'%Y-%m-%d %H:%M:%S %z')"\012  _log_timing "header"\012\012  # Working directory\012  _log_timing "working_dir"\012\012  # Environment variables (exported)\012  local env_vars\012  env_vars=$(builtin typeset -xp 2>/dev/null || true)\012  _emit_encoded "$env_vars" "ENV_VARS_B64"\012  _log_timing "env_variables"\012\012  # Options (replayable as setopt lines; exclude nounset which we enable locally)\012  local zsh_opts\012  zsh_opts=$(setopt 2>/dev/null | command grep -v '^nounset$' | command awk '{printf "builtin setopt %s 2>/dev/null || true\n", $0}' || true)\012  _emit_encoded "$zsh_opts" "ZSH_OPTS_B64"\012  _log_timing "options"\012\012  # Functions: dump all functions at once (much faster than individual processing)\012  local all_functions\012  all_functions=$(builtin typeset -f 2>/dev/null || true)\012  _emit_encoded "$all_functions" "FUNCTIONS_B64"\012  _log_timing "functions"\012\012  # Aliases (regular, global, and suffix)\012  {\012    builtin alias -L 2>/dev/null || true\012    builtin alias -gL 2>/dev/null || true\012    builtin alias -sL 2>/dev/null || true\012  }\012  _log_timing "aliases"\012\012  # Done\012  _emit "# end of zsh state dump"\012  _log_timing "finalize"\012}\012 builtin printf '__CURSOR_STATE_MARKER__\n'; dump_zsh_state
+    0	     0	 27315	       /bin/zsh -o extendedglob -ilc #!/usr/bin/env zsh\012\012# Usage:\012#   source dump_zsh_state.zsh\012#   dump_zsh_state\012# Or execute directly (captures a subshell's state):\012#   ./dump_zsh_state.zsh\012\012# Define a function so sourcing won't alter caller state; emulate locally inside\012function dump_zsh_state() {\012  emulate -L zsh -o errreturn -o pipefail\012  set -u\012\012\012  # Helper to log timing, only if DUMP_ZSH_STATE_TIMING is set\012  if [[ -n "${DUMP_ZSH_STATE_TIMING:-}" ]]; then\012    # Timing setup\012    typeset start_time=${EPOCHREALTIME}\012    typeset step_start=${EPOCHREALTIME}\012    _log_timing() {\012      typeset step_name="$1"\012      typeset now=${EPOCHREALTIME}\012      typeset step_duration=$((now - step_start))\012      typeset total_duration=$((now - start_time))\012      builtin printf "[TIMING] %-20s: %6.3fs (total: %6.3fs)\012" "$step_name" "$step_duration" "$total_duration" >&2\012      step_start=$now\012    }\012  else\012    _log_timing() { :; }\012  fi\012\012  # Ensure parameter arrays are available\012  builtin zmodload -F zsh/parameter p:parameters p:options p:functions p:aliases p:galiases p:saliases 2>/dev/null || true\012  _log_timing "zmodload"\012\012  # Helper to print a line to stdout\012  _emit() {\012    builtin print -r -- "$1"\012  }\012\012  # Helper to safely encode and emit unsafe values\012  _emit_encoded() {\012    local content="$1"\012    local var_name="$2"\012    if [[ -n "$content" ]]; then\012      # Use here-document to avoid argument list length limits entirely\012      builtin printf 'cursor_snap_%s=$(command base64 -d <<'''CURSOR_SNAP_EOF_%s'''\012' "$var_name" "$var_name"\012      command base64 <<<"$content" | command tr -d '\012'\012      builtin printf '\012CURSOR_SNAP_EOF_%s\012' "$var_name"\012      builtin printf ')\012'\012      builtin printf 'eval "$cursor_snap_%s"\012' "$var_name"\012    fi\012  }\012\012  _log_timing "init"\012\012  # Header\012  _emit "$PWD"\012\012  _emit "# zsh state dump generated on $(command date +'%Y-%m-%d %H:%M:%S %z')"\012  _log_timing "header"\012\012  # Working directory\012  _log_timing "working_dir"\012\012  # Environment variables (exported)\012  local env_vars\012  env_vars=$(builtin typeset -xp 2>/dev/null || true)\012  _emit_encoded "$env_vars" "ENV_VARS_B64"\012  _log_timing "env_variables"\012\012  # Options (replayable as setopt lines; exclude nounset which we enable locally)\012  local zsh_opts\012  zsh_opts=$(setopt 2>/dev/null | command grep -v '^nounset$' | command awk '{printf "builtin setopt %s 2>/dev/null || true\n", $0}' || true)\012  _emit_encoded "$zsh_opts" "ZSH_OPTS_B64"\012  _log_timing "options"\012\012  # Functions: dump all functions at once (much faster than individual processing)\012  local all_functions\012  all_functions=$(builtin typeset -f 2>/dev/null || true)\012  _emit_encoded "$all_functions" "FUNCTIONS_B64"\012  _log_timing "functions"\012\012  # Aliases (regular, global, and suffix)\012  {\012    builtin alias -L 2>/dev/null || true\012    builtin alias -gL 2>/dev/null || true\012    builtin alias -sL 2>/dev/null || true\012  }\012  _log_timing "aliases"\012\012  # Done\012  _emit "# end of zsh state dump"\012  _log_timing "finalize"\012}\012 builtin printf '__CURSOR_STATE_MARKER__\n'; dump_zsh_state
+    0	     0	 27358	         /bin/zsh -o extendedglob -ilc #!/usr/bin/env zsh\012\012# Usage:\012#   source dump_zsh_state.zsh\012#   dump_zsh_state\012# Or execute directly (captures a subshell's state):\012#   ./dump_zsh_state.zsh\012\012# Define a function so sourcing won't alter caller state; emulate locally inside\012function dump_zsh_state() {\012  emulate -L zsh -o errreturn -o pipefail\012  set -u\012\012\012  # Helper to log timing, only if DUMP_ZSH_STATE_TIMING is set\012  if [[ -n "${DUMP_ZSH_STATE_TIMING:-}" ]]; then\012    # Timing setup\012    typeset start_time=${EPOCHREALTIME}\012    typeset step_start=${EPOCHREALTIME}\012    _log_timing() {\012      typeset step_name="$1"\012      typeset now=${EPOCHREALTIME}\012      typeset step_duration=$((now - step_start))\012      typeset total_duration=$((now - start_time))\012      builtin printf "[TIMING] %-20s: %6.3fs (total: %6.3fs)\012" "$step_name" "$step_duration" "$total_duration" >&2\012      step_start=$now\012    }\012  else\012    _log_timing() { :; }\012  fi\012\012  # Ensure parameter arrays are available\012  builtin zmodload -F zsh/parameter p:parameters p:options p:functions p:aliases p:galiases p:saliases 2>/dev/null || true\012  _log_timing "zmodload"\012\012  # Helper to print a line to stdout\012  _emit() {\012    builtin print -r -- "$1"\012  }\012\012  # Helper to safely encode and emit unsafe values\012  _emit_encoded() {\012    local content="$1"\012    local var_name="$2"\012    if [[ -n "$content" ]]; then\012      # Use here-document to avoid argument list length limits entirely\012      builtin printf 'cursor_snap_%s=$(command base64 -d <<'''CURSOR_SNAP_EOF_%s'''\012' "$var_name" "$var_name"\012      command base64 <<<"$content" | command tr -d '\012'\012      builtin printf '\012CURSOR_SNAP_EOF_%s\012' "$var_name"\012      builtin printf ')\012'\012      builtin printf 'eval "$cursor_snap_%s"\012' "$var_name"\012    fi\012  }\012\012  _log_timing "init"\012\012  # Header\012  _emit "$PWD"\012\012  _emit "# zsh state dump generated on $(command date +'%Y-%m-%d %H:%M:%S %z')"\012  _log_timing "header"\012\012  # Working directory\012  _log_timing "working_dir"\012\012  # Environment variables (exported)\012  local env_vars\012  env_vars=$(builtin typeset -xp 2>/dev/null || true)\012  _emit_encoded "$env_vars" "ENV_VARS_B64"\012  _log_timing "env_variables"\012\012  # Options (replayable as setopt lines; exclude nounset which we enable locally)\012  local zsh_opts\012  zsh_opts=$(setopt 2>/dev/null | command grep -v '^nounset$' | command awk '{printf "builtin setopt %s 2>/dev/null || true\n", $0}' || true)\012  _emit_encoded "$zsh_opts" "ZSH_OPTS_B64"\012  _log_timing "options"\012\012  # Functions: dump all functions at once (much faster than individual processing)\012  local all_functions\012  all_functions=$(builtin typeset -f 2>/dev/null || true)\012  _emit_encoded "$all_functions" "FUNCTIONS_B64"\012  _log_timing "functions"\012\012  # Aliases (regular, global, and suffix)\012  {\012    builtin alias -L 2>/dev/null || true\012    builtin alias -gL 2>/dev/null || true\012    builtin alias -sL 2>/dev/null || true\012  }\012  _log_timing "aliases"\012\012  # Done\012  _emit "# end of zsh state dump"\012  _log_timing "finalize"\012}\012 builtin printf '__CURSOR_STATE_MARKER__\n'; dump_zsh_state
+    0	     0	 31026	       (base64)
+    1	     0	 31027	       tr -d \012
+    0	    98	  5776	extensionHost [19]
+    0	    98	  5785	extensionHost [15]
+    0	    98	  5786	extensionHost [17]
+    0	    98	  6353	   window
+    0	    98	  9035	   window
+    6	   393	 10905	window [22] (URLS-20251213_015118.md — continuous-ai)
+    0	    98	 10960	   window
+    0	    98	 11715	extensionHost [22]
+    0	    98	 11731	fileWatcher [22]
+    0	    98	 11885	extensionHost [22]
+    0	     0	 20365	     /bin/zsh -o extendedglob -ilc #!/usr/bin/env zsh\012\012# Usage:\012#   source dump_zsh_state.zsh\012#   dump_zsh_state\012# Or execute directly (captures a subshell's state):\012#   ./dump_zsh_state.zsh\012\012# Define a function so sourcing won't alter caller state; emulate locally inside\012function dump_zsh_state() {\012  emulate -L zsh -o errreturn -o pipefail\012  set -u\012\012\012  # Helper to log timing, only if DUMP_ZSH_STATE_TIMING is set\012  if [[ -n "${DUMP_ZSH_STATE_TIMING:-}" ]]; then\012    # Timing setup\012    typeset start_time=${EPOCHREALTIME}\012    typeset step_start=${EPOCHREALTIME}\012    _log_timing() {\012      typeset step_name="$1"\012      typeset now=${EPOCHREALTIME}\012      typeset step_duration=$((now - step_start))\012      typeset total_duration=$((now - start_time))\012      builtin printf "[TIMING] %-20s: %6.3fs (total: %6.3fs)\012" "$step_name" "$step_duration" "$total_duration" >&2\012      step_start=$now\012    }\012  else\012    _log_timing() { :; }\012  fi\012\012  # Ensure parameter arrays are available\012  builtin zmodload -F zsh/parameter p:parameters p:options p:functions p:aliases p:galiases p:saliases 2>/dev/null || true\012  _log_timing "zmodload"\012\012  # Helper to print a line to stdout\012  _emit() {\012    builtin print -r -- "$1"\012  }\012\012  # Helper to safely encode and emit unsafe values\012  _emit_encoded() {\012    local content="$1"\012    local var_name="$2"\012    if [[ -n "$content" ]]; then\012      # Use here-document to avoid argument list length limits entirely\012      builtin printf 'cursor_snap_%s=$(command base64 -d <<'''CURSOR_SNAP_EOF_%s'''\012' "$var_name" "$var_name"\012      command base64 <<<"$content" | command tr -d '\012'\012      builtin printf '\012CURSOR_SNAP_EOF_%s\012' "$var_name"\012      builtin printf ')\012'\012      builtin printf 'eval "$cursor_snap_%s"\012' "$var_name"\012    fi\012  }\012\012  _log_timing "init"\012\012  # Header\012  _emit "$PWD"\012\012  _emit "# zsh state dump generated on $(command date +'%Y-%m-%d %H:%M:%S %z')"\012  _log_timing "header"\012\012  # Working directory\012  _log_timing "working_dir"\012\012  # Environment variables (exported)\012  local env_vars\012  env_vars=$(builtin typeset -xp 2>/dev/null || true)\012  _emit_encoded "$env_vars" "ENV_VARS_B64"\012  _log_timing "env_variables"\012\012  # Options (replayable as setopt lines; exclude nounset which we enable locally)\012  local zsh_opts\012  zsh_opts=$(setopt 2>/dev/null | command grep -v '^nounset$' | command awk '{printf "builtin setopt %s 2>/dev/null || true\n", $0}' || true)\012  _emit_encoded "$zsh_opts" "ZSH_OPTS_B64"\012  _log_timing "options"\012\012  # Functions: dump all functions at once (much faster than individual processing)\012  local all_functions\012  all_functions=$(builtin typeset -f 2>/dev/null || true)\012  _emit_encoded "$all_functions" "FUNCTIONS_B64"\012  _log_timing "functions"\012\012  # Aliases (regular, global, and suffix)\012  {\012    builtin alias -L 2>/dev/null || true\012    builtin alias -gL 2>/dev/null || true\012    builtin alias -sL 2>/dev/null || true\012  }\012  _log_timing "aliases"\012\012  # Done\012  _emit "# end of zsh state dump"\012  _log_timing "finalize"\012}\012 builtin printf '__CURSOR_STATE_MARKER__\n'; dump_zsh_state
+    0	     0	 30755	   (git)
+    0	     0	 30909	   (git)
+    1	     0	 30958	   (git)
+    0	     0	 30997	   (git)
+    0	     0	 30998	   (git)
+    0	     0	 30999	   (git)
+    1	     0	 31003	   (git)
+    0	     0	 31019	   (git)
+    2	     0	 31118	   /Applications/Xcode.app/Contents/Developer/usr/bin/git config user.email
+
+Workspace Stats: 
+|  Window (URLS-20251213_015118.md — continuous-ai)
+|  Window (FUTURESTORY.md — chyp-app)
+|  Window (GMT20251209-185920_Recording.transcript.vtt — crb-vision)
+|  Window (okpe_diagram_generation_analysis_and_improvement_4623d3ce.plan.md — nav-fund-proposal)
+|  Window (2025-12-13-workos-delve-soc2.md — blog-drafts)
+|  Window (open_app.sh — omi)
+|  Window (Review: Set up Android Auto development environ... — grounded-automaps-pasadena)
+|  Window (Kurt Vonnegut on how to write a short story.en_operationalized.md — writing-quality)
+|  Window (Browser — lam-starter-scaffold)
+|  Window (ASSEMENT-REPORT.md — lam-eda)
+|  Window (EMAIL-VENDOR-RFQ.md — ucb-vibeaccess)
+|  Window (openpaper-links-tab-export-2025-12-14T03-08-24.md — rrid)
+|  Window (Browser — peeq-talent-firebase)
+|  Window (Preview DIAGRAMS.md — peeq-ocr-mike-stajura)
+|  Window (Preview USERS.md — openpaper)
+|  Window (CiDR_logos_v10.007.png — cidr-org)
+|  Window (Browser — aistudio-cidr-idea-expander)
+|  Window (Browser — cidr-grants-antigravity)
+|  Window (DIAGRAMS.md — peeq-crb-nexus)
+|  Window (Browser — crb-nexus-deep-libguide)
+|  Window (Browser — rrid-app-frontend)
+|  Window (Veracity and Provenance Visualization Interfaces - Deep Research Fast — ai-veracity-chains)
+|    Folder (ucb-vibeaccess): 47 files
+|      File types: md(25) eml(3) docx(2) DS_Store(1) mdc(1) cursorignore(1)
+|                  cursorindexingignore(1) gitignore(1) json(1)
+|                  2025-12-04T02-38-55-649Z(1)
+|      Conf files:
+|    Folder (aistudio-cidr-idea-expander): 52 files
+|      File types: md(11) json(5) ts(5) pdf(3) DS_Store(2) gitignore(2) tsx(2)
+|                  xlsx(2) mdc(1) cursorindexingignore(1)
+|      Conf files: package.json(1) tsconfig.json(1)
+|    Folder (crb-nexus-deep-libguide): 4120 files
+|      File types: md(3513) js(146) map(127) tsx(94) ts(67) json(52) env(2)
+|                  gitignore(2) css(2) ico(2)
+|      Conf files: package.json(2) cursorrules(1) tsconfig.json(1)
+|    Folder (peeq-talent-firebase): 731 files
+|      File types: js(121) map(106) tsx(94) md(91) png(62) json(56) ts(51)
+|                  mhtml(7) pdf(7) DS_Store(5)
+|      Conf files: package.json(3) tsconfig.json(1)
+|    Folder (crb-vision): 1682 files
+|      File types: py(526) pyc(523) h(79) md(29) docx(29) pxi(26) txt(20)
+|                  xml(18) pdf(17) png(17)
+|      Conf files:
+|    Folder (cidr-grants-antigravity): 1815 files
+|      File types: js(312) json(300) map(230) png(113) tsx(104) rsc(72) ts(66)
+|                  md(64) csv(52) html(30)
+|      Conf files: package.json(14) tsconfig.json(9) settings.json(1)
+|    Folder (continuous-ai): more than 108256 files
+|      File types: json(8229) eml(8020) md(3544) txt(31) py(9) jsonl(7) log(3)
+|                  DS_Store(2) gitignore(2) html(2)
+|      Conf files: settings.json(1)
+|    Folder (writing-quality): 6364 files
+|      File types: py(2307) pyc(2304) json(574) pyi(67) proto(63) txt(49)
+|                  typed(48) md(22) so(6) exe(6)
+|      Conf files:
+|    Folder (blog-drafts): 11961 files
+|      File types: md(5675) html(4907) txt(176) json(107) description(95)
+|                  vtt(89) pdf(80) mhtml(65) js(41) png(10)
+|      Conf files:
+|    Folder (nav-fund-proposal): 7123 files
+|      File types: py(2223) pyc(2220) json(576) png(222) js(129) h(79) pyi(73)
+|                  txt(63) proto(63) md(53)
+|      Conf files:
+|    Folder (cidr-org): 7890 files
+|      File types: jpg(2135) css(1419) map(825) png(631) js(594) html(355)
+|                  woff2(165) DS_Store(105) txt(99) eps(98)
+|      Conf files:
+|    Folder (rrid-app-frontend): 8039 files
+|      File types: js(2296) map(1847) json(1000) tsx(902) ts(293) md(148)
+|                  woff2(77) css(46) mjs(26) gitignore(15)
+|      Conf files: package.json(37) tsconfig.json(14)
+|    Folder (lam-starter-scaffold): 8041 files
+|      File types: js(2173) map(1755) json(1014) tsx(932) ts(301) md(152)
+|                  woff2(77) png(68) css(47) mhtml(32)
+|      Conf files: package.json(37) tsconfig.json(14)
+|    Folder (ai-veracity-chains): 7404 files
+|      File types: json(976) java(976) py(790) md(629) rs(283) png(229)
+|                  css(159) yml(121) pyc(108) ipynb(107)
+|      Conf files: dockerfile(13) package.json(12) makefile(7)
+|                  tsconfig.json(7) project.json(3) webpack.config.js(1)
+|                  settings.json(1)
+|    Folder (peeq-crb-nexus): more than 20738 files
+|      File types: py(5615) pyc(5613) md(3184) pyi(638) h(212) txt(173)
+|                  so(164) f90(122) typed(94) csv(64)
+|      Conf files: package.json(1)
+|    Folder (chyp-app): 18375 files
+|      File types: py(8178) pyc(3736) json(665) pyi(423) txt(174) tsx(158)
+|                  typed(115) md(99) so(85) ts(77)
+|      Conf files: package.json(4) tsconfig.json(2) settings.json(1)
+|    Folder (lam-eda): more than 21985 files
+|      File types: py(3817) pyc(3800) js(2179) map(1755) json(1036) tsx(932)
+|                  md(469) html(312) pyi(307) ts(301)
+|      Conf files: package.json(37) tsconfig.json(14) dockerfile(1)
+|    Folder (openpaper): more than 21191 files
+|      File types: py(7909) gz(1948) json(1930) pyi(1417) so(280) txt(165)
+|                  tsx(137) h(132) typed(93) c(67)
+|      Conf files: dockerfile(4) github-actions(1) package.json(1)
+|                  tsconfig.json(1)
+|    Folder (grounded-automaps-pasadena): 10585 files
+|      File types: xml(1451) kt(896) json(753) flat(721) png(469) class(439)
+|                  dex(165) bin(134) java(111) len(111)
+|      Conf files: settings.json(2) package.json(1) tsconfig.json(1)
+|    Folder (rrid): more than 20273 files
+|      File types: py(4547) pyc(4477) json(3093) pyi(372) js(256) md(140)
+|                  map(122) so(99) txt(75) proto(62)
+|      Conf files: package.json(12) dockerfile(4) tsconfig.json(3)
+|    Folder (peeq-ocr-mike-stajura): more than 22908 files
+|      File types: py(6040) pyc(5703) json(758) afm(422) png(362) pyi(306)
+|                  txt(282) md(162) dylib(124) ipynb(120)
+|      Conf files: dockerfile(8) package.json(6) makefile(3) tsconfig.json(2)
+|    Folder (omi): more than 20305 files
+|      File types: h(945) yaml(897) dart(897) class(894) png(809) len(582)
+|                  d(542) o(538) c(510) json(467)
+|      Conf files: cmake(16) github-actions(14) dockerfile(11)
+|                  package.json(10) tsconfig.json(5) settings.json(4)
+|                  launch.json(2) makefile(1)
+
+

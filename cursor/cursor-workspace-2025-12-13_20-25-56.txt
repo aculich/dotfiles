@@ -1,0 +1,736 @@
+
+Version:          Cursor 2.2.20 (b3573281c4775bfc6bba466bf6563d3d498d1070, 2025-12-12T06:29:26.017Z)
+OS Version:       Darwin arm64 25.1.0
+CPUs:             Apple M3 Max (14 x 2400)
+Memory (System):  96.00GB (0.15GB free)
+Load (avg):       45, 192, 163
+VM:               0%
+Screen Reader:    yes
+Process Argv:     
+GPU Status:       2d_canvas:                              enabled
+                  direct_rendering_display_compositor:    disabled_off_ok
+                  gpu_compositing:                        enabled
+                  multiple_raster_threads:                enabled_on
+                  opengl:                                 enabled_on
+                  rasterization:                          enabled
+                  raw_draw:                               disabled_off_ok
+                  skia_graphite:                          enabled_on
+                  trees_in_viz:                           disabled_off
+                  video_decode:                           enabled
+                  video_encode:                           enabled
+                  webgl:                                  enabled
+                  webgl2:                                 enabled
+                  webgpu:                                 enabled
+                  webnn:                                  disabled_off
+
+CPU %	Mem MB	   PID	Process
+   22	   492	 23402	cursor main
+   14	    98	 23405	   gpu-process
+    0	    98	 23407	   utility-network-service
+    0	   295	 23409	window [1] (Preview chatgpt-analysis.md — 2025-12-01-tom-combinedoc)
+    1	   295	 23410	window [2] (Browser — peeq-talent-firebase)
+    2	   295	 23411	window [3] (Cursor Settings — peeq-carb)
+    9	   393	 23412	window [4] (DEVELOPER-QUICKSTART.md — ucb-vibeaccess)
+    4	   393	 23413	window [5] (ISSUE.md — rrid)
+    3	   295	 23414	window [6] (GMT20251209-185920_Recording.transcript.vtt — crb-vision)
+    2	   393	 23415	window [7] (Extension: SpecStory — peeq-ocr-mike-stajura)
+    0	   393	 23416	window [8] (justjoe-dollah.md — spec-kit-quickstart)
+    3	   393	 23417	window [9] (Browser — peeq-crb-nexus)
+    0	   295	 23418	window [10] (transcript.md — crb-macss-fiscal)
+    3	   295	 23419	window [11] (Browser — crb-nexus-deep-libguide)
+    3	   295	 23420	window [12] (Preview FEATURE_TESTING_REPORT.md — ai-veracity-chains)
+    3	   295	 23421	window [13] (Review: CVE-2025-55182 security update — nexus-workflow)
+    0	   393	 23422	window [14] (AGENT_DOCUMENT_PROCESSING_LANDSCAPE.md — vertex-playground)
+    1	   393	 23423	window [15] (TECHSTACK.md — rrid-app-frontend)
+    6	   492	 23424	window [16] (URLS-20251213_015118.md — continuous-ai)
+    0	   393	 23425	window [17] (2025-12-13-competition-for-value-and-flight-to-quality.md — blog-drafts)
+    0	   295	 23426	window [18] (AI_CLI_MANIFEST.md — ai-cli)
+    0	   393	 23427	window [19] (folding-concepts.md — best-practices)
+    0	    98	 23479	shared-process
+    0	    98	 23480	fileWatcher [11]
+    0	    98	 23483	fileWatcher [9]
+    0	    98	 23485	fileWatcher [16]
+    0	    98	 23486	fileWatcher [14]
+    0	   295	 23487	extensionHost [4]
+    0	    98	 24010	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=23487
+    0	     0	 24219	     npm exec @notionhq/notion-mcp-server
+    0	     0	 30988	       node /Users/me/.npm/_npx/2e5266eea15d0ccd/node_modules/.bin/notion-mcp-server
+    0	     0	 24556	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.51-universal/bin/macos-aarch64/codex app-server
+    0	    98	 24564	     electron-nodejs (eslintServer.js )
+    0	     0	 33684	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 35919	     npm exec chrome-devtools-mcp@latest
+    0	     0	 37510	       node /Users/me/.npm/_npx/15c61037b1978c83/node_modules/.bin/chrome-devtools-mcp
+    0	     0	 42001	     npm exec anythingllm-mcp-server@2.0.0
+    0	     0	 45712	       node /Users/me/.npm/_npx/d696fd126c76d9b8/node_modules/.bin/anythingllm-mcp-server
+    0	     0	 48412	     npm exec @google-cloud/gcloud-mcp
+    0	     0	 48918	       node /Users/me/.npm/_npx/645560f7ff651e99/node_modules/.bin/gcloud-mcp
+    0	   295	 23488	extensionHost [6]
+    0	     0	 24132	     /Users/me/.cursor/extensions/ms-python.python-2025.6.1-darwin-arm64/python-env-tools/bin/pet server
+    0	     0	 24754	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.51-universal/bin/macos-aarch64/codex app-server
+    0	     0	 24766	     npm exec @notionhq/notion-mcp-server
+    0	     0	 30978	       node /Users/me/.npm/_npx/2e5266eea15d0ccd/node_modules/.bin/notion-mcp-server
+    0	     0	 33728	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 36034	     npm exec chrome-devtools-mcp@latest
+    0	     0	 37742	       node /Users/me/.npm/_npx/15c61037b1978c83/node_modules/.bin/chrome-devtools-mcp
+    0	     0	 44531	     npm exec anythingllm-mcp-server@2.0.0
+    0	     0	 47846	       node /Users/me/.npm/_npx/d696fd126c76d9b8/node_modules/.bin/anythingllm-mcp-server
+    0	     0	 48468	     npm exec @google-cloud/gcloud-mcp
+    0	     0	 49178	       node /Users/me/.npm/_npx/645560f7ff651e99/node_modules/.bin/gcloud-mcp
+    0	   295	 23489	extensionHost [10]
+    0	    98	 23972	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=23489
+    0	     0	 24078	     /Users/me/.cursor/extensions/hashicorp.terraform-2.37.6-darwin-arm64/bin/terraform-ls serve
+    0	     0	 24535	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.51-universal/bin/macos-aarch64/codex app-server
+    0	    98	 24539	     electron-nodejs (eslintServer.js )
+    0	     0	 24552	     npm exec @notionhq/notion-mcp-server
+    0	     0	 29615	       node /Users/me/.npm/_npx/2e5266eea15d0ccd/node_modules/.bin/notion-mcp-server
+    0	    98	 24948	     electron-nodejs (tailwindServer.js )
+    0	    98	 25713	     electron-nodejs (server-node.js )
+    0	     0	 32820	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 35335	     npm exec chrome-devtools-mcp@latest
+    0	     0	 36971	       node /Users/me/.npm/_npx/15c61037b1978c83/node_modules/.bin/chrome-devtools-mcp
+    0	     0	 40870	     npm exec anythingllm-mcp-server@2.0.0
+    0	     0	 44649	       node /Users/me/.npm/_npx/d696fd126c76d9b8/node_modules/.bin/anythingllm-mcp-server
+    0	     0	 46368	     npm exec @google-cloud/gcloud-mcp
+    0	     0	 48448	       node /Users/me/.npm/_npx/645560f7ff651e99/node_modules/.bin/gcloud-mcp
+    0	   590	 23491	extensionHost [11]
+    0	    98	 24654	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=23491
+    0	     0	 24937	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.51-universal/bin/macos-aarch64/codex app-server
+    0	    98	 24945	     electron-nodejs (eslintServer.js )
+    0	     0	 24959	     npm exec @notionhq/notion-mcp-server
+    0	     0	 30247	       node /Users/me/.npm/_npx/2e5266eea15d0ccd/node_modules/.bin/notion-mcp-server
+    0	    98	 25055	     electron-nodejs (tailwindServer.js )
+    0	     0	 33962	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 36053	     npm exec chrome-devtools-mcp@latest
+    0	     0	 37864	       node /Users/me/.npm/_npx/15c61037b1978c83/node_modules/.bin/chrome-devtools-mcp
+    0	     0	 44260	     npm exec anythingllm-mcp-server@2.0.0
+    0	     0	 47477	       node /Users/me/.npm/_npx/d696fd126c76d9b8/node_modules/.bin/anythingllm-mcp-server
+    0	     0	 48372	     npm exec @google-cloud/gcloud-mcp
+    0	     0	 48865	       node /Users/me/.npm/_npx/645560f7ff651e99/node_modules/.bin/gcloud-mcp
+    0	   295	 23492	extensionHost [8]
+    0	    98	 23845	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=23492
+    0	     0	 24432	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.51-universal/bin/macos-aarch64/codex app-server
+    0	    98	 24433	     electron-nodejs (eslintServer.js )
+    0	     0	 24434	     npm exec @notionhq/notion-mcp-server
+    0	     0	 30391	       node /Users/me/.npm/_npx/2e5266eea15d0ccd/node_modules/.bin/notion-mcp-server
+    0	    98	 24486	     electron-nodejs (tailwindServer.js )
+    0	    98	 25331	     electron-nodejs (server-node.js )
+    0	     0	 33551	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 35286	     npm exec chrome-devtools-mcp@latest
+    0	     0	 37292	       node /Users/me/.npm/_npx/15c61037b1978c83/node_modules/.bin/chrome-devtools-mcp
+    0	     0	 40874	     npm exec anythingllm-mcp-server@2.0.0
+    0	     0	 44767	       node /Users/me/.npm/_npx/d696fd126c76d9b8/node_modules/.bin/anythingllm-mcp-server
+    0	     0	 48373	     npm exec @google-cloud/gcloud-mcp
+    0	     0	 49081	       node /Users/me/.npm/_npx/645560f7ff651e99/node_modules/.bin/gcloud-mcp
+    2	    98	 23493	ptyHost
+    0	     0	   684	     /bin/zsh -il
+    0	     0	  1016	     /bin/zsh -il
+    0	     0	  1048	     /bin/zsh -il
+    0	     0	  1273	     /bin/zsh -il
+    0	     0	  8142	     /bin/zsh -il
+    0	     0	 10959	     /bin/zsh -il
+    0	     0	 11468	     /bin/zsh -il
+    0	     0	 14827	     /bin/zsh -il
+    0	     0	 17377	     /bin/zsh -il
+    0	     0	 19648	     /bin/zsh -il
+    0	     0	 19797	     /bin/zsh -il
+    0	     0	 23626	     /bin/zsh -il
+    1	     0	 23627	     /bin/zsh -il
+    0	     0	 43636	       (zsh)
+    0	     0	 43649	         (zsh)
+    0	     0	 43651	           (git)
+    0	     0	 43652	       (zsh)
+    0	     0	 43658	         (zsh)
+    0	     0	 23629	     /bin/zsh -il
+    0	     0	 23630	     /bin/zsh -il
+    0	     0	 42812	       /bin/bash ./workspace-snapshot.sh
+    0	     0	 43568	         /bin/bash ./workspace-snapshot.sh
+    0	     0	 43569	           zsh ./dump-cursor-windows.sh
+    0	     0	 43582	             bash /opt/homebrew/bin/cursor --status
+    0	    98	 43588	               electron-nodejs (cli.js )
+    0	     0	 23658	     /bin/bash --init-file /Applications/Cursor.app/Contents/Resources/app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh
+    0	     0	 23697	     /bin/zsh -il
+    0	     0	 23701	     /bin/zsh -il
+    0	     0	 23704	     /bin/zsh -il
+    0	     0	 23706	     /bin/zsh -il
+    0	     0	 23709	     /bin/zsh -il
+    0	     0	 23710	     /bin/zsh -il
+    0	     0	 23713	     /bin/zsh -il
+    0	     0	 23714	     /bin/zsh -il
+    0	     0	 23716	     /bin/zsh -il
+    0	     0	 23717	     /bin/zsh -il
+    0	     0	 23718	     /bin/zsh -il
+    0	     0	 23720	     /bin/zsh -il
+    0	     0	 23722	     /bin/zsh -il
+    0	     0	 23723	     /bin/zsh -il
+    0	     0	 23724	     /bin/zsh -il
+    0	     0	 23726	     /bin/zsh -il
+    0	     0	 23781	     /bin/zsh -il
+    0	     0	 23958	     /bin/zsh -il
+    0	     0	 24135	     /bin/zsh -i
+    0	     0	 24152	     /bin/zsh -i
+    0	     0	 24173	     /bin/zsh -il
+    0	     0	 24193	     /bin/zsh -il
+    0	     0	 24263	     /bin/zsh -il
+    0	     0	 24267	     /bin/zsh -il
+    0	     0	 24268	     /bin/zsh -il
+    0	     0	 24269	     /bin/zsh -il
+    0	     0	 24280	     /bin/zsh -il
+    0	     0	 24299	     /bin/zsh -i
+    0	     0	 24315	     /bin/zsh -il
+    0	     0	 24492	     /bin/zsh -il
+    0	     0	 24495	     /bin/zsh -il
+    0	     0	 24515	     /bin/zsh -il
+    0	     0	 24517	     /bin/zsh -il
+    0	     0	 24521	     /bin/zsh -il
+    0	     0	 24522	     /bin/zsh -il
+    0	     0	 24551	     /bin/zsh -il
+    0	     0	 24557	     /bin/zsh -il
+    0	     0	 24560	     /bin/zsh -il
+    0	     0	 24643	     /bin/zsh -il
+    0	     0	 24730	     /bin/zsh -il
+    0	     0	 24835	     /bin/zsh -il
+    0	     0	 24885	     /bin/zsh -il
+    0	     0	 24967	     /bin/zsh -il
+    0	     0	 25144	     /bin/zsh -il
+    0	     0	 25182	     /bin/zsh -il
+    0	     0	 25351	     /bin/zsh -il
+    0	     0	 25357	     /bin/zsh -il
+    0	     0	 25371	     /bin/zsh -il
+    0	     0	 28241	     /bin/zsh -il
+    0	     0	 37644	     /bin/zsh -il
+    0	     0	 37690	     /bin/zsh -il
+    0	     0	 41579	     /bin/zsh -i
+    6	     0	 43625	     /bin/ps -ax -o pid=,ppid=,pcpu=,pmem=,command=
+    0	     0	 55003	     /bin/zsh -il
+    0	     0	 63175	     /bin/zsh -il
+    0	     0	 67359	     /bin/zsh -i
+    0	     0	 83125	     /bin/zsh -il
+    0	     0	 83200	     /bin/zsh -il
+    0	     0	 84690	     /bin/zsh -il
+    0	     0	 84691	     /bin/zsh -il
+    0	     0	 84970	     /opt/homebrew/bin/bash --init-file /Applications/Cursor.app/Contents/Resources/app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh
+    0	     0	 85108	     /bin/zsh -l
+    0	     0	 85332	     /bin/zsh -il
+    0	     0	 85951	     /opt/homebrew/bin/bash --init-file /Applications/Cursor.app/Contents/Resources/app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh
+    0	     0	 89799	     /bin/zsh -i
+    0	     0	 90183	     /bin/zsh -il
+    0	     0	 93110	     /bin/zsh -il
+    0	     0	 94993	     /bin/zsh -il
+    0	     0	 96522	     /bin/zsh -il
+    0	     0	 96609	     /bin/zsh -il
+    0	     0	 98288	     /bin/zsh -il
+    0	     0	 98289	     /bin/zsh -il
+    0	     0	 98957	     /bin/zsh -il
+    0	    98	 23494	fileWatcher [10]
+    0	   295	 23495	extensionHost [14]
+    0	    98	 24401	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=23495
+    0	     0	 24463	     /Users/me/.cursor/extensions/hashicorp.terraform-2.37.6-darwin-arm64/bin/terraform-ls serve
+    0	     0	 24640	     npm exec @notionhq/notion-mcp-server
+    0	     0	 29748	       node /Users/me/.npm/_npx/2e5266eea15d0ccd/node_modules/.bin/notion-mcp-server
+    0	    98	 25421	     electron-nodejs (eslintServer.js )
+    0	     0	 25423	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.51-universal/bin/macos-aarch64/codex app-server
+    0	    98	 25474	     electron-nodejs (tailwindServer.js )
+    0	    98	 26973	     electron-nodejs (server-node.js )
+    0	     0	 33658	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 35881	     npm exec chrome-devtools-mcp@latest
+    0	     0	 37640	       node /Users/me/.npm/_npx/15c61037b1978c83/node_modules/.bin/chrome-devtools-mcp
+    0	     0	 43602	     npm exec anythingllm-mcp-server@2.0.0
+    0	     0	 47335	       node /Users/me/.npm/_npx/d696fd126c76d9b8/node_modules/.bin/anythingllm-mcp-server
+    0	     0	 48433	     npm exec @google-cloud/gcloud-mcp
+    0	     0	 48934	       node /Users/me/.npm/_npx/645560f7ff651e99/node_modules/.bin/gcloud-mcp
+    2	   492	 23496	extensionHost [9]
+    0	    98	 24884	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=23496
+    0	     0	 25005	     npm exec @notionhq/notion-mcp-server
+    0	     0	 30648	       node /Users/me/.npm/_npx/2e5266eea15d0ccd/node_modules/.bin/notion-mcp-server
+    0	     0	 26211	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.51-universal/bin/macos-aarch64/codex app-server
+    0	    98	 26212	     electron-nodejs (eslintServer.js )
+    0	    98	 28045	     electron-nodejs (server-node.js )
+    0	     0	 33832	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 36031	     npm exec chrome-devtools-mcp@latest
+    0	     0	 37987	       node /Users/me/.npm/_npx/15c61037b1978c83/node_modules/.bin/chrome-devtools-mcp
+    0	     0	 43848	     npm exec anythingllm-mcp-server@2.0.0
+    0	     0	 47363	       node /Users/me/.npm/_npx/d696fd126c76d9b8/node_modules/.bin/anythingllm-mcp-server
+    0	     0	 48400	     npm exec @google-cloud/gcloud-mcp
+    0	     0	 48837	       node /Users/me/.npm/_npx/645560f7ff651e99/node_modules/.bin/gcloud-mcp
+   44	  1278	 23497	extensionHost [16]
+    0	    98	 24767	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=23497
+    0	    98	 25872	     electron-nodejs (eslintServer.js )
+    0	     0	 25873	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.51-universal/bin/macos-aarch64/codex app-server
+    0	     0	 25888	     npm exec @notionhq/notion-mcp-server
+    0	     0	 31318	       node /Users/me/.npm/_npx/2e5266eea15d0ccd/node_modules/.bin/notion-mcp-server
+    0	    98	 27294	     electron-nodejs (tailwindServer.js )
+    0	     0	 33543	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 35984	     npm exec chrome-devtools-mcp@latest
+    0	     0	 37408	       node /Users/me/.npm/_npx/15c61037b1978c83/node_modules/.bin/chrome-devtools-mcp
+    0	     0	 41563	     /Users/me/.cursor/extensions/ms-python.python-2025.6.1-darwin-arm64/python-env-tools/bin/pet server
+    0	   492	 41566	     /Applications/Cursor.app/Contents/Resources/app/resources/helpers/node --max-old-space-size=32768 /Users/me/.cursor/extensions/anysphere.cursorpyright-1.0.10/dist/server.js --cancellationReceive=file:8a277a0f9649cb1077acb6ccc98c6f24f61717cc6b --node-ipc --clientProcessId=23497
+    0	     0	 41972	     npm exec anythingllm-mcp-server@2.0.0
+    0	     0	 46413	       node /Users/me/.npm/_npx/d696fd126c76d9b8/node_modules/.bin/anythingllm-mcp-server
+    0	    98	 42554	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=23497
+    0	     0	 48303	     npm exec @google-cloud/gcloud-mcp
+    0	     0	 48763	       node /Users/me/.npm/_npx/645560f7ff651e99/node_modules/.bin/gcloud-mcp
+    0	    98	 23498	fileWatcher [4]
+    0	    98	 23499	fileWatcher [8]
+    0	    98	 23500	fileWatcher [7]
+    0	    98	 23501	fileWatcher [6]
+    0	    98	 23502	fileWatcher [3]
+    0	    98	 23503	fileWatcher [2]
+    0	    98	 23505	   window
+    0	    98	 23506	fileWatcher [1]
+    0	    98	 23508	fileWatcher [5]
+    0	    98	 23509	fileWatcher [19]
+    0	    98	 23510	fileWatcher [18]
+    0	    98	 23511	fileWatcher [13]
+    0	    98	 23515	fileWatcher [17]
+    0	    98	 23518	fileWatcher [15]
+    0	    98	 23522	fileWatcher [12]
+    0	   492	 23523	extensionHost [3]
+    0	    98	 24933	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=23523
+    0	     0	 25847	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.51-universal/bin/macos-aarch64/codex app-server
+    0	    98	 25849	     electron-nodejs (eslintServer.js )
+    0	     0	 25852	     npm exec @notionhq/notion-mcp-server
+    0	     0	 31204	       node /Users/me/.npm/_npx/2e5266eea15d0ccd/node_modules/.bin/notion-mcp-server
+    0	     0	 34288	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 36230	     npm exec chrome-devtools-mcp@latest
+    0	     0	 37995	       node /Users/me/.npm/_npx/15c61037b1978c83/node_modules/.bin/chrome-devtools-mcp
+    0	     0	 44052	     npm exec anythingllm-mcp-server@2.0.0
+    0	     0	 47267	       node /Users/me/.npm/_npx/d696fd126c76d9b8/node_modules/.bin/anythingllm-mcp-server
+    0	     0	 48406	     npm exec @google-cloud/gcloud-mcp
+    0	     0	 48853	       node /Users/me/.npm/_npx/645560f7ff651e99/node_modules/.bin/gcloud-mcp
+    0	   295	 23524	extensionHost [1]
+    0	    98	 24209	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=23524
+    0	     0	 24270	     /Users/me/.cursor/extensions/ms-python.python-2025.6.1-darwin-arm64/python-env-tools/bin/pet server
+    0	     0	 25160	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.51-universal/bin/macos-aarch64/codex app-server
+    0	    98	 25352	     electron-nodejs (eslintServer.js )
+    0	     0	 26026	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 29838	     npm exec @google-cloud/gcloud-mcp
+    0	     0	 34795	       node /Users/me/.npm/_npx/645560f7ff651e99/node_modules/.bin/gcloud-mcp
+    0	   393	 23526	extensionHost [5]
+    0	    98	 27058	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=23526
+    0	    98	 27191	     electron-nodejs (bin.js )
+    0	     0	 27248	     /Users/me/.cursor/extensions/hashicorp.terraform-2.37.6-darwin-arm64/bin/terraform-ls serve
+    0	     0	 27929	     npm exec @notionhq/notion-mcp-server
+    0	     0	 32680	       node /Users/me/.npm/_npx/2e5266eea15d0ccd/node_modules/.bin/notion-mcp-server
+    0	    98	 29106	     electron-nodejs (server-node.js )
+    0	     0	 29681	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.51-universal/bin/macos-aarch64/codex app-server
+    0	    98	 29688	     electron-nodejs (eslintServer.js )
+    0	    98	 30053	     electron-nodejs (tailwindServer.js )
+    0	     0	 35629	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 36810	     npm exec chrome-devtools-mcp@latest
+    0	     0	 39429	       node /Users/me/.npm/_npx/15c61037b1978c83/node_modules/.bin/chrome-devtools-mcp
+    0	     0	 45327	     npm exec anythingllm-mcp-server@2.0.0
+    0	     0	 48363	       node /Users/me/.npm/_npx/d696fd126c76d9b8/node_modules/.bin/anythingllm-mcp-server
+    0	     0	 48568	     npm exec @google-cloud/gcloud-mcp
+    0	     0	 49477	       node /Users/me/.npm/_npx/645560f7ff651e99/node_modules/.bin/gcloud-mcp
+    0	  1180	 23533	extensionHost [2]
+    0	    98	 26178	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=23533
+    0	     0	 27008	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.51-universal/bin/macos-aarch64/codex app-server
+    0	     0	 27027	     npm exec @notionhq/notion-mcp-server
+    0	     0	 32770	       node /Users/me/.npm/_npx/2e5266eea15d0ccd/node_modules/.bin/notion-mcp-server
+    0	    98	 27362	     electron-nodejs (eslintServer.js )
+    0	    98	 27385	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=23533
+    0	    98	 27509	     electron-nodejs (tailwindServer.js )
+    0	     0	 35693	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 36618	     npm exec chrome-devtools-mcp@latest
+    0	     0	 39607	       node /Users/me/.npm/_npx/15c61037b1978c83/node_modules/.bin/chrome-devtools-mcp
+    0	     0	 44928	     npm exec anythingllm-mcp-server@2.0.0
+    0	     0	 48078	       node /Users/me/.npm/_npx/d696fd126c76d9b8/node_modules/.bin/anythingllm-mcp-server
+    0	     0	 48596	     npm exec @google-cloud/gcloud-mcp
+    0	     0	 49733	       node /Users/me/.npm/_npx/645560f7ff651e99/node_modules/.bin/gcloud-mcp
+    0	    98	 23556	   window
+    0	   197	 23558	extensionHost [19]
+    0	    98	 25027	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=23558
+    0	     0	 25228	     npm exec @notionhq/notion-mcp-server
+    0	     0	 31090	       node /Users/me/.npm/_npx/2e5266eea15d0ccd/node_modules/.bin/notion-mcp-server
+    0	     0	 26346	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.51-universal/bin/macos-aarch64/codex app-server
+    0	    98	 26348	     electron-nodejs (eslintServer.js )
+    0	    98	 29075	     electron-nodejs (server-node.js )
+    0	     0	 34097	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 36012	     npm exec chrome-devtools-mcp@latest
+    0	     0	 37778	       node /Users/me/.npm/_npx/15c61037b1978c83/node_modules/.bin/chrome-devtools-mcp
+    0	     0	 44527	     npm exec anythingllm-mcp-server@2.0.0
+    0	     0	 47601	       node /Users/me/.npm/_npx/d696fd126c76d9b8/node_modules/.bin/anythingllm-mcp-server
+    0	     0	 48437	     npm exec @google-cloud/gcloud-mcp
+    0	     0	 48846	       node /Users/me/.npm/_npx/645560f7ff651e99/node_modules/.bin/gcloud-mcp
+    0	   197	 23566	extensionHost [18]
+    0	    98	 24993	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=23566
+    0	     0	 25258	     npm exec @notionhq/notion-mcp-server
+    0	     0	 31422	       node /Users/me/.npm/_npx/2e5266eea15d0ccd/node_modules/.bin/notion-mcp-server
+    0	     0	 25765	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.51-universal/bin/macos-aarch64/codex app-server
+    0	    98	 25771	     electron-nodejs (eslintServer.js )
+    0	     0	 34290	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 36091	     npm exec chrome-devtools-mcp@latest
+    0	     0	 37569	       node /Users/me/.npm/_npx/15c61037b1978c83/node_modules/.bin/chrome-devtools-mcp
+    0	     0	 43823	     npm exec anythingllm-mcp-server@2.0.0
+    0	     0	 46690	       node /Users/me/.npm/_npx/d696fd126c76d9b8/node_modules/.bin/anythingllm-mcp-server
+    0	     0	 48393	     npm exec @google-cloud/gcloud-mcp
+    0	     0	 48779	       node /Users/me/.npm/_npx/645560f7ff651e99/node_modules/.bin/gcloud-mcp
+    0	   197	 23568	extensionHost [13]
+    0	     0	 25409	     npm exec @notionhq/notion-mcp-server
+    0	     0	 31223	       node /Users/me/.npm/_npx/2e5266eea15d0ccd/node_modules/.bin/notion-mcp-server
+    0	    98	 25907	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=23568
+    0	     0	 26304	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.51-universal/bin/macos-aarch64/codex app-server
+    0	    98	 26307	     electron-nodejs (eslintServer.js )
+    0	    98	 26511	     electron-nodejs (tailwindServer.js )
+    0	     0	 34539	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 36352	     npm exec chrome-devtools-mcp@latest
+    0	     0	 38386	       node /Users/me/.npm/_npx/15c61037b1978c83/node_modules/.bin/chrome-devtools-mcp
+    0	     0	 44051	     npm exec anythingllm-mcp-server@2.0.0
+    0	     0	 47883	       node /Users/me/.npm/_npx/d696fd126c76d9b8/node_modules/.bin/anythingllm-mcp-server
+    0	     0	 48528	     npm exec @google-cloud/gcloud-mcp
+    0	     0	 49466	       node /Users/me/.npm/_npx/645560f7ff651e99/node_modules/.bin/gcloud-mcp
+    1	   295	 23581	extensionHost [17]
+    0	    98	 25478	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=23581
+    0	     0	 26938	     npm exec @notionhq/notion-mcp-server
+    0	     0	 32771	       node /Users/me/.npm/_npx/2e5266eea15d0ccd/node_modules/.bin/notion-mcp-server
+    0	     0	 26950	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.51-universal/bin/macos-aarch64/codex app-server
+    0	    98	 26954	     electron-nodejs (eslintServer.js )
+    0	     0	 35921	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 36783	     npm exec chrome-devtools-mcp@latest
+    0	     0	 39817	       node /Users/me/.npm/_npx/15c61037b1978c83/node_modules/.bin/chrome-devtools-mcp
+    0	     0	 43695	     npm exec anythingllm-mcp-server@2.0.0
+    0	     0	 47361	       node /Users/me/.npm/_npx/d696fd126c76d9b8/node_modules/.bin/anythingllm-mcp-server
+    0	     0	 48438	     npm exec @google-cloud/gcloud-mcp
+    0	     0	 48940	       node /Users/me/.npm/_npx/645560f7ff651e99/node_modules/.bin/gcloud-mcp
+    0	   492	 23600	extensionHost [15]
+    0	    98	 25738	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=23600
+    0	    98	 25769	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=23600
+    0	    98	 25792	     electron-nodejs (bin.js )
+    0	     0	 26071	     npm exec @notionhq/notion-mcp-server
+    0	     0	 31664	       node /Users/me/.npm/_npx/2e5266eea15d0ccd/node_modules/.bin/notion-mcp-server
+    0	     0	 26257	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.51-universal/bin/macos-aarch64/codex app-server
+    0	    98	 26260	     electron-nodejs (eslintServer.js )
+    0	    98	 26631	     electron-nodejs (tailwindServer.js )
+    0	     0	 33828	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 35947	     npm exec chrome-devtools-mcp@latest
+    0	     0	 37476	       node /Users/me/.npm/_npx/15c61037b1978c83/node_modules/.bin/chrome-devtools-mcp
+    0	     0	 44480	     npm exec @google-cloud/gcloud-mcp
+    0	     0	 47752	       node /Users/me/.npm/_npx/645560f7ff651e99/node_modules/.bin/gcloud-mcp
+    1	   295	 23617	extensionHost [12]
+    0	    98	 26629	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=23617
+    0	     0	 26790	     npm exec @notionhq/notion-mcp-server
+    0	     0	 32278	       node /Users/me/.npm/_npx/2e5266eea15d0ccd/node_modules/.bin/notion-mcp-server
+    0	     0	 28960	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.51-universal/bin/macos-aarch64/codex app-server
+    0	    98	 29001	     electron-nodejs (server-node.js )
+    0	    98	 29198	     electron-nodejs (tailwindServer.js )
+    0	    98	 29528	     electron-nodejs (eslintServer.js )
+    0	     0	 35421	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 36754	     npm exec chrome-devtools-mcp@latest
+    0	     0	 39133	       node /Users/me/.npm/_npx/15c61037b1978c83/node_modules/.bin/chrome-devtools-mcp
+    0	     0	 44748	     npm exec anythingllm-mcp-server@2.0.0
+    0	     0	 47963	       node /Users/me/.npm/_npx/d696fd126c76d9b8/node_modules/.bin/anythingllm-mcp-server
+    0	     0	 48541	     npm exec @google-cloud/gcloud-mcp
+    0	     0	 49481	       node /Users/me/.npm/_npx/645560f7ff651e99/node_modules/.bin/gcloud-mcp
+    0	    98	 23618	extensionHost [8]
+    0	    98	 23690	extensionHost [10]
+    0	    98	 23735	   window
+    0	    98	 23757	extensionHost [4]
+    0	    98	 23863	extensionHost [9]
+    0	    98	 23918	extensionHost [6]
+    0	    98	 23953	extensionHost [14]
+    0	    98	 24005	extensionHost [11]
+    0	    98	 24098	extensionHost [16]
+    0	    98	 24151	extensionHost [3]
+    0	    98	 24172	extensionHost [1]
+    0	    98	 24204	extensionHost [5]
+    0	    98	 24264	extensionHost [2]
+    0	    98	 24307	extensionHost [19]
+    0	    98	 24326	extensionHost [18]
+    0	    98	 24331	extensionHost [13]
+    0	    98	 24339	extensionHost [17]
+    0	    98	 24341	extensionHost [15]
+    0	    98	 24384	extensionHost [12]
+    0	    98	 25347	   window
+    0	   295	 37086	window [22] (background.md — futureofme)
+    0	    98	 37177	fileWatcher [22]
+    0	   197	 37178	extensionHost [22]
+    0	     0	 37250	     npm exec @notionhq/notion-mcp-server
+    0	     0	 37530	       node /Users/me/.npm/_npx/2e5266eea15d0ccd/node_modules/.bin/notion-mcp-server
+    0	     0	 37382	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.51-universal/bin/macos-aarch64/codex app-server
+    0	     0	 38000	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 38043	     npm exec chrome-devtools-mcp@latest
+    0	     0	 38081	       node /Users/me/.npm/_npx/15c61037b1978c83/node_modules/.bin/chrome-devtools-mcp
+    0	     0	 38100	     npm exec anythingllm-mcp-server@2.0.0
+    0	     0	 38126	       node /Users/me/.npm/_npx/d696fd126c76d9b8/node_modules/.bin/anythingllm-mcp-server
+    0	     0	 38166	     npm exec @google-cloud/gcloud-mcp
+    0	     0	 38184	       node /Users/me/.npm/_npx/645560f7ff651e99/node_modules/.bin/gcloud-mcp
+    0	    98	 38773	     electron-nodejs (eslintServer.js )
+    0	    98	 38795	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=37178
+    0	    98	 37204	extensionHost [22]
+    0	   393	 67148	extensionHost [7]
+    0	    98	 67288	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=67148
+    0	    98	 67291	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=67148
+    0	     0	 67338	     /Users/me/.cursor/extensions/ms-python.python-2025.6.1-darwin-arm64/python-env-tools/bin/pet server
+    0	     0	 67344	     /Users/me/.cursor/extensions/hashicorp.terraform-2.37.6-darwin-arm64/bin/terraform-ls serve
+    0	    98	 67390	     electron-nodejs (server-node.js )
+    0	     0	 68372	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.51-universal/bin/macos-aarch64/codex app-server
+    0	    98	 68379	     electron-nodejs (eslintServer.js )
+    0	     0	 68402	     npm exec @notionhq/notion-mcp-server
+    0	     0	 68495	       node /Users/me/.npm/_npx/2e5266eea15d0ccd/node_modules/.bin/notion-mcp-server
+    0	     0	 68624	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 68625	     npm exec chrome-devtools-mcp@latest
+    0	     0	 68638	       node /Users/me/.npm/_npx/15c61037b1978c83/node_modules/.bin/chrome-devtools-mcp
+    0	     0	 68639	     npm exec anythingllm-mcp-server@2.0.0
+    0	     0	 68670	       node /Users/me/.npm/_npx/d696fd126c76d9b8/node_modules/.bin/anythingllm-mcp-server
+    0	     0	 68671	     npm exec @google-cloud/gcloud-mcp
+    0	     0	 68684	       node /Users/me/.npm/_npx/645560f7ff651e99/node_modules/.bin/gcloud-mcp
+    0	     0	 75180	     /Applications/Cursor.app/Contents/Resources/app/resources/helpers/node --max-old-space-size=32768 /Users/me/.cursor/extensions/anysphere.cursorpyright-1.0.10/dist/server.js --cancellationReceive=file:e13786bd0cbcc196acf23dbc5f723002627bfdc539 --node-ipc --clientProcessId=67148
+    0	    98	 76053	     electron-nodejs (languageserver.js )
+    0	    98	 67149	extensionHost [7]
+    3	   393	 82606	window [21] (ghrepos_function.sh — limitless-rewind-tools)
+    0	   197	 82637	extensionHost [21]
+    0	    98	 82772	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=82637
+    0	     0	 82870	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.51-universal/bin/macos-aarch64/codex app-server
+    0	    98	 82871	     electron-nodejs (eslintServer.js )
+    0	     0	 82872	     npm exec @notionhq/notion-mcp-server
+    0	     0	 83112	       node /Users/me/.npm/_npx/2e5266eea15d0ccd/node_modules/.bin/notion-mcp-server
+    0	     0	 83618	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 83645	     npm exec chrome-devtools-mcp@latest
+    0	     0	 83748	       node /Users/me/.npm/_npx/15c61037b1978c83/node_modules/.bin/chrome-devtools-mcp
+    0	     0	 83786	     npm exec anythingllm-mcp-server@2.0.0
+    0	     0	 83852	       node /Users/me/.npm/_npx/d696fd126c76d9b8/node_modules/.bin/anythingllm-mcp-server
+    0	     0	 83869	     npm exec @google-cloud/gcloud-mcp
+    0	     0	 83921	       node /Users/me/.npm/_npx/645560f7ff651e99/node_modules/.bin/gcloud-mcp
+    0	    98	 94740	     electron-nodejs (tailwindServer.js )
+    0	    98	 82638	fileWatcher [21]
+    0	    98	 82646	extensionHost [21]
+    2	   688	 84545	window [23] (Review: Limitless data takeout and migration st... — limitless-quickstart)
+    0	   393	 84554	extensionHost [23]
+    0	    98	 84684	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=84554
+    0	     0	 84740	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.51-universal/bin/macos-aarch64/codex app-server
+    0	    98	 84741	     electron-nodejs (eslintServer.js )
+    0	    98	 84833	     electron-nodejs (tailwindServer.js )
+    0	    98	 86192	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=84554
+    0	     0	 86230	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 87008	     npm exec @google-cloud/gcloud-mcp
+    0	     0	 87118	       node /Users/me/.npm/_npx/645560f7ff651e99/node_modules/.bin/gcloud-mcp
+    0	     0	 89786	     /Users/me/.cursor/extensions/ms-python.python-2025.6.1-darwin-arm64/python-env-tools/bin/pet server
+    0	     0	 89806	     /Applications/Cursor.app/Contents/Resources/app/resources/helpers/node --max-old-space-size=32768 /Users/me/.cursor/extensions/anysphere.cursorpyright-1.0.10/dist/server.js --cancellationReceive=file:c859a07663bddb20edd6d51dc8c591fb419794e3a8 --node-ipc --clientProcessId=84554
+    0	    98	 84586	fileWatcher [23]
+    0	   295	 84611	window [24] (Preview 2025-10-18_17-20Z-understanding-logo-and-wordmark-downloads.md — limitless-integration-quickstart)
+    0	    98	 84612	extensionHost [23]
+    0	   295	 84639	extensionHost [24]
+    0	    98	 85191	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=84639
+    0	     0	 85327	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.51-universal/bin/macos-aarch64/codex app-server
+    0	    98	 85328	     electron-nodejs (eslintServer.js )
+    0	     0	 85333	     npm exec @notionhq/notion-mcp-server
+    0	     0	 85977	       node /Users/me/.npm/_npx/2e5266eea15d0ccd/node_modules/.bin/notion-mcp-server
+    0	    98	 85417	     electron-nodejs (tailwindServer.js )
+    0	     0	 86789	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 86897	     npm exec chrome-devtools-mcp@latest
+    0	     0	 86973	       node /Users/me/.npm/_npx/15c61037b1978c83/node_modules/.bin/chrome-devtools-mcp
+    0	     0	 87134	     npm exec anythingllm-mcp-server@2.0.0
+    0	     0	 87215	       node /Users/me/.npm/_npx/d696fd126c76d9b8/node_modules/.bin/anythingllm-mcp-server
+    0	     0	 87266	     npm exec @google-cloud/gcloud-mcp
+    0	     0	 87329	       node /Users/me/.npm/_npx/645560f7ff651e99/node_modules/.bin/gcloud-mcp
+    0	    98	 84642	fileWatcher [24]
+    0	    98	 84697	extensionHost [24]
+    0	   295	 84736	window [25] (constants.ts — limitless-lifelog-analyzer)
+    0	   197	 84852	extensionHost [25]
+    0	     0	 85710	     tsserver[5.9.2]: syntax
+    0	     0	 85711	     tsserver[5.9.2]: semantic
+    0	     0	 86084	       /Applications/Cursor.app/Contents/Resources/app/resources/helpers/node /Applications/Cursor.app/Contents/Resources/app/extensions/node_modules/typescript/lib/typingsInstaller.js --globalTypingsCacheLocation /Users/me/Library/Caches/typescript/5.9 --enableTelemetry --typesMapLocation /Applications/Cursor.app/Contents/Resources/app/extensions/node_modules/typescript/lib/typesMap.json --validateDefaultNpmLocation
+    0	     0	 86010	     npm exec @notionhq/notion-mcp-server
+    0	     0	 86588	       node /Users/me/.npm/_npx/2e5266eea15d0ccd/node_modules/.bin/notion-mcp-server
+    0	     0	 86029	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.51-universal/bin/macos-aarch64/codex app-server
+    0	    98	 86033	     electron-nodejs (eslintServer.js )
+    0	    98	 86632	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=84852
+    0	     0	 86899	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 86947	     npm exec chrome-devtools-mcp@latest
+    0	     0	 87072	       node /Users/me/.npm/_npx/15c61037b1978c83/node_modules/.bin/chrome-devtools-mcp
+    0	     0	 87201	     npm exec anythingllm-mcp-server@2.0.0
+    0	     0	 87292	       node /Users/me/.npm/_npx/d696fd126c76d9b8/node_modules/.bin/anythingllm-mcp-server
+    0	     0	 87316	     npm exec @google-cloud/gcloud-mcp
+    0	     0	 87415	       node /Users/me/.npm/_npx/645560f7ff651e99/node_modules/.bin/gcloud-mcp
+    0	    98	 84918	fileWatcher [25]
+    0	    98	 85141	extensionHost [25]
+    1	   295	 96069	window [26] (OVERVIEW.md — google-workspace-tools)
+    0	   295	 96090	extensionHost [26]
+    0	    98	 96358	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=96090
+    0	     0	 96405	     npm exec @notionhq/notion-mcp-server
+    0	     0	 96694	       node /Users/me/.npm/_npx/2e5266eea15d0ccd/node_modules/.bin/notion-mcp-server
+    0	    98	 96467	     electron-nodejs (server-node.js )
+    0	     0	 96612	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.51-universal/bin/macos-aarch64/codex app-server
+    0	    98	 96614	     electron-nodejs (eslintServer.js )
+    0	    98	 96709	     electron-nodejs (tailwindServer.js )
+    0	     0	 97072	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 97095	     npm exec chrome-devtools-mcp@latest
+    0	     0	 97306	       node /Users/me/.npm/_npx/15c61037b1978c83/node_modules/.bin/chrome-devtools-mcp
+    0	     0	 97378	     npm exec anythingllm-mcp-server@2.0.0
+    0	     0	 97537	       node /Users/me/.npm/_npx/d696fd126c76d9b8/node_modules/.bin/anythingllm-mcp-server
+    0	     0	 97550	     npm exec @google-cloud/gcloud-mcp
+    0	     0	 97667	       node /Users/me/.npm/_npx/645560f7ff651e99/node_modules/.bin/gcloud-mcp
+    0	    98	 96091	fileWatcher [26]
+    0	    98	 96201	extensionHost [26]
+    1	   295	 97677	window [27] (macosx-tools)
+    0	    98	 97907	fileWatcher [27]
+    1	   197	 97908	extensionHost [27]
+    0	     0	 98042	     npm exec @notionhq/notion-mcp-server
+    0	     0	 98127	       node /Users/me/.npm/_npx/2e5266eea15d0ccd/node_modules/.bin/notion-mcp-server
+    0	     0	 98149	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.51-universal/bin/macos-aarch64/codex app-server
+    0	     0	 98520	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 98523	     npm exec chrome-devtools-mcp@latest
+    0	     0	 98546	       node /Users/me/.npm/_npx/15c61037b1978c83/node_modules/.bin/chrome-devtools-mcp
+    0	     0	 98573	     npm exec anythingllm-mcp-server@2.0.0
+    0	     0	 98605	       node /Users/me/.npm/_npx/d696fd126c76d9b8/node_modules/.bin/anythingllm-mcp-server
+    0	     0	 98636	     npm exec @google-cloud/gcloud-mcp
+    0	     0	 98657	       node /Users/me/.npm/_npx/645560f7ff651e99/node_modules/.bin/gcloud-mcp
+    0	    98	 97933	extensionHost [27]
+
+Workspace Stats: 
+|  Window (Cursor Settings — Ice__jordanbaird)
+|  Window (macosx-tools)
+|  Window (OVERVIEW.md — google-workspace-tools)
+|  Window (constants.ts — limitless-lifelog-analyzer)
+|  Window (Preview 2025-10-18_17-20Z-understanding-logo-and-wordmark-downloads.md — limitless-integration-quickstart)
+|  Window (Review: Limitless data takeout and migration st... — limitless-quickstart)
+|  Window (background.md — futureofme)
+|  Window (ghrepos_function.sh — limitless-rewind-tools)
+|  Window (version-comparison-report.md — specstory-and-friends)
+|  Window (folding-concepts.md — best-practices)
+|  Window (AI_CLI_MANIFEST.md — ai-cli)
+|  Window (2025-12-13-competition-for-value-and-flight-to-quality.md — blog-drafts)
+|  Window (URLS-20251213_015118.md — continuous-ai)
+|  Window (TECHSTACK.md — rrid-app-frontend)
+|  Window (AGENT_DOCUMENT_PROCESSING_LANDSCAPE.md — vertex-playground)
+|  Window (Review: CVE-2025-55182 security update — nexus-workflow)
+|  Window (Preview FEATURE_TESTING_REPORT.md — ai-veracity-chains)
+|  Window (Browser — crb-nexus-deep-libguide)
+|  Window (transcript.md — crb-macss-fiscal)
+|  Window (Browser — peeq-crb-nexus)
+|  Window (justjoe-dollah.md — spec-kit-quickstart)
+|  Window (Extension: SpecStory — peeq-ocr-mike-stajura)
+|  Window (GMT20251209-185920_Recording.transcript.vtt — crb-vision)
+|  Window (ISSUE.md — rrid)
+|  Window (DEVELOPER-QUICKSTART.md — ucb-vibeaccess)
+|  Window (Cursor Settings — peeq-carb)
+|  Window (Browser — peeq-talent-firebase)
+|  Window (Preview chatgpt-analysis.md — 2025-12-01-tom-combinedoc)
+|    Folder (ai-cli): 11 files
+|      File types: md(4) cursorindexingignore(1) gitignore(1) json(1) sh(1)
+|      Conf files:
+|    Folder (futureofme): 11 files
+|      File types: md(2) DS_Store(1) cursorindexingignore(1) gitignore(1)
+|                  json(1) pdf(1)
+|      Conf files:
+|    Folder (ucb-vibeaccess): 29 files
+|      File types: md(13) DS_Store(1) mdc(1) cursorignore(1)
+|                  cursorindexingignore(1) gitignore(1) json(1)
+|                  2025-12-04T02-38-55-649Z(1)
+|      Conf files:
+|    Folder (limitless-lifelog-analyzer): 62 files
+|      File types: tsx(12) json(8) ts(8) gitignore(5) md(5) py(3) yml(2)
+|                  cursorindexingignore(1) local(1) html(1)
+|      Conf files: package.json(2) tsconfig.json(2)
+|    Folder (2025-12-01-tom-combinedoc): 63 files
+|      File types: md(18) docx(11) pdf(6) DS_Store(3) json(3) py(3) pptx(2)
+|                  mdc(1) cursorignore(1) cursorindexingignore(1)
+|      Conf files:
+|    Folder (specstory-and-friends): 123 files
+|      File types: md(20) py(12) pyc(11) txt(10) json(7) vsix(3) xml(3) js(3)
+|                  png(3) svg(3)
+|      Conf files: package.json(3)
+|    Folder (limitless-integration-quickstart): 295 files
+|      File types: js(91) map(76) json(45) ts(7) svg(7) woff2(6) tsx(6) css(5)
+|                  md(4) gitignore(2)
+|      Conf files: package.json(2) tsconfig.json(1)
+|    Folder (Ice__jordanbaird): 243 files
+|      File types: swift(116) png(18) json(16) yml(6) md(5) gitignore(2)
+|                  plist(2) cursorindexingignore(1) gitattributes(1)
+|                  entitlements(1)
+|      Conf files: github-actions(1)
+|    Folder (macosx-tools): 250 files
+|      File types: swift(116) png(18) json(17) md(6) yml(6) gitignore(3)
+|                  cursorindexingignore(2) plist(2) gitattributes(1) entitlements(1)
+|      Conf files:
+|    Folder (nexus-workflow): 1034 files
+|      File types: js(255) map(194) json(149) rsc(54) tsx(31) png(24) txt(24)
+|                  md(22) woff2(12) html(12)
+|      Conf files: package.json(5) tsconfig.json(1)
+|    Folder (crb-nexus-deep-libguide): 5047 files
+|      File types: md(3505) js(515) map(408) json(189) tsx(75) ts(62) pack(57)
+|                  html(13) meta(12) rsc(11)
+|      Conf files: package.json(3) cursorrules(1) tsconfig.json(1)
+|    Folder (rrid-app-frontend): 1592 files
+|      File types: js(523) map(423) json(169) tsx(110) ts(65) md(52) woff2(7)
+|                  png(7) css(5) bak(5)
+|      Conf files: package.json(6) tsconfig.json(3)
+|    Folder (continuous-ai): more than 108253 files
+|      File types: json(8229) eml(8020) md(3544) txt(31) py(9) jsonl(7) log(3)
+|                  DS_Store(2) gitignore(2) html(2)
+|      Conf files: settings.json(1)
+|    Folder (peeq-talent-firebase): 2634 files
+|      File types: js(991) map(778) json(321) tsx(94) md(90) png(62) ts(51)
+|                  mhtml(7) pdf(7) DS_Store(5)
+|      Conf files: package.json(3) tsconfig.json(1)
+|    Folder (crb-vision): 1680 files
+|      File types: py(526) pyc(523) h(79) md(29) docx(27) pxi(26) txt(20)
+|                  xml(18) pdf(17) png(17)
+|      Conf files:
+|    Folder (peeq-carb): 3069 files
+|      File types: py(1027) pyc(1022) gz(148) h(83) txt(51) pyi(35) pxi(26)
+|                  md(24) pdf(23) typed(21)
+|      Conf files:
+|    Folder (best-practices): 3086 files
+|      File types: md(1301) png(515) jpg(411) svg(51) py(45) yml(45) txt(35)
+|                  pdf(34) json(32) html(25)
+|      Conf files: cursorrules(1) dockerfile(1) package.json(1) makefile(1)
+|    Folder (vertex-playground): 2662 files
+|      File types: py(527) png(262) jpg(207) md(196) ts(129) tsx(116) json(91)
+|                  js(68) mp3(45) gitignore(35)
+|      Conf files: package.json(11) dockerfile(8) tsconfig.json(6)
+|                  jsconfig.json(1) launch.json(1) settings.json(1)
+|                  tasks.json(1) makefile(1)
+|    Folder (limitless-rewind-tools): 3653 files
+|      File types: png(1096) ts(344) css(287) strings(193) tsx(142) js(140)
+|                  html(124) map(105) plist(72) json(62)
+|      Conf files: package.json(19) tsconfig.json(9) makefile(3) dockerfile(2)
+|                  launch.json(1) settings.json(1)
+|    Folder (limitless-quickstart): more than 66250 files
+|      File types: json(19273) ts(204) md(51) py(41) js(40) svelte(31) png(15)
+|                  gif(15) gitignore(12) yml(12)
+|      Conf files: package.json(7) tsconfig.json(7) settings.json(2)
+|    Folder (spec-kit-quickstart): 4355 files
+|      File types: md(968) html(585) tsx(484) go(432) ts(395) json(118)
+|                  js(113) sh(71) sql(64) png(63)
+|      Conf files: package.json(4) settings.json(3) devcontainer.json(2)
+|                  tsconfig.json(2) dockerfile(2) makefile(1) project.json(1)
+|                  mcp.json(1) tasks.json(1)
+|    Folder (blog-drafts): 11959 files
+|      File types: md(5673) html(4907) txt(176) json(107) description(95)
+|                  vtt(89) pdf(80) mhtml(65) js(41) png(10)
+|      Conf files:
+|    Folder (ai-veracity-chains): 7400 files
+|      File types: java(976) json(975) py(790) md(627) rs(283) png(229)
+|                  css(159) yml(121) pyc(108) ipynb(107)
+|      Conf files: dockerfile(13) package.json(12) makefile(7)
+|                  tsconfig.json(7) project.json(3) webpack.config.js(1)
+|                  settings.json(1)
+|    Folder (peeq-crb-nexus): more than 20717 files
+|      File types: py(5619) pyc(5618) md(3179) pyi(638) h(212) txt(173)
+|                  so(164) f90(122) typed(94) csv(64)
+|      Conf files: package.json(1)
+|    Folder (crb-macss-fiscal): more than 20737 files
+|      File types: rb(2097) py(1563) png(1346) js(1315) json(1147) scss(928)
+|                  pyc(863) jpg(789) md(582) html(496)
+|      Conf files: package.json(43) dockerfile(39) makefile(11) launch.json(8)
+|                  tsconfig.json(7) grunt.js(5) settings.json(4)
+|                  jsconfig.json(4) tasks.json(2) webpack.config.js(2)
+|                  gulp.js(1)
+|    Folder (peeq-ocr-mike-stajura): more than 22389 files
+|      File types: py(6012) pyc(5672) json(693) afm(422) png(343) pyi(304)
+|                  txt(274) md(145) dylib(124) ipynb(120)
+|      Conf files: dockerfile(5) makefile(3) package.json(2) tsconfig.json(1)
+|    Folder (rrid): more than 20267 files
+|      File types: py(4547) pyc(4477) json(3096) pyi(372) js(256) md(139)
+|                  map(122) so(99) txt(75) proto(62)
+|      Conf files: package.json(12) dockerfile(4) tsconfig.json(3)
+|    Folder (google-workspace-tools): more than 67066 files
+|      File types: ts(3372) json(2159) npmignore(813) js(500) md(378) gs(215)
+|                  png(188) html(131) R(104) py(61)
+|      Conf files: package.json(857) tsconfig.json(828) webpack.config.js(8)
+|                  dockerfile(6) settings.json(4) launch.json(2)
+|                  tasks.json(1) devcontainer.json(1) tslint.json(1)
+|                  gulp.js(1)
+
+

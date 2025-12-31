@@ -1,0 +1,1 @@
+Warning: The --status argument can only be used if Cursor is already running. Please run it again after Cursor has started.

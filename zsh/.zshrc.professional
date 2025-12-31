@@ -8,7 +8,8 @@
 # ============================================================================
 # Set to 'true' to display timing information for each section during startup
 # Set to 'false' or unset to disable timing display
-export ZSH_PROFILE_STARTUP="${ZSH_PROFILE_STARTUP:-true}"
+export ZSH_PROFILE_STARTUP="${ZSH_PROFILE_STARTUP:-false}"
+export ZSH_PROFILE_STARTUP=false
 
 # Initialize timing variables (must be very early)
 if [[ "$ZSH_PROFILE_STARTUP" == "true" ]]; then
@@ -439,9 +440,12 @@ setopt EXTENDED_HISTORY         # Save timestamps (format: ': <beginning time>:<
                                 # Enables auditing: 'history -E' shows full timestamps
                                 # Example: ': 1704067200:0;ls -la'
 
-setopt INC_APPEND_HISTORY       # Append commands to history file immediately (not on exit)
-                                # Better than SHARE_HISTORY: each session has its own in-memory history
-                                # but writes are shared, so you get benefits without session interference
+setopt APPEND_HISTORY           # Append to history file on shell exit (not immediately)
+                                # Each terminal session has its own isolated in-memory history
+                                # History is saved to shared file only when the shell exits
+                                # Use 'fc -R' or 'fc -RI ~/.zsh_history' to manually load shared history
+unsetopt SHARE_HISTORY          # Don't share history between running shells in real-time
+unsetopt INC_APPEND_HISTORY     # Don't write to history file immediately (wait for exit)
 
 # Duplicate handling (keeps history clean)
 setopt HIST_IGNORE_DUPS         # Don't record duplicate commands (consecutive)
@@ -458,6 +462,14 @@ setopt HIST_REDUCE_BLANKS       # Remove unnecessary whitespace from history ent
 
 setopt HIST_VERIFY              # Show command from history before executing
                                 # Prevents accidental execution of wrong commands
+
+# Disable bang history expansion (prevents issues with ! in double quotes)
+# This fixes the "dquote>" prompt when using ! inside "strings" in commands
+# Example: echo "Hello!" now works without needing to escape the !
+setopt NO_BANG_HIST             # Disable ! history expansion completely
+                                # Alternative: setopt HIST_EXPAND (requires space after !)
+                                # This is especially important for IDE terminals (Cursor, VSCode)
+                                # where AI-generated commands often use ! in echo statements
 
 # ============================================================================
 # MISC CONFIGURATIONS
@@ -507,3 +519,12 @@ if [[ "$ZSH_PROFILE_STARTUP" == "true" ]]; then
     
     printf "Total startup time: %.3fms\n" "$total_time" >&2
 fi
+# bun completions
+[ -s "/Users/me/.bun/_bun" ] && source "/Users/me/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# TRIBE CLI - Added 2025-12-26T04:57:14.966Z
+source ~/.tribe/tribe-env.sh

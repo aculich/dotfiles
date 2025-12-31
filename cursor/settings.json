@@ -23,5 +23,7 @@
     "claudeCode.preferredLocation": "sidebar",
     "specstory.derivedRules.enabled": false,
     "specstory.showDeveloperTools": true,
-    "workbench.colorTheme": "Default Dark+"
+    "workbench.colorTheme": "Default Dark+",
+    "zenMode.restore": false,
+    "terminal.integrated.persistentSessionReviveProcess": "never"
 }
