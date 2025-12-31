@@ -228,4 +228,3 @@ activate-mcp-toolbox web-dev
 **SLOW Tracking:**
 
 - Daily scans completed 90%+ of days
-- Weekly syntheses capture key trends
