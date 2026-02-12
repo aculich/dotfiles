@@ -90,7 +90,7 @@ alias gtimemachine='local f; f() {
 # Clone or update all repositories for a GitHub user/organization
 # Usage: ghrepos USERNAME or ghrepos https://github.com/USERNAME
 #        ghrepos git@github.com:USERNAME/REPO.git
-# 
+#
 # This command will:
 # 1. Create a directory named after the GitHub user/org
 # 2. Get a list of all their public repositories (up to 100)
@@ -103,7 +103,7 @@ alias gtimemachine='local f; f() {
 #   ghrepos https://github.com/google  # Clone/update Google's repos
 #   ghrepos git@github.com:owner/repo.git  # Clone/update from SSH URL
 #
-# Note: Requires GitHub CLI (gh) and jq to be installed
+# Note: Requires GitHub CLI (gh) only - uses gh api to avoid TTY/jq parse issues
 alias ghrepos='
 f() {
   # Require an argument
@@ -115,62 +115,53 @@ f() {
 
   # Extract the owner name if the argument is a URL
   local OWNER="$1"
-  # Remove any @ prefix if it exists as a standalone
   OWNER="${OWNER#@}"
-  
-  # Debug output
-  echo "Processing input: $OWNER"
-  
+
   # Extract owner from HTTPS URL if present
   if [[ "$OWNER" =~ "^https?://(www\.)?github\.com/([^/]+)(/.*)?$" ]]; then
     OWNER="$match[2]"
-    echo "Extracted from HTTPS URL: $OWNER"
   # Extract owner from SSH URL if present
   elif [[ "$OWNER" =~ "^git@github\.com:([^/]+)(/.*)?\.git$" ]]; then
     OWNER="$match[1]"
-    echo "Extracted from SSH URL: $OWNER"
   fi
-
-  # Debug output
-  echo "Final owner: $OWNER"
 
   # Validate owner name
   if [[ -z "$OWNER" || ! "$OWNER" =~ "^[A-Za-z0-9][A-Za-z0-9-]*$" ]]; then
     echo "Error: Invalid GitHub username or organization: $OWNER"
-    echo "Username must contain only alphanumeric characters or hyphens, and cannot begin with a hyphen"
     return 1
   fi
-  
-  # Use subshell to avoid changing current directory for the user
+
   (
-    # Create and enter directory for the owner
     mkdir -p "$OWNER"
     cd "$OWNER" || return
-    
-    # List the repositories and save full info
-    gh repo list "$OWNER" --json name,description,url,createdAt,updatedAt,stargazerCount,forkCount,languages,owner --limit 100 > repos.json
-    
-    # Check if we got any repositories
-    if [[ ! -s repos.json ]]; then
+
+    # Use gh api (not gh repo list) to avoid TTY-dependent output that can break jq.
+    # Try orgs/ first, then users/ - gh api returns clean JSON, no external jq needed.
+    local urls
+    urls=$(gh api "orgs/${OWNER}/repos?per_page=100" --jq ".[].clone_url" 2>/dev/null) ||
+      urls=$(gh api "users/${OWNER}/repos?per_page=100" --jq ".[].clone_url" 2>/dev/null)
+
+    if [[ -z "$urls" ]]; then
       echo "Error: No repositories found for $OWNER"
       return 1
     fi
-    
-    # Generate the URLs-only list file
-    jq -r ".[].url" repos.json > repos.list
-    echo "Created $OWNER/repos.list with repository URLs"
-    
-    # Process each repository
-    jq -r ".[] | [.name, .url] | @tsv" repos.json | while read -r name url; do
+
+    echo "$urls" > repos.list
+    echo "Found $(echo "$urls" | wc -l | tr -d " ") repositories for $OWNER"
+
+    echo "$urls" | while read -r url; do
+      [[ -z "$url" ]] && continue
+      local name="${url%.git}"
+      name="${name##*/}"
       if [[ -d "$name" ]]; then
-        echo "Updating existing repository: $name"
+        echo "Updating: $name"
         (cd "$name" && git pull --quiet)
       else
-        echo "Cloning new repository: $name"
+        echo "Cloning: $name"
         git clone --quiet "$url" "$name"
       fi
     done
-    
+
     echo "Finished processing repositories for $OWNER"
   )
 }; f "$@"'
