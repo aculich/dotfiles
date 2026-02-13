@@ -1,402 +1,410 @@
-[
+[{
+  "key": "shift+alt+x",
+  "command": "whichkey.show",
+  // "when": "editorTextFocus"
+},
+  // https://vspacecode.github.io/docs/bonus/
+  // Quick Window Navigation: To navigate all the windows including slide and bottom pane with Ctrl-h/j/k/l, you can merge the following config system's key bindings to your keybindings.json file.
+  {
+    "key": "ctrl+h",
+    "command": "workbench.action.navigateLeft",
+    "when": "!terminalFocus && !inQuickOpen && !suggestWidgetVisible && !parameterHintsVisible && !isInDiffEditor",
+  },
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.navigateDown",
+    "when": "!terminalFocus && !codeActionMenuVisible && !inQuickOpen && !suggestWidgetVisible && !parameterHintsVisible",
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.navigateUp",
+    "when": "!terminalFocus && !codeActionMenuVisible && !inQuickOpen && !suggestWidgetVisible && !parameterHintsVisible",
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.navigateRight",
+    "when": "!terminalFocus && !codeActionMenuVisible && !inQuickOpen && !suggestWidgetVisible && !parameterHintsVisible && !isInDiffEditor",
+  },
 
-    
-    // https://vspacecode.github.io/docs/bonus/
-    // Quick Window Navigation: To navigate all the windows including slide and bottom pane with Ctrl-h/j/k/l, you can merge the following config system's key bindings to your keybindings.json file.
-    {
-        "key": "ctrl+h",
-        "command": "workbench.action.navigateLeft",
-        "when": "!terminalFocus && !inQuickOpen && !suggestWidgetVisible && !parameterHintsVisible && !isInDiffEditor"
-    },
-    {
-        "key": "ctrl+j",
-        "command": "workbench.action.navigateDown",
-        "when": "!terminalFocus && !codeActionMenuVisible && !inQuickOpen && !suggestWidgetVisible && !parameterHintsVisible"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "workbench.action.navigateUp",
-        "when": "!terminalFocus && !codeActionMenuVisible && !inQuickOpen && !suggestWidgetVisible && !parameterHintsVisible"
-    },
-    {
-        "key": "ctrl+l",
-        "command": "workbench.action.navigateRight",
-        "when": "!terminalFocus && !codeActionMenuVisible && !inQuickOpen && !suggestWidgetVisible && !parameterHintsVisible && !isInDiffEditor"
-    },
+  // Quick Navigation for diff view
+  {
+    "key": "ctrl+h",
+    "command": "workbench.action.compareEditor.focusSecondarySide",
+    "when": "isInDiffEditor && !isInDiffLeftEditor",
+  },
+  {
+    "key": "ctrl+h",
+    "command": "workbench.action.navigateLeft",
+    "when": "isInDiffEditor && isInDiffLeftEditor",
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.compareEditor.focusPrimarySide",
+    "when": "isInDiffEditor && isInDiffLeftEditor",
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.navigateRight",
+    "when": "isInDiffEditor && !isInDiffLeftEditor",
+  },
 
-    // Quick Navigation for diff view
-    {
-        "key": "ctrl+h",
-        "command": "workbench.action.compareEditor.focusSecondarySide",
-        "when": "isInDiffEditor && !isInDiffLeftEditor"
-    },
-    {
-        "key": "ctrl+h",
-        "command": "workbench.action.navigateLeft",
-        "when": "isInDiffEditor && isInDiffLeftEditor"
-    },
-    {
-        "key": "ctrl+l",
-        "command": "workbench.action.compareEditor.focusPrimarySide",
-        "when": "isInDiffEditor && isInDiffLeftEditor"
-    },
-    {
-        "key": "ctrl+l",
-        "command": "workbench.action.navigateRight",
-        "when": "isInDiffEditor && !isInDiffLeftEditor"
-    },
+  // Trigger vspacecode in empty editor group
+  {
+    "key": "space",
+    "command": "vspacecode.space",
+    "when": "activeEditorGroupEmpty && focusedView == '' && !whichkeyActive && !inputFocus",
+  },
+  // Trigger vspacecode when sidebar is in focus
+  {
+    "key": "space",
+    "command": "vspacecode.space",
+    "when": "sideBarFocus && !inputFocus && !whichkeyActive",
+  },
+  // Keybindings required for edamagit
+  // https://github.com/kahole/edamagit#vim-support-vscodevim
+  // Cannot be added to package.json because keybinding replacements
+  {
+    "key": "tab",
+    "command": "extension.vim_tab",
+    "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert' && editorLangId != 'magit'",
+  },
+  {
+    "key": "tab",
+    "command": "-extension.vim_tab",
+    "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'",
+  },
+  {
+    "key": "x",
+    "command": "magit.discard-at-point",
+    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/",
+  },
+  {
+    "key": "k",
+    "command": "-magit.discard-at-point",
+  },
+  {
+    "key": "-",
+    "command": "magit.reverse-at-point",
+    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/",
+  },
+  {
+    "key": "v",
+    "command": "-magit.reverse-at-point",
+  },
+  {
+    "key": "shift+-",
+    "command": "magit.reverting",
+    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/",
+  },
+  {
+    "key": "shift+v",
+    "command": "-magit.reverting",
+  },
+  {
+    "key": "shift+o",
+    "command": "magit.resetting",
+    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/",
+  },
+  {
+    "key": "shift+x",
+    "command": "-magit.resetting",
+  },
+  {
+    "key": "x",
+    "command": "-magit.reset-mixed",
+  },
+  {
+    "key": "ctrl+u x",
+    "command": "-magit.reset-hard",
+  },
+  // Extra ref menu support for edamagit with the key "y"
+  // Cannot be added to package.json because keybinding replacements
+  {
+    "key": "y",
+    "command": "-magit.show-refs",
+  },
+  {
+    "key": "y",
+    "command": "vspacecode.showMagitRefMenu",
+    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode == 'Normal'",
+  },
+  // Extra refresh menu support for edamagit with the key "g"
+  // Cannot be added to package.json because keybinding replacements
+  {
+    "key": "g",
+    "command": "-magit.refresh",
+    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/",
+  },
+  {
+    "key": "g",
+    "command": "vspacecode.showMagitRefreshMenu",
+    "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/",
+  },
+  // Easy navigation in quick open/QuickPick
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.quickOpenSelectNext",
+    "when": "inQuickOpen",
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.quickOpenSelectPrevious",
+    "when": "inQuickOpen",
+  },
+  // Easy navigation in suggestion/intellisense
+  // Cannot be added to package.json because of conflict with vim's default bindings
+  {
+    "key": "ctrl+j",
+    "command": "selectNextSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus",
+  },
+  {
+    "key": "ctrl+k",
+    "command": "selectPrevSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus",
+  },
+  {
+    "key": "ctrl+l",
+    "command": "acceptSelectedSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus",
+  },
+  // Easy navigation in parameter hint (i.e. traverse the hints when there's multiple overload for one method)
+  // Cannot be added to package.json because of conflict with vim's default bindings
+  {
+    "key": "ctrl+j",
+    "command": "showNextParameterHint",
+    "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible",
+  },
+  {
+    "key": "ctrl+k",
+    "command": "showPrevParameterHint",
+    "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible",
+  },
+  // Easy navigation in code action
+  {
+    "key": "ctrl+j",
+    "command": "selectNextCodeAction",
+    "when": "codeActionMenuVisible",
+  },
+  {
+    "key": "ctrl+k",
+    "command": "selectPrevCodeAction",
+    "when": "codeActionMenuVisible",
+  },
+  {
+    "key": "ctrl+l",
+    "command": "acceptSelectedCodeAction",
+    "when": "codeActionMenuVisible",
+  },
+  // Add ctrl+h/l to navigate in file browser
+  {
+    "key": "ctrl+h",
+    "command": "file-browser.stepOut",
+    "when": "inFileBrowser",
+  },
+  // {
+  //     "key": "ctrl+l",
+  //     "command": "file-browser.stepIn",
+  //     "when": "inFileBrowser"
+  // },
+  {
+    "key": "ctrl+l",
+    "when": "terminalFocus",
+    "command": "-workbench.action.showActivityBar",
+  },
 
-    // Trigger vspacecode in empty editor group
-    {
-        "key": "space",
-        "command": "vspacecode.space",
-        "when": "activeEditorGroupEmpty && focusedView == '' && !whichkeyActive && !inputFocus"
+  // https://docs.cursor.com/features/generate-commit-message
+  {
+    "key": "cmd+m",
+    "command": "cursor.generateGitCommitMessage",
+    // "when": "scm.inputBoxFocus"
+  },
+  // https://docs.cursor.com/features/generate-commit-message
+  {
+    "key": "ctrl+shift+m",
+    "command": "cursor.generateGitCommitMessage",
+    "when": "workbench.scm.active",
+  },
+  {
+    "key": "ctrl+x d",
+    "command": "extension.dired.open",
+    "when": "editorTextFocus && !inDebugRepl",
+  },
+  {
+    "key": "ctrl+x d",
+    "command": "extension.dired.open",
+    "when": "inputFocus && editorLangId == 'chat'",
+  },
+  // Enable Alt+. to jump to definition in terminal
+  // This sends the escape sequence \u001b (ESC) followed by .
+  // which is the standard key sequence for "go to definition" in many shells
+  {
+    "key": "alt+.",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": {
+      "text": "\u001b.", // ESC + . sequence
     },
-    // Trigger vspacecode when sidebar is in focus
-    {
-        "key": "space",
-        "command": "vspacecode.space",
-        "when": "sideBarFocus && !inputFocus && !whichkeyActive"
+    "when": "terminalFocus",
+  },
+  {
+    "key": "alt+b",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": {
+      "text": "\u001bb", // ESC + . sequence
     },
-    // Keybindings required for edamagit
-    // https://github.com/kahole/edamagit#vim-support-vscodevim
-    // Cannot be added to package.json because keybinding replacements
-    {
-        "key": "tab",
-        "command": "extension.vim_tab",
-        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert' && editorLangId != 'magit'"
+    "when": "terminalFocus",
+  },
+  {
+    "key": "alt+f",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": {
+      "text": "\u001bf", // ESC + . sequence
     },
-    {
-        "key": "tab",
-        "command": "-extension.vim_tab",
-        "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
-    },
-    {
-        "key": "x",
-        "command": "magit.discard-at-point",
-        "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
-    },
-    {
-        "key": "k",
-        "command": "-magit.discard-at-point"
-    },
-    {
-        "key": "-",
-        "command": "magit.reverse-at-point",
-        "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
-    },
-    {
-        "key": "v",
-        "command": "-magit.reverse-at-point"
-    },
-    {
-        "key": "shift+-",
-        "command": "magit.reverting",
-        "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
-    },
-    {
-        "key": "shift+v",
-        "command": "-magit.reverting"
-    },
-    {
-        "key": "shift+o",
-        "command": "magit.resetting",
-        "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
-    },
-    {
-        "key": "shift+x",
-        "command": "-magit.resetting"
-    },
-    {
-        "key": "x",
-        "command": "-magit.reset-mixed"
-    },
-    {
-        "key": "ctrl+u x",
-        "command": "-magit.reset-hard"
-    },
-    // Extra ref menu support for edamagit with the key "y"
-    // Cannot be added to package.json because keybinding replacements
-    {
-        "key": "y",
-        "command": "-magit.show-refs"
-    },
-    {
-        "key": "y",
-        "command": "vspacecode.showMagitRefMenu",
-        "when": "editorTextFocus && editorLangId == 'magit' && vim.mode == 'Normal'"
-    },
-    // Extra refresh menu support for edamagit with the key "g"
-    // Cannot be added to package.json because keybinding replacements
-    {
-        "key": "g",
-        "command": "-magit.refresh",
-        "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
-    },
-    {
-        "key": "g",
-        "command": "vspacecode.showMagitRefreshMenu",
-        "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
-    },
-    // Easy navigation in quick open/QuickPick
-    {
-        "key": "ctrl+j",
-        "command": "workbench.action.quickOpenSelectNext",
-        "when": "inQuickOpen"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "workbench.action.quickOpenSelectPrevious",
-        "when": "inQuickOpen"
-    },
-    // Easy navigation in suggestion/intellisense
-    // Cannot be added to package.json because of conflict with vim's default bindings
-    {
-        "key": "ctrl+j",
-        "command": "selectNextSuggestion",
-        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "selectPrevSuggestion",
-        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
-    },
-    {
-        "key": "ctrl+l",
-        "command": "acceptSelectedSuggestion",
-        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
-    },
-    // Easy navigation in parameter hint (i.e. traverse the hints when there's multiple overload for one method)
-    // Cannot be added to package.json because of conflict with vim's default bindings
-    {
-        "key": "ctrl+j",
-        "command": "showNextParameterHint",
-        "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "showPrevParameterHint",
-        "when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
-    },
-    // Easy navigation in code action
-    {
-        "key": "ctrl+j",
-        "command": "selectNextCodeAction",
-        "when": "codeActionMenuVisible"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "selectPrevCodeAction",
-        "when": "codeActionMenuVisible"
-    },
-    {
-        "key": "ctrl+l",
-        "command": "acceptSelectedCodeAction",
-        "when": "codeActionMenuVisible"
-    },
-    // Add ctrl+h/l to navigate in file browser
-    {
-        "key": "ctrl+h",
-        "command": "file-browser.stepOut",
-        "when": "inFileBrowser"
-    },
-    // {
-    //     "key": "ctrl+l",
-    //     "command": "file-browser.stepIn",
-    //     "when": "inFileBrowser"
-    // },
-    {
-        "key": "ctrl+l",
-        "when": "terminalFocus",
-        "command": "-workbench.action.showActivityBar"
-    },
+    "when": "terminalFocus",
+  },
+  {
+    "key": "ctrl+x ctrl+f",
+    "command": "workbench.action.quickOpen",
+  },
+  {
+    "key": "ctrl+x ctrl+f",
+    "command": "workbench.action.quickOpen",
+    "when": "composerFocused || focusedView =~ /^workbench.panel.aichat.view/",
+  },
+  {
+    "key": "ctrl+x ctrl+f",
+    "command": "workbench.action.quickOpen",
+    "when": "inputFocus && editorLangId == 'plaintext'",
+  },
+  {
+    "key": "ctrl+x ctrl+f",
+    "command": "workbench.action.quickOpen",
+    "when": "focusedView == 'workbench.panel.aichat.view'",
+  },
+  // https://marketplace.visualstudio.com/items?itemName=YuTengjing.vscode-classic-experience
+  // https://github.com/tjx666/vscode-classic-experience
+  {
+    // FIXME: this is not working no matter what I try
+    "key": "ctrl+x ctrl+f",
+    "command": "workbench.action.quickOpen",
+    "when": "!editorFocus && !terminalFocus",
+    // "when": "composerBarIsVisible"
+    // "when": "aichat.view.focused"
+    // "when": "view.workbench.panel.aichat.view.visible && focusedView == 'workbench.panel.aichat.view'"
+    // "when": "view.workbench.panel.aichat.view.visible"
+  },
+  {
+    "key": "ctrl+x ctrl+f",
+    "command": "workbench.action.quickOpen",
+    "when": "inputFocus && editorLangId == 'chat'",
+  },
+  {
+    "key": "ctrl+x ctrl+f",
+    "command": "-workbench.action.quickOpen",
+    "when": "!terminalFocus",
+  },
+  {
+    "key": "ctrl+shift+m",
+    "command": "-editor.action.toggleTabFocusMode",
+  },
+  {
+    "key": "shift+cmd+c",
+    "command": "workbench.action.terminal.copyLastCommandAndLastCommandOutput",
+    "when": "terminalFocus",
+  },
 
-    // https://docs.cursor.com/features/generate-commit-message
-    {
-        "key": "cmd+m",
-        "command": "cursor.generateGitCommitMessage"
-        // "when": "scm.inputBoxFocus"
+  // https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-speech
+  {
+    "key": "alt+shift+u",
+    "command": "workbench.action.chat.startVoiceChat",
+    "when": "!voiceChatInProgress",
+  },
+  {
+    "key": "alt+shift+u",
+    "command": "workbench.action.chat.stopListeningAndSubmit",
+    "when": "voiceChatInProgress",
+  },
+  {
+    "key": "alt+shift+d",
+    "command": "workbench.action.editorDictation.start",
+    "when": "!editorDictation.inProgress",
+  },
+  {
+    "key": "alt+shift+d",
+    "command": "workbench.action.editorDictation.stop",
+    "when": "editorDictation.inProgress",
+  },
+  {
+    "key": "shift+alt+c",
+    "command": "workbench.action.terminal.copyLastCommand",
+  },
+  {
+    "key": "cmd+r cmd+p",
+    "command": "workbench.action.toggleMaximizedPanel",
+  },
+  {
+    "key": "cmd+r cmd+h",
+    "command": "workbench.action.maximizeEditorHideSidebar",
+  },
+  {
+    "key": "cmd+;",
+    "command": "editor.action.insertSnippet",
+    "args": {
+      "snippet": "${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}",
     },
-    // https://docs.cursor.com/features/generate-commit-message
-    {
-        "key": "ctrl+shift+m",
-        "command": "cursor.generateGitCommitMessage",
-        "when": "workbench.scm.active"
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "cmd+i",
+    "command": "composerMode.agent",
+  },
+  {
+    "key": "cmd+i",
+    "command": "composerMode.agent",
+  },
+  {
+    "key": "shift+cmd+space",
+    "command": "vspacecode-expanded.space",
+    "when": "!editorTextFocus",
+  },
+  {
+    // pass through Ctrl+X to terminal session
+    "key": "ctrl+x ctrl+x",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": {
+      "text": "\u0018\u0018", // send ctrl+x passthru
     },
-    {
-        "key": "ctrl+x d",
-        "command": "extension.dired.open",
-        "when": "editorTextFocus && !inDebugRepl"
-    },
-    {
-        "key": "ctrl+x d",
-        "command": "extension.dired.open",
-        "when": "inputFocus && editorLangId == 'chat'"
-    },
-    // Enable Alt+. to jump to definition in terminal
-    // This sends the escape sequence \u001b (ESC) followed by . 
-    // which is the standard key sequence for "go to definition" in many shells
-    {
-        "key": "alt+.",
-        "command": "workbench.action.terminal.sendSequence", 
-        "args": {
-            "text": "\u001b."  // ESC + . sequence
-        },
-        "when": "terminalFocus"
-    },
-    {
-        "key": "alt+b",
-        "command": "workbench.action.terminal.sendSequence", 
-        "args": {
-            "text": "\u001bb"  // ESC + . sequence
-        },
-        "when": "terminalFocus"
-    },
-    {
-        "key": "alt+f",
-        "command": "workbench.action.terminal.sendSequence", 
-        "args": {
-            "text": "\u001bf"  // ESC + . sequence
-        },
-        "when": "terminalFocus"
-    },
-    {
-        "key": "ctrl+x ctrl+f",
-        "command": "workbench.action.quickOpen"
-    },
-    {
-        "key": "ctrl+x ctrl+f",
-        "command": "workbench.action.quickOpen",
-        "when": "composerFocused || focusedView =~ /^workbench.panel.aichat.view/"
-    },
-    {
-        "key": "ctrl+x ctrl+f",
-        "command": "workbench.action.quickOpen",
-        "when": "inputFocus && editorLangId == 'plaintext'"
-    },
-    {
-        "key": "ctrl+x ctrl+f",
-        "command": "workbench.action.quickOpen",
-        "when": "focusedView == 'workbench.panel.aichat.view'"
-    },
-    // https://marketplace.visualstudio.com/items?itemName=YuTengjing.vscode-classic-experience
-    // https://github.com/tjx666/vscode-classic-experience
-    { // FIXME: this is not working no matter what I try
-        "key": "ctrl+x ctrl+f",
-        "command": "workbench.action.quickOpen",
-        "when": "!editorFocus && !terminalFocus"
-        // "when": "composerBarIsVisible"
-        // "when": "aichat.view.focused"
-        // "when": "view.workbench.panel.aichat.view.visible && focusedView == 'workbench.panel.aichat.view'"
-        // "when": "view.workbench.panel.aichat.view.visible"
-    },
-    {
-        "key": "ctrl+x ctrl+f",
-        "command": "workbench.action.quickOpen",
-        "when": "inputFocus && editorLangId == 'chat'"
-    },
-    {
-        "key": "ctrl+x ctrl+f",
-        "command": "-workbench.action.quickOpen",
-        "when": "!terminalFocus"
-    },
-    {
-        "key": "ctrl+shift+m",
-        "command": "-editor.action.toggleTabFocusMode"
-    },
-    {
-        "key": "shift+cmd+c",
-        "command": "workbench.action.terminal.copyLastCommandAndLastCommandOutput",
-        "when": "terminalFocus"
-    },
+    "when": "terminalFocus",
+  },
+  {
+    "key": "shift+cmd+p",
+    "command": "workbench.action.showCommands",
+    "when": "composerFocused || focusedView =~ /^workbench.panel.aichat.view/",
+  },
 
-    // https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-speech
-    {
-        "key": "alt+shift+u",
-        "command": "workbench.action.chat.startVoiceChat",
-        "when": "!voiceChatInProgress"
+  // https://github.com/JacksonKearl/vscode-search-editor-apply-changes?tab=readme-ov-file#keybindings
+  {
+    "key": "cmd+s",
+    "command": "searchEditorApplyChanges.apply",
+    "when": "inSearchEditor",
+  },
+  {
+    "key": "shift+enter",
+    "command": "workbench.action.terminal.sendSequence",
+    "args": {
+      "text": "\\\r\n",
     },
-    {
-        "key": "alt+shift+u",
-        "command": "workbench.action.chat.stopListeningAndSubmit",
-        "when": "voiceChatInProgress"
-    },
-    {
-        "key": "alt+shift+d",
-        "command": "workbench.action.editorDictation.start",
-        "when": "!editorDictation.inProgress"
-    },
-    {
-        "key": "alt+shift+d",
-        "command": "workbench.action.editorDictation.stop",
-        "when": "editorDictation.inProgress"
-    },
-    {
-        "key": "shift+alt+c",
-        "command": "workbench.action.terminal.copyLastCommand"
-    },
-    {
-        "key": "cmd+r cmd+p",
-        "command": "workbench.action.toggleMaximizedPanel"
-    },
-    {
-        "key": "cmd+r cmd+h",
-        "command": "workbench.action.maximizeEditorHideSidebar"
-    },
-    {
-        "key": "cmd+;",
-        "command": "editor.action.insertSnippet",
-        "args": {
-            "snippet": "${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}"
-        },
-        "when": "editorTextFocus"
-    },
-    {
-        "key": "cmd+i",
-        "command": "composerMode.agent"
-    },
-    {
-        "key": "cmd+i",
-        "command": "composerMode.agent"
-    },
-    {
-        "key": "shift+cmd+space",
-        "command": "vspacecode-expanded.space",
-        "when": "!editorTextFocus"
-    },
-    { // pass through Ctrl+X to terminal session
-        "key": "ctrl+x ctrl+x",
-        "command": "workbench.action.terminal.sendSequence",
-        "args": {
-            "text": "\u0018\u0018" // send ctrl+x passthru
-        },
-        "when": "terminalFocus"
-    },
-    {
-        "key": "shift+cmd+p",
-        "command": "workbench.action.showCommands",
-        "when": "composerFocused || focusedView =~ /^workbench.panel.aichat.view/"
-    },
-
-    // https://github.com/JacksonKearl/vscode-search-editor-apply-changes?tab=readme-ov-file#keybindings
-    {
-        "key": "cmd+s",
-        "command": "searchEditorApplyChanges.apply",
-        "when": "inSearchEditor"
-    },
-    {
-        "key": "shift+enter",
-        "command": "workbench.action.terminal.sendSequence",
-        "args": {
-            "text": "\\\r\n"
-        },
-        "when": "terminalFocus"
-    },
-    {
-        "key": "cmd+i",
-        "command": "composerMode.agent"
-    }
-
+    "when": "terminalFocus",
+  },
+  {
+    "key": "cmd+i",
+    "command": "composerMode.agent",
+  },
+  {
+    "key": "cmd+x",
+    "command": "-workbench.action.showCommands",
+    "when": "config.emacs-mcx.useMetaPrefixMacCmd && !findInputFocussed && !replaceInputFocussed"
+  },
 ]
 
 // NOTES:

@@ -1,0 +1,49 @@
+---
+description: "When the user asks to add dev warmup, /warmup, 'warm up pages', 'precompile routes', or similar, implement this pattern."
+globs: *
+---
+
+# Dev warmup pattern
+
+**To use in any project:** Copy this file into the project's `.cursor/rules/` (e.g. `dev-warmup.mdc`), or paste the body into **Cursor Settings > General > Rules for AI** to make it global. Then say e.g. "add dev warmup" or "set up warmup" (or "/warmup" if you add a custom instruction for that phrase).
+
+---
+
+When the user requests **dev warmup**, **/warmup**, **precompile pages**, **warm up routes**, or similar:
+
+1. **Add a warmup script** (e.g. `scripts/warmup.js`) that:
+   - Recursively discovers all `page.tsx` routes under `src/app/` (Next.js App Router) or the project's equivalent pages directory.
+   - Makes HTTP GET requests to each discovered route so the dev server compiles them on-demand.
+   - **Prioritises recently modified routes** using git: `git diff --name-only HEAD`, `git diff --name-only --cached`, `git diff --name-only main...HEAD`, and `git log --name-only --pretty=format: -3`. Map changed `src/app/*/page.tsx` files to routes.
+   - Warms up in three tiers: (1) recently modified pages first, one at a time, (2) core routes (`/`, `/dashboard`), (3) everything else in batches of 2.
+   - After tier 1 finishes, prints a message like "Your modified pages are ready. Continuing with remaining routes..." so the developer can start testing immediately.
+   - Detects the dev server port dynamically: checks `BASE_URL` env var, `PORT` env var, then probes common ports (3001, 9002, 3000). If the project has a `scripts/get-dev-port.js`, use it.
+   - Per-request timeout configurable via `WARMUP_TIMEOUT_MS` env var (default 45s).
+   - Logs each route with timing: `  /v2/dashboard ... ready (12.3s)`.
+   - Exits with code 1 if any routes failed but does not kill the dev server.
+
+2. **Add a dev-warmup script** (e.g. `scripts/dev-warmup.js`) that:
+   - Starts the dev server via `npm run dev` as a child process.
+   - Waits for the server to respond on the expected port (polling every 1s, max wait configurable, default 120s).
+   - If the server is already running, skips starting and just runs warmup.
+   - On timeout, does **not** kill the dev server. Logs a warning and keeps the server running so the user can still access pages manually.
+   - Once the server is ready, runs `npm run warmup` as a child process.
+   - Handles SIGINT/SIGTERM to cleanly stop the dev server.
+
+3. **Add npm scripts** to `package.json`:
+   ```json
+   "warmup": "node scripts/warmup.js",
+   "dev:warmup": "node scripts/dev-warmup.js"
+   ```
+
+4. **Framework support:**
+   - **Next.js (App Router):** Discover routes from `src/app/` by finding directories with `page.tsx`. Skip `_`-prefixed dirs, `api/`, and non-page files.
+   - **Vite/SvelteKit/other:** Adapt route discovery to the framework's file convention. The HTTP warmup approach works for any dev server.
+
+5. **Integration with dynamic-dev-port:** If the project uses the dynamic-dev-port pattern (`.dev-port` file), the warmup script should read the port from `.dev-port` as a fallback when detecting the port.
+
+6. The scripts use only Node.js built-in modules (`http`, `https`, `fs`, `path`, `child_process`). No extra dependencies.
+
+**Example usage:**
+- `npm run warmup` — warm up a running dev server (recently modified pages first)
+- `npm run dev:warmup` — start dev server + warm up in one command

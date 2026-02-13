@@ -4,3 +4,4 @@ upstream/
 .op_session
 .envrc
 *.backup.*
+cursor-workspace-*

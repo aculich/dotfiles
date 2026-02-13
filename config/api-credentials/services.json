@@ -1,0 +1,297 @@
+{
+  "openai": {
+    "env_keys": ["OPENAI_API_KEY"],
+    "platform_url": "https://platform.openai.com",
+    "docs_url": "https://platform.openai.com/docs",
+    "key_management_url": "https://platform.openai.com/api-keys"
+  },
+  "anthropic": {
+    "env_keys": ["ANTHROPIC_API_KEY", "CLAUDE_API_KEY"],
+    "platform_url": "https://console.anthropic.com",
+    "docs_url": "https://docs.anthropic.com",
+    "key_management_url": "https://console.anthropic.com/settings/keys"
+  },
+  "google_gemini": {
+    "env_keys": ["GEMINI_API_KEY", "VITE_GEMINI_API_KEY", "GOOGLE_API_KEY"],
+    "platform_url": "https://aistudio.google.com",
+    "docs_url": "https://ai.google.dev/docs",
+    "key_management_url": "https://aistudio.google.com/app/apikey"
+  },
+  "github": {
+    "env_keys": ["GH_TOKEN", "GITHUB_TOKEN", "GITHUB_AUTOMATION_TOKEN", "GITHUB_PERSONAL_ACCESS_TOKEN"],
+    "platform_url": "https://github.com",
+    "docs_url": "https://docs.github.com/en/rest",
+    "key_management_url": "https://github.com/settings/tokens"
+  },
+  "gitlab": {
+    "env_keys": ["GITLAB_PERSONAL_ACCESS_TOKEN"],
+    "platform_url": "https://gitlab.com",
+    "docs_url": "https://docs.gitlab.com/ee/api",
+    "key_management_url": "https://gitlab.com/-/user_settings/personal_access_tokens"
+  },
+  "notion": {
+    "env_keys": ["NOTION_TOKEN", "NOTION_API_KEY", "NOTION_INTEGRATION_TOKEN"],
+    "platform_url": "https://www.notion.so",
+    "docs_url": "https://developers.notion.com",
+    "key_management_url": "https://www.notion.so/my-integrations"
+  },
+  "perplexity": {
+    "env_keys": ["PERPLEXITY_API_KEY", "PERPLEXITY_API_KEY_CRB", "PPLX_API_KEY"],
+    "platform_url": "https://www.perplexity.ai",
+    "docs_url": "https://docs.perplexity.ai",
+    "key_management_url": "https://www.perplexity.ai/settings/api"
+  },
+  "groq": {
+    "env_keys": ["GROQ_API_KEY"],
+    "platform_url": "https://console.groq.com",
+    "docs_url": "https://console.groq.com/docs",
+    "key_management_url": "https://console.groq.com/keys"
+  },
+  "cohere": {
+    "env_keys": ["COHERE_API_KEY"],
+    "platform_url": "https://cohere.com",
+    "docs_url": "https://docs.cohere.com",
+    "key_management_url": "https://dashboard.cohere.com/api-keys"
+  },
+  "xai": {
+    "env_keys": ["XAI_API_KEY"],
+    "platform_url": "https://x.ai",
+    "docs_url": "https://docs.x.ai",
+    "key_management_url": "https://console.x.ai/api-keys"
+  },
+  "openrouter": {
+    "env_keys": ["OPENROUTER_API_KEY"],
+    "platform_url": "https://openrouter.ai",
+    "docs_url": "https://openrouter.ai/docs",
+    "key_management_url": "https://openrouter.ai/keys"
+  },
+  "brave_search": {
+    "env_keys": ["BRAVE_API_KEY", "BRAVE_AI_API_KEY"],
+    "platform_url": "https://brave.com/search",
+    "docs_url": "https://api.search.brave.com",
+    "key_management_url": "https://api.search.brave.com/app/keys"
+  },
+  "huggingface": {
+    "env_keys": ["HUGGING_FACE_HUB_TOKEN"],
+    "platform_url": "https://huggingface.co",
+    "docs_url": "https://huggingface.co/docs",
+    "key_management_url": "https://huggingface.co/settings/tokens"
+  },
+  "deepgram": {
+    "env_keys": ["DEEPGRAM_API_KEY"],
+    "platform_url": "https://deepgram.com",
+    "docs_url": "https://developers.deepgram.com",
+    "key_management_url": "https://console.deepgram.com/api-keys"
+  },
+  "lmnt": {
+    "env_keys": ["LMNT_API_KEY"],
+    "platform_url": "https://www.lmnt.com",
+    "docs_url": "https://docs.lmnt.com",
+    "key_management_url": "https://www.lmnt.com/account/api-keys"
+  },
+  "context7": {
+    "env_keys": ["CONTEXT7_API_KEY", "CONTEXT7_API_KEY_AALLC", "CONTEXT7_API_KEY_ACULICH", "CONTEXT7_API_URL", "CONTEXT7_MCP_URL"],
+    "platform_url": "https://context7.com",
+    "docs_url": "https://context7.com/docs",
+    "key_management_url": "https://context7.com/settings/api-keys"
+  },
+  "firecrawl": {
+    "env_keys": ["FIRECRAWL_API_KEY"],
+    "platform_url": "https://firecrawl.dev",
+    "docs_url": "https://docs.firecrawl.dev",
+    "key_management_url": "https://firecrawl.dev/app/api-keys"
+  },
+  "anythingllm": {
+    "env_keys": ["ANYTHINGLLM_API_KEY"],
+    "platform_url": "https://useanything.com",
+    "docs_url": "https://docs.useanything.com",
+    "key_management_url": "https://useanything.com/settings/api"
+  },
+  "specstory": {
+    "env_keys": ["SPECSTORY_API_KEY"],
+    "platform_url": "https://specstory.com",
+    "docs_url": "https://docs.specstory.com",
+    "key_management_url": "https://specstory.com/settings/api-keys"
+  },
+  "docker": {
+    "env_keys": ["DOCKER_PAT"],
+    "platform_url": "https://www.docker.com",
+    "docs_url": "https://docs.docker.com",
+    "key_management_url": "https://hub.docker.com/settings/security"
+  },
+  "railway": {
+    "env_keys": ["RAILWAY_API_TOKEN_AARONC"],
+    "platform_url": "https://railway.app",
+    "docs_url": "https://docs.railway.app",
+    "key_management_url": "https://railway.app/account/tokens"
+  },
+  "posthog": {
+    "env_keys": ["POSTHOG_API_KEY"],
+    "platform_url": "https://posthog.com",
+    "docs_url": "https://posthog.com/docs",
+    "key_management_url": "https://app.posthog.com/project/settings"
+  },
+  "langfuse": {
+    "env_keys": ["LANGFUSE_SECRET_KEY", "LANGFUSE_PUBLIC_KEY", "LANGFUSE_HOST"],
+    "platform_url": "https://langfuse.com",
+    "docs_url": "https://langfuse.com/docs",
+    "key_management_url": "https://cloud.langfuse.com/settings/api-keys"
+  },
+  "n8n": {
+    "env_keys": ["N8N_API_KEY_LOCAL"],
+    "platform_url": "https://n8n.io",
+    "docs_url": "https://docs.n8n.io",
+    "key_management_url": "https://app.n8n.cloud/settings/api"
+  },
+  "obsidian": {
+    "env_keys": ["OBSIDIAN_LOCAL_API_KEY"],
+    "platform_url": "https://obsidian.md",
+    "docs_url": "https://help.obsidian.md",
+    "key_management_url": null
+  },
+  "plaid": {
+    "env_keys": ["PLAID_CLIENT_ID", "PLAID_SECRET", "PLAID_SANDBOX"],
+    "platform_url": "https://plaid.com",
+    "docs_url": "https://plaid.com/docs",
+    "key_management_url": "https://dashboard.plaid.com/team/keys"
+  },
+  "census": {
+    "env_keys": ["CENSUS_API_KEY"],
+    "platform_url": "https://www.getcensus.com",
+    "docs_url": "https://docs.getcensus.com",
+    "key_management_url": "https://app.getcensus.com/settings/api-keys"
+  },
+  "ncbi": {
+    "env_keys": ["NCBI_API_KEY"],
+    "platform_url": "https://www.ncbi.nlm.nih.gov",
+    "docs_url": "https://www.ncbi.nlm.nih.gov/books/NBK25497",
+    "key_management_url": "https://www.ncbi.nlm.nih.gov/account/settings"
+  },
+  "congress": {
+    "env_keys": ["CONGRESS_API_KEY"],
+    "platform_url": "https://www.congress.gov",
+    "docs_url": "https://api.congress.gov",
+    "key_management_url": "https://api.congress.gov/sign-up"
+  },
+  "sec": {
+    "env_keys": ["SEC_API_KEY"],
+    "platform_url": "https://www.sec.gov",
+    "docs_url": "https://www.sec.gov/edgar/sec-api-documentation",
+    "key_management_url": "https://www.sec.gov/edgar/searchedgar/companysearch.html"
+  },
+  "openalex": {
+    "env_keys": ["OPENALEX_API_KEY_ACULICH", "OPENALIX_API_KEY_UCB"],
+    "platform_url": "https://openalex.org",
+    "docs_url": "https://docs.openalex.org",
+    "key_management_url": "https://openalex.org/works"
+  },
+  "legalserver": {
+    "env_keys": ["LEGALSERVER_SITE", "LEGALSERVER_USERNAME", "LEGALSERVER_PASSWORD"],
+    "platform_url": null,
+    "docs_url": null,
+    "key_management_url": null
+  },
+  "baserow": {
+    "env_keys": ["BASEROW_API_KEY_LOCAL_RRID"],
+    "platform_url": "https://baserow.io",
+    "docs_url": "https://baserow.io/docs",
+    "key_management_url": "https://baserow.io/user/api-tokens"
+  },
+  "limitless": {
+    "env_keys": ["LIMITLESS_API_KEY"],
+    "platform_url": "https://limitless.ai",
+    "docs_url": "https://docs.limitless.ai",
+    "key_management_url": "https://limitless.ai/settings/api-keys"
+  },
+  "mailgun": {
+    "env_keys": ["MAILGUN_API_KEY"],
+    "platform_url": "https://www.mailgun.com",
+    "docs_url": "https://documentation.mailgun.com",
+    "key_management_url": "https://app.mailgun.com/app/account/security/api_keys"
+  },
+  "resend": {
+    "env_keys": ["RESEND_API_KEY"],
+    "platform_url": "https://resend.com",
+    "docs_url": "https://resend.com/docs",
+    "key_management_url": "https://resend.com/api-keys"
+  },
+  "linkedin": {
+    "env_keys": ["LINKEDIN_EMAIL", "LINKEDIN_PASSWORD"],
+    "platform_url": "https://www.linkedin.com",
+    "docs_url": "https://docs.microsoft.com/en-us/linkedin",
+    "key_management_url": "https://www.linkedin.com/developers/apps"
+  },
+  "pubpub": {
+    "env_keys": ["PUBPUB_API_KEY", "PUBPUB_API_ENDPOINT"],
+    "platform_url": "https://www.pubpub.org",
+    "docs_url": "https://help.pubpub.org",
+    "key_management_url": "https://www.pubpub.org/user/settings/api"
+  },
+  "firebase": {
+    "env_keys": ["NEXT_PUBLIC_FIREBASE_API_KEY", "NEXT_PUBLIC_FIREBASE_PROJECT_ID", "NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN", "NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET", "NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID", "NEXT_PUBLIC_FIREBASE_APP_ID"],
+    "platform_url": "https://firebase.google.com",
+    "docs_url": "https://firebase.google.com/docs",
+    "key_management_url": "https://console.firebase.google.com/project/_/settings/general"
+  },
+  "livekit": {
+    "env_keys": ["NEXT_PUBLIC_LIVEKIT_URL", "NEXT_PUBLIC_LIVEKIT_API_KEY", "NEXT_PUBLIC_LIVEKIT_API_SECRET"],
+    "platform_url": "https://livekit.io",
+    "docs_url": "https://docs.livekit.io",
+    "key_management_url": "https://cloud.livekit.io/projects"
+  },
+  "google_maps": {
+    "env_keys": ["NEXT_PUBLIC_GOOGLE_MAPS_API_KEY"],
+    "platform_url": "https://maps.google.com",
+    "docs_url": "https://developers.google.com/maps/documentation",
+    "key_management_url": "https://console.cloud.google.com/google/maps-apis/credentials"
+  },
+  "google_search": {
+    "env_keys": ["GOOGLE_SEARCHENGINE_ID", "GOOGLE_SEARCHENGINE_KEY"],
+    "platform_url": "https://programmablesearchengine.google.com",
+    "docs_url": "https://developers.google.com/custom-search/docs/overview",
+    "key_management_url": "https://programmablesearchengine.google.com/controlpanel/all"
+  },
+  "youtube": {
+    "env_keys": ["YOUTUBE_API_KEY"],
+    "platform_url": "https://www.youtube.com",
+    "docs_url": "https://developers.google.com/youtube/v3",
+    "key_management_url": "https://console.cloud.google.com/apis/credentials"
+  },
+  "dnsimple": {
+    "env_keys": ["DNSIMPLE_API_KEY", "DNSIMPLE_API_ACCOUNT"],
+    "platform_url": "https://dnsimple.com",
+    "docs_url": "https://developer.dnsimple.com",
+    "key_management_url": "https://dnsimple.com/user"
+  },
+  "brave": {
+    "env_keys": ["BRAVE_API_KEY", "BRAVE_AI_API_KEY"],
+    "platform_url": "https://brave.com/search",
+    "docs_url": "https://api.search.brave.com",
+    "key_management_url": "https://api.search.brave.com/app/keys"
+  },
+  "static_forms": {
+    "env_keys": ["STATIC_FORMS_API_PEEQ"],
+    "platform_url": "https://www.staticforms.xyz",
+    "docs_url": "https://www.staticforms.xyz/docs",
+    "key_management_url": "https://www.staticforms.xyz/account"
+  },
+  "flourish": {
+    "env_keys": ["FLOURISH_API_KEY"],
+    "platform_url": "https://flourish.studio",
+    "docs_url": "https://flourish.studio/docs",
+    "key_management_url": "https://flourish.studio/account/api"
+  },
+  "postgres": {
+    "env_keys": ["POSTGRES_PASSWORD"],
+    "platform_url": "https://www.postgresql.org",
+    "docs_url": "https://www.postgresql.org/docs",
+    "key_management_url": null
+  },
+  "weather": {
+    "env_keys": ["NEXT_PUBLIC_WEATHER_API_KEY"],
+    "platform_url": null,
+    "docs_url": null,
+    "key_management_url": null
+  }
+}
+

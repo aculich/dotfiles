@@ -1,0 +1,35 @@
+---
+description: "When the user asks for dynamic dev port, /dynamic-port, or 'port that doesn't contain 0 and avoids common ports', implement this pattern."
+globs: *
+---
+
+# Dynamic dev port setup
+
+**To use in any project:** Copy this file into the project’s `.cursor/rules/` (e.g. `dynamic-dev-port.mdc`), or paste the “Dynamic dev port setup” section into **Cursor Settings → General → Rules for AI** to make it global. Then say e.g. “use dynamic dev port” or “set up dynamic dev port” (or “/dynamic-port” if you add a custom instruction for that phrase).
+
+---
+
+When the user requests **dynamic dev port**, **/dynamic-port**, **port without zero**, **avoid common ports**, or similar:
+
+1. **Add a port-discovery script** (e.g. `scripts/dev-with-port.js`) that:
+   - Finds a free port in 1024–65535 that **does not contain the digit `0`** and is **not** in a fixed avoid list (e.g. 5432, 6379, 3000, 5000, 8080, 9000, 9001, 9002, 27017, 3306, 5173, 8888, 3001, 4200, 5001, 8000, 8443, 27017, 4369, 5357, 5984, 7474, 7687, 9200, 9300, 11211, 15672, 25565).
+   - Reuses the last port from a **stored file** (e.g. `.dev-port` in project root) if that port is still free and valid.
+   - If the stored port is missing, invalid, or in use, picks a new random valid free port and writes it to the store.
+   - Checks availability with `net.createServer().listen(port, '127.0.0.1')` then close (no extra deps).
+   - Accepts the actual dev command (and optional port-flag) so it works for **Next.js** (`-p`), **Vite** (`--port`), or others.
+
+2. **Wire the dev script** in `package.json` so `npm run dev` runs the wrapper (e.g. `"dev": "node scripts/dev-with-port.js"`). The wrapper must pass the chosen port to the underlying runner (e.g. `next dev --turbopack -p <port>` or `vite --port <port>`).
+
+3. **Ignore the port file** in `.gitignore` (e.g. `.dev-port`) so the chosen port is not committed.
+
+4. **Do not hardcode** the port in the project; the port is always chosen at runtime.
+
+**Generic script behavior:** The script should support different runners. Either:
+- **Option A:** Script takes args after `--`: the command to run. Script appends the port flag and value (e.g. `-p 7892` for Next, `--port 7892` for Vite). Detect runner from command or accept an optional `--port-flag` (default `-p`).
+- **Option B:** Script only finds the port and writes `.dev-port`, then prints it; a separate npm script runs the dev server using the port from the file. Prefer Option A so one command starts the server.
+
+**Example package.json (Next):** `"dev": "node scripts/dev-with-port.js"` with script defaulting to `npx next dev --turbopack -p <port>`.
+
+**Example package.json (Vite):** `"dev": "node scripts/dev-with-port.js -- --port-flag=--port -- npx vite"` (script appends `--port <port>`).
+
+Do not kill or assume anything about existing processes on other ports (e.g. 9002); only bind the chosen free port for this project.

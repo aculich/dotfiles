@@ -1,0 +1,43 @@
+---
+description: Rules for generating shell commands in terminal contexts
+globs: *
+---
+
+## SHELL COMMAND GENERATION
+
+When generating shell commands that will be executed in a terminal:
+
+### AVOID EXCLAMATION POINTS IN STRINGS
+- **NEVER** use exclamation points (`!`) inside double-quoted strings in shell commands
+- Exclamation points trigger history expansion in zsh/bash and cause `dquote>` prompts
+- Instead of `echo "Done!"`, use `echo "Done"` or `echo 'Done!'` (single quotes)
+- Instead of `echo "Success! All tests passed!"`, use `echo "Success. All tests passed."` or `echo 'Success! All tests passed!'`
+
+### EXAMPLES
+
+Bad (causes dquote> prompt in zsh):
+```bash
+echo "Fixed CLIENT_DOMAIN redirect issue!"
+echo "✅ All tests passed!"
+```
+
+Good (works in all shells):
+```bash
+echo "Fixed CLIENT_DOMAIN redirect issue"
+echo "Fixed CLIENT_DOMAIN redirect issue."
+echo 'Fixed CLIENT_DOMAIN redirect issue!'
+echo "✅ All tests passed"
+printf '%s\n' "Fixed CLIENT_DOMAIN redirect issue!"
+```
+
+### WHY THIS MATTERS
+- In zsh, `!` inside double quotes triggers history expansion
+- This causes the shell to wait for more input, showing `dquote>` prompt
+- Users must manually type `"` to continue, breaking automation
+- Single quotes or avoiding `!` entirely prevents this issue
+
+### GENERAL BEST PRACTICES
+- Prefer single quotes for literal strings with special characters
+- Use `printf '%s\n' "..."` for complex strings
+- Keep echo messages professional without unnecessary punctuation
+- Avoid emoji + exclamation combinations like `"✅ Done!"`

@@ -1,0 +1,1243 @@
+{
+  "generated_at_unix": 1770920402,
+  "generated_at_iso": "2026-02-12T18:20:02.001Z",
+  "deps": {
+    "npm_latest": {
+      "@google/genai": "1.41.0",
+      "@anthropic-ai/sdk": "0.74.0",
+      "openai": "6.21.0",
+      "react": "19.2.4",
+      "react-dom": "19.2.4",
+      "tailwindcss": "4.1.18",
+      "typescript": "5.9.3",
+      "next": "16.1.6",
+      "zod": "4.3.6"
+    },
+    "pypi_latest": {
+      "google-genai": "1.63.0",
+      "httpx": "0.28.1",
+      "anthropic": "0.79.0",
+      "fastapi": "0.129.0",
+      "openai": "2.20.0",
+      "pydantic": "2.12.5",
+      "litellm": "1.81.10"
+    }
+  },
+  "models": {
+    "discovered": [
+      {
+        "provider": "openai",
+        "model_id": "gpt-4-0613",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-4",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-3.5-turbo",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-5.2-codex",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-4o-mini-tts-2025-12-15",
+        "release_date": "2025-12-15",
+        "is_preview": false,
+        "model_type": "audio"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-realtime-mini-2025-12-15",
+        "release_date": "2025-12-15",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-audio-mini-2025-12-15",
+        "release_date": "2025-12-15",
+        "is_preview": false,
+        "model_type": "audio"
+      },
+      {
+        "provider": "openai",
+        "model_id": "chatgpt-image-latest",
+        "is_preview": false,
+        "model_type": "image"
+      },
+      {
+        "provider": "openai",
+        "model_id": "davinci-002",
+        "is_preview": false,
+        "is_deprecated": true,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "babbage-002",
+        "is_preview": false,
+        "is_deprecated": true,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-3.5-turbo-instruct",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-3.5-turbo-instruct-0914",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "dall-e-3",
+        "is_preview": false,
+        "model_type": "image"
+      },
+      {
+        "provider": "openai",
+        "model_id": "dall-e-2",
+        "is_preview": false,
+        "model_type": "image"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-4-1106-preview",
+        "is_preview": true,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-3.5-turbo-1106",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "tts-1-hd",
+        "is_preview": false,
+        "model_type": "audio"
+      },
+      {
+        "provider": "openai",
+        "model_id": "tts-1-1106",
+        "is_preview": false,
+        "model_type": "audio"
+      },
+      {
+        "provider": "openai",
+        "model_id": "tts-1-hd-1106",
+        "is_preview": false,
+        "model_type": "audio"
+      },
+      {
+        "provider": "openai",
+        "model_id": "text-embedding-3-small",
+        "is_preview": false,
+        "model_type": "embedding"
+      },
+      {
+        "provider": "openai",
+        "model_id": "text-embedding-3-large",
+        "is_preview": false,
+        "model_type": "embedding"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-4-0125-preview",
+        "is_preview": true,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-4-turbo-preview",
+        "is_preview": true,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-3.5-turbo-0125",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-4-turbo",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-4-turbo-2024-04-09",
+        "release_date": "2024-04-09",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-4o",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-4o-2024-05-13",
+        "release_date": "2024-05-13",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-4o-mini-2024-07-18",
+        "release_date": "2024-07-18",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-4o-mini",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-4o-2024-08-06",
+        "release_date": "2024-08-06",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "chatgpt-4o-latest",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-4o-audio-preview",
+        "is_preview": true,
+        "model_type": "audio"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-4o-realtime-preview",
+        "is_preview": true,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "omni-moderation-latest",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "omni-moderation-2024-09-26",
+        "release_date": "2024-09-26",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-4o-realtime-preview-2024-12-17",
+        "release_date": "2024-12-17",
+        "is_preview": true,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-4o-audio-preview-2024-12-17",
+        "release_date": "2024-12-17",
+        "is_preview": true,
+        "model_type": "audio"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-4o-mini-realtime-preview-2024-12-17",
+        "release_date": "2024-12-17",
+        "is_preview": true,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-4o-mini-audio-preview-2024-12-17",
+        "release_date": "2024-12-17",
+        "is_preview": true,
+        "model_type": "audio"
+      },
+      {
+        "provider": "openai",
+        "model_id": "o1-2024-12-17",
+        "release_date": "2024-12-17",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "o1",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-4o-mini-realtime-preview",
+        "is_preview": true,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-4o-mini-audio-preview",
+        "is_preview": true,
+        "model_type": "audio"
+      },
+      {
+        "provider": "openai",
+        "model_id": "computer-use-preview",
+        "is_preview": true,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "o3-mini",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "o3-mini-2025-01-31",
+        "release_date": "2025-01-31",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-4o-2024-11-20",
+        "release_date": "2024-11-20",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "computer-use-preview-2025-03-11",
+        "release_date": "2025-03-11",
+        "is_preview": true,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-4o-search-preview-2025-03-11",
+        "release_date": "2025-03-11",
+        "is_preview": true,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-4o-search-preview",
+        "is_preview": true,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-4o-mini-search-preview-2025-03-11",
+        "release_date": "2025-03-11",
+        "is_preview": true,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-4o-mini-search-preview",
+        "is_preview": true,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-4o-transcribe",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-4o-mini-transcribe",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "o1-pro-2025-03-19",
+        "release_date": "2025-03-19",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "o1-pro",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-4o-mini-tts",
+        "is_preview": false,
+        "model_type": "audio"
+      },
+      {
+        "provider": "openai",
+        "model_id": "o3-2025-04-16",
+        "release_date": "2025-04-16",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "o4-mini-2025-04-16",
+        "release_date": "2025-04-16",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "o3",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "o4-mini",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-4.1-2025-04-14",
+        "release_date": "2025-04-14",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-4.1",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-4.1-mini-2025-04-14",
+        "release_date": "2025-04-14",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-4.1-mini",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-4.1-nano-2025-04-14",
+        "release_date": "2025-04-14",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-4.1-nano",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-image-1",
+        "is_preview": false,
+        "model_type": "image"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-4o-realtime-preview-2025-06-03",
+        "release_date": "2025-06-03",
+        "is_preview": true,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-4o-audio-preview-2025-06-03",
+        "release_date": "2025-06-03",
+        "is_preview": true,
+        "model_type": "audio"
+      },
+      {
+        "provider": "openai",
+        "model_id": "o4-mini-deep-research",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-4o-transcribe-diarize",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "o4-mini-deep-research-2025-06-26",
+        "release_date": "2025-06-26",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-5-chat-latest",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-5-2025-08-07",
+        "release_date": "2025-08-07",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-5",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-5-mini-2025-08-07",
+        "release_date": "2025-08-07",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-5-mini",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-5-nano-2025-08-07",
+        "release_date": "2025-08-07",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-5-nano",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-audio-2025-08-28",
+        "release_date": "2025-08-28",
+        "is_preview": false,
+        "model_type": "audio"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-realtime",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-realtime-2025-08-28",
+        "release_date": "2025-08-28",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-audio",
+        "is_preview": false,
+        "model_type": "audio"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-5-codex",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-image-1-mini",
+        "is_preview": false,
+        "model_type": "image"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-5-pro-2025-10-06",
+        "release_date": "2025-10-06",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-5-pro",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-audio-mini",
+        "is_preview": false,
+        "model_type": "audio"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-audio-mini-2025-10-06",
+        "release_date": "2025-10-06",
+        "is_preview": false,
+        "model_type": "audio"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-5-search-api",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-realtime-mini",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-realtime-mini-2025-10-06",
+        "release_date": "2025-10-06",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "sora-2",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "sora-2-pro",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-5-search-api-2025-10-14",
+        "release_date": "2025-10-14",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-5.1-chat-latest",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-5.1-2025-11-13",
+        "release_date": "2025-11-13",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-5.1",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-5.1-codex",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-5.1-codex-mini",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-5.1-codex-max",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-image-1.5",
+        "is_preview": false,
+        "model_type": "image"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-5.2-2025-12-11",
+        "release_date": "2025-12-11",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-5.2",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-5.2-pro-2025-12-11",
+        "release_date": "2025-12-11",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-5.2-pro",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-5.2-chat-latest",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-4o-mini-transcribe-2025-12-15",
+        "release_date": "2025-12-15",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-4o-mini-transcribe-2025-03-20",
+        "release_date": "2025-03-20",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-4o-mini-tts-2025-03-20",
+        "release_date": "2025-03-20",
+        "is_preview": false,
+        "model_type": "audio"
+      },
+      {
+        "provider": "openai",
+        "model_id": "gpt-3.5-turbo-16k",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "openai",
+        "model_id": "tts-1",
+        "is_preview": false,
+        "model_type": "audio"
+      },
+      {
+        "provider": "openai",
+        "model_id": "whisper-1",
+        "is_preview": false,
+        "model_type": "audio"
+      },
+      {
+        "provider": "openai",
+        "model_id": "text-embedding-ada-002",
+        "is_preview": false,
+        "model_type": "embedding"
+      },
+      {
+        "provider": "anthropic",
+        "model_id": "claude-opus-4-6",
+        "display_name": "Claude Opus 4.6",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "anthropic",
+        "model_id": "claude-opus-4-5-20251101",
+        "display_name": "Claude Opus 4.5",
+        "release_date": "2025-11-01",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "anthropic",
+        "model_id": "claude-haiku-4-5-20251001",
+        "display_name": "Claude Haiku 4.5",
+        "release_date": "2025-10-01",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "anthropic",
+        "model_id": "claude-sonnet-4-5-20250929",
+        "display_name": "Claude Sonnet 4.5",
+        "release_date": "2025-09-29",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "anthropic",
+        "model_id": "claude-opus-4-1-20250805",
+        "display_name": "Claude Opus 4.1",
+        "release_date": "2025-08-05",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "anthropic",
+        "model_id": "claude-opus-4-20250514",
+        "display_name": "Claude Opus 4",
+        "release_date": "2025-05-14",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "anthropic",
+        "model_id": "claude-sonnet-4-20250514",
+        "display_name": "Claude Sonnet 4",
+        "release_date": "2025-05-14",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "anthropic",
+        "model_id": "claude-3-7-sonnet-20250219",
+        "display_name": "Claude Sonnet 3.7",
+        "release_date": "2025-02-19",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "anthropic",
+        "model_id": "claude-3-5-haiku-20241022",
+        "display_name": "Claude Haiku 3.5",
+        "release_date": "2024-10-22",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "anthropic",
+        "model_id": "claude-3-haiku-20240307",
+        "display_name": "Claude Haiku 3",
+        "release_date": "2024-03-07",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "google",
+        "model_id": "gemini-2.5-flash",
+        "display_name": "Gemini 2.5 Flash",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "google",
+        "model_id": "gemini-2.5-pro",
+        "display_name": "Gemini 2.5 Pro",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "google",
+        "model_id": "gemini-2.0-flash",
+        "display_name": "Gemini 2.0 Flash",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "google",
+        "model_id": "gemini-2.0-flash-001",
+        "display_name": "Gemini 2.0 Flash 001",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "google",
+        "model_id": "gemini-2.0-flash-exp-image-generation",
+        "display_name": "Gemini 2.0 Flash (Image Generation) Experimental",
+        "is_preview": true,
+        "model_type": "image"
+      },
+      {
+        "provider": "google",
+        "model_id": "gemini-2.0-flash-lite-001",
+        "display_name": "Gemini 2.0 Flash-Lite 001",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "google",
+        "model_id": "gemini-2.0-flash-lite",
+        "display_name": "Gemini 2.0 Flash-Lite",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "google",
+        "model_id": "gemini-exp-1206",
+        "display_name": "Gemini Experimental 1206",
+        "is_preview": true,
+        "model_type": "chat"
+      },
+      {
+        "provider": "google",
+        "model_id": "gemini-2.5-flash-preview-tts",
+        "display_name": "Gemini 2.5 Flash Preview TTS",
+        "is_preview": true,
+        "model_type": "audio"
+      },
+      {
+        "provider": "google",
+        "model_id": "gemini-2.5-pro-preview-tts",
+        "display_name": "Gemini 2.5 Pro Preview TTS",
+        "is_preview": true,
+        "model_type": "audio"
+      },
+      {
+        "provider": "google",
+        "model_id": "gemma-3-1b-it",
+        "display_name": "Gemma 3 1B",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "google",
+        "model_id": "gemma-3-4b-it",
+        "display_name": "Gemma 3 4B",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "google",
+        "model_id": "gemma-3-12b-it",
+        "display_name": "Gemma 3 12B",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "google",
+        "model_id": "gemma-3-27b-it",
+        "display_name": "Gemma 3 27B",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "google",
+        "model_id": "gemma-3n-e4b-it",
+        "display_name": "Gemma 3n E4B",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "google",
+        "model_id": "gemma-3n-e2b-it",
+        "display_name": "Gemma 3n E2B",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "google",
+        "model_id": "gemini-flash-latest",
+        "display_name": "Gemini Flash Latest",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "google",
+        "model_id": "gemini-flash-lite-latest",
+        "display_name": "Gemini Flash-Lite Latest",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "google",
+        "model_id": "gemini-pro-latest",
+        "display_name": "Gemini Pro Latest",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "google",
+        "model_id": "gemini-2.5-flash-lite",
+        "display_name": "Gemini 2.5 Flash-Lite",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "google",
+        "model_id": "gemini-2.5-flash-image",
+        "display_name": "Nano Banana",
+        "is_preview": false,
+        "model_type": "image"
+      },
+      {
+        "provider": "google",
+        "model_id": "gemini-2.5-flash-preview-09-2025",
+        "display_name": "Gemini 2.5 Flash Preview Sep 2025",
+        "is_preview": true,
+        "model_type": "chat"
+      },
+      {
+        "provider": "google",
+        "model_id": "gemini-2.5-flash-lite-preview-09-2025",
+        "display_name": "Gemini 2.5 Flash-Lite Preview Sep 2025",
+        "is_preview": true,
+        "model_type": "chat"
+      },
+      {
+        "provider": "google",
+        "model_id": "gemini-3-pro-preview",
+        "display_name": "Gemini 3 Pro Preview",
+        "is_preview": true,
+        "model_type": "chat"
+      },
+      {
+        "provider": "google",
+        "model_id": "gemini-3-flash-preview",
+        "display_name": "Gemini 3 Flash Preview",
+        "is_preview": true,
+        "model_type": "chat"
+      },
+      {
+        "provider": "google",
+        "model_id": "gemini-3-pro-image-preview",
+        "display_name": "Nano Banana Pro",
+        "is_preview": true,
+        "model_type": "image"
+      },
+      {
+        "provider": "google",
+        "model_id": "nano-banana-pro-preview",
+        "display_name": "Nano Banana Pro",
+        "is_preview": true,
+        "model_type": "chat"
+      },
+      {
+        "provider": "google",
+        "model_id": "gemini-robotics-er-1.5-preview",
+        "display_name": "Gemini Robotics-ER 1.5 Preview",
+        "is_preview": true,
+        "model_type": "chat"
+      },
+      {
+        "provider": "google",
+        "model_id": "gemini-2.5-computer-use-preview-10-2025",
+        "display_name": "Gemini 2.5 Computer Use Preview 10-2025",
+        "is_preview": true,
+        "model_type": "chat"
+      },
+      {
+        "provider": "google",
+        "model_id": "deep-research-pro-preview-12-2025",
+        "display_name": "Deep Research Pro Preview (Dec-12-2025)",
+        "is_preview": true,
+        "model_type": "chat"
+      },
+      {
+        "provider": "google",
+        "model_id": "gemini-embedding-001",
+        "display_name": "Gemini Embedding 001",
+        "is_preview": false,
+        "model_type": "embedding"
+      },
+      {
+        "provider": "google",
+        "model_id": "aqa",
+        "display_name": "Model that performs Attributed Question Answering.",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "google",
+        "model_id": "imagen-4.0-generate-preview-06-06",
+        "display_name": "Imagen 4 (Preview)",
+        "is_preview": true,
+        "model_type": "image"
+      },
+      {
+        "provider": "google",
+        "model_id": "imagen-4.0-ultra-generate-preview-06-06",
+        "display_name": "Imagen 4 Ultra (Preview)",
+        "is_preview": true,
+        "model_type": "image"
+      },
+      {
+        "provider": "google",
+        "model_id": "imagen-4.0-generate-001",
+        "display_name": "Imagen 4",
+        "is_preview": false,
+        "model_type": "image"
+      },
+      {
+        "provider": "google",
+        "model_id": "imagen-4.0-ultra-generate-001",
+        "display_name": "Imagen 4 Ultra",
+        "is_preview": false,
+        "model_type": "image"
+      },
+      {
+        "provider": "google",
+        "model_id": "imagen-4.0-fast-generate-001",
+        "display_name": "Imagen 4 Fast",
+        "is_preview": false,
+        "model_type": "image"
+      },
+      {
+        "provider": "google",
+        "model_id": "veo-2.0-generate-001",
+        "display_name": "Veo 2",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "google",
+        "model_id": "veo-3.0-generate-001",
+        "display_name": "Veo 3",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "google",
+        "model_id": "veo-3.0-fast-generate-001",
+        "display_name": "Veo 3 fast",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "google",
+        "model_id": "veo-3.1-generate-preview",
+        "display_name": "Veo 3.1",
+        "is_preview": true,
+        "model_type": "chat"
+      },
+      {
+        "provider": "google",
+        "model_id": "veo-3.1-fast-generate-preview",
+        "display_name": "Veo 3.1 fast",
+        "is_preview": true,
+        "model_type": "chat"
+      },
+      {
+        "provider": "google",
+        "model_id": "gemini-2.5-flash-native-audio-latest",
+        "display_name": "Gemini 2.5 Flash Native Audio Latest",
+        "is_preview": false,
+        "model_type": "audio"
+      },
+      {
+        "provider": "google",
+        "model_id": "gemini-2.5-flash-native-audio-preview-09-2025",
+        "display_name": "Gemini 2.5 Flash Native Audio Preview 09-2025",
+        "is_preview": true,
+        "model_type": "audio"
+      },
+      {
+        "provider": "google",
+        "model_id": "gemini-2.5-flash-native-audio-preview-12-2025",
+        "display_name": "Gemini 2.5 Flash Native Audio Preview 12-2025",
+        "is_preview": true,
+        "model_type": "audio"
+      }
+    ],
+    "selected": {
+      "reasoning": {
+        "openai": "gpt-5.2-pro-2025-12-11",
+        "anthropic": "claude-opus-4-5-20251101",
+        "google": "gemini-3-pro-preview"
+      },
+      "fast": {
+        "openai": "gpt-5.1-codex-mini",
+        "anthropic": "claude-sonnet-4-5-20250929",
+        "google": "gemini-3-flash-preview"
+      },
+      "vision": {
+        "openai": "gpt-5.2-pro-2025-12-11",
+        "anthropic": "claude-opus-4-5-20251101",
+        "google": "gemini-3-pro-preview"
+      }
+    }
+  },
+  "codegen_instructions": [
+    {
+      "sdk": "google-genai",
+      "provider": "google",
+      "content": "# Google Gen AI SDK\n\n[![PyPI version](https://img.shields.io/pypi/v/google-genai.svg)](https://pypi.org/project/google-genai/)\n![Python support](https://img.shields.io/pypi/pyversions/google-genai)\n[![PyPI - Downloads](https://img.shields.io/pypi/dw/google-genai)](https://pypistats.org/packages/google-genai)\n\n--------\n**Documentation:** https://googleapis.github.io/python-genai/\n\n-----\n\nGoogle Gen AI Python SDK provides an interface for developers to integrate\nGoogle's generative models into their Python applications. It supports the\n[Gemini Developer API](https://ai.google.dev/gemini-api/docs) and\n[Vertex AI](https://cloud.google.com/vertex-ai/generative-ai/docs/learn/overview)\nAPIs.\n\n## Code Generation\n\nGenerative models are often unaware of recent API and SDK updates and may suggest outdated or legacy code.\n\nWe recommend using our Code Generation instructions [`codegen_instructions.md`](https://raw.githubusercontent.com/googleapis/python-genai/refs/heads/main/codegen_instructions.md) when generating Google Gen AI SDK code to guide your model towards using the more recent SDK features. Copy and paste the instructions into your development environment to provide the model with the necessary context.\n\n## Installation\n\n```sh\npip install google-genai\n```\n\n<small>With `uv`:</small>\n\n```sh\nuv pip install google-genai\n```\n\n## Imports\n\n```python\nfrom google import genai\nfrom google.genai import types\n```\n\n## Create a client\n\nPlease run one of the following code blocks to create a client for\ndifferent services ([Gemini Developer API](https://ai.google.dev/gemini-api/docs) or [Vertex AI](https://cloud.google.com/vertex-ai/generative-ai/docs/learn/overview)).\n\n```python\nfrom google import genai\n\n# Only run this block for Gemini Developer API\nclient = genai.Client(api_key='GEMINI_API_KEY')\n```\n\n```python\nfrom google import genai\n\n# Only run this block for Vertex AI API\nclient = genai.Client(\n    vertexai=True, project='your-project-id', location='us-central1'\n)\n```\n\n## Using types\n\nAll API methods support Pydantic types and dictionaries, which you can access\nfrom `google.genai.types`. You can import the types module with the following:\n\n```python\nfrom google.genai import types\n```\n\nBelow is an example `generate_content()` call using types from the types module:\n\n```python\nresponse = client.models.generate_content(\n    model='gemini-2.5-flash',\n    contents=types.Part.from_text(text='Why is the sky blue?'),\n    config=types.GenerateContentConfig(\n        temperature=0,\n        top_p=0.95,\n        top_k=20,\n    ),\n)\n```\n\nAlternatively, you can accomplish the same request using dictionaries instead of\ntypes:\n\n```python\nresponse = client.models.generate_content(\n    model='gemini-2.5-flash',\n    contents={'text': 'Why is the sky blue?'},\n    config={\n        'temperature': 0,\n        'top_p': 0.95,\n        'top_k': 20,\n    },\n)\n```\n\n**(Optional) Using environment variables:**\n\nYou can create a client by configuring the necessary environment variables.\nConfiguration setup instructions depends on whether you're using the Gemini\nDeveloper API or the Gemini API in Vertex AI.\n\n**Gemini Developer API:** Set the `GEMINI_API_KEY` or `GOOGLE_API_KEY`.\nIt will automatically be picked up by the client. It's recommended that you\nset only one of those variables, but if both are set, `GOOGLE_API_KEY` takes\nprecedence.\n\n```bash\nexport GEMINI_API_KEY='your-api-key'\n```\n\n**Gemini API on Vertex AI:** Set `GOOGLE_GENAI_USE_VERTEXAI`,\n`GOOGLE_CLOUD_PROJECT` and `GOOGLE_CLOUD_LOCATION`, as shown below:\n\n```bash\nexport GOOGLE_GENAI_USE_VERTEXAI=true\nexport GOOGLE_CLOUD_PROJECT='your-project-id'\nexport GOOGLE_CLOUD_LOCATION='us-central1'\n```\n\n```python\nfrom google import genai\n\nclient = genai.Client()\n```\n\n## Close a client\n\nExplicitly close the sync client to ensure that resources, such as the\nunderlying HTTP connections, are properly cleaned up and closed.\n\n```python\nfrom google.genai import Client\n\nclient = Client()\nresponse_1 = client.models.generate_content(\n    model=MODEL_ID,\n    contents='Hello',\n)\nresponse_2 = client.models.generate_content(\n    model=MODEL_ID,\n    contents='Ask a question',\n)\n# Close the sync client to release resources.\nclient.close()\n```\n\nTo explicitly close the async client:\n\n```python\nfrom google.genai import Client\n\naclient = Client(\n    vertexai=True, project='my-project-id', location='us-central1'\n).aio\nresponse_1 = await aclient.models.generate_content(\n    model=MODEL_ID,\n    contents='Hello',\n)\nresponse_2 = await aclient.models.generate_content(\n    model=MODEL_ID,\n    contents='Ask a question',\n)\n# Close the async client to release resources.\nawait aclient.aclose()\n```\n\n## Client context managers\n\nBy using the sync client context manager, it will close the underlying\nsync client when exiting the with block and avoid httpx \"client has been closed\" error like [issues#1763](https://github.com/googleapis/python-genai/issues/1763).\n\n```python\nfrom google.genai import Client\n\nwith Client() as client:\n    respons",
+      "source_url": "https://raw.githubusercontent.com/googleapis/python-genai/main/README.md"
+    }
+  ],
+  "provenance": {
+    "npm_registry": {
+      "data_source": "npm registry",
+      "source_type": "registry",
+      "source_url": "https://registry.npmjs.org",
+      "fetched_at": "2026-02-12T18:20:02.001Z",
+      "method": "GET /{package} (dist-tags.latest)"
+    },
+    "pypi_registry": {
+      "data_source": "PyPI registry",
+      "source_type": "registry",
+      "source_url": "https://pypi.org/pypi",
+      "fetched_at": "2026-02-12T18:20:02.001Z",
+      "method": "GET /{package}/json (info.version)"
+    },
+    "openai_api": {
+      "data_source": "OpenAI API",
+      "source_type": "api",
+      "source_url": "https://api.openai.com",
+      "fetched_at": "2026-02-12T18:20:02.001Z",
+      "method": "GET /v1/models (Bearer token)"
+    },
+    "anthropic_api": {
+      "data_source": "Anthropic API",
+      "source_type": "api",
+      "source_url": "https://api.anthropic.com",
+      "fetched_at": "2026-02-12T18:20:02.001Z",
+      "method": "GET /v1/models (x-api-key header)"
+    },
+    "gemini_api": {
+      "data_source": "Google Gemini API",
+      "source_type": "api",
+      "source_url": "https://generativelanguage.googleapis.com",
+      "fetched_at": "2026-02-12T18:20:02.001Z",
+      "method": "GET /v1beta/models (x-goog-api-key header)"
+    },
+    "codegen_instructions": [
+      {
+        "data_source": "google-genai codegen instructions",
+        "source_type": "github",
+        "source_url": "https://raw.githubusercontent.com/googleapis/python-genai/main/README.md",
+        "fetched_at": "2026-02-12T18:20:02.001Z",
+        "method": "GET (raw GitHub content)"
+      }
+    ]
+  },
+  "notes": [
+    "If models.discovered is empty, set OPENAI_API_KEY / ANTHROPIC_API_KEY / GEMINI_API_KEY then rerun.",
+    "This snapshot is meant to be injected into Cursor via an always-apply rule.",
+    "Set ENABLE_ENHANCED_FEATURES=true to enable Repomix and LiteLLM integration."
+  ],
+  "repo": {
+    "root": "/Users/me/dotfiles/cursor"
+  }
+}
