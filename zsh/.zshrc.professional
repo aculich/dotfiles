@@ -128,7 +128,7 @@ export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="${ZSH_THEME:-robbyrussell}"
 
 # Plugins - carefully curated for performance
-plugins=(
+plugins=(github-gh-cli-supercharged 
     git
 #    direnv
     zsh-autosuggestions
@@ -528,3 +528,149 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # TRIBE CLI - Added 2025-12-26T04:57:14.966Z
 source ~/.tribe/tribe-env.sh
+
+###-begin-npm-completion-###
+#
+# npm command completion script
+#
+# Installation: npm completion >> ~/.bashrc  (or ~/.zshrc)
+# Or, maybe: npm completion > /usr/local/etc/bash_completion.d/npm
+#
+
+if type complete &>/dev/null; then
+  _npm_completion () {
+    local words cword
+    if type _get_comp_words_by_ref &>/dev/null; then
+      _get_comp_words_by_ref -n = -n @ -n : -w words -i cword
+    else
+      cword="$COMP_CWORD"
+      words=("${COMP_WORDS[@]}")
+    fi
+
+    local si="$IFS"
+    if ! IFS=$'\n' COMPREPLY=($(COMP_CWORD="$cword" \
+                           COMP_LINE="$COMP_LINE" \
+                           COMP_POINT="$COMP_POINT" \
+                           npm completion -- "${words[@]}" \
+                           2>/dev/null)); then
+      local ret=$?
+      IFS="$si"
+      return $ret
+    fi
+    IFS="$si"
+    if type __ltrim_colon_completions &>/dev/null; then
+      __ltrim_colon_completions "${words[cword]}"
+    fi
+  }
+  complete -o default -F _npm_completion npm
+elif type compdef &>/dev/null; then
+  _npm_completion() {
+    local si=$IFS
+    compadd -- $(COMP_CWORD=$((CURRENT-1)) \
+                 COMP_LINE=$BUFFER \
+                 COMP_POINT=0 \
+                 npm completion -- "${words[@]}" \
+                 2>/dev/null)
+    IFS=$si
+  }
+  compdef _npm_completion npm
+elif type compctl &>/dev/null; then
+  _npm_completion () {
+    local cword line point words si
+    read -Ac words
+    read -cn cword
+    let cword-=1
+    read -l line
+    read -ln point
+    si="$IFS"
+    if ! IFS=$'\n' reply=($(COMP_CWORD="$cword" \
+                       COMP_LINE="$line" \
+                       COMP_POINT="$point" \
+                       npm completion -- "${words[@]}" \
+                       2>/dev/null)); then
+
+      local ret=$?
+      IFS="$si"
+      return $ret
+    fi
+    IFS="$si"
+  }
+  compctl -K _npm_completion npm
+fi
+
+# ============================================================================
+# AUTO NVM USE - Automatically use Node.js version from .nvmrc
+# ============================================================================
+# Automatically switch Node.js version when entering a directory with .nvmrc
+autoload -U add-zsh-hook
+
+# Function to automatically use nvm when .nvmrc exists
+autoload-nvmrc() {
+  local node_version="$(nvm version)"
+  local nvmrc_path="$(nvm_find_nvmrc)"
+
+  if [ -n "$nvmrc_path" ]; then
+    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+
+    if [ "$nvmrc_node_version" = "N/A" ]; then
+      nvm install
+    elif [ "$nvmrc_node_version" != "$node_version" ]; then
+      nvm use
+    fi
+  elif [ "$node_version" != "$(nvm version default)" ]; then
+    echo "Reverting to nvm default version"
+    nvm use default
+  fi
+}
+
+# Run on directory change
+add-zsh-hook chpwd autoload-nvmrc
+
+# Run on shell startup if already in a directory with .nvmrc
+autoload-nvmrc
+
+# ============================================================================
+# AUTO NVM USE - Automatically use Node.js version from .nvmrc
+# ============================================================================
+# Automatically switch Node.js version when entering a directory with .nvmrc
+autoload -U add-zsh-hook
+
+# Function to find .nvmrc file in current or parent directories
+find-nvmrc() {
+  local dir="$PWD"
+  while [ "$dir" != "/" ]; do
+    if [ -f "$dir/.nvmrc" ]; then
+      echo "$dir/.nvmrc"
+      return 0
+    fi
+    dir="$(dirname "$dir")"
+  done
+  return 1
+}
+
+# Function to automatically use nvm when .nvmrc exists
+autoload-nvmrc() {
+  local nvmrc_path=$(find-nvmrc)
+  
+  if [ -n "$nvmrc_path" ]; then
+    local nvmrc_version=$(cat "$nvmrc_path" | tr -d '[:space:]')
+    local current_version=$(nvm version | tr -d 'v')
+    
+    # Check if the version is installed
+    if ! nvm ls "$nvmrc_version" >/dev/null 2>&1; then
+      echo "Installing Node.js $nvmrc_version from .nvmrc..."
+      nvm install "$nvmrc_version"
+    fi
+    
+    # Switch if not already using this version
+    if [ "$(nvm current)" != "$nvmrc_version" ]; then
+      nvm use "$nvmrc_version" >/dev/null 2>&1
+    fi
+  fi
+}
+
+# Run on directory change
+add-zsh-hook chpwd autoload-nvmrc
+
+# Run on shell startup if already in a directory with .nvmrc
+autoload-nvmrc
