@@ -236,6 +236,40 @@ alias ghworkbranch='local f; f() {
     cd .. || return
 }; f'
 
+# List recently starred repos. Args: [today|24h|all] [limit]. Default: today, no limit.
+# Uses gh api with star+json media type for starred_at; filtering and limit done in jq.
+ghstars() {
+  local filter="${1:-today}"
+  local limit="${2:-0}"
+  local api="user/starred?per_page=100&sort=created&direction=desc"
+  # gh api --jq does not support --argjson; inline limit in the slice .[0:N] or use . when limit=0
+  local slice
+  if [[ "$((limit))" -gt 0 ]]; then
+    slice=".[0:$((limit))]"
+  else
+    slice="."
+  fi
+  local jq_today="(now | strflocaltime(\"%Y-%m-%d\")) as \$today | [.[] | select((.starred_at | fromdateiso8601 | strflocaltime(\"%Y-%m-%d\")) == \$today) | .repo.full_name] | $slice | .[]"
+  local jq_24h="(now - 86400) as \$cutoff | [.[] | select(.starred_at | fromdateiso8601 > \$cutoff) | .repo.full_name] | $slice | .[]"
+  local jq_all="[.[].repo.full_name] | $slice | .[]"
+  local jq_expr
+  case "$filter" in
+    today) jq_expr="$jq_today" ;;
+    24h)   jq_expr="$jq_24h" ;;
+    all)   jq_expr="$jq_all" ;;
+    *)
+      echo "Usage: ghstars [today|24h|all] [limit]" >&2
+      return 1
+      ;;
+  esac
+  gh api -H "Accept: application/vnd.github.star+json" "$api" --jq "$jq_expr"
+}
+
+# Clone recently starred repos. Same args as ghstars.
+ghstars-clone() {
+  ghstars "$@" | xargs -I{} git clone "https://github.com/{}.git"
+}
+
 alias ghfork='local f; f() { repo=$1; owner=$(basename $(dirname "$repo")); name=$(basename "$repo"); gh repo fork "$repo" --clone; mv "$name" "${name}__${owner}"; }; f'  # Fork and clone with namespaced dir
 alias gcl='local f; f() { url=$1; git clone "$url" "${url:t}"; }; f'                  # Clone into last path segment (repo name)
 alias gclo='local f; f() { url=$1; git clone "$url" "${url:h:t}/${url:t}"; }; f'      # Clone into directory (user/repo)
