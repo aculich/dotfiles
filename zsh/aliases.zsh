@@ -270,6 +270,53 @@ ghstars-clone() {
   ghstars "$@" | xargs -I{} git clone "https://github.com/{}.git"
 }
 
+# List trending GitHub repos via ghapi.huchen.dev (Path A: no upstream clone).
+# Usage: ghtrend [daily|weekly|monthly] [language]
+# Output: author/name stars description (one line per repo).
+# If the API is down or returns empty, prints a message and tries "gh trending" if available.
+ghtrend() {
+  local since="${1:-daily}"
+  local lang="${2:-}"
+  local url="https://ghapi.huchen.dev/repositories?since=${since}"
+  [[ -n "$lang" ]] && url="${url}&language=${lang}"
+  local json
+  json=$(curl -sL --max-time 10 "$url" 2>/dev/null)
+  if [[ -z "$json" ]]; then
+    echo "Trending API (ghapi.huchen.dev) returned no data or is unavailable." >&2
+    if command -v gh >/dev/null 2>&1 && gh trending --help >/dev/null 2>&1; then
+      echo "Using gh trending instead:" >&2
+      gh trending
+    else
+      echo "Try: open https://github.com/trending" >&2
+      echo "Or install gh extension: gh extension install gkze/gh-trending" >&2
+    fi
+    return 1
+  fi
+  if ! echo "$json" | jq -e 'type == "array" and length > 0' >/dev/null 2>&1; then
+    echo "Trending API returned an empty list (GitHub trending can be empty)." >&2
+    echo "Try: open https://github.com/trending" >&2
+    return 1
+  fi
+  echo "$json" | jq -r '.[] | "\(.author)/\(.name) \(.stars) \(.description // "")"'
+}
+
+# Clone first N trending repos. Usage: ghtrend-clone N [daily|weekly|monthly] [language]
+ghtrend-clone() {
+  local n="${1:?Usage: ghtrend-clone N [daily|weekly|monthly] [language]}"
+  local since="${2:-daily}"
+  local lang="${3:-}"
+  local url="https://ghapi.huchen.dev/repositories?since=${since}"
+  [[ -n "$lang" ]] && url="${url}&language=${lang}"
+  local json
+  json=$(curl -sL --max-time 10 "$url" 2>/dev/null)
+  if [[ -z "$json" ]] || ! echo "$json" | jq -e 'type == "array" and length > 0' >/dev/null 2>&1; then
+    echo "Trending API (ghapi.huchen.dev) returned no data or is unavailable." >&2
+    echo "Try: open https://github.com/trending or gh extension install gkze/gh-trending" >&2
+    return 1
+  fi
+  echo "$json" | jq -r ".[0:${n}][] | \"\(.author)/\(.name)\"" | xargs -I{} git clone "https://github.com/{}.git"
+}
+
 alias ghfork='local f; f() { repo=$1; owner=$(basename $(dirname "$repo")); name=$(basename "$repo"); gh repo fork "$repo" --clone; mv "$name" "${name}__${owner}"; }; f'  # Fork and clone with namespaced dir
 alias gcl='local f; f() { url=$1; git clone "$url" "${url:t}"; }; f'                  # Clone into last path segment (repo name)
 alias gclo='local f; f() { url=$1; git clone "$url" "${url:h:t}/${url:t}"; }; f'      # Clone into directory (user/repo)
