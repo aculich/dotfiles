@@ -5,7 +5,7 @@ description: "AUTO-GENERATED: Version + model snapshot for codegen freshness. Ru
 
 # Version & Model Snapshot (AUTO-GENERATED)
 
-Generated: 2026-02-12T18:20:02.001Z
+Generated: 2026-02-27T09:23:22.806Z
 
 ## Data Provenance
 
@@ -71,15 +71,15 @@ This snapshot was generated from the following sources:
 
 ```json
 {
-  "@google/genai": "1.41.0",
-  "@anthropic-ai/sdk": "0.74.0",
-  "openai": "6.21.0",
-  "react": "19.2.4",
+  "@google/genai": "1.43.0",
+  "@anthropic-ai/sdk": "0.78.0",
+  "openai": "6.25.0",
+  "zod": "4.3.6",
   "react-dom": "19.2.4",
-  "tailwindcss": "4.1.18",
+  "react": "19.2.4",
+  "tailwindcss": "4.2.1",
   "typescript": "5.9.3",
-  "next": "16.1.6",
-  "zod": "4.3.6"
+  "next": "16.1.6"
 }
 ```
 
@@ -87,13 +87,13 @@ This snapshot was generated from the following sources:
 
 ```json
 {
-  "google-genai": "1.63.0",
+  "google-genai": "1.65.0",
+  "anthropic": "0.84.0",
   "httpx": "0.28.1",
-  "anthropic": "0.79.0",
-  "fastapi": "0.129.0",
-  "openai": "2.20.0",
+  "fastapi": "0.133.1",
+  "openai": "2.24.0",
   "pydantic": "2.12.5",
-  "litellm": "1.81.10"
+  "litellm": "1.81.16"
 }
 ```
 
@@ -106,17 +106,17 @@ Total models discovered: 171
 
 
 **Chat Models (130):**
-- openai: `gpt-4-0613`, `gpt-4`, `gpt-3.5-turbo`, `gpt-5.2-codex`, `gpt-realtime-mini-2025-12-15` (2025-12-15), `davinci-002` [deprecated], `babbage-002` [deprecated], `gpt-3.5-turbo-instruct`, `gpt-3.5-turbo-instruct-0914`, `gpt-4-1106-preview` [preview], `gpt-3.5-turbo-1106`, `gpt-4-0125-preview` [preview], `gpt-4-turbo-preview` [preview], `gpt-3.5-turbo-0125`, `gpt-4-turbo`, `gpt-4-turbo-2024-04-09` (2024-04-09), `gpt-4o`, `gpt-4o-2024-05-13` (2024-05-13), `gpt-4o-mini-2024-07-18` (2024-07-18), `gpt-4o-mini`, `gpt-4o-2024-08-06` (2024-08-06), `chatgpt-4o-latest`, `gpt-4o-realtime-preview` [preview], `omni-moderation-latest`, `omni-moderation-2024-09-26` (2024-09-26), `gpt-4o-realtime-preview-2024-12-17` (2024-12-17) [preview], `gpt-4o-mini-realtime-preview-2024-12-17` (2024-12-17) [preview], `o1-2024-12-17` (2024-12-17), `o1`, `gpt-4o-mini-realtime-preview` [preview], `computer-use-preview` [preview], `o3-mini`, `o3-mini-2025-01-31` (2025-01-31), `gpt-4o-2024-11-20` (2024-11-20), `computer-use-preview-2025-03-11` (2025-03-11) [preview], `gpt-4o-search-preview-2025-03-11` (2025-03-11) [preview], `gpt-4o-search-preview` [preview], `gpt-4o-mini-search-preview-2025-03-11` (2025-03-11) [preview], `gpt-4o-mini-search-preview` [preview], `gpt-4o-transcribe`, `gpt-4o-mini-transcribe`, `o1-pro-2025-03-19` (2025-03-19), `o1-pro`, `o3-2025-04-16` (2025-04-16), `o4-mini-2025-04-16` (2025-04-16), `o3`, `o4-mini`, `gpt-4.1-2025-04-14` (2025-04-14), `gpt-4.1`, `gpt-4.1-mini-2025-04-14` (2025-04-14), `gpt-4.1-mini`, `gpt-4.1-nano-2025-04-14` (2025-04-14), `gpt-4.1-nano`, `gpt-4o-realtime-preview-2025-06-03` (2025-06-03) [preview], `o4-mini-deep-research`, `gpt-4o-transcribe-diarize`, `o4-mini-deep-research-2025-06-26` (2025-06-26), `gpt-5-chat-latest`, `gpt-5-2025-08-07` (2025-08-07), `gpt-5`, `gpt-5-mini-2025-08-07` (2025-08-07), `gpt-5-mini`, `gpt-5-nano-2025-08-07` (2025-08-07), `gpt-5-nano`, `gpt-realtime`, `gpt-realtime-2025-08-28` (2025-08-28), `gpt-5-codex`, `gpt-5-pro-2025-10-06` (2025-10-06), `gpt-5-pro`, `gpt-5-search-api`, `gpt-realtime-mini`, `gpt-realtime-mini-2025-10-06` (2025-10-06), `sora-2`, `sora-2-pro`, `gpt-5-search-api-2025-10-14` (2025-10-14), `gpt-5.1-chat-latest`, `gpt-5.1-2025-11-13` (2025-11-13), `gpt-5.1`, `gpt-5.1-codex`, `gpt-5.1-codex-mini`, `gpt-5.1-codex-max`, `gpt-5.2-2025-12-11` (2025-12-11), `gpt-5.2`, `gpt-5.2-pro-2025-12-11` (2025-12-11), `gpt-5.2-pro`, `gpt-5.2-chat-latest`, `gpt-4o-mini-transcribe-2025-12-15` (2025-12-15), `gpt-4o-mini-transcribe-2025-03-20` (2025-03-20), `gpt-3.5-turbo-16k`
-- anthropic: `claude-opus-4-6`, `claude-opus-4-5-20251101` (2025-11-01), `claude-haiku-4-5-20251001` (2025-10-01), `claude-sonnet-4-5-20250929` (2025-09-29), `claude-opus-4-1-20250805` (2025-08-05), `claude-opus-4-20250514` (2025-05-14), `claude-sonnet-4-20250514` (2025-05-14), `claude-3-7-sonnet-20250219` (2025-02-19), `claude-3-5-haiku-20241022` (2024-10-22), `claude-3-haiku-20240307` (2024-03-07)
-- google: `gemini-2.5-flash`, `gemini-2.5-pro`, `gemini-2.0-flash`, `gemini-2.0-flash-001`, `gemini-2.0-flash-lite-001`, `gemini-2.0-flash-lite`, `gemini-exp-1206` [preview], `gemma-3-1b-it`, `gemma-3-4b-it`, `gemma-3-12b-it`, `gemma-3-27b-it`, `gemma-3n-e4b-it`, `gemma-3n-e2b-it`, `gemini-flash-latest`, `gemini-flash-lite-latest`, `gemini-pro-latest`, `gemini-2.5-flash-lite`, `gemini-2.5-flash-preview-09-2025` [preview], `gemini-2.5-flash-lite-preview-09-2025` [preview], `gemini-3-pro-preview` [preview], `gemini-3-flash-preview` [preview], `nano-banana-pro-preview` [preview], `gemini-robotics-er-1.5-preview` [preview], `gemini-2.5-computer-use-preview-10-2025` [preview], `deep-research-pro-preview-12-2025` [preview], `aqa`, `veo-2.0-generate-001`, `veo-3.0-generate-001`, `veo-3.0-fast-generate-001`, `veo-3.1-generate-preview` [preview], `veo-3.1-fast-generate-preview` [preview]
+- openai: `gpt-4-0613`, `gpt-4`, `gpt-3.5-turbo`, `gpt-4o-search-preview-2025-03-11` (2025-03-11) [preview], `gpt-5.3-codex`, `gpt-realtime-1.5`, `gpt-4o-search-preview` [preview], `davinci-002` [deprecated], `babbage-002` [deprecated], `gpt-3.5-turbo-instruct`, `gpt-3.5-turbo-instruct-0914`, `gpt-4-1106-preview` [preview], `gpt-3.5-turbo-1106`, `gpt-4-0125-preview` [preview], `gpt-4-turbo-preview` [preview], `gpt-3.5-turbo-0125`, `gpt-4-turbo`, `gpt-4-turbo-2024-04-09` (2024-04-09), `gpt-4o`, `gpt-4o-2024-05-13` (2024-05-13), `gpt-4o-mini-2024-07-18` (2024-07-18), `gpt-4o-mini`, `gpt-4o-2024-08-06` (2024-08-06), `gpt-4o-realtime-preview` [preview], `omni-moderation-latest`, `omni-moderation-2024-09-26` (2024-09-26), `gpt-4o-realtime-preview-2024-12-17` (2024-12-17) [preview], `gpt-4o-mini-realtime-preview-2024-12-17` (2024-12-17) [preview], `o1-2024-12-17` (2024-12-17), `o1`, `gpt-4o-mini-realtime-preview` [preview], `computer-use-preview` [preview], `o3-mini`, `o3-mini-2025-01-31` (2025-01-31), `gpt-4o-2024-11-20` (2024-11-20), `computer-use-preview-2025-03-11` (2025-03-11) [preview], `gpt-4o-mini-search-preview-2025-03-11` (2025-03-11) [preview], `gpt-4o-mini-search-preview` [preview], `gpt-4o-transcribe`, `gpt-4o-mini-transcribe`, `o1-pro-2025-03-19` (2025-03-19), `o1-pro`, `o3-2025-04-16` (2025-04-16), `o4-mini-2025-04-16` (2025-04-16), `o3`, `o4-mini`, `gpt-4.1-2025-04-14` (2025-04-14), `gpt-4.1`, `gpt-4.1-mini-2025-04-14` (2025-04-14), `gpt-4.1-mini`, `gpt-4.1-nano-2025-04-14` (2025-04-14), `gpt-4.1-nano`, `gpt-4o-realtime-preview-2025-06-03` (2025-06-03) [preview], `o4-mini-deep-research`, `gpt-4o-transcribe-diarize`, `o4-mini-deep-research-2025-06-26` (2025-06-26), `gpt-5-chat-latest`, `gpt-5-2025-08-07` (2025-08-07), `gpt-5`, `gpt-5-mini-2025-08-07` (2025-08-07), `gpt-5-mini`, `gpt-5-nano-2025-08-07` (2025-08-07), `gpt-5-nano`, `gpt-realtime`, `gpt-realtime-2025-08-28` (2025-08-28), `gpt-5-codex`, `gpt-5-pro-2025-10-06` (2025-10-06), `gpt-5-pro`, `gpt-5-search-api`, `gpt-realtime-mini`, `gpt-realtime-mini-2025-10-06` (2025-10-06), `sora-2`, `sora-2-pro`, `gpt-5-search-api-2025-10-14` (2025-10-14), `gpt-5.1-chat-latest`, `gpt-5.1-2025-11-13` (2025-11-13), `gpt-5.1`, `gpt-5.1-codex`, `gpt-5.1-codex-mini`, `gpt-5.1-codex-max`, `gpt-5.2-2025-12-11` (2025-12-11), `gpt-5.2`, `gpt-5.2-pro-2025-12-11` (2025-12-11), `gpt-5.2-pro`, `gpt-5.2-chat-latest`, `gpt-4o-mini-transcribe-2025-12-15` (2025-12-15), `gpt-4o-mini-transcribe-2025-03-20` (2025-03-20), `gpt-realtime-mini-2025-12-15` (2025-12-15), `gpt-5.2-codex`, `gpt-3.5-turbo-16k`
+- anthropic: `claude-sonnet-4-6`, `claude-opus-4-6`, `claude-opus-4-5-20251101` (2025-11-01), `claude-haiku-4-5-20251001` (2025-10-01), `claude-sonnet-4-5-20250929` (2025-09-29), `claude-opus-4-1-20250805` (2025-08-05), `claude-opus-4-20250514` (2025-05-14), `claude-sonnet-4-20250514` (2025-05-14), `claude-3-haiku-20240307` (2024-03-07)
+- google: `gemini-2.5-flash`, `gemini-2.5-pro`, `gemini-2.0-flash`, `gemini-2.0-flash-001`, `gemini-2.0-flash-lite-001`, `gemini-2.0-flash-lite`, `gemma-3-1b-it`, `gemma-3-4b-it`, `gemma-3-12b-it`, `gemma-3-27b-it`, `gemma-3n-e4b-it`, `gemma-3n-e2b-it`, `gemini-flash-latest`, `gemini-flash-lite-latest`, `gemini-pro-latest`, `gemini-2.5-flash-lite`, `gemini-2.5-flash-lite-preview-09-2025` [preview], `gemini-3-pro-preview` [preview], `gemini-3-flash-preview` [preview], `gemini-3.1-pro-preview` [preview], `gemini-3.1-pro-preview-customtools` [preview], `nano-banana-pro-preview` [preview], `gemini-robotics-er-1.5-preview` [preview], `gemini-2.5-computer-use-preview-10-2025` [preview], `deep-research-pro-preview-12-2025` [preview], `aqa`, `veo-2.0-generate-001`, `veo-3.0-generate-001`, `veo-3.0-fast-generate-001`, `veo-3.1-generate-preview` [preview], `veo-3.1-fast-generate-preview` [preview]
 
-**Audio Models (23):**
-- openai: `gpt-4o-mini-tts-2025-12-15` (2025-12-15), `gpt-audio-mini-2025-12-15` (2025-12-15), `tts-1-hd`, `tts-1-1106`, `tts-1-hd-1106`, `gpt-4o-audio-preview` [preview], `gpt-4o-audio-preview-2024-12-17` (2024-12-17) [preview], `gpt-4o-mini-audio-preview-2024-12-17` (2024-12-17) [preview], `gpt-4o-mini-audio-preview` [preview], `gpt-4o-mini-tts`, `gpt-4o-audio-preview-2025-06-03` (2025-06-03) [preview], `gpt-audio-2025-08-28` (2025-08-28), `gpt-audio`, `gpt-audio-mini`, `gpt-audio-mini-2025-10-06` (2025-10-06), `gpt-4o-mini-tts-2025-03-20` (2025-03-20), `tts-1`, `whisper-1`
+**Audio Models (24):**
+- openai: `gpt-audio-1.5`, `tts-1-hd`, `tts-1-1106`, `tts-1-hd-1106`, `gpt-4o-audio-preview` [preview], `gpt-4o-audio-preview-2024-12-17` (2024-12-17) [preview], `gpt-4o-mini-audio-preview-2024-12-17` (2024-12-17) [preview], `gpt-4o-mini-audio-preview` [preview], `gpt-4o-mini-tts`, `gpt-4o-audio-preview-2025-06-03` (2025-06-03) [preview], `gpt-audio-2025-08-28` (2025-08-28), `gpt-audio`, `gpt-audio-mini`, `gpt-audio-mini-2025-10-06` (2025-10-06), `gpt-4o-mini-tts-2025-03-20` (2025-03-20), `gpt-4o-mini-tts-2025-12-15` (2025-12-15), `gpt-audio-mini-2025-12-15` (2025-12-15), `tts-1`, `whisper-1`
 - google: `gemini-2.5-flash-preview-tts` [preview], `gemini-2.5-pro-preview-tts` [preview], `gemini-2.5-flash-native-audio-latest`, `gemini-2.5-flash-native-audio-preview-09-2025` [preview], `gemini-2.5-flash-native-audio-preview-12-2025` [preview]
 
-**Image Models (14):**
-- openai: `chatgpt-image-latest`, `dall-e-3`, `dall-e-2`, `gpt-image-1`, `gpt-image-1-mini`, `gpt-image-1.5`
-- google: `gemini-2.0-flash-exp-image-generation` [preview], `gemini-2.5-flash-image`, `gemini-3-pro-image-preview` [preview], `imagen-4.0-generate-preview-06-06` [preview], `imagen-4.0-ultra-generate-preview-06-06` [preview], `imagen-4.0-generate-001`, `imagen-4.0-ultra-generate-001`, `imagen-4.0-fast-generate-001`
+**Image Models (13):**
+- openai: `dall-e-3`, `dall-e-2`, `gpt-image-1`, `gpt-image-1-mini`, `gpt-image-1.5`, `chatgpt-image-latest`
+- google: `gemini-2.0-flash-exp-image-generation` [preview], `gemini-2.5-flash-image`, `gemini-3-pro-image-preview` [preview], `gemini-3.1-flash-image-preview` [preview], `imagen-4.0-generate-001`, `imagen-4.0-ultra-generate-001`, `imagen-4.0-fast-generate-001`
 
 **Embedding Models (4):**
 - openai: `text-embedding-3-small`, `text-embedding-3-large`, `text-embedding-ada-002`
@@ -147,36 +147,34 @@ Total models discovered: 171
   },
   {
     "provider": "openai",
-    "model_id": "gpt-5.2-codex",
+    "model_id": "gpt-4o-search-preview-2025-03-11",
+    "release_date": "2025-03-11",
+    "is_preview": true,
+    "model_type": "chat"
+  },
+  {
+    "provider": "openai",
+    "model_id": "gpt-5.3-codex",
     "is_preview": false,
     "model_type": "chat"
   },
   {
     "provider": "openai",
-    "model_id": "gpt-4o-mini-tts-2025-12-15",
-    "release_date": "2025-12-15",
-    "is_preview": false,
-    "model_type": "audio"
-  },
-  {
-    "provider": "openai",
-    "model_id": "gpt-realtime-mini-2025-12-15",
-    "release_date": "2025-12-15",
+    "model_id": "gpt-realtime-1.5",
     "is_preview": false,
     "model_type": "chat"
   },
   {
     "provider": "openai",
-    "model_id": "gpt-audio-mini-2025-12-15",
-    "release_date": "2025-12-15",
+    "model_id": "gpt-audio-1.5",
     "is_preview": false,
     "model_type": "audio"
   },
   {
     "provider": "openai",
-    "model_id": "chatgpt-image-latest",
-    "is_preview": false,
-    "model_type": "image"
+    "model_id": "gpt-4o-search-preview",
+    "is_preview": true,
+    "model_type": "chat"
   },
   {
     "provider": "openai",

@@ -1,26 +1,26 @@
 {
-  "generated_at_unix": 1770920402,
-  "generated_at_iso": "2026-02-12T18:20:02.001Z",
+  "generated_at_unix": 1771396916,
+  "generated_at_iso": "2026-02-18T06:41:56.157Z",
   "deps": {
     "npm_latest": {
+      "@anthropic-ai/sdk": "0.76.0",
       "@google/genai": "1.41.0",
-      "@anthropic-ai/sdk": "0.74.0",
-      "openai": "6.21.0",
+      "zod": "4.3.6",
+      "openai": "6.22.0",
       "react": "19.2.4",
       "react-dom": "19.2.4",
       "tailwindcss": "4.1.18",
       "typescript": "5.9.3",
-      "next": "16.1.6",
-      "zod": "4.3.6"
+      "next": "16.1.6"
     },
     "pypi_latest": {
+      "openai": "2.21.0",
       "google-genai": "1.63.0",
       "httpx": "0.28.1",
-      "anthropic": "0.79.0",
+      "anthropic": "0.81.0",
       "fastapi": "0.129.0",
-      "openai": "2.20.0",
       "pydantic": "2.12.5",
-      "litellm": "1.81.10"
+      "litellm": "1.81.13"
     }
   },
   "models": {
@@ -217,12 +217,6 @@
         "provider": "openai",
         "model_id": "gpt-4o-2024-08-06",
         "release_date": "2024-08-06",
-        "is_preview": false,
-        "model_type": "chat"
-      },
-      {
-        "provider": "openai",
-        "model_id": "chatgpt-4o-latest",
         "is_preview": false,
         "model_type": "chat"
       },
@@ -767,6 +761,13 @@
       },
       {
         "provider": "anthropic",
+        "model_id": "claude-sonnet-4-6",
+        "display_name": "Claude Sonnet 4.6",
+        "is_preview": false,
+        "model_type": "chat"
+      },
+      {
+        "provider": "anthropic",
         "model_id": "claude-opus-4-6",
         "display_name": "Claude Opus 4.6",
         "is_preview": false,
@@ -1191,35 +1192,35 @@
       "data_source": "npm registry",
       "source_type": "registry",
       "source_url": "https://registry.npmjs.org",
-      "fetched_at": "2026-02-12T18:20:02.001Z",
+      "fetched_at": "2026-02-18T06:41:56.157Z",
       "method": "GET /{package} (dist-tags.latest)"
     },
     "pypi_registry": {
       "data_source": "PyPI registry",
       "source_type": "registry",
       "source_url": "https://pypi.org/pypi",
-      "fetched_at": "2026-02-12T18:20:02.001Z",
+      "fetched_at": "2026-02-18T06:41:56.157Z",
       "method": "GET /{package}/json (info.version)"
     },
     "openai_api": {
       "data_source": "OpenAI API",
       "source_type": "api",
       "source_url": "https://api.openai.com",
-      "fetched_at": "2026-02-12T18:20:02.001Z",
+      "fetched_at": "2026-02-18T06:41:56.157Z",
       "method": "GET /v1/models (Bearer token)"
     },
     "anthropic_api": {
       "data_source": "Anthropic API",
       "source_type": "api",
       "source_url": "https://api.anthropic.com",
-      "fetched_at": "2026-02-12T18:20:02.001Z",
+      "fetched_at": "2026-02-18T06:41:56.157Z",
       "method": "GET /v1/models (x-api-key header)"
     },
     "gemini_api": {
       "data_source": "Google Gemini API",
       "source_type": "api",
       "source_url": "https://generativelanguage.googleapis.com",
-      "fetched_at": "2026-02-12T18:20:02.001Z",
+      "fetched_at": "2026-02-18T06:41:56.157Z",
       "method": "GET /v1beta/models (x-goog-api-key header)"
     },
     "codegen_instructions": [
@@ -1227,7 +1228,7 @@
         "data_source": "google-genai codegen instructions",
         "source_type": "github",
         "source_url": "https://raw.githubusercontent.com/googleapis/python-genai/main/README.md",
-        "fetched_at": "2026-02-12T18:20:02.001Z",
+        "fetched_at": "2026-02-18T06:41:56.157Z",
         "method": "GET (raw GitHub content)"
       }
     ]
