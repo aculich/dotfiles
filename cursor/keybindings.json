@@ -405,6 +405,11 @@
     "command": "-workbench.action.showCommands",
     "when": "config.emacs-mcx.useMetaPrefixMacCmd && !findInputFocussed && !replaceInputFocussed"
   },
+  {
+    "key": "alt+cmd+s",
+    "command": "workbench.action.toggleUnifiedSidebarFromKeyboard",
+    "when": "cursor.agentIdeUnification.enabled == true && !isAuxiliaryWindowFocusedContext"
+  },
 ]
 
 // NOTES:

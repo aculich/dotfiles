@@ -46,6 +46,8 @@
   },
   "cSpell.enabled": false,
   "remote.SSH.remotePlatform": {
-    "klein.berkeley.edu": "linux"
+    "klein.berkeley.edu": "linux",
   },
+  "claudeCode.useTerminal": true,
+  "terminal.integrated.macOptionIsMeta": true,
 }
