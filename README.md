@@ -57,6 +57,7 @@ A professional, secure, and maintainable development environment setup following
 - **[Setup Guide](SETUP_GUIDE.md)** - Comprehensive setup instructions
 - **[Migration Plan](MIGRATION_PLAN.md)** - Step-by-step migration from old setup
 - **[Quick Reference](QUICK_REFERENCE.md)** - Common commands and troubleshooting
+- **[GitHub Trending Setup](GITHUB_TRENDING_SETUP.md)** - Install and use `gh trending` and `ghtrend` on this machine or another
 
 ## Directory Structure
 
@@ -75,6 +76,7 @@ dotfiles/
 ├── SETUP_GUIDE.md                # Detailed setup guide
 ├── MIGRATION_PLAN.md             # Migration instructions
 ├── QUICK_REFERENCE.md            # Quick reference guide
+├── GITHUB_TRENDING_SETUP.md      # GitHub trending (ghtrend / gh trending) setup
 └── README.md                      # This file
 ```
 

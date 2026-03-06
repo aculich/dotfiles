@@ -62,6 +62,28 @@ cp ~/dotfiles/zsh/.envrc.template .envrc
 direnv allow
 ```
 
+### GitHub Trending
+
+Requires `gh` and (for full setup) the gh-trending extension. See **[GITHUB_TRENDING_SETUP.md](GITHUB_TRENDING_SETUP.md)** to install on a new machine.
+
+```bash
+# Install extension (one-time)
+gh extension install gkze/gh-trending
+
+# List trending repos (alias tries API, then gh trending)
+ghtrend
+ghtrend weekly
+ghtrend daily python
+
+# Direct extension (table or JSON)
+gh trending
+gh trending --web
+gh trending -o json
+
+# Clone first N trending repos
+ghtrend-clone 3 weekly
+```
+
 ## File Locations
 
 | File | Purpose | Location |
