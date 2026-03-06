@@ -1,0 +1,29 @@
+{
+  "title": "Tap Caps Lock for CTRL-[ or Hold for Control",
+  "rules": [
+    {
+      "description": "Tap Caps Lock for CTRL-[ or Hold for Control",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "caps_lock",
+            "modifiers": { "optional": ["any"] }
+          },
+          "to": [
+            {
+              "key_code": "left_control",
+              "lazy": true
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "open_bracket",
+              "modifiers": ["left_control"]
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    }
+  ]
+}
