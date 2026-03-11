@@ -1,4 +1,26 @@
-[{
+[
+  // === KEYBINDING TROUBLESHOOTING (Cursor / VS Code) ===
+  // See docs/keybindings-guide.md for full observability and modification guide.
+  //
+  // Quick observability:
+  //   • Cmd+Shift+P → "Developer: Toggle Keyboard Shortcuts Troubleshooting"
+  //     → Enables live logging: press a key and check Output panel to see which
+  //       command matched, its "when" clause, and source (built-in / User / extension).
+  //   • Cmd+Shift+P → "Preferences: Open Keyboard Shortcuts" (or Cmd+K Cmd+S)
+  //     → Search by key (e.g. "tab") to list all bindings; right-click a row →
+  //       "Show Same Keybindings" to see what shadows that key.
+  //   • Cmd+Shift+P → "Developer: Inspect Context Keys"
+  //     → Click a UI element to see current context (e.g. editorLangId, terminalFocus)
+  //       so you can write accurate "when" clauses.
+  //   • Cmd+Shift+P → "Preferences: Open Default Keyboard Shortcuts (JSON)"
+  //     → View all default + extension keybindings and their when clauses.
+  //
+  // Resolution order: rules evaluated bottom-to-top; first matching key + when wins.
+  // User keybindings (this file) are merged and can override. Use "-commandId" to
+  // remove a binding (optionally with "when" to remove only in that context).
+  // ===
+
+  {
   "key": "shift+alt+x",
   "command": "whichkey.show",
   // "when": "editorTextFocus"
@@ -63,6 +85,17 @@
   // Keybindings required for edamagit
   // https://github.com/kahole/edamagit#vim-support-vscodevim
   // Cannot be added to package.json because keybinding replacements
+  // Ctrl+J / Ctrl+K: jump between sections in magit (next/previous section)
+  {
+    "key": "ctrl+j",
+    "command": "magit.goToNextSection",
+    "when": "editorTextFocus && (editorLangId == 'magit' || editorLangId =~ /magit/)"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "magit.goToPreviousSection",
+    "when": "editorTextFocus && (editorLangId == 'magit' || editorLangId =~ /magit/)"
+  },
   // Strip Vim Tab everywhere, then re-add only when NOT in a magit buffer (so Magit Toggle Fold gets Tab there)
   {
     "key": "tab",
