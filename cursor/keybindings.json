@@ -20,6 +20,8 @@
   // remove a binding (optionally with "when" to remove only in that context).
   // ===
 
+  // testing
+
   {
   "key": "shift+alt+x",
   "command": "whichkey.show",
@@ -82,18 +84,19 @@
     "command": "vspacecode.space",
     "when": "sideBarFocus && !inputFocus && !whichkeyActive",
   },
+
   // Keybindings required for edamagit
   // https://github.com/kahole/edamagit#vim-support-vscodevim
   // Cannot be added to package.json because keybinding replacements
-  // Ctrl+J / Ctrl+K: jump between sections in magit (next/previous section)
+  // Ctrl+J / Ctrl+K: jump between sections in magit (next/previous entity)
   {
     "key": "ctrl+j",
-    "command": "magit.goToNextSection",
+    "command": "magit.move-next-entity",
     "when": "editorTextFocus && (editorLangId == 'magit' || editorLangId =~ /magit/)"
   },
   {
     "key": "ctrl+k",
-    "command": "magit.goToPreviousSection",
+    "command": "magit.move-previous-entity",
     "when": "editorTextFocus && (editorLangId == 'magit' || editorLangId =~ /magit/)"
   },
   // Strip Vim Tab everywhere, then re-add only when NOT in a magit buffer (so Magit Toggle Fold gets Tab there)
@@ -173,6 +176,8 @@
     "command": "vspacecode.showMagitRefreshMenu",
     "when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/",
   },
+
+  
   // Easy navigation in quick open/QuickPick
   {
     "key": "ctrl+j",
