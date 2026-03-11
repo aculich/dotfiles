@@ -586,3 +586,30 @@ function _zd_widget() {
     zle accept-line
 }
 zle -N _zd_widget
+
+# jq / JSON exploration (ajr-style REPL: keys in fzf, live jq preview)
+# Requires: jq, fzf, yq (mikefarah/yq). Usage: jqrepl file.json [or -y file.yaml]
+jqrepl() {
+	local f="$1"
+	if [[ -z "$f" ]]; then echo "Usage: jqrepl <file.json> or jqrepl -y <file.yaml>"; return 1; fi
+	if [[ "$1" = -y ]]; then
+		shift; f="$1"
+		command yq 'def getkeys: [to_entries[] | {(.key): (.value | getkeys?)}]; getkeys' "$f" | \
+		fzf --disabled --print-query --preview "yq -o json -r {q} $f 2>/dev/null | jq -C . 2>/dev/null || yq {q} $f"
+	else
+		jq 'def getkeys: [to_entries[] | {(.key): (.value | getkeys?)}]; getkeys' "$f" | \
+		command yq -o yaml 2>/dev/null | \
+		fzf --disabled --print-query --preview "jq -C {q} $f"
+	fi
+}
+
+# up (Ultimate Plumber): pipe into it for interactive pipeline building. Install: brew install up
+# e.g. lshw |& up
+
+# Markdown: fuzzy find .md files then render with glow (pager). Requires: fd, fzf, glow
+mdr() {
+	local dir="${1:-.}"
+	local f
+	f=$(fd -e md . "$dir" 2>/dev/null | fzf)
+	[[ -n "$f" ]] && glow -p "$f"
+}
