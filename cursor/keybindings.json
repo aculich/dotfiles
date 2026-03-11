@@ -63,21 +63,15 @@
   // Keybindings required for edamagit
   // https://github.com/kahole/edamagit#vim-support-vscodevim
   // Cannot be added to package.json because keybinding replacements
+  // Strip Vim Tab everywhere, then re-add only when NOT in a magit buffer (so Magit Toggle Fold gets Tab there)
+  {
+    "key": "tab",
+    "command": "-extension.vim_tab"
+  },
   {
     "key": "tab",
     "command": "extension.vim_tab",
-    "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert' && editorLangId != 'magit'",
-  },
-  {
-    "key": "tab",
-    "command": "-extension.vim_tab",
-    "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'",
-  },
-  // Let Magit Toggle Fold get Tab in magit/edamagit buffers (Vim was winning otherwise)
-  {
-    "key": "tab",
-    "command": "-extension.vim_tab",
-    "when": "editorTextFocus && (editorLangId == 'magit' || editorLangId == 'edamagit-cursor-c')"
+    "when": "editorTextFocus && vim.active && !inDebugRepl && !inlineEditIsVisible && vim.mode != 'Insert' && !(editorLangId =~ /magit/)"
   },
   {
     "key": "x",
