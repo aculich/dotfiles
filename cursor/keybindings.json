@@ -73,6 +73,12 @@
     "command": "-extension.vim_tab",
     "when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'",
   },
+  // Let Magit Toggle Fold get Tab in magit/edamagit buffers (Vim was winning otherwise)
+  {
+    "key": "tab",
+    "command": "-extension.vim_tab",
+    "when": "editorTextFocus && (editorLangId == 'magit' || editorLangId == 'edamagit-cursor-c')"
+  },
   {
     "key": "x",
     "command": "magit.discard-at-point",
@@ -395,6 +401,20 @@
       "text": "\\\r\n",
     },
     "when": "terminalFocus",
+  },
+
+  // Agent terminal + Shift+Cmd+[ / ]: Cursor does not provide workbench.action.terminal.focusPreviousGroup
+  // or focusNextGroup. Use terminal tab switching instead (focusPrevious / focusNext), or find the
+  // correct command in Cmd+Shift+P → "Keyboard Shortcuts" by searching "terminal focus".
+  {
+    "key": "shift+cmd+[",
+    "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus || terminalFocus && !terminalEditorFocus"
+  },
+  {
+    "key": "shift+cmd+]",
+    "command": "workbench.action.terminal.focusNext",
+    "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus || terminalFocus && !terminalEditorFocus"
   },
   {
     "key": "cmd+i",
