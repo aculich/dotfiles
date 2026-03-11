@@ -50,4 +50,7 @@
   },
   "claudeCode.useTerminal": true,
   "terminal.integrated.macOptionIsMeta": true,
+  "magit.forge-enabled": true,
+  "magit.display-buffer-function": "same-column",
+  "magit.quick-switch-enabled": true,
 }
