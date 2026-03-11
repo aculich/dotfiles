@@ -58,6 +58,7 @@ A professional, secure, and maintainable development environment setup following
 - **[Migration Plan](MIGRATION_PLAN.md)** - Step-by-step migration from old setup
 - **[Quick Reference](QUICK_REFERENCE.md)** - Common commands and troubleshooting
 - **[GitHub Trending Setup](GITHUB_TRENDING_SETUP.md)** - Install and use `gh trending` and `ghtrend` on this machine or another
+- **[FZF, jq, and friends](FZF_JQ_SETUP.md)** - fzf keybindings, jq/jqless/jqrepl, up, yq, glow, yt-x, and upstream clones
 
 ## Directory Structure
 
@@ -77,6 +78,7 @@ dotfiles/
 ├── MIGRATION_PLAN.md             # Migration instructions
 ├── QUICK_REFERENCE.md            # Quick reference guide
 ├── GITHUB_TRENDING_SETUP.md      # GitHub trending (ghtrend / gh trending) setup
+├── FZF_JQ_SETUP.md               # FZF, jq, yq, glow, up, yt-x setup and upstream clones
 └── README.md                      # This file
 ```
 

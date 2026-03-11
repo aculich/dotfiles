@@ -84,6 +84,18 @@ gh trending -o json
 ghtrend-clone 3 weekly
 ```
 
+### FZF, jq, markdown
+
+See **[FZF_JQ_SETUP.md](FZF_JQ_SETUP.md)** for full setup (plugins, keybindings, upstream clones).
+
+```bash
+# Fzf: Ctrl+T (files), Ctrl+R (history), Alt+C (cd); Esc+z / Esc+p / Esc+d (zz, pz, zd)
+# jq: Alt+J on a JSON-producing command; jqrepl file.json; jqless file.json
+# Markdown: mdr [dir]   # fuzzy find .md, render with glow
+# Pipes: cmd | up      # Ultimate Plumber
+# YouTube: yt-x
+```
+
 ## File Locations
 
 | File | Purpose | Location |
