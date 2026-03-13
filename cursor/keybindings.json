@@ -462,6 +462,11 @@
     "command": "workbench.action.toggleUnifiedSidebarFromKeyboard",
     "when": "cursor.agentIdeUnification.enabled == true && !isAuxiliaryWindowFocusedContext"
   },
+  {
+    "key": "alt+enter",
+    "command": "editor.action.inlineDiffs.acceptAll",
+    "when": "editorTextFocus && inlineDiffs.activeEditorWithDiffs"
+  },
 ]
 
 // NOTES:

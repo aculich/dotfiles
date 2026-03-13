@@ -7,7 +7,7 @@ alias hf='cat ~/.zsh_history | grep -a | fzf' # Fuzzy search all history
 # Alias Management and ZSH Configuration
 alias adump='alias | tee $ZSH_CUSTOM/aliases.dump; ls -lah $ZSH_CUSTOM/aliases.dump'                   # Dump all aliases to file and show it
 alias al='alias | perl -pe "s/=/\x23/" | column -x -s$(printf "\x23") -t | cut -c-$(tput cols) | fzf'  # Fuzzy find aliases
-#alias als='less -C $ZSH_CUSTOM/aliases.zsh'                                                           # View aliases file
+alias als='alias | perl -pe "s/=/\x23/" | column -x -s$(printf "\x23") -t | cut -c-$(tput cols) | less -R -F'  # List all aliases (formatted, paged)
 alias ag='alias | grep'                                                                                # Search aliases
 
 # ZSH Custom Directory Management
