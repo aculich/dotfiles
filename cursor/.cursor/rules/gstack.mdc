@@ -1,0 +1,44 @@
+# gstack — Virtual Engineering Team
+
+gstack provides structured review and QA skills adapted from Garry Tan's software factory.
+Skills live at `~/.cursor/skills/gstack/` and each subdirectory contains a `SKILL.md`.
+
+## Available Skills
+
+| Skill | Purpose |
+|-------|---------|
+| `plan-ceo-review` | Rethink the problem, find the 10-star product |
+| `plan-eng-review` | Lock architecture, data flow, edge cases, tests |
+| `plan-design-review` | 80-item design audit with letter grades, AI slop detection |
+| `design-consultation` | Build a complete design system from scratch |
+| `review` | Pre-landing PR review: SQL safety, trust boundaries, completeness |
+| `ship` | Sync main, run tests, audit coverage, push, open PR |
+| `browse` | Headless Chromium browser for QA (~100ms/command) |
+| `qa` | Test app, find bugs, fix with atomic commits, regression tests |
+| `qa-only` | Same as qa but report-only, no code changes |
+| `qa-design-review` | Design audit that fixes what it finds |
+| `setup-browser-cookies` | Import cookies from real browser into headless session |
+| `retro` | Weekly retro with per-person breakdowns and trends |
+| `document-release` | Update all project docs to match shipped changes |
+
+## How to Use in Cursor
+
+When a user mentions a gstack skill by name (e.g. "run a review", "do a CEO review",
+"QA this page"), read `~/.cursor/skills/gstack/{skill-name}/SKILL.md` and follow its
+instructions. Adapt Claude Code-specific references:
+
+- `AskUserQuestion` → use natural language questions in your response
+- `Bash` → use the Shell tool
+- `$B <command>` → `~/.claude/skills/gstack/browse/dist/browse <command>`
+
+## Browse Binary
+
+The gstack headless browser is available at:
+`~/.claude/skills/gstack/browse/dist/browse`
+
+Use it via Shell for QA testing, screenshots, and page interaction.
+
+## Completeness Principle
+
+gstack follows the "Boil the Lake" principle: always do the complete thing when AI
+makes the marginal cost near-zero. Prefer the complete implementation over shortcuts.

@@ -53,4 +53,5 @@
   "magit.forge-enabled": true,
   "magit.display-buffer-function": "same-column",
   "magit.quick-switch-enabled": true,
+  "gitTreeCompare.diffMode": "full",
 }
