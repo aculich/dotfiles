@@ -54,4 +54,6 @@
   "magit.display-buffer-function": "same-column",
   "magit.quick-switch-enabled": true,
   "gitTreeCompare.diffMode": "full",
+  "update.releaseTrack": "dev",
+  "update.mode": "silentlyApplyOnQuit",
 }

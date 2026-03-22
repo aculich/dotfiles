@@ -5,3 +5,6 @@ upstream/
 .envrc
 *.backup.*
 cursor-workspace-*
+antigravity-archive/
+disabled/
+forks/
