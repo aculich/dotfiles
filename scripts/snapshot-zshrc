@@ -1,0 +1,59 @@
+#!/usr/bin/env bash
+# Save a timestamped copy of ~/.zshrc and optionally diff against dotfiles canonical rc.
+# Usage:
+#   snapshot-zshrc              # copy only
+#   snapshot-zshrc --diff     # show diff vs canonical (no copy)
+#   snapshot-zshrc --both     # copy then diff
+set -euo pipefail
+
+DOTFILES="${DOTFILES:-$HOME/dotfiles}"
+SNAPDIR="$DOTFILES/zsh/snapshots"
+CANON="${ZSHRC_CANONICAL:-$DOTFILES/zsh/.zshrc.professional}"
+HOME_RC="${HOME_ZSHRC:-$HOME/.zshrc}"
+
+mkdir -p "$SNAPDIR"
+ts="$(date +%Y%m%dT%H%M%S)"
+out="$SNAPDIR/.zshrc.$ts"
+
+do_copy() {
+  if [[ ! -f "$HOME_RC" ]]; then
+    echo "No file at $HOME_RC" >&2
+    exit 1
+  fi
+  cp "$HOME_RC" "$out"
+  echo "Wrote $out"
+}
+
+do_diff() {
+  if [[ ! -f "$HOME_RC" ]]; then
+    echo "No file at $HOME_RC" >&2
+    exit 1
+  fi
+  if [[ ! -f "$CANON" ]]; then
+    echo "Canonical not found: $CANON" >&2
+    exit 1
+  fi
+  echo "--- diff: $HOME_RC vs $CANON ---"
+  diff -u "$CANON" "$HOME_RC" || true
+}
+
+case "${1:-}" in
+  --diff)
+    do_diff
+    ;;
+  --both)
+    do_copy
+    do_diff
+    ;;
+  --help|-h)
+    echo "Usage: snapshot-zshrc [--diff|--both]"
+    exit 0
+    ;;
+  "")
+    do_copy
+    ;;
+  *)
+    echo "Unknown option: $1" >&2
+    exit 1
+    ;;
+esac

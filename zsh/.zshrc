@@ -1,3 +1,6 @@
+# Dotfiles zsh (short profile). Canonical alternative: zsh/.zshrc.professional (bootstrap default).
+# Last updated: 2026-03-22
+#
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -82,12 +85,17 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # plugins=(git docker mix macos ruby elixir golang python asdf)
 # plugins=(gcom fzf-tab fzf-gcloud zsh-fzf-packagemanager fzf-tools jq git docker mix macos python asdf direnv zsh-autosuggestions) # zsh-completions) # zsh-more-completions)
 #plugins=(gcom jq git docker mix macos python asdf direnv zsh-autosuggestions zsh-completions) # zsh-more-completions)
-plugins=(jq zsh-smart-insert git docker mix macos python asdf direnv zsh-autosuggestions zsh-completions) # zsh-more-completions)
+plugins=(jq zsh-smart-insert git alias-finder docker mix macos python asdf direnv zsh-autosuggestions zsh-completions) # zsh-more-completions)
 #plugins=(gcom jq git docker mix macos python asdf direnv zsh-autosuggestions) # zsh-completions) # zsh-more-completions)
 #plugins=(gcom jq git docker mix macos python asdf direnv ) # zsh-completions) # zsh-more-completions)
 #plugins=(git docker mix macos python asdf direnv zsh-autosuggestions) # zsh-completions) # zsh-more-completions)
 #plugins=(git docker mix macos python asdf direnv zsh-completions) # zsh-more-completions)
 #ZSH_AUTOSUGGEST_HISTORY_IGNORE=*
+
+zstyle ':omz:plugins:alias-finder' autoload no
+zstyle ':omz:plugins:alias-finder' longer no
+zstyle ':omz:plugins:alias-finder' exact no
+zstyle ':omz:plugins:alias-finder' cheaper no
 
 source $ZSH/oh-my-zsh.sh
 

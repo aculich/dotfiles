@@ -73,6 +73,14 @@ ln -sf ~/dotfiles/zsh/.zshenv.professional ~/.zshenv
 exec zsh
 ```
 
+Before editing `~/.zshrc` or after tools append to it (conda, etc.), capture drift:
+
+```bash
+~/dotfiles/scripts/snapshot-zshrc --both   # saves zsh/snapshots/.zshrc.<timestamp> and diffs vs canonical
+```
+
+See [zsh/snapshots/README.md](zsh/snapshots/README.md).
+
 ### Option B: Source Method
 
 Add to your existing `~/.zshrc`:

@@ -8,3 +8,6 @@ cursor-workspace-*
 antigravity-archive/
 disabled/
 forks/
+
+# Timestamped copies from scripts/snapshot-zshrc (see zsh/snapshots/README.md)
+zsh/snapshots/.zshrc.*

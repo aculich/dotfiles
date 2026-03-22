@@ -4,8 +4,8 @@ set -e
 
 DOTFILES_DIR="$HOME/dotfiles"
 
-# Symlink dotfiles
-ln -sf "$DOTFILES_DIR/zsh/.zshrc" "$HOME/.zshrc"
+# Canonical interactive zshrc (professional profile; short alternative: zsh/.zshrc)
+ln -sf "$DOTFILES_DIR/zsh/.zshrc.professional" "$HOME/.zshrc"
 
 # Set ZSH_CUSTOM to ~/.config/zsh
 if ! grep -q "export ZSH_CUSTOM" "$HOME/.zshrc"; then
@@ -18,7 +18,7 @@ if [ ! -d "$HOME/.oh-my-zsh" ]; then
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
-# ZSH_CUSTOM defaults to ~/.config/zsh (see zsh/.zshrc); OMZ only loads custom files from there
+# ZSH_CUSTOM defaults to ~/.config/zsh (see zsh/.zshrc or .zshrc.professional); OMZ loads custom files from there
 mkdir -p "$HOME/.config/zsh"
 ln -sf "$DOTFILES_DIR/zsh/aliases.zsh" "$HOME/.config/zsh/aliases.zsh"
 # Legacy path: harmless if unused; some setups still expect it

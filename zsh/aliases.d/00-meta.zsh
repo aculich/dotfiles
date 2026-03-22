@@ -23,21 +23,40 @@ _als_term_width() {
 }
 
 # Paged, formatted alias list (works on macOS BSD column and GNU)
-als() {
+als-simple() {
   local w
   w="$(_als_term_width)"
   alias | _als_column_fmt | cut -c-"$w" | less -R -F
 }
 
-# Fuzzy pick an alias (needs fzf)
-al() {
-  local w
-  w="$(_als_term_width)"
-  if ! command -v fzf >/dev/null 2>&1; then
-    echo 'fzf not found; use als or ag' >&2
-    return 1
+# Interactive alias browser: fzf + whence preview; use als --simple or als-simple without fzf
+als() {
+  if [[ "${1:-}" == --simple ]]; then
+    als-simple
+    return
   fi
-  alias | _als_column_fmt | cut -c-"$w" | fzf
+  if ! command -v fzf >/dev/null 2>&1; then
+    als-simple
+    return
+  fi
+  local name val lines
+  lines=()
+  for name in ${(ko)aliases}; do
+    val="${aliases[$name]}"
+    val="${val//$'\n'/ }"
+    lines+="${name}"$'\t'"${val}"
+  done
+  printf '%s\n' "${lines[@]}" | fzf \
+    --delimiter=$'\t' \
+    --with-nth=1,2 \
+    --preview 'whence -v {1} 2>/dev/null' \
+    --preview-window=bottom:45%:wrap \
+    --prompt='aliases> '
+}
+
+# Same as als (fzf + preview)
+al() {
+  als "$@"
 }
 
 ag() {
