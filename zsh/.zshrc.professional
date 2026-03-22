@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 # Professional Zsh Configuration
 # Modular, maintainable, and secure setup for development environments
-# Last updated: 2026-03-22 (ZSH_CUSTOM, alias-finder, sync with bootstrap canonical .zshrc)
+# Last updated: 2026-03-22 (ZSH_CUSTOM; OMZ aliases + alias-finder plugins; bootstrap canonical .zshrc)
 
 # ============================================================================
 # STARTUP PROFILING CONFIGURATION
@@ -129,6 +129,7 @@ export ZSH_CUSTOM="${ZSH_CUSTOM:-$HOME/.config/zsh}"
 # Set theme (can be overridden by powerlevel10k if installed)
 ZSH_THEME="${ZSH_THEME:-robbyrussell}"
 
+# aliases: grouped `als` cheatsheet (Python). https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/aliases
 # alias-finder: suggests shorter aliases before commands (see plugins/alias-finder README).
 # zstyle toggles optional; autoload stays off unless you want every-command hints.
 zstyle ':omz:plugins:alias-finder' autoload no
@@ -139,6 +140,7 @@ zstyle ':omz:plugins:alias-finder' cheaper no
 # Plugins - carefully curated for performance
 plugins=(github-gh-cli-supercharged 
     git
+    aliases
     alias-finder
 #    direnv
     zsh-autosuggestions

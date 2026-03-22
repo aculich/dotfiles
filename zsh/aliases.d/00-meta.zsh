@@ -1,62 +1,19 @@
-# Meta: alias listing, reload helpers, discovery (loaded first via aliases.d/*.zsh)
+# Meta: alias listing helpers, reload, discovery (loaded first via aliases.d/*.zsh)
+#
+# `als` is provided by Oh My Zsh plugin `aliases` (grouped cheatsheet via Python).
+# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/aliases
+# Add `aliases` to plugins=() and ensure python3 is available.
 
 # Single source of truth for the version-controlled aliases file (override if dotfiles live elsewhere)
 : "${DOTFILES_ALIASES_FILE:=$HOME/dotfiles/zsh/aliases.zsh}"
 
-# Format alias output: GNU column uses -x; BSD/macOS column only supports -t -s
-_als_column_table() {
-  if command -v gcolumn >/dev/null 2>&1; then
-    gcolumn -x -s "$(printf '\x23')" -t
-  else
-    column -t -s '#'
-  fi
-}
-
-_als_column_fmt() {
-  perl -pe 's/=/\x23/' | _als_column_table
-}
-
-_als_term_width() {
-  local w="${COLUMNS:-$(tput cols 2>/dev/null)}"
-  [[ "$w" == <-> ]] && (( w > 0 )) || w=80
-  print -r -- "$w"
-}
-
-# Paged, formatted alias list (works on macOS BSD column and GNU)
-als-simple() {
-  local w
-  w="$(_als_term_width)"
-  alias | _als_column_fmt | cut -c-"$w" | less -R -F
-}
-
-# Interactive alias browser: fzf + whence preview; use als --simple or als-simple without fzf
-als() {
-  if [[ "${1:-}" == --simple ]]; then
-    als-simple
-    return
-  fi
-  if ! command -v fzf >/dev/null 2>&1; then
-    als-simple
-    return
-  fi
-  local name val lines
-  lines=()
-  for name in ${(ko)aliases}; do
-    val="${aliases[$name]}"
-    val="${val//$'\n'/ }"
-    lines+="${name}"$'\t'"${val}"
-  done
-  printf '%s\n' "${lines[@]}" | fzf \
-    --delimiter=$'\t' \
-    --with-nth=1,2 \
-    --preview 'whence -v {1} 2>/dev/null' \
-    --preview-window=bottom:45%:wrap \
-    --prompt='aliases> '
-}
-
-# Same as als (fzf + preview)
+# Plain-text fuzzy pick over `alias` output (optional; does not replace `als`)
 al() {
-  als "$@"
+  if ! command -v fzf >/dev/null 2>&1; then
+    echo 'fzf not found' >&2
+    return 1
+  fi
+  alias | fzf
 }
 
 ag() {
@@ -96,7 +53,7 @@ zcvc() {
   cursor "$DOTFILES_ALIASES_FILE"
 }
 
-# List shell function names (complement to als, which only shows aliases)
+# List shell function names (complement to `als` from OMZ aliases plugin)
 funcs() {
   print -l ${(k)functions} | sort -u | less -FRX
 }
