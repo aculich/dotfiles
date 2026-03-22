@@ -1,4 +1,4 @@
-# Load modular meta (als, al, ag, adump, zcc, funcs, …) from aliases.d/
+# Load meta helpers from aliases.d/ (als/al, ag, adump, zcc, funcs, …)
 _DOTFILES_ALIASES_ROOT="${${(%):-%x}:A:h}"
 for _dotfiles_alias_inc in "$_DOTFILES_ALIASES_ROOT"/aliases.d/*.zsh(.N); do
   # shellcheck disable=SC1090

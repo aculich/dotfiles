@@ -1,8 +1,8 @@
-# Meta: alias listing helpers, reload, discovery (loaded first via aliases.d/*.zsh)
+# Meta: alias listing, reload helpers, discovery (sourced first via aliases.d/*.zsh)
 #
-# `als` is provided by Oh My Zsh plugin `aliases` (grouped cheatsheet via Python).
-# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/aliases
-# Add `aliases` to plugins=() and ensure python3 is available.
+# `als` is normally from Oh My Zsh plugin `aliases` (Python cheatsheet). A fallback is
+# defined below if that plugin did not load. Ensure `aliases` is in plugins=() in ~/.zshrc
+# and that python3 is available: https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/aliases
 
 # Single source of truth for the version-controlled aliases file (override if dotfiles live elsewhere)
 : "${DOTFILES_ALIASES_FILE:=$HOME/dotfiles/zsh/aliases.zsh}"
@@ -15,6 +15,15 @@ al() {
   fi
   alias | fzf
 }
+
+# Same implementation as OMZ plugins/aliases when the plugin did not load
+_als_omz_cheatsheet="${ZSH:-$HOME/.oh-my-zsh}/plugins/aliases/cheatsheet.py"
+if ! (( $+functions[als] )) && [[ -r "$_als_omz_cheatsheet" ]] && (( $+commands[python3] )); then
+  als() {
+    alias | python3 "$_als_omz_cheatsheet" "$@"
+  }
+fi
+unset _als_omz_cheatsheet
 
 ag() {
   alias | grep "$@"
@@ -53,7 +62,7 @@ zcvc() {
   cursor "$DOTFILES_ALIASES_FILE"
 }
 
-# List shell function names (complement to `als` from OMZ aliases plugin)
+# List shell function names (complement to `als`, which only lists aliases)
 funcs() {
   print -l ${(k)functions} | sort -u | less -FRX
 }
