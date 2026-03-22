@@ -25,7 +25,7 @@ alias dro='pushd -1; dirs -v'  # Rotate directory stack and show
 # File Listing Enhancements
 alias ll=la				       # Always show all files
 alias llt='ll -tr'             # List by time, reversed
-alias lls='ll -sr'             # List by size, reversed
+alias lls='ll -Sr'             # List by size, reversed
 alias t='local f; f(){ tree -a -I .git -C $* | less -FRX }; f'  # Tree view with color in less
 # alias t='tree'
 
