@@ -1,21 +1,17 @@
+# Load modular meta (als, al, ag, adump, zcc, funcs, …) from aliases.d/
+_DOTFILES_ALIASES_ROOT="${${(%):-%x}:A:h}"
+for _dotfiles_alias_inc in "$_DOTFILES_ALIASES_ROOT"/aliases.d/*.zsh(.N); do
+  # shellcheck disable=SC1090
+  source "$_dotfiles_alias_inc"
+done
+unset _dotfiles_alias_inc _DOTFILES_ALIASES_ROOT
+
 # History Management (per-shell history by default, shared on demand)
 alias hload='fc -RI ~/.zsh_history'          # Load shared history into current session
 alias hsearch='grep -a --color=auto'          # Search history file: hsearch "pattern" ~/.zsh_history
 alias hall='cat ~/.zsh_history | grep -a'     # Search all history: hall "pattern"
 alias hf='cat ~/.zsh_history | grep -a | fzf' # Fuzzy search all history
 
-# Alias Management and ZSH Configuration
-alias adump='alias | tee $ZSH_CUSTOM/aliases.dump; ls -lah $ZSH_CUSTOM/aliases.dump'                   # Dump all aliases to file and show it
-alias al='alias | perl -pe "s/=/\x23/" | column -x -s$(printf "\x23") -t | cut -c-$(tput cols) | fzf'  # Fuzzy find aliases
-alias als='alias | perl -pe "s/=/\x23/" | column -x -s$(printf "\x23") -t | cut -c-$(tput cols) | less -R -F'  # List all aliases (formatted, paged)
-alias ag='alias | grep'                                                                                # Search aliases
-
-# ZSH Custom Directory Management
-alias zc='cd $ZSH_CUSTOM/'                                                                             # Go to ZSH custom dir
-alias zcc='z=$ZSH_CUSTOM/aliases.zsh; echo Sourcing $z; source $z'                                     # Source aliases file
-alias zca='echo "Add custom alias: Ctrl-C to cancel, or copy and paste, then Ctrl-D when done."; cat >> $ZSH_CUSTOM/aliases.zsh; zcc'  # Add new alias interactively
-alias zcv='vi $ZSH_CUSTOM/aliases.zsh; zcc; (cd ~/dotfiles/zsh; git add aliases.zsh; gcom)'            # Edit and source aliases
-alias zcvc='cursor $ZSH_CUSTOM/aliases.zsh'                                                            # Edit and source aliases
 alias zrc='vi $HOME/.zshrc; source $HOME/.zshrc'                                                       # Edit and source zshrc
 alias zrcc='cursor $HOME/.zshrc'                                                                       # Edit and source zshrc
 alias ee='vi $HOME/.envrc'

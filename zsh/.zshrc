@@ -11,6 +11,10 @@ fi
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/$USER/.oh-my-zsh"
 
+# Oh My Zsh custom dir (must be set before oh-my-zsh.sh; matches bootstrap.sh)
+export ZSH_CUSTOM="${ZSH_CUSTOM:-$HOME/.config/zsh}"
+[[ -d "$ZSH_CUSTOM" ]] || mkdir -p "$ZSH_CUSTOM" 2>/dev/null
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -86,6 +90,10 @@ plugins=(jq zsh-smart-insert git docker mix macos python asdf direnv zsh-autosug
 #ZSH_AUTOSUGGEST_HISTORY_IGNORE=*
 
 source $ZSH/oh-my-zsh.sh
+
+# Dotfiles aliases (explicit load so aliases work even if ZSH_CUSTOM symlink is missing)
+DOTFILES_ZSH="${DOTFILES_ZSH:-$HOME/dotfiles/zsh}"
+[[ -f "$DOTFILES_ZSH/aliases.zsh" ]] && source "$DOTFILES_ZSH/aliases.zsh"
 
 # User configuration
 

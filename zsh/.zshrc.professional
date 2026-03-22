@@ -123,6 +123,8 @@ export PATH="$HOME/.local/bin:$PATH"
 # ============================================================================
 _zsh_profile_section "OH-MY-ZSH SETUP"
 export ZSH="$HOME/.oh-my-zsh"
+export ZSH_CUSTOM="${ZSH_CUSTOM:-$HOME/.config/zsh}"
+[[ -d "$ZSH_CUSTOM" ]] || mkdir -p "$ZSH_CUSTOM" 2>/dev/null
 
 # Set theme (can be overridden by powerlevel10k if installed)
 ZSH_THEME="${ZSH_THEME:-robbyrussell}"
