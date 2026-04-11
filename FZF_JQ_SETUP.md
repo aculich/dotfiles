@@ -12,6 +12,7 @@ This document describes the **fzf**, **jq**, and related tools in this dotfiles 
 - **Markdown:** `glow` for rendering; `mdr [dir]` to fuzzy-find .md files and open with glow in pager.
 - **YouTube:** `yt-x` – browse YouTube (and yt-dlp sites) from the terminal with fzf; script in `~/.local/bin/yt-x`.
 - **Upstream clones:** Repos from [LINKS-fzf-jq.md](LINKS-fzf-jq.md) are cloned in `upstream/` with `name__owner` (see [Upstream clones](#upstream-clones)).
+- **SQLite / DuckDB:** fzf pickers and schema helpers – see **[DATABASE_CLI.md](DATABASE_CLI.md)** (`sqpick`, `duckpick`, `vdpick`, `sqschema`, `duckschema`).
 
 ## Prerequisites
 
@@ -118,3 +119,7 @@ mdr
 # yt-x (if ~/.local/bin on PATH)
 yt-x --help 2>/dev/null || true
 ```
+
+## See also
+
+- **[DATABASE_CLI.md](DATABASE_CLI.md)** – SQLite and DuckDB with fd/fzf, litecli, visidata.

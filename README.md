@@ -59,6 +59,7 @@ A professional, secure, and maintainable development environment setup following
 - **[Quick Reference](QUICK_REFERENCE.md)** - Common commands and troubleshooting
 - **[GitHub Trending Setup](GITHUB_TRENDING_SETUP.md)** - Install and use `gh trending` and `ghtrend` on this machine or another
 - **[FZF, jq, and friends](FZF_JQ_SETUP.md)** - fzf keybindings, jq/jqless/jqrepl, up, yq, glow, yt-x, and upstream clones
+- **[Database CLI](DATABASE_CLI.md)** - SQLite and DuckDB: sqpick, duckpick, schema helpers, VisiData
 
 ## Directory Structure
 
@@ -73,12 +74,14 @@ dotfiles/
 │   └── site-specific/            # Machine-specific configurations
 ├── scripts/
 │   ├── migrate-secrets-to-1password.sh  # Migrate secrets to 1Password
+│   ├── database-cli-smoke.sh            # Smoke test for DATABASE_CLI.md tools
 │   └── setup-envrc.sh                   # Setup new .envrc
 ├── SETUP_GUIDE.md                # Detailed setup guide
 ├── MIGRATION_PLAN.md             # Migration instructions
 ├── QUICK_REFERENCE.md            # Quick reference guide
 ├── GITHUB_TRENDING_SETUP.md      # GitHub trending (ghtrend / gh trending) setup
 ├── FZF_JQ_SETUP.md               # FZF, jq, yq, glow, up, yt-x setup and upstream clones
+├── DATABASE_CLI.md               # SQLite, DuckDB, litecli, visidata, fzf pickers
 └── README.md                      # This file
 ```
 

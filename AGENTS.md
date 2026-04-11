@@ -14,3 +14,4 @@
 - `scripts/snapshot-zshrc` writes timestamped copies of `~/.zshrc` under `zsh/snapshots/` (ignored by git) and can diff against the canonical file so installer-appended blocks can be merged back deliberately.
 - If paths are listed in `.gitignore` but git still reports them as modified, they likely remain in the index and need to be unstaged from tracking (for example `git rm -r --cached <path>`) once—not ignored on disk alone.
 - Third-party tools and reference repos are often cloned under `upstream/` using a `repo__owner` directory naming convention aligned with existing git helpers in this dotfiles tree.
+- Cursor keybindings live in `cursor/keybindings.json`; observability and conflict-resolution workflows for keybindings are documented in `cursor/docs/keybindings-guide.md`.

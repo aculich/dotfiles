@@ -96,6 +96,18 @@ See **[FZF_JQ_SETUP.md](FZF_JQ_SETUP.md)** for full setup (plugins, keybindings,
 # YouTube: yt-x
 ```
 
+### SQLite and DuckDB
+
+See **[DATABASE_CLI.md](DATABASE_CLI.md)** for brew packages and details.
+
+```bash
+sqpick [dir]      # fzf a .db/.sqlite file, open litecli (or sqlite3)
+duckpick [dir]    # fzf a .duckdb file, open duckdb
+vdpick [dir]      # fzf a DB file, open VisiData
+sqschema FILE     # print SQLite schema
+duckschema FILE   # SHOW TABLES in DuckDB
+```
+
 ## File Locations
 
 | File | Purpose | Location |

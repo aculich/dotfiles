@@ -609,3 +609,86 @@ mdr() {
 	f=$(fd -e md . "$dir" 2>/dev/null | fzf)
 	[[ -n "$f" ]] && glow -p "$f"
 }
+
+# SQLite / DuckDB: pick file with fzf, open REPL or TUI. Requires: fd, fzf; brew install sqlite duckdb litecli visidata
+# Usage: sqpick [dir]  — search under directory (default .)
+#        sqpick path.db — open that file (no fd; avoids passing a file as fd's search root, which yields 0 results)
+#        sqpick *.db    — fzf over the expanded paths
+sqpick() {
+	local f root
+	if [[ $# -eq 0 ]]; then
+		root="."
+		f=$(fd -e db -e sqlite -e sqlite3 . "$root" 2>/dev/null | fzf)
+	elif [[ $# -eq 1 ]]; then
+		if [[ -d "$1" ]]; then
+			f=$(fd -e db -e sqlite -e sqlite3 . "$1" 2>/dev/null | fzf)
+		elif [[ -f "$1" ]] && [[ "$1" == *.db || "$1" == *.sqlite || "$1" == *.sqlite3 ]]; then
+			f="$1"
+		else
+			echo "sqpick: expected a directory or a .db/.sqlite/.sqlite3 file, got: $1" >&2
+			return 1
+		fi
+	else
+		f=$(printf '%s\n' "$@" | fzf)
+	fi
+	[[ -z "$f" ]] && return 0
+	if command -v litecli >/dev/null 2>&1; then
+		litecli "$f"
+	else
+		sqlite3 "$f"
+	fi
+}
+
+duckpick() {
+	local f
+	if [[ $# -eq 0 ]]; then
+		f=$(fd -e duckdb . . 2>/dev/null | fzf)
+	elif [[ $# -eq 1 ]]; then
+		if [[ -d "$1" ]]; then
+			f=$(fd -e duckdb . "$1" 2>/dev/null | fzf)
+		elif [[ -f "$1" && "$1" == *.duckdb ]]; then
+			f="$1"
+		else
+			echo "duckpick: expected a directory or a .duckdb file, got: $1" >&2
+			return 1
+		fi
+	else
+		f=$(printf '%s\n' "$@" | fzf)
+	fi
+	[[ -z "$f" ]] && return 0
+	duckdb "$f"
+}
+
+vdpick() {
+	local f
+	if [[ $# -eq 0 ]]; then
+		f=$(fd -e db -e sqlite -e sqlite3 -e duckdb . . 2>/dev/null | fzf)
+	elif [[ $# -eq 1 ]]; then
+		if [[ -d "$1" ]]; then
+			f=$(fd -e db -e sqlite -e sqlite3 -e duckdb . "$1" 2>/dev/null | fzf)
+		elif [[ -f "$1" ]] && [[ "$1" == *.db || "$1" == *.sqlite || "$1" == *.sqlite3 || "$1" == *.duckdb ]]; then
+			f="$1"
+		else
+			echo "vdpick: expected a directory or a db/sqlite/duckdb file, got: $1" >&2
+			return 1
+		fi
+	else
+		f=$(printf '%s\n' "$@" | fzf)
+	fi
+	[[ -z "$f" ]] && return 0
+	command vd "$f"
+}
+
+sqschema() {
+	[[ -z "$1" ]] && { echo "Usage: sqschema <file.sqlite>"; return 1; }
+	if command -v sqlite-utils >/dev/null 2>&1; then
+		sqlite-utils schema "$1"
+	else
+		sqlite3 "$1" ".schema"
+	fi
+}
+
+duckschema() {
+	[[ -z "$1" ]] && { echo "Usage: duckschema <file.duckdb>"; return 1; }
+	duckdb "$1" -c "SHOW TABLES;"
+}
