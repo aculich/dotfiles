@@ -1,0 +1,286 @@
+# Shadow copy of $HOME/.zshrc — git-tracked for drift analysis. Secrets redacted.
+# Update: cp ~/.zshrc ~/dotfiles/zsh/shadow/home-zshrc.shadow && (re-apply header + redact)
+#
+#!/usr/bin/env zsh
+# Professional Zsh Configuration
+# Modular, maintainable, and secure setup for development environments
+# Last updated: 2025-11-28
+
+# ============================================================================
+# STARTUP PROFILING CONFIGURATION
+# ============================================================================
+# Set to 'true' to display timing information for each section during startup
+# Set to 'false' or unset to disable timing display
+export ZSH_PROFILE_STARTUP="${ZSH_PROFILE_STARTUP:-false}"
+export ZSH_PROFILE_STARTUP=false
+
+# Initialize timing variables (must be very early)
+if [[ "$ZSH_PROFILE_STARTUP" == "true" ]]; then
+    # Use EPOCHREALTIME if available (more precise), otherwise SECONDS
+    # EPOCHREALTIME is in seconds since epoch, but we'll calculate differences correctly
+    typeset -gF ZSH_START_TIME
+    typeset -gF ZSH_LAST_TIME
+    
+    if (( ${+EPOCHREALTIME} )); then
+        # EPOCHREALTIME: capture start time (will use for calculating differences)
+        # EPOCHREALTIME is in seconds since epoch (e.g., 1765038675.818)
+        # Initialize as global float variables
+        typeset -gF ZSH_START_TIME=${EPOCHREALTIME}
+        typeset -gF ZSH_LAST_TIME=${EPOCHREALTIME}
+    else
+        # SECONDS: starts at 0 when shell starts
+        typeset -gF ZSH_START_TIME=$SECONDS
+        typeset -gF ZSH_LAST_TIME=$SECONDS
+    fi
+    
+    # Helper function to display timing
+    _zsh_profile_section() {
+        local section_name="$1"
+        local current_time
+        local elapsed
+        local total_elapsed
+        
+        # Use EPOCHREALTIME if available, otherwise SECONDS
+        if (( ${+EPOCHREALTIME} )); then
+            # EPOCHREALTIME: calculate difference correctly
+            current_time=${EPOCHREALTIME}
+            # Ensure variables are initialized (should be set at startup, but be safe)
+            # Don't check for == 0 since EPOCHREALTIME is never 0, just check if unset
+            if (( ! ${+ZSH_START_TIME} )); then
+                typeset -gF ZSH_START_TIME=$current_time
+            fi
+            if (( ! ${+ZSH_LAST_TIME} )); then
+                typeset -gF ZSH_LAST_TIME=$current_time
+            fi
+            # Calculate difference in seconds, then convert to milliseconds
+            # Use zsh's float arithmetic - ensure we're using global variables
+            typeset -F diff_elapsed=$(( current_time - ZSH_LAST_TIME ))
+            typeset -F diff_total=$(( current_time - ZSH_START_TIME ))
+            elapsed=$(( diff_elapsed * 1000 ))
+            total_elapsed=$(( diff_total * 1000 ))
+        else
+            # SECONDS: starts at 0, simpler calculation
+            current_time=$SECONDS
+            # Ensure variables are initialized
+            if (( ! ${+ZSH_START_TIME} )); then
+                ZSH_START_TIME=$current_time
+            fi
+            if (( ! ${+ZSH_LAST_TIME} )); then
+                ZSH_LAST_TIME=$current_time
+            fi
+            # Calculate differences and convert to milliseconds
+            elapsed=$(( (current_time - ZSH_LAST_TIME) * 1000 ))
+            total_elapsed=$(( (current_time - ZSH_START_TIME) * 1000 ))
+        fi
+        
+        # Format: [section] elapsed: X.XXXms (total: Y.YYYms)
+        printf "\033[0;36m[%s]\033[0m elapsed: \033[0;33m%.3fms\033[0m (total: \033[0;32m%.3fms\033[0m)\n" \
+            "$section_name" "$elapsed" "$total_elapsed" >&2
+        
+        # Update global variable (must be global float)
+        typeset -gF ZSH_LAST_TIME=$current_time
+    }
+    
+    _zsh_profile_section "START"
+else
+    # Dummy function when profiling is disabled (no-op)
+    _zsh_profile_section() { : }
+fi
+
+# ============================================================================
+# INITIALIZATION ORDER
+# ============================================================================
+# This file follows the proper zsh initialization order:
+# 1. .zshenv - Always sourced (even for non-interactive shells)
+# 2. .zprofile - Sourced for login shells
+# 3. .zshrc - Sourced for interactive shells (this file)
+# 4. .zlogin - Sourced after .zshrc for login shells
+# 5. .zlogout - Sourced when login shell exits
+
+# ============================================================================
+# FUNCTION NESTING LIMIT (Very early - before any tools that use nested functions)
+# ============================================================================
+_zsh_profile_section "FUNCTION NESTING LIMIT"
+# Set FUNCNEST early to prevent "maximum nested function level" errors
+# NVM and other tools use deeply nested function calls
+# Default is usually 50, but nvm can exceed this
+# Note: Also set in .zshenv, but ensure it's set here too for safety
+export FUNCNEST="${FUNCNEST:-100}"
+
+# ============================================================================
+# PATH SETUP (Early - before other tools)
+# ============================================================================
+_zsh_profile_section "PATH SETUP"
+# Homebrew (must be first for Apple Silicon)
+if [[ -f /opt/homebrew/bin/brew ]]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+elif [[ -f /usr/local/bin/brew ]]; then
+    eval "$(/usr/local/bin/brew shellenv)"
+fi
+
+# Local bin directories (user-installed tools)
+export PATH="$HOME/.local/bin:$PATH"
+
+# ============================================================================
+# OH-MY-ZSH SETUP
+# ============================================================================
+_zsh_profile_section "OH-MY-ZSH SETUP"
+export ZSH="$HOME/.oh-my-zsh"
+
+# Set theme (can be overridden by powerlevel10k if installed)
+ZSH_THEME="${ZSH_THEME:-robbyrussell}"
+
+# Plugins - carefully curated for performance
+plugins=(
+    github-gh-cli-supercharged 
+    git
+    aliases
+    alias-finder
+#    direnv
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+    fzf
+)
+
+# Load Oh My Zsh
+if [[ -f "$ZSH/oh-my-zsh.sh" ]]; then
+    source "$ZSH/oh-my-zsh.sh"
+fi
+
+# ============================================================================
+# IDE DETECTION (VERY EARLY - before direnv and other tools)
+# ============================================================================
+_zsh_profile_section "IDE DETECTION"
+# Detect if we're running in an IDE terminal (Cursor, VSCode, Antigravity)
+# In IDE terminals, we use minimal config for fast startup
+# MUST be before direnv hook and site-specific configs to prevent nvm calls
+IS_IDE_TERMINAL=false
+if [[ "$TERM_PROGRAM" == "cursor" ]] || \
+   [[ "$TERM_PROGRAM" == "vscode" ]] || \
+   [[ "$TERM_PROGRAM" == "antigravity" ]] || \
+   [[ -n "$CURSOR_SHELL_INTEGRATION" ]] || \
+   [[ -n "$VSCODE_INJECTION" ]]; then
+    IS_IDE_TERMINAL=true
+fi
+
+# # ============================================================================
+# # NVM WRAPPER SETUP (Before anything that might call nvm)
+# # ============================================================================
+# _zsh_profile_section "NVM WRAPPER SETUP"
+# # Set up NVM_DIR and create wrapper functions BEFORE direnv or site-specific configs
+# # This ensures nvm() is available even if something tries to call it early
+# export NVM_DIR="$HOME/.nvm"
+
+# # Helper function to load NVM (used by lazy loaders)
+# # Try multiple paths since nvm can be installed in different ways
+# _load_nvm() {
+#     # Try NVM_DIR first (standard nvm installation)
+#     if [[ -s "$NVM_DIR/nvm.sh" ]]; then
+#         source "$NVM_DIR/nvm.sh"
+#         return 0
+#     fi
+#     # Try brew prefix (if installed via Homebrew)
+#     if [[ -s "$(brew --prefix nvm)/nvm.sh" ]]; then
+#         source "$(brew --prefix nvm)/nvm.sh"
+#         return 0
+#     fi
+#     return 1
+# }
+
+# # Create nvm wrapper function early (before direnv or site-specific configs)
+# # This prevents "command not found: nvm" errors during startup
+# # IMPORTANT: Create wrapper for ALL terminals, not just IDE terminals
+# # Site-specific configs may call nvm before it's loaded
+# nvm() {
+
+# # ============================================================================
+# # AUTO NVM USE - Automatically use Node.js version from .nvmrc
+# # ============================================================================
+# autoload-nvmrc-auto() {
+#   local nvmrc_path
+#   local dir="$PWD"
+  
+#   while [ "$dir" != "/" ]; do
+#     if [ -f "$dir/.nvmrc" ]; then
+#       nvmrc_path="$dir/.nvmrc"
+#       break
+#     fi
+#     dir="$(dirname "$dir")"
+#   done
+  
+#   if [ -z "$nvmrc_path" ]; then
+#     return 0
+#   fi
+  
+#   local nvmrc_version=$(cat "$nvmrc_path" | tr -d '[:space:]')
+  
+#   if [ "$(nvm current 2>/dev/null)" = "$nvmrc_version" ]; then
+#     return 0
+#   fi
+  
+#   if ! nvm ls "$nvmrc_version" >/dev/null 2>&1; then
+#     echo "📦 Installing Node.js $nvmrc_version from .nvmrc..."
+#     nvm install "$nvmrc_version" >/dev/null 2>&1
+#   fi
+  
+#   nvm use "$nvmrc_version" >/dev/null 2>&1 && echo "✅ Using Node.js $nvmrc_version (from .nvmrc)"
+# }
+# add-zsh-hook -U chpwd autoload-nvmrc-autooload-nvmrc-auto
+# # ============================================================================
+# # This version is more reliable and works on shell startup and directory changes
+# autoload-nvmrc-improved() {
+#   # Find .nvmrc file
+#   local nvmrc_path
+#   local dir="$PWD"
+#   while [ "$dir" != "/" ]; do
+#     if [ -f "$dir/.nvmrc" ]; then
+#       nvmrc_path="$dir/.nvmrc"
+#       break
+#     fi
+#     dir="$(dirname "$dir")"
+#   done
+#   if [ -z "$nvmrc_path" ]; then
+#     return 0  # No .nvmrc found, nothing to do
+#   fi
+#   local nvmrc_version=$(cat "$nvmrc_path" | tr -d '[:space:]')
+#   # Skip if already using this version
+#   if [ "$(nvm current 2>/dev/null)" = "$nvmrc_version" ]; then
+#     return 0
+#   fi
+#   # Check if version is installed
+#   if ! nvm ls "$nvmrc_version" >/dev/null 2>&1; then
+#     echo "📦 Installing Node.js $nvmrc_version from .nvmrc..."
+#     nvm install "$nvmrc_version" >/dev/null 2>&1
+#   fi
+#   # Switch to the version
+#   nvm use "$nvmrc_version" >/dev/null 2>&1 && echo "✅ Using Node.js $nvmrc_version (from .nvmrc)"
+# }
+# # Remove old hook if it exists
+# add-zsh-hook -d chpwd autoload-nvmrc 2>/dev/null
+# add-zsh-hook -d chpwd autoload-nvmrc-improved 2>/dev/null
+# # Add new hook
+# add-zsh-hook chpwd autoload-nvmrc-improved
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvmk
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+## Run on shell startup
+# autoload-nvmrc-improved
+# bun completions
+[ -s "/Users/me/.bun/_bun" ] && source "/Users/me/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+eval "$(fnm env --use-on-cd --shell zsh)"
+export OP_ACCOUNT=my.1password.com
+
+# Parallel (web search / research) - API keys: https://platform.parallel.ai/settings?tab=api-keys
+export PARALLEL_API_KEY="<REDACTED>"
+
+# OpenClaw Completion
+source "/Users/me/.openclaw/completions/openclaw.zsh"
+
+# Added by Antigravity
+export PATH="/Users/me/.antigravity/antigravity/bin:$PATH"
