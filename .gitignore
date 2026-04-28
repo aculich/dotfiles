@@ -4,7 +4,8 @@ upstream/
 .op_session
 .envrc
 *.backup.*
-cursor-workspace-*
+# Cursor workspace dumps: ignore only legacy flat files under cursor/ (tracked triplet dumps live in snapshots/workspace/)
+/cursor/cursor-workspace-*
 antigravity-archive/
 disabled/
 forks/

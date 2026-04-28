@@ -1,0 +1,6 @@
+# Symlinks into Application Support (local machine; not portable)
+library/Cursor
+library/logs
+
+# Machine-generated; commit intentionally with: git add -f observability/inventories/
+observability/inventories/*.json
