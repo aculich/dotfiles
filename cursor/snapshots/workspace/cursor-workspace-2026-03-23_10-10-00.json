@@ -1,0 +1,2485 @@
+{
+  "folders": [
+    "/Users/me/tools/vscode-extensions/upstream/awesome-cursorrules",
+    "/Users/me/projects/coworking-pitchbook",
+    "/Users/me/projects/continuous-ai/upstream/archiveium__archiveium",
+    "/Users/me/personal/signal-graciebrooke",
+    "/Users/me/projects/peeq-crb-nexus/deep-libguide/berkeley-deep-codesguide",
+    "/Users/me/projects/gapps-toolbox",
+    "/Users/me/projects/switchdimension-community",
+    "/Users/me/tools/skills-quickstart",
+    "/Users/me/tools/rowboat-quickstart",
+    "/Users/me/dotfiles",
+    "/Users/me/projects/crb-macss-fiscal",
+    "/Users/me/projects/traub-umpire-empire/umpire-empire",
+    "/Users/me/projects/continuous-ai",
+    "/Users/me/projects/limitless-quickstart/limitless-api-examples",
+    "/Users/me/tools/agents/agentica-quickstart",
+    "/Users/me/tools/google-workspace-tools",
+    "/Users/me/projects/emergingpatterns",
+    "/Users/me/projects/peeq-voicegen-audiocast",
+    "/Users/me/dotfiles/cursor",
+    "/Users/me/projects/ai-veracity-chains"
+  ],
+  "recent_files": [
+    "/Users/me/.zshrc",
+    "/Users/me/tools/google-workspace-tools/upstream/cli__googleworkspace/README.md",
+    "/Users/me/projects/emergingpatterns/aeo/per-Crawl for the content pages",
+    "/Users/me/projects/emergingpatterns/profound-report-chatgpt.md",
+    "/Users/me/projects/emergingpatterns/user_research.md",
+    "/Users/me/projects/emergingpatterns/newsletters.md",
+    "/Users/me/projects/emergingpatterns/brand_voice.md",
+    "/Users/me/projects/emergingpatterns/polsia-social-media.md",
+    "/Users/me/projects/emergingpatterns/aeo/envisioning-pathways.md",
+    "/Users/me/projects/emergingpatterns/payment-rails.md"
+  ],
+  "timestamp": "2026-03-23_10-10-00",
+  "windows": [
+    {
+      "current_file": "Marketplace",
+      "window_number": 1,
+      "workspace": "switchdimension-community"
+    },
+    {
+      "current_file": "Cursor Settings",
+      "window_number": 2,
+      "workspace": "skills-quickstart"
+    },
+    {
+      "current_file": "sync_activity_docked_panel_20fd019c.plan.md",
+      "window_number": 3,
+      "workspace": "rowboat-quickstart"
+    },
+    {
+      "current_file": "aliases.zsh",
+      "window_number": 4,
+      "workspace": "dotfiles"
+    },
+    {
+      "current_file": "EXTRACTED-EMAILS.md",
+      "window_number": 5,
+      "workspace": "crb-macss-fiscal"
+    },
+    {
+      "current_file": "Preview subset-priority-users-2026-03-22T22-28-19-335Z.md",
+      "window_number": 6,
+      "workspace": "umpire-empire"
+    },
+    {
+      "current_file": "URLS-20260322_082846.md",
+      "window_number": 7,
+      "workspace": "continuous-ai"
+    },
+    {
+      "current_file": "create_limitless_takeout_skills_ef9d85ad.plan.md",
+      "window_number": 8,
+      "workspace": "limitless-api-examples"
+    },
+    {
+      "current_file": "agentica_research_and_quickstart_3857f675.plan.md",
+      "window_number": 9,
+      "workspace": "agentica-quickstart"
+    },
+    {
+      "current_file": "gws_install_and_multi-account_28d98f76.plan.md",
+      "window_number": 10,
+      "workspace": "google-workspace-tools"
+    },
+    {
+      "current_file": "README.md",
+      "window_number": 11,
+      "workspace": "emergingpatterns"
+    },
+    {
+      "current_file": "publish_thebaloney.ai_v42_0430ddb1.plan.md",
+      "window_number": 12,
+      "workspace": "peeq-voicegen-audiocast"
+    },
+    {
+      "current_file": "Keyboard Shortcuts",
+      "window_number": 13,
+      "workspace": "cursor"
+    },
+    {
+      "current_file": "FUTURE-NARRATIVE-BRIEF.md",
+      "window_number": 14,
+      "workspace": "ai-veracity-chains"
+    },
+    {
+      "current_file": "",
+      "window_number": 15,
+      "workspace": "Cursor"
+    }
+  ],
+  "workspace_files": {
+    ".git": {
+      "path": "/Users/me/tools/git-tools/gitbutler__aculich/.git",
+      "storage_id": "85cd47a2eaf4f1b1764127a23581dc1c"
+    },
+    ".local": {
+      "path": "/Users/me/.local",
+      "storage_id": "79a8c0ab3c0f3bdb67d2dabb294d5a1a"
+    },
+    ".oh-my-zsh": {
+      "path": "/Users/me/.oh-my-zsh",
+      "storage_id": "aee394902253f72f93b6078d58ced2cb"
+    },
+    ".specstory": {
+      "path": "/Users/me/projects/perone/cms/discovery-ssw-socialwork/.specstory",
+      "storage_id": "7a921bf0b324634ef53bbe753e3918ee"
+    },
+    "10.2.0": {
+      "path": "/opt/homebrew/Cellar/fd/10.2.0",
+      "storage_id": "7567a7729c6aa0911e0c5b7c5358d788"
+    },
+    "2025-02-12-miaaaron": {
+      "path": "/Users/me/projects/transcribe/output/2025-02-12-miaaaron",
+      "storage_id": "b31021b8d644f387e0ac7b4ed8cbdc76"
+    },
+    "2025-02-Reddit-BMA__dash-n-dine": {
+      "path": "/Users/me/projects/specstory-community/2025-02-Reddit-BMA__dash-n-dine",
+      "storage_id": "cf25d766a160310e057d30f89ce74410"
+    },
+    "2025-02-Reddit-BMA__lukeskyfarter-backpacks": {
+      "path": "/Users/me/projects/specstory-community/2025-02-Reddit-BMA__lukeskyfarter-backpacks",
+      "storage_id": "6f0910597264d7bff0697e71b152a50a"
+    },
+    "2025-02-Reddit-BMA__nudge-nudge": {
+      "path": "/Users/me/projects/specstory-community/2025-02-Reddit-BMA__nudge-nudge",
+      "storage_id": "e4a0df0d345b711dd7339f464d24d221"
+    },
+    "2025-02-Reddit-BMA__paged-attention": {
+      "path": "/Users/me/projects/specstory-community/2025-02-Reddit-BMA__paged-attention",
+      "storage_id": "b96a9ba7b4e278b599c82b86ea1854f4"
+    },
+    "2025-02-Reddit-BMA__ramblin-man": {
+      "path": "/Users/me/projects/specstory-community/2025-02-Reddit-BMA__ramblin-man",
+      "storage_id": "335ff4f90c363648204087f4690fce97"
+    },
+    "2025-02-Reddit-BMA__the-great-debate": {
+      "path": "/Users/me/projects/specstory-community/2025-02-Reddit-BMA__the-great-debate",
+      "storage_id": "6a5914a9cbf39ef8f91269981db6c46e"
+    },
+    "2025-03-11-whatsapp-james": {
+      "path": "/Users/me/projects/transcribe/output/2025-03-11-whatsapp-james",
+      "storage_id": "cc6428fdb02ef14b2ac9fa26928072dd"
+    },
+    "2025-04-15-PQ-Aaron-Miroo%20Tuesday%20at%201-01%20PM": {
+      "path": "/Users/me/personal/infi/2025-04-15-PQ-Aaron-Miroo%20Tuesday%20at%201-01%20PM",
+      "storage_id": "d4f79460bdd695e476c38fad28284d70"
+    },
+    "2025-05-02_11-05-42": {
+      "path": "/Users/me/projects/coworking-memberjourney/reports/2025-05-02_11-05-42",
+      "storage_id": "3cdf8a6b246a10a549b04e2bd29a3129"
+    },
+    "2025-12-01-tom-combinedoc": {
+      "path": "/Users/me/aallc/peeq/crb-vision/2025-12-01-tom-combinedoc",
+      "storage_id": "ef11924cbb8642a735d514047b14a98c"
+    },
+    "2026-03-17": {
+      "path": "/Users/me/projects/chyp-app/pixie-capstone/background/2026-03-17",
+      "storage_id": "f8f73df89236b3f03cd02ee9db3531fe"
+    },
+    "4.5": {
+      "path": "/Users/me/ern/nominatim-docker__ern/4.5",
+      "storage_id": "a24736e06167ed058bdb7f8e67a4b56f"
+    },
+    "4thwaiv-consulting": {
+      "path": "/Users/me/projects/4thwaiv-consulting",
+      "storage_id": "3bd68d44c4b292a2b37de84c2962b124"
+    },
+    "7ljGi": {
+      "path": "/Users/me/.cursor/worktrees/bp-telemetry-core/7ljGi",
+      "storage_id": "76a2ac8f54bfbf30fb6d87d606445f63"
+    },
+    "AeroSpace": {
+      "path": "/Users/me/tools/tilingwm/AeroSpace",
+      "storage_id": "8f6c34f3098003d7a02d0418e347162d"
+    },
+    "AgentIQ": {
+      "path": "/Users/me/tools/agents/AgentIQ",
+      "storage_id": "5daae6ec9713b5ab40ff47c3410f65a4"
+    },
+    "Capstone__emeliasprott": {
+      "path": "/Users/me/projects/crb-macss-fiscal/upstream/Capstone__emeliasprott",
+      "storage_id": "d8f4c65314da38fba260539dbaac1a72"
+    },
+    "CheckGPT__Ank-Cha__cms": {
+      "path": "/Users/me/projects/perone/cms/CheckGPT__Ank-Cha__cms",
+      "storage_id": "e193aaaedc4f3775dd755ae53b6d03fc"
+    },
+    "Clarity_for_charity_rag_grant_helper": {
+      "path": "/Users/me/projects/chyp-app/upstream/Clarity_for_charity_rag_grant_helper",
+      "storage_id": "030b1902b40b9ec1e93fda99dd6a32d8"
+    },
+    "Claude-Deep-Research__mcherukara": {
+      "path": "/Users/me/projects/deep-research/quickstart/Claude-Deep-Research__mcherukara",
+      "storage_id": "21b783b774687da8d34a440e7ca256d8"
+    },
+    "DeepResearchMCP__ameeralns": {
+      "path": "/Users/me/projects/deep-research/quickstart/DeepResearchMCP__ameeralns",
+      "storage_id": "ca9bcc3a5e01118265ec6e80db7389d5"
+    },
+    "Desktop": {
+      "path": "/Users/me/Desktop",
+      "storage_id": "fefa5f8ba0981ac0685f6bff8a13dae8"
+    },
+    "GrapesJS": {
+      "path": "/Users/me/tools/GrapesJS",
+      "storage_id": "c9416e50e39766a7fd539b86145ca709"
+    },
+    "HelloWorldAutoApp": {
+      "path": "/Users/me/projects/grounded-automaps-pasadena/android-auto-cursor/HelloWorldAutoApp",
+      "storage_id": "83cf89f58a823032e4519d32f75fe177"
+    },
+    "Ice__jordanbaird": {
+      "path": "/Users/me/tools/macosx-tools/Ice__jordanbaird",
+      "storage_id": "f6ead7301f9dbe8c6f6b6335f1b43eff"
+    },
+    "Langchain-Video": {
+      "path": "/Users/me/projects/evidence-on-both-sides/upstream/Langchain-Video",
+      "storage_id": "8c6301da04ce56568ecf25caa24849a3"
+    },
+    "LibreChat": {
+      "path": "/Users/me/projects/ucb-riverai/LibreChat",
+      "storage_id": "e459724705315a04b72251057ee97d24"
+    },
+    "MaCSS-244a-Spring25": {
+      "path": "/Users/me/ern/MaCSS-244a-Spring25",
+      "storage_id": "0ce1b4840beb069e9b95592431d3a545"
+    },
+    "OB1__NateBJones-Projects": {
+      "path": "/Users/me/projects/continuous-ai/OB1__NateBJones-Projects",
+      "storage_id": "afecb92a057071df5a0942c9b1156714"
+    },
+    "PACs": {
+      "path": "/Users/me/pado-streetview-llm/upstream/PACs",
+      "storage_id": "a2f3ed1fad64f0b9c4871bb175d60774"
+    },
+    "Partial%20Connections%20LinkedIn%20aculich_files": {
+      "path": "/Users/me/projects/peeq-talent/linkedin-to-jsonresume/Partial%20Connections%20LinkedIn%20aculich_files",
+      "storage_id": "42ad8cbd4c6cb35c71ee045c748be2fe"
+    },
+    "PptxGenJS": {
+      "path": "/Users/me/projects/fspp-ai-retsina/pptx-tools-analysis/PptxGenJS",
+      "storage_id": "d10ab8e1db8a787f403089989b76202f"
+    },
+    "RR-ID": {
+      "path": "/Users/me/projects/rrid/upstream/rrid-ucb/RR-ID",
+      "storage_id": "0682fd2000dfbf4cca325b2bb927a447"
+    },
+    "React-WebRTC-Video-Chat__aculich": {
+      "path": "/Users/me/projects/dream-flow/React-WebRTC-Video-Chat__aculich",
+      "storage_id": "a8a771c7b379c4291eb91bf4b7b59268"
+    },
+    "SMART": {
+      "path": "/Users/me/tools/smart-annotation/upstream/SMART",
+      "storage_id": "13142a88e779c795e8ae44a572a87d75"
+    },
+    "SMART__feature_keydev": {
+      "path": "/Users/me/tools/smart-annotation/SMART__feature_keydev",
+      "storage_id": "d13898ddd2d4a66cf218491b2651b1bf"
+    },
+    "SMART__traefik": {
+      "path": "/Users/me/tools/smart-annotation/SMART__traefik",
+      "storage_id": "c2907140bc0363d6b1fa32bb6f0e55ae"
+    },
+    "SOC-N100-Housing-Precarity": {
+      "path": "/Users/me/ern/ern-courses/SOC-N100-Housing-Precarity",
+      "storage_id": "1baf5c079162a28c9f7ffabf346ee191"
+    },
+    "Surfingkeys__develop": {
+      "path": "/Users/me/tools/Surfingkeys__develop",
+      "storage_id": "811a1e4df074418f939ede9575c39192"
+    },
+    "TIGER-data__dev": {
+      "path": "/Users/me/ern/TIGER-data__dev",
+      "storage_id": "0c3d76b631b70c03eaa4e2bd6cbc30ba"
+    },
+    "Youtube-Video-Transcribe-Summarizer-LLM-App__GURPREETKAURJETHRA": {
+      "path": "/Users/me/projects/transcribe/upstream/Youtube-Video-Transcribe-Summarizer-LLM-App__GURPREETKAURJETHRA",
+      "storage_id": "ec35b2790b540f8113d174bbabf43cae"
+    },
+    "aallc": {
+      "path": "/Users/me/aallc",
+      "storage_id": "9bc175ec392c57f323ea94ef27c21e6a"
+    },
+    "ac_oregon": {
+      "path": "/Users/me/ern/ac_oregon",
+      "storage_id": "8c83a2a817b7ec1692f264296d845dcf"
+    },
+    "acha-atlantic-city": {
+      "path": "/Users/me/ern/acha-atlantic-city",
+      "storage_id": "2f9c099c6ccf5840405341fb7fd711ac"
+    },
+    "acp-quickstart": {
+      "path": "/Users/me/tools/acp-quickstart",
+      "storage_id": "566e6233c4a8d1c23418dac50cdd4e34"
+    },
+    "adr-chronicle": {
+      "path": "/Users/me/projects/adr-chronicle",
+      "storage_id": "b43ec27c0cbdcffb466687958b8504fe"
+    },
+    "affine-quickstart": {
+      "path": "/Users/me/tools/affine-quickstart",
+      "storage_id": "ed629a726adf7021c978c3c2070b87e3"
+    },
+    "agentbench__eth-sri": {
+      "path": "/Users/me/projects/switchdimension-community/upstream/agentbench__eth-sri",
+      "storage_id": "1bd7b9d4b17ba8853b09c602f30bec6a"
+    },
+    "agentic-design-patterns-book": {
+      "path": "/Users/me/projects/agentic-design-patterns-book",
+      "storage_id": "7cac59faeb98e8590270b6f8104fd14b"
+    },
+    "agentic-ux": {
+      "path": "/Users/me/tools/agentic-ux",
+      "storage_id": "dc530316013033084377e888c8ec67e2"
+    },
+    "agentica-quickstart": {
+      "path": "/Users/me/tools/agents/agentica-quickstart",
+      "storage_id": "5393b464e911de902e6b40afe2a98ff3"
+    },
+    "agents": {
+      "path": "/Users/me/tools/agents",
+      "storage_id": "721787363ba7ad5b32c60785f185674b"
+    },
+    "aging": {
+      "path": "/Users/me/projects/perone/aging",
+      "storage_id": "204bf8ac8bd6df21c993dc5cc3745d42"
+    },
+    "aging-test": {
+      "path": "/Users/me/projects/aging-test",
+      "storage_id": "689136fd8ae919b6440c5825677b91d8"
+    },
+    "ai-cli": {
+      "path": "/Users/me/tools/ai-cli",
+      "storage_id": "127c71489b59433824930cfc2a18100e"
+    },
+    "ai-cookbook__perplexityai": {
+      "path": "/Users/me/projects/peeq-crb-nexus/deep-libguide/ai-cookbook__perplexityai",
+      "storage_id": "4a2853557fe799c981b1988034981aa9"
+    },
+    "ai-laptop-specs": {
+      "path": "/Users/me/projects/ai-laptop-specs",
+      "storage_id": "1e1a4b5d60e3a6a6d3359de8b43b9b19"
+    },
+    "ai-veracity-chains": {
+      "path": "/Users/me/projects/ai-veracity-chains",
+      "storage_id": "973a23357721fec34af1834e6262bad3"
+    },
+    "ai-vision-2025": {
+      "path": "/Users/me/projects/ai-vision-2025",
+      "storage_id": "cb6632e8b63bd7afab2e2fc470e6e3f1"
+    },
+    "airefine": {
+      "path": "/Users/me/projects/airefine",
+      "storage_id": "09f8925553ad9e0a082131308c50a6c5"
+    },
+    "airtable-backups": {
+      "path": "/Users/me/projects/rrid/airtable-backups",
+      "storage_id": "cc66eff5fe509ce24f1dde3121128c94"
+    },
+    "airtable-gateway-template-upstream": {
+      "path": "/Users/me/projects/rrid/airtable-gateway-template-upstream",
+      "storage_id": "1eeb001341353138bca903326139e398"
+    },
+    "airtable-gateway-template__rrid": {
+      "path": "/Users/me/projects/rrid/airtable-gateway-template__rrid",
+      "storage_id": "041804abe95997fcb8ec4921783e7746"
+    },
+    "aistudio-cidr-idea-expander": {
+      "path": "/Users/me/projects/cidr-grants-antigravity/upstream/aistudio-cidr-idea-expander",
+      "storage_id": "81b3008ff3accbc226b6e49f34639aaa"
+    },
+    "aita": {
+      "path": "/Users/me/projects/aita",
+      "storage_id": "46006d5e333c9711dd2adfd0be83839a"
+    },
+    "all-my-shortcuts": {
+      "path": "/Users/me/projects/all-my-shortcuts",
+      "storage_id": "738bd7c4983f76696e94c4c7d9da5d6d"
+    },
+    "allin-financial": {
+      "path": "/Users/me/projects/allin-financial",
+      "storage_id": "04779f7a2ce6833f2d3676b56360ab7a"
+    },
+    "analysis-20260212_031234": {
+      "path": "/Users/me/projects/continuous-ai/legacy-src/analysis-20260212_031234",
+      "storage_id": "f8fe1f1b082d3ad8f1587c363987a547"
+    },
+    "android-auto-cursor": {
+      "path": "/Users/me/projects/grounded-automaps-pasadena/android-auto-cursor",
+      "storage_id": "3bcc54673b385f2be73fc336f083ad49"
+    },
+    "anthonyshew-tools": {
+      "path": "/Users/me/tools/anthonyshew-tools",
+      "storage_id": "d9849dd38461c9ffb5e7e274f7d223ea"
+    },
+    "anythingllm-quickstart": {
+      "path": "/Users/me/tools/anythingllm-quickstart",
+      "storage_id": "fb979ff6d65e5e9c76eba466546b859f"
+    },
+    "apidocs-export": {
+      "path": "/Users/me/aallc/lam/projects/lam-eda/apidocs-export",
+      "storage_id": "00004b753c02d2359fa4471c5b9a8f6d"
+    },
+    "archiveium__archiveium": {
+      "path": "/Users/me/projects/continuous-ai/upstream/archiveium__archiveium",
+      "storage_id": "f78920d23830786aa42873028d9c19d1"
+    },
+    "astera-envisioning": {
+      "path": "/Users/me/projects/astera-envisioning",
+      "storage_id": "492e7902a1d0a6584b9212a6455b1351"
+    },
+    "awesome": {
+      "path": "/Users/me/tools/awesome",
+      "storage_id": "dc0af8c49e3e8aa0f9a8188d5d4e881c"
+    },
+    "awesome-awesome": {
+      "path": "/Users/me/tools/awesome-awesome",
+      "storage_id": "83625c2c41ad54c9bc0a6c51a31db72e"
+    },
+    "awesome-cursorrules": {
+      "path": "/Users/me/tools/vscode-extensions/upstream/awesome-cursorrules",
+      "storage_id": "de70576aa7976c01c06f58cfe8fe8494"
+    },
+    "background": {
+      "path": "/Users/me/projects/peeq-deep-listening/background",
+      "storage_id": "5202e89f7161b2294656c95755d39fba"
+    },
+    "backpacks": {
+      "path": "/Users/me/projects/specstory-community/2025-02-Reddit-BMA__lukeskyfarter-backpacks/backpacks",
+      "storage_id": "aab375688bc30fa8e67cd44f1c28c496"
+    },
+    "badges": {
+      "path": "/Users/me/projects/rrid/badges",
+      "storage_id": "6adad369744c50255a64053f4111881c"
+    },
+    "baserow": {
+      "path": "/Users/me/projects/baserow-test/baserow",
+      "storage_id": "03f90d5f78c8f2942aa920317dc04d80"
+    },
+    "bc3-api__basecamp": {
+      "path": "/Users/me/projects/traub-umpire-empire/upstream/bc3-api__basecamp",
+      "storage_id": "23f722b04999d5ec5b573050f41e037c"
+    },
+    "benten-dlab": {
+      "path": "/Users/me/projects/benten-dlab",
+      "storage_id": "6d8e26852430bfd5fd31d2b98bfe7361"
+    },
+    "berkeley-deep-codesguide": {
+      "path": "/Users/me/projects/peeq-crb-nexus/deep-libguide/berkeley-deep-codesguide",
+      "storage_id": "631b654cb0779c300650080287a56c88"
+    },
+    "best-practices": {
+      "path": "/Users/me/projects/best-practices",
+      "storage_id": "ab3bc816c295a5f4f3af1d7c99522370"
+    },
+    "beta-lounge": {
+      "path": "/Users/me/projects/beta-lounge",
+      "storage_id": "9412c91349380170ad24142f3ca7eaa4"
+    },
+    "betanumerics": {
+      "path": "/Users/me/projects/betanumerics",
+      "storage_id": "bc4b28df8154fb01c0b7eece4bc21fc8"
+    },
+    "bids-strudel": {
+      "path": "/Users/me/projects/bids-strudel",
+      "storage_id": "3c190f22ca8cbc92ff41bf5a003c086b"
+    },
+    "bin": {
+      "path": "/Users/me/.local/bin",
+      "storage_id": "a9d0105076f4615a67b29120283fa448"
+    },
+    "binder-vscode": {
+      "path": "/Users/me/projects/binder-vscode",
+      "storage_id": "ed9a80ea8fcb613370a170f75784f668"
+    },
+    "biotech-hpc-gcp": {
+      "path": "/Users/me/projects/biotech-hpc-gcp",
+      "storage_id": "ac9fce8c93af61bb210b59463a2b6ba1"
+    },
+    "biotech_news_dataset": {
+      "path": "/Users/me/projects/coworking-ecosystem/papers/biotech_news_dataset",
+      "storage_id": "f3476515e82eb8d6367abe2f9065d56f"
+    },
+    "blog-drafts": {
+      "path": "/Users/me/blog-drafts",
+      "storage_id": "359d85fd50f6043d6cdbe25208148854"
+    },
+    "blog-drafts.git": {
+      "path": "/Users/me/blog-drafts.git",
+      "storage_id": "bb815e08495bc4e6f869f44340de5310"
+    },
+    "blueplane-project": {
+      "path": "/Users/me/projects/blueplane-project",
+      "storage_id": "c2bf1b2fb52cd3acb5c11cd9fc4e4301"
+    },
+    "bluestory": {
+      "path": "/Users/me/projects/blueplane-project/bluestory",
+      "storage_id": "4b339d2c6954926f3f3813b2427d36f4"
+    },
+    "bmad-adk": {
+      "path": "/Users/me/projects/bmad-adk",
+      "storage_id": "d06d4222f34d6ac0772275ef29b98c00"
+    },
+    "botshit-bingo": {
+      "path": "/Users/me/projects/botshit-bingo",
+      "storage_id": "a356058e0b29e26d54b7ce20035fd325"
+    },
+    "bottom-left-corner-library": {
+      "path": "/Users/me/projects/fspp-ai-retsina/slideflow/bottom-left-corner-library",
+      "storage_id": "2168d2d4a1912aaf5287032f32f0ff4e"
+    },
+    "bp-telemetry-core": {
+      "path": "/Users/me/projects/blueplane-project/blueplane-ai/bp-telemetry-core",
+      "storage_id": "f41c13eff72e9a0420e3309ed200117d"
+    },
+    "bp-telemetry-experimental": {
+      "path": "/Users/me/projects/blueplane-project/experiment/bp-telemetry-experimental",
+      "storage_id": "28a98ccc02c5855301beed0185c0bac1"
+    },
+    "bpstory": {
+      "path": "/Users/me/projects/blueplane-project/experiment/bpstory",
+      "storage_id": "d7264a82070c0fcf13ec2d61e2d6f362"
+    },
+    "branch-host-local": {
+      "path": "/Users/me/projects/branch-host-local",
+      "storage_id": "c1efa76bcea3bd5055790f4c69ee28ec"
+    },
+    "browser-automation": {
+      "path": "/Users/me/tools/browser-automation",
+      "storage_id": "eb2286c26c52b37026d9827c2dc8aa75"
+    },
+    "browser-session-manager": {
+      "path": "/Users/me/projects/continuous-ai/browser-session-manager",
+      "storage_id": "7e7a59465d4d59d979fbd137ffc2b865"
+    },
+    "browserbase-quickstart": {
+      "path": "/Users/me/tools/browser-automation/browserbase-quickstart",
+      "storage_id": "58263fb7d5a24d70bd0fe38a6df9934a"
+    },
+    "bulkllm": {
+      "path": "/Users/me/projects/bulkllm",
+      "storage_id": "d022ff44057fbdc97b300f3d397e3f82"
+    },
+    "bv": {
+      "path": "/Users/me/aallc/bv",
+      "storage_id": "114dd03b73663aa70bb0f7266ea48f5a"
+    },
+    "bvai": {
+      "path": "/Users/me/projects/coworking-memberjourney/bvai",
+      "storage_id": "90530eab5db125d35a47dcc0c7edcd7e"
+    },
+    "bvai-fuzzyduck": {
+      "path": "/Users/me/projects/bvai-fuzzyduck",
+      "storage_id": "275c7bdcaca5f02363a222d912860bf4"
+    },
+    "bvai-harmonize": {
+      "path": "/Users/me/projects/bvai-harmonize",
+      "storage_id": "37cde6242a74730c1d05ce853bb7b340"
+    },
+    "bvoverview": {
+      "path": "/Users/me/projects/bvoverview",
+      "storage_id": "948b954814bdf45770242bcfbc1521dd"
+    },
+    "caire-mvp": {
+      "path": "/Users/me/projects/caire-mvp",
+      "storage_id": "4504d5d1a28ab409e3872ea0ccab37bc"
+    },
+    "castmagic-clone": {
+      "path": "/Users/me/projects/castmagic-clone",
+      "storage_id": "c541cfa3e6fa890add5ff6fdfca87f57"
+    },
+    "causal_policy": {
+      "path": "/Users/me/ern/causal_policy",
+      "storage_id": "8ef6ecaf2d331d1d8cf85af6ae5cf713"
+    },
+    "causal_policy__explore_attempt1__explore_attempt2": {
+      "path": "/Users/me/ern/causal_policy__explore_attempt1__explore_attempt2",
+      "storage_id": "da4fa4b008f3243c4f5e6d47992f3d7e"
+    },
+    "causal_policy__main": {
+      "path": "/Users/me/ern/causal_policy__main",
+      "storage_id": "70b9921ba3dd737d2a7cf8dcec908d3b"
+    },
+    "ccda": {
+      "path": "/Users/me/ern/ccda",
+      "storage_id": "c0391551e7d5b6d6ea4bb4c7567dd388"
+    },
+    "ccsls-bayarea": {
+      "path": "/Users/me/ern/ccsls-bayarea",
+      "storage_id": "3e0ef52f2c4a60d31136d1bffb68b623"
+    },
+    "chat-archive": {
+      "path": "/Users/me/personal/chat-archive",
+      "storage_id": "e2590461ee7a9779adcb9fefc5a9fadf"
+    },
+    "chatgpt-clone-react-native__Galaxies-dev__explore": {
+      "path": "/Users/me/tools/chatgpt-clone-react-native__Galaxies-dev__explore",
+      "storage_id": "cea936fed7602c8e06be6e82eaee4533"
+    },
+    "chatgpt-exporter": {
+      "path": "/Users/me/projects/chatgpt-exporter",
+      "storage_id": "7c41515ac0e8a39a25ab0cd633146324"
+    },
+    "chathistory": {
+      "path": "/Users/me/projects/blueplane-project/reverse/chathistory",
+      "storage_id": "9bc246b4095c8673827d4a7d0cae0752"
+    },
+    "cheatsheet-grimoire": {
+      "path": "/Users/me/projects/cheatsheet-grimoire",
+      "storage_id": "4e18f10b08c03dce455f057b31b76be1"
+    },
+    "chora-base": {
+      "path": "/Users/me/tools/agents/chora-base",
+      "storage_id": "355acc2289b6d8c7614d1dc6514b7c49"
+    },
+    "chrome-cli": {
+      "path": "/Users/me/tools/upstream/prasmussen/chrome-cli",
+      "storage_id": "8553b39f19d35b8abd7b31b5b873f8ff"
+    },
+    "chrome-cli__develop": {
+      "path": "/Users/me/tools/chrome-cli__develop",
+      "storage_id": "b6d29efef1f8375b459fd0e54871935c"
+    },
+    "chrome-extensions": {
+      "path": "/Users/me/tools/chrome-extensions",
+      "storage_id": "afe1155db8f633a8272d0dfbab74eade"
+    },
+    "chrome-oauth2": {
+      "path": "/Users/me/tools/chrome-extensions/chrome-oauth2",
+      "storage_id": "1cd2186adbcc0a70b21680a03cbd9e2a"
+    },
+    "chyp-app": {
+      "path": "/Users/me/projects/chyp-app",
+      "storage_id": "69679b1aab6a3c88050139bbb566a95d"
+    },
+    "cidr-grants-antigravity": {
+      "path": "/Users/me/projects/cidr-grants-antigravity",
+      "storage_id": "bd1bd5b6bcaff65a7ae4d1f175aab8f1"
+    },
+    "cidr-org": {
+      "path": "/Users/me/projects/cidr-org",
+      "storage_id": "9a504513dc6dcbb61e151a4e7ab522ea"
+    },
+    "cidrlab.github.io": {
+      "path": "/Users/me/projects/cidr-org/cidrlab.github.io",
+      "storage_id": "ecd3868058afe195bc0460d6d6e225d4"
+    },
+    "circle-videos": {
+      "path": "/Users/me/projects/circle-videos",
+      "storage_id": "0ef9cdd153b47b406a72fb7d8b14c74d"
+    },
+    "claude-code__explore": {
+      "path": "/Users/me/tools/claude-code__explore",
+      "storage_id": "42b8120e1a4d2adb11a1bc95d864ed82"
+    },
+    "cms": {
+      "path": "/Users/me/projects/perone/cms",
+      "storage_id": "77effddc4e1038a11a4f22837c0097d0"
+    },
+    "code-sculpting": {
+      "path": "/Users/me/projects/code-sculpting",
+      "storage_id": "b21df250c0cd8f88e364c3f978219d23"
+    },
+    "codegen-preflight": {
+      "path": "/Users/me/projects/codegen-preflight",
+      "storage_id": "eed85d18a75903daeae73330f779ec86"
+    },
+    "colliand-collab": {
+      "path": "/Users/me/projects/colliand-collab",
+      "storage_id": "90cbd5a22b4c415fb79735a45351d89f"
+    },
+    "commute-platform-react-sqlite": {
+      "path": "/Users/me/projects/commuteworld/commute-platform-react-sqlite",
+      "storage_id": "c88e429af6d158fb3aca1114482aee90"
+    },
+    "commuteapp": {
+      "path": "/Users/me/projects/commutesource/commuteapp",
+      "storage_id": "0294702e8caf08ae717607493d901b26"
+    },
+    "commuteworld": {
+      "path": "/Users/me/projects/commuteworld",
+      "storage_id": "ad8316de0edfff49cfd059d4dfd6caf2"
+    },
+    "compilations": {
+      "path": "/Users/me/projects/traub-umpire-empire/buildprompt-basecamp/basecamp-export/6162253/46186844/compilations",
+      "storage_id": "10d4ee5de0247572f817989716a8485a"
+    },
+    "congressional-rhetoric": {
+      "path": "/Users/me/projects/congressional-rhetoric",
+      "storage_id": "09d4291cb395bef706ea49ab978031d6"
+    },
+    "consorvia-community": {
+      "path": "/Users/me/projects/consorvia-community",
+      "storage_id": "557d25e069766385b262fc6238d08782"
+    },
+    "consult-requests": {
+      "path": "/Users/me/projects/consult-requests",
+      "storage_id": "111a30273db2e70ea70a065ef82ac1a7"
+    },
+    "consulting-history": {
+      "path": "/Users/me/projects/consulting-history",
+      "storage_id": "0c5f423e69d7decfaa1bc16ffd1a0df0"
+    },
+    "continuous-ai": {
+      "path": "/Users/me/projects/continuous-ai",
+      "storage_id": "96f638f620e8950117cc342efb97c593"
+    },
+    "copyallurls-clone": {
+      "path": "/Users/me/tools/chrome-extensions/copyallurls-clone",
+      "storage_id": "46e22fb6079ad26747813010afc81bc5"
+    },
+    "core": {
+      "path": "/Users/me/projects/blueplane-project/experiment/core",
+      "storage_id": "6018e58225dee0359294b764a5506342"
+    },
+    "core-monitoring-packaging": {
+      "path": "/Users/me/projects/blueplane-project/experiment/core-monitoring-packaging",
+      "storage_id": "9783611299c3b76ca96ed813c9e28f87"
+    },
+    "coursera-dl": {
+      "path": "/Users/me/projects/coursera-downloads/coursera-dl",
+      "storage_id": "3872d90d486ea8d38e91e94104421b8c"
+    },
+    "coursera-viewer": {
+      "path": "/Users/me/projects/coursera-downloads/coursera-dl/coursera-viewer",
+      "storage_id": "ffd415aeb52eaa596e63b56b491cefe0"
+    },
+    "coworking-airtable": {
+      "path": "/Users/me/projects/coworking-ecosystem/coworking-airtable",
+      "storage_id": "89ea397f613bab82e2f87ffa8965e58a"
+    },
+    "coworking-dashboard": {
+      "path": "/Users/me/projects/coworking-dashboard",
+      "storage_id": "50d5aff83099d4648ab70434423086cf"
+    },
+    "coworking-ecosystem": {
+      "path": "/Users/me/projects/coworking-ecosystem",
+      "storage_id": "70f844e2dbac2ddcf29403e22648883a"
+    },
+    "coworking-eparse": {
+      "path": "/Users/me/projects/coworking-eparse",
+      "storage_id": "c0607729bf17e5a6637732c1615dfc95"
+    },
+    "coworking-gcp": {
+      "path": "/Users/me/projects/coworking-ecosystem/coworking-gcp",
+      "storage_id": "99ad78cadcd7919236894ef078e0a7c0"
+    },
+    "coworking-gcp-prime": {
+      "path": "/Users/me/projects/coworking-ecosystem/coworking-gcp-prime",
+      "storage_id": "e269c8987eaf60e515eada41a1c8bf69"
+    },
+    "coworking-gcp-primus": {
+      "path": "/Users/me/projects/coworking-ecosystem/coworking-gcp-primus",
+      "storage_id": "c823f43dd7ce027f5f5b5ff5b4f629a3"
+    },
+    "coworking-memberjourney": {
+      "path": "/Users/me/projects/coworking-memberjourney",
+      "storage_id": "b6a9729f048527814390f050980e3707"
+    },
+    "coworking-mvp": {
+      "path": "/Users/me/projects/coworking-ecosystem/coworking-mvp",
+      "storage_id": "8859dcfc606f2cd35f9ba4ce39eb1672"
+    },
+    "coworking-mvp-prime": {
+      "path": "/Users/me/projects/coworking-ecosystem/coworking-mvp-prime",
+      "storage_id": "e9d623d10e592b139f9ec447dc21fb74"
+    },
+    "coworking-pitchbook": {
+      "path": "/Users/me/projects/coworking-pitchbook",
+      "storage_id": "a9ba1d23c8208aa4589be03e9e0dd979"
+    },
+    "coworking-value": {
+      "path": "/Users/me/projects/coworking-value",
+      "storage_id": "4281838c5f9714f4735063c009fe831d"
+    },
+    "coyote_interactive": {
+      "path": "/Users/me/fun/coyote_interactive",
+      "storage_id": "21cdc74bbf401d348e82a1526da6f152"
+    },
+    "cpc-anti-displacement": {
+      "path": "/Users/me/ern/cpc-anti-displacement",
+      "storage_id": "409778237f44fe0e19778fb17ef00407"
+    },
+    "crawl4ai": {
+      "path": "/Users/me/tools/crawling/crawl4ai",
+      "storage_id": "1b8acdfbbdbdd480bbe301afc58bce3f"
+    },
+    "crawl4ai-quickstart": {
+      "path": "/Users/me/tools/crawl4ai-quickstart",
+      "storage_id": "20fa175345b74a02275d2d4f3ad2d573"
+    },
+    "crb-macss-fiscal": {
+      "path": "/Users/me/projects/crb-macss-fiscal",
+      "storage_id": "0fd9111b61aedfcec38cc5845ebbd20d"
+    },
+    "crb-nexus-deep-libguide": {
+      "path": "/Users/me/projects/peeq-crb-nexus/deep-libguide/crb-nexus-deep-libguide",
+      "storage_id": "f2f693e9502e03281d84484f36820d98"
+    },
+    "crb-vision": {
+      "path": "/Users/me/aallc/peeq/crb-vision",
+      "storage_id": "9111f5f2af198661c464d0ab0e11b10a"
+    },
+    "crb_nexus_testing_key": {
+      "path": "/Users/me/projects/peeq-crb-nexus/deep-libguide/crb_nexus_testing_key",
+      "storage_id": "d569d84e39862fed42ff76e7b5c92981"
+    },
+    "crunchy-was-granola": {
+      "path": "/Users/me/projects/crunchy-was-granola",
+      "storage_id": "c748b8f1488aeddf17768a500c5f0c38"
+    },
+    "ctgov": {
+      "path": "/Users/me/projects/ctgov",
+      "storage_id": "c37bf7ee81fda382f5d0b64363b267a1"
+    },
+    "ctgov-quickstart": {
+      "path": "/Users/me/projects/ctgov-quickstart",
+      "storage_id": "b490bc09166a4a2f8fb75b872b040663"
+    },
+    "ctgov__simplegcp": {
+      "path": "/Users/me/projects/ctgov__simplegcp",
+      "storage_id": "549294bacd3049ea08a76fce2c71e5f6"
+    },
+    "cursor": {
+      "path": "/Users/me/dotfiles/cursor",
+      "storage_id": "a18b434abe84d3f3ee5442e078a33ff5"
+    },
+    "cursor-changelog": {
+      "path": "/Users/me/tools/cursor-changelog",
+      "storage_id": "2a0ac184ade13a72301671f46f3a3249"
+    },
+    "cursor-fix": {
+      "path": "/Users/me/projects/cursor-fix",
+      "storage_id": "c69c09762891ab7a19e47283da38c604"
+    },
+    "cursor-fps": {
+      "path": "/Users/me/projects/cursor-fps",
+      "storage_id": "56c949480bb90ea49153b7b128d9b53b"
+    },
+    "cursor-manifest-dashboard": {
+      "path": "/Users/me/projects/cursor-manifest-dashboard",
+      "storage_id": "8ced6138e9382cdea53f728dcde3c9f2"
+    },
+    "cursor-tools": {
+      "path": "/Users/me/tools/cursor-tools",
+      "storage_id": "5854363568c745a2f2b5091fce63d21a"
+    },
+    "daextract": {
+      "path": "/Users/me/ern/ccda/daextract",
+      "storage_id": "93d74a53020b25f617ad70cb45489d8d"
+    },
+    "dasc": {
+      "path": "/Users/me/ern/ccda/dasc",
+      "storage_id": "0752e6870ca491b032e6973676fc5b28"
+    },
+    "data": {
+      "path": "/Users/me/ern/data",
+      "storage_id": "319a293d4f19fd683c1e15d8b6a35604"
+    },
+    "data-sync-engine": {
+      "path": "/Users/me/tools/data-sync-engine",
+      "storage_id": "3cc1f89a94591959c437da2011583a87"
+    },
+    "datarescue": {
+      "path": "/Users/me/projects/datarescue",
+      "storage_id": "308d6f9fd89eba79c8a9716b367734a2"
+    },
+    "datasette__dev": {
+      "path": "/Users/me/tools/datasette__dev",
+      "storage_id": "e483036185bc055366e138ca2b154f2e"
+    },
+    "deep-libguide": {
+      "path": "/Users/me/projects/peeq-crb-nexus/deep-libguide",
+      "storage_id": "e7340dfb161007692651be8e41b835bd"
+    },
+    "deep-research": {
+      "path": "/Users/me/projects/deep-research",
+      "storage_id": "6f490758a80db4d1d620f1ca02ba2b03"
+    },
+    "deeperseeker-app__ansh__explore": {
+      "path": "/Users/me/tools/deeperseeker-app__ansh__explore",
+      "storage_id": "5d97cf513f825c4b95b873b9ba55a33a"
+    },
+    "defy-the-defaults": {
+      "path": "/Users/me/projects/defy-the-defaults",
+      "storage_id": "f972c8b4d4b16e7f53044f799c124498"
+    },
+    "deploystack": {
+      "path": "/Users/me/tools/terraform-practice/deploystack",
+      "storage_id": "d132e22a55e2a17925c9d938ceeb76a9"
+    },
+    "deploystack-three-tier-app": {
+      "path": "/Users/me/tools/terraform-practice/deploystack-three-tier-app",
+      "storage_id": "de542afca2d57569e6c598f89d50731b"
+    },
+    "design-flow": {
+      "path": "/Users/me/tools/design-flow",
+      "storage_id": "297f818c0eeaa7e31e883bc2527516f3"
+    },
+    "dev-workzone-banner": {
+      "path": "/Users/me/projects/dev-workzone-banner",
+      "storage_id": "0e81beaa14904b45cfe4b186257171bd"
+    },
+    "devx-skills": {
+      "path": "/Users/me/projects/devx-skills",
+      "storage_id": "9ca067b9a2be9feae18c31246dc9ba5a"
+    },
+    "dgx-spark": {
+      "path": "/Users/me/projects/dgx-spark",
+      "storage_id": "feb751dee209fc4548f364234e23445d"
+    },
+    "dh-exile-communities": {
+      "path": "/Users/me/projects/dh-exile-communities",
+      "storage_id": "88ba7e4c5e9ad9b5d9ad12cccb139b15"
+    },
+    "disabled": {
+      "path": "/Users/me/dotfiles/disabled",
+      "storage_id": "bbfdd48fca0c967cf19d547cc5e4445d"
+    },
+    "discovery-ssw-aging": {
+      "path": "/Users/me/projects/perone/aging/discovery-ssw-aging",
+      "storage_id": "3bde14cc1a79372734761023c6f01f4e"
+    },
+    "discovery-ssw-socialwork": {
+      "path": "/Users/me/projects/perone/cms/discovery-ssw-socialwork",
+      "storage_id": "271a6c6802b6094cea28d94489300106"
+    },
+    "discovery-ssw-socialwork__main": {
+      "path": "/Users/me/projects/perone/cms/discovery-ssw-socialwork__main",
+      "storage_id": "6dd8114335ae86cf3d18b1e5e5e5c340"
+    },
+    "discovery-ssw-socialwork__review": {
+      "path": "/Users/me/projects/perone/cms/discovery-ssw-socialwork__review",
+      "storage_id": "dd1a4aa152d54cec7272b2603c98ec30"
+    },
+    "discursive-rambler": {
+      "path": "/Users/me/projects/discursive-rambler",
+      "storage_id": "73d4e1b85af09be45ec4a9ed0cd850e8"
+    },
+    "docker-shared-services": {
+      "path": "/Users/me/projects/infra/docker-shared-services",
+      "storage_id": "fe81e79028e4989ac0b349d522016f96"
+    },
+    "docs": {
+      "path": "/Users/me/projects/peeq-crb-nexus/deep-libguide/crb-nexus-deep-libguide/docs",
+      "storage_id": "c562c7cb10df480094d9cfcb49e48571"
+    },
+    "documentdb": {
+      "path": "/Users/me/tools/documentdb",
+      "storage_id": "ca7ea4364f64c72a8455cfdd1c1ae7a0"
+    },
+    "docx-extraction-test": {
+      "path": "/Users/me/ern/cpc-anti-displacement/docx-extraction-test",
+      "storage_id": "bbdf8a5baef9c21af55ac4cc0e2f3083"
+    },
+    "dotfiles": {
+      "path": "/Users/me/dotfiles",
+      "storage_id": "e33c6d75cf81f53fd6301eef3f8d2788"
+    },
+    "dream-flow": {
+      "path": "/Users/me/projects/dream-flow",
+      "storage_id": "2cfb868c099c0f70dff10b9bc64f99ba"
+    },
+    "ean-traubovision": {
+      "path": "/Users/me/projects/ean-traubovision",
+      "storage_id": "d3aedcda617f3e6384172387cfa6083e"
+    },
+    "echo-hire": {
+      "path": "/Users/me/projects/vapi-quickstart/upstream/echo-hire",
+      "storage_id": "69f09cca1fb2fd690fb44333ebd2f816"
+    },
+    "edamagit__feature_trigger-update": {
+      "path": "/Users/me/tools/vscode-extensions/edamagit__feature_trigger-update",
+      "storage_id": "0803e90d95772b1082ea86303e131242"
+    },
+    "edamagit__feature_trigger-update-fixme": {
+      "path": "/Users/me/tools/vscode-extensions/edamagit__feature_trigger-update-fixme",
+      "storage_id": "108e19fbbeea116ec3c20469b69ef68d"
+    },
+    "edc-evictiondefense": {
+      "path": "/Users/me/ern/edc-evictiondefense",
+      "storage_id": "287b17aa6d15631d3cc0ac01cc9b77ea"
+    },
+    "edr-sandag__develop": {
+      "path": "/Users/me/ern/edr-sandag__develop",
+      "storage_id": "976042223a6132c0cf07dbd005014b1b"
+    },
+    "emergingpatterns": {
+      "path": "/Users/me/projects/emergingpatterns",
+      "storage_id": "7b24bc05073673489f13c65faba3e291"
+    },
+    "eml-setup": {
+      "path": "/Users/me/ern/eml-setup",
+      "storage_id": "0a2cfe626c053bc218934f685f59b47c"
+    },
+    "equation-zoo": {
+      "path": "/Users/me/projects/equation-zoo",
+      "storage_id": "7558fa1613b0b656550ca37fca67939a"
+    },
+    "ern": {
+      "path": "/Users/me/ern",
+      "storage_id": "71d49327b024b413a08180486987e49b"
+    },
+    "ern-courses": {
+      "path": "/Users/me/ern/ern-courses",
+      "storage_id": "85f5c8e5fcca6bb8b2c65a9e20ca8bae"
+    },
+    "ern-cpc": {
+      "path": "/Users/me/projects/ern-cpc",
+      "storage_id": "a1cae0a8baa4574198ed8dbdeb95bab9"
+    },
+    "ern-edc": {
+      "path": "/Users/me/projects/ern-edc",
+      "storage_id": "8052c4bcd9e65cb70ae049de4e35d3c0"
+    },
+    "ern-hprm": {
+      "path": "/Users/me/projects/ern-hprm",
+      "storage_id": "f1c10bfd9bbd0672611965e231bbfb0f"
+    },
+    "ern-slack": {
+      "path": "/Users/me/ern/ern-slack",
+      "storage_id": "dcbb1b99df7b235ca6984d6fa5ccceaa"
+    },
+    "evictionresearch.github.io": {
+      "path": "/Users/me/ern/evictionresearch.github.io",
+      "storage_id": "73449deabe43fec3c9598d2064e24045"
+    },
+    "evidence-on-both-sides": {
+      "path": "/Users/me/projects/evidence-on-both-sides",
+      "storage_id": "6677417df2f2318fba30cf87f8bfae22"
+    },
+    "examples": {
+      "path": "/Users/me/projects/limitless-quickstart/limitless_dailyReport/design/examples",
+      "storage_id": "c91b410f489def9734b0180fda7af5e3"
+    },
+    "executiveorders-nlp": {
+      "path": "/Users/me/projects/executiveorders-nlp",
+      "storage_id": "c9a19179d9c601dcb98f2485e3f76de3"
+    },
+    "exo": {
+      "path": "/Users/me/tools/exo",
+      "storage_id": "f62056ac6a5b515b8855c5897cab9691"
+    },
+    "extensions": {
+      "path": "/Users/me/tools/upstream/raycast/extensions",
+      "storage_id": "88caeb98a76392fb5ffe6a9bb9146b1a"
+    },
+    "faculty-expertise": {
+      "path": "/Users/me/projects/faculty-expertise",
+      "storage_id": "756d5a837bf8d2b2025cdc9127dd1e24"
+    },
+    "finances": {
+      "path": "/Users/me/personal/finances",
+      "storage_id": "8f1565fa2d54c40ff933f87e07ca3bad"
+    },
+    "fitness-training-plan": {
+      "path": "/Users/me/projects/fitness-training-plan",
+      "storage_id": "a957e3500230bb1eb75334d0206eeab1"
+    },
+    "flatfile-quickstart": {
+      "path": "/Users/me/projects/flatfile-quickstart",
+      "storage_id": "08d861860ab2770b546a866de746783d"
+    },
+    "flatfilers": {
+      "path": "/Users/me/tools/upstream/flatfilers",
+      "storage_id": "0a1876cf9c57e545c6e2df4cc955d726"
+    },
+    "forked-fiik": {
+      "path": "/Users/me/projects/forked-fiik",
+      "storage_id": "259e035dedfaf53c08aa7eecb68be737"
+    },
+    "fourth-waiv-ai": {
+      "path": "/Users/me/projects/4thwaiv-consulting/upstream/fourth-waiv-ai",
+      "storage_id": "529e4ee6ad9f45ea2f0c4364909676b9"
+    },
+    "fspp-ai-retsina": {
+      "path": "/Users/me/projects/fspp-ai-retsina",
+      "storage_id": "29976ba8af35b6950f7e129dca048eaf"
+    },
+    "funding-prospects": {
+      "path": "/Users/me/ern/funding-prospects",
+      "storage_id": "93eca0166e1ca3c7612e1ad1a6884722"
+    },
+    "futureofme": {
+      "path": "/Users/me/projects/futureofme",
+      "storage_id": "571a351b276d08443e03a3fe30794d6c"
+    },
+    "gapps-toolbox": {
+      "path": "/Users/me/projects/gapps-toolbox",
+      "storage_id": "a6650bca29e88d044baac942e7bba39d"
+    },
+    "gcloud-default-1234": {
+      "path": "/Users/me/projects/gcloud-default-1234",
+      "storage_id": "fe284736e5710e0db94f6bb148e911e0"
+    },
+    "gcop": {
+      "path": "/Users/me/tools/gcop",
+      "storage_id": "3fbcdd6939f2db1e0eef94c8c09f6fb1"
+    },
+    "geershift-ai": {
+      "path": "/Users/me/projects/geershift-ai",
+      "storage_id": "4ba9f717b75d6eb641cd70616cd574c3"
+    },
+    "gemini-2-tts": {
+      "path": "/Users/me/projects/cursor-fps/upstream/gemini-2-tts",
+      "storage_id": "2df92f56068572445f3a5ebf16f6756f"
+    },
+    "genie3-quickstart": {
+      "path": "/Users/me/projects/genie3-quickstart",
+      "storage_id": "ff6af74fdef805011ec3e39b1dadf93c"
+    },
+    "geocoding-data-cache": {
+      "path": "/Users/me/ern/data/geocoding-data-cache",
+      "storage_id": "57f10e4d1a0593d4749c0e7753415e8e"
+    },
+    "geomind-console-firebase": {
+      "path": "/Users/me/projects/grounded-automaps-pasadena/geomind-console-firebase",
+      "storage_id": "8bc485a264b78d0eb3fbfd368419110f"
+    },
+    "geonico": {
+      "path": "/Users/me/projects/geonico",
+      "storage_id": "17491819ac88e2562e758297d1a5cc27"
+    },
+    "gibberlink__PennyroyalTea": {
+      "path": "/Users/me/tools/upstream/gibberlink__PennyroyalTea",
+      "storage_id": "3e0dcc55216643d599d0c2ee0f29b3d1"
+    },
+    "github-gh-cli": {
+      "path": "/Users/me/tools/github-gh-cli",
+      "storage_id": "c1c8fd77975e0c41c68a6a9007e59cb6"
+    },
+    "glassium": {
+      "path": "/Users/me/projects/peeq-voice-omi/upstream/glassium",
+      "storage_id": "bc66e15a8f7fda684a68da697b69c4e9"
+    },
+    "google-chrome": {
+      "path": "/Users/me/tools/upstream/raycast/extensions/extensions/google-chrome",
+      "storage_id": "bd0aa311d2bb199a746cb52e02b78b1d"
+    },
+    "google-workspace-tools": {
+      "path": "/Users/me/tools/google-workspace-tools",
+      "storage_id": "d81ee41d75059d9b54122cff4d084816"
+    },
+    "grounded-automaps-pasadena": {
+      "path": "/Users/me/projects/grounded-automaps-pasadena",
+      "storage_id": "d7c927fe0ee1268f5359e0885d1a7205"
+    },
+    "gsp234": {
+      "path": "/Users/me/tools/terraform-practice/gsp234",
+      "storage_id": "14016a10b882be4524bc8f60bf269d9f"
+    },
+    "happenstance-clone": {
+      "path": "/Users/me/projects/peeq-talent/happenstance-clone",
+      "storage_id": "5b519d222a712125e8b649af3b529a7a"
+    },
+    "hash__hashintel__selfhost": {
+      "path": "/Users/me/projects/continuous-ai/hash__hashintel__selfhost",
+      "storage_id": "272dfd6f87d4c3f3d74ca6aef2d1b038"
+    },
+    "hats": {
+      "path": "/Users/me/projects/hats",
+      "storage_id": "09d7577ecbbf1302cfae4bbee9fe3b41"
+    },
+    "headshot-form-processor": {
+      "path": "/Users/me/projects/headshot-form-processor",
+      "storage_id": "00de1921055ba2ac02c2c065b2929f35"
+    },
+    "heatmaps-and-beatmaps": {
+      "path": "/Users/me/projects/heatmaps-and-beatmaps",
+      "storage_id": "da30bde634c13976945a64fc0ccc15e4"
+    },
+    "holepunch": {
+      "path": "/Users/me/projects/jupyter-code-server/upstream/holepunch",
+      "storage_id": "292a89150863512dabf16792a140c196"
+    },
+    "housing-analysis": {
+      "path": "/Users/me/jobs/kcrha-dsdirector-job/scratchpad/kcrha-app/superset-kcrha/housing-analysis",
+      "storage_id": "f0f5680f37883ea144c41a26dae1dfb2"
+    },
+    "hprm2": {
+      "path": "/Users/me/ern/hprm2-explainer/hprm2",
+      "storage_id": "887d22ff03cca63f67a435a5649d4ad9"
+    },
+    "hprm2-explainer": {
+      "path": "/Users/me/ern/hprm2-explainer",
+      "storage_id": "e8d9a93aef6425212bafe642ac9f0a13"
+    },
+    "hprm2__develop": {
+      "path": "/Users/me/ern/hprm2__develop",
+      "storage_id": "dcb6b140a2b13ec9f6d1b515e6641b94"
+    },
+    "hprm2_dev": {
+      "path": "/Users/me/ern/upstream/hprm2_dev",
+      "storage_id": "3a841d890b133dc7b8185d2830377c1c"
+    },
+    "hprm2_maplibregl": {
+      "path": "/Users/me/ern/upstream/hprm2_maplibregl",
+      "storage_id": "dcaa59ff16107a6650297fed532e4820"
+    },
+    "hud-era__pd_redux": {
+      "path": "/Users/me/ern/hud-era__pd_redux",
+      "storage_id": "c2c9703584044c264f9732cafd104fa0"
+    },
+    "hud-era__tt_redux": {
+      "path": "/Users/me/ern/hud-era__tt_redux",
+      "storage_id": "22cf6199f77d9624da081477127807fe"
+    },
+    "human-name-matching": {
+      "path": "/Users/me/projects/human-name-matching",
+      "storage_id": "9b3b8cc7a651537ef770f1fe201ac7b0"
+    },
+    "humanshield-incubator": {
+      "path": "/Users/me/projects/humanshield-incubator",
+      "storage_id": "bb46f53ba0a44cfc0a8a9e45e5d1b38e"
+    },
+    "ijv": {
+      "path": "/Users/me/.cursor/worktrees/peeq-eicollab-slides/ijv",
+      "storage_id": "5791fca1d31a2e01154cca0007deeeeb"
+    },
+    "image-enhancement": {
+      "path": "/Users/me/projects/image-enhancement",
+      "storage_id": "6657d3b65d040da0483617c8491ccff5"
+    },
+    "inboxicated": {
+      "path": "/Users/me/projects/inboxicated",
+      "storage_id": "cfcfea80105d37d21ef29a2bc3139288"
+    },
+    "inferal-quickstart": {
+      "path": "/Users/me/tools/inferal-quickstart",
+      "storage_id": "080a284bc70216a6f014d8f9c0116ad5"
+    },
+    "infra": {
+      "path": "/Users/me/projects/infra",
+      "storage_id": "54724455eb229d172517493daa91cc7e"
+    },
+    "inside-out-3": {
+      "path": "/Users/me/projects/inside-out-3",
+      "storage_id": "5d3a472017da191e2ee09ea9fefc2359"
+    },
+    "jahndaux-cuzcollab": {
+      "path": "/Users/me/projects/jahndaux-cuzcollab",
+      "storage_id": "951ae91853266b98da372671061259cb"
+    },
+    "jerramcl": {
+      "path": "/Users/me/projects/macss/jerramcl",
+      "storage_id": "7ca7f33803ad31f8458a21ca397bc578"
+    },
+    "js-pptx": {
+      "path": "/Users/me/projects/fspp-ai-retsina/pptx-tools-analysis/js-pptx",
+      "storage_id": "646e9b81cd11a904927a288f554ec620"
+    },
+    "jungian-gary": {
+      "path": "/Users/me/projects/jungian-gary",
+      "storage_id": "acc2fb4d55eaf1dca01bd72e1519703b"
+    },
+    "jupyter-code-server": {
+      "path": "/Users/me/projects/jupyter-code-server",
+      "storage_id": "487e88a3461fb1cbac2d1cb5bc9b8a73"
+    },
+    "jupyter-server-proxy": {
+      "path": "/Users/me/projects/jupyter-code-server/upstream/jupyter-server-proxy",
+      "storage_id": "ff936ac3ab254c5d96cd29e855c0f09d"
+    },
+    "k8s_aculich": {
+      "path": "/Users/me/projects/nautilus/k8s_aculich",
+      "storage_id": "4c5edc3a6a66dbe0c4045e09b35f93f2"
+    },
+    "kcrha-app": {
+      "path": "/Users/me/jobs/kcrha-dsdirector-job/scratchpad/kcrha-app",
+      "storage_id": "e1a4aa1c068279436b8f46bb4362805f"
+    },
+    "kcrha-dsdirector-job": {
+      "path": "/Users/me/jobs/kcrha-dsdirector-job",
+      "storage_id": "72d7fd7b586eb9d03ac93143f9bfed43"
+    },
+    "kcrha-org": {
+      "path": "/Users/me/ern/kcrha-org",
+      "storage_id": "373ec7fd8cdc7d17341a4e00ceea7e4a"
+    },
+    "key-bindings-to-md__develop": {
+      "path": "/Users/me/tools/vscode-extensions/key-bindings-to-md__develop",
+      "storage_id": "5c37f9e394af81f64454fcb8339cf010"
+    },
+    "keycastr__keycastr__develop": {
+      "path": "/Users/me/tools/keycastr__keycastr__develop",
+      "storage_id": "20f8782370e88cf4ec56848c2e5588da"
+    },
+    "kiln": {
+      "path": "/Users/me/ern/upstream/kiln",
+      "storage_id": "feb1df4ad49f6a351fa4487aa96f23ab"
+    },
+    "lam-eda": {
+      "path": "/Users/me/aallc/lam/projects/lam-eda",
+      "storage_id": "0243214e10735151ef5dc5d76a38cbd1"
+    },
+    "lam-jurisdiction-lookup": {
+      "path": "/Users/me/aallc/lam/projects/lam-eda/lam-jurisdiction-lookup",
+      "storage_id": "9a142b5d0ff669daa298eeaf72b2de55"
+    },
+    "lam-starter-scaffold": {
+      "path": "/Users/me/aallc/lam/projects/lam-eda/lam-starter-scaffold",
+      "storage_id": "5942e8a169c28eb6e660e612d5db94f3"
+    },
+    "launch-kit-spa-desktop-switchdimension": {
+      "path": "/Users/me/projects/switchdimension-community/launch-kit-spa-desktop-switchdimension",
+      "storage_id": "69724228f05239b68f90b14db874b185"
+    },
+    "lavender-bonus": {
+      "path": "/Users/me/projects/lavender-bonus",
+      "storage_id": "7744ff4ad3541b454363b4c142bc264d"
+    },
+    "legal": {
+      "path": "/Users/me/personal/legal",
+      "storage_id": "29667888812616a56ac4b496595b3132"
+    },
+    "legal-agents": {
+      "path": "/Users/me/projects/legal-agents",
+      "storage_id": "349830fa30cffddf21b3663cb1d3fac3"
+    },
+    "lfo-eviction-linking": {
+      "path": "/Users/me/ern/lfo-eviction-linking",
+      "storage_id": "4d08ea312a93c2d0d2ab04de9b100edb"
+    },
+    "library.wiki": {
+      "path": "/Users/me/ern/upstream/evictionresearch/library.wiki",
+      "storage_id": "275bb03d391f799c0c9f549b8b2b493e"
+    },
+    "library__mindmap": {
+      "path": "/Users/me/ern/library__mindmap",
+      "storage_id": "184b59f2e72a28cb39c8fd141cc67404"
+    },
+    "limitless-api-examples": {
+      "path": "/Users/me/projects/limitless-quickstart/limitless-api-examples",
+      "storage_id": "36eb240f41fd654cec72ff1f691c8c37"
+    },
+    "limitless-integration-quickstart": {
+      "path": "/Users/me/projects/limitless-integration-quickstart",
+      "storage_id": "3426a1a9bdcc4014368beb7f0ae94dd5"
+    },
+    "limitless-lifelog-analyzer": {
+      "path": "/Users/me/projects/limitless-quickstart/limitless-lifelog-analyzer",
+      "storage_id": "ebc790f9e45e228f05b6045871e64d20"
+    },
+    "limitless-memory-box": {
+      "path": "/Users/me/projects/limitless-quickstart/limitless-memory-box",
+      "storage_id": "4b55114743244507d71470d623f5759d"
+    },
+    "limitless-quickstart": {
+      "path": "/Users/me/projects/limitless-quickstart",
+      "storage_id": "f37aa9d2dd81e3c81a1f2ff26d24bde3"
+    },
+    "limitless-rewind-tools": {
+      "path": "/Users/me/tools/limitless-rewind-tools",
+      "storage_id": "19a23b1f7aad7d81f26bd91d5e9de3bb"
+    },
+    "limitless_dailyReport": {
+      "path": "/Users/me/projects/limitless-quickstart/limitless_dailyReport",
+      "storage_id": "9726a89c0032a67651f74944e9736b13"
+    },
+    "limitless_takeout_20260311_115334": {
+      "path": "/Users/me/personal/takeout/limitless/limitless_takeout_20260311_115334",
+      "storage_id": "67c301497cee75b6962cc297fe684c79"
+    },
+    "linkedin-to-jsonresume": {
+      "path": "/Users/me/projects/peeq-talent/upstream/linkedin-to-jsonresume",
+      "storage_id": "6aaa619d94920a27105bb2c6651547fa"
+    },
+    "lipreading-agent": {
+      "path": "/Users/me/projects/portfolio-james-gallagher/lipreading-agent",
+      "storage_id": "f55c01cd5c40d871782dbeb26ceebe47"
+    },
+    "llm-in-a-box-template__main": {
+      "path": "/Users/me/projects/rse-collabs/llm-in-a-box-template__main",
+      "storage_id": "72557dfd82c30e37902ce9d288eb64c3"
+    },
+    "localai": {
+      "path": "/Users/me/projects/localai",
+      "storage_id": "dcbf640a23774e93f822eada647eeb3d"
+    },
+    "localllm": {
+      "path": "/Users/me/projects/localllm",
+      "storage_id": "b42495c3924cf7ba50992d2cf8134989"
+    },
+    "lsdm": {
+      "path": "/Users/me/projects/lsdm",
+      "storage_id": "8891d8f29470437c8adcdd30d6c2655e"
+    },
+    "lsdm-leadership-decisionmaking": {
+      "path": "/Users/me/projects/lsdm-leadership-decisionmaking",
+      "storage_id": "a0ecaa78071b18c75f03b02dbabff738"
+    },
+    "macosx-tools": {
+      "path": "/Users/me/tools/macosx-tools",
+      "storage_id": "f66514e6452c70fbcc4466c12392e234"
+    },
+    "macss": {
+      "path": "/Users/me/projects/macss",
+      "storage_id": "3c4a47aac3de5faf21981af462662cd0"
+    },
+    "manus-basecompose": {
+      "path": "/Users/me/projects/manus-basecompose",
+      "storage_id": "2a39f79488b1e2bf873ff3919b5dab32"
+    },
+    "manus-coworking": {
+      "path": "/Users/me/projects/manus-coworking",
+      "storage_id": "6c73580c3f2792c65d2b4195d77b50a7"
+    },
+    "markdown-slides": {
+      "path": "/Users/me/tools/markdown-slides",
+      "storage_id": "479998756a7ebded60056e95ef3a13c1"
+    },
+    "mcp-DEEPwebresearch__qpd-v": {
+      "path": "/Users/me/projects/deep-research/quickstart/mcp-DEEPwebresearch__qpd-v",
+      "storage_id": "1a49409edf9eb78f51ace3083711afe0"
+    },
+    "mcp-quickstart": {
+      "path": "/Users/me/projects/mcp-quickstart",
+      "storage_id": "198f9893a71eafba9ed4631dfecfcb33"
+    },
+    "md2googleslides__googleworkspace": {
+      "path": "/Users/me/tools/markdown-slides/upstream/md2googleslides__googleworkspace",
+      "storage_id": "7993bc3efe4b0d9f92707aeb635d00b8"
+    },
+    "metaxy__anam-org": {
+      "path": "/Users/me/projects/rse-collabs/upstream/metaxy__anam-org",
+      "storage_id": "446387b94abd8585772f4eb3c9762c61"
+    },
+    "metube-quickstart": {
+      "path": "/Users/me/tools/metube-quickstart",
+      "storage_id": "09bdd8a688ab5af23c3746deb06f6af8"
+    },
+    "mgc": {
+      "path": "/Users/me/.cursor/worktrees/peeq-eicollab-slides/mgc",
+      "storage_id": "79349322f2addd4b6cad51a57ba45cbf"
+    },
+    "mgrep": {
+      "path": "/Users/me/tools/grepping/mgrep",
+      "storage_id": "ca2aa5b316c3b632cc37b9bbc41c8d0a"
+    },
+    "midday": {
+      "path": "/Users/me/tools/midday-ai/midday",
+      "storage_id": "85c0b5ea6672888a12e8a65069a4bcfb"
+    },
+    "midday-friends": {
+      "path": "/Users/me/tools/midday-friends",
+      "storage_id": "1773d2d4bd424739d0ffd92b00a805f5"
+    },
+    "mindmap": {
+      "path": "/Users/me/projects/mindmap",
+      "storage_id": "9ad3a3ab262ae35a7cc483664efcdd0d"
+    },
+    "moltronics": {
+      "path": "/Users/me/projects/moltronics",
+      "storage_id": "626853fe69eba76c18dd7181b75cbcdc"
+    },
+    "montiminous": {
+      "path": "/Users/me/projects/continuous-ai/manus/montiminous",
+      "storage_id": "a171c1e6892413b0188c9712980ee286"
+    },
+    "morelos_results": {
+      "path": "/Users/me/pado-streetview-llm/morelos_results",
+      "storage_id": "8cbc17bf76fc725cc86343ce92f8ceb7"
+    },
+    "murmur-muse": {
+      "path": "/Users/me/projects/dream-flow/murmur-muse",
+      "storage_id": "3a8270ca71187779c85a2fa4303e463a"
+    },
+    "myth_of_empowerment": {
+      "path": "/Users/me/projects/transcribe/input/myth_of_empowerment",
+      "storage_id": "1a3714d88d2d0888ddd604a2c8cfa781"
+    },
+    "n8n-integrations": {
+      "path": "/Users/me/projects/n8n-integrations",
+      "storage_id": "e9ee01459b40c44fe52441e72ec98d71"
+    },
+    "n8n-quickstart": {
+      "path": "/Users/me/tools/n8n-quickstart",
+      "storage_id": "05241ea951bc13c1c7e29d3a25644c65"
+    },
+    "nano-bananarama": {
+      "path": "/Users/me/projects/nano-bananarama",
+      "storage_id": "68e05d78aa5193f81464dfa540f0e525"
+    },
+    "nanobanana-gemini-trending": {
+      "path": "/Users/me/tools/nanobanana-gemini-trending",
+      "storage_id": "f110672e45f40130d1ec1b15469fa620"
+    },
+    "nanochat__karpathy": {
+      "path": "/Users/me/projects/ai-vision-2025/upstream/nanochat__karpathy",
+      "storage_id": "ab15db0beed2172e998e13e9fa47eddc"
+    },
+    "nate-flow": {
+      "path": "/Users/me/projects/nate-flow",
+      "storage_id": "833ef5fd2e2885dc06d00f7f28e17fc0"
+    },
+    "nautilus": {
+      "path": "/Users/me/projects/nautilus",
+      "storage_id": "73ca67e7230c2571c9f69f708c246f49"
+    },
+    "nautilus-namespaces-2025-02-18_files": {
+      "path": "/Users/me/projects/nautilus/k8s_aculich/credentials/nautilus-namespaces-2025-02-18_files",
+      "storage_id": "fe08f53491c697c4291d052ce29868be"
+    },
+    "nautilus_aculich": {
+      "path": "/Users/me/projects/nautilus/nautilus_aculich",
+      "storage_id": "5e60dfd170b898b27fa2a6f1de0670f2"
+    },
+    "nav-fund-proposal": {
+      "path": "/Users/me/ern/nav-fund-proposal",
+      "storage_id": "576fd6c417d38d74c664435c48972480"
+    },
+    "neighborhoodchange.github.io": {
+      "path": "/Users/me/ern/ncr/neighborhoodchange.github.io",
+      "storage_id": "9f263ae0b780f3eefa209aa0515ec70a"
+    },
+    "nexus-workflow": {
+      "path": "/Users/me/projects/peeq-crb-nexus/nexus-workflow",
+      "storage_id": "3bbc4b86a283a4d1d73279cbff30fcd0"
+    },
+    "nick-sublime": {
+      "path": "/Users/me/projects/nick-sublime",
+      "storage_id": "deaee15f9e382c180c6cb499330ad29c"
+    },
+    "nominatim-docker__ern": {
+      "path": "/Users/me/ern/nominatim-docker__ern",
+      "storage_id": "5ffdf123304908558295d67c9215cbd2"
+    },
+    "notion-sdk-js": {
+      "path": "/Users/me/tools/notion-tools/notion-sdk-js",
+      "storage_id": "b6cbd77cefdd38aa792a2720211ef49f"
+    },
+    "notion-spa-crb": {
+      "path": "/Users/me/projects/peeq-crb-nexus/deep-libguide/notion-spa-crb",
+      "storage_id": "5c2cbd636b4d486fab2fbc3aa8128c01"
+    },
+    "notion-tools": {
+      "path": "/Users/me/tools/notion-tools",
+      "storage_id": "f67d855992795b7a63670e521e487725"
+    },
+    "notionsync": {
+      "path": "/Users/me/tools/notion-tools/notionsync",
+      "storage_id": "0ab05039ddeccd0e8cf7d01c73174689"
+    },
+    "novel-scenification": {
+      "path": "/Users/me/projects/nick-sublime/novel-scenification",
+      "storage_id": "9b7ecaca047111cd099fd2fa43fcf334"
+    },
+    "obsidian-clipper": {
+      "path": "/Users/me/tools/notion-tools/obsidian-to-NotionNext/obsidian-clipper",
+      "storage_id": "e3e97de9a12a65182bd12bdeb4a275c5"
+    },
+    "obsidian-to-NotionNext": {
+      "path": "/Users/me/tools/notion-tools/obsidian-to-NotionNext",
+      "storage_id": "4abb2d7e06c7d5c44e08a992ff18ceee"
+    },
+    "ockam-quickstart": {
+      "path": "/Users/me/tools/ockam-quickstart",
+      "storage_id": "84d8f97cfcc5a7e3ca9a85a21ecc3120"
+    },
+    "ocr-landscape-2025": {
+      "path": "/Users/me/projects/ocr-landscape-2025",
+      "storage_id": "8e4b1c17539410e7c558fccb0fb6303a"
+    },
+    "officials-mgmt-platforms": {
+      "path": "/Users/me/projects/officials-mgmt-platforms",
+      "storage_id": "3b53bf982eedbe11b92008a402683681"
+    },
+    "officialspay-biz": {
+      "path": "/Users/me/projects/officialspay-biz",
+      "storage_id": "ecc62a30241897173d408aadb0d52611"
+    },
+    "officialspay-infra": {
+      "path": "/Users/me/projects/officialspay-infra",
+      "storage_id": "72b6f1c1dc24bd7acd349dc823988737"
+    },
+    "officialspay-webapp": {
+      "path": "/Users/me/projects/officialspay-webapp",
+      "storage_id": "0c9dbd7944280477555a2ddeac775940"
+    },
+    "omi": {
+      "path": "/Users/me/projects/peeq-voice-omi/upstream/BasedHardware/omi",
+      "storage_id": "701bf55c733dce99782ad1f57d7f9c8f"
+    },
+    "openai-fall2025-quickstart": {
+      "path": "/Users/me/projects/openai-fall2025-quickstart",
+      "storage_id": "337b4002094d7077efc42cd81843b8ef"
+    },
+    "opengpts": {
+      "path": "/Users/me/projects/opengpts",
+      "storage_id": "906e868ab545912c631129da69068cee"
+    },
+    "openpaper": {
+      "path": "/Users/me/tools/openpaper",
+      "storage_id": "34b8c46f59db6a46162ffc9a481c6c42"
+    },
+    "oregon__capstone_main": {
+      "path": "/Users/me/ern/oregon__capstone_main",
+      "storage_id": "4f05be80cae7312ec3209feca66d769a"
+    },
+    "oregon__david_capstone": {
+      "path": "/Users/me/ern/oregon__david_capstone",
+      "storage_id": "a0ecaad9fc2f0bf9213abad299941887"
+    },
+    "oregon__mina_capstone": {
+      "path": "/Users/me/ern/oregon__mina_capstone",
+      "storage_id": "f1e1ab0966319cf44a5408ac56b3a0e6"
+    },
+    "oregon__ojd-eml": {
+      "path": "/Users/me/ern/oregon__ojd-eml",
+      "storage_id": "50d54aabd5ec324297fd81fe925b1568"
+    },
+    "oregon__ojd-latest": {
+      "path": "/Users/me/ern/oregon__ojd-latest",
+      "storage_id": "6dd86d5091672e998608cfce52bcd6de"
+    },
+    "oregon__ojd_20250403": {
+      "path": "/Users/me/ern/oregon__ojd_20250403",
+      "storage_id": "90ca5847c7bbf616e78336f4db239222"
+    },
+    "oregon_eda": {
+      "path": "/Users/me/ern/oregon_eda",
+      "storage_id": "1345f9415cba7a85deab6413e71856eb"
+    },
+    "oregon_eda-nochat": {
+      "path": "/Users/me/ern/oregon_eda-nochat",
+      "storage_id": "7c2195a27754eb9ae758834e1f4f568c"
+    },
+    "oregon_miaaaron": {
+      "path": "/Users/me/ern/oregon_miaaaron",
+      "storage_id": "4151b894f6e3e855827b3105787998cd"
+    },
+    "oregon_ojd_20250403": {
+      "path": "/Users/me/ern/oregon_ojd_20250403",
+      "storage_id": "75473bf0bf0a3aac5880573b71855000"
+    },
+    "orgstory-design-system": {
+      "path": "/Users/me/projects/orgstory-design-system",
+      "storage_id": "afd3b7afc0e1aea624292732e2d243da"
+    },
+    "orgstory-scaffold": {
+      "path": "/Users/me/projects/orgstory-scaffold",
+      "storage_id": "8139b6a0bcfeb58ac5bdfd0134e39080"
+    },
+    "oss-tool-extensions": {
+      "path": "/Users/me/tools/oss-tool-extensions",
+      "storage_id": "4ed3ecb9c97b46b92a041000a45b3a89"
+    },
+    "pado-streetview-llm": {
+      "path": "/Users/me/pado-streetview-llm",
+      "storage_id": "e52332ab170cb430637a5f4d7b1510d7"
+    },
+    "paidapp-plaid-quickstart": {
+      "path": "/Users/me/projects/paidapp-plaid-quickstart",
+      "storage_id": "667165568bc38ae4ac587d05edec9f0d"
+    },
+    "paperclip-quickstart": {
+      "path": "/Users/me/tools/paperclip-quickstart",
+      "storage_id": "2ee2392b522715c7bf9c05788f5be61c"
+    },
+    "parallel-ai__rexjoseph": {
+      "path": "/Users/me/projects/legal-agents/upstream/archive/parallel-ai__rexjoseph",
+      "storage_id": "795184ec839c8af9b2207ce71b1c7850"
+    },
+    "parallelai-quickstart": {
+      "path": "/Users/me/tools/parallelai-quickstart",
+      "storage_id": "c3a4d8e5b88ebb8247276e2c29570d4b"
+    },
+    "pasifika-database": {
+      "path": "/Users/me/projects/pasifika-database",
+      "storage_id": "4faf866d6ef4bdff80565e4e1ac8d1c9"
+    },
+    "payapp-firebase": {
+      "path": "/Users/me/projects/payapp-firebase",
+      "storage_id": "31dfbab91153a1af25dab9886387f41b"
+    },
+    "peeq": {
+      "path": "/Users/me/aallc/peeq",
+      "storage_id": "f5da32c819bcc0a4a2fd2539edda5c91"
+    },
+    "peeq-carb": {
+      "path": "/Users/me/aallc/peeq-carb",
+      "storage_id": "3c3f3b96382e585dd2bd774c2c35ba70"
+    },
+    "peeq-crb-nexus": {
+      "path": "/Users/me/projects/peeq-crb-nexus",
+      "storage_id": "c8bb7cad2fd53cf4bdecdccee8efdd39"
+    },
+    "peeq-crb-scout-collab": {
+      "path": "/Users/me/projects/peeq-crb-scout-collab",
+      "storage_id": "cc357efed67d877cd835a48d0d7d82c3"
+    },
+    "peeq-deeplistening-omi": {
+      "path": "/Users/me/projects/peeq-deeplistening-omi",
+      "storage_id": "a825ca66b1a58a2b02241b56522f42ee"
+    },
+    "peeq-eicollab-slides": {
+      "path": "/Users/me/projects/peeq-eicollab-slides",
+      "storage_id": "00c0a0afe71df5f05bc580bc1e15c7b3"
+    },
+    "peeq-envisioning": {
+      "path": "/Users/me/projects/peeq-envisioning",
+      "storage_id": "e04042d66b5323b8e6ccfbc752390f53"
+    },
+    "peeq-lavender-data": {
+      "path": "/Users/me/projects/peeq-lavender-data",
+      "storage_id": "bfdd1a131050d4e9b106b45231bba01b"
+    },
+    "peeq-lavender-voice": {
+      "path": "/Users/me/projects/peeq-lavender-voice",
+      "storage_id": "2f10ae3eeff6c79f5c4e2a11846cd538"
+    },
+    "peeq-lmnt-qrst": {
+      "path": "/Users/me/projects/peeq-lmnt-qrst",
+      "storage_id": "fae4dd95c54a32242fb7595c6691c5ed"
+    },
+    "peeq-logo-remix": {
+      "path": "/Users/me/aallc/peeq/peeq-logo-remix",
+      "storage_id": "6e9f5767ad36a39238f6e1c03de0f791"
+    },
+    "peeq-ocr-mike-stajura": {
+      "path": "/Users/me/projects/peeq-ocr-mike-stajura",
+      "storage_id": "3c9a147689b1b513ea0838a97b7efd80"
+    },
+    "peeq-outcomes": {
+      "path": "/Users/me/projects/peeq-outcomes",
+      "storage_id": "4449bf196a7451614c502a106d30923f"
+    },
+    "peeq-reboot": {
+      "path": "/Users/me/aallc/peeq/peeq-reboot",
+      "storage_id": "88a4bfa65513070395827a8e7c146bfa"
+    },
+    "peeq-skilltree": {
+      "path": "/Users/me/projects/peeq-talent/peeq-skilltree",
+      "storage_id": "0807f3535c8a4ceb1dc930aeeadfd11e"
+    },
+    "peeq-talent": {
+      "path": "/Users/me/projects/peeq-talent",
+      "storage_id": "6ff03d80416cab35a599c3206f4214db"
+    },
+    "peeq-talent-firebase": {
+      "path": "/Users/me/projects/peeq-talent/peeq-talent-firebase",
+      "storage_id": "bb98a5f02839359628ff165ef985bdad"
+    },
+    "peeq-talent-recommendations": {
+      "path": "/Users/me/projects/peeq-talent-recommendations",
+      "storage_id": "d39fc4fcce67667eeec789d1cc39d6b9"
+    },
+    "peeq-voice-omi": {
+      "path": "/Users/me/projects/peeq-voice-omi",
+      "storage_id": "83979e3b36d5314246a67f757deb8e6f"
+    },
+    "peeq-voicegen-audiocast": {
+      "path": "/Users/me/projects/peeq-voicegen-audiocast",
+      "storage_id": "d2cb1ba55e3d6cf1547f8a1aec87a8c0"
+    },
+    "perone": {
+      "path": "/Users/me/projects/perone",
+      "storage_id": "cc5274c4707d5e9e9dd22fb4c1434185"
+    },
+    "perplexity-futureproof-webstack-2026": {
+      "path": "/Users/me/projects/perplexity-futureproof-webstack-2026",
+      "storage_id": "17204700c953203f585257a3bbdea877"
+    },
+    "phia-clone": {
+      "path": "/Users/me/projects/phia-clone",
+      "storage_id": "18d0dd082c768e95bc250dc9e47f07f0"
+    },
+    "phoneapps": {
+      "path": "/Users/me/projects/phoneapps",
+      "storage_id": "5fcc372573aa0e4a06966095d9b02999"
+    },
+    "pixie-capstone": {
+      "path": "/Users/me/projects/chyp-app/pixie-capstone",
+      "storage_id": "c6b5792b5ac37948ed6e44055f163d31"
+    },
+    "platform": {
+      "path": "/Users/me/projects/rrid/upstream/pubpub/platform",
+      "storage_id": "96b531d70853aa4e6a15c990781a2982"
+    },
+    "playground": {
+      "path": "/Users/me/ern/playground",
+      "storage_id": "b2bd3c024d38893a22febf4fcb2a5dc6"
+    },
+    "plotly-demo": {
+      "path": "/Users/me/tools/plotly-demo",
+      "storage_id": "c7f58959a581a07e5589a47c5fbe7608"
+    },
+    "plotly-demo-gitpod": {
+      "path": "/Users/me/tools/plotly-demo/plotly-demo-gitpod",
+      "storage_id": "763a8f3877cbad7bf96e6681ebf700de"
+    },
+    "podcastfy__souzatharsis": {
+      "path": "/Users/me/projects/transcribe/upstream/podcastfy__souzatharsis",
+      "storage_id": "d38bbdc7b0e9daa856cb954886c5fd36"
+    },
+    "policybreeze-wip": {
+      "path": "/Users/me/projects/policybreeze-wip",
+      "storage_id": "1537fcf901551f9ba9323be5e425ceb9"
+    },
+    "portfolio-james-gallagher": {
+      "path": "/Users/me/projects/portfolio-james-gallagher",
+      "storage_id": "07f21129e56b426a9e15f9af57046183"
+    },
+    "portfolio-retsina-meyer": {
+      "path": "/Users/me/projects/portfolio-retsina-meyer",
+      "storage_id": "2d5fec891d9ecb6c59a3d598bc5c89ab"
+    },
+    "portless__vercel-labs": {
+      "path": "/Users/me/tools/vercel-ecosystem/upstream/portless__vercel-labs",
+      "storage_id": "8e563a22b2bc32cb338ca0e040b133b1"
+    },
+    "posthog-vintage": {
+      "path": "/Users/me/projects/posthog-vintage",
+      "storage_id": "dc97c276727f51a53a916ce74329e8c3"
+    },
+    "ppf-poppyfields-mvp": {
+      "path": "/Users/me/projects/ppf-poppyfields-mvp",
+      "storage_id": "6e7051a848d326f36fc29781e0cf4a8f"
+    },
+    "pptx-automizer": {
+      "path": "/Users/me/projects/fspp-ai-retsina/pptx-tools-analysis/pptx-automizer",
+      "storage_id": "ca17332a33b4901d1f439340b145a195"
+    },
+    "pqrs-org": {
+      "path": "/Users/me/dotfiles/upstream/pqrs-org",
+      "storage_id": "dc6021129155c6cbfae59b066dcf98e9"
+    },
+    "pqrs-org_KE-complex_modifications__soft-meta": {
+      "path": "/Users/me/dotfiles/upstream/pqrs-org_KE-complex_modifications__soft-meta",
+      "storage_id": "6f026ff655b1ee8dd7c9a8f13f8794cc"
+    },
+    "pqrst": {
+      "path": "/Users/me/projects/replit-playground/pqrst",
+      "storage_id": "e7cb267ceea7ca2515da2a741ba89269"
+    },
+    "pquest": {
+      "path": "/Users/me/projects/pquest",
+      "storage_id": "9a1c21915a82cc879d6a9877d1ab4c03"
+    },
+    "prep": {
+      "path": "/Users/me/jobs/prep",
+      "storage_id": "62caac5239b9f0f5a78ec9f246a66251"
+    },
+    "prep-hackerrank": {
+      "path": "/Users/me/jobs/prep-hackerrank",
+      "storage_id": "4a11e34e74e8223e8991b6dc74079b82"
+    },
+    "project-035": {
+      "path": "/Users/me/EnlighterProjects/project-035",
+      "storage_id": "cfdc2b52db6c33ed0db2025f774dd733"
+    },
+    "projects": {
+      "path": "/Users/me/projects",
+      "storage_id": "0d032500df317115876aba9012986370"
+    },
+    "promptlight-clone": {
+      "path": "/Users/me/projects/promptlight-clone",
+      "storage_id": "a664069ed30feec28f8540ac5d57fdae"
+    },
+    "prosocial-breadandroses": {
+      "path": "/Users/me/projects/prosocial-breadandroses",
+      "storage_id": "11d6656f577a63f3966e35a8fcc3dc14"
+    },
+    "pubmed-aging": {
+      "path": "/Users/me/projects/perone/aging/pubmed-aging",
+      "storage_id": "d3795c64f80b687c84aeaa74a0134eb3"
+    },
+    "pubpub": {
+      "path": "/Users/me/projects/rrid/upstream/pubpub",
+      "storage_id": "dc41dcaa183c16add8570ec0d3be7b03"
+    },
+    "pubpub-airtable-gateway": {
+      "path": "/Users/me/projects/rrid/pubpub-airtable-gateway",
+      "storage_id": "017f32bc06979f3ba59596dfc16fad11"
+    },
+    "pubpub-airtable-gateway-reboot": {
+      "path": "/Users/me/projects/rrid/airtable-gateway-template-upstream/pubpub-airtable-test/pubpub-airtable-gateway-reboot",
+      "storage_id": "4f8ce356065d70b97c261167cf63bb8e"
+    },
+    "pubpub-airtable-test": {
+      "path": "/Users/me/projects/rrid/airtable-gateway-template-upstream/pubpub-airtable-test",
+      "storage_id": "ca1e5152bc3b53e8897fc261d259b7ea"
+    },
+    "pugg": {
+      "path": "/Users/me/projects/pugg",
+      "storage_id": "9cac17b3157cca2768976ecf1c831a62"
+    },
+    "realtime-voice-transcribe": {
+      "path": "/Users/me/projects/realtime-voice-transcribe",
+      "storage_id": "2f4d4aa2f1e75d1a51f8cdba1119bb23"
+    },
+    "recogito": {
+      "path": "/Users/me/projects/recogito",
+      "storage_id": "081c1b369808d2ed3382d91cdbac44da"
+    },
+    "remix-run": {
+      "path": "/Users/me/projects/switchdimension-community/upstream/remix-run",
+      "storage_id": "ba9d9677c9fd926430acd1bba20660b2"
+    },
+    "repo-evaluator": {
+      "path": "/Users/me/projects/best-practices/repo-evaluator/repo-evaluator",
+      "storage_id": "ed0b196b780ae97f45d13a3ac61e00de"
+    },
+    "repostory": {
+      "path": "/Users/me/projects/repostory",
+      "storage_id": "f4a4256a2b15459cfd3e1cb72c92b3f3"
+    },
+    "retrace-quickstart": {
+      "path": "/Users/me/tools/limitless-rewind-tools/retrace-quickstart",
+      "storage_id": "08caa0ff7eb81c5e5c5a9fcba8258f09"
+    },
+    "retrace__haseab": {
+      "path": "/Users/me/tools/limitless-rewind-tools/retrace-quickstart/retrace__haseab",
+      "storage_id": "f1b398fa11bdcd074e6a8d3c3787bba0"
+    },
+    "rgrep-allmystuff": {
+      "path": "/Users/me/projects/rgrep-allmystuff",
+      "storage_id": "e63e02542e559ac4b48af60a180ddcc4"
+    },
+    "rowboat-quickstart": {
+      "path": "/Users/me/tools/rowboat-quickstart",
+      "storage_id": "1a4fb2f7c5c8e62927db9330924b1616"
+    },
+    "rrid": {
+      "path": "/Users/me/projects/rrid",
+      "storage_id": "5e4e29c5d0b775e6b103a70df437036f"
+    },
+    "rrid-ai-reviewers-prophy": {
+      "path": "/Users/me/projects/rrid/rrid-ai-reviewers-prophy",
+      "storage_id": "c1297d584fe19a0e32ce79f26a88fae2"
+    },
+    "rrid-app-frontend": {
+      "path": "/Users/me/projects/rrid/rrid-softr-migration/rrid-app-frontend",
+      "storage_id": "2617237f481cc69832f7a025dd8cb2f0"
+    },
+    "rrid-badges-prototype": {
+      "path": "/Users/me/projects/rrid/badges/rrid-badges-prototype",
+      "storage_id": "7628a0514efb8272b4c39b9ed25c8b9d"
+    },
+    "rrid-gcp": {
+      "path": "/Users/me/projects/rrid/rrid-gcp",
+      "storage_id": "2a30e465dfe94145175bc407aa793435"
+    },
+    "rrid-pose-proposal": {
+      "path": "/Users/me/projects/rrid-pose-proposal",
+      "storage_id": "5415e8e3c842bc9a7492a6f85f251bf9"
+    },
+    "rrid-softr-custom-code": {
+      "path": "/Users/me/projects/rrid/rrid-softr-custom-code",
+      "storage_id": "32380e2dc507581989df29e39cfaa3fc"
+    },
+    "rrid-softr-migration": {
+      "path": "/Users/me/projects/rrid/rrid-softr-migration",
+      "storage_id": "9bbd57b80ec4db8197c1b4df6bdd9fc3"
+    },
+    "rrid-system-design": {
+      "path": "/Users/me/projects/rrid/rrid-system-design",
+      "storage_id": "9617f0ad043afdfebaaef2495ea6a92a"
+    },
+    "rse-collabs": {
+      "path": "/Users/me/projects/rse-collabs",
+      "storage_id": "c6b4169c1286397191acaf4e1ff7bcc1"
+    },
+    "rtoss-mdtodocx-project": {
+      "path": "/Users/me/projects/rtoss-mdtodocx-project",
+      "storage_id": "fcd3ccdc7a5a0379a8c809f135313647"
+    },
+    "rule-the-cursorrules": {
+      "path": "/Users/me/tools/vscode-extensions/rule-the-cursorrules",
+      "storage_id": "bbda77a0bc967de58bc2909d677942dc"
+    },
+    "salesforce-oss-alt": {
+      "path": "/Users/me/projects/salesforce-oss-alt",
+      "storage_id": "660d8f9e0f907d6a102e2cdf6d7f7872"
+    },
+    "sandstorm": {
+      "path": "/Users/me/tools/agents/sandstorm",
+      "storage_id": "33c91112f69986654d6bf9610e9b2177"
+    },
+    "sanity": {
+      "path": "/Users/me/projects/switchdimension-community/upstream/remix-run/examples/sanity",
+      "storage_id": "dc9eaeee2f4be073177819a05b50f768"
+    },
+    "santa_cruz_sample": {
+      "path": "/Users/me/ern/ccda/santa_cruz_sample",
+      "storage_id": "4c829b4957608d1d8f1ca3ef3a501bb9"
+    },
+    "sapientinc-hrm": {
+      "path": "/Users/me/projects/consorvia-community/sapientinc-hrm",
+      "storage_id": "e2941e4f87025f78402a5419610c9358"
+    },
+    "save2gdoc": {
+      "path": "/Users/me/tools/chrome-extensions/save2gdoc",
+      "storage_id": "7e8d22eaedd45325a04edd28b38430f1"
+    },
+    "saveasgdoc": {
+      "path": "/Users/me/tools/chrome-extensions/saveasgdoc",
+      "storage_id": "f36e86a041814afd9fe91d50a204ef2a"
+    },
+    "screenlink-quickstart": {
+      "path": "/Users/me/tools/screenlink-quickstart",
+      "storage_id": "b649c33f1f598f562704e78771026104"
+    },
+    "scripts": {
+      "path": "/Users/me/dotfiles/scripts",
+      "storage_id": "7392cde94de25caa260b640b8cb6e453"
+    },
+    "sdk": {
+      "path": "/Users/me/projects/sdk",
+      "storage_id": "7625e343fd1d49a9fb3439a2f6ca8d32"
+    },
+    "seattle": {
+      "path": "/Users/me/personal/seattle",
+      "storage_id": "ae021e76efd2d25a24de73e709b28bfe"
+    },
+    "sfistc": {
+      "path": "/Users/me/personal/infi/sfistc",
+      "storage_id": "c31609e08d18bb940bd22ca56ebdca28"
+    },
+    "shoplifting-the-game": {
+      "path": "/Users/me/projects/shoplifting-the-game",
+      "storage_id": "37d2e4542b20b88f7253131fcdd41d46"
+    },
+    "shortcutsninja": {
+      "path": "/Users/me/tools/vscode-extensions/shortcutsninja",
+      "storage_id": "82ff1a2510058bccd2a83140ffb7a86b"
+    },
+    "signal-graciebrooke": {
+      "path": "/Users/me/personal/signal-graciebrooke",
+      "storage_id": "caa18a068c3e99e237cb154d866a581e"
+    },
+    "simon": {
+      "path": "/Users/me/projects/peeq-talent/simon",
+      "storage_id": "911f451567b06e1a60f5147ca6ece884"
+    },
+    "simple-ai": {
+      "path": "/Users/me/projects/vapi-quickstart/upstream/echo-hire/simple-ai",
+      "storage_id": "7c8ff236ab00b21ffbe95fd6b6f9e0d8"
+    },
+    "simple-gcp-pg": {
+      "path": "/Users/me/tools/terraform-practice/simple-gcp-pg",
+      "storage_id": "c3545ef89b1c80969a875a69f97f1c3c"
+    },
+    "site1": {
+      "path": "/Users/me/projects/hats/site1",
+      "storage_id": "cb63406a5faf49a8d6b9300c9fffb5d7"
+    },
+    "site2": {
+      "path": "/Users/me/projects/hats/site2",
+      "storage_id": "2bd828ef45d200f128c85cd02d76b308"
+    },
+    "sitn-workflow": {
+      "path": "/Users/me/projects/peeq-crb-nexus/sitn-workflow",
+      "storage_id": "1d0396dea95077689ff9fef40e66bc2d"
+    },
+    "skills-quickstart": {
+      "path": "/Users/me/tools/skills-quickstart",
+      "storage_id": "744fd1a7b1f5c256596c2e96133cb3f7"
+    },
+    "slack-ecosystem": {
+      "path": "/Users/me/tools/slack-ecosystem",
+      "storage_id": "23dd2b6e0645cef9384a004dd82c3083"
+    },
+    "slideflow": {
+      "path": "/Users/me/projects/fspp-ai-retsina/slideflow",
+      "storage_id": "71c00db6a67c0f4f9e64df63b842ce01"
+    },
+    "smart-annotation": {
+      "path": "/Users/me/tools/smart-annotation",
+      "storage_id": "eccaab771dfe0ae973d51feb1c85f04a"
+    },
+    "smart__casas": {
+      "path": "/Users/me/tools/smart-annotation/smart__casas",
+      "storage_id": "3672ed86e19efc432c64f1dfeaf83f47"
+    },
+    "smart__explore": {
+      "path": "/Users/me/tools/smart-annotation/smart__explore",
+      "storage_id": "9602580bd6470226fe2d1aa2fc218fa0"
+    },
+    "smart__feature_13_rest_api": {
+      "path": "/Users/me/tools/smart-annotation/smart__feature_13_rest_api",
+      "storage_id": "c366b3c91926f6eb8be042aee2326e59"
+    },
+    "smart__feature_36_keyboard_shortcuts": {
+      "path": "/Users/me/tools/smart-annotation/smart__feature_36_keyboard_shortcuts",
+      "storage_id": "ae3480c7d3ba297bd50ffd612e41a5ee"
+    },
+    "smart__feature_react-hotkeys": {
+      "path": "/Users/me/tools/smart-annotation/smart__feature_react-hotkeys",
+      "storage_id": "671c9e64a460df5cfcb715054e5176cc"
+    },
+    "smart__feature_upgrade": {
+      "path": "/Users/me/tools/smart-annotation/smart__feature_upgrade",
+      "storage_id": "6ec3dc991f81cbfb00ced3c0250a37ed"
+    },
+    "smart__localnet": {
+      "path": "/Users/me/tools/smart-annotation/smart__localnet",
+      "storage_id": "77c31ce9d2d4ede52bd4ad45525cc031"
+    },
+    "smol-developer": {
+      "path": "/Users/me/tools/agents/upstream/e2b-dev/smol-developer",
+      "storage_id": "54b6d9920decdd103af279fae12a152d"
+    },
+    "sovereign-ai-offlineiq": {
+      "path": "/Users/me/projects/sovereign-ai-offlineiq",
+      "storage_id": "ac2a2513865d31905c3f8bf522ec4df8"
+    },
+    "sparc-ruvnet": {
+      "path": "/Users/me/projects/sparc-ruvnet",
+      "storage_id": "98aa7b953f2c00476a7bd06a92fc11ce"
+    },
+    "spec-kit-quickstart": {
+      "path": "/Users/me/tools/spec-kit-quickstart",
+      "storage_id": "9d9005de7dcb76806b194459fcb70a18"
+    },
+    "specstory-and-friends": {
+      "path": "/Users/me/tools/specstory-and-friends",
+      "storage_id": "5f3c066df8ddf0e6c4638745fe2ebdb1"
+    },
+    "specstory-forks": {
+      "path": "/Users/me/projects/specstory-forks",
+      "storage_id": "8ab4455c0b8cf4643b506768ec598c69"
+    },
+    "specstory-remotion": {
+      "path": "/Users/me/tools/specstory-remotion",
+      "storage_id": "34a5f8ca903597f760e06f1a1551acde"
+    },
+    "specstory_docs__spectacle": {
+      "path": "/Users/me/tools/specstory_docs__spectacle",
+      "storage_id": "bf43fe52d957f03117b2ffbb7972f65e"
+    },
+    "stages": {
+      "path": "/Users/me/ern/ccda/stages",
+      "storage_id": "99040aba5708cca2b7d76a79a1f2ec60"
+    },
+    "stanford-oval-storm": {
+      "path": "/Users/me/projects/peeq-crb-nexus/deep-libguide/stanford-oval-storm",
+      "storage_id": "fa3b3870509e6c057c744cd282ca4707"
+    },
+    "stanford-paperreview-ai": {
+      "path": "/Users/me/projects/rrid/stanford-paperreview-ai",
+      "storage_id": "2f44cbf5c8ca0a2cfee7979a32b30f7c"
+    },
+    "startup-analysis": {
+      "path": "/Users/me/projects/coworking-ecosystem/papers/startup-analysis",
+      "storage_id": "1f7f4e1e5fdec6b2a578478e8bddd247"
+    },
+    "startup-iwmprivate": {
+      "path": "/Users/me/projects/startup-iwmprivate",
+      "storage_id": "df45bf97d82f359132c2da2bf5987545"
+    },
+    "stitch-quickstart": {
+      "path": "/Users/me/tools/stitch-quickstart",
+      "storage_id": "847333bb956f25eedb0b262a7bc2568d"
+    },
+    "storycraft": {
+      "path": "/Users/me/projects/equation-zoo/storycraft",
+      "storage_id": "c90406b301ce6bd160fe61a7415ee58f"
+    },
+    "storycraft-forks": {
+      "path": "/Users/me/projects/storycraft-forks",
+      "storage_id": "8755b744db9ea3050e5558dda4da6b9c"
+    },
+    "storytelling-capsules": {
+      "path": "/Users/me/projects/storytelling-capsules",
+      "storage_id": "affc60c1004b2a013ef84cd0bea1adba"
+    },
+    "storytelling-founders": {
+      "path": "/Users/me/projects/storytelling-founders",
+      "storage_id": "570ad7af1e26aa195cee1d241af0d9b7"
+    },
+    "subscribr-clone": {
+      "path": "/Users/me/projects/subscribr-clone",
+      "storage_id": "ed6ca6d107df5cc752f34c48b7b2216d"
+    },
+    "summarize__martinopiaggi": {
+      "path": "/Users/me/projects/transcribe/upstream/summarize__martinopiaggi",
+      "storage_id": "8013185921c1f023461116a3244b2050"
+    },
+    "superset-housingdata.io": {
+      "path": "/Users/me/projects/superset-housingdata.io",
+      "storage_id": "8c788f65427c452e110d03ee39e61e81"
+    },
+    "superset-kcrha": {
+      "path": "/Users/me/jobs/kcrha-dsdirector-job/scratchpad/kcrha-app/superset-kcrha",
+      "storage_id": "895bd4663326326f2582f8826c192857"
+    },
+    "superwhisper": {
+      "path": "/Users/me/Documents/superwhisper",
+      "storage_id": "29448d1bb4c4cb423eabefe0bf72dcc2"
+    },
+    "surfingkeys-conf": {
+      "path": "/Users/me/tools/surfingkeys-conf",
+      "storage_id": "b0c958e696404c186b3f12625c451989"
+    },
+    "switchdimension-community": {
+      "path": "/Users/me/projects/switchdimension-community",
+      "storage_id": "2d659dcc93d3148ea586b8718f068547"
+    },
+    "tableau-macss": {
+      "path": "/Users/me/projects/macss/tableau-macss",
+      "storage_id": "c454904658b2bf5aa3f108bd60f7da57"
+    },
+    "talentbridge-idea": {
+      "path": "/Users/me/projects/peeq-talent/talentbridge-idea",
+      "storage_id": "7b04fafd911ef1a68e84f11bbaae8f6e"
+    },
+    "techstacks": {
+      "path": "/Users/me/projects/techstacks",
+      "storage_id": "99f0210660de1a875258b88c08250e05"
+    },
+    "template-2": {
+      "path": "/Users/me/projects/template-2",
+      "storage_id": "5ff98cce38f660020e654cea1924deb8"
+    },
+    "template-3": {
+      "path": "/Users/me/projects/template-3",
+      "storage_id": "377316d75c56bc40293bc2322e63d571"
+    },
+    "terraform-practice": {
+      "path": "/Users/me/tools/terraform-practice",
+      "storage_id": "6a8495df9328060e0565ea24f5c98040"
+    },
+    "terraform-sql-postgresql__AckeeCZ": {
+      "path": "/Users/me/tools/terraform-practice/upstream/terraform-sql-postgresql__AckeeCZ",
+      "storage_id": "55182528e63a94689a0ea68a2581d820"
+    },
+    "test-edamagit-demo": {
+      "path": "/Users/me/test-edamagit-demo",
+      "storage_id": "457b09654b8596e7be847fc80e7a1032"
+    },
+    "test-project1": {
+      "path": "/Users/me/projects/chathistory/test-project1",
+      "storage_id": "dd6e7550e3671f5c10230e71e5f1bb8c"
+    },
+    "test-repo": {
+      "path": "/Users/me/tools/vscode-extensions/test-repo",
+      "storage_id": "1192906a97eab9435551a409f44a658b"
+    },
+    "tig__jonas": {
+      "path": "/Users/me/tools/upstream/tig__jonas",
+      "storage_id": "3cd38dfb3a9ab150289a9a4c04613422"
+    },
+    "tigger": {
+      "path": "/Users/me/tools/tigger",
+      "storage_id": "9d78563b22d8f58be390965065304566"
+    },
+    "tiktok-downloader": {
+      "path": "/Users/me/tools/chrome-extensions/tiktok-downloader",
+      "storage_id": "d1d137df2912f9cddbfcb4f9c730958a"
+    },
+    "tilingwm": {
+      "path": "/Users/me/tools/tilingwm",
+      "storage_id": "d31edd098795eb0a0b017a4bd1509def"
+    },
+    "todooom-game": {
+      "path": "/Users/me/projects/todooom-game",
+      "storage_id": "86afdb59cec1fbe59768f5b70f405c92"
+    },
+    "toolchain-2026": {
+      "path": "/Users/me/tools/toolchain-2026",
+      "storage_id": "7f2fb24227f551cc1a6a41cee33923a3"
+    },
+    "tools": {
+      "path": "/Users/me/tools",
+      "storage_id": "ce2e462ba6c3d550774986dc3dfb25d8"
+    },
+    "toxicrockstars": {
+      "path": "/Users/me/aallc/toxicrockstars/toxicrockstars",
+      "storage_id": "3e9801267ec0b5f0e6ffd8aa4e1fb10d"
+    },
+    "transcribe": {
+      "path": "/Users/me/projects/transcribe",
+      "storage_id": "4cf58dceb0bccb8f333cf911df6471ab"
+    },
+    "traub-umpire-empire": {
+      "path": "/Users/me/projects/traub-umpire-empire",
+      "storage_id": "e34858b5956ceeafaca42c846193a310"
+    },
+    "ucb-davis": {
+      "path": "/Users/me/ern/ucb-davis",
+      "storage_id": "b6882ee799529f349a0f8a4c4d559cc8"
+    },
+    "ucb-extract-flora": {
+      "path": "/Users/me/projects/ucb-extract-flora",
+      "storage_id": "8dcdd7f6c88fefe7e2d9234fde2a9ffd"
+    },
+    "ucb-riverai": {
+      "path": "/Users/me/projects/ucb-riverai",
+      "storage_id": "c392afce0f1e5297b7ecf0ecd0025fd4"
+    },
+    "ucb-sls-student-legal-services-dsp": {
+      "path": "/Users/me/ern/ucb-sls-student-legal-services-dsp",
+      "storage_id": "33311478798b17cc465d2d88b6b2887c"
+    },
+    "ucb-vibeaccess": {
+      "path": "/Users/me/projects/ucb-vibeaccess",
+      "storage_id": "35af02979240c1654644230f439b71a4"
+    },
+    "ucb-vibeaccess-wip": {
+      "path": "/Users/me/projects/ucb-vibeaccess-wip",
+      "storage_id": "94144dfe21106dd72fc345c231aa5415"
+    },
+    "umpire-empire": {
+      "path": "/Users/me/projects/traub-umpire-empire/umpire-empire",
+      "storage_id": "dcb8767f68ede64730582809b366c681"
+    },
+    "universal-inbox": {
+      "path": "/Users/me/tools/macosx-tools/universal-inbox",
+      "storage_id": "4162784c148e762f885e5f94ae9e4fc6"
+    },
+    "upstream": {
+      "path": "/Users/me/projects/transcribe/upstream",
+      "storage_id": "a783761c993db0defc3b8d1e5aa95826"
+    },
+    "upwork-finder": {
+      "path": "/Users/me/projects/upwork-finder",
+      "storage_id": "48cbfe7f82f2098e4b9a757092cd89f8"
+    },
+    "userscript-softr-custom-codeblocks": {
+      "path": "/Users/me/projects/rrid/rrid-softr-custom-code/userscript-softr-custom-codeblocks",
+      "storage_id": "cc77e07585e9a25a58cfe7a7de713e18"
+    },
+    "uw-ocr": {
+      "path": "/Users/me/ern/uw-ocr",
+      "storage_id": "9def0277250e98fcbe3c24cf196a102a"
+    },
+    "v1": {
+      "path": "/Users/me/tools/midday-ai/v1",
+      "storage_id": "1e177dc1ed4225d2d2b031c79c486f0a"
+    },
+    "vapi-quickstart": {
+      "path": "/Users/me/projects/vapi-quickstart",
+      "storage_id": "8960609278d478949507c2e526e2f7f7"
+    },
+    "vaps": {
+      "path": "/Users/me/ern/vaps",
+      "storage_id": "33a5aec184381d31b009eb1edf9052ca"
+    },
+    "vercel-ecosystem": {
+      "path": "/Users/me/tools/vercel-ecosystem",
+      "storage_id": "86615520dcc1c40949b88c2d78b87aac"
+    },
+    "vertex-playground": {
+      "path": "/Users/me/projects/equation-zoo/storycraft/upstream/vertex-playground",
+      "storage_id": "7b14452454c766dc43b48a61e250e176"
+    },
+    "vibe-voicing": {
+      "path": "/Users/me/tools/vibe-voicing",
+      "storage_id": "a3e04899520b8f353bd1018e463a3a5f"
+    },
+    "video-transcript-summarizer": {
+      "path": "/Users/me/projects/transcribe/upstream/video-transcript-summarizer",
+      "storage_id": "bc86fa6862823ae2edffd5847fe3587c"
+    },
+    "visible-agentics": {
+      "path": "/Users/me/projects/visible-agentics",
+      "storage_id": "53f54e7002d2f055d0daa2dad1fab338"
+    },
+    "voiceflow-firebase": {
+      "path": "/Users/me/projects/voiceflow-firebase",
+      "storage_id": "55524744f50ee899ab307317ca3da668"
+    },
+    "void-editor": {
+      "path": "/Users/me/projects/void-editor",
+      "storage_id": "46e0781e5fdb188ed893f06b81e64f19"
+    },
+    "void__explore": {
+      "path": "/Users/me/projects/void-editor/void__explore",
+      "storage_id": "82a3fff02eedd8d5b5133211725297d9"
+    },
+    "voltagent-quickstart": {
+      "path": "/Users/me/tools/voltagent-quickstart",
+      "storage_id": "03c473e30844bb0c09d2c96ba6f59c3e"
+    },
+    "vs-code-recorder-player": {
+      "path": "/Users/me/dotfiles/upstream/vs-code-recorder-player",
+      "storage_id": "9bce9df1b452496c7b74d4132c2759e4"
+    },
+    "vscode-classic-experience__tjx666": {
+      "path": "/Users/me/dotfiles/upstream/vscode-classic-experience__tjx666",
+      "storage_id": "78ff7ef3d998511d7dfbcc99a21a7c6f"
+    },
+    "vscode-dired": {
+      "path": "/Users/me/tools/vscode-extensions/vscode-dired",
+      "storage_id": "0eee57a3982a62068aceae53df4b6b5c"
+    },
+    "vscode-extensions": {
+      "path": "/Users/me/tools/vscode-extensions",
+      "storage_id": "8c618cb2d84b4c9cf030759e95394ecf"
+    },
+    "vscode-remote-release__develop": {
+      "path": "/Users/me/tools/vscode-extensions/vscode-remote-release__develop",
+      "storage_id": "536174670dc25a3d4030de0180ab406e"
+    },
+    "vscode-source": {
+      "path": "/Users/me/tools/vscode-extensions/vscode-source",
+      "storage_id": "8d5c746ac6e99afb172351045bbeac84"
+    },
+    "vscode__microsoft": {
+      "path": "/Users/me/tools/vscode-extensions/vscode__microsoft",
+      "storage_id": "958cc59409f69e039ba9bfbbf53847e2"
+    },
+    "weather": {
+      "path": "/Users/me/tools/claude-mcp/weather",
+      "storage_id": "80e1cbbd9e643f35a9145ab29c20c251"
+    },
+    "webapp": {
+      "path": "/Users/me/projects/congressional-rhetoric/webapp",
+      "storage_id": "d28266d2e2a182765c8ed1e903cde21e"
+    },
+    "webapp-pricing": {
+      "path": "/Users/me/projects/webapp-pricing",
+      "storage_id": "b998afdb4ab44237f373bfbcac03bd60"
+    },
+    "webarchiving": {
+      "path": "/Users/me/tools/webarchiving",
+      "storage_id": "19f04d4fc933d8edf494f4a6be4d4842"
+    },
+    "writing-income": {
+      "path": "/Users/me/projects/writing-income",
+      "storage_id": "225373ff62a652a20c7951376a8e97d1"
+    },
+    "writing-quality": {
+      "path": "/Users/me/projects/writing-quality",
+      "storage_id": "8665ba7fdaab8f75985bf1edc8c32cc5"
+    },
+    "writing-stories": {
+      "path": "/Users/me/projects/writing-stories",
+      "storage_id": "f32d50193b881cf834d53898bbfa0b33"
+    },
+    "yabai": {
+      "path": "/Users/me/tools/tilingwm/yabai",
+      "storage_id": "fccad75fb4a5db7dffe2ec404ab393c6"
+    },
+    "youtube-critic": {
+      "path": "/Users/me/projects/transcribe/youtube-critic",
+      "storage_id": "09ab9ad0d73cf437e9716579f5b72807"
+    },
+    "youtube-deepsummary__nickita-khylkouski": {
+      "path": "/Users/me/projects/transcribe/upstream/youtube-deepsummary__nickita-khylkouski",
+      "storage_id": "bdd632cd324d461a04ff00af249fd047"
+    },
+    "yt-downloader-cloudrun": {
+      "path": "/Users/me/tools/yt-downloader-cloudrun",
+      "storage_id": "37c60a5be7c1f7cbe94df33375122c34"
+    },
+    "yt-website-summarizer__aculich": {
+      "path": "/Users/me/projects/transcribe/youtube-critic/upstream/yt-website-summarizer__aculich",
+      "storage_id": "9d3bb2191271427adb664db3734c2ee0"
+    },
+    "yts__alexlaverty": {
+      "path": "/Users/me/projects/transcribe/upstream/yts__alexlaverty",
+      "storage_id": "62133b690ff7c8336185eaa528621ead"
+    },
+    "zoom-deeplistening-agents": {
+      "path": "/Users/me/projects/zoom-deeplistening-agents",
+      "storage_id": "9f3b5e0a77750b0ef5efec2ec93d973a"
+    }
+  },
+  "workspace_stats": {}
+}

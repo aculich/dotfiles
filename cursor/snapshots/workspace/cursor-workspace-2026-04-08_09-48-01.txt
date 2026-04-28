@@ -1,0 +1,104 @@
+
+Version:          Cursor 3.1.0-pre.12.patch.0 (157ffe1c6dac02720a7c5d875229565305625f10, 2026-04-06T16:39:06.552Z)
+OS Version:       Darwin arm64 25.3.0
+CPUs:             Apple M3 Max (14 x 2400)
+Memory (System):  96.00GB (1.75GB free)
+Load (avg):       50, 43, 24
+VM:               0%
+Screen Reader:    yes
+Process Argv:     
+GPU Status:       2d_canvas:                              enabled
+                  direct_rendering_display_compositor:    disabled_off_ok
+                  gpu_compositing:                        enabled
+                  multiple_raster_threads:                enabled_on
+                  opengl:                                 enabled_on
+                  rasterization:                          enabled
+                  raw_draw:                               disabled_off_ok
+                  skia_graphite:                          disabled_off
+                  trees_in_viz:                           disabled_off
+                  video_decode:                           enabled
+                  video_encode:                           enabled
+                  webgl:                                  enabled
+                  webgl2:                                 enabled
+                  webgpu:                                 enabled
+                  webnn:                                  disabled_off
+
+CPU %	Mem MB	   PID	Process
+    1	   295	 86926	cursor main
+    1	    98	 86929	   gpu-process
+    0	    98	 86931	   utility-network-service
+    0	   492	 86934	window [1] (Extension: SpecStory — peeq-envisioning)
+    0	    98	 87006	shared-process
+    0	    98	 87007	fileWatcher [1]
+    1	    98	 87009	ptyHost
+    0	     0	   298	     /bin/zsh -il
+    0	     0	 14204	     /bin/zsh -i
+    0	     0	 14769	     /bin/zsh -il
+    0	     0	 14923	     /bin/zsh -il
+    0	     0	 36859	     /bin/zsh -il
+    0	     0	 37189	     /bin/zsh -il
+    0	     0	 53607	     /bin/zsh -i
+    0	     0	 53869	     /bin/zsh -il
+    0	     0	 54168	     /bin/zsh -il
+    0	     0	 60308	     /bin/zsh -il
+    0	     0	 60548	     /bin/zsh -il
+    0	     0	 61159	       /bin/bash ./workspace-snapshot.sh
+    0	     0	 61195	         /bin/bash ./workspace-snapshot.sh
+    0	     0	 61196	           zsh ./dump-cursor-windows.sh
+    0	     0	 61207	             bash /opt/homebrew/bin/cursor --status
+    0	    98	 61213	               electron-nodejs (cli.js )
+    0	     0	 87894	     /bin/zsh -il
+    0	     0	 88146	     /bin/zsh -il
+    0	     0	 89212	     /bin/zsh -il
+    0	     0	 89852	     /bin/zsh -i
+    0	     0	 90811	     /bin/zsh -il
+    0	   393	 89208	window [2] (Review: Running youtube-deepsummary locally and... — youtube-deepsummary__nickita-khylkouski)
+    0	    98	 89209	fileWatcher [2]
+    0	    98	 89210	extensionHost [2]
+    0	    98	 89485	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=89210
+    0	     0	 89497	     /Users/me/.cursor/extensions/ms-python.python-2025.6.1-darwin-arm64/python-env-tools/bin/pet server
+    0	    98	 90042	     electron-nodejs (eslintServer.js )
+    0	    98	 90044	     electron-nodejs (languageserver.js )
+    0	    98	 90049	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.5.6-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=89210
+    0	     0	 90603	     npm exec snyk@latest mcp -t stdio
+    0	     0	 90633	       node /Users/me/.npm/_npx/2aa740410ff9d1f3/node_modules/.bin/snyk mcp -t stdio
+    0	    98	 90635	         /Users/me/.npm/_npx/2aa740410ff9d1f3/node_modules/snyk/wrapper_dist/snyk-macos-arm64 mcp -t stdio
+    0	     0	 90641	     node /Users/me/projects/zoom-deeplistening-agents/tools/zoom-mcp-server/src/index.js
+    0	     0	 90642	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	    98	 89286	extensionHost [2]
+    0	    98	 89287	extensionHost [2]
+    0	   197	 89288	extensionHost [2]
+    0	     0	 89831	     electron-nodejs (gitWorker.js )
+    0	    98	 89289	extensionHost [2]
+
+Workspace Stats: 
+|  Window (COMPARISON.md — writing-quality)
+|  Window (wave-chrome-cli.log — continuous-ai)
+|  Window (Review: Running youtube-deepsummary locally and... — youtube-deepsummary__nickita-khylkouski)
+|  Window (0004-positioning-adr-chronicle-after-landscape.md — adr-chronicle)
+|  Window (Extension: SpecStory — peeq-envisioning)
+|    Folder (peeq-envisioning): 95 files
+|      File types: md(17) mhtml(17) pptx(13) png(6) txt(5) pdf(4) json(3)
+|                  docx(3) gz(2) html(2)
+|      Conf files:
+|    Folder (continuous-ai): more than 109882 files
+|      File types: json(8781) eml(7210) md(3653) txt(33) yml(17) ts(14) py(11)
+|                  sql(8) jsonl(7) gitignore(5)
+|      Conf files: settings.json(2) launch.json(1)
+|    Folder (youtube-deepsummary__nickita-khylkouski): 8660 files
+|      File types: py(4353) pyc(1995) json(538) pyi(113) txt(77) typed(66)
+|                  proto(63) sql(24) so(23) md(20)
+|      Conf files: settings.json(1) dockerfile(1)
+|    Folder (adr-chronicle): 6563 files
+|      File types: md(1213) ts(810) java(297) locale-peer-id(216) go(190)
+|                  json(161) yml(136) mdx(96) sh(80) js(76)
+|      Conf files: package.json(28) tsconfig.json(19) settings.json(8)
+|                  makefile(6) dockerfile(5) csproj(4) tasks.json(2)
+|                  devcontainer.json(1) launch.json(1) webpack.config.js(1)
+|                  tslint.json(1) sln(1)
+|    Folder (writing-quality): more than 21328 files
+|      File types: py(8867) pyc(5040) json(638) txt(397) pyi(374) js(224)
+|                  md(194) typed(102) yaml(84) svg(73)
+|      Conf files:
+
+

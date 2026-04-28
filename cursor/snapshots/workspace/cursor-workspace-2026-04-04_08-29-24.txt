@@ -1,0 +1,82 @@
+
+Version:          Cursor 2.7.0-pre.180.patch.0 (f1480c9f818dce3c34ccd3ac3b30ccd61a370050, 2026-04-02T05:47:34.840Z)
+OS Version:       Darwin arm64 25.3.0
+CPUs:             Apple M3 Max (14 x 2400)
+Memory (System):  96.00GB (0.10GB free)
+Load (avg):       47, 70, 66
+VM:               0%
+Screen Reader:    yes
+Process Argv:     
+GPU Status:       2d_canvas:                              enabled
+                  direct_rendering_display_compositor:    disabled_off_ok
+                  gpu_compositing:                        enabled
+                  multiple_raster_threads:                enabled_on
+                  opengl:                                 enabled_on
+                  rasterization:                          enabled
+                  raw_draw:                               disabled_off_ok
+                  skia_graphite:                          disabled_off
+                  trees_in_viz:                           disabled_off
+                  video_decode:                           enabled
+                  video_encode:                           enabled
+                  webgl:                                  enabled
+                  webgl2:                                 enabled
+                  webgpu:                                 enabled
+                  webnn:                                  disabled_off
+
+CPU %	Mem MB	   PID	Process
+    1	   590	  1968	cursor main
+    1	   197	  1971	   gpu-process
+    0	    98	  1973	   utility-network-service
+    0	  1475	  1984	window [2] (Technical_Proposal_25MSC005.md — peeq-carb)
+    0	   295	  2437	shared-process
+    0	  1278	  2440	extensionHost [2]
+    0	    98	  2758	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=2440
+    0	    98	  2893	     electron-nodejs (eslintServer.js )
+    0	    98	  2894	     electron-nodejs (languageserver.js )
+    0	    98	  2895	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.5.6-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=2440
+    0	     0	  6937	     /Users/me/.cursor/extensions/specstory.specstory-vscode-1.0.3-universal/bin/specstory_darwin_arm64 watch --no-version-check --json --cloud-url https://cloud.specstory.com --cloud-token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXzJ1ZDBJd0Z0QlMzVzdwejRvejdsYWJ0aXFCbCIsImVtYWlsIjoiYWN1bGljaEBnbWFpbC5jb20iLCJ0eXBlIjoiZGV2aWNlLXJlZnJlc2giLCJkZXZpY2VfaG9zdG5hbWUiOiIiLCJkZXZpY2Vfb3MiOiIiLCJkZXZpY2VfdXNlcm5hbWUiOiIiLCJpYXQiOjE3NjE5MzExMjMsImV4cCI6MjA3NzI5MTEyM30.MMgbfz4LKyGalfFvzCKxrvA-VGdpaO7ZHUYVa9OFEfA --console --debug-raw --config-dir .specstory/cli
+    0	    98	  7065	     npm exec snyk@latest mcp -t stdio
+    0	    98	 15440	       node /Users/me/.npm/_npx/2aa740410ff9d1f3/node_modules/.bin/snyk mcp -t stdio
+    0	    98	 15617	         /Users/me/.npm/_npx/2aa740410ff9d1f3/node_modules/snyk/wrapper_dist/snyk-macos-arm64 mcp -t stdio
+    0	     0	  7078	     /Users/me/.cursor/extensions/specstory.specstory-vscode-1.0.3-universal/bin/specstory_darwin_arm64 watch --no-version-check --json --cloud-url https://cloud.specstory.com --cloud-token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXzJ1ZDBJd0Z0QlMzVzdwejRvejdsYWJ0aXFCbCIsImVtYWlsIjoiYWN1bGljaEBnbWFpbC5jb20iLCJ0eXBlIjoiZGV2aWNlLXJlZnJlc2giLCJkZXZpY2VfaG9zdG5hbWUiOiIiLCJkZXZpY2Vfb3MiOiIiLCJkZXZpY2VfdXNlcm5hbWUiOiIiLCJpYXQiOjE3NjE5MzExMjMsImV4cCI6MjA3NzI5MTEyM30.MMgbfz4LKyGalfFvzCKxrvA-VGdpaO7ZHUYVa9OFEfA --console --debug-raw --config-dir .specstory/cli
+    0	    98	 16101	     node /Users/me/projects/zoom-deeplistening-agents/tools/zoom-mcp-server/src/index.js
+    0	    98	 31626	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=2440
+    0	     0	 76269	     /Users/me/.cursor/extensions/ms-python.python-2025.6.1-darwin-arm64/python-env-tools/bin/pet server
+    0	   295	 76275	     /Applications/Cursor.app/Contents/Resources/app/resources/helpers/node --max-old-space-size=32768 /Users/me/.cursor/extensions/anysphere.cursorpyright-1.0.10/dist/server.js --cancellationReceive=file:8a490ba9933fdc88a948039d4d4a86801c65d1c376 --node-ipc --clientProcessId=2440
+    0	    98	  2444	fileWatcher [2]
+    0	    98	  2446	ptyHost
+    0	     0	  1392	     /bin/zsh -il
+    0	     0	  8560	       /bin/bash ./workspace-snapshot.sh
+    0	     0	  8974	         /bin/bash ./workspace-snapshot.sh
+    0	     0	  8975	           zsh ./dump-cursor-windows.sh
+    0	     0	  9017	             bash /opt/homebrew/bin/cursor --status
+    1	    98	  9038	               electron-nodejs (cli.js )
+    0	     0	  4250	     /bin/zsh -il
+    0	     0	  5196	     /bin/zsh -il
+    0	     0	  5941	       /bin/zsh -il
+    0	     0	  5959	         /bin/zsh -il
+    0	     0	  5968	           /bin/zsh -il
+    0	     0	  5970	             /bin/zsh -il
+   45	     0	  5972	               git status --porcelain --ignore-submodules=dirty
+    0	     0	  5976	             tail -n 1
+    0	     0	 13891	     /bin/zsh -il
+    0	     0	 76298	     /bin/zsh -i
+    0	   197	  2496	extensionHost [2]
+    0	   295	  2497	extensionHost [2]
+    0	   295	  2498	extensionHost [2]
+    0	    98	  5977	     electron-nodejs (gitWorker.js )
+    0	   295	  2499	extensionHost [2]
+
+Workspace Stats: 
+|  Window (summary.txt — continuous-ai)
+|  Window (Technical_Proposal_25MSC005.md — peeq-carb)
+|    Folder (peeq-carb): 3622 files
+|      File types: py(1094) pyc(1082) pdf(199) gz(148) md(87) h(83) txt(56)
+|                  docx(39) pyi(37) png(35)
+|      Conf files: settings.json(1)
+|    Folder (continuous-ai): more than 109882 files
+|      File types: json(8781) eml(7210) md(3653) txt(33) yml(17) ts(14) py(11)
+|                  sql(8) jsonl(7) gitignore(5)
+|      Conf files: settings.json(2) launch.json(1)
+
+

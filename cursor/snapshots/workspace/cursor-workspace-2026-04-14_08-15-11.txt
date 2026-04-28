@@ -1,0 +1,620 @@
+
+Version:          Cursor 3.2.0-pre.22.patch.0 (57c1a53632f8586d7493f9f1bb6648fbd17dcea0, 2026-04-14T01:55:25.779Z)
+OS Version:       Darwin arm64 25.3.0
+CPUs:             Apple M3 Max (14 x 2400)
+Memory (System):  96.00GB (0.10GB free)
+Load (avg):       32, 23, 21
+VM:               0%
+Screen Reader:    yes
+Process Argv:     
+GPU Status:       2d_canvas:                              enabled
+                  direct_rendering_display_compositor:    disabled_off_ok
+                  gpu_compositing:                        enabled
+                  multiple_raster_threads:                enabled_on
+                  opengl:                                 enabled_on
+                  rasterization:                          enabled
+                  raw_draw:                               disabled_off_ok
+                  skia_graphite:                          disabled_off
+                  trees_in_viz:                           disabled_off
+                  video_decode:                           enabled
+                  video_encode:                           enabled
+                  webgl:                                  enabled
+                  webgl2:                                 enabled
+                  webgpu:                                 enabled
+                  webnn:                                  disabled_off
+
+CPU %	Mem MB	   PID	Process
+    7	   492	 76769	cursor main
+   14	    98	 76772	   gpu-process
+    0	    98	 76774	   utility-network-service
+    1	   492	 76776	window [1] (BOGOSITY_OVERVIEW.md — lam-starter-scaffold)
+    2	   393	 76777	window [2] (BALONEY-FILTER-SPEC.md — ai-veracity-chains)
+    1	   295	 76778	window [3] (LINKS-scholarly-lit-search.md — crb-nexus-deep-libguide)
+    0	   393	 76779	window [4] (LISTENPURPOSE.md — zoom-deeplistening-agents)
+    1	   295	 76780	window [5] (README.md — storytelling-capsules)
+    2	   197	 76781	window [6] (Preview ENVISION.md — paperclip-quickstart)
+   11	   492	 76782	window [7] (ONTOLOGY_AND_EPISTEMOLOGY.md — continuous-ai)
+    0	   393	 76783	window [8] (tab-export-2026-04-13T11-08-03.md — sovereign-ai-offlineiq)
+    0	   492	 76784	window [9] (cost_model_analysis_ea31317b.plan.md — openpaper)
+    0	   393	 76785	window [10] (Preview EXTRACTION_AND_SCALING_ROADMAP.md — stanford-paperreview-ai)
+    1	   492	 76786	window [11] (tab-export-2026-04-13T11-04-04.md — beautiful-bogosity)
+    0	   492	 76787	window [12] (WORKFLOW.md — pretext__aculich)
+    1	   393	 76788	window [13] (tab-export-2026-04-13T11-10-59.md — mempalace-quickstart)
+    2	   393	 76789	window [14] (Preview Technical_Proposal_25MSC005.md — peeq-carb)
+    2	   393	 76790	window [15] (Preview ab875-sb768-zip-code-bills.md — cidr-marin-courts)
+    0	   492	 76791	window [16] (Browser Tab — umpire-empire)
+    0	   492	 76792	window [17] (WORKFLOW.md — retrace-quickstart)
+    1	   492	 76793	window [18] (MASTER_LUMINARY_RADAR_PROMPT.expanded.md — ai-vision-2025)
+    0	   393	 76794	window [19] (omi_ecosystem_research_docs_a563dc91.plan.md — peeq-voice-omi)
+    2	   197	 76795	window [20] (Preview README.md — producthunt-quickstart)
+    0	   393	 76796	window [21] (2025-04-01_10-47-comparing-docker-vs-docker-compose-for-baserow-installation.md — baserow)
+    3	   295	 76797	window [22] (Preview MONAI.md — ppf-poppyfields-mvp)
+    0	   393	 76799	window [23] (STRATEGY.md — midday-friends)
+    1	   492	 76800	window [24] (STATUS.md — midday)
+    0	   393	 76801	window [25] (99-cidrstory-all.md — cidr-org)
+    0	   295	 76802	window [26] (Browser Tab — writing-quality)
+    0	    98	 76863	   window
+    0	   197	 76865	shared-process
+    0	    98	 76866	fileWatcher [16]
+    0	    98	 76873	fileWatcher [24]
+    0	    98	 76874	fileWatcher [3]
+    0	    98	 76876	fileWatcher [15]
+    0	    98	 76879	fileWatcher [11]
+    0	    98	 76880	fileWatcher [17]
+    0	    98	 76881	fileWatcher [13]
+    0	    98	 76882	fileWatcher [10]
+    0	    98	 76883	fileWatcher [4]
+    0	    98	 76884	fileWatcher [9]
+    0	    98	 76885	fileWatcher [21]
+    0	    98	 76886	   window
+    0	    98	 76887	fileWatcher [22]
+    0	    98	 76888	fileWatcher [18]
+    0	    98	 76893	fileWatcher [26]
+    0	    98	 76894	fileWatcher [1]
+    0	    98	 76897	fileWatcher [7]
+    0	    98	 76904	fileWatcher [2]
+    0	    98	 76905	fileWatcher [12]
+    0	    98	 76906	fileWatcher [8]
+    0	    98	 76907	fileWatcher [19]
+    0	    98	 76908	fileWatcher [14]
+    0	    98	 76909	fileWatcher [6]
+    0	    98	 76910	fileWatcher [5]
+    0	    98	 76911	fileWatcher [25]
+    0	    98	 76912	fileWatcher [20]
+    0	    98	 76913	fileWatcher [23]
+    0	    98	 76940	extensionHost [18]
+    0	    98	 77197	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=76940
+    0	    98	 77199	     electron-nodejs (languageserver.js )
+    0	    98	 77732	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.5.6-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=76940
+    0	    98	 77733	     electron-nodejs (eslintServer.js )
+    0	    98	 78777	     electron-nodejs (tailwindServer.js )
+    0	     0	 83069	     node /Users/me/projects/zoom-deeplistening-agents/tools/zoom-mcp-server/src/index.js
+    0	     0	 83072	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 83073	     /opt/homebrew/Cellar/python@3.14/3.14.4/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python /Users/me/.local/bin/product-hunt-mcp
+    0	     0	 83077	     npm exec snyk@latest mcp -t stdio
+    0	    98	 76941	extensionHost [11]
+    0	    98	 77148	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=76941
+    0	    98	 77703	     electron-nodejs (eslintServer.js )
+    0	    98	 77706	     electron-nodejs (languageserver.js )
+    0	    98	 77711	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.5.6-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=76941
+    0	     0	 79557	     node /Users/me/projects/zoom-deeplistening-agents/tools/zoom-mcp-server/src/index.js
+    0	     0	 79559	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 84060	     /opt/homebrew/Cellar/python@3.14/3.14.4/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python /Users/me/.local/bin/product-hunt-mcp
+    0	     0	 84062	     npm exec snyk@latest mcp -t stdio
+    0	    98	 76942	extensionHost [17]
+    0	    98	 77138	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=76942
+    0	    98	 77713	     electron-nodejs (eslintServer.js )
+    0	    98	 77715	     electron-nodejs (languageserver.js )
+    0	    98	 77725	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.5.6-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=76942
+    0	     0	 79604	     node /Users/me/projects/zoom-deeplistening-agents/tools/zoom-mcp-server/src/index.js
+    0	     0	 79605	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 85467	     /opt/homebrew/Cellar/python@3.14/3.14.4/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python /Users/me/.local/bin/product-hunt-mcp
+    0	     0	 85469	     npm exec snyk@latest mcp -t stdio
+    0	    98	 76943	extensionHost [16]
+    0	     0	 77207	     tsserver[5.9.3]: syntax
+    0	     0	 77208	     tsserver[5.9.3]: semantic
+    0	     0	 78624	       /Applications/Cursor.app/Contents/Resources/app/resources/helpers/node /Users/me/projects/traub-umpire-empire/umpire-empire/node_modules/typescript/lib/typingsInstaller.js --globalTypingsCacheLocation /Users/me/Library/Caches/typescript/5.9 --enableTelemetry --typesMapLocation /Users/me/projects/traub-umpire-empire/umpire-empire/node_modules/typescript/lib/typesMap.json --validateDefaultNpmLocation
+    0	    98	 77217	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=76943
+    0	    98	 77250	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=76943
+    0	     0	 77729	     node /Users/me/projects/zoom-deeplistening-agents/tools/zoom-mcp-server/src/index.js
+    0	     0	 77730	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	    98	 77739	     electron-nodejs (eslintServer.js )
+    0	    98	 77740	     electron-nodejs (languageserver.js )
+    0	    98	 77741	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.5.6-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=76943
+    0	    98	 78311	     electron-nodejs (tailwindServer.js )
+    0	     0	 81282	     /opt/homebrew/Cellar/python@3.14/3.14.4/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python /Users/me/.local/bin/product-hunt-mcp
+    0	     0	 81286	     npm exec snyk@latest mcp -t stdio
+    1	   295	 76944	extensionHost [7]
+    0	    98	 78481	     electron-nodejs (server-node.js )
+    0	    98	 76945	extensionHost [4]
+    0	    98	 77139	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=76945
+    0	    98	 77146	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=76945
+    0	    98	 77663	     electron-nodejs (eslintServer.js )
+    0	    98	 77665	     electron-nodejs (languageserver.js )
+    0	    98	 77668	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.5.6-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=76945
+    0	     0	 77803	     node /Users/me/projects/zoom-deeplistening-agents/tools/zoom-mcp-server/src/index.js
+    0	    98	 79494	     electron-nodejs (tailwindServer.js )
+    0	     0	 81400	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 81401	     /opt/homebrew/Cellar/python@3.14/3.14.4/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python /Users/me/.local/bin/product-hunt-mcp
+    0	     0	 81403	     npm exec snyk@latest mcp -t stdio
+    0	    98	 76946	extensionHost [13]
+    0	    98	 77118	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=76946
+    0	    98	 77664	     electron-nodejs (eslintServer.js )
+    0	    98	 77669	     electron-nodejs (languageserver.js )
+    0	    98	 77701	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.5.6-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=76946
+    0	     0	 79554	     node /Users/me/projects/zoom-deeplistening-agents/tools/zoom-mcp-server/src/index.js
+    0	     0	 79555	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 85236	     /opt/homebrew/Cellar/python@3.14/3.14.4/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python /Users/me/.local/bin/product-hunt-mcp
+    0	     0	 85239	     npm exec snyk@latest mcp -t stdio
+    0	    98	 76947	extensionHost [24]
+    0	    98	 77128	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=76947
+    0	    98	 77933	     electron-nodejs (eslintServer.js )
+    0	    98	 77935	     electron-nodejs (languageserver.js )
+    0	    98	 77939	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.5.6-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=76947
+    0	     0	 77941	     node /Users/me/projects/zoom-deeplistening-agents/tools/zoom-mcp-server/src/index.js
+    0	    98	 78218	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=76947
+    0	    98	 79265	     electron-nodejs (tailwindServer.js )
+    0	    98	 79682	     electron-nodejs (server-node.js )
+    0	     0	 80401	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 80402	     /opt/homebrew/Cellar/python@3.14/3.14.4/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python /Users/me/.local/bin/product-hunt-mcp
+    0	    98	 76948	extensionHost [3]
+    0	    98	 77195	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=76948
+    0	    98	 77893	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=76948
+    0	    98	 77965	     electron-nodejs (eslintServer.js )
+    0	    98	 77966	     electron-nodejs (languageserver.js )
+    0	    98	 77972	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.5.6-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=76948
+    0	     0	 77975	     node /Users/me/projects/zoom-deeplistening-agents/tools/zoom-mcp-server/src/index.js
+    0	    98	 78062	     electron-nodejs (tailwindServer.js )
+    0	     0	 80549	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 80550	     /opt/homebrew/Cellar/python@3.14/3.14.4/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python /Users/me/.local/bin/product-hunt-mcp
+    0	     0	 80552	     npm exec snyk@latest mcp -t stdio
+    0	    98	 80782	     electron-nodejs (server-node.js )
+    0	    98	 76949	extensionHost [15]
+    0	    98	 76957	   window
+    0	    98	 76958	extensionHost [26]
+    0	     0	 77132	     tsserver[5.3.0-dev.20230808]: syntax
+    0	     0	 77134	     tsserver[5.3.0-dev.20230808]: semantic
+    0	     0	 78643	       /Applications/Cursor.app/Contents/Resources/app/resources/helpers/node /Users/me/.cursor/extensions/ms-vscode.vscode-typescript-next-5.3.20230808-universal/node_modules/typescript/lib/typingsInstaller.js --globalTypingsCacheLocation /Users/me/Library/Caches/typescript/5.3 --enableTelemetry --typesMapLocation /Users/me/.cursor/extensions/ms-vscode.vscode-typescript-next-5.3.20230808-universal/node_modules/typescript/lib/typesMap.json --validateDefaultNpmLocation
+    0	    98	 77140	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=76958
+    0	    98	 77141	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/css-language-features/server/dist/node/cssServerMain --node-ipc --clientProcessId=76958
+    0	    98	 77147	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=76958
+    0	     0	 77251	     /Users/me/.cursor/extensions/ms-python.python-2025.6.1-darwin-arm64/python-env-tools/bin/pet server
+    0	    98	 77717	     electron-nodejs (languageserver.js )
+    0	    98	 77718	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.5.6-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=76958
+    0	    98	 77749	     electron-nodejs (eslintServer.js )
+    0	    98	 78715	     electron-nodejs (tailwindServer.js )
+    0	     0	 79595	     node /Users/me/projects/zoom-deeplistening-agents/tools/zoom-mcp-server/src/index.js
+    0	     0	 79596	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 86192	     /opt/homebrew/Cellar/python@3.14/3.14.4/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python /Users/me/.local/bin/product-hunt-mcp
+    0	     0	 86195	     npm exec snyk@latest mcp -t stdio
+    0	    98	 76959	extensionHost [10]
+    0	    98	 77129	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=76959
+    0	    98	 77721	     electron-nodejs (languageserver.js )
+    0	    98	 77722	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.5.6-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=76959
+    0	    98	 78223	     electron-nodejs (eslintServer.js )
+    0	     0	 79673	     node /Users/me/projects/zoom-deeplistening-agents/tools/zoom-mcp-server/src/index.js
+    0	     0	 79674	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	    98	 76960	extensionHost [24]
+    0	    98	 76961	extensionHost [24]
+    0	    98	 76962	extensionHost [24]
+    0	    98	 77309	     electron-nodejs (gitWorker.js )
+    0	    98	 76963	extensionHost [24]
+    0	    98	 76964	extensionHost [22]
+    0	    98	 76966	extensionHost [15]
+    0	    98	 76967	extensionHost [15]
+    0	    98	 76968	extensionHost [15]
+    0	    98	 76969	extensionHost [15]
+    0	    98	 76971	extensionHost [1]
+    0	    98	 77402	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=76971
+    0	    98	 78014	     electron-nodejs (eslintServer.js )
+    0	    98	 78016	     electron-nodejs (languageserver.js )
+    0	    98	 78017	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.5.6-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=76971
+    0	    98	 78252	     electron-nodejs (tailwindServer.js )
+    0	    98	 79175	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=76971
+    0	     0	 79740	     node /Users/me/projects/zoom-deeplistening-agents/tools/zoom-mcp-server/src/index.js
+    0	     0	 79742	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	    98	 76972	extensionHost [21]
+    0	    98	 77603	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=76972
+    0	    98	 78315	     electron-nodejs (eslintServer.js )
+    0	    98	 78316	     electron-nodejs (languageserver.js )
+    0	    98	 78317	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.5.6-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=76972
+    0	     0	 78330	     node /Users/me/projects/zoom-deeplistening-agents/tools/zoom-mcp-server/src/index.js
+    0	    98	 78653	     electron-nodejs (tailwindServer.js )
+    0	     0	 81270	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 81271	     /opt/homebrew/Cellar/python@3.14/3.14.4/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python /Users/me/.local/bin/product-hunt-mcp
+    0	    98	 76973	extensionHost [3]
+    0	    98	 76974	extensionHost [3]
+    0	    98	 76975	extensionHost [3]
+    0	     0	 77655	     electron-nodejs (gitWorker.js )
+    0	    98	 76976	extensionHost [3]
+    0	    98	 76977	extensionHost [16]
+    0	    98	 76978	extensionHost [16]
+    0	    98	 76979	extensionHost [16]
+    0	     0	 78452	     electron-nodejs (gitWorker.js )
+    0	    98	 76980	extensionHost [16]
+    0	    98	 76981	extensionHost [9]
+    0	    98	 78526	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=76981
+    0	    98	 78540	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=76981
+    0	     0	 79544	     node /Users/me/projects/zoom-deeplistening-agents/tools/zoom-mcp-server/src/index.js
+    0	    98	 79547	     electron-nodejs (eslintServer.js )
+    0	    98	 79548	     electron-nodejs (languageserver.js )
+    0	    98	 79550	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.5.6-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=76981
+    0	     0	 82763	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 82764	     /opt/homebrew/Cellar/python@3.14/3.14.4/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python /Users/me/.local/bin/product-hunt-mcp
+    0	    98	 83472	     electron-nodejs (tailwindServer.js )
+    0	    98	 76982	extensionHost [4]
+    0	    98	 76983	extensionHost [4]
+    0	    98	 76984	extensionHost [4]
+    0	     0	 78674	     electron-nodejs (gitWorker.js )
+    0	    98	 76985	extensionHost [4]
+    0	    98	 76986	extensionHost [2]
+    0	    98	 78133	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=76986
+    0	     0	 78221	     /Users/me/.cursor/extensions/ms-python.python-2025.6.1-darwin-arm64/python-env-tools/bin/pet server
+    0	    98	 78736	     electron-nodejs (eslintServer.js )
+    0	    98	 78737	     electron-nodejs (languageserver.js )
+    0	    98	 78738	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.5.6-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=76986
+    0	     0	 78741	     node /Users/me/projects/zoom-deeplistening-agents/tools/zoom-mcp-server/src/index.js
+    0	    98	 79530	     electron-nodejs (tailwindServer.js )
+    0	     0	 81770	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 81771	     /opt/homebrew/Cellar/python@3.14/3.14.4/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python /Users/me/.local/bin/product-hunt-mcp
+    0	    98	 76987	extensionHost [18]
+    0	    98	 76988	extensionHost [18]
+    0	    98	 76989	extensionHost [18]
+    0	     0	 79851	     electron-nodejs (gitWorker.js )
+    0	    98	 76990	extensionHost [18]
+    0	    98	 76991	extensionHost [14]
+    0	    98	 76992	extensionHost [12]
+    0	    98	 79096	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=76992
+    0	    98	 79100	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=76992
+    0	    98	 80158	     electron-nodejs (eslintServer.js )
+    0	    98	 80160	     electron-nodejs (languageserver.js )
+    0	    98	 80191	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.5.6-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=76992
+    0	     0	 80194	     node /Users/me/projects/zoom-deeplistening-agents/tools/zoom-mcp-server/src/index.js
+    0	    98	 83669	     electron-nodejs (server-node.js )
+    0	     0	 84098	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 84099	     /opt/homebrew/Cellar/python@3.14/3.14.4/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python /Users/me/.local/bin/product-hunt-mcp
+    0	    98	 76993	extensionHost [7]
+    0	    98	 76994	extensionHost [7]
+    0	   197	 76995	extensionHost [7]
+    0	    98	 76996	extensionHost [7]
+    0	    98	 76997	extensionHost [19]
+    0	    98	 79643	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=76997
+    0	    98	 80301	     electron-nodejs (eslintServer.js )
+    0	    98	 80303	     electron-nodejs (languageserver.js )
+    0	    98	 80304	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.5.6-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=76997
+    0	    98	 81195	     electron-nodejs (tailwindServer.js )
+    0	     0	 84262	     node /Users/me/projects/zoom-deeplistening-agents/tools/zoom-mcp-server/src/index.js
+    0	     0	 84263	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 93761	     /opt/homebrew/Cellar/python@3.14/3.14.4/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python /Users/me/.local/bin/product-hunt-mcp
+    0	     0	 93766	     npm exec snyk@latest mcp -t stdio
+    0	    98	 76998	extensionHost [11]
+    0	    98	 76999	extensionHost [11]
+    0	    98	 77000	extensionHost [11]
+    0	     0	 79811	     electron-nodejs (gitWorker.js )
+    0	    98	 77001	extensionHost [11]
+    0	    98	 77002	extensionHost [8]
+    0	    98	 79718	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=77002
+    0	    98	 79720	     electron-nodejs (server.js )
+    0	    98	 79721	     electron-nodejs (server.js )
+    0	    98	 79722	     electron-nodejs (languageserver.js )
+    0	     0	 79731	     /Users/me/.cursor/extensions/ms-python.python-2025.6.1-darwin-arm64/python-env-tools/bin/pet server
+    0	    98	 80875	     electron-nodejs (eslintServer.js )
+    0	    98	 80876	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.5.6-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=77002
+    0	     0	 80881	     node /Users/me/projects/zoom-deeplistening-agents/tools/zoom-mcp-server/src/index.js
+    0	    98	 81612	     electron-nodejs (tailwindServer.js )
+    0	     0	 82773	     /Users/me/.cursor/extensions/docker.docker-0.18.0-darwin-arm64/bin/docker-language-server-darwin-arm64 start --stdio
+    0	     0	 84004	       /Users/me/.cursor/extensions/docker.docker-0.18.0-darwin-arm64/bin/docker-language-server-darwin-arm64 start --stdio
+    0	    98	 83117	     electron-nodejs (server-node.js )
+    0	     0	 85101	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 85102	     /opt/homebrew/Cellar/python@3.14/3.14.4/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python /Users/me/.local/bin/product-hunt-mcp
+    0	    98	 77003	extensionHost [13]
+    0	    98	 77004	extensionHost [13]
+    0	    98	 77005	extensionHost [13]
+    0	     0	 80952	     electron-nodejs (gitWorker.js )
+    0	    98	 77006	extensionHost [13]
+    0	    98	 77007	extensionHost [5]
+    0	    98	 77008	ptyHost
+    0	     0	  4590	     /bin/zsh -il
+    0	     0	 30542	     /bin/zsh -il
+    0	     0	 44343	     /bin/zsh -il
+    0	     0	 56454	     /bin/zsh -il
+    0	     0	 65535	     /bin/zsh -il
+    0	     0	 74269	     /bin/zsh -il
+    0	     0	 74519	     /bin/zsh -il
+    0	     0	 74923	     /bin/zsh -il
+    0	     0	 77318	     /bin/zsh -i
+    0	     0	 77518	     /bin/zsh -il
+    0	     0	 77923	     /bin/zsh -il
+    0	     0	 77927	     /bin/zsh -il
+    0	     0	 77936	     /bin/zsh -il
+    0	     0	 77938	     /bin/zsh -il
+    0	     0	 77969	     /bin/zsh -il
+    0	     0	 77970	     /bin/zsh -il
+    0	     0	 77971	     /bin/zsh -il
+    0	     0	 77974	     /bin/zsh -il
+    0	     0	 77976	     /bin/zsh -il
+    0	     0	 77979	     /bin/zsh -il
+    0	     0	 77980	     /bin/zsh -il
+    0	     0	 77991	     /bin/zsh -il
+    0	     0	 77995	     /bin/zsh -il
+    0	     0	 78034	     /bin/zsh -il
+    0	     0	 78103	     /bin/zsh -il
+    0	     0	 78111	     /bin/zsh -il
+    0	     0	 78122	     /bin/zsh -il
+    0	     0	 78235	     /bin/zsh -il
+    0	     0	 78254	     /bin/zsh -il
+    0	     0	 78255	     /bin/zsh -i
+    0	     0	 78295	     /bin/zsh -il
+    0	     0	 78296	     /bin/zsh -il
+    0	     0	 78313	     /bin/zsh -il
+    0	     0	 78597	     /bin/zsh -il
+    0	     0	 78764	     /bin/zsh -il
+    0	     0	 78789	     /bin/zsh -il
+    0	     0	 78967	     /bin/zsh -il
+    0	     0	 79483	     /bin/zsh -il
+    0	     0	 79832	     /bin/zsh -i
+    0	     0	 80400	     /bin/zsh -il
+    0	     0	 81102	     /bin/zsh -il
+    0	    98	 77009	extensionHost [17]
+    0	    98	 77010	extensionHost [17]
+    0	    98	 77011	extensionHost [17]
+    0	     0	 80869	     electron-nodejs (gitWorker.js )
+    0	    98	 77012	extensionHost [17]
+    0	    98	 77014	extensionHost [6]
+    0	    98	 77015	extensionHost [26]
+    0	    98	 77016	extensionHost [26]
+    0	    98	 77017	extensionHost [26]
+    0	     0	 81662	     electron-nodejs (gitWorker.js )
+    0	    98	 77018	extensionHost [26]
+    0	    98	 77019	extensionHost [20]
+    0	    98	 77020	extensionHost [10]
+    0	    98	 77021	extensionHost [10]
+    0	    98	 77022	extensionHost [10]
+    0	     0	 81876	     electron-nodejs (gitWorker.js )
+    0	    98	 77023	extensionHost [10]
+    0	    98	 77024	extensionHost [23]
+    0	    98	 80960	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=77024
+    0	    98	 81779	     electron-nodejs (eslintServer.js )
+    0	    98	 81780	     electron-nodejs (languageserver.js )
+    0	    98	 81782	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.5.6-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=77024
+    0	     0	 81800	     node /Users/me/projects/zoom-deeplistening-agents/tools/zoom-mcp-server/src/index.js
+    0	     0	 81801	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 89542	     /opt/homebrew/Cellar/python@3.14/3.14.4/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python /Users/me/.local/bin/product-hunt-mcp
+    0	    98	 77025	extensionHost [22]
+    0	    98	 77026	extensionHost [22]
+    0	    98	 77027	extensionHost [22]
+    0	    98	 77028	extensionHost [22]
+    0	    98	 77041	extensionHost [25]
+    0	    98	 77071	extensionHost [1]
+    0	    98	 77073	extensionHost [1]
+    0	    98	 77074	extensionHost [1]
+    0	     0	 82889	     electron-nodejs (gitWorker.js )
+    0	    98	 77075	extensionHost [1]
+    0	    98	 77272	extensionHost [21]
+    0	    98	 77273	extensionHost [21]
+    0	    98	 77274	extensionHost [21]
+    0	    98	 77275	extensionHost [21]
+    0	    98	 77329	extensionHost [9]
+    0	    98	 77330	extensionHost [9]
+    0	    98	 77331	extensionHost [9]
+    0	    98	 77332	extensionHost [9]
+    0	    98	 77350	extensionHost [2]
+    0	    98	 77351	extensionHost [2]
+    0	    98	 77352	extensionHost [2]
+    0	     0	 83519	     electron-nodejs (gitWorker.js )
+    0	    98	 77353	extensionHost [2]
+    0	    98	 77374	extensionHost [14]
+    0	    98	 77375	extensionHost [14]
+    0	    98	 77376	extensionHost [14]
+    0	    98	 77377	extensionHost [14]
+    0	    98	 77393	extensionHost [12]
+    0	    98	 77395	extensionHost [12]
+    0	    98	 77396	extensionHost [12]
+    0	    98	 77397	extensionHost [12]
+    0	    98	 77409	extensionHost [19]
+    0	    98	 77410	extensionHost [19]
+    0	    98	 77411	extensionHost [19]
+    0	     0	 82985	     electron-nodejs (gitWorker.js )
+    0	    98	 77412	extensionHost [19]
+    0	    98	 77496	extensionHost [8]
+    0	    98	 77497	extensionHost [8]
+    0	    98	 77498	extensionHost [8]
+    0	    98	 77499	extensionHost [8]
+    0	    98	 77600	extensionHost [5]
+    0	    98	 77601	extensionHost [5]
+    0	    98	 77602	extensionHost [5]
+    0	     0	 83342	     electron-nodejs (gitWorker.js )
+    0	    98	 77605	extensionHost [5]
+    0	    98	 77808	extensionHost [6]
+    0	    98	 77809	extensionHost [6]
+    0	    98	 77811	extensionHost [6]
+    0	    98	 77812	extensionHost [6]
+    0	    98	 78064	extensionHost [25]
+    0	    98	 78065	extensionHost [25]
+    0	    98	 78066	extensionHost [25]
+    0	     0	 84681	     electron-nodejs (gitWorker.js )
+    0	    98	 78067	extensionHost [25]
+    0	    98	 78154	extensionHost [20]
+    0	    98	 78155	extensionHost [20]
+    0	    98	 78156	extensionHost [20]
+    0	    98	 78157	extensionHost [20]
+    0	    98	 78189	   window
+    0	    98	 78228	extensionHost [23]
+    0	    98	 78229	extensionHost [23]
+    0	    98	 78231	extensionHost [23]
+    0	     0	 85641	     electron-nodejs (gitWorker.js )
+    0	    98	 78232	extensionHost [23]
+
+Workspace Stats: 
+|  Window (Marketplace — switchdimension-community)
+|  Window (Preview README.md — vana-com)
+|  Window (README.md — rowboat-quickstart)
+|  Window (Browser Tab — writing-quality)
+|  Window (99-cidrstory-all.md — cidr-org)
+|  Window (STATUS.md — midday)
+|  Window (STRATEGY.md — midday-friends)
+|  Window (Preview MONAI.md — ppf-poppyfields-mvp)
+|  Window (2025-04-01_10-47-comparing-docker-vs-docker-compose-for-baserow-installation.md — baserow)
+|  Window (Preview README.md — producthunt-quickstart)
+|  Window (omi_ecosystem_research_docs_a563dc91.plan.md — peeq-voice-omi)
+|  Window (MASTER_LUMINARY_RADAR_PROMPT.expanded.md — ai-vision-2025)
+|  Window (WORKFLOW.md — retrace-quickstart)
+|  Window (Browser Tab — umpire-empire)
+|  Window (Preview ab875-sb768-zip-code-bills.md — cidr-marin-courts)
+|  Window (Preview Technical_Proposal_25MSC005.md — peeq-carb)
+|  Window (tab-export-2026-04-13T11-10-59.md — mempalace-quickstart)
+|  Window (WORKFLOW.md — pretext__aculich)
+|  Window (tab-export-2026-04-13T11-04-04.md — beautiful-bogosity)
+|  Window (Preview EXTRACTION_AND_SCALING_ROADMAP.md — stanford-paperreview-ai)
+|  Window (cost_model_analysis_ea31317b.plan.md — openpaper)
+|  Window (tab-export-2026-04-13T11-08-03.md — sovereign-ai-offlineiq)
+|  Window (ONTOLOGY_AND_EPISTEMOLOGY.md — continuous-ai)
+|  Window (Preview ENVISION.md — paperclip-quickstart)
+|  Window (README.md — storytelling-capsules)
+|  Window (LISTENPURPOSE.md — zoom-deeplistening-agents)
+|  Window (LINKS-scholarly-lit-search.md — crb-nexus-deep-libguide)
+|  Window (BALONEY-FILTER-SPEC.md — ai-veracity-chains)
+|  Window (BOGOSITY_OVERVIEW.md — lam-starter-scaffold)
+|    Folder (midday-friends): 23 files
+|      File types: md(11) json(2) mdc(1) cursorindexingignore(1) gitignore(1)
+|      Conf files:
+|    Folder (pretext__aculich): 355 files
+|      File types: ts(109) html(52) txt(36) md(34) json(32) js(16) svg(6)
+|                  jsonl(5) mdc(2) yml(2)
+|      Conf files: package.json(2) tsconfig.json(2) github-actions(1)
+|    Folder (producthunt-quickstart): 279 files
+|      File types: ts(63) json(34) py(21) md(20) gitignore(11) js(9) png(5)
+|                  xml(4) css(4) lock(4)
+|      Conf files: package.json(9) tsconfig.json(7) launch.json(1)
+|                  dockerfile(1)
+|    Folder (mempalace-quickstart): 1261 files
+|      File types: md(339) py(175) ts(155) png(69) js(54) json(43) yaml(41)
+|                  pdf(38) d2(23) html(22)
+|      Conf files: package.json(16) tsconfig.json(2) makefile(1)
+|    Folder (crb-nexus-deep-libguide): 5022 files
+|      File types: md(3546) js(436) map(235) ts(138) json(129) tsx(112)
+|                  png(70) html(23) meta(22) rsc(21)
+|      Conf files: package.json(3) cursorrules(1) github-actions(1)
+|                  settings.json(1) tsconfig.json(1)
+|    Folder (cidr-marin-courts): 1358 files
+|      File types: js(270) pdf(147) png(90) css(77) md(56) map(56) docx(47)
+|                  html(22) scss(22) txt(20)
+|      Conf files: settings.json(1) makefile(1)
+|    Folder (peeq-carb): 3682 files
+|      File types: py(1094) pyc(1082) pdf(204) gz(148) md(103) h(83) txt(57)
+|                  docx(44) pyi(37) png(35)
+|      Conf files: settings.json(1)
+|    Folder (midday): 3390 files
+|      File types: ts(1089) tsx(941) json(124) js(119) png(97) map(95) mdx(79)
+|                  svg(40) sql(40) jpg(35)
+|      Conf files: package.json(41) tsconfig.json(37) github-actions(3)
+|                  dockerfile(3) settings.json(1)
+|    Folder (continuous-ai): more than 109889 files
+|      File types: json(8779) eml(7207) md(3657) txt(33) yml(17) ts(14) py(11)
+|                  sql(8) jsonl(7) gitignore(5)
+|      Conf files: settings.json(2) launch.json(1)
+|    Folder (rowboat-quickstart): 17102 files
+|      File types: md(9695) jsonl(1696) js(1134) ts(1052) tsx(635) png(596)
+|                  pak(223) json(196) ics(105) pdf(85)
+|      Conf files: package.json(21) tsconfig.json(18) dockerfile(10)
+|                  settings.json(1) mcp.json(1) launch.json(1)
+|    Folder (umpire-empire): more than 21093 files
+|      File types: json(6935) md(4261) py(1924) csv(1427) pyc(677) xlsx(551)
+|                  js(433) pyi(363) xls(358) pdf(214)
+|      Conf files: package.json(6) tsconfig.json(3) settings.json(2)
+|                  cursorrules(1) github-actions(1)
+|    Folder (baserow): 10119 files
+|      File types: py(2264) json(1936) pyc(1255) vue(992) js(662) scss(399)
+|                  svg(136) zip(124) md(117) po(110)
+|      Conf files: dockerfile(21) makefile(6) package.json(5) jsconfig.json(4)
+|                  launch.json(1) settings.json(1)
+|    Folder (lam-starter-scaffold): 12652 files
+|      File types: js(3462) map(2524) json(1617) tsx(939) meta(523) sst(473)
+|                  rsc(386) ts(329) md(165) png(118)
+|      Conf files: package.json(43) tsconfig.json(16) settings.json(1)
+|                  dockerfile(1)
+|    Folder (cidr-org): 15527 files
+|      File types: html(2256) jpg(1987) json(1960) py(1695) css(1262) png(959)
+|                  map(727) js(577) pyc(535) txt(158)
+|      Conf files: settings.json(2) package.json(1)
+|    Folder (storytelling-capsules): more than 21591 files
+|      File types: py(8245) pyc(7646) json(595) pyi(171) txt(126) typed(117)
+|                  proto(75) md(53) so(44) pem(19)
+|      Conf files:
+|    Folder (ai-veracity-chains): more than 25253 files
+|      File types: py(8557) h(3894) pyc(2204) mo(614) pyi(339) js(322) so(138)
+|                  txt(135) pxd(79) pyx(69)
+|      Conf files: package.json(1)
+|    Folder (retrace-quickstart): 17311 files
+|      File types: o(1664) d(1373) swift(562) c(507) dia(389) swiftdeps(353)
+|                  h(349) swiftmodule(309) pcm(276) strings(211)
+|      Conf files: makefile(1) cursorrules(1)
+|    Folder (writing-quality): more than 21610 files
+|      File types: py(8693) pyc(4800) json(539) js(446) txt(390) pyi(374)
+|                  md(266) png(105) typed(98) yaml(84)
+|      Conf files: package.json(4) dockerfile(2) tsconfig.json(2) makefile(1)
+|    Folder (zoom-deeplistening-agents): more than 20714 files
+|      File types: json(5420) ts(3699) py(1147) tsx(1115) md(1029) svg(664)
+|                  js(533) mdx(511) pyc(320) png(251)
+|      Conf files: package.json(273) tsconfig.json(198) dockerfile(21)
+|                  settings.json(10) makefile(6) jsconfig.json(5) cmake(3)
+|                  devcontainer.json(2) webpack.config.js(2) mcp.json(1)
+|                  launch.json(1) grunt.js(1)
+|    Folder (switchdimension-community): more than 22458 files
+|      File types: py(8641) json(2283) o(1139) gz(900) pyc(389) timestamp(386)
+|                  d(342) md(319) rlib(272) rmeta(271)
+|      Conf files: package.json(6) settings.json(5) tsconfig.json(3)
+|                  mcp.json(1)
+|    Folder (paperclip-quickstart): more than 21094 files
+|      File types: md(6435) json(3791) py(2402) ts(839) txt(432) yaml(414)
+|                  ttf(412) sh(303) tsx(212) jsonl(176)
+|      Conf files: dockerfile(19) package.json(10) makefile(5)
+|                  tsconfig.json(5) settings.json(4) project.json(2)
+|                  launch.json(2) tasks.json(2)
+|    Folder (ai-vision-2025): more than 20355 files
+|      File types: py(5157) go(1465) rst(938) md(826) yaml(767) h(685)
+|                  jsonl(661) c(538) html(504) txt(436)
+|      Conf files: makefile(37) dockerfile(28) package.json(16) csproj(8)
+|                  sln(5) tsconfig.json(5) settings.json(4)
+|                  devcontainer.json(4) launch.json(2) cursorrules(1)
+|    Folder (openpaper): more than 22141 files
+|      File types: py(5624) json(2138) gz(1954) pyc(1693) pyi(1428) so(268)
+|                  tsx(157) js(154) md(140) txt(137)
+|      Conf files: package.json(4) dockerfile(4) tsconfig.json(2)
+|                  github-actions(1) settings.json(1)
+|    Folder (ppf-poppyfields-mvp): more than 20415 files
+|      File types: py(5355) php(1638) yaml(1265) json(1200) java(1050)
+|                  js(1011) tsx(897) png(522) md(514) ts(480)
+|      Conf files: package.json(19) dockerfile(11) tsconfig.json(7)
+|                  settings.json(3) project.json(2) makefile(1)
+|                  devcontainer.json(1) tasks.json(1)
+|    Folder (beautiful-bogosity): more than 20162 files
+|      File types: py(8535) md(1732) yaml(1048) sh(769) yml(605) json(421)
+|                  png(327) mdx(322) svelte(252) co(249)
+|      Conf files: dockerfile(17) makefile(13) project.json(13)
+|                  settings.json(5) package.json(5) launch.json(2)
+|                  tsconfig.json(2) devcontainer.json(2) mcp.json(1)
+|                  tasks.json(1)
+|    Folder (stanford-paperreview-ai): more than 21074 files
+|      File types: json(11533) txt(2587) py(487) js(164) md(159) png(79)
+|                  pyc(48) jsonl(39) csv(32) sh(31)
+|      Conf files: package.json(4) makefile(2) jsconfig.json(2)
+|                  settings.json(2) dockerfile(2) tsconfig.json(1)
+|                  tasks.json(1)
+|    Folder (sovereign-ai-offlineiq): more than 21277 files
+|      File types: js(6303) rs(2626) ts(1196) json(844) tsx(525) md(258)
+|                  png(241) svg(196) py(181) jpg(123)
+|      Conf files: package.json(24) tsconfig.json(17) dockerfile(9)
+|                  settings.json(4) makefile(3) launch.json(1)
+|    Folder (peeq-voice-omi): more than 20340 files
+|      File types: png(849) dart(678) class(669) py(635) yaml(569) d(542)
+|                  o(538) len(513) json(509) c(491)
+|      Conf files: package.json(27) tsconfig.json(17) dockerfile(17) cmake(14)
+|                  settings.json(5) launch.json(3) mcp.json(1) makefile(1)
+|    Folder (vana-com): more than 20658 files
+|      File types: js(6433) ts(1783) json(1186) rs(768) tsx(626) md(609)
+|                  py(270) png(205) svg(168) toml(102)
+|      Conf files: package.json(45) tsconfig.json(38) dockerfile(18)
+|                  makefile(6) settings.json(5) jsconfig.json(3)
+
+

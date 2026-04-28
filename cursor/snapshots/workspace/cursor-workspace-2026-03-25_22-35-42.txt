@@ -1,0 +1,253 @@
+
+Version:          Cursor 2.7.0-pre.133.patch.0 (d4e60f0ae12e228fa5fbe3151ff53838a82b86a0, 2026-03-25T05:47:52.636Z)
+OS Version:       Darwin arm64 25.3.0
+CPUs:             Apple M3 Max (14 x 2400)
+Memory (System):  96.00GB (0.61GB free)
+Load (avg):       9, 9, 8
+VM:               0%
+Screen Reader:    yes
+Process Argv:     
+GPU Status:       2d_canvas:                              enabled
+                  direct_rendering_display_compositor:    disabled_off_ok
+                  gpu_compositing:                        enabled
+                  multiple_raster_threads:                enabled_on
+                  opengl:                                 enabled_on
+                  rasterization:                          enabled
+                  raw_draw:                               disabled_off_ok
+                  skia_graphite:                          disabled_off
+                  trees_in_viz:                           disabled_off
+                  video_decode:                           enabled
+                  video_encode:                           enabled
+                  webgl:                                  enabled
+                  webgl2:                                 enabled
+                  webgpu:                                 enabled
+                  webnn:                                  disabled_off
+
+CPU %	Mem MB	   PID	Process
+    2	   688	 19731	cursor main
+   38	   197	 19734	   gpu-process
+    0	    98	 19736	   utility-network-service
+    0	   393	 19745	window [1] (yenolab-polsia-clone)
+  108	  2949	 19748	window [2] (v3db_full_default_migration_3da5e008.plan.md — umpire-empire)
+    2	   590	 19749	window [3] (HARNESS_SYNTHESIS_ANTHROPIC.md — adr-chronicle)
+   15	   786	 19750	window [4] (Preview YOUTUBE_SCRIPTS_INVENTORY.md — continuous-ai)
+    0	    98	 20188	shared-process
+    0	    98	 20189	fileWatcher [1]
+    0	   197	 20190	extensionHost [3]
+    0	    98	 20668	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=20190
+    0	     0	 20670	     /Users/me/.cursor/extensions/ms-python.python-2025.6.1-darwin-arm64/python-env-tools/bin/pet server
+    0	     0	 20683	     /Applications/Cursor.app/Contents/Resources/app/resources/helpers/node --max-old-space-size=32768 /Users/me/.cursor/extensions/anysphere.cursorpyright-1.0.10/dist/server.js --cancellationReceive=file:f196dd69dbe9467253fcca30669936afd5f8caa02f --node-ipc --clientProcessId=20190
+    0	    98	 21260	     electron-nodejs (eslintServer.js )
+    0	    98	 21264	     electron-nodejs (languageserver.js )
+    0	    98	 21266	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.5.6-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=20190
+    0	    98	 21693	     electron-nodejs (tailwindServer.js )
+    0	     0	 28553	     /Users/me/.cursor/extensions/specstory.specstory-vscode-1.0.2-universal/bin/specstory_darwin_arm64 watch --no-version-check --json --cloud-url https://cloud.specstory.com --cloud-token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXzJ1ZDBJd0Z0QlMzVzdwejRvejdsYWJ0aXFCbCIsImVtYWlsIjoiYWN1bGljaEBnbWFpbC5jb20iLCJ0eXBlIjoiZGV2aWNlLXJlZnJlc2giLCJkZXZpY2VfaG9zdG5hbWUiOiIiLCJkZXZpY2Vfb3MiOiIiLCJkZXZpY2VfdXNlcm5hbWUiOiIiLCJpYXQiOjE3NjE5MzExMjMsImV4cCI6MjA3NzI5MTEyM30.MMgbfz4LKyGalfFvzCKxrvA-VGdpaO7ZHUYVa9OFEfA --console --debug-raw --config-dir .specstory/cli
+    0	     0	 29200	     /Users/me/.cursor/extensions/specstory.specstory-vscode-1.0.2-universal/bin/specstory_darwin_arm64 watch --no-version-check --json --cloud-url https://cloud.specstory.com --cloud-token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXzJ1ZDBJd0Z0QlMzVzdwejRvejdsYWJ0aXFCbCIsImVtYWlsIjoiYWN1bGljaEBnbWFpbC5jb20iLCJ0eXBlIjoiZGV2aWNlLXJlZnJlc2giLCJkZXZpY2VfaG9zdG5hbWUiOiIiLCJkZXZpY2Vfb3MiOiIiLCJkZXZpY2VfdXNlcm5hbWUiOiIiLCJpYXQiOjE3NjE5MzExMjMsImV4cCI6MjA3NzI5MTEyM30.MMgbfz4LKyGalfFvzCKxrvA-VGdpaO7ZHUYVa9OFEfA --console --debug-raw --config-dir .specstory/cli
+    0	     0	 36497	     node /Users/me/projects/zoom-deeplistening-agents/tools/zoom-mcp-server/src/index.js
+    0	     0	 36499	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 36500	     npm exec mcp-remote@latest https://mcp.canva.com/mcp
+    0	     0	 36623	       node /Users/me/.npm/_npx/1a3c4333f3a90708/node_modules/.bin/mcp-remote https://mcp.canva.com/mcp
+    0	    98	 52387	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=20190
+    0	    98	 20191	extensionHost [1]
+    0	    98	 21033	     electron-nodejs (languageserver.js )
+    0	    98	 21064	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.5.6-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=20191
+    0	     0	 27723	     /Users/me/.cursor/extensions/specstory.specstory-vscode-1.0.2-universal/bin/specstory_darwin_arm64 watch --no-version-check --json --cloud-url https://cloud.specstory.com --cloud-token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXzJ1ZDBJd0Z0QlMzVzdwejRvejdsYWJ0aXFCbCIsImVtYWlsIjoiYWN1bGljaEBnbWFpbC5jb20iLCJ0eXBlIjoiZGV2aWNlLXJlZnJlc2giLCJkZXZpY2VfaG9zdG5hbWUiOiIiLCJkZXZpY2Vfb3MiOiIiLCJkZXZpY2VfdXNlcm5hbWUiOiIiLCJpYXQiOjE3NjE5MzExMjMsImV4cCI6MjA3NzI5MTEyM30.MMgbfz4LKyGalfFvzCKxrvA-VGdpaO7ZHUYVa9OFEfA --console --debug-raw --config-dir .specstory/cli
+    0	     0	 30285	     /Users/me/.cursor/extensions/specstory.specstory-vscode-1.0.2-universal/bin/specstory_darwin_arm64 watch --no-version-check --json --cloud-url https://cloud.specstory.com --cloud-token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXzJ1ZDBJd0Z0QlMzVzdwejRvejdsYWJ0aXFCbCIsImVtYWlsIjoiYWN1bGljaEBnbWFpbC5jb20iLCJ0eXBlIjoiZGV2aWNlLXJlZnJlc2giLCJkZXZpY2VfaG9zdG5hbWUiOiIiLCJkZXZpY2Vfb3MiOiIiLCJkZXZpY2VfdXNlcm5hbWUiOiIiLCJpYXQiOjE3NjE5MzExMjMsImV4cCI6MjA3NzI5MTEyM30.MMgbfz4LKyGalfFvzCKxrvA-VGdpaO7ZHUYVa9OFEfA --console --debug-raw --config-dir .specstory/cli
+    0	     0	 36465	     node /Users/me/projects/zoom-deeplistening-agents/tools/zoom-mcp-server/src/index.js
+    0	     0	 36467	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 36469	     npm exec mcp-remote@latest https://mcp.canva.com/mcp
+    0	     0	 36647	       node /Users/me/.npm/_npx/1a3c4333f3a90708/node_modules/.bin/mcp-remote https://mcp.canva.com/mcp
+    1	   197	 20192	extensionHost [4]
+    0	    98	 20636	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=20192
+    0	    98	 34056	     electron-nodejs (eslintServer.js )
+    0	    98	 34065	     electron-nodejs (languageserver.js )
+    0	    98	 34165	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.5.6-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=20192
+    0	    98	 35163	     electron-nodejs (tailwindServer.js )
+    0	     0	 36589	     node /Users/me/projects/zoom-deeplistening-agents/tools/zoom-mcp-server/src/index.js
+    0	     0	 36590	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 36591	     npm exec mcp-remote@latest https://mcp.canva.com/mcp
+    0	     0	 36683	       node /Users/me/.npm/_npx/1a3c4333f3a90708/node_modules/.bin/mcp-remote https://mcp.canva.com/mcp
+    0	     0	 36592	     /Users/me/.cursor/extensions/specstory.specstory-vscode-1.0.2-universal/bin/specstory_darwin_arm64 watch --no-version-check --json --cloud-url https://cloud.specstory.com --cloud-token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXzJ1ZDBJd0Z0QlMzVzdwejRvejdsYWJ0aXFCbCIsImVtYWlsIjoiYWN1bGljaEBnbWFpbC5jb20iLCJ0eXBlIjoiZGV2aWNlLXJlZnJlc2giLCJkZXZpY2VfaG9zdG5hbWUiOiIiLCJkZXZpY2Vfb3MiOiIiLCJkZXZpY2VfdXNlcm5hbWUiOiIiLCJpYXQiOjE3NjE5MzExMjMsImV4cCI6MjA3NzI5MTEyM30.MMgbfz4LKyGalfFvzCKxrvA-VGdpaO7ZHUYVa9OFEfA --console --debug-raw --config-dir .specstory/cli
+    0	     0	 36593	     /Users/me/.cursor/extensions/specstory.specstory-vscode-1.0.2-universal/bin/specstory_darwin_arm64 watch --no-version-check --json --cloud-url https://cloud.specstory.com --cloud-token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXzJ1ZDBJd0Z0QlMzVzdwejRvejdsYWJ0aXFCbCIsImVtYWlsIjoiYWN1bGljaEBnbWFpbC5jb20iLCJ0eXBlIjoiZGV2aWNlLXJlZnJlc2giLCJkZXZpY2VfaG9zdG5hbWUiOiIiLCJkZXZpY2Vfb3MiOiIiLCJkZXZpY2VfdXNlcm5hbWUiOiIiLCJpYXQiOjE3NjE5MzExMjMsImV4cCI6MjA3NzI5MTEyM30.MMgbfz4LKyGalfFvzCKxrvA-VGdpaO7ZHUYVa9OFEfA --console --debug-raw --config-dir .specstory/cli
+    0	    98	 37874	     electron-nodejs (server-node.js )
+    0	     0	 45211	     /Users/me/.cursor/extensions/ms-python.python-2025.6.1-darwin-arm64/python-env-tools/bin/pet server
+    0	    98	 45218	     /Applications/Cursor.app/Contents/Resources/app/resources/helpers/node --max-old-space-size=32768 /Users/me/.cursor/extensions/anysphere.cursorpyright-1.0.10/dist/server.js --cancellationReceive=file:875ebf62814e738cff74cb18533faf17ef45a85069 --node-ipc --clientProcessId=20192
+    0	    98	 47327	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=20192
+   98	     0	 82427	     /opt/homebrew/bin/git status -z -uall
+    0	    98	 20193	fileWatcher [4]
+    0	    98	 20200	fileWatcher [2]
+    0	   393	 20201	extensionHost [2]
+    0	    98	 22924	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=20201
+    0	    98	 24774	     electron-nodejs (server-node.js )
+    0	    98	 34394	     electron-nodejs (languageserver.js )
+    0	   197	 34430	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.5.6-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=20201
+    0	   197	 34665	     electron-nodejs (tailwindServer.js )
+    0	     0	 36559	     node /Users/me/projects/zoom-deeplistening-agents/tools/zoom-mcp-server/src/index.js
+    0	     0	 36560	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 36561	     npm exec mcp-remote@latest https://mcp.canva.com/mcp
+    0	     0	 36665	       node /Users/me/.npm/_npx/1a3c4333f3a90708/node_modules/.bin/mcp-remote https://mcp.canva.com/mcp
+   88	    98	 37150	     /Users/me/.cursor/extensions/specstory.specstory-vscode-1.0.2-universal/bin/specstory_darwin_arm64 watch --no-version-check --json --cloud-url https://cloud.specstory.com --cloud-token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXzJ1ZDBJd0Z0QlMzVzdwejRvejdsYWJ0aXFCbCIsImVtYWlsIjoiYWN1bGljaEBnbWFpbC5jb20iLCJ0eXBlIjoiZGV2aWNlLXJlZnJlc2giLCJkZXZpY2VfaG9zdG5hbWUiOiIiLCJkZXZpY2Vfb3MiOiIiLCJkZXZpY2VfdXNlcm5hbWUiOiIiLCJpYXQiOjE3NjE5MzExMjMsImV4cCI6MjA3NzI5MTEyM30.MMgbfz4LKyGalfFvzCKxrvA-VGdpaO7ZHUYVa9OFEfA --console --debug-raw --config-dir .specstory/cli
+   88	    98	 37153	     /Users/me/.cursor/extensions/specstory.specstory-vscode-1.0.2-universal/bin/specstory_darwin_arm64 watch --no-version-check --json --cloud-url https://cloud.specstory.com --cloud-token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXzJ1ZDBJd0Z0QlMzVzdwejRvejdsYWJ0aXFCbCIsImVtYWlsIjoiYWN1bGljaEBnbWFpbC5jb20iLCJ0eXBlIjoiZGV2aWNlLXJlZnJlc2giLCJkZXZpY2VfaG9zdG5hbWUiOiIiLCJkZXZpY2Vfb3MiOiIiLCJkZXZpY2VfdXNlcm5hbWUiOiIiLCJpYXQiOjE3NjE5MzExMjMsImV4cCI6MjA3NzI5MTEyM30.MMgbfz4LKyGalfFvzCKxrvA-VGdpaO7ZHUYVa9OFEfA --console --debug-raw --config-dir .specstory/cli
+    0	    98	 56214	     electron-nodejs (eslintServer.js )
+    0	   197	 56251	     tsserver[5.9.3]: syntax
+    0	  1081	 56252	     tsserver[5.9.3]: semantic
+    0	     0	 56253	       /Applications/Cursor.app/Contents/Resources/app/resources/helpers/node /Users/me/projects/traub-umpire-empire/umpire-empire/node_modules/typescript/lib/typingsInstaller.js --globalTypingsCacheLocation /Users/me/Library/Caches/typescript/5.9 --enableTelemetry --typesMapLocation /Users/me/projects/traub-umpire-empire/umpire-empire/node_modules/typescript/lib/typesMap.json --validateDefaultNpmLocation
+    0	     0	 64934	     /Users/me/.cursor/extensions/ms-python.python-2025.6.1-darwin-arm64/python-env-tools/bin/pet server
+    0	    98	 64968	     /Applications/Cursor.app/Contents/Resources/app/resources/helpers/node --max-old-space-size=32768 /Users/me/.cursor/extensions/anysphere.cursorpyright-1.0.10/dist/server.js --cancellationReceive=file:6ffbf4e1e729a883218af106be31b5337213fe021b --node-ipc --clientProcessId=20201
+    0	    98	 65829	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=20201
+    0	    98	 20202	extensionHost [3]
+    0	    98	 20203	extensionHost [3]
+    0	   197	 20204	extensionHost [3]
+    0	    98	 23214	     electron-nodejs (gitWorker.js )
+    0	    98	 20205	extensionHost [3]
+    0	    98	 20206	extensionHost [1]
+    0	   197	 20207	extensionHost [1]
+    0	   197	 20208	extensionHost [1]
+    0	     0	 21915	     electron-nodejs (gitWorker.js )
+    0	    98	 20209	extensionHost [1]
+    0	    98	 20212	ptyHost
+    0	     0	  8443	     /bin/zsh -il
+    0	     0	  8799	     /bin/zsh -il
+    0	     0	 25005	       /Users/me/projects/nepal-srh-assistant/backend/.venv/bin/python /Users/me/projects/nepal-srh-assistant/backend/.venv/bin/uvicorn main:app --reload --host 0.0.0.0 --port 8000
+    0	     0	 25006	         /Users/me/projects/nepal-srh-assistant/backend/.venv/bin/python -c from multiprocessing.resource_tracker import main;main(4)
+    0	     0	 25007	         /Users/me/projects/nepal-srh-assistant/backend/.venv/bin/python -c from multiprocessing.spawn import spawn_main; spawn_main(tracker_fd=5, pipe_handle=7) --multiprocessing-fork
+    0	     0	 15811	     /bin/zsh -il
+    0	     0	 19682	     /bin/zsh -il
+    0	     0	 21944	     /bin/zsh -il
+    0	     0	 22985	     /bin/zsh -i
+    0	     0	 23318	     /bin/zsh -il
+    0	     0	 25352	     /opt/homebrew/bin/bash --init-file /Applications/Cursor.app/Contents/Resources/app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh
+    0	     0	 28079	     /opt/homebrew/bin/bash --init-file /Applications/Cursor.app/Contents/Resources/app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh
+    0	     0	 29278	     /opt/homebrew/bin/bash --init-file /Applications/Cursor.app/Contents/Resources/app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh
+    0	     0	 33523	     /bin/zsh -il
+    0	     0	 35430	     /bin/zsh -il
+    0	     0	 82223	       /bin/bash ./workspace-snapshot.sh
+    0	     0	 82577	         /bin/bash ./workspace-snapshot.sh
+    0	     0	 82578	           zsh ./dump-cursor-windows.sh
+    0	     0	 82588	             bash /opt/homebrew/bin/cursor --status
+    2	    98	 82594	               electron-nodejs (cli.js )
+    0	     0	 35584	     /bin/zsh -il
+    0	     0	 45247	     /bin/zsh -i
+    0	     0	 51215	     /bin/zsh -il
+    0	     0	 56087	     /bin/zsh -i
+    0	     0	 57343	     /bin/zsh -il
+    0	     0	 61267	     /bin/zsh -il
+    0	     0	 62706	     /bin/zsh -il
+    0	     0	 65011	     /bin/zsh -i
+    0	     0	 80238	     /bin/zsh -il
+    0	     0	 81649	     /bin/zsh -il
+    0	     0	 83612	     /bin/zsh -il
+    0	     0	 96210	     /bin/zsh -il
+    0	     0	 99757	     /bin/zsh -il
+    0	    98	 20219	extensionHost [2]
+    0	   295	 20220	extensionHost [2]
+    1	   295	 20221	extensionHost [2]
+    0	    98	 22983	     electron-nodejs (gitWorker.js )
+    0	   197	 20222	extensionHost [2]
+    0	    98	 20224	extensionHost [4]
+    0	   197	 20225	extensionHost [4]
+    1	   197	 20226	extensionHost [4]
+    0	    98	 22858	     electron-nodejs (gitWorker.js )
+    0	    98	 20227	extensionHost [4]
+    0	    98	 20228	fileWatcher [3]
+    0	   197	 40607	   window
+    2	   590	 53854	window [6] (ARTIFACTS.md — general-decisioning)
+    0	    98	 54052	fileWatcher [6]
+    1	   197	 54053	extensionHost [6]
+    0	    98	 56488	     electron-nodejs (languageserver.js )
+    0	    98	 56493	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.5.6-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=54053
+    0	     0	 56685	     /Users/me/.cursor/extensions/specstory.specstory-vscode-1.0.2-universal/bin/specstory_darwin_arm64 watch --no-version-check --json --cloud-url https://cloud.specstory.com --cloud-token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXzJ1ZDBJd0Z0QlMzVzdwejRvejdsYWJ0aXFCbCIsImVtYWlsIjoiYWN1bGljaEBnbWFpbC5jb20iLCJ0eXBlIjoiZGV2aWNlLXJlZnJlc2giLCJkZXZpY2VfaG9zdG5hbWUiOiIiLCJkZXZpY2Vfb3MiOiIiLCJkZXZpY2VfdXNlcm5hbWUiOiIiLCJpYXQiOjE3NjE5MzExMjMsImV4cCI6MjA3NzI5MTEyM30.MMgbfz4LKyGalfFvzCKxrvA-VGdpaO7ZHUYVa9OFEfA --console --debug-raw --config-dir .specstory/cli
+    0	     0	 56686	     /Users/me/.cursor/extensions/specstory.specstory-vscode-1.0.2-universal/bin/specstory_darwin_arm64 watch --no-version-check --json --cloud-url https://cloud.specstory.com --cloud-token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXzJ1ZDBJd0Z0QlMzVzdwejRvejdsYWJ0aXFCbCIsImVtYWlsIjoiYWN1bGljaEBnbWFpbC5jb20iLCJ0eXBlIjoiZGV2aWNlLXJlZnJlc2giLCJkZXZpY2VfaG9zdG5hbWUiOiIiLCJkZXZpY2Vfb3MiOiIiLCJkZXZpY2VfdXNlcm5hbWUiOiIiLCJpYXQiOjE3NjE5MzExMjMsImV4cCI6MjA3NzI5MTEyM30.MMgbfz4LKyGalfFvzCKxrvA-VGdpaO7ZHUYVa9OFEfA --console --debug-raw --config-dir .specstory/cli
+    0	     0	 56741	     node /Users/me/projects/zoom-deeplistening-agents/tools/zoom-mcp-server/src/index.js
+    0	     0	 56742	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 56743	     npm exec mcp-remote@latest https://mcp.canva.com/mcp
+    0	     0	 56786	       node /Users/me/.npm/_npx/1a3c4333f3a90708/node_modules/.bin/mcp-remote https://mcp.canva.com/mcp
+    0	    98	 73327	     electron-nodejs (eslintServer.js )
+    0	    98	 73342	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=54053
+    0	    98	 54067	extensionHost [6]
+    0	   197	 54068	extensionHost [6]
+    0	   197	 54069	extensionHost [6]
+    0	    98	 54476	     electron-nodejs (gitWorker.js )
+    0	    98	 54070	extensionHost [6]
+    2	   885	 76667	window [7] (Preview README.md — gph-nepal-srh)
+    0	   295	 76696	extensionHost [7]
+    0	    98	 76831	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=76696
+    0	    98	 76837	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=76696
+    0	    98	 79145	     electron-nodejs (eslintServer.js )
+    0	    98	 79146	     electron-nodejs (languageserver.js )
+    0	    98	 79147	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.5.6-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=76696
+    0	    98	 79247	     electron-nodejs (tailwindServer.js )
+    0	     0	 79349	     /Users/me/.cursor/extensions/specstory.specstory-vscode-1.0.2-universal/bin/specstory_darwin_arm64 watch --no-version-check --json --cloud-url https://cloud.specstory.com --cloud-token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXzJ1ZDBJd0Z0QlMzVzdwejRvejdsYWJ0aXFCbCIsImVtYWlsIjoiYWN1bGljaEBnbWFpbC5jb20iLCJ0eXBlIjoiZGV2aWNlLXJlZnJlc2giLCJkZXZpY2VfaG9zdG5hbWUiOiIiLCJkZXZpY2Vfb3MiOiIiLCJkZXZpY2VfdXNlcm5hbWUiOiIiLCJpYXQiOjE3NjE5MzExMjMsImV4cCI6MjA3NzI5MTEyM30.MMgbfz4LKyGalfFvzCKxrvA-VGdpaO7ZHUYVa9OFEfA --console --debug-raw --config-dir .specstory/cli
+    0	     0	 79353	     /Users/me/.cursor/extensions/specstory.specstory-vscode-1.0.2-universal/bin/specstory_darwin_arm64 watch --no-version-check --json --cloud-url https://cloud.specstory.com --cloud-token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXzJ1ZDBJd0Z0QlMzVzdwejRvejdsYWJ0aXFCbCIsImVtYWlsIjoiYWN1bGljaEBnbWFpbC5jb20iLCJ0eXBlIjoiZGV2aWNlLXJlZnJlc2giLCJkZXZpY2VfaG9zdG5hbWUiOiIiLCJkZXZpY2Vfb3MiOiIiLCJkZXZpY2VfdXNlcm5hbWUiOiIiLCJpYXQiOjE3NjE5MzExMjMsImV4cCI6MjA3NzI5MTEyM30.MMgbfz4LKyGalfFvzCKxrvA-VGdpaO7ZHUYVa9OFEfA --console --debug-raw --config-dir .specstory/cli
+    0	     0	 79371	     node /Users/me/projects/zoom-deeplistening-agents/tools/zoom-mcp-server/src/index.js
+    0	     0	 79372	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 79373	     npm exec mcp-remote@latest https://mcp.canva.com/mcp
+    0	     0	 79600	       node /Users/me/.npm/_npx/1a3c4333f3a90708/node_modules/.bin/mcp-remote https://mcp.canva.com/mcp
+    0	    98	 76697	fileWatcher [7]
+    0	    98	 76714	extensionHost [7]
+    0	   295	 76715	extensionHost [7]
+    0	   197	 76716	extensionHost [7]
+    0	    98	 76869	     electron-nodejs (gitWorker.js )
+    0	    98	 76717	extensionHost [7]
+    0	   492	 84265	   window
+    0	    98	 84268	   window
+    2	   590	 96422	window [8] (Preview RFP_25MSC005_Coach_Requirements_Primer.md — peeq-carb)
+    0	    98	 96454	fileWatcher [8]
+    0	    98	 96468	extensionHost [8]
+    0	    98	 98205	     electron-nodejs (languageserver.js )
+    0	    98	 98266	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.5.6-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=96468
+    0	     0	 99186	     /Users/me/.cursor/extensions/specstory.specstory-vscode-1.0.2-universal/bin/specstory_darwin_arm64 watch --no-version-check --json --cloud-url https://cloud.specstory.com --cloud-token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXzJ1ZDBJd0Z0QlMzVzdwejRvejdsYWJ0aXFCbCIsImVtYWlsIjoiYWN1bGljaEBnbWFpbC5jb20iLCJ0eXBlIjoiZGV2aWNlLXJlZnJlc2giLCJkZXZpY2VfaG9zdG5hbWUiOiIiLCJkZXZpY2Vfb3MiOiIiLCJkZXZpY2VfdXNlcm5hbWUiOiIiLCJpYXQiOjE3NjE5MzExMjMsImV4cCI6MjA3NzI5MTEyM30.MMgbfz4LKyGalfFvzCKxrvA-VGdpaO7ZHUYVa9OFEfA --console --debug-raw --config-dir .specstory/cli
+    0	     0	 99187	     /Users/me/.cursor/extensions/specstory.specstory-vscode-1.0.2-universal/bin/specstory_darwin_arm64 watch --no-version-check --json --cloud-url https://cloud.specstory.com --cloud-token eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ1c2VyXzJ1ZDBJd0Z0QlMzVzdwejRvejdsYWJ0aXFCbCIsImVtYWlsIjoiYWN1bGljaEBnbWFpbC5jb20iLCJ0eXBlIjoiZGV2aWNlLXJlZnJlc2giLCJkZXZpY2VfaG9zdG5hbWUiOiIiLCJkZXZpY2Vfb3MiOiIiLCJkZXZpY2VfdXNlcm5hbWUiOiIiLCJpYXQiOjE3NjE5MzExMjMsImV4cCI6MjA3NzI5MTEyM30.MMgbfz4LKyGalfFvzCKxrvA-VGdpaO7ZHUYVa9OFEfA --console --debug-raw --config-dir .specstory/cli
+    0	     0	 99228	     node /Users/me/projects/zoom-deeplistening-agents/tools/zoom-mcp-server/src/index.js
+    0	    98	 96492	extensionHost [8]
+    0	   197	 96493	extensionHost [8]
+    0	   197	 96494	extensionHost [8]
+    0	    98	 96920	     electron-nodejs (gitWorker.js )
+    0	    98	 96495	extensionHost [8]
+
+Workspace Stats: 
+|  Window (Preview RFP_25MSC005_Coach_Requirements_Primer.md — peeq-carb)
+|  Window (Preview README.md — gph-nepal-srh)
+|  Window (Preview YOUTUBE_SCRIPTS_INVENTORY.md — continuous-ai)
+|  Window (HARNESS_SYNTHESIS_ANTHROPIC.md — adr-chronicle)
+|  Window (v3db_full_default_migration_3da5e008.plan.md — umpire-empire)
+|  Window (ARTIFACTS.md — general-decisioning)
+|  Window (SUMMARY.md — finances)
+|  Window (yenolab-polsia-clone)
+|    Folder (finances): 34 files
+|      File types: md(9) csv(6) pdf(6) mhtml(3) gitignore(2)
+|                  cursorindexingignore(1) json(1) toml(1) txt(1)
+|      Conf files:
+|    Folder (yenolab-polsia-clone): 10 files
+|      File types: json(2) md(2) toml(1)
+|      Conf files: settings.json(1)
+|    Folder (general-decisioning): 25 files
+|      File types: json(17) toml(1) md(1)
+|      Conf files:
+|    Folder (peeq-carb): 3224 files
+|      File types: py(1029) pyc(1022) gz(148) h(83) md(73) pdf(67) txt(52)
+|                  docx(37) pyi(35) pxi(26)
+|      Conf files: settings.json(1)
+|    Folder (gph-nepal-srh): 5354 files
+|      File types: py(1348) ex(472) gql(318) js(281) exs(277) html(241)
+|                  json(215) haml(196) bru(177) md(150)
+|      Conf files: dockerfile(15) package.json(8) makefile(5) settings.json(3)
+|                  grunt.js(2)
+|    Folder (umpire-empire): more than 21434 files
+|      File types: json(6864) md(4154) py(2318) csv(1213) js(747) pyc(677)
+|                  xlsx(474) pyi(363) xls(305) pdf(182)
+|      Conf files: package.json(6) tsconfig.json(3) settings.json(2)
+|                  cursorrules(1) github-actions(1)
+|    Folder (adr-chronicle): 6562 files
+|      File types: md(1212) ts(810) java(297) locale-peer-id(216) go(190)
+|                  json(161) yml(136) mdx(96) sh(80) js(76)
+|      Conf files: package.json(28) tsconfig.json(19) settings.json(8)
+|                  makefile(6) dockerfile(5) csproj(4) tasks.json(2)
+|                  devcontainer.json(1) launch.json(1) webpack.config.js(1)
+|                  tslint.json(1) sln(1)
+|    Folder (continuous-ai): more than 109882 files
+|      File types: json(8781) eml(7210) md(3653) txt(33) yml(17) ts(14) py(11)
+|                  sql(8) jsonl(7) gitignore(5)
+|      Conf files: settings.json(2) launch.json(1)
+
+

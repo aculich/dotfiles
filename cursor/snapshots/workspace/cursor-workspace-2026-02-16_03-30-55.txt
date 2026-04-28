@@ -1,0 +1,281 @@
+
+Version:          Cursor 2.4.36 (f9919bf991f247689f9ead605b5c5a3239a2a790, 2026-02-12T21:00:33.976Z)
+OS Version:       Darwin arm64 25.2.0
+CPUs:             Apple M3 Max (14 x 2400)
+Memory (System):  96.00GB (0.13GB free)
+Load (avg):       36, 43, 45
+VM:               0%
+Screen Reader:    yes
+Process Argv:     
+GPU Status:       2d_canvas:                              enabled
+                  direct_rendering_display_compositor:    disabled_off_ok
+                  gpu_compositing:                        enabled
+                  multiple_raster_threads:                enabled_on
+                  opengl:                                 enabled_on
+                  rasterization:                          enabled
+                  raw_draw:                               disabled_off_ok
+                  skia_graphite:                          disabled_off
+                  trees_in_viz:                           disabled_off
+                  video_decode:                           enabled
+                  video_encode:                           enabled
+                  webgl:                                  enabled
+                  webgl2:                                 enabled
+                  webgpu:                                 enabled
+                  webnn:                                  disabled_off
+
+CPU %	Mem MB	   PID	Process
+    2	   393	 66771	cursor main
+    7	    98	 66775	   gpu-process
+    0	     0	 66777	   utility-network-service
+    0	    98	 66790	window [1] (consorvia-community)
+    0	    98	 67163	shared-process
+    0	     0	 68464	   window
+    0	   197	 69569	window [30] (Preview 2025-10-18_17-20Z-understanding-logo-and-wordmark-downloads.md — limitless-integration-quickstart)
+   17	   197	 69647	extensionHost [30]
+    0	     0	 69841	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=69647
+    0	     0	 70189	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.74-universal/bin/macos-aarch64/codex app-server --analytics-default-enabled
+    0	     0	 70192	     electron-nodejs (languageserver.js )
+    0	     0	 70193	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.5.6-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=69647
+    0	     0	 70219	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 70330	     electron-nodejs (eslintServer.js )
+    0	     0	 70359	     electron-nodejs (tailwindServer.js )
+    0	     0	 69669	fileWatcher [30]
+    0	    98	 69690	extensionHost [30]
+    1	    98	 69691	extensionHost [30]
+    0	     0	 69900	     electron-nodejs (gitWorker.js )
+    0	    98	 69692	extensionHost [30]
+    2	   393	 69961	window [26] (SLOW_MANIFESTO.md — code-sculpting)
+    0	   492	 70016	extensionHost [26]
+    0	     0	 70143	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=70016
+    0	     0	 70582	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.74-universal/bin/macos-aarch64/codex app-server --analytics-default-enabled
+    0	     0	 70585	     electron-nodejs (eslintServer.js )
+    0	     0	 70586	     electron-nodejs (languageserver.js )
+    0	     0	 70587	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.5.6-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=70016
+    0	     0	 70603	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 75644	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=70016
+    0	     0	 70018	fileWatcher [26]
+    0	    98	 70049	extensionHost [26]
+    0	    98	 70050	extensionHost [26]
+    0	     0	 70327	     electron-nodejs (gitWorker.js )
+    0	    98	 70051	extensionHost [26]
+    0	   295	 72453	window [27] (HUMAN_SHIELD_MANIFESTO.md — ai-veracity-chains)
+   16	   492	 72635	extensionHost [27]
+    0	     0	 73268	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=72635
+    0	     0	 74413	     electron-nodejs (server-node.js )
+    0	     0	 75512	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.74-universal/bin/macos-aarch64/codex app-server --analytics-default-enabled
+    0	     0	 75514	     electron-nodejs (eslintServer.js )
+    0	     0	 75515	     electron-nodejs (languageserver.js )
+    0	     0	 75516	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.5.6-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=72635
+    0	     0	 75518	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 75554	     electron-nodejs (tailwindServer.js )
+    0	     0	 72653	fileWatcher [27]
+    0	    98	 72745	extensionHost [27]
+    0	    98	 72746	extensionHost [27]
+    0	     0	 73586	     electron-nodejs (gitWorker.js )
+    0	    98	 72747	extensionHost [27]
+   10	   983	 76210	window [2] (Cursor Settings — umpire-empire)
+    0	     0	 76342	   window
+    0	     0	 77147	   window
+    0	     0	 77150	   window
+    1	    98	 77163	   window
+    0	   295	 77941	window [28] (README.md — peeq-voicegen-audiocast)
+   17	   295	 77972	extensionHost [28]
+    0	     0	 78260	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=77972
+    0	     0	 78691	     /Users/me/.cursor/extensions/ms-python.python-2025.6.1-darwin-arm64/python-env-tools/bin/pet server
+    0	     0	 79004	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.74-universal/bin/macos-aarch64/codex app-server --analytics-default-enabled
+    0	     0	 79049	     electron-nodejs (eslintServer.js )
+    0	     0	 79051	     electron-nodejs (languageserver.js )
+    0	     0	 79055	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.5.6-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=77972
+    0	     0	 79134	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 88080	     electron-nodejs (tailwindServer.js )
+    0	     0	 77973	fileWatcher [28]
+    0	    98	 78010	extensionHost [28]
+    0	    98	 78011	extensionHost [28]
+    0	     0	 78383	     electron-nodejs (gitWorker.js )
+    0	    98	 78012	extensionHost [28]
+    0	   197	 84960	window [6] (payapp-firebase)
+    0	     0	 87521	fileWatcher [6]
+   18	    98	 87522	extensionHost [6]
+    0	     0	 89056	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.74-universal/bin/macos-aarch64/codex app-server --analytics-default-enabled
+    0	     0	 89119	     electron-nodejs (languageserver.js )
+    0	     0	 89128	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.5.6-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=87522
+    0	     0	 89179	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 87526	extensionHost [6]
+    0	    98	 87527	extensionHost [6]
+    0	     0	 87935	     electron-nodejs (gitWorker.js )
+    0	     0	 87528	extensionHost [6]
+    0	   197	 94544	window [7] (Preview DNS-MIGRATION.md — officialspay-infra)
+    0	     0	 94553	fileWatcher [7]
+   18	    98	 94554	extensionHost [7]
+    0	     0	 96567	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.74-universal/bin/macos-aarch64/codex app-server --analytics-default-enabled
+    0	     0	 96651	     electron-nodejs (languageserver.js )
+    0	     0	 96661	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.5.6-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=94554
+    0	     0	 96720	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 94620	extensionHost [7]
+    0	    98	 94621	extensionHost [7]
+    0	     0	 95543	     electron-nodejs (gitWorker.js )
+    0	     0	 94622	extensionHost [7]
+    0	     0	 95483	   window
+    3	   197	 98937	window [8] (namecheap-dns-console-workaround.js — traub-umpire-empire)
+   17	   688	 98938	extensionHost [8]
+    0	     0	 99335	     /Users/me/.cursor/extensions/ms-python.python-2025.6.1-darwin-arm64/python-env-tools/bin/pet server
+    0	     0	 98939	fileWatcher [8]
+    0	     0	 98980	extensionHost [8]
+    0	    98	 98981	extensionHost [8]
+    0	     0	 98982	extensionHost [8]
+
+Workspace Stats: 
+|  Window (Preview 2025-10-18_17-20Z-understanding-logo-and-wordmark-downloads.md — limitless-integration-quickstart)
+|  Window (LINKS-other-granolalike.md — crunchy-was-granola)
+|  Window (README.md — peeq-voicegen-audiocast)
+|  Window (Behind the scenes - Change how people think about the world.md — writing-quality)
+|  Window (README.md — repo-evaluator)
+|  Window (REINS.md — best-practices)
+|  Window (Preview ALL-SMOL-AI-2026-02-15T20-53-41Z.md — smol-developer)
+|  Window (Preview sandstorm-search.md — sandstorm)
+|  Window (Preview EXEC-BRIEF-CSL-Leadership-Feb4.md — peeq-crb-nexus)
+|  Window (agentic-ux)
+|  Window (ghtrend_and_upstream_tools_fc74b0fc.plan.md — dotfiles)
+|  Window (Preview BRAND-GUIDELINES.md — officialspay-biz)
+|  Window (Browser Tab — officialspay-webapp)
+|  Window (GWS-GUIDE.md — google-workspace-tools)
+|  Window (namecheap-dns-console-workaround.js — traub-umpire-empire)
+|  Window (Preview DNS-MIGRATION.md — officialspay-infra)
+|  Window (HUMAN_SHIELD_MANIFESTO.md — ai-veracity-chains)
+|  Window (Great question — and the timing is perfe • Untitled-1 — skills-quickstart)
+|  Window (SLOW_MANIFESTO.md — code-sculpting)
+|  Window (README.md — slack-ecosystem)
+|  Window (SCULPTING-PHASE.md — projects)
+|  Window (Cursor Settings — umpire-empire)
+|  Window (payapp-firebase)
+|  Window (main.py — vscode-extensions)
+|  Window (I want you to delve deep into this conti • Untitled-1 — continuous-ai)
+|  Window (consorvia-community)
+|    Folder (payapp-firebase): 17 files
+|      File types: json(2) md(2) mdc(1) cursorindexingignore(1) nix(1)
+|                  gitignore(1) html(1) js(1)
+|      Conf files:
+|    Folder (officialspay-webapp): 22 files
+|      File types: md(3) json(2) gitignore(2) mdc(1) cursorindexingignore(1)
+|                  example(1) yml(1) html(1)
+|      Conf files: github-actions(1)
+|    Folder (officialspay-infra): 40 files
+|      File types: md(13) sh(9) json(3) gitignore(2) mdc(1)
+|                  cursorindexingignore(1) yaml(1) toml(1)
+|      Conf files:
+|    Folder (officialspay-biz): 30 files
+|      File types: md(13) json(2) gitignore(2) mdc(1) cursorindexingignore(1)
+|      Conf files:
+|    Folder (repo-evaluator): 35 files
+|      File types: md(9) json(4) py(3) mdc(2) gitignore(2)
+|                  cursorindexingignore(1) txt(1)
+|      Conf files:
+|    Folder (smol-developer): 88 files
+|      File types: md(16) py(13) png(9) js(8) json(6) html(3) css(3)
+|                  gitignore(2) mdc(1) cursorindexingignore(1)
+|      Conf files: devcontainer.json(1) dockerfile(1) makefile(1)
+|    Folder (limitless-integration-quickstart): 300 files
+|      File types: js(91) map(76) json(46) ts(7) svg(7) woff2(6) tsx(6) css(5)
+|                  md(4) gitignore(2)
+|      Conf files: package.json(2) tsconfig.json(1)
+|    Folder (skills-quickstart): 420 files
+|      File types: xsd(117) py(65) ttf(54) md(45) txt(45) xml(6) json(3)
+|                  gitignore(2) pdf(2) sh(2)
+|      Conf files:
+|    Folder (code-sculpting): 599 files
+|      File types: nix(211) md(77) png(64) py(31) lua(29) graffle(17) html(11)
+|                  mhtml(7) gitignore(6) ipynb(6)
+|      Conf files: package.json(1)
+|    Folder (slack-ecosystem): 856 files
+|      File types: go(556) md(32) json(30) sh(10) rst(7) sql(7) gz(6) yml(5)
+|                  html(5) gitignore(4)
+|      Conf files: makefile(3) dockerfile(2) devcontainer.json(1)
+|    Folder (sandstorm): 2468 files
+|      File types: py(1280) pyc(480) typed(30) pxd(27) txt(26) pyx(25) md(20)
+|                  pyi(19) so(8) json(6)
+|      Conf files: github-actions(4)
+|    Folder (writing-quality): 6400 files
+|      File types: py(2307) pyc(2304) json(575) pyi(67) proto(63) txt(49)
+|                  typed(48) md(35) mhtml(9) so(6)
+|      Conf files:
+|    Folder (continuous-ai): more than 108230 files
+|      File types: json(8219) eml(8006) md(3557) txt(31) py(9) jsonl(7) log(4)
+|                  DS_Store(3) mdc(2) gitignore(2)
+|      Conf files: settings.json(1)
+|    Folder (agentic-ux): 4534 files
+|      File types: ts(1230) tsx(920) json(392) mdx(188) md(185) sql(180)
+|                  png(90) mjs(86) svg(46) yml(40)
+|      Conf files: package.json(40) tsconfig.json(36) dockerfile(10)
+|                  devcontainer.json(2) settings.json(2) cursorrules(2)
+|    Folder (best-practices): 7223 files
+|      File types: md(1875) py(903) png(671) go(579) jpg(415) ts(308)
+|                  yaml(196) yml(176) json(149) txt(65)
+|      Conf files: dockerfile(19) csproj(9) package.json(7) tsconfig.json(5)
+|                  makefile(4) devcontainer.json(2) cursorrules(1)
+|                  settings.json(1)
+|    Folder (umpire-empire): 18060 files
+|      File types: py(7574) md(3802) pyc(1510) pyi(434) js(415) ts(230)
+|                  tsx(218) json(213) gz(186) csv(174)
+|      Conf files: package.json(12) tsconfig.json(5) dockerfile(2)
+|                  cursorrules(1) settings.json(1) tslint.json(1)
+|                  launch.json(1)
+|    Folder (traub-umpire-empire): more than 20282 files
+|      File types: py(7497) pyc(4240) md(3543) json(673) pyi(670) f90(122)
+|                  txt(116) so(102) jpg(91) typed(74)
+|      Conf files: package.json(4) settings.json(1)
+|    Folder (peeq-crb-nexus): more than 20991 files
+|      File types: py(5968) pyc(5286) md(3302) pyi(385) h(290) txt(187)
+|                  so(123) typed(102) pxi(78) f90(61)
+|      Conf files: package.json(1)
+|    Folder (consorvia-community): 13631 files
+|      File types: md(7988) csv(1213) json(687) go(537) png(365) jpg(152)
+|                  js(134) py(104) tsx(97) css(35)
+|      Conf files: package.json(4) makefile(3) tsconfig.json(2)
+|                  settings.json(2) dockerfile(2) launch.json(1)
+|                  devcontainer.json(1)
+|    Folder (crunchy-was-granola): 10294 files
+|      File types: py(1186) pyc(1116) rs(1099) ts(670) png(572) tsx(547)
+|                  toml(448) mdx(368) json(272) js(180)
+|      Conf files: package.json(76) tsconfig.json(66) dockerfile(6)
+|                  settings.json(2)
+|    Folder (ai-veracity-chains): 10576 files
+|      File types: class(1317) json(1046) java(976) py(889) md(777) rs(314)
+|                  png(250) css(164) yml(142) properties(119)
+|      Conf files: dockerfile(17) package.json(13) makefile(7)
+|                  tsconfig.json(7) project.json(3) settings.json(2)
+|                  webpack.config.js(1) devcontainer.json(1)
+|    Folder (dotfiles): more than 21544 files
+|      File types: hpp(4831) md(4328) json(977) zsh(712) xml(639) h(507)
+|                  cpp(471) ipp(462) yaml(425) zsh-theme(290)
+|      Conf files: makefile(70) cmake(19) settings.json(10) package.json(5)
+|                  devcontainer.json(2) webpack.config.js(2) tsconfig.json(2)
+|                  dockerfile(1) gulp.js(1)
+|    Folder (peeq-voicegen-audiocast): more than 20842 files
+|      File types: md(2856) sh(2473) py(1736) yaml(1311) ts(1268) conf(1091)
+|                  json(552) png(502) tsx(482) swift(327)
+|      Conf files: package.json(29) dockerfile(23) tsconfig.json(19)
+|                  settings.json(10) tasks.json(6) makefile(5) project.json(5)
+|                  devcontainer.json(5) launch.json(2) webpack.config.js(1)
+|                  csproj(1) sln(1) cursorrules(1)
+|    Folder (vscode-extensions): more than 20704 files
+|      File types: js(6759) py(2455) vsix(1250) pyc(904) md(595) ts(570)
+|                  go(305) pyi(253) vue(238) json(230)
+|      Conf files: package.json(129) cursorrules(112) tsconfig.json(16)
+|                  launch.json(5) dockerfile(4) settings.json(4)
+|                  tasks.json(4) webpack.config.js(3) jsconfig.json(1)
+|                  makefile(1) tslint.json(1)
+|    Folder (projects): more than 24760 files
+|      File types: py(1843) md(1379) class(1317) json(1310) go(1136) java(976)
+|                  yaml(824) jsonl(690) pyc(665) png(397)
+|      Conf files: dockerfile(30) package.json(27) makefile(24)
+|                  tsconfig.json(20) settings.json(5) project.json(4)
+|                  devcontainer.json(2) webpack.config.js(1)
+|    Folder (google-workspace-tools): more than 66179 files
+|      File types: json(2266) ts(1841) py(1134) npmignore(601) js(498)
+|                  pyc(446) md(411) gs(223) png(198) html(132)
+|      Conf files: package.json(645) tsconfig.json(617) webpack.config.js(8)
+|                  settings.json(7) dockerfile(6) launch.json(2)
+|                  tasks.json(1) devcontainer.json(1) tslint.json(1)
+|                  gulp.js(1)
+
+

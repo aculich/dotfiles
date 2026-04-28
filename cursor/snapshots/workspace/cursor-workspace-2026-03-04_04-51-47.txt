@@ -1,0 +1,114 @@
+
+Version:          Cursor 2.5.26 (7d96c2a03bb088ad367615e9da1a3fe20fbbc6a0, 2026-02-26T04:57:56.825Z)
+OS Version:       Darwin arm64 25.3.0
+CPUs:             Apple M3 Max (14 x 2400)
+Memory (System):  96.00GB (9.63GB free)
+Load (avg):       18, 20, 21
+VM:               0%
+Screen Reader:    yes
+Process Argv:     
+GPU Status:       2d_canvas:                              enabled
+                  direct_rendering_display_compositor:    disabled_off_ok
+                  gpu_compositing:                        enabled
+                  multiple_raster_threads:                enabled_on
+                  opengl:                                 enabled_on
+                  rasterization:                          enabled
+                  raw_draw:                               disabled_off_ok
+                  skia_graphite:                          disabled_off
+                  trees_in_viz:                           disabled_off
+                  video_decode:                           enabled
+                  video_encode:                           enabled
+                  webgl:                                  enabled
+                  webgl2:                                 enabled
+                  webgpu:                                 enabled
+                  webnn:                                  disabled_off
+
+CPU %	Mem MB	   PID	Process
+    3	   786	 43988	cursor main
+   19	    98	 43991	   gpu-process
+  108	  5210	 44001	window [7] (OfficialsPay — umpire-empire)
+    0	   197	 44131	   window
+    0	    98	 44377	shared-process
+    0	    98	 44386	fileWatcher [7]
+    0	  3244	 44387	extensionHost [7]
+    0	     0	 45752	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=44387
+    0	     0	 46147	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=44387
+    0	     0	 47195	     electron-nodejs (server-node.js )
+    0	     0	 48235	     /Users/me/.cursor/extensions/openai.chatgpt-0.4.79-darwin-arm64/bin/macos-aarch64/codex app-server --analytics-default-enabled
+    0	     0	 48247	     electron-nodejs (languageserver.js )
+    0	    98	 48250	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.5.6-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=44387
+    0	   197	 48655	     electron-nodejs (tailwindServer.js )
+    0	     0	 50244	     node /Users/me/projects/zoom-deeplistening-agents/tools/zoom-mcp-server/src/index.js
+    0	     0	 50246	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 89106	     electron-nodejs (eslintServer.js )
+    0	    98	 89108	     tsserver[5.9.3]: syntax
+    0	  1081	 89109	     tsserver[5.9.3]: semantic
+    0	     0	 89110	       /Applications/Cursor.app/Contents/Resources/app/resources/helpers/node /Users/me/projects/traub-umpire-empire/umpire-empire/node_modules/typescript/lib/typingsInstaller.js --globalTypingsCacheLocation /Users/me/Library/Caches/typescript/5.9 --enableTelemetry --typesMapLocation /Users/me/projects/traub-umpire-empire/umpire-empire/node_modules/typescript/lib/typesMap.json --validateDefaultNpmLocation
+    1	    98	 44411	ptyHost
+    0	     0	  3978	     /bin/zsh -i
+    0	     0	 11033	     /bin/zsh -il
+    0	     0	 17754	       /bin/bash ./workspace-snapshot.sh
+    0	     0	 17915	         /bin/bash ./workspace-snapshot.sh
+    0	     0	 17916	           zsh ./dump-cursor-windows.sh
+    0	     0	 17926	             bash /opt/homebrew/bin/cursor --status
+    2	    98	 17932	               electron-nodejs (cli.js )
+    0	     0	 11151	     /bin/zsh -il
+    0	     0	 17369	       /bin/bash ./browser-session
+   51	    98	 17375	         /opt/homebrew/Cellar/python@3.13/3.13.12_1/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python -m src.main
+    0	     0	 12529	     /bin/zsh -il
+    0	     0	 17296	     /bin/zsh -il
+    0	     0	 17846	     /bin/zsh -i
+    0	     0	 21094	     /bin/zsh -il
+    0	     0	 25066	     /bin/zsh -il
+    0	     0	 50909	       watch -n30 npm run deploy:status:latest
+    0	     0	 34396	     /bin/zsh -il
+    0	     0	 35059	     /bin/zsh -i
+    0	     0	 36253	     /bin/zsh -il
+    0	     0	 38117	     /bin/zsh -il
+    0	     0	 47529	     /opt/homebrew/bin/bash --init-file /Applications/Cursor.app/Contents/Resources/app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh
+    0	     0	 48984	     /bin/zsh -il
+    0	     0	 58521	     /bin/zsh -il
+    0	    98	 95223	       npm run dev
+    0	    98	 95287	         node /Users/me/projects/traub-umpire-empire/umpire-empire/node_modules/.bin/next dev -p 3001
+    0	   295	 95317	           next-server (v15.5.12)
+    0	     0	 77146	     /bin/zsh -il
+    0	     0	 89566	     /bin/zsh -il
+    0	    98	 44414	extensionHost [7]
+    0	   393	 44415	extensionHost [7]
+    0	     0	 45857	     electron-nodejs (gitWorker.js )
+    0	   197	 44416	extensionHost [7]
+    0	     0	 54355	   utility-process
+
+Workspace Stats: 
+|  Window (perplexity-futureproof-webstack-2026)
+|  Window (Review: Namecheap DNS CNAME record workaround — traub-umpire-empire)
+|  Window (README.md — peeq-voicegen-audiocast)
+|  Window (what conversations in the past few weeks.ini — continuous-ai)
+|  Window (OfficialsPay — umpire-empire)
+|    Folder (perplexity-futureproof-webstack-2026): 89 files
+|      File types: md(47) css(6) html(3) json(2) mdc(1)
+|                  cursorindexingignore(1) gitignore(1) js(1)
+|      Conf files:
+|    Folder (continuous-ai): more than 108325 files
+|      File types: json(8192) eml(7975) md(3593) txt(31) py(9) jsonl(7) log(4)
+|                  DS_Store(3) sh(3) mdc(2)
+|      Conf files: launch.json(1) settings.json(1)
+|    Folder (umpire-empire): 18674 files
+|      File types: py(7574) md(3975) pyc(1510) pyi(434) csv(417) tsx(294)
+|                  ts(277) gz(226) json(209) txt(157)
+|      Conf files: package.json(12) tsconfig.json(5) dockerfile(2)
+|                  cursorrules(1) github-actions(1) settings.json(1)
+|                  tslint.json(1) launch.json(1)
+|    Folder (traub-umpire-empire): more than 20697 files
+|      File types: py(7287) pyc(4297) md(3575) json(745) pyi(669) f90(122)
+|                  txt(117) so(102) jpg(91) typed(74)
+|      Conf files: package.json(4) project.json(2) settings.json(1)
+|    Folder (peeq-voicegen-audiocast): more than 21092 files
+|      File types: py(3389) md(2904) ts(2038) tsx(1019) json(791) pyc(734)
+|                  sh(587) png(544) swift(327) meta(312)
+|      Conf files: package.json(111) tsconfig.json(76) dockerfile(25)
+|                  settings.json(12) tasks.json(6) makefile(5) project.json(5)
+|                  devcontainer.json(5) launch.json(2) webpack.config.js(1)
+|                  csproj(1) sln(1) mcp.json(1) cursorrules(1)
+
+

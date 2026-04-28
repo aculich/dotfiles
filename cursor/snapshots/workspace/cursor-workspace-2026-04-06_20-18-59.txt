@@ -1,0 +1,296 @@
+
+Version:          Cursor 3.1.0-pre.11.patch.0 (d4716cbb846c02f4e90fc58203398326a956ee70, 2026-04-06T05:59:57.723Z)
+OS Version:       Darwin arm64 25.3.0
+CPUs:             Apple M3 Max (14 x 2400)
+Memory (System):  96.00GB (0.48GB free)
+Load (avg):       74, 43, 37
+VM:               0%
+Screen Reader:    yes
+Process Argv:     
+GPU Status:       2d_canvas:                              enabled
+                  direct_rendering_display_compositor:    disabled_off_ok
+                  gpu_compositing:                        enabled
+                  multiple_raster_threads:                enabled_on
+                  opengl:                                 enabled_on
+                  rasterization:                          enabled
+                  raw_draw:                               disabled_off_ok
+                  skia_graphite:                          disabled_off
+                  trees_in_viz:                           disabled_off
+                  video_decode:                           enabled
+                  video_encode:                           enabled
+                  webgl:                                  enabled
+                  webgl2:                                 enabled
+                  webgpu:                                 enabled
+                  webnn:                                  disabled_off
+
+CPU %	Mem MB	   PID	Process
+   16	   492	 98586	cursor main
+   26	   197	 98630	   gpu-process
+    0	    98	 98632	   utility-network-service
+    1	   590	 98686	window [1] (Technical_Proposal_25MSC005.md — peeq-carb)
+   27	   590	 98687	window [2] (summary.txt — continuous-ai)
+    1	   492	 98698	window [3] (future-agentic-browsing.md — webarchiving)
+    1	   393	 98699	window [4] (Preview INTENT.md — bulkllm)
+    4	   295	 98700	window [5] (Preview ENVISION.md — paperclip-quickstart)
+    0	   492	 98701	window [6] (Browser Tab — rowboat-quickstart)
+    4	   393	 98702	window [7] (Preview README.md — obsidian-tools)
+    0	   492	 98703	window [8] (BV.md — localllm)
+    1	   492	 98704	window [9] (mac_local_llm_installfest_45a3ddaf.plan.md — sovereign-ai-offlineiq)
+    1	   492	 98705	window [10] (Preview GLOSSARY.md — openpaper)
+    1	   492	 98716	window [11] (dashboard_year_scope_redesign_6d910bbd.plan.md — umpire-empire)
+    0	   393	 98717	window [12] (Keyboard Shortcuts — cursor)
+    1	   393	 98718	window [13] (Preview CURSOR_FEATURE_REQUEST_CHANGELOG_IMPROVEMENTS.md — cursor-changelog)
+    1	   492	 98719	window [14] (CiDR Formation Guide.md — cidr-org)
+    4	   295	 98720	window [15] (Preview CiDR Formation Guide.md — llc-admin)
+    0	   393	 98721	window [16] (LINKS-astera.md — astera-envisioning)
+    1	   393	 98722	window [17] (Cursor Agents)
+    0	    98	 98954	fileWatcher [10]
+    0	    98	 98955	fileWatcher [17]
+    0	    98	 98956	fileWatcher [5]
+    0	    98	 98957	fileWatcher [1]
+    0	    98	 98958	fileWatcher [2]
+    0	    98	 98960	fileWatcher [13]
+    0	    98	 98961	fileWatcher [8]
+    0	    98	 98962	fileWatcher [14]
+    0	    98	 98963	fileWatcher [3]
+    0	    98	 98964	fileWatcher [9]
+    0	    98	 98965	fileWatcher [4]
+    0	    98	 98966	shared-process
+    0	    98	 98967	fileWatcher [11]
+    0	    98	 98968	fileWatcher [12]
+    0	    98	 98969	fileWatcher [7]
+    0	    98	 98971	fileWatcher [6]
+    0	    98	 98972	extensionHost [5]
+    0	   393	 98973	extensionHost [4]
+    0	   197	 98974	extensionHost [10]
+    0	   197	 98975	extensionHost [9]
+    0	    98	 98976	extensionHost [2]
+    1	   197	 98977	extensionHost [1]
+    0	   197	 98978	extensionHost [8]
+    0	   197	 98979	extensionHost [14]
+    0	    98	 98980	fileWatcher [16]
+    1	   197	 98983	extensionHost [13]
+    0	   197	 98992	extensionHost [3]
+    1	   295	 99004	extensionHost [11]
+    0	    98	 99012	extensionHost [12]
+    0	    98	 99014	extensionHost [17]
+    1	    98	 99035	extensionHost [7]
+    1	    98	 99037	ptyHost
+    0	     0	   243	     /bin/bash --init-file /Applications/Cursor.app/Contents/Resources/app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh
+    0	     0	   279	     /bin/bash --init-file /Applications/Cursor.app/Contents/Resources/app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh
+    0	     0	   311	     /bin/bash --init-file /Applications/Cursor.app/Contents/Resources/app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh
+    0	     0	   318	     /bin/bash --init-file /Applications/Cursor.app/Contents/Resources/app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh
+    0	     0	   345	     /bin/bash --init-file /Applications/Cursor.app/Contents/Resources/app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh
+    0	     0	   451	     /bin/bash --init-file /Applications/Cursor.app/Contents/Resources/app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh
+    0	     0	   465	     /bin/bash --init-file /Applications/Cursor.app/Contents/Resources/app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh
+    0	     0	   470	     /bin/bash --init-file /Applications/Cursor.app/Contents/Resources/app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh
+    0	     0	   497	     /bin/zsh -il
+    0	     0	   498	     /bin/zsh -il
+    0	     0	   768	     /bin/zsh -il
+    0	     0	  2252	     /bin/zsh -i
+    0	     0	  2371	     /bin/zsh -i
+    0	     0	  2920	     /bin/zsh -il
+    0	     0	  3067	     /bin/zsh -il
+    0	     0	  3073	     /bin/zsh -il
+    0	     0	  3126	     /bin/zsh -il
+    0	     0	  3155	     /bin/zsh -il
+    0	     0	  3624	     /bin/zsh -il
+    0	     0	  3782	     /bin/zsh -il
+    0	     0	  4643	     /bin/zsh -i
+    0	     0	  5051	     /bin/zsh -i
+    0	     0	  7271	     /bin/zsh -il
+    0	     0	  7346	     /bin/zsh -il
+    0	     0	  7974	     /bin/zsh -il
+    0	     0	 13603	     /bin/zsh -il
+    0	     0	 17404	     /bin/bash --init-file /Applications/Cursor.app/Contents/Resources/app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh
+    0	     0	 22348	     /bin/zsh -il
+    0	     0	 22691	     /bin/zsh -il
+    0	     0	 28734	     /bin/zsh -il
+    0	     0	 37284	     /bin/zsh -il
+    0	     0	 80413	     /bin/zsh -il
+    0	     0	 80589	     /bin/zsh -il
+    0	     0	 80795	     /bin/bash --init-file /Applications/Cursor.app/Contents/Resources/app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh
+    0	     0	 88710	     /bin/zsh -i
+    0	     0	 93011	     /bin/zsh -i
+    0	     0	 99222	     /bin/zsh -il
+    0	     0	 99230	     /bin/zsh -il
+    0	     0	 99232	     /bin/zsh -il
+    0	     0	 99236	     /bin/zsh -il
+    0	   197	 99050	extensionHost [6]
+    0	    98	 99052	extensionHost [5]
+    0	    98	 99053	extensionHost [5]
+    0	    98	 99054	extensionHost [5]
+    0	    98	 99055	extensionHost [5]
+    0	    98	 99059	extensionHost [16]
+    1	    98	 99064	extensionHost [7]
+    0	    98	 99065	extensionHost [7]
+    0	    98	 99066	extensionHost [7]
+    0	    98	 99067	extensionHost [7]
+    0	    98	 99074	   window
+    0	    98	 99076	extensionHost [10]
+    0	    98	 99077	extensionHost [10]
+    0	    98	 99078	extensionHost [10]
+    0	    98	 99079	extensionHost [10]
+    0	    98	 99092	extensionHost [1]
+    0	   197	 99093	extensionHost [1]
+    1	    98	 99094	extensionHost [1]
+    1	    98	 99095	extensionHost [1]
+    0	    98	 99109	extensionHost [2]
+    1	    98	 99110	extensionHost [2]
+    1	    98	 99111	extensionHost [2]
+    0	    98	 99112	extensionHost [2]
+    0	    98	 99115	extensionHost [16]
+    0	    98	 99116	extensionHost [16]
+    0	    98	 99117	extensionHost [16]
+    0	    98	 99118	extensionHost [16]
+    0	    98	 99129	extensionHost [8]
+    0	    98	 99130	extensionHost [8]
+    0	    98	 99131	extensionHost [8]
+    0	    98	 99132	extensionHost [8]
+    0	    98	 99134	   window
+    1	    98	 99135	extensionHost [4]
+    0	    98	 99136	extensionHost [4]
+    0	    98	 99137	extensionHost [4]
+    0	    98	 99138	extensionHost [4]
+    0	    98	 99141	extensionHost [14]
+    1	    98	 99142	extensionHost [14]
+    0	    98	 99143	extensionHost [14]
+    1	    98	 99144	extensionHost [14]
+    0	    98	 99146	extensionHost [9]
+    0	    98	 99147	extensionHost [9]
+    0	    98	 99148	extensionHost [9]
+    0	    98	 99149	extensionHost [9]
+    0	    98	 99154	extensionHost [13]
+    0	    98	 99155	extensionHost [13]
+    0	    98	 99156	extensionHost [13]
+    0	    98	 99157	extensionHost [13]
+    0	    98	 99165	extensionHost [11]
+    0	    98	 99166	extensionHost [11]
+    0	    98	 99167	extensionHost [11]
+    0	    98	 99168	extensionHost [11]
+    0	    98	 99169	extensionHost [3]
+    1	    98	 99170	extensionHost [3]
+    0	    98	 99171	extensionHost [3]
+    0	    98	 99172	extensionHost [3]
+    0	    98	 99180	extensionHost [17]
+    0	    98	 99181	extensionHost [12]
+    0	    98	 99182	extensionHost [12]
+    1	    98	 99184	extensionHost [12]
+    0	    98	 99185	extensionHost [12]
+    0	    98	 99186	extensionHost [6]
+    0	    98	 99187	extensionHost [6]
+    0	    98	 99188	extensionHost [6]
+    0	    98	 99189	extensionHost [6]
+
+Workspace Stats: 
+|  Window (Cursor Settings — bluestory)
+|  Window (.zshrc — dotfiles)
+|  Window (Extension: SpecStory — specstory-and-friends)
+|  Window (LINKS-astera.md — astera-envisioning)
+|  Window (Preview CiDR Formation Guide.md — llc-admin)
+|  Window (CiDR Formation Guide.md — cidr-org)
+|  Window (Preview CURSOR_FEATURE_REQUEST_CHANGELOG_IMPROVEMENTS.md — cursor-changelog)
+|  Window (Keyboard Shortcuts — cursor)
+|  Window (dashboard_year_scope_redesign_6d910bbd.plan.md — umpire-empire)
+|  Window (Preview GLOSSARY.md — openpaper)
+|  Window (mac_local_llm_installfest_45a3ddaf.plan.md — sovereign-ai-offlineiq)
+|  Window (BV.md — localllm)
+|  Window (Preview README.md — obsidian-tools)
+|  Window (Browser Tab — rowboat-quickstart)
+|  Window (Preview ENVISION.md — paperclip-quickstart)
+|  Window (Preview INTENT.md — bulkllm)
+|  Window (future-agentic-browsing.md — webarchiving)
+|  Window (summary.txt — continuous-ai)
+|  Window (Technical_Proposal_25MSC005.md — peeq-carb)
+|    Folder (llc-admin): 7 files
+|      File types: json(1) toml(1) md(1)
+|      Conf files:
+|    Folder (bluestory): 50 files
+|      File types: js(8) map(8) ts(8) json(7) md(4) gitignore(2)
+|                  cursorindexingignore(1) svg(1)
+|      Conf files: launch.json(1) settings.json(1) tasks.json(1)
+|                  package.json(1) tsconfig.json(1)
+|      Launch Configs: extensionHost
+|    Folder (cursor): 591 files
+|      File types: txt(352) json(189) md(17) mdc(7) sh(4) list(2)
+|                  cursorindexingignore(1) gitignore(1) toml(1) list-2025-10-02(1)
+|      Conf files: settings.json(2)
+|    Folder (astera-envisioning): 34 files
+|      File types: md(8) json(3) DS_Store(2) mdc(1) cursorindexingignore(1)
+|                  gitignore(1) toml(1) mhtml(1) pdf(1) docx(1)
+|      Conf files: settings.json(1)
+|    Folder (cursor-changelog): 469 files
+|      File types: json(418) md(18) py(6) sh(3) gitignore(2)
+|                  cursorindexingignore(1) toml(1) mp4(1) lock(1) dmg(1)
+|      Conf files: settings.json(1)
+|    Folder (specstory-and-friends): 202 files
+|      File types: md(36) txt(17) json(16) py(13) png(12) pyc(11) vsix(4)
+|                  xml(4) js(4) svg(4)
+|      Conf files: package.json(4) settings.json(1)
+|    Folder (localllm): 1443 files
+|      File types: png(612) py(246) json(92) txt(56) md(55) mp4(44) tsx(40)
+|                  jpg(36) ts(22) log(16)
+|      Conf files: package.json(5) tsconfig.json(4) settings.json(2)
+|                  makefile(1) launch.json(1) tasks.json(1)
+|    Folder (paperclip-quickstart): 2168 files
+|      File types: ts(867) tsx(204) md(202) map(160) json(103) js(81) sql(50)
+|                  ndjson(28) astro(26) svg(25)
+|      Conf files: package.json(23) tsconfig.json(23) dockerfile(4)
+|                  settings.json(1) makefile(1)
+|    Folder (bulkllm): 2294 files
+|      File types: md(542) ts(348) js(231) png(72) yml(66) json(43) vue(30)
+|                  old(24) py(21) svg(19)
+|      Conf files: settings.json(5) package.json(5) tsconfig.json(2)
+|                  launch.json(1) gulp.js(1) jsconfig.json(1)
+|    Folder (peeq-carb): 3676 files
+|      File types: py(1094) pyc(1082) pdf(200) gz(148) md(101) h(83) txt(57)
+|                  docx(44) pyi(37) png(35)
+|      Conf files: settings.json(1)
+|    Folder (sovereign-ai-offlineiq): 6609 files
+|      File types: rs(2626) ts(790) json(254) tsx(233) md(207) png(194)
+|                  svg(117) cc(105) py(103) vue(100)
+|      Conf files: package.json(18) tsconfig.json(11) dockerfile(8)
+|                  makefile(3) settings.json(1) launch.json(1)
+|    Folder (webarchiving): 3264 files
+|      File types: html(461) py(399) json(296) txt(277) png(129) ico(113)
+|                  gz(112) pdf(107) js(89) md(61)
+|      Conf files: dockerfile(5) package.json(2) makefile(2) settings.json(1)
+|                  tsconfig.json(1)
+|    Folder (rowboat-quickstart): 16987 files
+|      File types: md(9693) jsonl(1696) js(1131) ts(1006) tsx(613) png(591)
+|                  pak(223) json(190) ics(105) pdf(85)
+|      Conf files: package.json(21) tsconfig.json(18) dockerfile(10)
+|                  settings.json(1) mcp.json(1)
+|    Folder (cidr-org): 8444 files
+|      File types: jpg(1987) css(1261) png(958) map(727) js(568) html(321)
+|                  woff2(154) DS_Store(128) eps(126) md(125)
+|      Conf files: settings.json(2) package.json(1)
+|    Folder (umpire-empire): more than 21170 files
+|      File types: json(6905) md(4261) py(1990) csv(1427) pyc(677) xlsx(551)
+|                  pyi(363) js(362) xls(358) pdf(214)
+|      Conf files: package.json(6) tsconfig.json(3) settings.json(2)
+|                  cursorrules(1) github-actions(1)
+|    Folder (continuous-ai): more than 109882 files
+|      File types: json(8781) eml(7210) md(3653) txt(33) yml(17) ts(14) py(11)
+|                  sql(8) jsonl(7) gitignore(5)
+|      Conf files: settings.json(2) launch.json(1)
+|    Folder (obsidian-tools): more than 22896 files
+|      File types: md(10874) ts(2288) svg(1068) png(951) json(565) js(339)
+|                  tsx(200) py(199) css(162) mjs(147)
+|      Conf files: package.json(81) tsconfig.json(72) settings.json(6)
+|                  dockerfile(3) jsconfig.json(2) webpack.config.js(2)
+|                  makefile(1) tasks.json(1)
+|    Folder (dotfiles): more than 21602 files
+|      File types: md(4558) pyi(1801) hpp(1503) json(1408) zsh(713) log(667)
+|                  py(647) xml(639) cpp(455) txt(420)
+|      Conf files: makefile(32) package.json(17) settings.json(15)
+|                  tsconfig.json(4) dockerfile(3) webpack.config.js(3)
+|                  cmake(3) devcontainer.json(2) mcp.json(1)
+|                  gulp.js(1) launch.json(1) tasks.json(1)
+|    Folder (openpaper): more than 22039 files
+|      File types: py(5742) json(2048) gz(1954) pyc(1684) pyi(1428) so(268)
+|                  tsx(157) js(154) txt(137) md(126)
+|      Conf files: package.json(4) dockerfile(4) tsconfig.json(2)
+|                  github-actions(1) settings.json(1)
+
+
