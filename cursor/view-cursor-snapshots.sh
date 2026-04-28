@@ -3,12 +3,13 @@
 # Helper script to view and compare Cursor workspace snapshots
 
 script_dir="${0:a:h}"
+snapshot_dir="${SNAPSHOT_DIR:-${script_dir}/snapshots/workspace}"
 
 # List all snapshots
-snapshots=(${script_dir}/cursor-workspace-*.json(N))
+snapshots=(${snapshot_dir}/cursor-workspace-*.json(N))
 
 if [[ ${#snapshots[@]} -eq 0 ]]; then
-    echo "❌ No snapshots found in ${script_dir}"
+    echo "❌ No snapshots found in ${snapshot_dir}"
     echo "Run ./dump-cursor-windows.sh to create a snapshot first."
     exit 1
 fi

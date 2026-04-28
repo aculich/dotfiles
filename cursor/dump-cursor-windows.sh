@@ -6,8 +6,10 @@
 # Create timestamp
 timestamp=$(date +%Y-%m-%d_%H-%M-%S)
 
-# Output directory (same as script location by default)
-output_dir="${0:a:h}"
+# Output directory: SNAPSHOT_DIR, or snapshots/workspace next to this script
+script_dir="${0:a:h}"
+output_dir="${SNAPSHOT_DIR:-${script_dir}/snapshots/workspace}"
+mkdir -p "$output_dir"
 base_name="cursor-workspace-${timestamp}"
 
 # Output files

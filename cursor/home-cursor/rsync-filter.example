@@ -1,0 +1,22 @@
+# Example rsync filter for a one-way mirror of parts of ~/.cursor into a shadow directory.
+# Copy to e.g. rsync-filter and use: rsync -a --filter='merge rsync-filter' ~/.cursor/ ./shadow/.cursor/
+# Review before use; do not log or commit secrets.
+
++ /mcp.json
++ /hooks.json
++ /cli-config.json
++ /argv.json
++ /rules/
++ /rules/**
+- /chats/
+- /projects/
+- /worktrees/
+- /extensions/
+- /browser-logs/
+- /ai-tracking/
+- /workers/
+- /plans/
+# adjust: include /plans/ if you want a copy of global plans
+- /ide_state.json
+- /prompt_history.json
+- .*
