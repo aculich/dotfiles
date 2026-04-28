@@ -2,9 +2,17 @@
 
 This document provides a comprehensive inventory of all configuration files and directories in both the live Cursor configuration (`~/.cursor`) and the dotfiles repository (`~/dotfiles/cursor`).
 
-**Last Updated**: 2026-01-11
+**Last Updated**: 2026-04-28
 
 ## Directory Overview
+
+### This repository: `~/dotfiles/cursor`
+
+- **`snapshots/workspace/`** — timestamped `cursor-workspace-*.{json,txt,-extensions.txt}` from [dump-cursor-windows.sh](dump-cursor-windows.sh) (default output; override with `SNAPSHOT_DIR`)
+- **`observability/perf/`** — ad-hoc process/status logs and diagnostics (formerly `cursor-perf/`)
+- **`observability/inventories/`** — optional JSON from [scripts/cursor-home-inventory.sh](scripts/cursor-home-inventory.sh) (gitignored; use `git add -f` to baseline)
+- **`attic/`** — archived or low-priority material (moved, not deleted)
+- **`home-cursor/`** — optional allowlist of copied global config; see [home-cursor/README.md](home-cursor/README.md) and [docs/cursor-home-and-plans.md](docs/cursor-home-and-plans.md)
 
 ### Live Configuration: `~/.cursor`
 **Purpose**: Runtime directory where Cursor reads active configuration. This is the **source of truth** for the running Cursor instance.
@@ -217,13 +225,19 @@ This document provides a comprehensive inventory of all configuration files and 
 ### Snapshot System
 
 #### Workspace Snapshots
-- **Location**: `~/dotfiles/cursor/cursor-workspace-*.{txt,json,extensions.txt}`
-- **Sync Strategy**: ✅ **VERSION CONTROLLED** - Historical snapshots
+- **Location**: `~/dotfiles/cursor/snapshots/workspace/cursor-workspace-*.{txt,json,extensions.txt}` (and legacy copies may still exist in git history at `cursor/cursor-workspace-*`)
+- **Sync Strategy**: Some snapshot sets are **version controlled**; new dumps are **gitignored** by default (see root `.gitignore` — use `git add -f` to commit a snapshot intentionally)
 - **Purpose**: Timestamped workspace state snapshots
-- **Count**: 50+ snapshot sets (Oct 2025 - Jan 2026)
+- **Count**: 50+ snapshot sets (Oct 2025+)
 - **Scripts**:
-  - `dump-cursor-windows.sh` - Create snapshots
+  - `dump-cursor-windows.sh` - Create snapshots (`SNAPSHOT_DIR` optional)
   - `view-cursor-snapshots.sh` - View and compare snapshots
+
+#### Tracking `~/.cursor` from this repo
+- **Allowlist:** copy or symlink selected files into `home-cursor/` (see [home-cursor/README.md](home-cursor/README.md)) — not a full mirror
+- **Inventory:** [scripts/cursor-home-inventory.sh](scripts/cursor-home-inventory.sh) — JSON listing with excludes for `chats/`, `projects/`, `worktrees/`, `extensions/`, etc.
+- **Plans:** [scripts/catalog-cursor-plans.sh](scripts/catalog-cursor-plans.sh); details in [docs/cursor-home-and-plans.md](docs/cursor-home-and-plans.md)
+- **Rsync (advanced):** [home-cursor/rsync-filter.example](home-cursor/rsync-filter.example)
 
 #### Snapshot Contents
 Each snapshot includes:
@@ -238,6 +252,8 @@ Each snapshot includes:
 - **Sync Strategy**: ✅ **VERSION CONTROLLED**
 - **Scripts**:
   - `activate-mcp-toolbox.sh` - Activate MCP toolbox for project
+  - `cursor-home-inventory.sh` - JSON inventory of `~/.cursor` (with excludes)
+  - `catalog-cursor-plans.sh` - List `*.plan.md` in global and optional project paths
 
 #### Root Scripts
 - `dump-cursor-windows.sh` - Create workspace snapshot

@@ -140,9 +140,9 @@ This document maps the current state of Cursor configuration, including existing
    - These should NOT be versioned but may need archival strategy
 
 2. **Snapshot Accumulation**
-   - 50+ workspace snapshots in dotfiles
+   - 50+ workspace snapshots under `~/dotfiles/cursor/snapshots/workspace/`
    - Consider archival strategy for old snapshots
-   - May want to compress or move to archives/
+   - May want to compress or move to `archives/` (see [README.md](README.md))
 
 ## Symlink Strategy Analysis
 

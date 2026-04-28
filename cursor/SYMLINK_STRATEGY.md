@@ -78,7 +78,7 @@ This document defines the symlink strategy for managing Cursor configuration fil
 | `extensions.list*` | `~/dotfiles/cursor/extensions.list*` | Extension inventory |
 | `mcp-toolboxes/` | `~/dotfiles/cursor/mcp-toolboxes/` | MCP toolbox definitions |
 | `scripts/` | `~/dotfiles/cursor/scripts/` | Management scripts |
-| `cursor-workspace-*.{txt,json}` | `~/dotfiles/cursor/` | Historical snapshots |
+| `snapshots/workspace/cursor-workspace-*.{txt,json}` | `~/dotfiles/cursor/` | Historical workspace snapshots |
 | `README*.md` | `~/dotfiles/cursor/` | Documentation |
 
 **Rationale**: These are reference files, templates, or historical data that don't need to be symlinked.

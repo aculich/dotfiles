@@ -36,7 +36,7 @@ brew install jq
 
 Creates a timestamped snapshot of your Cursor workspace.
 
-**Creates 3 files:**
+**Creates 3 files** under `snapshots/workspace/` (or `SNAPSHOT_DIR` if set):
 1. `cursor-workspace-YYYY-MM-DD_HH-MM-SS.txt` - Full `cursor --status` output
 2. `cursor-workspace-YYYY-MM-DD_HH-MM-SS.json` - Structured data extract
 3. `cursor-workspace-YYYY-MM-DD_HH-MM-SS-extensions.txt` - Installed extensions
@@ -151,6 +151,7 @@ cd ~/dotfiles/cursor && ./dump-cursor-windows.sh
 ### 4. Extension Audits
 ```bash
 # Track extension changes over time
+cd snapshots/workspace
 diff cursor-workspace-2025-10-01_*-extensions.txt \
      cursor-workspace-2025-10-29_*-extensions.txt
 ```
@@ -160,19 +161,19 @@ diff cursor-workspace-2025-10-01_*-extensions.txt \
 ### Filtering with jq
 
 ```bash
-# Get all workspaces
-jq -r '.windows[].workspace' cursor-workspace-*.json | sort -u
+# Get all workspaces (from repo root: use snapshots/workspace/)
+jq -r '.windows[].workspace' snapshots/workspace/cursor-workspace-*.json | sort -u
 
 # Count windows per workspace
-jq -r '.windows[] | .workspace' cursor-workspace-*.json | \
+jq -r '.windows[] | .workspace' snapshots/workspace/cursor-workspace-*.json | \
   sort | uniq -c | sort -rn
 
 # Find all markdown files
-jq -r '.recent_files[] | select(endswith(".md"))' cursor-workspace-*.json
+jq -r '.recent_files[] | select(endswith(".md"))' snapshots/workspace/cursor-workspace-*.json
 
 # Get workspaces with most files
 jq -r '.workspace_stats | to_entries[] | 
-  "\(.key): \(.value)"' cursor-workspace-*.json | \
+  "\(.key): \(.value)"' snapshots/workspace/cursor-workspace-*.json | \
   grep -o '[0-9]* files' | sort -rn
 ```
 
@@ -181,7 +182,7 @@ jq -r '.workspace_stats | to_entries[] |
 ```bash
 # Archive old snapshots
 mkdir -p archives/$(date +%Y-%m)
-mv cursor-workspace-*.{txt,json} archives/$(date +%Y-%m)/
+mv snapshots/workspace/cursor-workspace-*.{txt,json} archives/$(date +%Y-%m)/
 ```
 
 ## Data Sources
@@ -212,8 +213,9 @@ The scripts extract data from:
 - Ensure Cursor is running when taking snapshot
 - Check that paths in script match your system
 
-## File Locations
+## File locations
 
-All snapshots are stored in the same directory as the scripts:
-- Default: `~/dotfiles/cursor/`
-- Customize by editing `output_dir` in `dump-cursor-windows.sh`
+- **Default output:** `~/dotfiles/cursor/snapshots/workspace/`
+- **Override:** set `SNAPSHOT_DIR` when running `dump-cursor-windows.sh` or `view-cursor-snapshots.sh` (e.g. `SNAPSHOT_DIR=/path ./dump-cursor-windows.sh`).
+
+**Related:** [docs/cursor-home-and-plans.md](docs/cursor-home-and-plans.md) (tracking `~/.cursor`, plan catalogs, observability).
