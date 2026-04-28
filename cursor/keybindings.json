@@ -467,6 +467,28 @@
     "command": "editor.action.inlineDiffs.acceptAll",
     "when": "editorTextFocus && inlineDiffs.activeEditorWithDiffs"
   },
+
+  // Next / previous diff hunk (compare editor + editor SCM diff): Option+J / Option+K (same family as inlineDiffs.*)
+  {
+    "key": "alt+j",
+    "command": "workbench.action.compareEditor.nextChange",
+    "when": "textCompareEditorVisible"
+  },
+  {
+    "key": "alt+k",
+    "command": "workbench.action.compareEditor.previousChange",
+    "when": "textCompareEditorVisible"
+  },
+  {
+    "key": "alt+j",
+    "command": "workbench.action.editor.nextChange",
+    "when": "editorTextFocus && !textCompareEditorActive && !inlineDiffs.activeEditorWithDiffs"
+  },
+  {
+    "key": "alt+k",
+    "command": "workbench.action.editor.previousChange",
+    "when": "editorTextFocus && !textCompareEditorActive && !inlineDiffs.activeEditorWithDiffs"
+  },
 ]
 
 // NOTES:

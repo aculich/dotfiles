@@ -2,8 +2,8 @@
   "redhat.telemetry.enabled": true,
   "yaml.schemas": {
     "file:///Users/me/.vscode/extensions/continue.continue-1.2.3-darwin-arm64/config-yaml-schema.json": [
-      ".continue/**/*.yaml"
-    ]
+      ".continue/**/*.yaml",
+    ],
   },
   "github.copilot.nextEditSuggestions.enabled": true,
   "project-scopes.globalExclude": {
@@ -11,7 +11,7 @@
     "**/.svn": true,
     "**/.hg": true,
     "**/.DS_Store": true,
-    "**/Thumbs.db": true
+    "**/Thumbs.db": true,
   },
   "editor.accessibilitySupport": "off",
   "docker.extension.enableComposeLanguageServer": false,
@@ -24,7 +24,7 @@
   "claudeCode.preferredLocation": "panel",
   "specstory.derivedRules.enabled": false,
   "specstory.showDeveloperTools": true,
-  "workbench.colorTheme": "Default Light+",
+  "workbench.colorTheme": "Default Dark+",
   "zenMode.restore": false,
   "terminal.integrated.persistentSessionReviveProcess": "never",
   "codegenPreflight.anthropicApiKey": "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",
@@ -42,11 +42,11 @@
     "*.sqlite3": "${capture}.${extname}-*",
     "*.db3": "${capture}.${extname}-*",
     "*.sdb": "${capture}.${extname}-*",
-    "*.s3db": "${capture}.${extname}-*"
+    "*.s3db": "${capture}.${extname}-*",
   },
   "cSpell.enabled": false,
   "remote.SSH.remotePlatform": {
-    "klein.berkeley.edu": "linux"
+    "klein.berkeley.edu": "linux",
   },
   "claudeCode.useTerminal": true,
   "claudeCode.allowDangerouslySkipPermissions": true,
@@ -60,5 +60,5 @@
   "update.releaseTrack": "dev",
   "update.mode": "silentlyApplyOnQuit",
   "githubPullRequests.pullBranch": "never",
-  "cursor.terminal.usePreviewBox": true
+  "cursor.terminal.usePreviewBox": true,
 }
