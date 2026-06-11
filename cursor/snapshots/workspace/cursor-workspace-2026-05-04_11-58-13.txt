@@ -1,0 +1,178 @@
+
+Version:          Cursor 3.3.2 (03b87c23125652298159364a70a268fdad7195d0, 2026-05-01T22:31:26.094Z)
+OS Version:       Darwin arm64 25.3.0
+CPUs:             Apple M3 Max (14 x 2400)
+Memory (System):  96.00GB (1.73GB free)
+Load (avg):       126, 213, 138
+VM:               0%
+Screen Reader:    yes
+Process Argv:     
+GPU Status:       2d_canvas:                              enabled
+                  direct_rendering_display_compositor:    disabled_off_ok
+                  gpu_compositing:                        enabled
+                  multiple_raster_threads:                enabled_on
+                  opengl:                                 enabled_on
+                  rasterization:                          enabled
+                  raw_draw:                               disabled_off_ok
+                  skia_graphite:                          disabled_off
+                  trees_in_viz:                           disabled_off
+                  video_decode:                           enabled
+                  video_encode:                           enabled
+                  webgl:                                  enabled
+                  webgl2:                                 enabled
+                  webgpu:                                 enabled
+                  webnn:                                  disabled_off
+
+CPU %	Mem MB	   PID	Process
+    0	   492	 95041	cursor main
+    0	   197	 95044	   gpu-process
+    0	    98	 95046	   utility-network-service
+    0	   492	 95048	window [1] (.env — peeq-voicegen-audiocast)
+    0	   197	 95140	extensionHost [1]
+    0	     0	 95517	     tsserver[5.3.0-dev.20230808]: syntax
+    0	     0	 95518	     tsserver[5.3.0-dev.20230808]: semantic
+    0	     0	 95543	       /Applications/Cursor.app/Contents/Resources/app/resources/helpers/node /Users/me/.cursor/extensions/ms-vscode.vscode-typescript-next-5.3.20230808-universal/node_modules/typescript/lib/typingsInstaller.js --globalTypingsCacheLocation /Users/me/Library/Caches/typescript/5.3 --enableTelemetry --typesMapLocation /Users/me/.cursor/extensions/ms-vscode.vscode-typescript-next-5.3.20230808-universal/node_modules/typescript/lib/typesMap.json --validateDefaultNpmLocation
+    0	    98	 95519	     electron-nodejs (tomlServerMain.js )
+    0	    98	 95520	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/css-language-features/server/dist/node/cssServerMain --node-ipc --clientProcessId=95140
+    0	    98	 95521	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=95140
+    0	     0	 95529	     /Users/me/.cursor/extensions/ms-python.python-2025.6.1-darwin-arm64/python-env-tools/bin/pet server
+    0	    98	 95531	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/html-language-features/server/dist/node/htmlServerMain --node-ipc --clientProcessId=95140
+    0	    98	 95533	     electron-nodejs (languageserver.js )
+    0	    98	 95544	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=95140
+    0	     0	 95552	     /Applications/Cursor.app/Contents/Resources/app/resources/helpers/node --max-old-space-size=32768 /Users/me/.cursor/extensions/anysphere.cursorpyright-1.0.10/dist/server.js --cancellationReceive=file:25567e24af3f427a93c5a49250f06dcc2e3114ca77 --node-ipc --clientProcessId=95140
+    0	    98	 96192	     electron-nodejs (eslintServer.js )
+    0	    98	 96193	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Users/me/.cursor/extensions/streetsidesoftware.code-spell-checker-4.5.6-universal/packages/_server/dist/main.cjs --node-ipc --clientProcessId=95140
+    0	    98	 96618	     electron-nodejs (server-node.js )
+    0	     0	 96853	     node /Users/me/projects/zoom-deeplistening-agents/tools/zoom-mcp-server/src/index.js
+    0	     0	 96854	     /opt/homebrew/opt/node/bin/node /opt/homebrew/bin/repomix --mcp
+    0	     0	 96859	     /opt/homebrew/Cellar/python@3.14/3.14.4/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python /Users/me/.local/bin/product-hunt-mcp
+    0	     0	 96861	     node /Users/me/.local/share/fnm/node-versions/v22.22.0/installation/lib/node_modules/@tobilu/qmd/dist/cli/qmd.js mcp
+    0	    98	 97159	     electron-nodejs (tailwindServer.js )
+    0	    98	 95141	shared-process
+    0	    98	 95142	fileWatcher [1]
+    0	    98	 95148	ptyHost
+    0	     0	  1742	     /bin/zsh -il
+    0	   295	  2049	       claude
+    0	     0	  4694	     /bin/zsh -il
+    0	     0	 20440	     /bin/zsh -il
+    0	     0	 21369	     /bin/zsh -il
+    0	     0	 24764	     /bin/zsh -il
+    0	     0	 28552	     /bin/zsh -il
+    0	     0	 40183	     /bin/zsh -il
+    0	     0	 40260	     /bin/zsh -il
+    0	     0	 40344	     /bin/zsh -il
+    0	     0	 48580	     /bin/zsh -il
+    0	     0	 56783	       /bin/bash ./workspace-snapshot.sh
+    0	     0	 57134	         /bin/bash ./workspace-snapshot.sh
+    0	     0	 57135	           zsh ./dump-cursor-windows.sh
+    0	     0	 57147	             bash /opt/homebrew/bin/cursor --status
+    3	    98	 57153	               electron-nodejs (cli.js )
+    0	     0	 49792	     /bin/zsh -il
+    0	     0	 49914	     /bin/zsh -il
+    0	     0	 51640	     /bin/zsh -il
+    0	     0	 52606	     /bin/zsh -il
+    0	     0	 56090	     /bin/zsh -il
+    0	     0	 57895	     /bin/zsh -il
+    0	     0	 63200	     /bin/zsh -i
+    0	     0	 64353	     /bin/zsh -il
+    0	     0	 68668	     /bin/zsh -il
+    0	     0	 77428	     /bin/zsh -i
+    0	     0	 78595	     /bin/zsh -il
+    0	     0	 80210	     /bin/zsh -i
+    0	     0	 81587	     /bin/zsh -il
+    0	     0	 82866	     /bin/zsh -il
+    0	     0	 82997	     /bin/zsh -il
+    0	     0	 89119	     /bin/zsh -il
+    0	     0	 89504	     /bin/zsh -il
+    0	     0	 95600	     /bin/zsh -i
+    0	    98	 95319	extensionHost [1]
+    0	    98	 95320	extensionHost [1]
+    0	   197	 95321	extensionHost [1]
+    0	    98	 95675	     electron-nodejs (gitWorker.js )
+    0	    98	 95322	extensionHost [1]
+
+Workspace Stats: 
+|  Window (tab-export-2026-05-04T11-52-26.md — security-agent-quickstart)
+|  Window (README.md — cidr-san-mateo-21elements)
+|  Window (project.md — cidr-org)
+|  Window (amplifier-quickstart)
+|  Window (Browser Tab — lam-starter-scaffold)
+|  Window (index.html — futureofme)
+|  Window (LINKS-astera-arcadia-blackbox-to-glassbox.md — astera-envisioning)
+|  Window (Preview SKILL.md — storytelling-capsules)
+|  Window (✻ [Claude Code] SKILL.md (9b44d3) ⧉ (SKILL.md) — baloney (Workspace))
+|  Window (LINKS-abordage-mactools.md — macosx-tools)
+|  Window (.env — peeq-voicegen-audiocast)
+|    Folder (security-agent-quickstart): 0 files
+|      File types:
+|      Conf files:
+|    Folder (thebaloney-meta): 13 files
+|      File types: md(5) gitignore(1) code-workspace(1) tsv(1) sh(1)
+|      Conf files:
+|    Folder (thebaloney-content): 34 files
+|      File types: md(21) json(3) gitignore(1) bak(1)
+|      Conf files:
+|    Folder (thebaloney-infra): 26 files
+|      File types: md(14) example(1) gitignore(1) code-workspace(1) sh(1)
+|      Conf files:
+|    Folder (thebaloney-schema): 29 files
+|      File types: json(4) gitignore(2) md(2) ts(2) whl(1) gz(1) toml(1) py(1)
+|                  map(1) js(1)
+|      Conf files: package.json(1) tsconfig.json(1)
+|    Folder (thebaloney-producer): 61 files
+|      File types: py(8) pyc(5) bat(3) json(3) gitignore(2) pth(2) lock(1)
+|                  TAG(1) csh(1) fish(1)
+|      Conf files:
+|    Folder (amplifier-quickstart): 69 files
+|      File types: md(21) png(16) yaml(9) ico(2) gitignore(1) icns(1) json(1)
+|                  toml(1) sh(1)
+|      Conf files:
+|    Folder (cidr-san-mateo-21elements): 69 files
+|      File types: md(27) eml(9) gitkeep(8) pdf(2) gitignore(1)
+|      Conf files:
+|    Folder (thebaloney-web): 606 files
+|      File types: md(108) svg(71) js(61) css(44) png(37) jpg(34) astro(33)
+|                  html(30) mjs(17) json(13)
+|      Conf files: github-actions(3) settings.json(1) launch.json(1)
+|                  package.json(1)
+|    Folder (futureofme): 1181 files
+|      File types: yml(139) md(100) php(91) jpg(73) sh(49) png(45) json(43)
+|                  gitignore(35) js(28) dist(21)
+|      Conf files: package.json(12) dockerfile(3) tsconfig.json(2)
+|                  settings.json(1) makefile(1)
+|    Folder (astera-envisioning): 5050 files
+|      File types: cif(925) pdb(702) py(520) md(384) json(328) yaml(305)
+|                  png(175) npz(115) csv(105) parquet(99)
+|      Conf files: makefile(3) settings.json(2) package.json(1)
+|                  tsconfig.json(1) dockerfile(1)
+|    Folder (lam-starter-scaffold): 12889 files
+|      File types: js(3463) map(2524) json(1624) tsx(1028) meta(531) sst(483)
+|                  ts(388) rsc(386) md(166) png(118)
+|      Conf files: package.json(45) tsconfig.json(18) settings.json(1)
+|                  dockerfile(1)
+|    Folder (storytelling-capsules): more than 20932 files
+|      File types: pyc(7972) py(6183) ts(845) js(745) json(274) png(238)
+|                  md(211) html(175) txt(103) tsx(94)
+|      Conf files: package.json(85) tsconfig.json(57) settings.json(2)
+|                  mcp.json(1)
+|    Folder (peeq-voicegen-audiocast): more than 22980 files
+|      File types: py(3954) pyc(2888) json(1813) md(1799) ts(901) tsx(754)
+|                  svg(448) mp3(424) pyi(282) mdx(261)
+|      Conf files: package.json(10) settings.json(5) dockerfile(4)
+|                  tsconfig.json(4) mcp.json(1) makefile(1)
+|    Folder (peeq-voicegen-audiocast): more than 22980 files
+|      File types: py(3954) pyc(2888) json(1813) md(1799) ts(901) tsx(754)
+|                  svg(448) mp3(424) pyi(282) mdx(261)
+|      Conf files: package.json(10) settings.json(5) dockerfile(4)
+|                  tsconfig.json(4) mcp.json(1) makefile(1)
+|    Folder (cidr-org): more than 24449 files
+|      File types: py(3403) jpg(2095) html(1588) png(1517) css(1322) pyc(1305)
+|                  map(727) js(688) pdf(239) svg(231)
+|      Conf files: settings.json(2) package.json(1)
+|    Folder (macosx-tools): more than 45234 files
+|      File types: html(2906) json(1032) strings(549) pcm(496) js(433) ts(383)
+|                  h(256) swift(207) tsx(196) png(168)
+|      Conf files: package.json(15) tsconfig.json(7) settings.json(2)
+|                  dockerfile(2) makefile(1) webpack.config.js(1)
+
+

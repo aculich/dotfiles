@@ -1,0 +1,93 @@
+
+Version:          Cursor 3.3.2 (03b87c23125652298159364a70a268fdad7195d0, 2026-05-01T22:31:26.094Z)
+OS Version:       Darwin arm64 25.3.0
+CPUs:             Apple M3 Max (14 x 2400)
+Memory (System):  96.00GB (3.96GB free)
+Load (avg):       10, 15, 16
+VM:               0%
+Screen Reader:    yes
+Process Argv:     
+GPU Status:       2d_canvas:                              enabled
+                  direct_rendering_display_compositor:    disabled_off_ok
+                  gpu_compositing:                        enabled
+                  multiple_raster_threads:                enabled_on
+                  opengl:                                 enabled_on
+                  rasterization:                          enabled
+                  raw_draw:                               disabled_off_ok
+                  skia_graphite:                          disabled_off
+                  trees_in_viz:                           disabled_off
+                  video_decode:                           enabled
+                  video_encode:                           enabled
+                  webgl:                                  enabled
+                  webgl2:                                 enabled
+                  webgpu:                                 enabled
+                  webnn:                                  disabled_off
+
+CPU %	Mem MB	   PID	Process
+    5	   885	 95041	cursor main
+    0	   197	 95044	   gpu-process
+    1	   197	 95141	shared-process
+    0	    98	 95148	ptyHost
+    0	     0	  8506	     /bin/zsh -il
+    0	     0	  8979	     /bin/zsh -il
+    0	     0	 29102	     /bin/zsh -il
+    0	     0	 31773	     /bin/zsh -il
+    0	     0	 31803	     /bin/zsh -il
+    0	     0	 35130	     /bin/zsh -il
+    0	     0	 35706	       /bin/bash ./dev.sh
+    6	   983	 36014	         .build/debug/Retrace
+    0	     0	 49792	     /bin/zsh -il
+    0	     0	 49914	     /bin/zsh -il
+    0	     0	 51640	     /bin/zsh -il
+    0	     0	 60724	     /bin/zsh -il
+    0	     0	 60862	     /opt/homebrew/bin/bash --init-file /Applications/Cursor.app/Contents/Resources/app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh
+    0	     0	 63656	     /bin/zsh -il
+    0	     0	 82412	     /bin/zsh -il
+    0	     0	 82496	     /bin/zsh -il
+    0	     0	 82622	     /opt/homebrew/bin/bash --init-file /Applications/Cursor.app/Contents/Resources/app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh
+
+Workspace Stats: 
+|  Window (legal-agents)
+|  Window (WORKFLOW.md — retrace-quickstart)
+|  Window (summary.txt — futureofme)
+|  Window (Preview domain-knowledge.md — cidr-org)
+|  Window (Preview structural-disadvantage-index.md — cidr-environment)
+|  Window (Preview project.md — cidr-san-mateo-21elements)
+|  Window (Preview AMPLIFIER_PROJECT_CANDIDATES_REPORT.md — amplifier-quickstart)
+|  Window (Preview LOCAL_SUPABASE_LOCAL_FIRST_REPORT.md — lam-starter-scaffold)
+|    Folder (cidr-san-mateo-21elements): 90 files
+|      File types: md(32) eml(11) gitkeep(8) json(4) txt(4) pdf(2)
+|                  gitignore(1) xlsx(1)
+|      Conf files:
+|    Folder (cidr-environment): 471 files
+|      File types: js(110) jpg(98) css(60) webp(58) md(38) png(8) pdf(7)
+|                  html(7) json(7) mhtml(3)
+|      Conf files:
+|    Folder (legal-agents): 159 files
+|      File types: tsx(36) ts(29) ttf(12) json(8) png(6) md(4) gitignore(3)
+|                  js(3) mdc(2) cursorindexingignore(2)
+|      Conf files: settings.json(1) package.json(1) tsconfig.json(1)
+|    Folder (amplifier-quickstart): 2303 files
+|      File types: py(1157) pyc(604) md(29) typed(20) png(16) txt(15) json(11)
+|                  yaml(10) so(8) ans(6)
+|      Conf files:
+|    Folder (futureofme): 1181 files
+|      File types: yml(139) md(100) php(91) jpg(73) sh(49) png(45) json(43)
+|                  gitignore(35) js(28) dist(21)
+|      Conf files: package.json(12) dockerfile(3) tsconfig.json(2)
+|                  settings.json(1) makefile(1)
+|    Folder (lam-starter-scaffold): 13260 files
+|      File types: js(3580) map(2622) json(1658) tsx(1028) meta(531) sst(483)
+|                  ts(392) rsc(386) md(172) woff2(118)
+|      Conf files: package.json(47) tsconfig.json(18) settings.json(1)
+|                  dockerfile(1)
+|    Folder (retrace-quickstart): 17528 files
+|      File types: o(1664) d(1373) swift(562) c(507) pcm(394) dia(389)
+|                  swiftmodule(364) swiftdeps(353) h(349) strings(211)
+|      Conf files: makefile(1) cursorrules(1)
+|    Folder (cidr-org): more than 24483 files
+|      File types: py(3403) jpg(2095) html(1554) png(1517) css(1322) pyc(1305)
+|                  map(727) js(688) pdf(243) md(236)
+|      Conf files: settings.json(2) package.json(1)
+
+

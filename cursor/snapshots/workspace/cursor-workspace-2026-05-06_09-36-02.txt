@@ -1,0 +1,85 @@
+
+Version:          Cursor 3.3.2 (03b87c23125652298159364a70a268fdad7195d0, 2026-05-01T22:31:26.094Z)
+OS Version:       Darwin arm64 25.3.0
+CPUs:             Apple M3 Max (14 x 2400)
+Memory (System):  96.00GB (24.56GB free)
+Load (avg):       5, 8, 16
+VM:               0%
+Screen Reader:    yes
+Process Argv:     
+GPU Status:       2d_canvas:                              enabled
+                  direct_rendering_display_compositor:    disabled_off_ok
+                  gpu_compositing:                        enabled
+                  multiple_raster_threads:                enabled_on
+                  opengl:                                 enabled_on
+                  rasterization:                          enabled
+                  raw_draw:                               disabled_off_ok
+                  skia_graphite:                          disabled_off
+                  trees_in_viz:                           disabled_off
+                  video_decode:                           enabled
+                  video_encode:                           enabled
+                  webgl:                                  enabled
+                  webgl2:                                 enabled
+                  webgpu:                                 enabled
+                  webnn:                                  disabled_off
+
+CPU %	Mem MB	   PID	Process
+    3	   786	 95041	cursor main
+    3	   197	 95044	   gpu-process
+    0	   295	 95141	shared-process
+    0	    98	 95148	ptyHost
+    0	     0	  7516	     /bin/zsh -il
+    0	     0	 24032	     /bin/zsh -il
+    0	     0	 32545	     /bin/zsh -il
+    0	     0	 51640	     /bin/zsh -il
+    0	     0	 53421	     /bin/zsh -il
+    0	     0	 56645	     /bin/zsh -il
+    0	     0	 57017	       /bin/bash ./workspace-snapshot.sh
+    0	     0	 57070	         /bin/bash ./workspace-snapshot.sh
+    0	     0	 57071	           zsh ./dump-cursor-windows.sh
+    0	     0	 57083	             bash /opt/homebrew/bin/cursor --status
+    2	    98	 57089	               electron-nodejs (cli.js )
+    0	     0	 70261	     /bin/zsh -i
+    0	     0	 71463	     /bin/zsh -il
+    0	     0	 71692	     /bin/zsh -il
+    0	     0	 73376	     /bin/zsh -il
+    0	     0	 74753	     /bin/zsh -il
+    0	     0	 82412	     /bin/zsh -il
+    0	     0	 82496	     /bin/zsh -il
+    0	     0	 82622	     /opt/homebrew/bin/bash --init-file /Applications/Cursor.app/Contents/Resources/app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh
+    0	     0	 83904	     /bin/zsh -i
+    0	     0	 84218	     /bin/zsh -il
+    0	     0	 93963	     /bin/zsh -il
+    0	     0	 96133	     /bin/zsh -il
+
+Workspace Stats: 
+|  Window (colophon.md — code-sculpting)
+|  Window (metadata.json — continuous-ai)
+|  Window (2026-05-01-where-work-stalls.v3.md — astera-envisioning)
+|  Window (urls.list — awesome-awesome)
+|  Window (2026-05-01-where-work-stalls.md — futureofme)
+|    Folder (futureofme): 1213 files
+|      File types: yml(139) md(119) php(91) jpg(73) sh(49) png(45) json(43)
+|                  gitignore(35) js(28) html(22)
+|      Conf files: package.json(12) dockerfile(3) tsconfig.json(2)
+|                  settings.json(1) makefile(1)
+|    Folder (code-sculpting): 1207 files
+|      File types: md(396) nix(211) png(77) py(36) lua(29) json(19)
+|                  graffle(17) html(12) sh(11) gitignore(10)
+|      Conf files: package.json(2) settings.json(1) tsconfig.json(1)
+|    Folder (awesome-awesome): 2364 files
+|      File types: mdc(908) md(327) py(194) cursorrules(143) yaml(90) json(55)
+|                  ts(47) yml(40) png(27) gitignore(12)
+|      Conf files: cursorrules(143) dockerfile(23) package.json(22)
+|                  tsconfig.json(19) makefile(1)
+|    Folder (astera-envisioning): 5137 files
+|      File types: cif(925) pdb(702) py(520) md(417) json(373) yaml(305)
+|                  png(175) npz(115) csv(105) parquet(99)
+|      Conf files: makefile(3) settings.json(2) package.json(1)
+|                  tsconfig.json(1) dockerfile(1)
+|    Folder (continuous-ai): more than 109922 files
+|      File types: json(8769) eml(7196) md(3674) txt(33) yml(17) ts(14) py(11)
+|                  sql(8) jsonl(7) gitignore(5)
+|      Conf files: settings.json(2) launch.json(1)
+
+

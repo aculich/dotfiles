@@ -1,0 +1,134 @@
+
+Version:          Cursor 3.3.2 (03b87c23125652298159364a70a268fdad7195d0, 2026-05-01T22:31:26.094Z)
+OS Version:       Darwin arm64 25.3.0
+CPUs:             Apple M3 Max (14 x 2400)
+Memory (System):  96.00GB (1.40GB free)
+Load (avg):       47, 71, 73
+VM:               0%
+Screen Reader:    yes
+Process Argv:     
+GPU Status:       2d_canvas:                              enabled
+                  direct_rendering_display_compositor:    disabled_off_ok
+                  gpu_compositing:                        enabled
+                  multiple_raster_threads:                enabled_on
+                  opengl:                                 enabled_on
+                  rasterization:                          enabled
+                  raw_draw:                               disabled_off_ok
+                  skia_graphite:                          disabled_off
+                  trees_in_viz:                           disabled_off
+                  video_decode:                           enabled
+                  video_encode:                           enabled
+                  webgl:                                  enabled
+                  webgl2:                                 enabled
+                  webgpu:                                 enabled
+                  webnn:                                  disabled_off
+
+CPU %	Mem MB	   PID	Process
+    1	   492	 95041	cursor main
+    7	    98	 95044	   gpu-process
+    0	    98	 95046	   utility-network-service
+    0	    98	 95141	shared-process
+    0	    98	 95148	ptyHost
+    0	     0	  1742	     /bin/zsh -il
+    0	   295	  2049	       claude
+    0	     0	  8506	     /bin/zsh -il
+    0	     0	  8979	     /bin/zsh -il
+    0	     0	 24764	     /bin/zsh -il
+    0	     0	 28552	     /bin/zsh -il
+    0	     0	 29102	     /bin/zsh -il
+    0	     0	 29408	     /bin/zsh -il
+    0	     0	 31773	     /bin/zsh -il
+    0	     0	 31803	     /bin/zsh -il
+    0	     0	 45842	     /bin/zsh -il
+    0	     0	 49792	     /bin/zsh -il
+    0	     0	 49914	     /bin/zsh -il
+    0	     0	 50536	     /bin/zsh -i
+    0	     0	 51640	     /bin/zsh -il
+    0	     0	 52606	     /bin/zsh -il
+    0	     0	 57895	     /bin/zsh -il
+    0	     0	 77428	     /bin/zsh -i
+    0	     0	 78595	     /bin/zsh -il
+    0	     0	 80389	     /bin/zsh -i
+    0	     0	 80903	     /bin/zsh -il
+    0	     0	 89119	     /bin/zsh -il
+
+Workspace Stats: 
+|  Window (FAIRCARE.md — cidr-org)
+|  Window (SKILL.md — storytelling-capsules)
+|  Window (README.md — cidr-environment)
+|  Window (Preview project.md — cidr-san-mateo-21elements)
+|  Window (You Are What You Eat -- AI Alignment Requires Understanding How Data Shapes Structure and Generalisation.md — openpaper)
+|  Window (Preview forum-reply-speaking-of-security.md — security-agent-quickstart)
+|  Window (amplifier-quickstart)
+|  Window (Browser Tab — lam-starter-scaffold)
+|  Window (HALLUCINATIONS-alt.md — baloney (Workspace))
+|  Window (README.md — macosx-tools)
+|    Folder (thebaloney-meta): 13 files
+|      File types: md(5) gitignore(1) code-workspace(1) tsv(1) sh(1)
+|      Conf files:
+|    Folder (thebaloney-content): 34 files
+|      File types: md(21) json(3) gitignore(1) bak(1)
+|      Conf files:
+|    Folder (thebaloney-infra): 26 files
+|      File types: md(14) example(1) gitignore(1) code-workspace(1) sh(1)
+|      Conf files:
+|    Folder (thebaloney-schema): 29 files
+|      File types: json(4) gitignore(2) md(2) ts(2) whl(1) gz(1) toml(1) py(1)
+|                  map(1) js(1)
+|      Conf files: package.json(1) tsconfig.json(1)
+|    Folder (thebaloney-producer): 61 files
+|      File types: py(8) pyc(5) bat(3) json(3) gitignore(2) pth(2) lock(1)
+|                  TAG(1) csh(1) fish(1)
+|      Conf files:
+|    Folder (cidr-san-mateo-21elements): 69 files
+|      File types: md(27) eml(9) gitkeep(8) pdf(2) gitignore(1)
+|      Conf files:
+|    Folder (cidr-environment): 471 files
+|      File types: js(110) jpg(98) css(60) webp(58) md(38) png(8) pdf(7)
+|                  html(7) json(7) mhtml(3)
+|      Conf files:
+|    Folder (thebaloney-web): 627 files
+|      File types: md(110) svg(71) js(61) css(45) png(41) jpg(34) astro(34)
+|                  mjs(30) html(30) json(13)
+|      Conf files: github-actions(3) settings.json(1) launch.json(1)
+|                  package.json(1)
+|    Folder (amplifier-quickstart): 2302 files
+|      File types: py(1157) pyc(604) md(28) typed(20) png(16) txt(15) json(11)
+|                  yaml(10) so(8) ans(6)
+|      Conf files:
+|    Folder (security-agent-quickstart): 3430 files
+|      File types: md(1667) json(152) py(119) yaml(55) txt(43) svg(39) png(34)
+|                  ts(32) sh(24) yml(23)
+|      Conf files: settings.json(2) package.json(2) makefile(1)
+|                  tsconfig.json(1)
+|    Folder (lam-starter-scaffold): 12889 files
+|      File types: js(3463) map(2524) json(1624) tsx(1028) meta(531) sst(483)
+|                  ts(388) rsc(386) md(166) png(118)
+|      Conf files: package.json(45) tsconfig.json(18) settings.json(1)
+|                  dockerfile(1)
+|    Folder (storytelling-capsules): more than 20932 files
+|      File types: pyc(7972) py(6183) ts(845) js(745) json(274) png(238)
+|                  md(211) html(175) txt(103) tsx(94)
+|      Conf files: package.json(85) tsconfig.json(57) settings.json(2)
+|                  mcp.json(1)
+|    Folder (openpaper): more than 22181 files
+|      File types: py(5547) json(2106) gz(1919) pyc(1659) pyi(1360) so(268)
+|                  js(223) tsx(157) md(145) png(138)
+|      Conf files: package.json(4) dockerfile(4) tsconfig.json(2)
+|                  github-actions(1) settings.json(1)
+|    Folder (cidr-org): more than 24476 files
+|      File types: py(3403) jpg(2095) html(1561) png(1517) css(1322) pyc(1305)
+|                  map(727) js(688) pdf(241) md(236)
+|      Conf files: settings.json(2) package.json(1)
+|    Folder (peeq-voicegen-audiocast): more than 22980 files
+|      File types: py(3954) pyc(2888) json(1813) md(1799) ts(901) tsx(754)
+|                  svg(448) mp3(424) pyi(282) mdx(261)
+|      Conf files: package.json(10) settings.json(5) dockerfile(4)
+|                  tsconfig.json(4) mcp.json(1) makefile(1)
+|    Folder (macosx-tools): more than 45258 files
+|      File types: html(2882) json(1045) strings(549) pcm(496) js(433) ts(383)
+|                  h(256) swift(207) tsx(196) png(168)
+|      Conf files: package.json(15) tsconfig.json(7) settings.json(2)
+|                  dockerfile(2) makefile(1) webpack.config.js(1)
+
+

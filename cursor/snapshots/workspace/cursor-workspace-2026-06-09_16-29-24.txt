@@ -1,0 +1,240 @@
+
+Version:          Cursor 3.7.24 (5dc427ba250897f344f710c664a3d7aecf896bc0, 2026-06-09T01:45:23.382Z)
+OS Version:       Darwin arm64 25.3.0
+CPUs:             Apple M3 Max (14 x 2400)
+Memory (System):  96.00GB (4.03GB free)
+Load (avg):       149, 106, 53
+VM:               0%
+Screen Reader:    yes
+Process Argv:     
+GPU Status:       2d_canvas:                              enabled
+                  direct_rendering_display_compositor:    disabled_off_ok
+                  gpu_compositing:                        enabled
+                  multiple_raster_threads:                enabled_on
+                  opengl:                                 enabled_on
+                  rasterization:                          enabled
+                  raw_draw:                               disabled_off_ok
+                  skia_graphite:                          disabled_off
+                  trees_in_viz:                           disabled_off
+                  video_decode:                           enabled
+                  video_encode:                           enabled
+                  webgl:                                  enabled
+                  webgl2:                                 enabled
+                  webgpu:                                 enabled
+                  webnn:                                  disabled_off
+
+CPU %	Mem MB	   PID	Process
+   31	   786	 79470	cursor main
+   17	   197	 79474	   gpu-process
+    0	    98	 79476	   utility-network-service
+    0	   885	 79489	window [1] (peeq_keymgmt_phase_0_9fbab6f8.plan.md — peeq-metascience (Workspace))
+    2	   885	 79490	window [2] (PASS-1.5-airtable-readonly-and-auth.md — rrid-app-frontend)
+    1	   983	 79491	window [3] (2026-04-27_18-11-48Z-strategic_ai_model_usage_and_planning.md — rrid)
+    2	   983	 79492	window [4] (airtable_automations_2026-06-05.md — badges)
+    3	   885	 79493	window [5] (transcript.txt — continuous-ai)
+    1	   983	 79494	window [6] (PDF-TEXT-EXTRACTION.md — perone)
+    0	   885	 79495	window [7] (Large language models pass a standard three-party Turing test.md — writing-quality)
+    0	   786	 79496	window [8] (CHANGELOG.md — chatstory)
+   17	   885	 79497	window [9] (upstream_restart_local_b6f162ce.plan.md — openpaper)
+   22	   885	 79498	window [10] (UPSTREAM_MERGE_PREP.md — peeq-openpaper)
+   14	   786	 79499	window [11] (Marketplace — cursor)
+    1	   393	 79577	extensionHost [6]
+    0	    98	 80462	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=79577
+    0	     0	 80475	     /Users/me/.cursor/extensions/ms-python.python-2025.6.1-darwin-arm64/python-env-tools/bin/pet server
+    0	    98	 80506	     /Applications/Cursor.app/Contents/Resources/app/resources/helpers/node --max-old-space-size=32768 /Users/me/.cursor/extensions/anysphere.cursorpyright-1.0.12/dist/server.js --cancellationReceive=file:cd3d6ef92a3dca279644fb20c05e9c980cc741673e --node-ipc --clientProcessId=79577
+    1	  1081	 79578	extensionHost [5]
+    0	    98	 92771	     electron-nodejs (server-node.js )
+    1	   492	 79579	extensionHost [2]
+    0	    98	 80132	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=79579
+    1	   492	 79581	extensionHost [4]
+    0	    98	 80112	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=79581
+    0	   197	 79582	shared-process
+    1	   786	 79585	extensionHost [3]
+    0	    98	 80105	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=79585
+    0	    98	 80810	     electron-nodejs (server-node.js )
+    1	   295	 79586	extensionHost [10]
+    0	    98	 80019	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=79586
+    0	    98	 80729	     electron-nodejs (server-node.js )
+    1	   393	 79588	extensionHost [8]
+    0	    98	 80343	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=79588
+    0	    98	 80783	     electron-nodejs (server-node.js )
+    0	    98	 80820	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=79588
+    0	    98	 79589	fileWatcher [2]
+    0	    98	 79590	fileWatcher [5]
+    0	    98	 79591	fileWatcher [6]
+    0	    98	 79594	fileWatcher [4]
+    0	    98	 79595	fileWatcher [10]
+    0	    98	 79596	fileWatcher [8]
+    0	    98	 79598	fileWatcher [3]
+    0	    98	 79599	fileWatcher [9]
+    1	   885	 79600	extensionHost [9]
+    0	    98	 81008	     electron-nodejs (server-node.js )
+    0	    98	 79601	fileWatcher [1]
+    1	   393	 79602	extensionHost [1]
+    0	    98	 92730	     electron-nodejs (server-node.js )
+    0	    98	 79606	fileWatcher [7]
+    0	    98	 79607	fileWatcher [11]
+    1	   393	 79614	extensionHost [11]
+    4	   492	 79632	extensionHost [7]
+    0	    98	 81145	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=79632
+    0	     0	 81176	     /Users/me/.cursor/extensions/ms-python.python-2025.6.1-darwin-arm64/python-env-tools/bin/pet server
+    0	    98	 81472	     electron-nodejs (server-node.js )
+    1	   197	 79654	extensionHost [6]
+    1	   295	 79655	extensionHost [6]
+    1	   295	 79656	extensionHost [6]
+    0	    98	 81874	     electron-nodejs (gitWorker.js )
+    1	   197	 79657	extensionHost [6]
+    1	   197	 79662	extensionHost [5]
+    1	   393	 79663	extensionHost [5]
+    1	   393	 79664	extensionHost [5]
+    0	    98	 82335	     electron-nodejs (gitWorker.js )
+    1	   295	 79665	extensionHost [5]
+    0	    98	 79666	ptyHost
+    0	     0	 80514	     /bin/zsh -i
+    0	     0	 81144	     /bin/zsh -il
+    0	     0	 91997	       /bin/bash ./workspace-snapshot.sh
+    0	     0	 92772	         /bin/bash ./workspace-snapshot.sh
+    0	     0	 92773	           zsh ./dump-cursor-windows.sh
+    0	     0	 92791	             bash /opt/homebrew/bin/cursor --status
+    0	    98	 92803	               electron-nodejs (cli.js )
+    0	     0	 81146	     /bin/zsh -il
+    0	     0	 81189	     /bin/zsh -i
+    0	     0	 81258	     /bin/zsh -il
+    0	     0	 82180	     /bin/zsh -il
+    0	     0	 87959	     /bin/zsh -il
+    0	     0	 89006	     /bin/zsh -il
+    0	     0	 92269	     /bin/zsh -il
+    0	     0	 92334	     /bin/zsh -il
+    1	   197	 79667	extensionHost [4]
+    1	   197	 79668	extensionHost [4]
+    1	   295	 79669	extensionHost [4]
+    0	    98	 81880	     electron-nodejs (gitWorker.js )
+    1	   197	 79670	extensionHost [4]
+    1	   197	 79673	extensionHost [2]
+    1	   295	 79674	extensionHost [2]
+    1	   295	 79675	extensionHost [2]
+    0	    98	 82795	     electron-nodejs (gitWorker.js )
+    1	   197	 79676	extensionHost [2]
+    1	   197	 79683	extensionHost [10]
+    1	   197	 79684	extensionHost [10]
+    1	   197	 79685	extensionHost [10]
+    1	   393	 79686	extensionHost [10]
+    1	   197	 79687	extensionHost [3]
+    1	   197	 79688	extensionHost [3]
+    1	   197	 79689	extensionHost [3]
+    1	   197	 79690	extensionHost [3]
+    1	   197	 79695	extensionHost [8]
+    1	   197	 79696	extensionHost [8]
+    1	   295	 79697	extensionHost [8]
+    0	    98	 83210	     electron-nodejs (gitWorker.js )
+    1	   197	 79698	extensionHost [8]
+    1	   197	 79699	extensionHost [9]
+    1	   197	 79700	extensionHost [9]
+    1	   197	 79701	extensionHost [9]
+    0	    98	 82530	     electron-nodejs (gitWorker.js )
+    1	   197	 79702	extensionHost [9]
+    1	   197	 79703	extensionHost [1]
+    1	   197	 79704	extensionHost [1]
+    1	   197	 79705	extensionHost [1]
+    1	   197	 79706	extensionHost [1]
+    1	   197	 79708	extensionHost [11]
+    1	   197	 79709	extensionHost [11]
+    1	   197	 79710	extensionHost [11]
+    1	   295	 79711	extensionHost [11]
+    1	   197	 79713	extensionHost [7]
+    1	   590	 79714	extensionHost [7]
+    1	   197	 79715	extensionHost [7]
+    1	   197	 79716	extensionHost [7]
+
+Workspace Stats: 
+|  Window (Marketplace — cursor)
+|  Window (UPSTREAM_MERGE_PREP.md — peeq-openpaper)
+|  Window (upstream_restart_local_b6f162ce.plan.md — openpaper)
+|  Window (CHANGELOG.md — chatstory)
+|  Window (Large language models pass a standard three-party Turing test.md — writing-quality)
+|  Window (PDF-TEXT-EXTRACTION.md — perone)
+|  Window (transcript.txt — continuous-ai)
+|  Window (airtable_automations_2026-06-05.md — badges)
+|  Window (2026-04-27_18-11-48Z-strategic_ai_model_usage_and_planning.md — rrid)
+|  Window (PASS-1.5-airtable-readonly-and-auth.md — rrid-app-frontend)
+|  Window (peeq_keymgmt_phase_0_9fbab6f8.plan.md — peeq-metascience (Workspace))
+|    Folder (peeq-metascience): 29 files
+|      File types: sh(10) md(3) template(3) yaml(2) gitignore(1)
+|                  code-workspace(1) py(1)
+|      Conf files:
+|    Folder (chatstory): 280 files
+|      File types: js(85) map(85) ts(49) md(11) json(9) vsix(4) mjs(2)
+|                  cursorindexingignore(1) yml(1) gitignore(1)
+|      Conf files: github-actions(1) launch.json(1) settings.json(1)
+|                  tasks.json(1) package.json(1) tsconfig.json(1)
+|      Launch Configs: extensionHost
+|    Folder (cursor): 1082 files
+|      File types: txt(596) json(335) md(49) sh(13) mdc(7) gitignore(3)
+|                  gitkeep(3) yaml(3) log(3) example(2)
+|      Conf files: settings.json(3) mcp.json(1)
+|    Folder (upstream__peeq-paperview): 585 files
+|      File types: py(193) tsx(164) ts(28) svg(22) mdx(22) png(18) sh(10)
+|                  html(9) md(8) json(3)
+|      Conf files: dockerfile(3) github-actions(1) package.json(1)
+|                  tsconfig.json(1)
+|    Folder (upstream__peeq-openpaper): 585 files
+|      File types: py(193) tsx(164) ts(28) svg(22) mdx(22) png(18) sh(10)
+|                  html(9) md(8) json(3)
+|      Conf files: dockerfile(3) github-actions(1) package.json(1)
+|                  tsconfig.json(1)
+|    Folder (scaffold-gcp__peeq-paperview): 595 files
+|      File types: py(193) tsx(164) ts(28) svg(22) mdx(22) png(18) md(11)
+|                  sh(10) html(9) json(3)
+|      Conf files: dockerfile(3) github-actions(1) package.json(1)
+|                  tsconfig.json(1)
+|    Folder (scaffold-docker-compose__peeq-paperview): 606 files
+|      File types: py(193) tsx(164) ts(28) svg(22) mdx(22) png(18) md(13)
+|                  sh(13) html(9) json(3)
+|      Conf files: dockerfile(4) github-actions(1) package.json(1)
+|                  tsconfig.json(1)
+|    Folder (develop__peeq-paperview): 607 files
+|      File types: py(193) tsx(164) ts(28) svg(22) mdx(22) png(18) md(14)
+|                  sh(13) html(9) json(3)
+|      Conf files: dockerfile(4) github-actions(1) package.json(1)
+|                  tsconfig.json(1)
+|    Folder (develop__peeq-openpaper): 1098 files
+|      File types: py(191) tsx(157) png(133) md(102) js(70) css(62) sh(55)
+|                  ts(32) svg(32) html(23)
+|      Conf files: dockerfile(4) package.json(2) tsconfig.json(2)
+|                  github-actions(1)
+|    Folder (peeq-openpaper): 1685 files
+|      File types: py(384) tsx(321) png(151) md(110) js(71) sh(65) css(63)
+|                  ts(60) svg(54) mdx(43)
+|      Conf files: dockerfile(7) package.json(3) tsconfig.json(3)
+|    Folder (rrid-app-frontend): 3355 files
+|      File types: js(958) json(552) rsc(370) map(360) md(244) tsx(94) ts(76)
+|                  html(54) meta(52) woff2(14)
+|      Conf files: package.json(7) dockerfile(1) tsconfig.json(1)
+|    Folder (perone): 3995 files
+|      File types: csv(1399) py(348) json(271) md(227) pyc(186) xlsx(146)
+|                  pdf(100) txt(98) png(85) log(76)
+|      Conf files: settings.json(1)
+|    Folder (badges): 13715 files
+|      File types: py(4491) pyc(4474) pyi(372) js(203) json(140) map(122)
+|                  so(99) txt(77) md(66) proto(62)
+|      Conf files: package.json(6) dockerfile(4) tsconfig.json(3) mcp.json(1)
+|    Folder (writing-quality): more than 21643 files
+|      File types: py(8188) pyc(4263) js(1102) md(681) txt(419) pyi(309)
+|                  json(185) png(123) jpg(123) css(106)
+|      Conf files: package.json(5) dockerfile(2) tsconfig.json(2)
+|                  settings.json(1) makefile(1)
+|    Folder (continuous-ai): more than 109796 files
+|      File types: json(8615) eml(7260) md(3720) txt(33) yml(17) ts(14) py(11)
+|                  sql(8) jsonl(7) gitignore(5)
+|      Conf files: settings.json(2) launch.json(1)
+|    Folder (openpaper): more than 22307 files
+|      File types: py(5740) json(1896) gz(1667) pyc(1659) pyi(1360) tsx(321)
+|                  so(268) js(224) md(156) png(156)
+|      Conf files: dockerfile(7) package.json(5) tsconfig.json(3)
+|                  github-actions(1) settings.json(1)
+|    Folder (rrid): more than 21382 files
+|      File types: pyi(3598) py(3597) json(2882) pyc(2560) js(743) xlsx(239)
+|                  png(213) md(210) docx(179) css(154)
+|      Conf files: package.json(5) makefile(2) settings.json(1)
+
+

@@ -1,0 +1,122 @@
+
+Version:          Cursor 3.3.2 (03b87c23125652298159364a70a268fdad7195d0, 2026-05-01T22:31:26.094Z)
+OS Version:       Darwin arm64 25.3.0
+CPUs:             Apple M3 Max (14 x 2400)
+Memory (System):  96.00GB (3.46GB free)
+Load (avg):       111, 114, 71
+VM:               0%
+Screen Reader:    yes
+Process Argv:     
+GPU Status:       2d_canvas:                              enabled
+                  direct_rendering_display_compositor:    disabled_off_ok
+                  gpu_compositing:                        enabled
+                  multiple_raster_threads:                enabled_on
+                  opengl:                                 enabled_on
+                  rasterization:                          enabled
+                  raw_draw:                               disabled_off_ok
+                  skia_graphite:                          disabled_off
+                  trees_in_viz:                           disabled_off
+                  video_decode:                           enabled
+                  video_encode:                           enabled
+                  webgl:                                  enabled
+                  webgl2:                                 enabled
+                  webgpu:                                 enabled
+                  webnn:                                  disabled_off
+
+CPU %	Mem MB	   PID	Process
+    4	   688	 95041	cursor main
+    8	   197	 95044	   gpu-process
+    0	    98	 95141	shared-process
+    0	    98	 95148	ptyHost
+    0	     0	  7516	     /bin/zsh -il
+    0	     0	 24032	     /bin/zsh -il
+    0	     0	 32545	     /bin/zsh -il
+    0	     0	 35642	     /bin/zsh -il
+    0	     0	 35648	     /bin/zsh -il
+    0	     0	 35996	     /opt/homebrew/bin/bash --init-file /Applications/Cursor.app/Contents/Resources/app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh
+    0	     0	 49379	     /bin/zsh -i
+    0	     0	 51082	     /bin/zsh -i
+    0	     0	 51640	     /bin/zsh -il
+    0	     0	 53421	     /bin/zsh -il
+    0	     0	 54308	     /bin/zsh -il
+    0	     0	 56645	     /bin/zsh -il
+    0	     0	 91455	       /bin/bash ./workspace-snapshot.sh
+    0	     0	 91623	         /bin/bash ./workspace-snapshot.sh
+    0	     0	 91624	           zsh ./dump-cursor-windows.sh
+    0	     0	 91648	             bash /opt/homebrew/bin/cursor --status
+    2	    98	 91654	               electron-nodejs (cli.js )
+    0	     0	 60829	     /bin/zsh -il
+    0	     0	 62247	     /bin/zsh -i
+    0	     0	 69458	     /bin/zsh -il
+    0	     0	 70261	     /bin/zsh -i
+    0	     0	 71463	     /bin/zsh -il
+    0	     0	 71692	     /bin/zsh -il
+    0	     0	 73376	     /bin/zsh -il
+    0	     0	 74753	     /bin/zsh -il
+    0	     0	 78960	     /bin/zsh -i
+    0	     0	 79166	     /bin/zsh -il
+    0	     0	 82412	     /bin/zsh -il
+    0	     0	 82496	     /bin/zsh -il
+    0	     0	 82622	     /opt/homebrew/bin/bash --init-file /Applications/Cursor.app/Contents/Resources/app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh
+    0	     0	 83904	     /bin/zsh -i
+    0	     0	 84218	     /bin/zsh -il
+    0	     0	 93963	     /bin/zsh -il
+    0	     0	 96133	     /bin/zsh -il
+
+Workspace Stats: 
+|  Window (Legal Aid of Marin Data Infrastructure Design and Plan May 2026.md — lam-eda)
+|  Window (east_palo_alto_final.pdf — cidr-san-mateo-21elements)
+|  Window (structural-disadvantage-index.md — cidr-org)
+|  Window (NARRATIVE-2050-VISION.md — peeq-crb-nexus)
+|  Window (colophon.md — code-sculpting)
+|  Window (metadata.json — continuous-ai)
+|  Window (FUTURE-NARRATIVE.md — ai-veracity-chains)
+|  Window (2026-05-01-where-work-stalls.v3.md — astera-envisioning)
+|  Window (urls.list — awesome-awesome)
+|  Window (ASEMIC-CATALOG.md — futureofme)
+|    Folder (cidr-san-mateo-21elements): 1537 files
+|      File types: R(435) md(129) png(114) sh(99) js(79) out(60) Rout(52)
+|                  css(42) rds(39) html(33)
+|      Conf files:
+|    Folder (code-sculpting): 1207 files
+|      File types: md(396) nix(211) png(77) py(36) lua(29) json(19)
+|                  graffle(17) html(12) sh(11) gitignore(10)
+|      Conf files: package.json(2) settings.json(1) tsconfig.json(1)
+|    Folder (futureofme): 1227 files
+|      File types: yml(139) md(121) php(91) jpg(73) sh(49) png(45) json(43)
+|                  gitignore(35) js(28) html(24)
+|      Conf files: package.json(12) dockerfile(3) tsconfig.json(2)
+|                  settings.json(1) makefile(1)
+|    Folder (awesome-awesome): 2364 files
+|      File types: mdc(908) md(327) py(194) cursorrules(143) yaml(90) json(55)
+|                  ts(47) yml(40) png(27) gitignore(12)
+|      Conf files: cursorrules(143) dockerfile(23) package.json(22)
+|                  tsconfig.json(19) makefile(1)
+|    Folder (astera-envisioning): 5137 files
+|      File types: cif(925) pdb(702) py(520) md(417) json(373) yaml(305)
+|                  png(175) npz(115) csv(105) parquet(99)
+|      Conf files: makefile(3) settings.json(2) package.json(1)
+|                  tsconfig.json(1) dockerfile(1)
+|    Folder (peeq-crb-nexus): more than 21209 files
+|      File types: py(5899) pyc(5217) md(3378) pyi(385) h(277) txt(185)
+|                  so(123) typed(102) json(87) pxi(78)
+|      Conf files: settings.json(1) package.json(1)
+|    Folder (lam-eda): more than 20250 files
+|      File types: py(3817) pyc(3800) js(2467) map(1707) json(1244) meta(531)
+|                  sst(483) rsc(386) pyi(307) tsx(263)
+|      Conf files: package.json(24) tsconfig.json(8) settings.json(3)
+|                  dockerfile(2)
+|    Folder (ai-veracity-chains): more than 25253 files
+|      File types: py(8557) h(3894) pyc(2204) mo(614) pyi(339) js(322) so(138)
+|                  txt(135) pxd(79) pyx(69)
+|      Conf files: package.json(1)
+|    Folder (continuous-ai): more than 109923 files
+|      File types: json(8769) eml(7195) md(3675) txt(33) yml(17) ts(14) py(11)
+|                  sql(8) jsonl(7) gitignore(5)
+|      Conf files: settings.json(2) launch.json(1)
+|    Folder (cidr-org): more than 24494 files
+|      File types: py(3403) jpg(2095) html(1543) png(1517) css(1322) pyc(1305)
+|                  map(727) js(688) pdf(243) md(238)
+|      Conf files: settings.json(2) package.json(1)
+
+
