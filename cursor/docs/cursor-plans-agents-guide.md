@@ -25,6 +25,8 @@ When a plan is ready to build, the editor typically shows:
 | **Assignment chip** | Per-todo link to one or more referenced agents (`Assigned to N agent(s)`) |
 | **Referenced by N Agents** | Agents panel; **+ New** creates a sub-composer bound to the plan |
 
+![Plan editor: Build bar, todos with assignment chips, and Referenced Agents panel](assets/plan-editor-agents-panel.png)
+
 On-disk `.plan.md` frontmatter stores `name`, `overview`, and `todos[]` (`id`, `content`, `status`). **Agent assignments and models are not persisted in YAML today** — they live in Cursor's plan registry/UI. Use the [annotation convention](#6-plan-file-cost-annotations) below for git-backed budgeting.
 
 ### Build paths (common confusion)
@@ -316,6 +318,6 @@ Fable count (Balanced): 4 todos. Run scholar wave sequentially with fresh sessio
 - [Teams Dashboard](https://cursor.com/docs/account/teams/dashboard)
 - [Cloud agents](https://cursor.com/blog/cloud-agents)
 - [Cursor 3 changelog](https://cursor.com/changelog/3-0)
-- Research JSON: [cursor-plan-agents-research.json](../cursor-plan-agents-research.json), [cursor-usage-dashboard-api-research.json](../cursor-usage-dashboard-api-research.json), [cursor-cost-calculator-tools-research.json](../cursor-cost-calculator-tools-research.json)
+- Research JSON: [cursor-plan-agents-research.json](../cursor-plan-agents-research.json), [cursor-plan-todo-assignment-research.json](../cursor-plan-todo-assignment-research.json), [cursor-plan-send-tasks-research.json](../cursor-plan-send-tasks-research.json)
 
 Hands-on walkthrough: [blog/cursor-plans-hands-on.md](blog/cursor-plans-hands-on.md)
