@@ -16,6 +16,12 @@ This doc matches the layout under `~/dotfiles/cursor`: [snapshots/workspace/](..
 - **No single user-facing “plans database”** that lists every plan for every project. The `.plan.md` files are the source of truth. `ai-code-tracking.db` and similar files are unrelated to a plans index. Association with a project is by **file location**, **editor context** when the plan was created, **recent files** in workspace snapshot JSON, or path references in the plan body.
 - **Catalog script:** [scripts/catalog-cursor-plans.sh](../scripts/catalog-cursor-plans.sh) lists `~/.cursor/plans`, optional paths under `~/.cursor/projects`, and optional `PROJECT_ROOTS` (space-separated) to find `.cursor/plans` in your repos.
 - **Extensions:** community tools (e.g. [cursor-plan-view](https://github.com/snasa045/cursor-plan-view)) improve **editing and rendering** `*.plan.md` in VS Code/Cursor; use the catalog script for a **flat cross-project file list**, not a built-in global plans dashboard from Cursor.
+- **Agents and assignments are not in YAML:** On-disk `.plan.md` frontmatter stores `todos[]` (`id`, `content`, `status`) only. Referenced plan agents, per-todo assignment chips, and per-agent model pickers live in Cursor's plan UI/registry — not committed with the file unless you add optional cost annotations (see [cursor-plans-agents-guide.md](cursor-plans-agents-guide.md#6-plan-file-cost-annotations)).
+
+## Cost tooling
+
+- [cursor-cost-tooling.md](cursor-cost-tooling.md) — pre-build estimates, CSV replay, Teams API, vendored upstream tools
+- [cursor-pricing-snapshot.md](cursor-pricing-snapshot.md) — dated rate card for plan budgeting
 
 ## Related
 

@@ -1,0 +1,33 @@
+# Copy into a .plan.md frontmatter todo block (convention only — Cursor Build does not read these yet).
+# See docs/cursor-plans-agents-guide.md §6 and docs/cursor-cost-tooling.md
+
+todos:
+  - id: example-todo
+    content: Describe the work in one line
+    status: pending
+    # Model slug — must match data/cursor-plan-rates.json or upstream catalog
+    model: composer-2.5
+    pool: auto          # auto | composer | api
+    archetype: doc-draft # script | doc-draft | doc-synthesis | code-feature | code-debug | cross-link
+    auto_likely: composer-2.5  # null if pinning; heuristic only
+    auto_confidence: medium    # high | medium | low
+    est_tokens_in: 120000
+    est_tokens_out: 35000
+    est_cost_usd:
+      low: 0.5
+      typical: 1.2
+      high: 2.5
+    agent: writer       # referenced agent role name in plan UI
+
+# Body section (markdown below frontmatter):
+#
+# ## Cost budget
+# - Scenario: Balanced | Ceiling: $25 API
+# - plan_started_at: 2026-06-10T14:00:00Z
+# - plan_completed_at: (fill when done)
+#
+# | Scenario | Est API $ | Actual $ | Delta |
+# |----------|-----------|----------|-------|
+# | Lean     |           |          |       |
+# | Balanced |           |          |       |
+# | Premium  |           |          |       |

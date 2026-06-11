@@ -1,0 +1,87 @@
+{
+  "search_id": "search_8b717593179c422a897d299a8714fd39",
+  "status": "ok",
+  "results": [
+    {
+      "url": "https://forum.cursor.com/t/how-can-you-safely-rename-a-project-root-folder-without-losing-chat-history/131495",
+      "title": "How can you safely rename a project root folder without losing chat history? - Help - Cursor - Community Forum",
+      "publish_date": null,
+      "excerpts": [
+        "Is it feasible without losing previous chat history?"
+      ]
+    },
+    {
+      "url": "https://forum.cursor.com/t/plan-mode-save-to-workspace-workaround/136968",
+      "title": "Plan mode save to workspace workaround - Guides - Cursor - Community Forum",
+      "publish_date": null,
+      "excerpts": [
+        "I\u2019ve had a lot of issues testing plan mode with GPT-5 thinking today. Internal to-do\u2019s not coherent with actual progress Plan mode limitations and confusion vs Agent mode File saved to workspace is not correctly synced No way to get Plan Mode to establish new workdocs."
+      ]
+    },
+    {
+      "url": "https://cursor.com/changelog/04-24-26",
+      "title": "Multitask, Worktrees, and Multi-root Workspaces \u00b7 Cursor",
+      "publish_date": null,
+      "excerpts": [
+        "<strong>A single agent session can now target a reusable workspace made of multiple folders</strong>. This allows Cursor to make cross-repo changes spanning frontend, backend, and shared libraries, without retargeting the agent every time it moves between repos."
+      ]
+    },
+    {
+      "url": "https://forum.cursor.com/t/preserve-migrate-agent-chat-history-when-renaming-or-moving-the-project-folder/157185",
+      "title": "Preserve / migrate Agent chat history when renaming or moving the project folder - Feature Requests - Cursor - Community Forum",
+      "publish_date": null,
+      "excerpts": [
+        "Feature request for product/service Chat Describe the request When the workspace root folder is renamed or moved to a different parent path, Cursor treats it as a different workspace and previous Agent chat threads are no longer accessible from the UI. The project is often the same continuity of work, so losing history forces costly re-explaining."
+      ]
+    },
+    {
+      "url": "https://forum.cursor.com/t/plan-files-location/156476/6",
+      "title": "Plan files location - #6 by mohitjain - Feature Requests - Cursor - Community Forum",
+      "publish_date": null,
+      "excerpts": [
+        "Plans are saved to your user directory (~/.cursor/plans) by default, and there\u2019s no setting to change that location. As a workaround, you can <strong>use the \u201cSave to Workspace\u201d button at the top of an open plan</strong>, which moves it into your project\u2019s"
+      ]
+    },
+    {
+      "url": "https://forum.cursor.com/t/multi-root-support-in-agents-window/158957",
+      "title": "Multi-root support in Agents Window - Release Discussions - Cursor - Community Forum",
+      "publish_date": null,
+      "excerpts": [
+        "<strong>Multi-root support lets one agent session work across multiple folders</strong>. Instead of retargeting the agent each time it moves between repos, you can define a workspace that includes the relevant projects."
+      ]
+    },
+    {
+      "url": "https://forum.cursor.com/t/what-happens-when-plan-file-is-saved/135261",
+      "title": "What happens when plan file is saved - Help - Cursor - Community Forum",
+      "publish_date": null,
+      "excerpts": [
+        "the new plan mode creates an md file with description and there are couple of things: first, when i hit build within the md file, agent says he does not see the plan, i must click the \u201cbuild\u201d within the chat window sec"
+      ]
+    },
+    {
+      "url": "https://www.reddit.com/r/cursor/comments/1oic8lq/where_the_plan_files_are_located/",
+      "title": "r/cursor on Reddit: Where the Plan files are located?",
+      "publish_date": null,
+      "excerpts": [
+        "in mac open finder, cmd+shift+g go to ~/.cursor/plans (this is root dir of mac not your workspace) this is where plans are stored globally, <strong>if you press save to workspace then plan is moved to your workspace</strong>"
+      ]
+    },
+    {
+      "url": "https://forum.cursor.com/t/chat-history-folder/7653",
+      "title": "Chat history folder - Help - Cursor - Community Forum",
+      "publish_date": null,
+      "excerpts": [
+        "Hi all, where is the chat history stored? I love Cursor but I just changed PC, while working on a same project, same folder but chat history is gone. Thanks!"
+      ]
+    },
+    {
+      "url": "https://tessl.io/registry/skills/github/jeremylongshore/claude-code-plugins-plus-skills/cursor-multi-repo",
+      "title": "cursor-multi-repo \u2022 claude-code-plugins-plus-skills \u2022 jeremylongshore \u2022 Skills \u2022 Registry \u2022 Tessl",
+      "publish_date": null,
+      "excerpts": [
+        "Work with multiple repositories and monorepo structures in Cursor. Covers multi-root workspaces, selective indexing, cross-project context, and rule inheritance patterns."
+      ]
+    }
+  ],
+  "warnings": []
+}

@@ -5,10 +5,15 @@ A comprehensive set of tools to capture and analyze your Cursor editor workspace
 ## Overview
 
 These scripts help you:
+
 - **Snapshot** all open windows, files, folders, and extensions
 - **Track** workspace history over time
 - **Compare** snapshots to see what changed
 - **Restore** context by reviewing past workspace states
+
+## Compendium (Cursor plans, mirrors, skills registry)
+
+For a **sibling private git repo** that backs up global `~/.cursor/plans`, per-project `.cursor/` / `.specstory/` (selective), and tracks **vendor vs authored** skills, see **[docs/COMPENDIUM.md](docs/COMPENDIUM.md)** (live path, `gh` remote, env var, launchd). The scaffold under [`compendium/`](compendium/README.md) matches that layout. Personal Cursor skill: **`bootstrap-tool-config-repo`** in `~/.cursor/skills/bootstrap-tool-config-repo/`.
 
 ## Quick Start
 
@@ -22,6 +27,57 @@ These scripts help you:
 # View windows from latest snapshot
 ./view-cursor-snapshots.sh windows latest
 ```
+
+## Resource tuning (RAM / MCP / LSP)
+
+After auditing many restored windows, use the config snapshot + apply/restore helpers:
+
+```bash
+# Snapshot only (timestamped dir under snapshots/)
+./scripts/snapshot-cursor-config.sh
+
+# Snapshot, then disable heavy extensions + plugin MCP + tweak settings
+./scripts/apply-cursor-resource-tuning.sh apply
+
+# Roll back from a snapshot dir (see snapshots/config-*/README.txt)
+./scripts/apply-cursor-resource-tuning.sh restore /path/to/snapshots/config-YYYY-MM-DD_HH-MM-SS
+
+# Global user MCP (~/.cursor/mcp.json) — separate toggle
+./scripts/toggle-global-mcp.sh status|disable|enable
+```
+
+Manifest: `config/resource-tuning.manifest.json`. Last apply snapshot path: `config/last-resource-tuning-snapshot.txt`. **Restart Cursor** after apply or restore.
+
+### Extensions (snapshot / disable most / restore)
+
+```bash
+# Snapshot installed + enabled/disabled state (SUMMARY.md for humans)
+./scripts/manage-extensions.sh snapshot
+
+# See counts and path to last snapshot
+./scripts/manage-extensions.sh status
+
+# Full lists (what is on vs off right now)
+./scripts/manage-extensions.sh list
+
+# What stays enabled on apply (edit config/extensions-keep.manifest.json first)
+./scripts/manage-extensions.sh keep
+
+# Preview what apply would disable
+./scripts/manage-extensions.sh apply --dry-run
+
+# Snapshot, then disable every installed extension except keepEnabled
+./scripts/manage-extensions.sh apply
+
+# Put enable/disable back exactly as at snapshot time
+./scripts/manage-extensions.sh restore
+./scripts/manage-extensions.sh restore snapshots/extensions-YYYY-MM-DD_HH-MM-SS
+
+# One extension: cursor --enable-extension <publisher.name>
+```
+
+Latest snapshot symlink: `snapshots/extensions-latest` (after `apply`, points at the **pre-apply** dir for restore).  
+Keep list: `config/extensions-keep.manifest.json` (`keepEnabled` vs `optionalKeep`).
 
 ## Installation
 
