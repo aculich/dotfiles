@@ -4,7 +4,7 @@ This guide prioritizes **new Cursor 3 material published in March-April 2026** a
 
 It then translates those findings into a practical workflow you can run day-to-day.
 
-**Related in this repo:** [blog/worktrees-second-ledger.md](blog/worktrees-second-ledger.md) — what worktrees do *not* copy (editor identity, index, plans, budget), extending a community runtime-isolation ledger.
+**Related in this repo:** [blog/worktrees-second-ledger.md](blog/worktrees-second-ledger.md) — what worktrees do *not* copy (editor identity, index, plans, budget), extending a community runtime-isolation ledger. [blog/worktrees-isolation-spectrum.md](blog/worktrees-isolation-spectrum.md) — when *not* to use worktrees: GitButler virtual branches and the isolation spectrum.
 
 ---
 
@@ -66,7 +66,15 @@ Community + staff responses in April 2026 show real rough edges:
 - Reports of ambiguity about whether the run truly remained isolated in the worktree.
 - Usability regression complaints vs Cursor 2 visual affordances (worktree visibility/apply/discard speed).
 
-Practical conclusion: **treat worktree isolation as "verify, do not assume"** during each run.
+Later reports from the [release thread](https://forum.cursor.com/t/cursor-3-worktrees-best-of-n/156507/34) (mid–late April 2026) sharpen the picture:
+
+- **No UI indication of worktree context.** Branch–conversation association stayed locked to the *main* worktree; the changes and PR shown can belong to a different tree than the one the agent is editing. Users report only discovering the real location by inspecting git state directly.
+- **Non-deterministic merge caused a production incident.** One team reported downtime after an agentic worktree merge created a commit that deployed unfinished work. The deterministic apply flow from Cursor 2 did not have this failure mode. Treat "let the agent merge the worktree" as unsafe; apply deterministically and validate after each apply.
+- **`/apply-worktree` missing from the Agents Window** at the time, leaving only commit/push/PR — no way to apply a worktree's changes to your working branch locally.
+- **A useful framing from the community:** Cursor 2 worktrees were *apply-oriented* (parallelize, then choose what lands on your branch); Cursor 3 worktrees are *PR-oriented* (each worktree session is expected to become its own PR against the default branch). If your workflow assumes the former, the latter feels broken rather than different.
+- **Staff signal (Apr 21):** native worktree support in the Agent Window described as close to launch. Re-check current behavior before standardizing.
+
+Practical conclusion: **treat worktree isolation as "verify, do not assume"** during each run — and treat the *merge back* as the highest-risk step, not the run itself.
 
 ---
 

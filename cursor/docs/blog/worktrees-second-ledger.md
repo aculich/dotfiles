@@ -3,7 +3,7 @@
 *A companion to the parallel-agent worktree pattern making the rounds — extending the "what's isolated vs. shared" ledger from runtime services to the IDE and agent layer, based on our Cursor setup.*
 
 **Inspired by:** ["Anyone here using Git Worktrees? Here's my New Local Dev Setup"](https://community.theaiautomators.com/c/discussions/anyone-here-using-git-worktrees) (The AI Automators community)
-**Companions:** [CURSOR3-worktrees.md](../CURSOR3-worktrees.md) · [IGNORING.md](../IGNORING.md) · [MULTIROOT-cursor-lifecycle.md](../MULTIROOT-cursor-lifecycle.md) · [cursor-plans-agents-guide.md](../cursor-plans-agents-guide.md)
+**Companions:** [CURSOR3-worktrees.md](../CURSOR3-worktrees.md) · [IGNORING.md](../IGNORING.md) · [MULTIROOT-cursor-lifecycle.md](../MULTIROOT-cursor-lifecycle.md) · [cursor-plans-agents-guide.md](../cursor-plans-agents-guide.md) · **Sequel:** [worktrees-isolation-spectrum.md](worktrees-isolation-spectrum.md)
 
 ---
 
@@ -37,6 +37,7 @@ A worktree is a new directory. To your editor and your agents, a new directory i
 | Codebase index | **Isolated** — each opened worktree indexes from scratch | Editor; you pay the cost per tree |
 | `.cursorignore` / `.cursorindexingignore` / `.vscode` excludes | **Shared if committed**, lost if personal | You, via git |
 | Gitignored paths (`.env`, vendored `upstream/`, data files, artifacts) | **Left behind** — worktrees check out tracked files only | You, via setup script (symlink / copy / regenerate) |
+| Unpushed local commits | **Left behind by default** — agent-created worktrees often branch from `origin/HEAD`, not your local `HEAD` | You, via base-ref settings (e.g. Claude Code `worktree.baseRef`) |
 | Rules (`.cursor/rules/`), `WORKTREES.md`-style docs | **Shared if committed** | You, via git |
 | Saved plans (`.cursor/plans/`) | **Shared if committed**; agent/model assignments are not | You, via git ([details](../cursor-plans-agents-guide.md)) |
 | Worktree setup (`.cursor/worktrees.json`) | **Shared** — committed config runs in each new tree | Cursor, if you declare it |
@@ -80,6 +81,17 @@ The forum author's multi-GB venv symlink is one instance of the general rule: **
 | **Declare out of scope** | Too heavy or too stateful to duplicate | "Worktrees don't run data-pipeline jobs" in the runbook |
 
 In practice we now audit `.gitignore` while writing the worktree setup script, because the ignore file *doubles as the checklist* of what the script must symlink, copy, or regenerate. The `.cursor/worktrees.json` setup hook ([guide](../CURSOR3-worktrees.md)) is the natural home for it — and the baseline-test step below is what proves you didn't miss a row.
+
+**This problem is now productized.** Claude Code shipped [`.worktreeinclude`](https://code.claude.com/docs/en/worktrees) — a file in the repo root, gitignore syntax, listing the gitignored files to copy into every new worktree automatically (`.env`, `config/secrets.json`, …). Only files that match a pattern *and* are gitignored get copied, so tracked files are never duplicated, and it applies to `--worktree` trees, subagent worktrees, and desktop parallel sessions alike. For anything beyond copying — gitflow branch naming, symlinking a demo database, non-git VCS — a [`WorktreeCreate` hook](https://code.claude.com/docs/en/worktrees) replaces the creation logic entirely; [Matt Brailsford's writeup](https://github.com/mattbrailsford/mattbrailsford.dev/discussions/54) of migrating his custom worktree skill to exactly this hook is the worked example (his gitignored Umbraco demo site, database and media included, is the "ignored but load-bearing" case in the wild). Each agent harness now has its own answer to "who runs your worktree setup":
+
+| Harness | Mechanism | Character |
+|---------|-----------|-----------|
+| Cursor | `.cursor/worktrees.json` setup commands | Imperative shell steps, committed; verify they ran |
+| Claude Code | `.worktreeinclude` + `WorktreeCreate`/`WorktreeRemove` hooks | Declarative copy list, plus full programmatic override (works even for SVN/Perforce) |
+| Codex | Local-environment setup scripts | Per the forum author's report |
+| Any | Slash command / skill run at session start | The forum author's `/worktree-dev-env` fallback — portable, but relies on remembering to run it |
+
+One subtler left-behind to know about: **your unpushed commits**. Claude Code worktrees branch from `origin/HEAD` by default — a clean tree matching the remote — not from your local `HEAD`. So a fresh worktree can be missing work you've *committed* but not pushed, which is sneakier than a missing gitignored file because `git log` looks plausible at a glance. Set `worktree.baseRef` to `"head"` when agents need to build on in-progress local state, and check what base your harness uses before assuming the tree contains what you think it does.
 
 ### 3. Name the trees, don't number them
 
@@ -134,12 +146,15 @@ Before scaling past your second parallel worktree:
 - [ ] **Worktree runbook** committed (`WORKTREES.md` or equivalent) — ports, shared services, teardown gotchas
 - [ ] **Rules and plans** committed under `.cursor/` — they're the only agent context that travels
 - [ ] **Ignore policy** committed (`.cursorignore`, `.cursorindexingignore`, watcher/search excludes) — audited for anything stuck in user settings
-- [ ] **`.gitignore` audited as a left-behind manifest** — every ignored-but-load-bearing path (env files, vendored clones, data, artifacts) assigned a disposition: symlink, copy, regenerate, or out of scope
+- [ ] **`.gitignore` audited as a left-behind manifest** — every ignored-but-load-bearing path (env files, vendored clones, data, artifacts) assigned a disposition: symlink, copy, regenerate, or out of scope (or declared in `.worktreeinclude` where the harness supports it)
+- [ ] **Base ref understood** — know whether new trees branch from `origin/HEAD` or local `HEAD`, so unpushed commits don't silently go missing
 - [ ] **Setup declared**, not tribal: `.cursor/worktrees.json` (or a setup script the runbook mandates), with a baseline check that proves it ran
 - [ ] **Model routing** decided per tree; `/best-of-n` reserved for genuinely ambiguous tasks
 - [ ] **Wave discipline**: apply one tree at a time, validate after each, reconcile spend between waves
 
 The original post ends with "in theory this should allow each coding agent to safely run, test, fail, fix, and validate without stepping on the toes of others." The theory holds — but only if you keep both ledgers. The runtime ledger keeps agents from stepping on each other's *services*. The second ledger keeps the editor, the context, and the budget from quietly un-copying everything you thought the worktree copied.
+
+And if the runtime ledger gets too expensive to keep — too many services, too much per-tree setup — worktrees may be the wrong position on the isolation spectrum entirely. That case, and GitButler's virtual-branch alternative, is the sequel: [When the worktree tax exceeds the merge tax](worktrees-isolation-spectrum.md).
 
 ---
 
