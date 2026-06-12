@@ -4,6 +4,8 @@ This guide prioritizes **new Cursor 3 material published in March-April 2026** a
 
 It then translates those findings into a practical workflow you can run day-to-day.
 
+**Related in this repo:** [blog/worktrees-second-ledger.md](blog/worktrees-second-ledger.md) — what worktrees do *not* copy (editor identity, index, plans, budget), extending a community runtime-isolation ledger.
+
 ---
 
 ## 1) High-signal Cursor 3 sources (new, deep, useful)
