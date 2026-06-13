@@ -1,0 +1,29 @@
+{
+  "description": "Extensions left enabled when running manage-extensions.sh apply. Edit before apply; re-run snapshot after changes.",
+  "keepEnabled": [
+    "vscodevim.vim",
+    "vspacecode.whichkey",
+    "rrudi.vscode-dired",
+    "ms-python.python",
+    "ms-python.debugpy",
+    "editorconfig.editorconfig",
+    "beilunyang.cursor-rules"
+  ],
+  "optionalKeep": [
+    "esbenp.prettier-vscode",
+    "eamodio.gitlens",
+    "github.vscode-pull-request-github",
+    "gitworktrees.git-worktrees",
+    "specstory.specstory-vscode",
+    "anysphere.remote-ssh",
+    "anysphere.remote-containers",
+    "davidanson.vscode-markdownlint",
+    "bierner.markdown-mermaid"
+  ],
+  "notes": [
+    "apply disables every installed extension not listed in keepEnabled (optionalKeep is documentation only unless you copy ids into keepEnabled).",
+    "Re-enable one extension: cursor --enable-extension <id> then restart Cursor.",
+    "Re-enable everything from before apply: manage-extensions.sh restore",
+    "Heavy language servers (eslint, tailwind, go, terraform, docker, java pack): leave disabled globally; enable per workspace when you open that project."
+  ]
+}

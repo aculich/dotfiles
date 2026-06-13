@@ -1,0 +1,8 @@
+# Skills you author. Prefer symlink from ~/.cursor/skills/<id> to a private repo checkout.
+#
+# - id: my-bootstrap-skill
+#   repo: git@github.com:you/my-agent-skills.git
+#   local_path: /Users/me/.cursor/skills/bootstrap-tool-config-repo
+#   compendium_mirror: mirrors/skills-snapshots/bootstrap-tool-config-repo
+
+[]

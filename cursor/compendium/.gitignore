@@ -1,0 +1,23 @@
+# Local overrides
+.env
+.env.*
+*.pem
+*.p12
+**/mcp.json
+
+# Large / high-churn (tune per machine)
+**/node_modules/
+**/.specstory/history/**/*.jsonl
+# Uncomment to track SpecStory history selectively:
+# !mirrors/by-project/example/.specstory/history/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.idea/
+
+# Python (scripts run locally)
+**/__pycache__/
+*.pyc

@@ -1,0 +1,196 @@
+{
+  "schema": "chatstory.usage.v1",
+  "composer_id": "203d7f19-3543-4de8-9778-d8b3c7609e50",
+  "captured_at": "2026-06-06T16:47:54.003Z",
+  "session": {
+    "input_tokens": 650,
+    "output_tokens": 4315,
+    "estimated_usd": 0.066675,
+    "model": "composer-2",
+    "tokens_estimated": true,
+    "assistant_bubbles": 22,
+    "user_bubbles": 2
+  },
+  "bubbles": [
+    {
+      "bubble_id": "5349cf64-f519-46a9-83f8-d1dabe3ced22",
+      "role": "assistant",
+      "input_tokens": 0,
+      "output_tokens": 364,
+      "estimated_usd": 0.00546,
+      "model": null,
+      "tokens_estimated": true
+    },
+    {
+      "bubble_id": "42386fb6-b745-4eb6-be8e-5c6d895d3a14",
+      "role": "assistant",
+      "input_tokens": 0,
+      "output_tokens": 456,
+      "estimated_usd": 0.00684,
+      "model": null,
+      "tokens_estimated": true
+    },
+    {
+      "bubble_id": "d977bf96-2f57-42ef-9ad7-4d12bc40a3a1",
+      "role": "assistant",
+      "input_tokens": 0,
+      "output_tokens": 27,
+      "estimated_usd": 0.000405,
+      "model": null,
+      "tokens_estimated": true
+    },
+    {
+      "bubble_id": "3f7f4896-a1dd-440d-bd84-0d2f4f8668c0",
+      "role": "assistant",
+      "input_tokens": 0,
+      "output_tokens": 42,
+      "estimated_usd": 0.00063,
+      "model": null,
+      "tokens_estimated": true
+    },
+    {
+      "bubble_id": "fb1949e2-cc9c-4a75-901f-07f390057993",
+      "role": "assistant",
+      "input_tokens": 0,
+      "output_tokens": 84,
+      "estimated_usd": 0.00126,
+      "model": null,
+      "tokens_estimated": true
+    },
+    {
+      "bubble_id": "016741db-078d-453e-b93f-d706a15a3bea",
+      "role": "assistant",
+      "input_tokens": 0,
+      "output_tokens": 70,
+      "estimated_usd": 0.00105,
+      "model": null,
+      "tokens_estimated": true
+    },
+    {
+      "bubble_id": "8aebb1c2-b1c6-456a-816b-2e32d71025c2",
+      "role": "assistant",
+      "input_tokens": 0,
+      "output_tokens": 169,
+      "estimated_usd": 0.002535,
+      "model": null,
+      "tokens_estimated": true
+    },
+    {
+      "bubble_id": "4abb04a2-a29e-4470-9162-d7f0ca36897b",
+      "role": "assistant",
+      "input_tokens": 0,
+      "output_tokens": 142,
+      "estimated_usd": 0.00213,
+      "model": null,
+      "tokens_estimated": true
+    },
+    {
+      "bubble_id": "701b0e1c-9cc0-4e58-9d52-95b684cf1239",
+      "role": "assistant",
+      "input_tokens": 0,
+      "output_tokens": 88,
+      "estimated_usd": 0.00132,
+      "model": null,
+      "tokens_estimated": true
+    },
+    {
+      "bubble_id": "1c1bbb86-1b4f-4e29-8537-8a16f3dfa540",
+      "role": "assistant",
+      "input_tokens": 0,
+      "output_tokens": 521,
+      "estimated_usd": 0.007815,
+      "model": null,
+      "tokens_estimated": true
+    },
+    {
+      "bubble_id": "c7cc7d84-eeb0-4c91-b18e-823253919a1e",
+      "role": "assistant",
+      "input_tokens": 0,
+      "output_tokens": 180,
+      "estimated_usd": 0.0027,
+      "model": null,
+      "tokens_estimated": true
+    },
+    {
+      "bubble_id": "02acb4c0-e1ee-428f-94a7-c0299fbf44b1",
+      "role": "assistant",
+      "input_tokens": 0,
+      "output_tokens": 32,
+      "estimated_usd": 0.00048,
+      "model": null,
+      "tokens_estimated": true
+    },
+    {
+      "bubble_id": "d2d423a8-a1d9-4165-9324-289aabbb72df",
+      "role": "assistant",
+      "input_tokens": 0,
+      "output_tokens": 375,
+      "estimated_usd": 0.005625,
+      "model": null,
+      "tokens_estimated": true
+    },
+    {
+      "bubble_id": "a5ae2697-975b-42dd-ad98-4995ea7da841",
+      "role": "assistant",
+      "input_tokens": 0,
+      "output_tokens": 646,
+      "estimated_usd": 0.00969,
+      "model": null,
+      "tokens_estimated": true
+    },
+    {
+      "bubble_id": "accd0903-4d36-40cf-b3c0-6534affb26d6",
+      "role": "assistant",
+      "input_tokens": 0,
+      "output_tokens": 11,
+      "estimated_usd": 0.000165,
+      "model": null,
+      "tokens_estimated": true
+    },
+    {
+      "bubble_id": "61f885d0-5b4e-475f-a2fb-8e85450a1887",
+      "role": "assistant",
+      "input_tokens": 0,
+      "output_tokens": 17,
+      "estimated_usd": 0.000255,
+      "model": null,
+      "tokens_estimated": true
+    },
+    {
+      "bubble_id": "c8ac4775-f3a5-471d-95eb-9c95453877de",
+      "role": "assistant",
+      "input_tokens": 0,
+      "output_tokens": 185,
+      "estimated_usd": 0.002775,
+      "model": null,
+      "tokens_estimated": true
+    },
+    {
+      "bubble_id": "4f76dfe1-c632-433f-aeff-45e5b459ccb5",
+      "role": "assistant",
+      "input_tokens": 0,
+      "output_tokens": 570,
+      "estimated_usd": 0.00855,
+      "model": null,
+      "tokens_estimated": true
+    },
+    {
+      "bubble_id": "1c340f37-9907-482e-aeb4-1c12d3390720",
+      "role": "assistant",
+      "input_tokens": 0,
+      "output_tokens": 23,
+      "estimated_usd": 0.000345,
+      "model": null,
+      "tokens_estimated": true
+    },
+    {
+      "bubble_id": "38ec026a-469e-4e54-b1af-565bbe992a28",
+      "role": "assistant",
+      "input_tokens": 0,
+      "output_tokens": 313,
+      "estimated_usd": 0.004695,
+      "model": null,
+      "tokens_estimated": true
+    }
+  ]
+}

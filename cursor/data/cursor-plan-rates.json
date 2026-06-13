@@ -1,0 +1,66 @@
+{
+  "meta": {
+    "source": "upstream/kingdomseed__cursor-calculator/src/data/cursor-pricing.json",
+    "official_url": "https://cursor.com/docs/models-and-pricing",
+    "retrieved_at": "2026-06-10",
+    "note": "Subset for plan-cost scripts. Refresh with scripts/sync-cursor-pricing-snapshot.sh"
+  },
+  "plans": {
+    "pro": {
+      "api_pool_usd": 20
+    },
+    "pro_plus": {
+      "api_pool_usd": 70
+    },
+    "ultra": {
+      "api_pool_usd": 400
+    }
+  },
+  "models": {
+    "claude-4-5-haiku": {
+      "pool": "api",
+      "input": 1,
+      "output": 5
+    },
+    "claude-opus-4-8": {
+      "pool": "api",
+      "input": 5,
+      "output": 25
+    },
+    "claude-fable-5": {
+      "pool": "api",
+      "input": 10,
+      "output": 50
+    },
+    "claude-4-6-sonnet": {
+      "pool": "api",
+      "input": 3,
+      "output": 15
+    },
+    "composer-2.5": {
+      "pool": "auto_composer",
+      "input": 0.5,
+      "output": 2.5
+    },
+    "gemini-3.1-pro": {
+      "pool": "api",
+      "input": 2,
+      "output": 12
+    },
+    "gpt-5.3-codex": {
+      "pool": "api",
+      "input": 1.75,
+      "output": 14
+    },
+    "auto": {
+      "pool": "auto_composer",
+      "input": 1.25,
+      "output": 6
+    },
+    "claude-sonnet-4-6": {
+      "pool": "api",
+      "input": 3,
+      "output": 15
+    }
+  }
+}

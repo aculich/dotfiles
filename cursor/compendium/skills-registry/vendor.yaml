@@ -1,0 +1,12 @@
+# Example: add one entry per third-party skill or cached bundle you track.
+# Replace with your real paths (do not commit secrets).
+#
+# - id: example-vendor-skill
+#   kind: path
+#   source: https://example.com/skill-repo
+#   installed_path: /Users/me/.cursor/skills/example-vendor-skill
+#   license: MIT
+#   pin: main@abc1234
+#   notes: Installed manually from upstream
+
+[]

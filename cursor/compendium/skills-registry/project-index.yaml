@@ -1,0 +1,10 @@
+# Projects to include in snapshot-all.sh (in addition to optional CLI args).
+# slug: stable id for mirrors/by-project/<slug>/
+#
+# - slug: github-com-you-sample
+#   path: /Users/me/src/sample
+#   origin_url: git@github.com:you/sample.git
+#   mirror_specstory: rules-only
+#   last_sync:
+
+[]

@@ -1,0 +1,4 @@
+# Copy to project-paths.txt (one row per project). Tab-separated slug then absolute path.
+# slug should match mirrors/by-project/<slug>/ and plans/by-project/<slug>/
+#
+# github-com-me-myapp	/Users/me/src/myapp

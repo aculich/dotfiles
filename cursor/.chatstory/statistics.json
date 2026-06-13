@@ -1,0 +1,82 @@
+{
+  "schema_version": 2,
+  "sessions_saved": 6,
+  "last_saved_at": "2026-06-06T16:47:54.004Z",
+  "last_session_id": "203d7f19-3543-4de8-9778-d8b3c7609e50",
+  "files": [
+    "2026-04-08_19-26-10Z-otlpexporter_error_explanation.md",
+    "2026-03-08_07-30-51Z-agent_terminal_keybindings_documentation.md",
+    "2026-02-18_06-41-59Z-next_js_process_memory_bloat_and_ingestion_optimiz.md",
+    "2026-02-06_04-26-45Z-cursor_window_and_keybinding_malfunction.md",
+    "2026-01-14_01-24-19Z-global_cursor_rules_for_script_issues.md",
+    "2025-10-10_17-03-19Z-cursor_ide_config_and_workflow.md"
+  ],
+  "usage": {
+    "last_session": {
+      "composerId": "203d7f19-3543-4de8-9778-d8b3c7609e50",
+      "model": "composer-2",
+      "inputTokens": 650,
+      "outputTokens": 4315,
+      "estimatedUsd": 0.066675,
+      "tokensEstimated": true,
+      "assistantBubbles": 22,
+      "userBubbles": 2,
+      "capturedAt": "2026-06-06T16:47:54.003Z"
+    },
+    "by_file": {
+      "2025-10-10_17-03-19Z-cursor_ide_config_and_workflow.md": {
+        "input_tokens": 221586,
+        "output_tokens": 187514,
+        "estimated_usd": 3.477468,
+        "captured_at": "2026-06-06T16:47:53.891Z"
+      },
+      "2026-01-14_01-24-19Z-global_cursor_rules_for_script_issues.md": {
+        "input_tokens": 230,
+        "output_tokens": 59338,
+        "estimated_usd": 0.89076,
+        "captured_at": "2026-06-06T16:47:53.937Z"
+      },
+      "2026-02-06_04-26-45Z-cursor_window_and_keybinding_malfunction.md": {
+        "input_tokens": 9974,
+        "output_tokens": 8704,
+        "estimated_usd": 0.160482,
+        "captured_at": "2026-06-06T16:47:53.967Z"
+      },
+      "2026-02-18_06-41-59Z-next_js_process_memory_bloat_and_ingestion_optimiz.md": {
+        "input_tokens": 62,
+        "output_tokens": 10562,
+        "estimated_usd": 0.158616,
+        "captured_at": "2026-06-06T16:47:53.971Z"
+      },
+      "2026-03-08_07-30-51Z-agent_terminal_keybindings_documentation.md": {
+        "input_tokens": 998,
+        "output_tokens": 76857,
+        "estimated_usd": 1.155849,
+        "captured_at": "2026-06-06T16:47:53.975Z"
+      },
+      "2026-04-08_19-26-10Z-otlpexporter_error_explanation.md": {
+        "input_tokens": 650,
+        "output_tokens": 4315,
+        "estimated_usd": 0.066675,
+        "captured_at": "2026-06-06T16:47:54.003Z"
+      }
+    },
+    "rollup": {
+      "today": {
+        "input_tokens": 233500,
+        "output_tokens": 347290,
+        "estimated_usd": 5.90985
+      },
+      "last_7_days": {
+        "input_tokens": 233500,
+        "output_tokens": 347290,
+        "estimated_usd": 5.90985
+      },
+      "month": {
+        "input_tokens": 233500,
+        "output_tokens": 347290,
+        "estimated_usd": 5.90985
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "description": "Resource tuning applied by scripts/apply-cursor-resource-tuning.sh",
+  "extensionsDisabledGlobally": [
+    "streetsidesoftware.code-spell-checker",
+    "bradlc.vscode-tailwindcss",
+    "dbaeumer.vscode-eslint",
+    "redhat.vscode-yaml",
+    "anysphere.cursorpyright",
+    "golang.go",
+    "hashicorp.terraform",
+    "run-at-scale.terraform-doc-snippets",
+    "prisma.prisma",
+    "docker.docker",
+    "ms-azuretools.vscode-docker",
+    "ms-azuretools.vscode-containers",
+    "ms-kubernetes-tools.vscode-kubernetes-tools",
+    "anthropic.claude-code"
+  ],
+  "pluginMcpServerIds": [
+    "plugin-snyk-secure-development-Snyk",
+    "plugin-cloudflare-cloudflare-bindings",
+    "plugin-cloudflare-cloudflare-builds",
+    "plugin-cloudflare-cloudflare-docs",
+    "plugin-cloudflare-cloudflare-observability",
+    "plugin-context7-plugin-context7",
+    "plugin-compound-engineering-context7",
+    "plugin-vercel-vercel",
+    "plugin-stripe-stripe",
+    "plugin-clerk-clerk"
+  ],
+  "settingsChanges": [
+    "Removed workbench.editorAssociations *.md -> preview default",
+    "Set specstory.cloudSync.enabled to off"
+  ],
+  "notes": [
+    "Global user MCP: use scripts/toggle-global-mcp.sh (already disabled).",
+    "ms-python.python stays enabled; re-enable cursorpyright per Python workspace.",
+    "Plugin skills (compound-engineering, superpowers) remain; only MCP servers are disabled via workspace state."
+  ]
+}
