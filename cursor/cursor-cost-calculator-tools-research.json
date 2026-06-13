@@ -1,0 +1,94 @@
+{
+  "search_id": "search_f47f645065484b5da1530a86b95b2ee8",
+  "session_id": "session_f47f645065484b5da1530a86b95b2ee8",
+  "status": "ok",
+  "results": [
+    {
+      "url": "https://forum.cursor.com/t/simple-price-calculator-to-help-me-understand-my-usage/154793",
+      "title": "Simple price calculator to help me understand my usage - Built for Cursor - Cursor - Community Forum",
+      "publish_date": null,
+      "excerpts": [
+        "I was struggling a bit in my search for more empirical tools to do my cost calculation and vibe-coded this guy: <strong>https://cursor-cost-calculator.com/</strong> \u2013 You can grab the source on Github if you want."
+      ]
+    },
+    {
+      "url": "https://www.geeksforgeeks.org/techtips/how-to-use-cursor-ai-in-visual-studio-code/",
+      "title": "How to Use Cursor AI in Visual Studio Code - GeeksforGeeks",
+      "publish_date": null,
+      "excerpts": [
+        "<strong>Type \u201cCodeCursor\u201d and select \u201cCodeCursor: Configure Extension Settings\u201d from the dropdown</strong>. ... If you have a Cursor account, select the option to sign in and follow the prompts to authenticate."
+      ]
+    },
+    {
+      "url": "https://forum.cursor.com/t/can-cursor-cli-output-the-token-usage/156872",
+      "title": "Can cursor CLI output the token usage? - Feature Requests - Cursor - Community Forum",
+      "publish_date": null,
+      "excerpts": [
+        "This is the cursor CLI output: { &quot;type&quot;: &quot;result&quot;, &quot;subtype&quot;: &quot;success&quot;, &quot;is_error&quot;: false, &quot;duration_ms&quot;: 1234, &quot;duration_api_ms&quot;: 1234, &quot;result&quot;: &quot;result result result&quot;, &quot;session_id&quot;: &quot;&lt;uuid&gt;&quot;, &quot;reques"
+      ]
+    },
+    {
+      "url": "https://forum.cursor.com/t/cursor-usage-tracker-extension/47111?page=3",
+      "title": "Cursor Usage Tracker (Extension) - Showcase / Built for Cursor - Cursor - Community Forum",
+      "publish_date": "2025-02-07",
+      "excerpts": [
+        "Skip to where you left off (post 43) Skip to last reply Skip to top\n\nSkip to main content\n\n# Cursor Usage Tracker (Extension)\n\nShowcase Built for Cursor\n\n* [Documentation](https://docs.cursor.com/)\n* [Help](https://cursor.com/help)\n* [Forum Guidelines](https://forum.cursor.com/guidelines/ \"Forum Guidelines\")\n\n* \u200b\n\nYou have selected **0** posts.\n\nselect all\n\ncancel selecting\n\nFeb 2025\n\n41 / 68\n\nFeb 2025\n\nFeb 20\n\n## Load more posts above\n\n## post by caio-swdev on Feb 7, 2025\n\nCaio Swdev\n\nAhmet Kaan\n\nFeb 2025\n\nDone, working.  \nCan I push sugested modifications to the extension repo?  \nYou can review the changes and implement the fix the way you like it.\n\nconfetti_ball\n\nconfetti\\_ball\n\n1\n\n\u200b\n\n\u200b\n\n## post by Dwtexe on Feb 7, 2025\n\nAhmet Kaan Dwtexe Nightly Tester\n\nFeb 2025\n\nYes, please, I\u2019d love to.\n\n+1\n\n\\+1\n\n1\n\n\u200b\n\n\u200b\n\n## post by caio-swdev on Feb 7, 2025\n\nCaio Swdev\n\nFeb 2025\n\nOK, I\u2019ve pushed to git.  \nTested in Win11 using \u201cwsl remote connection\u201d and \u201cwithout wsl connection\u201d.\n\n1\n\n\u200b\n\u200b\n\n## post by Dwtexe on Feb 7, 2025\n\nAhmet Kaan Dwtexe Nightly Tester\n\nFeb 2025\n\nMerged it. Thank you for your efforts. I will publish the new version in a couple of hours.\n\n1\n\n\u200b\n\n\u200b\n\n## post by Dwtexe on Feb 8, 2025\n\nAhmet Kaan Dwtexe Nightly Tester\n\nFeb 2025\n\n[resim resim 635\u00d7534 15.5 KB](https://us1.discourse-cdn.com/cursor1/original/3X/0/1/01d19edc6658a99cae716f2267f13534ab92139c.png \"resim\")\n\n  \n[resim resim 777\u00d7185 4.8 KB](https://us1.discourse-cdn.com/cursor1/original/3X/e/0/e0211145ca24bedb20aec47665a395d4ec38012c.png \"resim\")\n\ncursor itself added this.\n\nMy version is quicker :slight_smile:\n\n1\n\n\u200b\n\n\u200b\n\n## post by v-karbovnichy on Feb 9, 2025\n\nVyacheslav Karbovnichy v-karbovnichy\n\nFeb 2025\n\nBut you have the stats numbers! this is the most needed for me.  \nI don\u2019t touch usage-based pricing at all.\n\n1\n\n\u200b\n\n\u200b\n\n## post by dannetstudio on Feb 9, 2025\n\nDaniel Ignacio Fern\u00e1ndez dannetstudio Nightly Tester\n\nFeb 2025\nI think this extension is fantastic and a great job by @Dwtexe , but shouldn\u2019t this be part of Cursor natively? It should be something that Cursor offers, as other competing IDEs already do.\n\nThe subject of prices / models / use is still something that is totally outdated on the web, it is not understood in Pricing, we don\u2019t know exactly how much we paid for o3, for Deepseek, it\u2019s been a long time\u2026 I think it\u2019s something too important for it not to be clear.\n\n1 Reply\n\n1\n\n\u200b\n\n\u200b\n\n## post by AbleArcher on Feb 10, 2025\n\nAbleArcher\n\nFeb 2025\n\nDwtexe:\n\n> Maybe marketlplace is rolling out slowly :thinking:\n> \n>\n\nIt will never show up in a search in Cursor as Microsoft doesn\u2019t allow non-MS products to access the official Marketplace.\n\nYou need to publish on [OpenVSX.org](http://OpenVSX.org)  \nAlso, as downloads have recently been disabled entirely on Marketplace there\u2019s no point publishing a Cursor only extension there at all.\n\nIt\u2019s great you included the ."
+      ]
+    },
+    {
+      "url": "https://cursor-cost-calculator.com/",
+      "title": "Cursor Cost Calculator \u2014 Estimate Your AI Coding Costs",
+      "publish_date": null,
+      "excerpts": [
+        "Cursor Cost Calculator \u2014 Estimate Your AI Coding Costs\nEmpirical tool for measuring Cursor IDE token usage and cost. Compare Pro, Pro Plus, and Ultra plans across 29 models. Every rate comes from Cursor's official docs."
+      ]
+    },
+    {
+      "url": "https://forum.cursor.com/t/compliance-how-does-cursor-use-vscode-marketplace-extensions/38535",
+      "title": "Compliance: How does Cursor use VSCode Marketplace extensions? - Discussions - Cursor - Community Forum",
+      "publish_date": "2025-01-02",
+      "excerpts": [
+        "Skip to last reply Skip to top\n\nSkip to main content\n\nSign Up Log In\n\n* \u200b\n\n# Compliance: How does Cursor use VSCode Marketplace extensions?\n\nDiscussions\n\nYou have selected **0** posts.\n\nselect all\n\ncancel selecting\n\nJan 2025\n\n1 / 3\n\nJan 2025\n\nFeb 2025\n\n## post by kot on Jan 2, 2025\n\nKot\n\nJan 2025\n\n[eclipse.org](https://www.eclipse.org/community/eclipse_newsletter/2020/march/1.php)\n\n### [Eclipse Open VSX: A Free Marketplace for VS Code Extensions | The Eclipse...](https://www.eclipse.org/community/eclipse_newsletter/2020/march/1.php)\n\nAccording to the 2019 Stack Overflow developer survey, Visual Studio (VS) Code is used by more than 50 percent of all developers worldwide.\n\n> While all of the projects listed above support VS Code extensions, only Microsoft products can use and connect to Microsoft\u2019s Extension Marketplace. The terms of use for the Marketplace prevent any non-Visual Studio products from accessing it.\n> \n>\nHow does Cursor host extensions by Microsoft on Cursor\u2019s Marketplace, such as C# and C/C++, without violating the VSCode Marketplace terms of service? The extensions are not accessible on OpenVSX either.\n\n1\n\n\u200b\n\n\u200b\n\n* [Cursor Extensions Marketplace security (Open VSX)](https://forum.cursor.com/t/cursor-extensions-marketplace-security-open-vsx/125429)\n\n5\\.7k views 4 links\n\n1 month later\n\n## post by guw on Feb 8, 2025\n\nGunnar guw\n\n2\n\nFeb 2025\n\n_Disclaimer: I am not a lawyer. I was involved (a little) with getting Open VSX up._\n\nOpen VSX requires an extension author to sign up and publish the extension. It\u2019s a manual process. However, it\u2019s free to use and Cursor seems to integrate with it already (according to [this discussion](https://forum.cursor.com/t/my-vs-code-extension-is-not-showing-up/31449) ).\n\nTechnically, marketplaces are typically not \u201c _hosting_ \u201d extensions they are _linking_ to them. This is important from a legal perspective.\nI don\u2019t know what/how Cursor is doing it. However, based on other forum questions and answers it seems that there is some process which scans the VS Code marketplaces for new (and/or updated?) extensions and publishes them on the Cursor marketplace. The process maybe automated or run manually. I don\u2019t know.\n\nI think from a compliance perspective you can implement such a process/tool as a VS Code extension. This _might_ not be in violation of the VS Code marketplace terms posted above because technically VS Code would be connecting to the marketplace. However, it may become complicated if some API is missing and the extension would need to initiate network connections to the marketplace directly.\n\nThere could have also been negotiations with Microsoft to allow Cursor such synchronization (perhaps for a percentage of revenue). It\u2019s possible as well. But I could not find any published information. Thus, just speculating here."
+      ]
+    },
+    {
+      "url": "https://github.com/kingdomseed/cursor-calculator",
+      "title": "GitHub - kingdomseed/cursor-calculator: Estimate Cursor IDE ...",
+      "publish_date": null,
+      "excerpts": [
+        "GitHub - kingdomseed/cursor-calculator: Estimate Cursor IDE ...\nFinds the cheapest plan for manual token entry, with both a quick estimate and exact token-bucket entry, and separates estimated usage cost from plan-adjusted out-of-pocket spend."
+      ]
+    },
+    {
+      "url": "https://forum.cursor.com/t/understanding-llm-token-usage/120673",
+      "title": "Understanding LLM Token Usage - Guides - Cursor - Community Forum",
+      "publish_date": null,
+      "excerpts": [
+        "For transparency, token counts are shown as processed and reported by the AI provider. You can check your usage in <strong>\u200eDashboard &gt; Usage</strong> and, if you have Usage Based Pricing, also in \u200eDashboard &gt; Billing."
+      ]
+    },
+    {
+      "url": "https://cursor.com/help/customization/extensions",
+      "title": "Extensions | Cursor Docs",
+      "publish_date": null,
+      "excerpts": [
+        "Docs API Learn Help\n\n [Download](https://cursor.com/downloads)\n\n## Command Palette\n\nSearch for a command to run...\n\n\u2190 Back\n\n# Extensions\n\nCursor uses the Open VSX extension registry to provide extensions. Many popular VS Code extensions are available, but not all may be listed or work exactly the same way.\n\n## How do I install an extension?\n\n1. Open the Extensions panel:\n   \n    + **Mac** : Press `Cmd Ctrl` \\+ `Shift` \\+ `X`\n    + **Windows/Linux** : Press `Ctrl` \\+ `Shift` \\+ `X`\n2. Search for the extension you want\n3. Click **Install**\n\nThe extension activates immediately.\n\n## Do all VS Code extensions work?\n\nCursor uses the Open VSX registry and independently verifies extensions for security and compatibility. Most popular extensions are available, but some may not be listed on Open VSX.\n\n## How do I disable an extension?\n\nOpen the Extensions panel, find the extension, and click **Disable** . You can disable extensions globally or for the current workspace only.\nIf an extension is causing performance issues or conflicts with Cursor's AI features, try disabling it to see if the problem resolves.\n\n## How do I get my extension verified?\n\nExtension publishers can request a verification badge in the marketplace. Verified publishers have undergone additional security review and identity confirmation.\n\nTo request verification:\n\n1. Add a link to your OpenVSX listing on your public website (such as in the installation section). This must be a website with its own domain name; a GitHub readme is not supported.\n2. Update the \"homepage\" link on your OpenVSX listing to point to this website.\n3. If your extension is published on multiple marketplaces, use the same extension ID on OpenVSX as you do elsewhere.\n4. Create a post in the [Extension Verification category](https://forum.cursor.com/c/showcase/extension-verification/23) on the Cursor forum with your extension name and a link to your website where we can verify the OpenVSX registry link.\nWe'll verify the link and add the verification badge to your publisher name once approved.\n\n## Related\n\n* Extension conflicts\n\nEnglish\n\n* English\n* \u7b80\u4f53\u4e2d\u6587\n* \u65e5\u672c\u8a9e\n* \u7e41\u9ad4\u4e2d\u6587\n* Espa\u00f1ol\n* Fran\u00e7ais\n* Portugu\u00eas\n* \ud55c\uad6d\uc5b4\n* \u0420\u0443\u0441\u0441\u043a\u0438\u0439\n* T\u00fcrk\u00e7e\n* Bahasa Indonesia\n* Deutsch\n* \u0939\u093f\u0928\u094d\u0926\u0940\n\n[Status: All Systems Operational](https://status.cursor.com) | Contact Support\n\n* How do I install an extension?\n* Do all VS Code extensions work?\n* How do I disable an extension?\n* How do I get my extension verified?\n* Related\n\nShare feedback\n\nAgent\n\nTokenizer Off Context: 0/200k ( 0 %)\n\nOpen chat"
+      ]
+    },
+    {
+      "url": "https://www.builder.io/blog/cursor-vs-claude-code",
+      "title": "Claude Code vs Cursor: What to Choose in 2026 - Builder.io",
+      "publish_date": "2026-03-25",
+      "excerpts": [
+        "* Built-in browser (fully GA) for agents to inspect and interact with web apps during development.\n* BugBot for automated PR review with bug detection and security scanning. Resolution rate improved from 52% to over 70%.\n* Audit logs, SSO, and RBAC for enterprise governance. The most mature team management suite among AI coding tools.\n* One-click MCP server setup from a curated list with OAuth support.\n Some of these are \"hard\" feature gaps. Tab completions, the programmatic SDK, and JetBrains support are absent from the other tool entirely. Others are \"experience gaps\" where both can technically do it, and one tool does it much better in practice.\n\n## **How much do Claude Code and Cursor cost in 2026?**\n\nAI coding subscriptions add up, but in my experience they're the highest-ROI line item you can have in your dev budget. The amount of work you ship per hour justifies the cost. Both tools start at $20/month for individual developers.\nFor heavy usage, Claude Code's max plan tiers cost $100-200/month. Cursor offers Pro+ at $60/month and Cursor Ultra at $200/month. The real cost difference is in billing mechanics. Cursor uses credit-based pricing where expensive models drain credits faster. Claude Code uses rolling rate limits with a weekly ceiling. Budget $60-200/month for serious agentic work on either tool.\n\n|Tier |Claude Code |Cursor |\n| --- | --- | --- |\n|Free |No Claude Code access |Limited agent requests + tab completions |\n|Individual ($20/mo) |Pro: ~45 msgs/5hr, 10-40 coding msgs |Pro: $20 in credits (~225 Claude Sonnet requests) |\n|Mid-tier |Max plan 5x: $100/mo |Pro+: $60/mo (3x usage) |\n|Power users |Max plan 20x: $200/mo |Cursor Ultra: $200/mo (20x usage) |\n|Teams |$125/user/mo (Premium seat) |$40/user/mo |\n|Add-ons |None |BugBot Pro: $40/user/mo |\n\n**Cursor's credit system** replaced request-based billing in June 2025. Credits deplete based on which model you use. GPT-5.\n3 is cheap per credit, Claude Opus is expensive. Heavy users reported $10-20 daily overages. One team's $7,000 annual subscription [depleted in a single day](https://www.wearefounders.uk/cursors-pricing-disaster-how-a-routine-update-turned-into-a-developer-exodus/) . Enable spend limits immediately if you're on Cursor. **Claude Code's usage limits** use a dual-layer system. A 5-hour rolling window handles burst usage, and a 7-day weekly ceiling caps total compute hours. [The Register reported developer complaints](https://www.theregister.com/2026/01/05/claude_devs_usage_limits/) about opaque limits in January 2026. The Pro tier can feel restrictive during all-day coding sessions where you're running commands and iterating on code changes frequently. **Token efficiency matters for cost.** [Independent testing](https://www.atcyrus.com/stories/claude-code-vs-cursor-comparison-2026) found Claude Code uses 5.5x fewer tokens than Cursor for identical tasks."
+      ]
+    }
+  ],
+  "usage": [
+    {
+      "name": "sku_search",
+      "count": 1
+    }
+  ],
+  "warnings": []
+}

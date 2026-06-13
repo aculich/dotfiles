@@ -1,0 +1,92 @@
+{
+  "search_id": "search_16deaa8497104592bf36930b13cd0133",
+  "session_id": "session_16deaa8497104592bf36930b13cd0133",
+  "status": "ok",
+  "results": [
+    {
+      "url": "https://cursor.com/docs/account/pricing",
+      "title": "Models & Pricing | Cursor Docs",
+      "publish_date": null,
+      "excerpts": [
+        "There are two separate usage pools ... 2.5 is selected. Designed for everyday agentic coding at a lower cost. API: <strong>Charged at the model&#x27;s API price</strong>."
+      ]
+    },
+    {
+      "url": "https://docs.cursor.com/en/account/teams/admin-api",
+      "title": "Cursor \u2013 Admin API",
+      "publish_date": null,
+      "excerpts": [
+        "The Admin API lets you programmatically access your team\u2019s data, including member information, usage metrics, and spending details. Build custom dashboards, monitoring tools, or integrate with existing workflows. The API is in its first release. We\u2019re expanding capabilities based on feedback - let us know what endpoints you need!"
+      ]
+    },
+    {
+      "url": "https://cursor.com/docs/account/teams/pricing",
+      "title": "Team Pricing | Cursor Docs",
+      "publish_date": null,
+      "excerpts": [
+        "Usage is <strong>allocated per user based on seat type, does not transfer between team members, and resets at the start of each billing cycle</strong>. Third-party API model usage is charged at public list API prices + Cursor Token Rate."
+      ]
+    },
+    {
+      "url": "https://forum.cursor.com/t/additional-api-usage-after-the-plans-usage/154791",
+      "title": "Additional API usage after the plan's usage - Support / Help - Cursor - Community Forum",
+      "publish_date": "2026-04-11",
+      "excerpts": [
+        "Btw, where can I see announcements/news regarding these changes? Looking at the forum\u2019s announcements or your blog posts, I see no mention of this, nor for many other previous changes I have noticed.\n\n\u200b\n\n\u200b\n\n320 views 3 links\n\n2\n\n## post by MidnightOak on Mar 15\n\nMidnightOak\n\nMar 15\n\nProbably.\n\nAlso, Curious is notorious for rolling out changes without warning, even if they change core functionality.\n\n\u200b\n\n\u200b\n\n## post by deanrie on Mar 16\n\nDean Rie\n\nMar 16\n\nHey, fair question.\n\nThe bonus usage you might\u2019ve seen above the 20 USD was always variable and not guaranteed. It could change month to month. The plan\u2019s guaranteed included usage is 20 USD of API usage for Pro, and after that you still get Auto and Composer mode at no extra cost.\n\nIf you want to keep using other models after you hit the 20 USD limit, you\u2019ve got two options:\n\n* Turn on on-demand usage pay as you go in your dashboard <https://cursor.com/dashboard>\n* Upgrade to a higher-tier plan.\nPro+ includes 70 USD of API usage, for example\n\nYou can track your current usage here <https://cursor.com/dashboard?tab=usage>\n\nMore details on how usage works <https://cursor.com/help/models-and-usage/usage-limits>\n\nFor announcements, the best places to check are the changelog [Changelog \u00b7 Cursor](https://cursor.com/changelog) and the Announcements category on the forum [Announcements - Cursor - Community Forum](https://forum.cursor.com/c/announcements) . That said, I hear you that changes aren\u2019t always communicated as clearly as they should be.\n\n\u200b\n\n\u200b\n\n## post by bwk on Mar 20\n\nbwk\n\nMar 20\n\nNot a single cent of bonus usage at all for Ultra plan too, which is very disappointing since I moved to Ultra Plan expecting at least some bonus usage.  \nIs this temporary changes due to some circumstances? or Is it a permanent change with wording \u201cnot guaranteed\u201d?\nIf it is latter, \u201dYour plan includes at least $400 of usage\u201d in IDE usage now sounds deceptive since \u201cleast\u201d imply there are at least some bonus usage.\n\n\u200b\n\n\u200b\n\n## post by MidnightOak on Mar 21\n\nMidnightOak\n\nMar 21\n\nSometimes if you try the next day they may give you a little extra.\n\n\u200b\n\n\u200b\n\n21 days later\n\n## post by fortunerice on Apr 11\n\nJimmy L. fortunerice\n\nApr 11\n\nJust exhausted my Ultra plan included API usage. No bonus whatsoever - just automatically switched to Composer 2.\n\nIn January I was on Pro+ plan and remember getting substantial bonus usage back then.\n\n\u200b\n\n\u200b\n\nReply\n\n  \n### Related topics\n\n|Topic | |Replies |Views |Activity |\n| --- | --- | --- | --- | --- |\n|Now we have much stricter usage limits\n\nFeedback |  |1 |518 |Feb 23 |\n|Cursor no longer allow to go above 100% usage?\n\nDiscussions |   |2 |1\\.5k |Mar 30 |\n|What changed with usage?\n\nDiscussions |     |8 |656 |Feb 25 |\n|Cursor changed the Additional API usage recently?\n\nDiscussions |     |24 |765 |Apr 15 |"
+      ]
+    },
+    {
+      "url": "https://forum.cursor.com/t/how-can-one-track-the-acceptance-of-my-team-via-cursor-admin-api/129076",
+      "title": "How can one track the acceptance % of my team via cursor admin api? - Support / Help - Cursor - Community Forum",
+      "publish_date": "2025-08-13",
+      "excerpts": [
+        "Skip to last reply Skip to top\n\nSkip to main content\n\n\u200b\n\n\u200b\n\n* [Documentation](https://docs.cursor.com/)\n* [Help](https://cursor.com/help)\n* [Forum Guidelines](https://forum.cursor.com/guidelines/ \"Forum Guidelines\")\n\nSign Up Log In\n\n* \u200b\n\n# How can one track the acceptance % of my team via cursor admin api?\n\nSupport Help\n\nYou have selected **0** posts.\n\nselect all\n\ncancel selecting\n\n388 views 1 link\n\n4\n\n3\n\nAug 2025\n\n1 / 8\n\nAug 2025\n\nAug 2025\n\n## post by Dawny33 on Aug 13, 2025\n\nJalem Raj Rohit Dawny33\n\nAug 2025\n\nI am trying to use the cursor admin API (endpoint: `/teams/daily-usage-data` ) for understanding cursor usage of the devs in my org.\n\nI am using the following metrics for this:  \nTotal Lines suggested = `totalLinesAdded + totalLinesDeleted + totalTabsShown`\n\nTotal Lines accepted = `acceptedLinesAdded + acceptedLinesDeleted + totalTabsAccepted`\n\nAcceptance % = `Total Lines accepted/Total Lines suggested`\nHowever, I see that `Total Lines accepted` is greater than `Total Lines suggested` for most of my devs. This seems wrong.\n\nAm I doing something wrong?\n\n1 \u200b\n\n\u200b\n\n388 views 1 link\n\n4\n\n3\n\n## post by condor on Aug 13, 2025\n\nCondor (Tee) condor Community Developer\n\n1\n\nAug 2025\n\nhi @Dawny33 and welcome to Cursor Forum.\n\nBased on the Admin API documentation, tabs and lines are different types of metrics incorrectly.\n\n**The problem:** `totalTabsShown` and `totalTabsAccepted` are specifically for **tab completions** (autocomplete suggestions), while `totalLinesAdded/Deleted` and `acceptedLinesAdded/Deleted` are for **code edits** (from chat/composer features).\n\n**Correct approach:**\n\nFor **tab completions only:**\n\n* Total suggested = `totalTabsShown`\n* Total accepted = `totalTabsAccepted`\n* Acceptance % = `totalTabsAccepted / totalTabsShown`\n\nFor **code edits only:**\n\n* Total suggested = `totalLinesAdded + totalLinesDeleted`\n* Total accepted = `acceptedLinesAdded + acceptedLinesDeleted`\n* Acceptance % = `(acceptedLinesAdded + acceptedLinesDeleted) / (totalLinesAdded + totalLinesDeleted)`\n\n\u200b\n\n\u200b\n\n## post by Dawny33 on Aug 13, 2025\n\nJalem Raj Rohit Dawny33\n\nAug 2025\n\nI was trying with a similar calculation. However, I see quite a lot of cases where `acceptedLinesAdded` > `totalLinesAdded`\n\nOne such example for one of my devs:\n\n```\n{\n\n\"date\": 1754524800000,\n\n\"userId\": \"<redacted>\",\n\n\"email\": \"<redacted>\",\n\n\"isActive\": true,\n\n\"totalLinesAdded\": 0,\n\n\"totalLinesDeleted\": 0,\n\n\"acceptedLinesAdded\": 1349,\n\n\"acceptedLinesDeleted\": 0,\n\n\"totalApplies\": 5,\n\n\"totalAccepts\": 5,\n\n\"totalRejects\": 0,\n\n\"totalTabsShown\": 107,\n\n\"totalTabsAccepted\": 31,\n\n\"composerRequests\": 0,\n\n\"chatRequests\": 8,\n\n\"agentRequests\": 2,\n\n\"cmdkUsages\": 0,\n\n\"subscriptionIncludedReqs\": 10,\n\n\"apiKeyReqs\": 0,\n\n\"usageBasedReqs\": 0,\n\n\"bugbotUsages\": 0,\n\n\"mostUsedModel\": \"claude-4-sonnet\",\n\n\"tabMostUsedExtension\": \"py\"\n\n},\n```"
+      ]
+    },
+    {
+      "url": "https://cursor.com/docs/account/teams/dashboard",
+      "title": "Dashboard | Cursor Docs",
+      "publish_date": null,
+      "excerpts": []
+    },
+    {
+      "url": "https://cursor.com/dashboard",
+      "title": "Cursor Dashboard",
+      "publish_date": null,
+      "excerpts": [
+        "Logo Logo\n\n# Sign in\n\nEmail\n\nContinue\n\nContinue with Google\n\nContinue with GitHub\n\nContinue with Apple\n\nDon't have an account? \n\n[Terms of Service](https://www.cursor.com/terms-of-service) and [Privacy Policy](https://www.cursor.com/privacy)"
+      ]
+    },
+    {
+      "url": "https://cursor.com/docs/account/teams/analytics-api",
+      "title": "Analytics API | Cursor Docs",
+      "publish_date": null,
+      "excerpts": [
+        "Docs API Learn Help\n\nSearch docs... \u2318K\n\nAsk AI \u2318I\n\n [Download](https://cursor.com/downloads)\n\n## Command Palette\n\nSearch for a command to run...\n\nAPI\n\nCopy page Share feedback Explain more\n\n# Analytics API\n\nThe Analytics API provides comprehensive insights into your team's Cursor usage, including AI-assisted coding metrics, active users, model usage, and more.\n\n* The Analytics API uses Basic Authentication . You must generate an admin-scoped API key (with `admin:*` scope) from your [team settings page](https://cursor.com/settings) .\n* For details on authentication, rate limits, and best practices, see the API Overview .\n* **Availability** : Only for enterprise teams\n\n### Available Endpoints\n\n### Agent Edits\n\nGET `/analytics/team/agent-edits`\n\nGet metrics on AI-suggested code edits accepted by your team with Cursor.\n\n#### Parameters\n\n`startDate` string\n\nStart date for analytics period (default: 7 days ago). See Date Formats\n\n`endDate` string\nEnd date for analytics period (default: today). See Date Formats\n\n`users` string\n\nFilter data to specific users (comma-separated emails or user IDs, e.g., `alice@example.com,user_abc123` )\n\n```\ncurl  -X  GET  \"https://api.cursor.com/analytics/team/agent-edits\"  \\   -u  YOUR_API_KEY:\n```\n\n**Response:**\n\n```\n{   \"data\" : [     {       \"event_date\" :  \"2025-01-15\" ,       \"total_suggested_diffs\" :  145 ,       \"total_accepted_diffs\" :  98 ,       \"total_rejected_diffs\" :  47 ,       \"total_green_lines_accepted\" :  820 ,       \"total_red_lines_accepted\" :  160 ,       \"total_green_lines_rejected\" :  210 ,       \"total_red_lines_rejected\" :  60 ,       \"total_green_lines_suggested\" :  1030 ,       \"total_red_lines_suggested\" :  220 ,       \"total_lines_suggested\" :  1250 ,       \"total_lines_accepted\" :  980     },     {       \"event_date\" :  \"2025-01-16\" ,       \"total_suggested_diffs\" :  132 ,       \"total_accepted_diffs\" :  89 ,       \"total_rejected_diffs\" :  43 ,       \"total_green_lines_accepted\" :  740 ,       \"total_red_lines_accepted\" :  150 ,       \"total_green_lines_rejected\" :  185 ,       \"total_red_lines_rejected\" :  55 ,       \"total_green_lines_suggested\" :  925 ,       \"total_red_lines_suggested\" :  175 ,       \"total_lines_suggested\" :  1100 ,       \"total_lines_accepted\" :"
+      ]
+    },
+    {
+      "url": "https://cursor.com/es/docs/account/teams/analytics-api",
+      "title": "Analytics API | Cursor Docs",
+      "publish_date": null,
+      "excerpts": [
+        "com/analytics/team/skills\"  \\   -u  YOUR_API_KEY:\n```\n\n**Respuesta:**\n\n```\n{   \"data\" : [     {       \"event_date\" :  \"2025-01-15\" ,       \"skill_name\" :  \"react-best-practices\" ,       \"usage\" :  53     },     {       \"event_date\" :  \"2025-01-15\" ,       \"skill_name\" :  \"usage-billing\" ,       \"usage\" :  41     },     {       \"event_date\" :  \"2025-01-16\" ,       \"skill_name\" :  \"react-best-practices\" ,       \"usage\" :  48     }   ],   \"params\" : {     \"metric\" :  \"skills\" ,     \"teamId\" :  12345 ,     \"startDate\" :  \"2025-01-01\" ,     \"endDate\" :  \"2025-01-31\"   } }\n```\n\n### Adopci\u00f3n de Ask Mode\n\nGET `/analytics/team/ask-mode`\n\nObt\u00e9n m\u00e9tricas sobre la adopci\u00f3n de Ask mode en el equipo. Devuelve recuentos diarios de adopci\u00f3n desglosados por modelo de IA utilizado para las consultas del modo Ask.\n\n#### Par\u00e1metros\n\n`startDate` string\n\nFecha de inicio del per\u00edodo de an\u00e1lisis (predeterminado: hace 7 d\u00edas). Consulta Formatos de fecha\n\n`endDate` string\n\n...\n\ncom\" : [       {         \"event_date\" :  \"2025-01-15\" ,         \"skill_name\" :  \"react-best-practices\" ,         \"usage\" :  8       },       {         \"event_date\" :  \"2025-01-15\" ,         \"skill_name\" :  \"create-rule\" ,         \"usage\" :  3       },       {         \"event_date\" :  \"2025-01-16\" ,         \"skill_name\" :  \"react-best-practices\" ,         \"usage\" :  5       }     ],     \"bob@example.\n\n...\n\n5\" ,         \"usage\" :  28       }     ],     \"bob@example.com\" : [       {         \"event_date\" :  \"2025-01-15\" ,         \"model\" :  \"gpt-4o\" ,         \"usage\" :  15       }     ]   },   \"pagination\" : {     \"page\" :  1 ,     \"pageSize\" :  50 ,     \"totalUsers\" :  120 ,     \"totalPages\" :  3 ,     \"hasNextPage\" :  true ,     \"hasPreviousPage\" :  false   },   \"params\" : {     \"metric\" :  \"ask-mode\" ,     \"teamId\" :  12345 ,     \"startDate\" :  \"2025-01-01\" ,     \"endDate\" :  \"2025-01-31\" ,     \"page\" :  1 ,     \"pageSize\" :  50 ,     \"userMappings\" : [       {  \"id\" :  \"user_abc123\" ,  \"email\" :  \"alice@example.com\"  },       {  \"id\" :  \"user_def456\" ,  \"email\" :  \"bob@example.com\"  }     ]   } }\n```\n\n* * *\n\n## Endpoints a nivel de equipo\n\nLos endpoints a nivel de equipo proporcionan m\u00e9tricas agregadas para todo el equipo o para subconjuntos de usuarios filtrados. Todos los endpoints admiten filtrado por rango de fecha y filtrado opcional por usuario.\n\n### Par\u00e1metros de consulta comunes"
+      ]
+    },
+    {
+      "url": "https://cursor.com/docs/account/teams/admin-api",
+      "title": "Admin API | Cursor Docs",
+      "publish_date": null,
+      "excerpts": [
+        "Manage team members and settings programmatically with the Admin API."
+      ]
+    }
+  ],
+  "usage": [
+    {
+      "name": "sku_search",
+      "count": 1
+    }
+  ],
+  "warnings": []
+}

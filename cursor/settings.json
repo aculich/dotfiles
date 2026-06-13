@@ -2,8 +2,8 @@
   "redhat.telemetry.enabled": true,
   "yaml.schemas": {
     "file:///Users/me/.vscode/extensions/continue.continue-1.2.3-darwin-arm64/config-yaml-schema.json": [
-      ".continue/**/*.yaml",
-    ],
+      ".continue*.yaml"
+    ]
   },
   "github.copilot.nextEditSuggestions.enabled": true,
   "project-scopes.globalExclude": {
@@ -11,19 +11,17 @@
     "**/.svn": true,
     "**/.hg": true,
     "**/.DS_Store": true,
-    "**/Thumbs.db": true,
+    "**/Thumbs.db": true
   },
   "editor.accessibilitySupport": "off",
   "docker.extension.enableComposeLanguageServer": false,
   "makefile.configureOnOpen": true,
-  "specstory.cloudSync.enabled": "always",
   "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
   "python.terminal.useEnvFile": true,
   "git.path": "/opt/homebrew/bin/git",
   "git.autofetch": false,
   "claudeCode.preferredLocation": "panel",
   "specstory.derivedRules.enabled": false,
-  "specstory.showDeveloperTools": true,
   "workbench.colorTheme": "Default Dark+",
   "zenMode.restore": false,
   "terminal.integrated.persistentSessionReviveProcess": "never",
@@ -42,11 +40,11 @@
     "*.sqlite3": "${capture}.${extname}-*",
     "*.db3": "${capture}.${extname}-*",
     "*.sdb": "${capture}.${extname}-*",
-    "*.s3db": "${capture}.${extname}-*",
+    "*.s3db": "${capture}.${extname}-*"
   },
   "cSpell.enabled": false,
   "remote.SSH.remotePlatform": {
-    "klein.berkeley.edu": "linux",
+    "klein.berkeley.edu": "linux"
   },
   "claudeCode.useTerminal": true,
   "claudeCode.allowDangerouslySkipPermissions": true,
@@ -61,4 +59,204 @@
   "update.mode": "silentlyApplyOnQuit",
   "githubPullRequests.pullBranch": "never",
   "cursor.terminal.usePreviewBox": true,
+  "window.autoDetectColorScheme": false,
+  "workbench.editor.enablePreview": false,
+  "workbench.editorAssociations": {
+    "*.md": "default"
+  },
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "none",
+  "editor.semanticHighlighting.enabled": false,
+  "git.blame.statusBarItem.enabled": true,
+  "git.blame.editorDecoration.enabled": false,
+  "specstory.providers.enabled": {
+    "Copilot IDE": false,
+    "Factory Droid CLI": false,
+    "Codex CLI": false,
+    "DeepSeek TUI": false
+  },
+  "specstory.helpUsImprove": false,
+  "chatstory.gitSync.enabled": true,
+  "chatstory.showDeveloperTools": true,
+  "vim.easymotion": true,
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.incsearch": true,
+  "vim.hlsearch": true,
+  "vim.ignorecase": true,
+  "vim.smartcase": true,
+  "vim.handleKeys": {
+    "<C-d>": true,
+    "<C-s>": false,
+    "<C-r>": false,
+    "<C-w>": false,
+    "<C-x>": false,
+    "<C-y>": false,
+    "<C-z>": false
+  },
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<space>"
+      ],
+      "commands": [
+        "vspacecode.space"
+      ]
+    },
+    {
+      "before": [
+        ","
+      ],
+      "commands": [
+        "vspacecode.space",
+        {
+          "command": "whichkey.triggerKey",
+          "args": "m"
+        }
+      ]
+    },
+    {
+      "before": [
+        "f"
+      ],
+      "commands": [
+        "flash-vscode.start"
+      ]
+    },
+    {
+      "before": [
+        "F"
+      ],
+      "commands": [
+        "flash-vscode.startSelection"
+      ]
+    },
+    {
+      "before": [
+        "t"
+      ],
+      "commands": [
+        "flash-vscode.jump.treesitterSelection"
+      ]
+    },
+    {
+      "before": [
+        "T"
+      ],
+      "commands": [
+        "flash-vscode.remoteTreesitterSelection"
+      ]
+    },
+    {
+      "before": [
+        "<BS>"
+      ],
+      "commands": [
+        "flash-vscode.backspace"
+      ]
+    },
+    {
+      "before": [
+        "<Esc>"
+      ],
+      "commands": [
+        "flash-vscode.exit"
+      ]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<space>"
+      ],
+      "commands": [
+        "vspacecode.space"
+      ]
+    },
+    {
+      "before": [
+        ","
+      ],
+      "commands": [
+        "vspacecode.space",
+        {
+          "command": "whichkey.triggerKey",
+          "args": "m"
+        }
+      ]
+    },
+    {
+      "before": [
+        ">"
+      ],
+      "commands": [
+        "editor.action.indentLines"
+      ]
+    },
+    {
+      "before": [
+        "<"
+      ],
+      "commands": [
+        "editor.action.outdentLines"
+      ]
+    }
+  ],
+  "vspacecode.bindingOverrides": [
+    {
+      "keys": "j.f",
+      "name": "Flash: jump",
+      "icon": "zap",
+      "type": "command",
+      "command": "flash-vscode.start"
+    },
+    {
+      "keys": "j.F",
+      "name": "Flash: selection jump",
+      "icon": "selection",
+      "type": "command",
+      "command": "flash-vscode.startSelection"
+    },
+    {
+      "keys": "j.t",
+      "name": "Flash: treesitter scope",
+      "icon": "symbol-structure",
+      "type": "command",
+      "command": "flash-vscode.jump.treesitterSelection"
+    },
+    {
+      "keys": "j.T",
+      "name": "Flash: remote treesitter",
+      "icon": "remote",
+      "type": "command",
+      "command": "flash-vscode.remoteTreesitterSelection"
+    },
+    {
+      "keys": "j.s",
+      "name": "Flash: symbol jump",
+      "icon": "symbol-method",
+      "type": "command",
+      "command": "flash-vscode.jump.symbol"
+    },
+    {
+      "keys": "j.b",
+      "name": "Jump back (Vim jumplist)",
+      "icon": "arrow-left",
+      "type": "command",
+      "command": "extension.vim_ctrl+o"
+    },
+    {
+      "keys": "j.e",
+      "name": "Go to last edit location",
+      "icon": "history",
+      "type": "command",
+      "command": "workbench.action.navigateToLastEditLocation"
+    }
+  ],
+  "emacs-mcx.strictEmacsMove": false,
+  "emacs-mcx.enableDigitArgument": false,
+  "vim.overrideCopy": false,
+  "emacs-mcx.useMetaPrefixMacCmd": false,
+  "emacs-mcx.useMetaPrefixAlt": true,
+  "git.enableSmartCommit": true
 }

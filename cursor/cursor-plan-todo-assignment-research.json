@@ -1,0 +1,94 @@
+{
+  "search_id": "search_bff418f658554764b9369031cc8a1f7c",
+  "session_id": "session_bff418f658554764b9369031cc8a1f7c",
+  "status": "ok",
+  "results": [
+    {
+      "url": "https://cursor.com/blog/cloud-agents",
+      "title": "Cloud Agents \u00b7 Cursor",
+      "publish_date": null,
+      "excerpts": [
+        "For more complex features, we\u2019ve ... how we want the feature to be implemented. Cursor&#x27;s plan mode <strong>supports sending plans to be implemented in the cloud</strong>."
+      ]
+    },
+    {
+      "url": "https://forum.cursor.com/t/multitask-in-agents-window/158955",
+      "title": "/multitask in Agents Window - Release Discussions - Cursor - Community Forum",
+      "publish_date": null,
+      "excerpts": [
+        "\u00b7 Full changelog \u00b7 Main announcement ... agent work with async subagents! <strong>Use /multitask in the Agents Window to have Cursor run async subagents instead of adding each request to the queue</strong>."
+      ]
+    },
+    {
+      "url": "https://forum.cursor.com/t/multitask-in-agents-window/158955/11",
+      "title": "/multitask in Agents Window - #11 by llinfeng - Release Discussions - Cursor - Community Forum",
+      "publish_date": null,
+      "excerpts": [
+        "New in Cursor! \u00b7 Full changelog \u00b7 Main announcement We\u2019re excited to introduce /multitask, a new way for Cursor to parallelize agent work with async subagents! Use /multitask in the Agents Window to have Cursor run as"
+      ]
+    },
+    {
+      "url": "https://forum.cursor.com/t/what-s-the-point-of-multiple-agents/141805",
+      "title": "What\u2019s the point of multiple agents? - Discussions - Cursor - Community Forum",
+      "publish_date": null,
+      "excerpts": [
+        "I have been coding with Cursor, creating plans and asking the agent to implement it. Last week, the new update brought concurrent agents (selecting 1x, 3x) to accomplish task. But I don\u2019t understand how it works. I mean, I understand how it works. A couple days ago, I tested I tested with"
+      ]
+    },
+    {
+      "url": "https://forum.cursor.com/t/telling-the-plan-agent-to-use-multi-agents/151771",
+      "title": "Telling the Plan agent to use multi agents? - Discussions - Cursor - Community Forum",
+      "publish_date": null,
+      "excerpts": [
+        "Hi, when I write a detailed PRD that I then feed into to Cursor Plan agent to write the actual plan, I get it to create to do items and phases that can run in the context window I have available (after taking into accoun"
+      ]
+    },
+    {
+      "url": "https://forum.cursor.com/t/plans-apply-globally-across-all-agents-instead-of-per-conversation/147654",
+      "title": "Plans apply globally across all agents instead of per-conversation - Bug Reports - Cursor - Community Forum",
+      "publish_date": null,
+      "excerpts": [
+        "Where does the bug appear (feature/product)? Cursor IDE Describe the Bug When I create a plan in one agent, it shows up in all other agents. Command content gets injected everywhere. Example: Create a plan in Agent 1 that references close.md. Now Agents 2-5 all show \u2014 Cursor Command: close.md \u2014 auto-injected."
+      ]
+    },
+    {
+      "url": "https://cursor.com/blog/agent-best-practices",
+      "title": "Best practices for coding with agents - Cursor",
+      "publish_date": "2026-01-09",
+      "excerpts": [
+        "Cursor\n\n* Product \u2193\n  \n    + Agents\n    + Cloud\n    + CLI\n    + Review\n    + Tab\n    + [Marketplace \u2197](https://cursor.com/marketplace)\n* Enterprise\n* Pricing\n* Resources \u2193\n  \n    + Changelog\n    + Blog\n    + Docs\n    + Community\n    + [Help \u2197](https://cursor.com/help)\n    + Workshops\n    + [Forum \u2197](https://forum.cursor.com/)\n    + Careers\n\n* Product \u2192\n* Enterprise\n* Pricing\n* Resources \u2192\n\n Contact Contact sales Download\n\nBlog / product\n\nJan 9, 2026 \u00b7 product\n\n# Best practices for coding with agents\n\nLee Robinson \u00b7 17 min read\n\n### Table of Contents\n\n\u2193\n\nCoding agents are changing how software gets built.\n\nModels can now run for hours, complete ambitious multi-file refactors, and iterate until tests pass. But getting the most out of agents requires understanding how they work and developing new patterns.\n\n## \\# Understanding agent harnesses\n\nAn agent harness is built on three components:\n\n1. **Instructions** : The system prompt and rules that guide agent behavior\n2.\n**Tools** : File editing, codebase search, terminal execution, and more\n3. **Model** : The agent model you pick for the task\n\nCursor's agent harness orchestrates these components for each model we support. We tune instructions and tools specifically for every frontier model based on internal evals and external benchmarks.\n\nThe harness matters because different models respond differently to the same prompts. A model trained heavily on shell-oriented workflows might prefer `grep` over a dedicated search tool. Another might need explicit instructions to call linter tools after edits. Cursor's agent handles this for you, so as new models are released, you can focus on building software.\n\n## \\# Start with plans\n\nThe most impactful change you can make is planning before coding.\n\nA study from the University of Chicago found that experienced developers are more likely to plan before generating code.\nPlanning forces clear thinking about what you're building and gives the agent concrete goals to work toward.\n\n### \\# Using Plan Mode\n\nPress `Shift+Tab` in the agent input to toggle Plan Mode. Instead of immediately writing code, the agent will:\n\n1. Research your codebase to find relevant files\n2. Ask clarifying questions about your requirements\n3. Create a detailed implementation plan with file paths and code references\n4. Wait for your approval before building\n\nPlan Mode in action: the agent asks clarifying questions and creates a reviewable plan.\n\nPlans open as Markdown files you can edit directly to remove unnecessary steps, adjust the approach, or add context the agent missed.\n\n> **Tip:** Click \"Save to workspace\" to store plans in `.cursor/plans/` . This creates documentation for your team, makes it easy to resume interrupted work, and provides context for future agents working on the same feature.\n> \n> \n\nNot every task needs a detailed plan."
+      ]
+    },
+    {
+      "url": "http://cursor.com/en-US/docs",
+      "title": "Cursor Docs \u2014 Agent, Rules, MCP, Skills & CLI",
+      "publish_date": null,
+      "excerpts": [
+        "Docs API Learn Help\n\nSearch docs... \u2318K\n\nAsk AI \u2318I\n\n [Download](https://cursor.com/downloads)\n\n## Command Palette\n\nSearch for a command to run...\n\n## Get Started\n\nWelcome Quickstart Models & Pricing [Changelog](https://cursor.com/changelog)\n\n## Agent\n\nOverview Agents Window Agent Review Planning Prompting Debugging Tools Security\n\n## Customizing\n\nPlugins Rules Skills Subagents Hooks MCP\n\n## SDK\n\nTypeScript Python\n\n## CLI\n\nOverview Installation Capabilities Shell Mode ACP Headless / CI Reference\n\n## Cursor Review\n\nOverview Pull Request Inbox Pull Request Page Merge Queue Cursor Review CLI\n\n## Teams & Enterprise\n\nTeams Enterprise\n\nGet Started\n\n# Cursor Documentation\n\nCursor is a coding agent for building ambitious software. Use it to understand your codebase, plan and build features, fix bugs, review changes, and work with the tools you already use.\n\nWelcome to Cursor, the AI editor and coding agent\n\n## Start here\nGet started Go from install to your first useful change in Cursor Models & Pricing Compare models, usage pools, and plan pricing [Changelog Stay up to date with the latest features and improvements](https://www.cursor.com/changelog)\n\n## What you can do with Cursor\n\nUnderstand your code Trace how a repo fits together and find the right places to start Plan and build features Scope changes, use Plan Mode, and ship bigger work with confidence Find and fix bugs Reproduce issues, narrow the root cause, and verify the fix Review changes Inspect diffs, run checks, and catch problems before you merge Customize Cursor Use rules, skills, and prompts that match how your team works Connect your workflow Work with GitHub, GitLab, JetBrains, Slack, Linear, and more\n\n## Models\n\nSee all model attributes on the Models & Pricing page.\n\n|Name |Default Context |Max Mode |Capabilities |\n| --- | --- | --- | --- |\n|Anthropic Anthropic\n\nClaude 4.6 Sonnet |200k |1M | |\n|Anthropic Anthropic\n\nClaude Opus 4.8 |300k |1M | |\n|Cursor\nComposer 2.5 |200k |\\- | |\n|Google\n\nGemini 3.1 Pro |200k |1M | |\n|Google\n\nGemini 3.5 Flash |200k |1M | |\n|OpenAI OpenAI\n\nGPT-5.3 Codex |272k |\\- | |\n|OpenAI OpenAI\n\nGPT-5.5 |272k |1M | |\n|xAI xAI\n\nGrok Build 0.1 |256k |\\- | |\n\nShow more models\n\n## More resources\n\n[Downloads Get Cursor for your computer](https://cursor.com/downloads) Help Find answers to common questions and troubleshooting guides Support\n\nFor account and billing questions, contact our support team\n\nEnglish\n\n* English\n* \u7b80\u4f53\u4e2d\u6587\n* \u65e5\u672c\u8a9e\n* \u7e41\u9ad4\u4e2d\u6587\n* Espa\u00f1ol\n* Fran\u00e7ais\n* Portugu\u00eas\n* \ud55c\uad6d\uc5b4\n* \u0420\u0443\u0441\u0441\u043a\u0438\u0439\n* T\u00fcrk\u00e7e\n* Bahasa Indonesia\n* Deutsch\n* \u0939\u093f\u0928\u094d\u0926\u0940\n\n* Start here\n* What you can do with Cursor\n* Models\n* More resources\n\nCopy page\n\nShare feedback\n\nExplain more\n\nAgent\n\nTokenizer Off Context: 0/200k ( 0 %)\n\nOpen chat"
+      ]
+    },
+    {
+      "url": "http://cursor.com/help/ai-features/agent",
+      "title": "Agent mode | Cursor Docs",
+      "publish_date": null,
+      "excerpts": [
+        "## Something went wrong\n\nA critical error occurred. Please try again.\n\nTry again"
+      ]
+    },
+    {
+      "url": "http://cursor.com/product",
+      "title": "Cursor \u2014 Build Software with AI Agents",
+      "publish_date": null,
+      "excerpts": [
+        "tsx (View > Mission Control), hotkey F3, or double-tap desktop.\n\n## View Behavior\n\nOverlay existing windows into a grid of live previews with spring-based layout animations and shared element transitions.\n\n3 Tasks\n\nAdd multiplayer mode to useAppStore.ts\n\nCreate a new MissionControlView.tsx component\n\nUpdate AppManager.tsx to apply expose modes.\n\nAdd a task, \u2318K to generate...\n\nPlan Mission Control\n\nlet's build a mission control interface, similar to the expose-style window manager on macOS\n\nPlan Composer 2.5\n\nCursor CLI\n\nGet CLI\n\nCursor Agent\n\n~/cursor/cursor-web\n\nAnalyze Tab vs Agent Usage Patterns\n\nHelp me understand how teams split their focus between the tab view and the agents panel across our workspaces.\n\n\u2192\n\nComposer 2.5  \n/ for commands \u00b7@ for files\n\n## Everywhere you work\n\nOne agent across every surface.\n\n## Desktop\n\nManual to agentic coding, in one familiar editor.\n\nDownload \u2192\n\nInteractive demo with multiple windows showing Cursor's AI-powered features.\nThe interface is displayed over a subtle, solid brand background.\n\nlet's add a spotlight-style search\n\nRead App.tsx, Menu.tsx\n\nSearched \u2318K shortcut handlers\n\nEdited Search.tsx\n\nDone. Press \u2318K to search files, actions, and settings.\n\nAsk Cursor to plan or build anything\n\nAgent Composer 2.5\n\n## CLI\n\nRun agents in any terminal, script, or editor.\n\nInstall \u2192\n\nInteractive demo with multiple windows showing Cursor's AI-powered features. The interface is displayed over a subtle, solid brand background.\n\nCursor Agent\n\n~/cursor/cursor-web\n\nAnalyze Tab vs Agent Usage Patterns\n\nHelp me understand how teams split their focus between the tab view and the agents panel across our workspaces.\n\n\u2b22\n\nT h o u g h t 7 s\n\n\u2b22\n\nR e v i e w e d w o r k s p a c e u s a g e e x p o r t s a n d h i s t o r i c a l e n g a g e m e n t n o t e s\n\nI'll build an analytics toolkit that highlights tab versus agent adoption and switching behavior:\n\nsummary.py \\+150 \\-0\nNext I'll normalize the interaction labels and add session tagging so product can filter specific cohorts:\n\nsegmentation.py \\+94 \\-0\n\nTime to stitch everything together with a report helper that combines the key metrics:\n\nreport.py \\+40 \\-0\n\nI'll add tests to lock in the behaviour using a representative sample from last week's export:\n\ntest\\_usage.py \\+90\n\nAll set! We now track focus share, switching rates, and rolling engagement so PMs can compare tab-first and agent-first workflows in seconds.\n\n\u2192\n\nComposer 2.5  \n/ for commands \u00b7@ for files\n\n## Other Surfaces\n\nStart agents from GitHub, Slack, Linear, JetBrains IDEs, and more.\n\n[Add to Slack \u2197](https://cursor.com/api/install-slack-app)\n\nInteractive demo with multiple windows showing Cursor's AI-powered features. The interface is displayed over a subtle, solid brand background.\n\nleerob 5m ago\n\n@cursor can you review this PR?\n\ncursor bot reviewed 3m ago\n\nsrc/vs/workbench/composer/browser/components/ComposerUnifiedDropdown.tsx\n\n3292\n\n\\-"
+      ]
+    }
+  ],
+  "usage": [
+    {
+      "name": "sku_search",
+      "count": 1
+    }
+  ],
+  "warnings": []
+}

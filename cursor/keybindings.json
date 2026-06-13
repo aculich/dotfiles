@@ -1,4 +1,39 @@
 [
+
+  // --- merged: mouseless-navigation isearch (do not remove by replace) ---
+  {
+    "key": "ctrl+s",
+    "command": "-extension.vim_ctrl+s",
+    "when": "editorTextFocus && vim.active"
+  },
+  {
+    "key": "ctrl+r",
+    "command": "-extension.vim_ctrl+r",
+    "when": "editorTextFocus && vim.active"
+  },
+  {
+    "key": "ctrl+s",
+    "command": "emacs-mcx.isearchForward",
+    "when": "editorTextFocus && !findInputFocussed"
+  },
+  {
+    "key": "ctrl+r",
+    "command": "emacs-mcx.isearchBackward",
+    "when": "editorTextFocus && !findInputFocussed"
+  },
+  {
+    "key": "ctrl+s",
+    "command": "editor.action.nextMatchFindAction",
+    "when": "findInputFocussed"
+  },
+  {
+    "key": "ctrl+r",
+    "command": "editor.action.previousMatchFindAction",
+    "when": "findInputFocussed"
+  },
+  // --- end merged isearch ---
+
+
   // === KEYBINDING TROUBLESHOOTING (Cursor / VS Code) ===
   // See docs/keybindings-guide.md for full observability and modification guide.
   //
@@ -20,6 +55,8 @@
   // remove a binding (optionally with "when" to remove only in that context).
   // ===
 
+  // ---  ---
+
   // testing
 
   {
@@ -27,6 +64,7 @@
   "command": "whichkey.show",
   // "when": "editorTextFocus"
 },
+
   // https://vspacecode.github.io/docs/bonus/
   // Quick Window Navigation: To navigate all the windows including slide and bottom pane with Ctrl-h/j/k/l, you can merge the following config system's key bindings to your keybindings.json file.
   {
@@ -300,9 +338,15 @@
     },
     "when": "terminalFocus",
   },
+  // C-x C-f → Quick Open (find-file). emacs-mcx only binds this when !terminalFocus; user rules must cover terminalFocus.
   {
     "key": "ctrl+x ctrl+f",
     "command": "workbench.action.quickOpen",
+  },
+  {
+    "key": "ctrl+x ctrl+f",
+    "command": "workbench.action.quickOpen",
+    "when": "terminalFocus",
   },
   {
     "key": "ctrl+x ctrl+f",
@@ -335,11 +379,6 @@
     "key": "ctrl+x ctrl+f",
     "command": "workbench.action.quickOpen",
     "when": "inputFocus && editorLangId == 'chat'",
-  },
-  {
-    "key": "ctrl+x ctrl+f",
-    "command": "-workbench.action.quickOpen",
-    "when": "!terminalFocus",
   },
   {
     "key": "ctrl+shift+m",
@@ -489,6 +528,73 @@
     "command": "workbench.action.editor.previousChange",
     "when": "editorTextFocus && !textCompareEditorActive && !inlineDiffs.activeEditorWithDiffs"
   },
+  // --- merged: mouseless-navigation kill/yank (Cursor Ctrl+W = Switch Window by default) ---
+  {
+    "key": "ctrl+w",
+    "command": "-workbench.action.switchWindow"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "-editor.action.clipboardCutAction",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "-extension.vim_ctrl+w",
+    "when": "vim.active && !terminalFocus"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "emacs-mcx.killRegion",
+    "when": "editorFocus && !editorReadonly && !terminalFocus && (editorHasSelection || editorHasMultipleSelections)"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "emacs-mcx.backwardKillWord",
+    "when": "editorFocus && !editorReadonly && !terminalFocus && !editorHasSelection && !editorHasMultipleSelections"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "emacs-mcx.killRegion",
+    "when": "textInputFocus && !editorReadonly && !terminalFocus && !inQuickOpen && (editorHasSelection || editorHasMultipleSelections)"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "emacs-mcx.backwardKillWord",
+    "when": "textInputFocus && !editorReadonly && !terminalFocus && !inQuickOpen && !editorHasSelection && !editorHasMultipleSelections"
+  },
+  {
+    "key": "ctrl+y",
+    "command": "-extension.vim_ctrl+y",
+    "when": "vim.active && !terminalFocus"
+  },
+  {
+    "key": "ctrl+y",
+    "command": "-editor.action.clipboardPasteAction",
+    "when": "editorFocus && !findInputFocussed && !replaceInputFocussed"
+  },
+  {
+    "key": "ctrl+y",
+    "command": "emacs-mcx.yank",
+    "when": "editorFocus && !editorReadonly && !terminalFocus"
+  },
+  {
+    "key": "ctrl+y",
+    "command": "emacs-mcx.yank",
+    "when": "textInputFocus && !editorReadonly && !terminalFocus && !inQuickOpen"
+  },
+  {
+    "key": "alt+w",
+    "command": "emacs-mcx.killRingSave",
+    "when": "editorFocus"
+  },
+  {
+    "key": "alt+y",
+    "command": "emacs-mcx.yankPop",
+    "when": "editorFocus && !editorReadonly"
+  },
+  // --- end merged fragment ---
+
 ]
 
 // NOTES:

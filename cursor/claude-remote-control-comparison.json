@@ -1,0 +1,78 @@
+{
+  "search_id": "search_f834526dec8d4825b9ccec202417c833",
+  "session_id": "session_f834526dec8d4825b9ccec202417c833",
+  "status": "ok",
+  "results": [
+    {
+      "url": "https://code.claude.com/docs/en/remote-control",
+      "title": "Continue local sessions from any device with Remote Control - Claude Code Docs",
+      "publish_date": null,
+      "excerpts": [
+        "Your local Claude Code session makes outbound HTTPS requests only and never opens inbound ports on your machine. When you start Remote Control, it registers with the Anthropic API and polls for work. When you connect from another device, the server routes messages between the web or mobile client and your local session over a streaming connection."
+      ]
+    },
+    {
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1rya5en/how_are_you_guys_actually_getting_remote_control/",
+      "title": "r/ClaudeCode on Reddit: How are you guys actually getting Remote Control to work reliably?",
+      "publish_date": null,
+      "excerpts": [
+        "Remote Control is basically <strong>a thin web wrapper around claude code</strong> - its always going to be fragile for long tasks. More reliable pattern: run claude code cli on your own box (Mac Mini, home server, cheap VPS) inside tmux, then ssh in from your phone."
+      ]
+    },
+    {
+      "url": "https://www.reddit.com/r/ClaudeCode/comments/1rdr7ga/claude_code_just_got_remote_control/",
+      "title": "r/ClaudeCode on Reddit: Claude Code just got Remote Control",
+      "publish_date": null,
+      "excerpts": [
+        "You can try it with /remote-control. The idea is pretty straightforward: <strong>you start a Claude Code session locally in your terminal, then you can pick it up and continue from your phone</strong>. ... Anyone here on Max plan tried it yet?"
+      ]
+    },
+    {
+      "url": "https://felloai.com/how-to-use-claude-code-on-your-phone",
+      "title": "How to Use Claude Code on Your Phone - Fello AI",
+      "publish_date": "2026-03-16",
+      "excerpts": [
+        "**Step 3 \u2014 Install your SSH client** on your phone. Blink Shell on iPhone supports Mosh natively and can automatically install it on the remote host. Termux on Android gives you a full Linux environment. Termius is another solid option on both platforms.\n\n**Step 4 \u2014 SSH in** from your phone using your Tailscale IP address:\n\n```\nssh youruser@your-tailscale-ip\n```\n\n**Step 5 \u2014 Start tmux** before launching Claude Code:\n\n```\ntmux new -s claude\n```\n\nThen start Claude Code as normal. When you need to disconnect, close the app, do not exit tmux. When you reconnect later, reattach with:\n\n```\ntmux attach -t claude\n```\n\nYour session will be exactly where you left it.\n\n### Why Mosh beats standard SSH for mobile\n\nStandard SSH connections drop when you switch between WiFi and mobile data, or when your screen locks. **Mosh** (Mobile Shell) handles connection interruptions gracefully and reconnects automatically.\nBlink Shell on iPhone with Mosh and Tailscale is the most reliable mobile terminal setup, confirmed by multiple developers using it daily for long Claude Code sessions while traveling.\n\n## Approving Claude Code Actions from Your Phone\n\nAll three methods let you approve or reject Claude Code\u2019s file edits and tool calls remotely. The most useful real-world application: start a long refactor at your desk, step away, and approve each step from your phone as Claude works through it.\n\nRemote Control and Happy Coder both support push notifications that alert you when Claude needs a decision. The SSH method requires you to check manually, or set up a notification tool like `ntfy` to push alerts to your phone when Claude outputs a specific prompt. If you prefer autonomous workflows that reduce the need for manual approvals, **[Claude Cowork](https://felloai.com/claude-cowork-guide/)** can handle multi-step tasks on its own with less oversight.\n## What About Using Claude on Your Phone Without Claude Code?\n\nIf you want Claude on mobile but do not need the agentic terminal capabilities of Claude Code, the Claude app for iOS and Android gives you access to Claude Sonnet 4.6 and Opus 4.6 for writing, research, and analysis, no desktop required. If you recently moved over from ChatGPT, our guide on **[switching from ChatGPT to Claude](https://felloai.com/switching-from-chatgpt-to-claude-how-to-do-it-and-what-to-expect/)** covers what to expect across plans and features.\n\nYou can also download **[Fello AI app](https://apps.apple.com/us/app/fello-ai-chat-bot-assistant/id6447705369)** and enjoy several frontier AI models for one subscription.\n\n## Conclusion\n\nRemote Control is the fastest path for Pro, Max, Team, and Enterprise subscribers. One command and you are coding from your phone in under a minute. Happy Coder is the best free alternative, with push notifications, voice input, and end-to-end encryption on any Claude Code plan."
+      ]
+    },
+    {
+      "url": "https://jangwook.net/en/blog/en/claude-code-remote-control-guide",
+      "title": "Claude Code Remote Control Complete Guide \u2014 From Setup to Mobile Control",
+      "publish_date": "2026-02-26",
+      "excerpts": [
+        "### Reading Complete!\n\nThanks for reading this article\n\n## EffiFlow\n\nHome Blog About Contact Social Improvement History\n\n\ud55c\uad6d\uc5b4 English \u65e5\u672c\u8a9e \u7b80\u4f53\u4e2d\u6587\n\nHome Blog About Contact Social Improvement History\n\nPublished on: Feb 26, 2026\n\n# Claude Code Remote Control Complete Guide \u2014 From Setup to Mobile Control\n\nA complete guide to setting up and using Claude Code Remote Control. Learn how to monitor and control desktop tasks from your phone with practical workflow examples.\n\n## What Is Remote Control?\n\nClaude Code Remote Control lets you **control a Claude Code session running on your local machine from a mobile app or web browser** . It was released as a research preview on February 25, 2026.\n\nHere are the key points.\n\n* Your code and development environment **stays 100% local**\n* Mobile/web acts purely as a **remote controller**\n* You can monitor tasks started on your desktop from the couch, or send instructions from a meeting room\n\n```\ngraph TD     subgraph LocalMachine[\"Local Machine\"]         A[\"Claude Code CLI\"] --> B[\"Outbound HTTPS\"]     end     subgraph AnthropicAPI[\"Anthropic API\"]         B --> C[\"TLS Streaming<br/>Message Routing\"]     end     subgraph RemoteDevices[\"Remote Devices\"]         C --> D[\"Mobile App\"]         C --> E[\"Web Browser<br/>claude.ai/code\"]     end\n```\n\n## Setup Methods\n\n### Method 1: Global Setting (Recommended)\n\nTo automatically enable Remote Control for all sessions, use the `/config` command.\n\n```\n# Inside a Claude Code session /config\n```\n\nSelect **\u201cEnable Remote Control for all sessions\u201d** from the settings menu. All subsequent Claude Code sessions will automatically have Remote Control enabled.\n\n### Method 2: Per-Session Activation\n\nTo enable Remote Control only for a specific session:\n\n```\n# Inside an active session /remote-control # Or the shorthand /rc\n```\n\n### Method 3: Start Directly from CLI\n\n```\n# Start a new Remote Control session claude  remote-control # With detailed logs claude  remote-control  --verbose # Run in sandbox mode claude  remote-control  --sandbox\n```\n\n## Connecting from a Remote Device\n\nOnce Remote Control is active, you can connect in three ways.\n\n### QR Code Scan (Fastest)\n\nPress the spacebar in the terminal to display a QR code. Scan it with the Claude mobile app for instant connection.\n\n### Copy Session URL\n\nCopy the session URL displayed in the terminal and paste it into a browser on another device. It opens on `claude.ai/code` .\n\n### Select from Session List\n\nOpen `claude.ai/code` or the Claude mobile app to see your active sessions with a green status indicator.\n\n> **Tip** : If you run multiple sessions, use `/rename` to give each one a meaningful name. It makes finding the right session much easier on remote devices.\n> \n> \n\n## Network Architecture and Security\n\nRemote Control\u2019s security design follows these principles.\n\n```"
+      ]
+    },
+    {
+      "url": "https://claudefa.st/blog/guide/development/remote-control-guide",
+      "title": "Claude Code Remote Control: Complete Setup Guide (2026)",
+      "publish_date": "2026-06-07",
+      "excerpts": [
+        "* `--verbose` for detailed connection and session logs\n* `--sandbox` / `--no-sandbox` to toggle [sandboxing](https://code.claude.com/docs/en/sandboxing) for filesystem and network isolation\n\n### From an Existing Session\n\nAlready mid-conversation and want to go mobile? Use the slash command:\n\n```\n/remote-control\n```\n\nOr the shorthand:\n\n```\n/rc\n```\n\nThis converts your current session to a remote-controllable one, carrying over your full conversation history. Tip: use `/rename` first to give your session a descriptive name so you can find it easily across devices.\n\n### Always-On Remote Control\n\nTo enable Remote Control for every session automatically, run `/config` inside Claude Code and set **Enable Remote Control for all sessions** to `true` .\n\n## Connecting from Another Device\n\nThree ways to connect once a session is active:\n\n1. **Open the session URL** directly in any browser at [claude.ai/code](https://claude.ai/code)\n2.\n**Scan the QR code** shown in your terminal (press spacebar to toggle) to open in the Claude mobile app\n3. **Browse the session list** in claude.ai/code or the Claude app. Remote Control sessions show a computer icon with a green status dot when online\n\nThe conversation stays in sync across all connected devices. You can send messages from your terminal, browser, and phone interchangeably.\n\nDon't have the Claude app yet? Run `/mobile` inside Claude Code to get a download QR code for iOS or Android.\n\n## How It Works Under the Hood\n\nThe security model is straightforward. Your local Claude Code session makes **outbound HTTPS requests only** . No inbound ports open on your machine. When you start Remote Control, the process registers with the Anthropic API and polls for work. When you connect from another device, the server routes messages between the client and your local session over a streaming connection.\nAll traffic flows through the Anthropic API over TLS (the same transport security as any Claude Code session). Multiple short-lived credentials are used, each scoped to a single purpose and expiring independently.\n\nIn plain terms: your files and MCP servers never leave your machine. Only chat messages and tool results flow through the encrypted bridge.\n\n## Remote Control vs OpenClaw\n\nIf you've been following the OpenClaw phenomenon , you'll recognize the appeal. Controlling your computer from your phone is one of OpenClaw's headline features, and it helped propel the project to 199K GitHub stars.\n\nRemote Control is Anthropic's native answer. Here's how they compare on this specific capability:\n\n|Aspect |Remote Control |OpenClaw |\n| --- | --- | --- |\n|**Setup** |`claude remote-control` (one command) |Self-hosted, requires port forwarding or tunnel config |"
+      ]
+    },
+    {
+      "url": "https://clauderemotecontrol.com/",
+      "title": "Claude Remote Control - Claude",
+      "publish_date": "2026-02-25",
+      "excerpts": [
+        "# Claude Remote Control\n\n**CLAUDE CODE**\n\nRun locally, control from anywhere\n\nFebruary 2026 \u00b7 Comprehensive Guide\n\n* * *\n\n## The Problem with Long-Running Coding Sessions\n\nEvery developer knows the feeling. You\u2019ve kicked off a major refactor, Claude Code is humming along in your terminal, and then life interrupts. A meeting pulls you away from your desk. Your partner needs the car. The dog is doing that thing where she stares at the door. You\u2019re left with an uncomfortable choice: abandon the session, drag your laptop with you, or set up a brittle chain of SSH tunnels and tmux hacks just to keep an eye on progress from your phone.\n\nThe core tension is straightforward: Claude Code\u2019s power comes from running _locally_ \u2014with full access to your filesystem, your MCP servers, your project configuration, your tooling. That\u2019s what makes it different from cloud-hosted coding assistants. But \u201clocal\u201d has always meant \u201ctied to your desk.\u201d\n\nRemote Control changes this equation entirely.\nAnnounced on February 24, 2026, it lets you start a Claude Code session in your terminal and then continue that same session from your phone, tablet, or any browser\u2014while execution never leaves your machine. Your local environment stays fully available. The mobile or web interface is simply a window into the session that\u2019s already running on your computer.\n\nTL;DR\n\nRemote Control bridges your local Claude Code terminal session to claude.ai/code and the Claude iOS/Android app. You keep your local files, MCP servers, and tools. The session runs on your machine; the phone is just the remote.\n\n* * *\n\n## What Remote Control Is (and Isn\u2019t)\n\n### The Core Concept\n\nRemote Control connects claude.ai/code or the Claude mobile app (iOS and Android) to a Claude Code session running on your machine. When you enable it, your local process establishes an outbound HTTPS connection to Anthropic\u2019s API.\nFrom that point on, any device with access to the session URL\u2014or the Claude app\u2014can view the conversation and send messages, which are relayed back to your local session. The experience is seamless: the conversation stays in sync across all connected devices, and you can send messages from your terminal, browser, and phone interchangeably.\n\n### What You Gain\n\n* **Full local environment, remotely.** Your filesystem, MCP servers, custom tools, project configuration, and local-only settings all remain available because execution stays on your machine.\n* **Multi-device sync.** The conversation is synchronized across every connected surface. Start typing in the terminal, switch to your phone, come back to the laptop\u2014the thread is always up to date.\n* **Resilience to interruptions.** If your laptop sleeps or your Wi-Fi drops momentarily, the session reconnects automatically when your machine comes back online.\n\n### What Remote Control Is Not"
+      ]
+    },
+    {
+      "url": "https://mlq.ai/news/anthropic-launches-remote-control-feature-for-claude-code-enabling-terminal-operations-from-mobile-devices/",
+      "title": "Anthropic Launches Remote Control Feature for Claude ...",
+      "publish_date": null,
+      "excerpts": [
+        "Anthropic on Tuesday launched Remote Control for its Claude Code tool, <strong>allowing developers to start coding sessions in their local terminal and continue them from mobile devices or web browsers</strong>."
+      ]
+    }
+  ],
+  "usage": [
+    {
+      "name": "sku_search",
+      "count": 1
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,94 @@
+{
+  "search_id": "search_cfad703cfd5d4a3a973d3ab3c5f1321e",
+  "session_id": "session_cfad703cfd5d4a3a973d3ab3c5f1321e",
+  "status": "ok",
+  "results": [
+    {
+      "url": "https://cursor.com/agents",
+      "title": "Agents | Cursor - The AI Code Editor",
+      "publish_date": null,
+      "excerpts": [
+        "Manage and monitor your AI coding agents with Cursor"
+      ]
+    },
+    {
+      "url": "https://cursor.com/product",
+      "title": "Cursor \u2014 Build Software with AI Agents",
+      "publish_date": null,
+      "excerpts": [
+        "Cursor plans, writes, and reviews code using AI agents that understand your entire codebase. Everywhere you work: Desktop, CLI, Web &amp; Mobile."
+      ]
+    },
+    {
+      "url": "https://cursor.com/docs/agent/overview",
+      "title": "Overview | Cursor Docs",
+      "publish_date": null,
+      "excerpts": [
+        "Agent is <strong>Cursor&#x27;s assistant that can complete complex coding tasks independently, run terminal commands, and edit code</strong>."
+      ]
+    },
+    {
+      "url": "https://cursor.com/en-US/docs",
+      "title": "Cursor Docs \u2014 Agent, Rules, MCP, Skills & CLI",
+      "publish_date": null,
+      "excerpts": [
+        "Docs API Learn Help\n\nSearch docs... \u2318K\n\nAsk AI \u2318I\n\n [Download](https://cursor.com/downloads)\n\n## Command Palette\n\nSearch for a command to run...\n\n## Get Started\n\nWelcome Quickstart Models & Pricing [Changelog](https://cursor.com/changelog)\n\n## Agent\n\nOverview Agents Window Agent Review Planning Prompting Debugging Tools Security\n\n## Customizing\n\nPlugins Rules Skills Subagents Hooks MCP\n\n## SDK\n\nTypeScript Python\n\n## CLI\n\nOverview Installation Capabilities Shell Mode ACP Headless / CI Reference\n\n## Cursor Review\n\nOverview Pull Request Inbox Pull Request Page Merge Queue Cursor Review CLI\n\n## Teams & Enterprise\n\nTeams Enterprise\n\nGet Started\n\n# Cursor Documentation\n\nCursor is an AI editor and coding agent. Use it to understand your codebase, plan and build features, fix bugs, review changes, and work with the tools you already use.\n\nWelcome to Cursor, the AI editor and coding agent\n\n## Start here\nGet started Go from install to your first useful change in Cursor Models & Pricing Compare models, usage pools, and plan pricing [Changelog Stay up to date with the latest features and improvements](https://www.cursor.com/changelog)\n\n## What you can do with Cursor\n\nUnderstand your code Trace how a repo fits together and find the right places to start Plan and build features Scope changes, use Plan Mode, and ship bigger work with confidence Find and fix bugs Reproduce issues, narrow the root cause, and verify the fix Review changes Inspect diffs, run checks, and catch problems before you merge Customize Cursor Use rules, skills, and prompts that match how your team works Connect your workflow Work with GitHub, GitLab, JetBrains, Slack, Linear, and more\n\n## Models\n\nSee all model attributes on the Models & Pricing page.\n\n|Name |Default Context |Max Mode |Capabilities |\n| --- | --- | --- | --- |\n|Anthropic Anthropic\n\nClaude 4.6 Sonnet |200k |1M | |\n|Anthropic Anthropic\n\nClaude Opus 4.8 |200k |1M | |\n|Cursor\nComposer 2.5 |200k |\\- | |\n|Google\n\nGemini 3.1 Pro |200k |1M | |\n|Google\n\nGemini 3.5 Flash |200k |1M | |\n|OpenAI OpenAI\n\nGPT-5.3 Codex |272k |\\- | |\n|OpenAI OpenAI\n\nGPT-5.5 |272k |1M | |\n|xAI xAI\n\nGrok Build 0.1 |256k |\\- | |\n\nShow more models\n\n## More resources\n\n[Downloads Get Cursor for your computer](https://cursor.com/downloads) Help Find answers to common questions and troubleshooting guides Support\n\nFor account and billing questions, contact our support team\n\nEnglish\n\n* English\n* \u7b80\u4f53\u4e2d\u6587\n* \u65e5\u672c\u8a9e\n* \u7e41\u9ad4\u4e2d\u6587\n* Espa\u00f1ol\n* Fran\u00e7ais\n* Portugu\u00eas\n* \ud55c\uad6d\uc5b4\n* \u0420\u0443\u0441\u0441\u043a\u0438\u0439\n* T\u00fcrk\u00e7e\n* Bahasa Indonesia\n* Deutsch\n* \u0939\u093f\u0928\u094d\u0926\u0940\n\n* Start here\n* What you can do with Cursor\n* Models\n* More resources\n\nCopy page\n\nShare feedback\n\nExplain more\n\nAgent\n\nTokenizer Off Context: 0/200k ( 0 %)\n\nOpen chat"
+      ]
+    },
+    {
+      "url": "http://forum.cursor.com/t/cursor-on-your-phone-open-source-remote-control-for-agent-mode/155524",
+      "title": "Cursor on your phone: open-source remote control for agent mode - Showcase / Built for Cursor - Cursor - Community Forum",
+      "publish_date": "2026-03-22",
+      "excerpts": [
+        "Skip to last reply Skip to top\n\nSkip to main content\n\n\u200b\n\n\u200b\n\n* [Documentation](https://docs.cursor.com/)\n* [Help](https://cursor.com/help)\n* [Forum Guidelines](https://forum.cursor.com/guidelines/ \"Forum Guidelines\")\n\nSign Up Log In\n\n* \u200b\n\n# Cursor on your phone: open-source remote control for agent mode\n\nShowcase Built for Cursor\n\n* review ,\n* extensions ,\n* auto-run\n\nYou have selected **0** posts.\n\nselect all\n\ncancel selecting\n\n5\\.4k views 10 likes 4 links 9 users\n\n8\n\n3\n\nread 4 min\n\nMar 22\n\n1 / 18\n\nMar 22\n\nApr 20\n\n## post by Eugene\\_Lensky on Mar 22\n\nEugene Lensky\n\n3\n\nMar 22\n\nI kept running into the same problem: I\u2019d start a Cursor agent on some refactor, go make coffee or step out for lunch, and come back to find it had been sitting there waiting for my approval for 20+ minutes. Sound notifications didn\u2019t help because I wasn\u2019t at my desk. Remote desktop from my phone was technically possible but pretty painful for just clicking \u201caccept.\n\u201d I looked for some way to control cursor from my phone but nothing really existed.\n\nSo I built CursorRemote, basically a remote control for your local Cursor IDE that you can use from your phone. It\u2019s a VS Code extension that connects to your running Cursor instance via Chrome DevTools Protocol and streams the full agent conversation to a mobile web UI. You can approve or reject tool calls, send new prompts, switch modes and models, and monitor multiple windows at once. All from your phone browser.\n\nThere\u2019s also a Telegram integration if you prefer that. Each agent conversation gets its own forum topic with inline approve/reject buttons, so you can manage everything from a cursor telegram bot without opening a browser.\n\nI\u2019ll be honest, most of it was vibecoded. The core idea is straightforward, connect via CDP, poll the DOM, stream over websocket.\nBut getting it to actually work reliably across different Cursor versions, handling multi-window state, keeping the mobile UI responsive, dealing with all the edge cases in the Telegram bot\u2026 that part was way trickier than expected. Burned through a lot of tokens polishing it into something that doesn\u2019t feel janky.\n\n**How it works technically**\n\nYou launch Cursor with `--remote-debugging-port=9222` , the extension starts a local relay server that polls the DOM via CDP, and streams state changes over WebSocket to any connected client. Latency is under 100ms. Everything runs on your machine, nothing goes to any cloud or third party server. No telemetry, no analytics, no phone-home. The license validation itself is offline.\n\n**Setup is pretty quick**\n\n1. Install the extension (from the marketplace or download the .vsix from GitHub)\n2. Add `--remote-debugging-port=9222` to your Cursor launch command\n3. Open the web UI on your phone (local network or Tailscale for remote access)"
+      ]
+    },
+    {
+      "url": "https://cursor.com/blog/agent-best-practices",
+      "title": "Best practices for coding with agents - Cursor",
+      "publish_date": "2026-01-09",
+      "excerpts": [
+        "Cursor\n\n* Product \u2193\n  \n    + Agents\n    + Cloud\n    + CLI\n    + Review\n    + Tab\n    + [Marketplace \u2197](https://cursor.com/marketplace)\n* Enterprise\n* Pricing\n* Resources \u2193\n  \n    + Changelog\n    + Blog\n    + Docs\n    + Community\n    + [Help \u2197](https://cursor.com/help)\n    + Workshops\n    + [Forum \u2197](https://forum.cursor.com/)\n    + Careers\n\n* Product \u2192\n* Enterprise\n* Pricing\n* Resources \u2192\n\n Contact Contact sales Download\n\nBlog / product\n\nJan 9, 2026 \u00b7 product\n\n# Best practices for coding with agents\n\nLee Robinson \u00b7 17 min read\n\n### Table of Contents\n\n\u2193\n\nCoding agents are changing how software gets built.\n\nModels can now run for hours, complete ambitious multi-file refactors, and iterate until tests pass. But getting the most out of agents requires understanding how they work and developing new patterns.\n\n## \\# Understanding agent harnesses\n\nAn agent harness is built on three components:\n\n1. **Instructions** : The system prompt and rules that guide agent behavior\n2.\n**Tools** : File editing, codebase search, terminal execution, and more\n3. **Model** : The agent model you pick for the task\n\nCursor's agent harness orchestrates these components for each model we support. We tune instructions and tools specifically for every frontier model based on internal evals and external benchmarks.\n\nThe harness matters because different models respond differently to the same prompts. A model trained heavily on shell-oriented workflows might prefer `grep` over a dedicated search tool. Another might need explicit instructions to call linter tools after edits. Cursor's agent handles this for you, so as new models are released, you can focus on building software.\n\n## \\# Start with plans\n\nThe most impactful change you can make is planning before coding.\n\nA study from the University of Chicago found that experienced developers are more likely to plan before generating code.\nPlanning forces clear thinking about what you're building and gives the agent concrete goals to work toward.\n\n### \\# Using Plan Mode\n\nPress `Shift+Tab` in the agent input to toggle Plan Mode. Instead of immediately writing code, the agent will:\n\n1. Research your codebase to find relevant files\n2. Ask clarifying questions about your requirements\n3. Create a detailed implementation plan with file paths and code references\n4. Wait for your approval before building\n\nPlan Mode in action: the agent asks clarifying questions and creates a reviewable plan.\n\nPlans open as Markdown files you can edit directly to remove unnecessary steps, adjust the approach, or add context the agent missed.\n\n> **Tip:** Click \"Save to workspace\" to store plans in `.cursor/plans/` . This creates documentation for your team, makes it easy to resume interrupted work, and provides context for future agents working on the same feature.\n> \n> \n\nNot every task needs a detailed plan."
+      ]
+    },
+    {
+      "url": "https://forum.cursor.com/t/remote-control-of-cursor/103627",
+      "title": "Remote control of Cursor - Help - Cursor - Community Forum",
+      "publish_date": null,
+      "excerpts": [
+        "Hello, I\u2019m thinking of automating repeatable actions in my projects and looking into a way if it\u2019s somehow implement the following super-simplified scenario: Open Cursor in project folder Make agent execute multiple actions defined as prompts Apply changes on project and close Cursor Kind"
+      ]
+    },
+    {
+      "url": "https://cursor.com/blog/cli",
+      "title": "Cursor Agent CLI \u00b7 Cursor",
+      "publish_date": null,
+      "excerpts": [
+        "We want Cursor to be the best place to code with AI. We started by making text autocomplete more intelligent and context aware. Then, we added the ability to ask AI models questions, and do quick inline edits to your code with \u2318+K. As the quality of code generated by AI models improved, we added Agent to allow models to generate files, run terminal commands, search your codebase, and more."
+      ]
+    },
+    {
+      "url": "http://cursor.com/blog/agent-web",
+      "title": "Cursor on web and mobile \u00b7 Cursor",
+      "publish_date": "2025-06-30",
+      "excerpts": [
+        "Blog / product\n\nJun 30, 2025 \u00b7 product\n\n# Cursor on web and mobile\n\nAndrew Milich & Jason Ginsberg \u00b7 2 min read\n\n### Table of Contents\n\n\u2191\n\n* What they can do\n* Respond in Slack\n* Why we\u2019re excited\n\nYou can now work with Cursor Agents on web and mobile. Just like the familiar agent that works alongside you in the IDE, agents on web and mobile can write code, answer complex questions, and scaffold out your work.\n\nYou can start working them today at [cursor.com/agents](http://cursor.com/agents) .\n\nA placeholder description for an image, as the actual image content is not provided.\n\nKanban view of Cursor Agents performing coding and research tasks.\n\n### \\# What they can do\n\n* **Run tasks while you\u2019re away:** Launch bug fixes, build new features, or answer complex codebase questions in the background.\n* **Access from anywhere:** Use agents on any desktop, tablet, or mobile browser. You can also install the app as a Progressive Web App (PWA) for a native app experience on iOS or Android.\nTo install as a PWA, [visit our docs](https://cursor.com/docs/cloud-agent) .\n* **Collaborate seamlessly:** Team members with repository access can review agent diffs, pull requests, and even create pull requests directly from the web interface.\n* **Work with rich context:** Include images, add follow-up instructions, and run multiple agents in parallel to compare results.\n\n### \\# Respond in Slack\n\nGet Slack notifications when tasks complete and trigger agents with \u201c@Cursor\u201d in Slack conversations. To learn more about setting up Slack, visit our [docs page](https://cursor.com/docs/slack) and get started.\n\nAn image showing a Slack interface where a team is collaborating with the Cursor Agent. The interface displays a conversation with messages exchanged between team members and the Cursor Agent, indicating a seamless integration for team collaboration.\n\nYour team can easily work with the Cursor Agent on Slack.\n\n### \\# Why we\u2019re excited\nThe Cursor Agent on the web gives you a powerful coding assistant wherever you work.\n\nWhen you\u2019re back on your laptop, pick up the agent\u2019s work in Cursor to review the changes, add follow-up instructions, or directly make edits inline. Bringing Cursor\u2019s agents to the web makes collaborating with agents as easy as working with your team.\n\nFiled under: product\n\nAuthors:Andrew Milich & Jason Ginsberg\n\n## Related posts\n\nAug 7, 2025 \u00b7 Product GPT-5 is now available in Cursor Aman Sanger \u00b7 1 min read\n\nJul 4, 2025 \u00b7 Product Clarifying our pricing Michael Truell \u00b7 3 min read\n\nJun 16, 2025 \u00b7 Product Updates to Ultra and Pro Michael Truell \u00b7 1 min read\n\nView more posts \u2192\n\n\ud83c\udf10 English \u2193\n\n* English \u2713\n* \u7b80\u4f53\u4e2d\u6587\n* \u65e5\u672c\u8a9e\n* \u7e41\u9ad4\u4e2d\u6587\n* Espa\u00f1ol\n* Fran\u00e7ais\n* Portugu\u00eas\n* \ud55c\uad6d\uc5b4\n* Deutsch\n* \u0939\u093f\u0928\u094d\u0926\u0940"
+      ]
+    },
+    {
+      "url": "https://forum.cursor.com/t/cursor-agent-asking-for-approval-at-each-code-change/148476",
+      "title": "Cursor agent asking for approval at each code change - Support / Bug Reports - Cursor - Community Forum",
+      "publish_date": "2026-01-15",
+      "excerpts": [
+        "Skip to last reply Skip to top\n\nSkip to main content\n\n\u200b\n\n\u200b\n\n* [Documentation](https://docs.cursor.com/)\n* [Help](https://cursor.com/help)\n* [Forum Guidelines](https://forum.cursor.com/guidelines/ \"Forum Guidelines\")\n\nSign Up Log In\n\n* \u200b\n\n# Cursor agent asking for approval at each code change\n\nSupport Bug Reports\n\nYou have selected **0** posts.\n\nselect all\n\ncancel selecting\n\n427 views 1 link\n\n2\n\nJan 10\n\n1 / 5\n\nJan 10\n\nFeb 6\n\n## post by spst on Jan 10\n\nspst\n\nJan 10\n\n###  Where does the bug appear (feature/product)?\n\nCursor IDE\n\n###  Describe the Bug\n\nThe agent started asking me to accept every individual code change.\n\n###  Steps to Reproduce\n\nClick New Agent, Select Opus 4.5 and start any task.\n\n###  Expected Behavior\n\nDo all code changes without asking for approval at every step.\n\n###  Operating System\n\nMacOS\n\n###  Current Cursor Version (Menu \u2192 About Cursor \u2192 Copy)\n\nVersion: 2.3.29  \nVSCode Version: 1.105.1  \nCommit: 4ca9b38c6c97d4243bf0c61e51426667cb964bd0  \nDate: 2026-01-08T00:34:49.\n798Z  \nElectron: 37.7.0  \nChromium: 138.0.7204.251  \nNode.js: 22.20.0  \nV8: 13.8.258.32-electron.0  \nOS: Darwin arm64 25.1.0\n\n###  For AI issues: which model did you use?\n\nOpus 4.5\n\n###  Does this stop you from using Cursor\n\nNo - Cursor works, but with this issue\n\n\u200b\n\n\u200b\n\n427 views 1 link\n\n2\n\n## post by deanrie on Jan 10\n\nDean Rie\n\nJan 10\n\nHey, thanks for the report. This is a known issue, and a lot of users have run into it: [Agent Mode keeps asking approval for changes](https://forum.cursor.com/t/agent-mode-keeps-asking-approval-for-changes/145341)\n\nTry turning off External file edit protection:\n\n* Open Cursor Settings `CMD+,`\n* Go to the Agents tab\n* Disable External file edit protection\n\nLet me know if that fixes it. If not, please share:\n\n* Are you using WSL, Remote SSH, or worktrees?\n* What extensions do you have installed?\n* The Request ID from the chat context menu (three dots at the top of the chat) > Copy Request ID\n\n\u200b\n\n\u200b\n\n## post by spst on Jan 15\n\nspst\n\nJan 15\nThis unfortunately still didn\u2019t fix it.\n\n**Are you using WSL, Remote SSH, or worktrees?**  \nI am actually not sure what the agent is using because i have a multi-repo workspace and the selector says \u201cdisabled in multi-root workspaces\u201d.\n\n**What extensions do you have installed?**\n\n* black formatter\n* dev containers\n* docker\n* markdown preview enhanced\n* python static type checking from anysphere\n* python from ms-python\n* python debugger from ms-python\n* rainbow csv\n\n**The Request ID from the chat context menu:**  \n6ccc68f5-4b98-4ce8-8a58-5d24747aff3f\n\n\u200b\n\n\u200b\n\n## post by Emil\\_Lykke\\_Grann on Jan 15\n\nEmil Lykke Grann\n\nJan 15\n\nI experience the same issue, and I am on Mac without using WSL or Remote SSH\n\n\u200b\n\n\u200b\n\n22 days later\n\n## Closed on Feb 6\n\nClosed on Feb 6\n\nThis topic was automatically closed 22 days after the last reply. New replies are no longer allowed.\n\nReply\n\nInvalid date Invalid date"
+      ]
+    }
+  ],
+  "usage": [
+    {
+      "name": "sku_search",
+      "count": 1
+    }
+  ],
+  "warnings": []
+}
