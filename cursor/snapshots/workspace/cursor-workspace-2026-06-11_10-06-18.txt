@@ -1,0 +1,280 @@
+
+Version:          Cursor 3.7.27 (e48ee6102a199492b0c9964699bf011886708ba0, 2026-06-10T01:46:16.942Z)
+OS Version:       Darwin arm64 25.3.0
+CPUs:             Apple M3 Max (14 x 2400)
+Memory (System):  96.00GB (0.57GB free)
+Load (avg):       83, 63, 40
+VM:               0%
+Screen Reader:    yes
+Process Argv:     
+GPU Status:       2d_canvas:                              enabled
+                  direct_rendering_display_compositor:    disabled_off_ok
+                  gpu_compositing:                        enabled
+                  multiple_raster_threads:                enabled_on
+                  opengl:                                 enabled_on
+                  rasterization:                          enabled
+                  raw_draw:                               disabled_off_ok
+                  skia_graphite:                          disabled_off
+                  trees_in_viz:                           disabled_off
+                  video_decode:                           enabled
+                  video_encode:                           enabled
+                  webgl:                                  enabled
+                  webgl2:                                 enabled
+                  webgpu:                                 enabled
+                  webnn:                                  disabled_off
+
+CPU %	Mem MB	   PID	Process
+   13	   492	  2789	cursor main
+    3	    98	  2792	   gpu-process
+    0	    98	  2794	   utility-network-service
+    5	   590	  2796	window [1] (tab-export-2026-06-10T02-29-35.md — continuous-ai)
+    4	   492	  2798	window [3] (theses-manifest.json — code-sculpting)
+    3	   492	  2803	window [8] (Preview EDITOR-STACK-ANALYSIS.md — ern-cpc)
+    3	   983	  2874	extensionHost [1]
+    0	    98	  3643	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=2874
+    0	    98	 12159	     electron-nodejs (server-node.js )
+    0	    98	  2880	   window
+    0	    98	  2881	shared-process
+    0	    98	  2882	fileWatcher [8]
+    0	    98	  2883	mcp-process
+    0	     0	 90024	     npm exec chrome-devtools-mcp@latest
+    0	     0	 90447	       chrome-devtools-mcp
+    0	     0	 90497	         /Applications/Cursor.app/Contents/Resources/app/resources/helpers/node /Users/me/.npm/_npx/15c61037b1978c83/node_modules/chrome-devtools-mcp/build/src/telemetry/watchdog/main.js --parent-pid=90447 --app-version=1.2.0 --os-type=2
+    1	   393	  2886	extensionHost [8]
+    0	    98	 12158	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=2886
+    0	    98	 40903	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=2886
+    1	   197	  2888	extensionHost [3]
+    0	    98	  3992	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=2888
+    0	    98	  3995	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=2888
+    0	     0	  4068	     /Users/me/.cursor/extensions/ms-python.python-2025.6.1-darwin-arm64/python-env-tools/bin/pet server
+    0	    98	  4348	     electron-nodejs (server-node.js )
+    0	    98	  2893	fileWatcher [1]
+    0	    98	  2894	fileWatcher [3]
+    0	    98	  2899	   window
+    0	    98	  2906	ptyHost
+    0	     0	  4100	     /bin/zsh -i
+    0	     0	  4440	     /bin/zsh -il
+    0	     0	  5300	     /opt/homebrew/bin/bash --init-file /Applications/Cursor.app/Contents/Resources/app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh
+    0	     0	  5302	     /opt/homebrew/bin/bash --init-file /Applications/Cursor.app/Contents/Resources/app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh
+    0	     0	  5591	     /opt/homebrew/bin/bash --init-file /Applications/Cursor.app/Contents/Resources/app/out/vs/workbench/contrib/terminal/common/scripts/shellIntegration-bash.sh
+    0	     0	  6118	     /bin/zsh -il
+    0	     0	  6173	     /bin/zsh -il
+    0	     0	  7328	     /bin/zsh -il
+    0	     0	 30006	       /bin/bash ./workspace-snapshot.sh
+    0	     0	 31251	         /bin/bash ./workspace-snapshot.sh
+    0	     0	 31252	           zsh ./dump-cursor-windows.sh
+    0	     0	 31288	             bash /opt/homebrew/bin/cursor --status
+    0	    98	 31294	               electron-nodejs (cli.js )
+    0	     0	  9516	     /bin/zsh -il
+    0	     0	 17518	     /bin/zsh -il
+    0	     0	 23420	     /bin/zsh -i
+    0	     0	 24209	     /bin/zsh -il
+    0	     0	 25618	     /bin/zsh -il
+    0	     0	 25705	     /bin/zsh -il
+    0	     0	 28403	     /bin/zsh -il
+    0	     0	 28620	     /bin/zsh -i
+    0	     0	 53129	     /bin/zsh -il
+    0	     0	 57652	     /bin/zsh -il
+    0	     0	 69142	     /bin/zsh -il
+    0	     0	 69195	     /bin/zsh -il
+    1	   393	 69336	       claude
+    0	     0	 92784	     /bin/zsh -il
+    0	     0	 97427	     /bin/zsh -il
+    1	    98	  2913	extensionHost [1]
+    1	    98	  2914	extensionHost [1]
+    2	   197	  2915	extensionHost [1]
+    0	     0	  5274	     electron-nodejs (gitWorker.js )
+    1	    98	  2916	extensionHost [1]
+    1	    98	  2925	extensionHost [3]
+    1	    98	  2926	extensionHost [3]
+    2	   197	  2927	extensionHost [3]
+    0	     0	  4547	     electron-nodejs (gitWorker.js )
+    1	    98	  2928	extensionHost [3]
+    1	    98	  2929	extensionHost [8]
+    1	    98	  2930	extensionHost [8]
+    3	    98	  2931	extensionHost [8]
+    0	     0	  4650	     electron-nodejs (gitWorker.js )
+    1	    98	  2932	extensionHost [8]
+    4	   492	  5325	window [18] (cursor-plans-hands-on.md — cursor)
+    1	   197	  5348	extensionHost [18]
+    0	    98	  5412	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=5348
+    0	    98	  5349	fileWatcher [18]
+    1	    98	  5351	extensionHost [18]
+    1	    98	  5352	extensionHost [18]
+    7	    98	  5353	extensionHost [18]
+    0	     0	  5522	     electron-nodejs (gitWorker.js )
+    1	    98	  5354	extensionHost [18]
+    4	   295	  6504	window [12] (Claude Code — baloney (Workspace))
+    5	   492	 23142	window [20] (Tough Room — calibrated criticism for serious writers — writing-quality (Workspace))
+    0	    98	 23209	fileWatcher [20]
+    1	   393	 23210	extensionHost [20]
+    0	     0	 23318	     /Users/me/.cursor/extensions/ms-python.python-2025.6.1-darwin-arm64/python-env-tools/bin/pet server
+    0	     0	 23343	     /Applications/Cursor.app/Contents/Resources/app/resources/helpers/node --max-old-space-size=32768 /Users/me/.cursor/extensions/anysphere.cursorpyright-1.0.12/dist/server.js --cancellationReceive=file:17efa0153dd82d38e8a7fa45e35f6a7ea3687222eb --node-ipc --clientProcessId=23210
+    0	    98	 24103	     electron-nodejs (server-node.js )
+    0	    98	 24949	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=23210
+    0	     0	 26989	     tsserver[5.3.0-dev.20230808]: syntax
+    0	     0	 26990	     tsserver[5.3.0-dev.20230808]: semantic
+    0	     0	 26993	       /Applications/Cursor.app/Contents/Resources/app/resources/helpers/node /Users/me/.cursor/extensions/ms-vscode.vscode-typescript-next-5.3.20230808-universal/node_modules/typescript/lib/typingsInstaller.js --globalTypingsCacheLocation /Users/me/Library/Caches/typescript/5.3 --enableTelemetry --typesMapLocation /Users/me/.cursor/extensions/ms-vscode.vscode-typescript-next-5.3.20230808-universal/node_modules/typescript/lib/typesMap.json --validateDefaultNpmLocation
+    5	     0	 31368	     (ps)
+    1	    98	 23241	extensionHost [20]
+    1	    98	 23242	extensionHost [20]
+    4	    98	 23243	extensionHost [20]
+    0	    98	 23603	     electron-nodejs (gitWorker.js )
+    1	    98	 23244	extensionHost [20]
+    5	   492	 24797	window [10] (Preview sow-textual-revision-landscape.md — cidr-marin-courts)
+    1	    98	 24807	extensionHost [10]
+    0	     0	 24862	     tsserver[5.3.0-dev.20230808]: syntax
+    0	     0	 24864	     tsserver[5.3.0-dev.20230808]: semantic
+    0	     0	 24960	       /Applications/Cursor.app/Contents/Resources/app/resources/helpers/node /Users/me/.cursor/extensions/ms-vscode.vscode-typescript-next-5.3.20230808-universal/node_modules/typescript/lib/typingsInstaller.js --globalTypingsCacheLocation /Users/me/Library/Caches/typescript/5.3 --enableTelemetry --typesMapLocation /Users/me/.cursor/extensions/ms-vscode.vscode-typescript-next-5.3.20230808-universal/node_modules/typescript/lib/typesMap.json --validateDefaultNpmLocation
+    0	    98	 24865	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=24807
+    0	    98	 24870	     electron-nodejs (languageserver.js )
+    0	    98	 24880	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=24807
+    0	    98	 25305	     electron-nodejs (server-node.js )
+    4	     0	 31381	     ps -o etime,pid,ppid,pcpu,rss,time -p 24862,24864
+    0	    98	 24811	fileWatcher [10]
+    1	    98	 24839	extensionHost [10]
+    1	    98	 24840	extensionHost [10]
+    1	    98	 24841	extensionHost [10]
+    0	     0	 25110	     electron-nodejs (gitWorker.js )
+    1	    98	 24842	extensionHost [10]
+    0	    98	 25474	   window
+    0	    98	 25477	   window
+    2	   295	 27535	window [9] (Preview KNOWLEDGE_GRAPH_PIPELINE.md — rowboat-quickstart)
+    0	    98	 27538	fileWatcher [9]
+    1	   393	 27540	extensionHost [9]
+    0	    98	 27697	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=27540
+    0	    98	 28384	     electron-nodejs (server-node.js )
+    0	    98	 29195	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=27540
+    1	    98	 27575	extensionHost [9]
+    1	    98	 27576	extensionHost [9]
+    1	    98	 27578	extensionHost [9]
+    0	     0	 27699	     electron-nodejs (gitWorker.js )
+    1	    98	 27579	extensionHost [9]
+    0	    98	 27702	fileWatcher [12]
+   30	   295	 27703	extensionHost [12]
+    0	    98	 27818	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=27703
+    0	     0	 28536	     /Users/me/.cursor/extensions/ms-python.python-2025.6.1-darwin-arm64/python-env-tools/bin/pet server
+    0	     0	 28549	     /Applications/Cursor.app/Contents/Resources/app/resources/helpers/node --max-old-space-size=32768 /Users/me/.cursor/extensions/anysphere.cursorpyright-1.0.12/dist/server.js --cancellationReceive=file:46b686de275f67e557bae152e982858459761b7a6f --node-ipc --clientProcessId=27703
+    0	    98	 29369	     electron-nodejs (server-node.js )
+    0	    98	 30374	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=27703
+    0	    98	 71809	     electron-nodejs (languageserver.js )
+    0	     0	 94700	     tsserver[5.3.0-dev.20230808]: syntax
+    0	     0	 94701	     tsserver[5.3.0-dev.20230808]: semantic
+    0	     0	 94703	       /Applications/Cursor.app/Contents/Resources/app/resources/helpers/node /Users/me/.cursor/extensions/ms-vscode.vscode-typescript-next-5.3.20230808-universal/node_modules/typescript/lib/typingsInstaller.js --globalTypingsCacheLocation /Users/me/Library/Caches/typescript/5.3 --enableTelemetry --typesMapLocation /Users/me/.cursor/extensions/ms-vscode.vscode-typescript-next-5.3.20230808-universal/node_modules/typescript/lib/typesMap.json --validateDefaultNpmLocation
+    0	    98	 94702	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/css-language-features/server/dist/node/cssServerMain --node-ipc --clientProcessId=27703
+    1	    98	 27712	extensionHost [12]
+    1	    98	 27713	extensionHost [12]
+    4	    98	 27714	extensionHost [12]
+    0	    98	 28003	     electron-nodejs (gitWorker.js )
+    1	    98	 27715	extensionHost [12]
+    0	    98	 82118	   window
+    0	    98	 82121	   window
+    0	    98	 83009	   window
+    0	     0	 84819	   utility-process
+    0	    98	 91919	   window
+    3	   197	 94382	   window
+    0	    98	 95882	   window
+    0	    98	 95885	   window
+    5	   393	 96973	window [21] (four-layer-model.md — switchdimension-community)
+    1	   197	 97180	extensionHost [21]
+    0	    98	 97533	     /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) /Applications/Cursor.app/Contents/Resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=97180
+    0	    98	 98581	     electron-nodejs (server-node.js )
+    0	    98	 97181	fileWatcher [21]
+    1	    98	 97237	extensionHost [21]
+    1	    98	 97238	extensionHost [21]
+    3	    98	 97239	extensionHost [21]
+    0	    98	 97488	     electron-nodejs (gitWorker.js )
+    1	    98	 97240	extensionHost [21]
+    0	    98	 98921	   window
+    0	    98	 98924	   window
+
+Workspace Stats: 
+|  Window (four-layer-model.md — switchdimension-community)
+|  Window (Tough Room — calibrated criticism for serious writers — writing-quality (Workspace))
+|  Window (cursor-plans-hands-on.md — cursor)
+|  Window (Preview sow-textual-revision-landscape.md — cidr-marin-courts)
+|  Window (Preview KNOWLEDGE_GRAPH_PIPELINE.md — rowboat-quickstart)
+|  Window (Preview EDITOR-STACK-ANALYSIS.md — ern-cpc)
+|  Window (theses-manifest.json — code-sculpting)
+|  Window (Claude Code — baloney (Workspace))
+|  Window (tab-export-2026-06-10T02-29-35.md — continuous-ai)
+|    Folder (thebaloney-content): 97 files
+|      File types: md(28) png(17) jpeg(13) jpg(10) json(7) DS_Store(2)
+|                  mhtml(2) docx(2) pdf(2) gitignore(1)
+|      Conf files:
+|    Folder (thebaloney-infra): 37 files
+|      File types: md(24) example(1) gitignore(1) code-workspace(1) sh(1)
+|      Conf files:
+|    Folder (thebaloney-schema): 29 files
+|      File types: json(4) gitignore(2) md(2) ts(2) whl(1) gz(1) toml(1) py(1)
+|                  map(1) js(1)
+|      Conf files: package.json(1) tsconfig.json(1)
+|    Folder (thebaloney-meta): 37 files
+|      File types: json(10) md(9) cursorindexingignore(1) gitignore(1) toml(1)
+|                  code-workspace(1) tsv(1) sh(1)
+|      Conf files:
+|    Folder (thebaloney-producer): 61 files
+|      File types: py(8) pyc(5) bat(3) json(3) gitignore(2) pth(2) lock(1)
+|                  TAG(1) csh(1) fish(1)
+|      Conf files:
+|    Folder (thebaloney-api): 53 files
+|      File types: md(9) json(3) ts(3) example(1) gitignore(1) sql(1) mjs(1)
+|                  sh(1) toml(1)
+|      Conf files: package.json(1) tsconfig.json(1)
+|    Folder (tough-room): 1013 files
+|      File types: js(184) meta(162) sst(158) json(152) map(137) rsc(33)
+|                  ts(23) md(22) html(7) jsonl(6)
+|      Conf files: package.json(5) tsconfig.json(1)
+|    Folder (cursor): 1350 files
+|      File types: txt(603) json(358) md(86) ts(54) js(37) tsx(22) sh(18)
+|                  mdc(7) png(7) log(7)
+|      Conf files: settings.json(3) package.json(2) mcp.json(1)
+|                  tsconfig.json(1)
+|    Folder (thebaloney-web): 996 files
+|      File types: png(209) md(134) mjs(76) svg(71) js(69) jpg(63) css(50)
+|                  astro(47) html(38) mp3(18)
+|      Conf files: github-actions(3) settings.json(1) launch.json(1)
+|                  package.json(1)
+|    Folder (code-sculpting): 1477 files
+|      File types: md(406) nix(211) h(79) png(77) py(74) lua(29) pxi(26)
+|                  json(22) graffle(17) pxd(16)
+|      Conf files: settings.json(2) package.json(2) tsconfig.json(1)
+|    Folder (continuous-ai): more than 109796 files
+|      File types: json(8615) eml(7260) md(3720) txt(33) yml(17) ts(14) py(11)
+|                  sql(8) jsonl(7) gitignore(5)
+|      Conf files: settings.json(2) launch.json(1)
+|    Folder (rowboat-quickstart): 19825 files
+|      File types: md(9877) jsonl(1711) ts(1657) js(1152) tsx(965) png(707)
+|                  py(353) json(288) pak(223) ics(105)
+|      Conf files: package.json(43) tsconfig.json(36) dockerfile(16)
+|                  settings.json(3) mcp.json(1) launch.json(1)
+|    Folder (writing-quality): more than 21995 files
+|      File types: py(7668) pyc(3734) js(1286) md(709) txt(409) json(339)
+|                  pyi(299) map(179) meta(164) sst(158)
+|      Conf files: package.json(10) tsconfig.json(3) dockerfile(2)
+|                  settings.json(1) makefile(1)
+|    Folder (switchdimension-community): more than 22683 files
+|      File types: py(7048) json(2324) md(1496) o(1139) gz(901) timestamp(386)
+|                  d(342) rlib(272) rmeta(271) pyc(269)
+|      Conf files: package.json(10) settings.json(8) tsconfig.json(3)
+|                  mcp.json(1)
+|    Folder (cidr-marin-courts): 15402 files
+|      File types: md(1659) js(1493) json(1427) cto(996) cta(893) html(887)
+|                  puml(714) ts(600) png(372) pdf(166)
+|      Conf files: package.json(243) tsconfig.json(35) webpack.config.js(22)
+|                  makefile(18) launch.json(8) csproj(7) settings.json(5)
+|                  dockerfile(5) jsconfig.json(5) tasks.json(4) sln(4)
+|                  tslint.json(1) devcontainer.json(1)
+|    Folder (peeq-voicegen-audiocast): more than 22996 files
+|      File types: py(3955) pyc(2888) json(1832) md(1805) ts(901) tsx(754)
+|                  svg(448) mp3(424) pyi(282) mdx(261)
+|      Conf files: package.json(10) settings.json(5) dockerfile(4)
+|                  tsconfig.json(4) mcp.json(1) makefile(1)
+|    Folder (ern-cpc): more than 21027 files
+|      File types: ts(3905) json(1895) tsx(1486) js(1349) html(858) md(687)
+|                  bcmap(672) map(624) png(549) properties(442)
+|      Conf files: package.json(262) tsconfig.json(252) dockerfile(27)
+|                  makefile(18) settings.json(9) gulp.js(5)
+|                  jsconfig.json(1)
+
+
