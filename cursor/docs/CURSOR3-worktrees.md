@@ -4,7 +4,7 @@ This guide prioritizes **new Cursor 3 material published in March-April 2026** a
 
 It then translates those findings into a practical workflow you can run day-to-day.
 
-**Related in this repo:** [blog/worktrees-second-ledger.md](blog/worktrees-second-ledger.md) — what worktrees do *not* copy (editor identity, index, plans, budget), extending a community runtime-isolation ledger. [blog/worktrees-isolation-spectrum.md](blog/worktrees-isolation-spectrum.md) — when *not* to use worktrees: GitButler virtual branches and the isolation spectrum.
+**Related in this repo:** [blog/worktrees-second-ledger.md](blog/worktrees-second-ledger.md) · [blog/worktrees-isolation-spectrum.md](blog/worktrees-isolation-spectrum.md) · [worktree-vcs-landscape.md](worktree-vcs-landscape.md) (June 2026 research: frontier providers, OSS ADEs, prose VCS) · [PROSE-VCS.md](PROSE-VCS.md)
 
 ---
 
@@ -116,6 +116,19 @@ Then verify setup happened (do not trust silently):
 - check expected files exist
 - run baseline tests/lint in that worktree
 
+### C2. Cross-vendor setup and merge-back (not Cursor-only)
+
+Every major agent harness now has a worktree setup story; mechanisms differ ([full landscape](worktree-vcs-landscape.md)):
+
+| Harness | Setup mechanism | Merge back |
+|---------|-----------------|------------|
+| **Cursor** | `.cursor/worktrees.json` | Apply / `/apply-worktree` from plan or Agents UI |
+| **Claude Code** | [`.worktreeinclude`](https://code.claude.com/docs/en/worktrees) + optional `WorktreeCreate` hook | Manual merge or prompt on exit; hooks can customize |
+| **Codex app** | [Local environment](https://developers.openai.com/codex/app/local-environments) scripts when starting a worktree thread | [Handoff](https://developers.openai.com/codex/app/worktrees) between Local and Worktree |
+| **Fallback** | Slash command / skill at session start | Project-specific |
+
+Claude's `.worktreeinclude` is the productized version of "copy gitignored env files into each tree" — same problem as our [left-behind manifest](blog/worktrees-second-ledger.md). Codex explicitly warns worktrees may miss unchecked-in dependencies.
+
 ### D. Use a baseline -> run -> verify loop
 
 For each worktree run:
@@ -180,3 +193,7 @@ Track these before standardizing team workflow:
 - [DataCamp Cursor 3 analysis](https://www.datacamp.com/blog/cursor-3)
 - [Cursor agent best practices (older but important)](https://cursor.com/blog/agent-best-practices)
 - [Git worktree systems-level guide](https://devcenter.upsun.com/posts/git-worktrees-for-parallel-ai-coding-agents/)
+- [Codex app worktrees](https://developers.openai.com/codex/app/worktrees)
+- [Claude Code worktrees](https://code.claude.com/docs/en/worktrees)
+- [Emdash ADE](https://github.com/generalaction/emdash)
+- [worktree-vcs-landscape.md](worktree-vcs-landscape.md) (this repo)

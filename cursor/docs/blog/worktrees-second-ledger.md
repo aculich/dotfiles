@@ -3,7 +3,7 @@
 *A companion to the parallel-agent worktree pattern making the rounds — extending the "what's isolated vs. shared" ledger from runtime services to the IDE and agent layer, based on our Cursor setup.*
 
 **Inspired by:** ["Anyone here using Git Worktrees? Here's my New Local Dev Setup"](https://community.theaiautomators.com/c/discussions/anyone-here-using-git-worktrees) (The AI Automators community)
-**Companions:** [CURSOR3-worktrees.md](../CURSOR3-worktrees.md) · [IGNORING.md](../IGNORING.md) · [MULTIROOT-cursor-lifecycle.md](../MULTIROOT-cursor-lifecycle.md) · [cursor-plans-agents-guide.md](../cursor-plans-agents-guide.md) · **Sequel:** [worktrees-isolation-spectrum.md](worktrees-isolation-spectrum.md)
+**Companions:** [CURSOR3-worktrees.md](../CURSOR3-worktrees.md) · [IGNORING.md](../IGNORING.md) · [MULTIROOT-cursor-lifecycle.md](../MULTIROOT-cursor-lifecycle.md) · [cursor-plans-agents-guide.md](../cursor-plans-agents-guide.md) · [worktree-vcs-landscape.md](../worktree-vcs-landscape.md) · [PROSE-VCS.md](../PROSE-VCS.md) · **Sequel:** [worktrees-isolation-spectrum.md](worktrees-isolation-spectrum.md)
 
 ---
 
@@ -131,7 +131,7 @@ One caveat from early Cursor 3 community reports that generalizes to any agent-w
 
 1. **Baseline** — fresh tree passes tests/lint/typecheck before the agent touches anything. This also proves the setup script actually ran.
 2. **Run** — agent works in the tree.
-3. **Re-validate** — tests pass in the tree before applying back.
+3. **Re-validate** — tests pass in the tree before applying back. If the diff includes markdown (plans, blog posts, runbooks), review prose with word-diff or [difftastic](../PROSE-VCS.md) — line-oriented `git diff` hides agent rewrite churn.
 4. **Apply one tree at a time** — and validate after each apply, even when diffs look disjoint. Two agents that never touched the same file can still break each other through a shared schema, a shared config, or — per the first ledger — a shared database.
 5. **Commit immediately** — small, per-task commits keep revert cheap when step 4 catches something.
 
@@ -150,6 +150,7 @@ Before scaling past your second parallel worktree:
 - [ ] **Base ref understood** — know whether new trees branch from `origin/HEAD` or local `HEAD`, so unpushed commits don't silently go missing
 - [ ] **Setup declared**, not tribal: `.cursor/worktrees.json` (or a setup script the runbook mandates), with a baseline check that proves it ran
 - [ ] **Model routing** decided per tree; `/best-of-n` reserved for genuinely ambiguous tasks
+- [ ] **Prose review** when diffs touch `*.md`: word-diff or difftastic before apply ([PROSE-VCS.md](../PROSE-VCS.md))
 - [ ] **Wave discipline**: apply one tree at a time, validate after each, reconcile spend between waves
 
 The original post ends with "in theory this should allow each coding agent to safely run, test, fail, fix, and validate without stepping on the toes of others." The theory holds — but only if you keep both ledgers. The runtime ledger keeps agents from stepping on each other's *services*. The second ledger keeps the editor, the context, and the budget from quietly un-copying everything you thought the worktree copied.

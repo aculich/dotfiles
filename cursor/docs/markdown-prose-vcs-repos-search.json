@@ -1,0 +1,94 @@
+{
+  "search_id": "search_f8e0f5d5495b48d6888f18d6429aa42a",
+  "session_id": "session_f8e0f5d5495b48d6888f18d6429aa42a",
+  "status": "ok",
+  "results": [
+    {
+      "url": "https://github.com/kdcokenny/opencode-worktree",
+      "title": "GitHub - kdcokenny/opencode-worktree: Zero-friction git worktrees for OpenCode. Auto-spawns terminals, syncs files, cleans up on exit. \u00b7 GitHub",
+      "publish_date": null,
+      "excerpts": [
+        "If you prefer manual control or work exclusively in OpenCode Desktop, you may not need this. But if you want AI agents to seamlessly create and manage isolated development sessions\u2014complete with automatic terminal spawning and state cleanup\u2014this is what you&#x27;re looking for. flowchart LR A[Create Worktree] --&gt; B{Terminal Spawns} B --&gt; C[OpenCode Running] C --&gt; D[Work in Isolation] D --&gt; E[Delete Worktree] E --&gt; F{Auto-commit &amp; Cleanup} F --&gt; G[Session Ends]"
+      ]
+    },
+    {
+      "url": "https://github.com/AryaLabsHQ/agentree",
+      "title": "GitHub - AryaLabsHQ/agentree: Create and manage isolated Git worktrees for AI coding agents. \u00b7 GitHub",
+      "publish_date": null,
+      "excerpts": [
+        "Create and manage isolated Git worktrees for AI coding agents. - AryaLabsHQ/agentree"
+      ]
+    },
+    {
+      "url": "https://fossil-scm.org/schimpf-book/uv/FossilBook.html",
+      "title": "Fossil Version Control",
+      "publish_date": null,
+      "excerpts": [
+        "The &lt;verbatim&gt; tag works like the HTML &lt;pre&gt; tag, with the addition that it also disables all wiki and HTML markup through to the matching &lt;/verbatim&gt;. Text within &lt;verbatim type=\u201cpikchr\u201d&gt;\u2026&lt;/verbatim&gt; is formatted using 9. Fossil supports the original markdown by Gruber plus some additions."
+      ]
+    },
+    {
+      "url": "https://www.linuxlinks.com/fossil",
+      "title": "Fossil \u2013 distributed software configuration management system",
+      "publish_date": null,
+      "excerpts": [
+        "Fossil \u2013 distributed software configuration management system\nFossil is an open source distributed version control system, bug tracking system and wiki software server for use in software development."
+      ]
+    },
+    {
+      "url": "https://openhub.net/p/fossil-scm",
+      "title": "The fossil-scm Open Source Project on Open Hub",
+      "publish_date": null,
+      "excerpts": [
+        "openhub.net Black Duck Software, Inc. [Open Hub](https://www.blackduck.com) Open Hub * [Follow @ OH](https://twitter.com/intent/follow?original_referer=https%3A%2F%2Fopenhub.net%2Fp%2Ffossil-scm&region=follow_link&screen_name=bdopenhub&source=followbutton&variant=2.0)\n* \n* \n\n* Projects\n* People\n* Organizations\n* Tools\n* [Blog](https://community.blackduck.com/s/black-duck-open-hub?tabset-c30ff=d9d77)\n* BDSA\n\nProjects\n\n* People\n* Projects\n* Organizations\n\nimg avatar\n\n# fossil-scm\n\nSettings | Report Duplicate\n\n32\n\nI Use This!\n\n\u00d7\n\n#### Login Required\n\n[](https://community.blackduck.com/s/article/Black-Duck-Open-Hub-About-Project-Activity-Icons \"High Activity\")\n\nHigh Activity\n\n_Analyzed 1 day ago.\nbased on code collected 2 days ago._\n\n#### Project Summary\n\nFossil is a distributed software version control system that includes an - integrated distributed wiki and an integrated distributed bug-tracking system all in a single, easy-to-use, stand-alone executable.\nEverything (client, server, and utilities) is included in a single self-contained executable - so very easy to install.\n\nAn entire project is contained in single disk file (an SQLite database).\n\n#### Tags\n\nbug\\_tracker console development distributed dscm dvcs fossil issue\\_tracker repository revision\\_control scm source\\_control sqlite vcs version\\_control web\\_interface wiki\n\n#### In a Nutshell, fossil-scm...\n\n* ...\n  \n  has had [18,553 commits](https://openhub.net/p/fossil-scm/commits/summary) made by 115 contributors  \n  representing 456,408 lines of code\n* ...\n  \n  is mostly written in C  \n  with a well-commented source code\n* ...\n  \n  has a well established, mature codebase  \n  maintained by a large development team  \n  with decreasing Y-O-Y commits\n* ...\n  \n  took an estimated 123 years of effort (COCOMO model)  \n  starting with its [first commit in July, 2007](https://openhub.net/p/fossil-scm/commits?sort=oldest)  \n  ending with its [most recent commit 4 days](https://openhub.\nnet/p/fossil-scm/commits) ago\n\n#### Quick Reference\n\nProject Links:\n\n[Homepage](http://www.fossil-scm.org/)  \n[Community](http://www.mail-archive.com/fossil-users@lists.fossil-scm.org)  \nDocumentation _( 2 Links )_  \n[Download](https://www.fossil-scm.org/fossil/uv/download.html)  \n[Forums](https://fossil-scm.org/forum/forum)  \n[Issue Trackers](https://www.fossil-scm.org/home/reportlist)  \n[Mailing Lists](http://www.mail-archive.com/fossil-users@lists.fossil-scm.org/)\n\nCode Locations:\n\nhttps://github.com/drhsqlite/fos...\n\nSimilar Projects:\n\n|Git Git |F fossgit |\n| --- | --- |\n|G git-deps |Mercurial Mercurial |\n\nManagers:\n\nBecome the first manager for fossil-scm\n\n#### Licenses\n\n##### [BSD 2-clause \"Simplified\" License](https://openhub.net/licenses/bsd_2clause_ish)\n\n##### Permitted\n\nCommercial Use\n\nModify\n\nDistribute\n\nPlace Warranty\n\n##### Forbidden\n\nHold Liable\n\n##### Required\n\nInclude Copyright\n\nInclude License\n\nThese details are provided for information only."
+      ]
+    },
+    {
+      "url": "https://github.com/calebrosario/opencode-plugin-worktree",
+      "title": "GitHub - calebrosario/opencode-plugin-worktree \u00b7 GitHub",
+      "publish_date": null,
+      "excerpts": [
+        "<strong>This plugin gives you a single command that handles everything end-to-end, complete with automatic file synchronization and lifecycle hooks</strong>. Worktrees created with this plugin work fine in OpenCode Desktop, but you lose the automatic terminal"
+      ]
+    },
+    {
+      "url": "https://github.com/topics/git-worktree",
+      "title": "git-worktree \u00b7 GitHub Topics \u00b7 GitHub",
+      "publish_date": null,
+      "excerpts": [
+        "<strong>Automates per-branch worktree creation, configuration copying, dependency installation, and workspace setup for efficient parallel development</strong>."
+      ]
+    },
+    {
+      "url": "https://github.com/agenttools/worktree",
+      "title": "GitHub - agenttools/worktree: CLI tool for managing Git worktrees with GitHub issues and Claude Code integration \u00b7 GitHub",
+      "publish_date": null,
+      "excerpts": [
+        "CLI tool for managing Git worktrees with GitHub issues and Claude Code integration - agenttools/worktree"
+      ]
+    },
+    {
+      "url": "https://github.com/DanHenton/opencode-worktree",
+      "title": "GitHub - DanHenton/opencode-worktree \u00b7 GitHub",
+      "publish_date": null,
+      "excerpts": [
+        "Additional navigation options * Code\n* [Issues](https://github.com/DanHenton/opencode-worktree/issues)\n* [Pull requests](https://github.com/DanHenton/opencode-worktree/pulls)\n* Actions\n* Projects\n* Security and quality\n* Insights\n\n# DanHenton/opencode-worktree\n\nmain\n\nBranches Tags\n\n \n\nGo to file\n\nCode\n\nOpen more actions menu\n\n## Folders and files\n\n|Name |Name |Last commit message |Last commit date |\n| --- | --- | --- | --- |\n|## Latest commit\n\n## History\n\n[43 Commits](https://github.com/DanHenton/opencode-worktree/commits/main/)\n\n 43 Commits |\n|.github/ workflows |.github/ workflows | | |\n|cmd/ opencode-worktree |cmd/ opencode-worktree | | |\n|docs |docs | | |\n|internal |internal | | |\n|.gitignore |.gitignore | | |\n|.goreleaser.yaml |.goreleaser.yaml | | |\n|AGENTS.md |AGENTS.md | | |\n|LICENSE |LICENSE | | |\n|README.md |README.md | | |\n|go.mod |go.mod | | |\n|go.sum |go.sum | | |\n|install.sh |install.sh | | |\n|View all files |\n\n## Repository files navigation\n\n* README\n* MIT license\n# opencode-worktree\n\nGit worktree manager for isolated [OpenCode](https://opencode.ai) agent sessions.\n\nRun multiple AI agents in parallel \u2014 each gets its own branch and directory, fully isolated from your working tree. When they're done, changes merge back automatically. No stashing, no branch juggling, no conflicts between agents.\n\n## Why?\n\nAI coding agents work best with full autonomy over their environment. But you don't want them trampling your working directory \u2014 or each other. `opencode-worktree` gives each agent an isolated workspace and handles the entire lifecycle:\n\n1. **Create** an `agent/<task>` branch in a sibling worktree directory\n2. **Launch** OpenCode in that worktree with your config copied over\n3. **Merge** the agent branch back into your parent branch on exit\n4. **Clean up** the worktree and branch automatically\n\nNo manual git commands. No orphaned branches. Multiple agents can run simultaneously with safe, serialized merges.\n\n## Install\n### Quick Install (macOS / Linux)\n\n```\ncurl -fsSL https://raw.githubusercontent.com/DanHenton/opencode-worktree/main/install.sh | sh\n```\n\n### LLM Agent Install\n\nPaste this into your LLM agent session:\n\n```\nInstall opencode-worktree by following the instructions here:\nhttps://raw.githubusercontent.com/DanHenton/opencode-worktree/main/docs/install.md\n```\n\nFor other install methods (Go, manual download, PATH troubleshooting), see the full install guide .\n\nFor command-by-command behavior, examples, and edge cases, see the command reference .\n\n## Usage\n\n> **Shortcut:** The installer adds `ocwt` as a shell alias for `opencode-worktree` \u2014 use either interchangeably.\n> \n> \n\n### Start an agent task\n\n```\nopencode-worktree task fix-auth-bug\n```\n\nThis will:\n\n* Create worktree at `../your-repo-agent-fix-auth-bug/`\n* Create branch `agent/fix-auth-bug` from your current branch\n* Copy `opencode.json` and `.opencode/` into the worktree\n* Detect dependency manifests ( `package.json` , `go.mod` , etc."
+      ]
+    },
+    {
+      "url": "https://github.com/felixAnhalt/opencode-worktree-session/blob/main/README.md",
+      "title": "opencode-worktree-session/README.md at main \u00b7 felixAnhalt/opencode-worktree-session",
+      "publish_date": null,
+      "excerpts": [
+        "Automatic Git worktree management for OpenCode sessions. Creates isolated environments for every task, commits changes, and cleans up on exit. - felixAnhalt/opencode-worktree-session"
+      ]
+    }
+  ],
+  "usage": [
+    {
+      "name": "sku_search",
+      "count": 1
+    }
+  ],
+  "warnings": []
+}

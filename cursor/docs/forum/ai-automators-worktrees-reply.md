@@ -4,6 +4,8 @@ Source thread: https://community.theaiautomators.com/c/discussions/anyone-here-u
 
 Paste-ready reply below the line. Trim links if the forum is strict about them.
 
+**Optional follow-up** (if the thread continues): Claude Code now ships [`.worktreeinclude`](https://code.claude.com/docs/en/worktrees) — repo-root file, gitignore syntax, auto-copies gitignored env files into each new worktree. Productized version of the "copy ENVs" step in `setup-worktree.ps1`.
+
 ---
 
 Great writeup — "worktrees copy the codebase, they do **not** copy all the services around the codebase" is exactly the right framing, and your ledger (ports isolated, heavy deps shared, DB shared, test accounts isolated) matches what we converged on too.

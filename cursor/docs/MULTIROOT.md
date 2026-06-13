@@ -99,4 +99,4 @@ Every URL referenced above (for re-checking as tools evolve):
 - [DVC: Understanding DVC](https://dvc.org/doc/understanding-dvc)
 - [DVC tracking guide (Mintlify)](https://mintlify.com/treeverse/dvc/guide/tracking-data)
 
-**Related in this repo:** [IGNORING.md](IGNORING.md) · [MULTIROOT-cursor-lifecycle.md](MULTIROOT-cursor-lifecycle.md) (Cursor chat history, renames, plans, archival tools) · [COMPENDIUM.md](COMPENDIUM.md) (private sibling backup repo) · [CURRENT_STATE.md](../CURRENT_STATE.md)
+**Related in this repo:** [IGNORING.md](IGNORING.md) · [MULTIROOT-cursor-lifecycle.md](MULTIROOT-cursor-lifecycle.md) (Cursor chat history, renames, plans, archival tools) · [PROSE-VCS.md](PROSE-VCS.md) (markdown/plans in git vs prose-aware review) · [worktree-vcs-landscape.md](worktree-vcs-landscape.md) · [COMPENDIUM.md](COMPENDIUM.md) (private sibling backup repo) · [CURRENT_STATE.md](../CURRENT_STATE.md)

@@ -2,7 +2,7 @@
 
 *A sequel to [the second ledger](worktrees-second-ledger.md). Worktrees are the standard advice for parallel agents — but they're one point on a spectrum, and for some codebases the wrong one. On GitButler virtual branches, Trigger.dev's defection, and how to pick your isolation level.*
 
-**Companions:** [worktrees-second-ledger.md](worktrees-second-ledger.md) · [CURSOR3-worktrees.md](../CURSOR3-worktrees.md) · [IGNORING.md](../IGNORING.md)
+**Companions:** [worktrees-second-ledger.md](worktrees-second-ledger.md) · [CURSOR3-worktrees.md](../CURSOR3-worktrees.md) · [IGNORING.md](../IGNORING.md) · [worktree-vcs-landscape.md](../worktree-vcs-landscape.md)
 
 ---
 
@@ -30,8 +30,12 @@ It helps to see the options as positions on one axis — how much of the world y
 | **1. Worktrees + full per-tree env** | N | N sets (offset ports, per-tree test accounts) | One branch per tree | The [forum author's setup](https://community.theaiautomators.com/c/discussions/anyone-here-using-git-worktrees); apps light enough to duplicate |
 | **2. Worktrees + shared services** | N | 1 set (shared DB, shared heavy deps, [portless](https://github.com/vercel-labs/portless)-named servers) | One branch per tree | Our setup; most full-stack work — see [the second ledger](worktrees-second-ledger.md) |
 | **3. One tree, virtual branches** | 1 | 1 set | [GitButler](https://gitbutler.com/): N branches applied to one directory, changes assigned at commit time | Heavy-service monorepos; tasks touching disjoint files |
+| **2b. Branch deploy previews** | 1 local + N deployed | N per preview URL | [Upsun](https://devcenter.upsun.com/posts/git-worktrees-for-parallel-ai-coding-agents/) / Cloudflare Pages / Vercel — validate on `<branch>.<project>.pages.dev` etc. | When local service duplication is too heavy but you still want per-branch environments |
+| **3b. Jujutsu workspaces** | N (`jj workspace`) | 1 or N | [Jujutsu](https://docs.jj-vcs.dev/latest/git-compatibility): native multi-checkout, no `git-worktree` | Git-interop shops wanting jj's change model |
 
-Positions 1 and 2 isolate *files* and pay for it in environment setup. Position 3 isolates *nothing at runtime* and pays for it in commit-time discipline. The Trigger.dev piece is the case study for when 3 beats 1 and 2.
+**Orthogonal choice — [Conductor](https://www.conductor.build/docs/concepts/parallel-agents):** multiple **workspaces** (independent branches, like worktrees) vs multiple **agents in one workspace** (shared branch — good when one agent implements and another fixes tests on the same diff).
+
+Positions 1 and 2 isolate *files* and pay for it in environment setup. Position 3 isolates *nothing at runtime* and pays for it in commit-time discipline. Position 2b trades local duplication for deploy-time isolation. The Trigger.dev piece is the case study for when 3 beats 1 and 2.
 
 ## How position 3 actually works
 
@@ -84,7 +88,7 @@ That fourth row is the one worktrees genuinely cannot answer. A worktree maps on
 
 One more GitButler capability earns its place here even outside parallel-agent work: **stacked branches** — small dependent branches layered on each other, reviewable and landable incrementally.
 
-We keep reference clones and forks of upstream open-source projects under an ignored `upstream/` directory ([IGNORING.md](../IGNORING.md)), and some of those forks carry local patches while tracking a moving upstream. The traditional cost is rebase pain and version drift: your patch pile and upstream's history diverge until reconciliation becomes a project of its own. Stacking turns the patch pile into an ordered set of small branches — rebase the stack on upstream, land what got accepted, keep carrying what didn't. Same discipline as stacked PRs at work, applied to fork maintenance.
+We keep reference clones and forks of upstream open-source projects under an ignored `upstream/` directory ([IGNORING.md](../IGNORING.md)), and some of those forks carry local patches while tracking a moving upstream. The traditional cost is rebase pain and version drift: your patch pile and upstream's history diverge until reconciliation becomes a project of its own. Stacking turns the patch pile into an ordered set of small branches — rebase the stack on upstream, land what got accepted, keep carrying what didn't. Same discipline as stacked PRs at work, applied to fork maintenance. OSS alternatives to evaluate: [git-spice](https://github.com/abhinav/git-spice) (`gs stack restack`) alongside GitButler — see [landscape](../worktree-vcs-landscape.md).
 
 ## The bigger frame
 

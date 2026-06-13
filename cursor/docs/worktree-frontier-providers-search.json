@@ -1,0 +1,94 @@
+{
+  "search_id": "search_5c9378d075e14bfcb77c2683268a482e",
+  "session_id": "session_5c9378d075e14bfcb77c2683268a482e",
+  "status": "ok",
+  "results": [
+    {
+      "url": "https://developers.openai.com/codex/app/features",
+      "title": "Features \u2013 Codex app | OpenAI Developers",
+      "publish_date": null,
+      "excerpts": [
+        "<strong>The Codex app is a focused desktop experience for working on Codex threads in parallel, with built-in worktree support, automations, and Git functionality</strong>."
+      ]
+    },
+    {
+      "url": "https://developers.openai.com/codex/subagents",
+      "title": "Subagents \u2013 Codex | OpenAI Developers",
+      "publish_date": null,
+      "excerpts": [
+        "<strong>Codex can run subagent workflows by spawning specialized agents in parallel and then collecting their results in one response</strong>."
+      ]
+    },
+    {
+      "url": "https://openai.com/index/introducing-the-codex-app/",
+      "title": "Introducing the Codex app | OpenAI",
+      "publish_date": null,
+      "excerpts": [
+        "<strong>The Codex app provides a focused space for multi-tasking with agents</strong>. Agents run in separate threads organized by projects, so you can seamlessly switch between tasks without losing context."
+      ]
+    },
+    {
+      "url": "http://officialskills.sh/google-gemini/skills/gemini-api-dev",
+      "title": "Google Gemini/gemini-api-dev \u2014 Agent Skills | officialskills.sh",
+      "publish_date": null,
+      "excerpts": [
+        "Google Gemini/gemini-api-dev \u2014 Agent Skills | officialskills.sh\nCovers building applications with the Gemini API across Python, JavaScript/TypeScript, Go, and Java. Handles text generation, multimodal inputs (images, audio, video, documents), function calling, structured JSON output, code execution, context caching, and embeddings."
+      ]
+    },
+    {
+      "url": "https://developers.openai.com/codex/app/local-environments",
+      "title": "Local environments \u2013 Codex app | OpenAI Developers",
+      "publish_date": null,
+      "excerpts": [
+        "If your repository contains more than one project, open the project directory that contains the shared .codex folder. Since worktrees run in different directories than your local tasks, your project might not be fully set up and might be missing dependencies or files that aren\u2019t checked into your repository."
+      ]
+    },
+    {
+      "url": "http://developers.openai.com/codex/app",
+      "title": "Codex app - OpenAI Developers",
+      "publish_date": null,
+      "excerpts": [
+        "The Codex app is a focused desktop experience for working on Codex threads in parallel, with built-in worktree support, automations, and Git functionality."
+      ]
+    },
+    {
+      "url": "http://developers.openai.com/codex/cli",
+      "title": "Codex CLI",
+      "publish_date": null,
+      "excerpts": [
+        "Codex CLI is OpenAI's coding agent that you can run locally from your terminal. It can read, change, and run code on your machine in the selected directory."
+      ]
+    },
+    {
+      "url": "https://developers.openai.com/codex/learn/best-practices",
+      "title": "Best practices \u2013 Codex | OpenAI Developers",
+      "publish_date": null,
+      "excerpts": [
+        "The Codex app UI makes thread management easiest because you can pin threads and create worktrees. If you are using the CLI, these slash commands are especially useful: /experimental to toggle experimental features and add to your config.toml ... /compact when the thread is getting long and you want a summarized version of earlier context. Note that Codex does automatically compact conversations for you \u00b7 /agent when you are running parallel agents and want to switch between the active agent thread"
+      ]
+    },
+    {
+      "url": "http://developers.openai.com/codex/app/worktrees",
+      "title": "Worktrees \u2013 Codex app | OpenAI Developers",
+      "publish_date": null,
+      "excerpts": [
+        "## Search the Codex docs\n\nSearch docs\n\n### Suggested\n\nresponses create reasoning\\_effort realtime prompt caching\n\nCopy Page\n\n# Worktrees\n\nLeverage Git worktrees within the Codex app to let Codex work in parallel\n\nCopy Page\n\nIn the Codex app, worktrees let Codex run multiple independent tasks in the same project without interfering with each other. For Git repositories, automations run on dedicated background worktrees so they don\u2019t conflict with your ongoing work. In non-version-controlled projects, automations run directly in the project directory. You can also start threads on a worktree manually, and use Handoff to move a thread between Local and Worktree.\n\n## What\u2019s a worktree\n\nWorktrees only work in projects that are part of a Git repository since they use [Git worktrees](https://git-scm.com/docs/git-worktree) under the hood. A worktree allows you to create a second copy (\u201ccheckout\u201d) of your repository.\nEach worktree has its own copy of every file in your repo but they all share the same metadata ( `.git` folder) about commits, branches, etc. This allows you to check out and work on multiple branches in parallel.\n\n## Terminology\n\n* **Local checkout** : The repository that you created. Sometimes just referred to as **Local** in the Codex app.\n* **Worktree** : A [Git worktree](https://git-scm.com/docs/git-worktree) that was created from your local checkout in the Codex app.\n* **Handoff** : The flow that moves a thread between Local and Worktree. Codex handles the Git operations required to move your work safely between them.\n\n## Why use a worktree\n\n1. Work in parallel with Codex without disturbing your current Local setup.\n2. Queue up background work while you stay focused on the foreground.\n3. Move a thread into Local later when you\u2019re ready to inspect, test, or collaborate more directly.\n\n## Getting started\n\nWorktrees require a Git repository.\nMake sure the project you selected lives in one.\n\n1. Select \u201cWorktree\u201d\n   \n   In the new thread view, select **Worktree** under the composer.\n   Optionally, choose a local environment to run setup scripts for the worktree.\n2. Select the starting branch\n   \n   Below the composer, choose the Git branch to base the worktree on. This can be your `main` / `master` branch, a feature branch, or your current branch with unstaged local changes.\n3. Submit your prompt\n   \n   Submit your task and Codex will create a Git worktree based on the branch you selected. By default, Codex works in a [\u201cdetached HEAD\u201d](https://git-scm.com/docs/git-checkout) .\n4. Choose where to keep working\n   \n   When you\u2019re ready, you can either keep working directly on the worktree or hand the thread off to your local checkout. Handing off to or from local will move your thread _and_ code so you can continue in the other checkout.\n\n## Working between Local and Worktree"
+      ]
+    },
+    {
+      "url": "https://openai.com/index/introducing-codex/",
+      "title": "Introducing Codex | OpenAI",
+      "publish_date": null,
+      "excerpts": [
+        "<strong>A cloud-based software engineering agent that can work on many tasks in parallel, powered by codex-1.</strong>"
+      ]
+    }
+  ],
+  "usage": [
+    {
+      "name": "sku_search",
+      "count": 1
+    }
+  ],
+  "warnings": []
+}
