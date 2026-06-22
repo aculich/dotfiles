@@ -599,6 +599,34 @@
 
 // NOTES:
 
+// === VIM SETUP RECIPE ===
+// Script: cursor/scripts/setup-vim-key-repeat.sh
+// Docs: https://marketplace.cursorapi.com/items/?itemName=vscodevim.vim
+//
+// Prerequisite (manual in Cursor UI): Vim extension installed AND Vim mode enabled.
+// If status bar shows "-- VIM: DISABLED --": Cmd+Shift+P → "Vim: Toggle Vim Mode"
+// or click the status bar indicator (extension can be enabled while mode is off).
+//
+// --- Run the script ---
+// "$HOME/dotfiles/cursor/scripts/setup-vim-key-repeat.sh"
+// "$HOME/dotfiles/cursor/scripts/setup-vim-key-repeat.sh" --fast
+// "$HOME/dotfiles/cursor/scripts/setup-vim-key-repeat.sh" --global-repeat
+// "$HOME/dotfiles/cursor/scripts/reset-vim-key-repeat.sh"
+// "$HOME/dotfiles/cursor/scripts/reset-vim-key-repeat.sh" --apply-session
+// "$HOME/dotfiles/cursor/scripts/setup-vim-key-repeat.sh" --all-editors
+// "$HOME/dotfiles/cursor/scripts/setup-vim-key-repeat.sh" --verify
+// "$HOME/dotfiles/cursor/scripts/setup-vim-key-repeat.sh" --restart-cursor
+// "$HOME/dotfiles/cursor/scripts/setup-vim-key-repeat.sh" --apply-session
+//
+// --- Under the hood (defaults only; no jq) ---
+// defaults write com.todesktop.230313mzl4w4u92 ApplePressAndHoldEnabled -bool false
+// defaults write -g KeyRepeat -int 2
+// defaults write -g InitialKeyRepeat -int 15
+// defaults read com.todesktop.230313mzl4w4u92 ApplePressAndHoldEnabled
+// osascript -e 'id of app "Cursor"'
+//
+// === end VIM SETUP RECIPE ===
+
 // CHECK CURRENT SETTINGS (run these commands to see current values):
 // defaults read -g ApplePressAndHoldEnabled                                    // check press-and-hold setting
 // defaults read NSGlobalDomain NSAutomaticPeriodSubstitutionEnabled            // check double-space period
@@ -618,11 +646,8 @@
 // NOTE: If a setting returns "does not exist", it means it's using the system default.
 // To reset to defaults: defaults delete -g SettingName
 //
-// CURRENT STATE (as of last check):
-// - ApplePressAndHoldEnabled: 0 (false) - modified from default
-// - NSAutomaticPeriodSubstitutionEnabled: 0 (false) - modified from default
-// - KeyRepeat: 1 (fastest, absolute minimum) - modified from default
-// - InitialKeyRepeat: 1 (shortest, absolute minimum, below UI min of 15) - modified from default
+// CURRENT STATE (re-check with script or defaults read):
+// "$HOME/dotfiles/cursor/scripts/setup-vim-key-repeat.sh" --verify
 
 // READ CURRENT VALUES FIRST:
 // defaults read -g KeyRepeat                                                   // check current repeat rate (lower = faster, 1 = fastest)
