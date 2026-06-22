@@ -258,5 +258,12 @@
   "vim.overrideCopy": false,
   "emacs-mcx.useMetaPrefixMacCmd": false,
   "emacs-mcx.useMetaPrefixAlt": true,
-  "git.enableSmartCommit": true
+  "git.enableSmartCommit": true,
+  "vim.disableExtension": false,
+  "cursor.composer.conversationDensity": "detailed",
+  "cursor.general.emailPrivacyEnabled": true,
+  "workbench.reduceMotion": "off",
+  "cursor.general.glassShowWarningNotifications": true,
+  "cursor.composer.shouldChimeAfterChatFinishes": true,
+  "workbench.preferredHighContrastColorTheme": "Tomorrow Night Blue"
 }
