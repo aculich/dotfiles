@@ -1,0 +1,145 @@
+
+Version:          Cursor 3.8.11 (e56ad3440df06d22ca7501e65fd518e905486ef0, 2026-06-18T01:40:18.333Z)
+OS Version:       Darwin arm64 25.5.0
+CPUs:             Apple M3 Max (14 x 2400)
+Memory (System):  96.00GB (0.08GB free)
+Load (avg):       14, 12, 13
+VM:               0%
+Screen Reader:    yes
+Process Argv:     
+GPU Status:       2d_canvas:                              enabled
+                  direct_rendering_display_compositor:    disabled_off_ok
+                  gpu_compositing:                        enabled
+                  multiple_raster_threads:                enabled_on
+                  opengl:                                 enabled_on
+                  rasterization:                          enabled
+                  raw_draw:                               disabled_off_ok
+                  skia_graphite:                          disabled_off
+                  trees_in_viz:                           disabled_off
+                  video_decode:                           enabled
+                  video_encode:                           enabled
+                  webgl:                                  enabled
+                  webgpu:                                 enabled
+                  webnn:                                  disabled_off
+
+CPU %	Mem MB	   PID	Process
+   28	   295	 86607	cursor main
+    1	    98	 86618	   gpu-process
+    0	     0	 86620	   utility-network-service
+   32	   393	 86622	window [1] (rrid)
+    1	    98	 86705	shared-process
+    0	     0	 86706	fileWatcher [1]
+    0	    98	 86707	mcp-process
+    0	     0	 87108	     node /Users/me/projects/zoom-deeplistening-agents/tools/zoom-mcp-server/src/index.js
+    0	     0	 87360	     uv run --directory /Users/me/tools/google-workspace-tools/upstream/google_workspace_mcp__taylorwilsdon main.py --single-user
+    0	     0	 88124	       /Users/me/tools/google-workspace-tools/upstream/google_workspace_mcp__taylorwilsdon/.venv/bin/python3 main.py --single-user
+    0	   197	 86708	extensionHost [1]
+    0	     0	 87042	     electron-nodejs (server-node.js )
+    0	     0	 86709	extensionHost [1]
+    0	   295	 86710	extensionHost [1]
+    0	   197	 86711	extensionHost [1]
+    0	     0	 86953	     electron-nodejs (gitWorker.js )
+    0	    98	 86712	extensionHost [1]
+    0	    98	 87856	ptyHost
+    0	     0	  6187	     /bin/zsh -il
+    0	     0	  6551	     /bin/zsh -il
+    0	     0	  9900	     /bin/zsh -il
+    0	     0	 10032	     /bin/zsh -il
+    0	     0	 15338	     /bin/zsh -il
+    0	     0	 20858	     /bin/zsh -il
+    0	     0	 34719	     /bin/zsh -il
+    0	     0	 42830	     /bin/zsh -il
+    0	     0	 42899	     /bin/zsh -il
+    0	     0	 45634	     /bin/zsh -il
+    0	     0	 47209	     /bin/zsh -il
+    0	     0	 48095	     /bin/zsh -il
+    0	     0	 48337	     /bin/zsh -il
+    0	     0	 49623	     /bin/zsh -il
+    0	     0	 50218	     /bin/zsh -il
+    0	     0	 52195	     /bin/zsh -il
+    0	     0	 57917	     /bin/zsh -il
+    0	     0	 60226	     /bin/zsh -il
+    0	     0	 60641	     /bin/zsh -il
+    0	     0	 71193	     /bin/zsh -il
+    0	     0	 72476	     /bin/zsh -i
+    0	     0	 82359	     /bin/zsh -il
+    0	     0	 87967	     /bin/zsh -il
+    0	     0	 89788	     /bin/zsh -il
+    0	     0	 92897	     /bin/zsh -i
+    0	     0	 94861	     /bin/zsh -il
+
+Workspace Stats: 
+|  Window (PSO-OBSERVATORY-MANIFEST.md — projects)
+|  Window (THE-OBSERVATORY.md — proposal-studio)
+|  Window (2026-06-19_sync_+_github_613784ff.plan.md — cidr-san-mateo-21elements)
+|  Window (EVOLVING-CONCEPTS-PAPER-STATE.md — perone)
+|  Window (Review: Grant application personnel organization — cidr-org)
+|  Window (mcp.json — storyforward-pushback)
+|  Window (Preview 00-DIRECTION-AND-STRATEGY.md — ern-cpc)
+|  Window (Preview 20260212-next-comment-replies.md — cpc-anti-displacement)
+|  Window (companion-rfp-extracts.md — cidr-sjsu-chrp-policyai)
+|  Window (ACTION-PLAN.md — cidr-cpc-sacog-frc)
+|  Window (developer-knowledge-mcp.md — google-workspace-tools)
+|  Window (REPORT.md — md2googleslides__googleworkspace)
+|  Window (rrid)
+|    Folder (md2googleslides__googleworkspace): 145 files
+|      File types: ts(22) js(21) json(18) map(17) png(11) md(10) yml(4)
+|                  gitignore(2) babelrc(1) cursorindexingignore(1)
+|      Conf files: github-actions(3) package.json(1) tsconfig.json(1)
+|    Folder (cidr-cpc-sacog-frc): 113 files
+|      File types: md(53) docx(7) pdf(6) json(4) txt(2) gitkeep(2) eml(2)
+|                  gitignore(1) TXT(1) VTT(1)
+|      Conf files:
+|    Folder (proposal-studio): 105 files
+|      File types: md(52) json(8) mjs(5) gitignore(2) sh(2)
+|      Conf files: package.json(1)
+|    Folder (cidr-sjsu-chrp-policyai): 392 files
+|      File types: md(191) json(48) docx(35) odt(15) txt(10) py(6) sh(3)
+|                  DS_Store(2) eml(2) gitignore(1)
+|      Conf files:
+|    Folder (cpc-anti-displacement): 806 files
+|      File types: js(108) png(107) md(90) css(50) py(24) docx(18) R(18)
+|                  html(17) Rmd(16) sample(14)
+|      Conf files:
+|    Folder (cidr-san-mateo-21elements): 1766 files
+|      File types: R(438) md(175) png(142) sh(100) js(82) json(68) out(60)
+|                  Rout(52) css(41) html(40)
+|      Conf files: settings.json(1)
+|    Folder (storyforward-pushback): 2855 files
+|      File types: py(1118) pyc(523) md(177) wav(172) json(93) txt(43)
+|                  html(40) pyi(33) jpg(23) typed(22)
+|      Conf files: github-actions(1) package.json(1) dockerfile(1)
+|    Folder (perone): more than 23342 files
+|      File types: py(9915) pyc(2228) csv(1458) json(309) pyi(248) md(241)
+|                  txt(200) pxd(181) xlsx(149) so(118)
+|      Conf files: package.json(2) settings.json(1) makefile(1)
+|    Folder (google-workspace-tools): more than 21313 files
+|      File types: txt(5702) ts(2041) md(1552) py(1283) json(1000) go(680)
+|                  js(583) pyc(446) svg(303) jsx(282)
+|      Conf files: package.json(56) tsconfig.json(21) settings.json(13)
+|                  dockerfile(13) webpack.config.js(8) launch.json(2)
+|                  jsconfig.json(1) tasks.json(1) devcontainer.json(1)
+|                  tslint.json(1) gulp.js(1) project.json(1) makefile(1)
+|    Folder (projects): more than 26664 files
+|      File types: py(4587) pyc(1645) md(1583) ts(987) mo(614) json(468)
+|                  js(438) docx(369) java(297) pyi(275)
+|      Conf files: package.json(42) tsconfig.json(32) settings.json(11)
+|                  dockerfile(7) makefile(6) csproj(4) tasks.json(2)
+|                  project.json(1) devcontainer.json(1) launch.json(1)
+|                  webpack.config.js(1) tslint.json(1) sln(1)
+|    Folder (cidr-org): more than 25055 files
+|      File types: py(3595) jpg(2207) png(1739) css(1366) pyc(1358) map(752)
+|                  js(708) html(421) md(420) pdf(304)
+|      Conf files: settings.json(2) package.json(1)
+|    Folder (ern-cpc): more than 21035 files
+|      File types: ts(3905) json(1895) tsx(1486) js(1349) html(858) md(687)
+|                  bcmap(672) map(624) png(549) properties(442)
+|      Conf files: package.json(262) tsconfig.json(252) dockerfile(27)
+|                  makefile(18) settings.json(9) gulp.js(5)
+|                  jsconfig.json(1)
+|    Folder (rrid): more than 21406 files
+|      File types: pyi(3598) py(3595) json(2882) pyc(2560) js(743) xlsx(239)
+|                  png(213) md(212) docx(179) css(154)
+|      Conf files: package.json(5) makefile(2) settings.json(1)
+
+
