@@ -592,7 +592,22 @@
     "key": "alt+y",
     "command": "emacs-mcx.yankPop",
     "when": "editorFocus && !editorReadonly"
-  },
+},
+{
+	"key": "tab",
+	"command": "extension.vim_tab",
+	"when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert' && editorLangId != 'magit'"
+},
+{
+	"key": "tab",
+	"command": "-extension.vim_tab",
+	"when": "editorTextFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
+},
+{
+	"key": "ctrl+l",
+	"command": "file-browser.stepIn",
+	"when": "inFileBrowser"
+},
   // --- end merged fragment ---
 
 ]
