@@ -1,0 +1,14 @@
+plugin-clerk-clerk
+plugin-cloudflare-cloudflare-bindings
+plugin-cloudflare-cloudflare-builds
+plugin-cloudflare-cloudflare-docs
+plugin-cloudflare-cloudflare-observability
+plugin-compound-engineering-context7
+plugin-context7-plugin-context7
+plugin-deploy-on-aws-awsknowledge
+plugin-deploy-on-aws-awspricing
+plugin-exa-exa
+plugin-granola-granola
+plugin-prisma-Prisma-Local
+plugin-snyk-secure-development-Snyk
+plugin-vercel-vercel

@@ -4,3 +4,6 @@ library/logs
 
 # Machine-generated; commit intentionally with: git add -f observability/inventories/
 observability/inventories/*.json
+
+# Timestamped perf captures from scripts/cursor-perf-report.sh
+observability/perf/run-*/

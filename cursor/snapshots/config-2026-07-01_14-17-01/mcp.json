@@ -1,0 +1,33 @@
+{
+  "mcpServers": {
+    "zoom": {
+      "command": "node",
+      "args": [
+        "/Users/me/projects/zoom-deeplistening-agents/tools/zoom-mcp-server/src/index.js"
+      ],
+      "cwd": "/Users/me/projects/zoom-deeplistening-agents/tools/zoom-mcp-server",
+      "env": {}
+    },
+    "tana": {
+      "url": "https://home.tana.inc/mcp",
+      "headers": {}
+    },
+    "limitless": {
+      "url": "https://api.limitless.ai/mcp",
+      "headers": {}
+    },
+    "google-developer-knowledge": {
+      "url": "https://developerknowledge.googleapis.com/mcp",
+      "headers": {
+        "X-Goog-Api-Key": "AIzaSyDIMrglCnh8XxWE_9qrEulaEPRFD843vAo"
+      }
+    },
+    "google-workspace": {
+      "command": "/Users/me/tools/google-workspace-tools/scripts/run-workspace-mcp.sh",
+      "args": [
+        "--single-user"
+      ],
+      "env": {}
+    }
+  }
+}

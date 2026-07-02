@@ -1,0 +1,34 @@
+{
+  "mcpServers": {
+    "granola": {
+      "url": "https://mcp.granola.ai/mcp"
+    },
+    "zoom": {
+      "command": "node",
+      "args": [
+        "/Users/me/projects/zoom-deeplistening-agents/tools/zoom-mcp-server/src/index.js"
+      ],
+      "cwd": "/Users/me/projects/zoom-deeplistening-agents/tools/zoom-mcp-server",
+      "env": {}
+    },
+    "repomix": {
+      "command": "/opt/homebrew/bin/repomix",
+      "args": ["--mcp"]
+    },
+    "heypresto": {
+      "url": "https://www.heypresto.ai/mcp",
+      "headers": {}
+    },
+    "fireflies": {
+      "command": "npx",
+      "args": ["mcp-remote", "https://api.fireflies.ai/mcp"]
+    },
+    "product-hunt": {
+      "command": "/Users/me/tools/producthunt-quickstart/scripts/run-product-hunt-mcp.sh"
+    },
+    "qmd": {
+      "command": "/Users/me/.local/share/fnm/node-versions/v22.22.0/installation/bin/qmd",
+      "args": ["mcp"]
+    }
+  }
+}

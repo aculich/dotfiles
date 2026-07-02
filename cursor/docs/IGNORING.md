@@ -62,6 +62,8 @@ In **`.vscode/settings.json`** (workspace, folder, or user):
 | `search.exclude` | Quick search and similar; often mirror watcher excludes for artifacts. |
 | `files.exclude` | **Explorer / file tree** only. Hides matching paths in the sidebar. Use only if you are fine not seeing those files without toggling. |
 
+**Dotfiles baseline:** global user settings in [`settings.json`](../settings.json) (symlinked into Cursor User data) include a default `files.watcherExclude` and `search.exclude` for common junk (`node_modules`, venvs, caches, `.specstory`, `upstream/`). Per-repo `.vscode/settings.json` still adds repo-specific paths (`papers/`, `output/`, etc.).
+
 **Multi-root workspaces** (`.code-workspace` with several folders): each root can have its own **`.vscode/settings.json`**; resource settings apply per folder, while shared cross-cutting options often live in the **workspace file**. See [Multi-root Workspaces](https://code.visualstudio.com/docs/editor/multi-root-workspaces) and [MULTIROOT.md](MULTIROOT.md) for search scoping, tasks, and SCM with multiple roots.
 
 Use the same **path families** in watcher and search for venvs, caches, `node_modules`, `dist/`, `build/`, and large reference clones.
