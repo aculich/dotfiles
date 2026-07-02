@@ -1,6 +1,6 @@
 # Cursor skills snapshot
-generated: 2026-07-02T19:51:55Z
-source: /Users/me/.cursor/{skills,skills-cursor}
+generated: 2026-07-02T20:02:58Z
+source: /Users/me/.cursor/{skills,skills-cursor}, /Users/me/.agents/skills
 note: symlinked skills are dereferenced (real content copied into mirror)
 
 ## symlinked skills at snapshot time

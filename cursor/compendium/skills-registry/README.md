@@ -43,4 +43,9 @@ Projects whose `.cursor/` / `.specstory/` / `.cursor/plans` should be snapshotte
 
 `scripts/snapshot-all.sh` reads **`../project-paths.txt`** at the compendium root: each non-comment line is **`slug<TAB>absolute_path`**. Copy from `../project-paths.example.txt`. Keep rows aligned with `project-index.yaml` by convention.
 
+Fill `vendor.yaml` / `authored.yaml` manually for important pins; run **`scripts/discover-skills.py`** (or `snapshot-all-skills.sh`) for a full machine inventory:
+
+- `skills-inventory.json` — structured scan (global + project-local)
+- `skills-inventory.md` — human-readable index
+
 See starter files: `vendor.yaml`, `authored.yaml`, `project-index.yaml` in this directory.

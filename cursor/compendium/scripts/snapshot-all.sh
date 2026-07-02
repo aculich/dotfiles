@@ -3,6 +3,15 @@ set -euo pipefail
 
 ROOT="${CURSOR_COMPENDIUM_ROOT:?Set CURSOR_COMPENDIUM_ROOT}"
 cd "${ROOT}"
+DOTFILES_CURSOR="${DOTFILES_CURSOR:-$HOME/dotfiles/cursor}"
+
+# Global + agents skills mirror and inventory (canonical scripts live in dotfiles/cursor).
+if [[ -x "${DOTFILES_CURSOR}/scripts/snapshot-skills.sh" ]]; then
+  "${DOTFILES_CURSOR}/scripts/snapshot-skills.sh" "${ROOT}/mirrors/skills-snapshots"
+fi
+if [[ -f "${ROOT}/scripts/discover-skills.py" ]]; then
+  python3 "${ROOT}/scripts/discover-skills.py" --compendium-root "${ROOT}"
+fi
 
 # Regenerate project-paths.txt from Cursor storage + disk scan (unless disabled).
 # Set COMPENDIUM_AUTO_DISCOVER=0 to skip.

@@ -1,0 +1,14 @@
+{
+  "name": "sample-next-app",
+  "dependencies": {
+    "next": "^15.0.0",
+    "react": "^19.0.0",
+    "stripe": "^17.0.0",
+    "@sentry/nextjs": "^8.0.0",
+    "posthog-js": "^1.0.0",
+    "openai": "^4.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

@@ -15,8 +15,10 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_CURSOR="$(cd "$SCRIPT_DIR/.." && pwd)"
-DEST="${1:-$REPO_CURSOR/compendium/mirrors/skills-snapshots}"
+COMPENDIUM_ROOT="${CURSOR_COMPENDIUM_ROOT:-$REPO_CURSOR/compendium}"
+DEST="${1:-$COMPENDIUM_ROOT/mirrors/skills-snapshots}"
 CURSOR_DIR="${CURSOR_DIR:-$HOME/.cursor}"
+AGENTS_DIR="${AGENTS_DIR:-$HOME/.agents/skills}"
 
 command -v rsync >/dev/null 2>&1 || { echo "rsync is required" >&2; exit 1; }
 
@@ -33,25 +35,29 @@ RSYNC_EXCLUDES=(
   --exclude '.venv/'
 )
 
-for tree in skills skills-cursor; do
-  src="$CURSOR_DIR/$tree"
+mirror_tree() {
+  local src="$1" dest_name="$2"
   if [[ ! -d "$src" ]]; then
     echo "skip: $src not found" >&2
-    continue
+    return 0
   fi
-  rsync -aL --delete "${RSYNC_EXCLUDES[@]}" "$src/" "$DEST/$tree/"
-  echo "mirrored: $src -> $DEST/$tree" >&2
-done
+  rsync -aL --delete "${RSYNC_EXCLUDES[@]}" "$src/" "$DEST/$dest_name/"
+  echo "mirrored: $src -> $DEST/$dest_name" >&2
+}
+
+mirror_tree "$CURSOR_DIR/skills" "skills"
+mirror_tree "$CURSOR_DIR/skills-cursor" "skills-cursor"
+mirror_tree "$AGENTS_DIR" "agents-skills"
 
 # Provenance / quick-diff manifest, including which entries were symlinks.
 {
   echo "# Cursor skills snapshot"
   echo "generated: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
-  echo "source: $CURSOR_DIR/{skills,skills-cursor}"
+  echo "source: $CURSOR_DIR/{skills,skills-cursor}, $AGENTS_DIR"
   echo "note: symlinked skills are dereferenced (real content copied into mirror)"
   echo
   echo "## symlinked skills at snapshot time"
-  find "$CURSOR_DIR/skills" "$CURSOR_DIR/skills-cursor" -maxdepth 1 -type l \
+  find "$CURSOR_DIR/skills" "$CURSOR_DIR/skills-cursor" "$AGENTS_DIR" -maxdepth 1 -type l \
     -exec sh -c 'printf "%s -> %s\n" "$1" "$(readlink "$1")"' _ {} \; 2>/dev/null | sort
 } > "$DEST/MANIFEST.txt"
 

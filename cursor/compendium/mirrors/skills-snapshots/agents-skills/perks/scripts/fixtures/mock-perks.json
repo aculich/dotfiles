@@ -1,0 +1,79 @@
+{
+  "name": "MakerPerks",
+  "description": "Mock perks dataset for dry-run tests",
+  "count": 6,
+  "programs": [
+    {
+      "slug": "aws/aws-activate",
+      "title": "AWS Activate",
+      "provider": "aws",
+      "url": "https://aws.amazon.com/startups/credits",
+      "audience": ["startup"],
+      "tags": ["cloud"],
+      "value_type": "credits",
+      "max_value": 100000,
+      "value_display": "Up to $100,000",
+      "aggregator": false
+    },
+    {
+      "slug": "vercel/vercel-for-open-source",
+      "title": "Vercel Pro for Open Source",
+      "provider": "vercel",
+      "url": "https://vercel.com/guides/can-i-get-vercel-pro-for-open-source",
+      "audience": ["oss", "startup"],
+      "tags": ["cloud", "oss"],
+      "value_type": "free_tier",
+      "max_value": 240,
+      "value_display": "Free / ~$240 value",
+      "aggregator": false
+    },
+    {
+      "slug": "posthog/posthog-for-startups",
+      "title": "PostHog for Startups",
+      "provider": "posthog",
+      "url": "https://posthog.com/startups",
+      "audience": ["startup"],
+      "tags": ["dev tools", "analytics"],
+      "value_type": "credits",
+      "max_value": 50000,
+      "value_display": "Up to $50,000",
+      "aggregator": false
+    },
+    {
+      "slug": "ycombinator/y-combinator",
+      "title": "Y Combinator",
+      "provider": "ycombinator",
+      "url": "https://www.ycombinator.com/",
+      "audience": ["startup"],
+      "tags": ["cloud"],
+      "value_type": "credits",
+      "max_value": 500000,
+      "value_display": "Up to $500,000",
+      "aggregator": true
+    },
+    {
+      "slug": "openai/openai-data-sharing",
+      "title": "OpenAI Data Sharing Program",
+      "provider": "openai",
+      "url": "https://openai.com/",
+      "audience": ["startup", "indie"],
+      "tags": ["ai", "llm"],
+      "value_type": "credits",
+      "max_value": 2000,
+      "value_display": "Up to $2,000",
+      "aggregator": false
+    },
+    {
+      "slug": "gcp/gcp-300",
+      "title": "Google Cloud $300 Trial",
+      "provider": "gcp",
+      "url": "https://cloud.google.com/free",
+      "audience": ["startup", "indie"],
+      "tags": ["cloud", "ai"],
+      "value_type": "credits",
+      "max_value": 300,
+      "value_display": "Up to $300",
+      "aggregator": false
+    }
+  ]
+}
