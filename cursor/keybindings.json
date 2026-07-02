@@ -82,9 +82,14 @@
     "command": "workbench.action.navigateUp",
     "when": "!terminalFocus && !codeActionMenuVisible && !inQuickOpen && !suggestWidgetVisible && !parameterHintsVisible",
   },
+  // WORKAROUND (Cursor 3.10.5): navigateRight throws "Unknown part
+  // workbench.parts.activitybar" under the unified-sidebar layout.
+  // focusRightGroup only moves between editor groups (no editor->sidebar/panel
+  // hop) but never touches the buggy part lookup.
+  // Details: cursor/docs/WORKAROUND-ctrl-l-activitybar.md
   {
     "key": "ctrl+l",
-    "command": "workbench.action.navigateRight",
+    "command": "workbench.action.focusRightGroup",
     "when": "!terminalFocus && !codeActionMenuVisible && !inQuickOpen && !suggestWidgetVisible && !parameterHintsVisible && !isInDiffEditor",
   },
 
@@ -105,8 +110,9 @@
     "when": "isInDiffEditor && isInDiffLeftEditor",
   },
   {
+    // Same activitybar workaround as above; see WORKAROUND-ctrl-l-activitybar.md
     "key": "ctrl+l",
-    "command": "workbench.action.navigateRight",
+    "command": "workbench.action.focusRightGroup",
     "when": "isInDiffEditor && !isInDiffLeftEditor",
   },
 
@@ -283,11 +289,9 @@
   //     "command": "file-browser.stepIn",
   //     "when": "inFileBrowser"
   // },
-  {
-    "key": "ctrl+l",
-    "when": "terminalFocus",
-    "command": "-workbench.action.showActivityBar",
-  },
+  // Removed dead binding: "-workbench.action.showActivityBar" (terminalFocus).
+  // That command no longer exists in Cursor 3.10.5, so the removal was a no-op.
+  // See cursor/docs/WORKAROUND-ctrl-l-activitybar.md
 
   // https://docs.cursor.com/features/generate-commit-message
   {
