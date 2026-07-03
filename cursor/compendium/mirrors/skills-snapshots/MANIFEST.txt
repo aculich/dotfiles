@@ -1,5 +1,4 @@
 # Cursor skills snapshot
-generated: 2026-07-03T04:47:33Z
 source: /Users/me/.cursor/{skills,skills-cursor}, /Users/me/.agents/skills
 note: symlinked skills are dereferenced (real content copied into mirror)
 
