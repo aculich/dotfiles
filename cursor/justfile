@@ -1,0 +1,158 @@
+# Cursor config + skills management recipes
+#
+# Run `just` (or `just help`) for the list. Requires: bash, git, rsync, python3.
+# Optional: gh (privacy checks), just (obviously).
+
+set shell := ["bash", "-eu", "-o", "pipefail", "-c"]
+
+cursor_dir := justfile_directory()
+dotfiles   := parent_directory(cursor_dir)
+compendium := env_var_or_default("CURSOR_COMPENDIUM_ROOT", cursor_dir / "compendium")
+scripts    := cursor_dir / "scripts"
+mirror     := cursor_dir / "compendium/mirrors/skills-snapshots"
+inventory  := cursor_dir / "compendium/skills-registry/skills-inventory.json"
+
+# List available recipes
+default:
+    @just --list --unsorted
+
+alias help := default
+
+# ------------------------------------------------------------------
+# Status
+# ------------------------------------------------------------------
+
+# High-level status of all cursor-related tracking (git, skills, remotes)
+status: git-status skill-status remotes
+    @echo ""
+    @echo "Tip: 'just skill-backup' to snapshot+commit global skills."
+
+# Git status for dotfiles and the sibling compendium repo
+git-status:
+    @echo "== git: dotfiles ({{dotfiles}}) =="
+    @git -C "{{dotfiles}}" status --short --branch | head -20 || true
+    @echo ""
+    @echo "== git: compendium ({{compendium}}) =="
+    @if [[ -d "{{compendium}}/.git" ]]; then git -C "{{compendium}}" status --short --branch | head -20; else echo "(no compendium git repo at {{compendium}})"; fi
+
+# Skills counts (live vs mirror) and last snapshot time
+skill-status:
+    @echo "== skills =="
+    @printf "live   ~/.cursor/skills        : %s\n" "$(ls -1 ~/.cursor/skills 2>/dev/null | wc -l | tr -d ' ')"
+    @printf "live   ~/.cursor/skills-cursor : %s\n" "$(ls -1 ~/.cursor/skills-cursor 2>/dev/null | wc -l | tr -d ' ')"
+    @printf "live   ~/.agents/skills        : %s\n" "$(ls -1 ~/.agents/skills 2>/dev/null | wc -l | tr -d ' ')"
+    @printf "mirror skills                  : %s\n" "$(ls -1 '{{mirror}}/skills' 2>/dev/null | wc -l | tr -d ' ')"
+    @printf "mirror skills-cursor           : %s\n" "$(ls -1 '{{mirror}}/skills-cursor' 2>/dev/null | wc -l | tr -d ' ')"
+    @printf "mirror agents-skills           : %s\n" "$(ls -1 '{{mirror}}/agents-skills' 2>/dev/null | wc -l | tr -d ' ')"
+    @if [[ -f "{{inventory}}" ]]; then printf "inventory generated            : %s\n" "$(python3 -c 'import json;print(json.load(open("{{inventory}}"))["generated"])' 2>/dev/null || echo unknown)"; else echo "inventory                      : (none; run 'just skill-discover')"; fi
+    @printf "last mirror commit             : %s\n" "$(git -C "{{dotfiles}}" log -1 --format='%cs %h %s' -- cursor/compendium/mirrors/skills-snapshots 2>/dev/null || echo none)"
+
+# Show live-vs-mirror drift (which skills changed since last backup)
+skill-drift:
+    #!/usr/bin/env bash
+    set -uo pipefail
+    echo "== drift: live vs mirror (rsync dry-run; empty = in sync) =="
+    excl=(--exclude '.git/' --exclude '__pycache__/' --exclude '*.pyc' --exclude '.DS_Store' --exclude 'node_modules/')
+    check() {
+      local live="$1" dst="$2"
+      [[ -d "$live" ]] || return 0
+      echo "-- $dst --"
+      rsync -rniL --delete "${excl[@]}" "$live/" "{{mirror}}/$dst/" 2>/dev/null | head -30
+    }
+    check ~/.cursor/skills        skills
+    check ~/.cursor/skills-cursor skills-cursor
+    check ~/.agents/skills        agents-skills
+
+# Verify GitHub remotes for skills/compendium are private
+remotes:
+    @echo "== remote privacy =="
+    @"{{scripts}}/verify-private-remotes.sh" || true
+
+alias verify-private := remotes
+
+# ------------------------------------------------------------------
+# Backup
+# ------------------------------------------------------------------
+
+# Mirror global skills (~/.cursor + ~/.agents) and regenerate inventory (into dotfiles)
+skill-snapshot:
+    @CURSOR_COMPENDIUM_ROOT="{{cursor_dir}}/compendium" "{{scripts}}/snapshot-all-skills.sh"
+
+# Snapshot global skills AND commit the mirror+inventory in dotfiles (with full inventory scan)
+skill-backup: skill-snapshot _skill-commit
+
+# Fast global-skills backup: mirror + commit, skipping the slow project inventory scan
+skill-backup-fast:
+    @SKILL_DISCOVER=0 CURSOR_COMPENDIUM_ROOT="{{cursor_dir}}/compendium" "{{scripts}}/snapshot-all-skills.sh"
+    @just _skill-commit
+
+# (internal) stage the mirror+inventory and commit if changed
+_skill-commit:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    cd "{{dotfiles}}"
+    git add cursor/compendium/mirrors/skills-snapshots cursor/compendium/skills-registry/skills-inventory.json cursor/compendium/skills-registry/skills-inventory.md 2>/dev/null || true
+    if git diff --cached --quiet; then
+      echo "No skill changes to commit."
+    else
+      git commit -m "chore(skills): snapshot $(date +%Y-%m-%d)"
+      echo "Committed skill snapshot to dotfiles (not pushed)."
+    fi
+
+# Full backup including project-local .cursor/skills via the compendium (slow)
+skill-backup-full:
+    @SNAPSHOT_PROJECT_SKILLS=1 CURSOR_COMPENDIUM_ROOT="{{compendium}}" "{{scripts}}/snapshot-all-skills.sh"
+    @echo "Review and commit in {{compendium}} (and dotfiles if mirror changed)."
+
+# Regenerate the skills inventory only (no mirror copy)
+skill-discover:
+    @python3 "{{cursor_dir}}/compendium/scripts/discover-skills.py" --compendium-root "{{cursor_dir}}/compendium"
+
+# Snapshot Cursor config (mcp/settings/extensions) into snapshots/
+config-snapshot:
+    @"{{scripts}}/snapshot-cursor-config.sh"
+
+# ------------------------------------------------------------------
+# Automation
+# ------------------------------------------------------------------
+
+# Install a daily launchd agent that runs `just skill-backup` at 06:15
+install-daily:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    plist=~/Library/LaunchAgents/com.user.cursor-skill-backup.plist
+    just_bin="$(command -v just)"
+    cat > "$plist" <<PLIST
+    <?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+    <plist version="1.0">
+    <dict>
+      <key>Label</key><string>com.user.cursor-skill-backup</string>
+      <key>ProgramArguments</key>
+      <array>
+        <string>${just_bin}</string>
+        <string>--justfile</string>
+        <string>{{justfile()}}</string>
+        <string>skill-backup</string>
+      </array>
+      <key>StartCalendarInterval</key>
+      <dict><key>Hour</key><integer>6</integer><key>Minute</key><integer>15</integer></dict>
+      <key>StandardOutPath</key><string>/tmp/cursor-skill-backup.log</string>
+      <key>StandardErrorPath</key><string>/tmp/cursor-skill-backup.err</string>
+    </dict>
+    </plist>
+    PLIST
+    launchctl bootout "gui/$(id -u)/com.user.cursor-skill-backup" 2>/dev/null || true
+    launchctl bootstrap "gui/$(id -u)" "$plist"
+    echo "Installed daily skill-backup at 06:15 -> $plist"
+    echo "Logs: /tmp/cursor-skill-backup.log (.err)"
+
+# Remove the daily launchd agent
+uninstall-daily:
+    @launchctl bootout "gui/$(id -u)/com.user.cursor-skill-backup" 2>/dev/null || true
+    @rm -f ~/Library/LaunchAgents/com.user.cursor-skill-backup.plist
+    @echo "Removed daily skill-backup agent."
+
+# Show status of the daily launchd agent
+daily-status:
+    @launchctl print "gui/$(id -u)/com.user.cursor-skill-backup" 2>/dev/null | grep -E "state|program|pid" || echo "not installed (run 'just install-daily')"

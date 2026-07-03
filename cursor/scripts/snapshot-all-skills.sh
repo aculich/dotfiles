@@ -24,12 +24,16 @@ echo "==> verify remotes are private" >&2
 echo "==> mirror global ~/.cursor/skills + skills-cursor + ~/.agents/skills" >&2
 "$SCRIPT_DIR/snapshot-skills.sh" "$COMPENDIUM_ROOT/mirrors/skills-snapshots"
 
-echo "==> discover skills inventory" >&2
-DISCOVER_PY="$COMPENDIUM_ROOT/scripts/discover-skills.py"
-if [[ ! -f "$DISCOVER_PY" ]]; then
-  DISCOVER_PY="$DOTFILES_CURSOR/compendium/scripts/discover-skills.py"
+if [[ "${SKILL_DISCOVER:-1}" == "1" ]]; then
+  echo "==> discover skills inventory (set SKILL_DISCOVER=0 to skip the slow project scan)" >&2
+  DISCOVER_PY="$COMPENDIUM_ROOT/scripts/discover-skills.py"
+  if [[ ! -f "$DISCOVER_PY" ]]; then
+    DISCOVER_PY="$DOTFILES_CURSOR/compendium/scripts/discover-skills.py"
+  fi
+  python3 "$DISCOVER_PY" --compendium-root "$COMPENDIUM_ROOT"
+else
+  echo "==> skipping inventory discovery (SKILL_DISCOVER=0)" >&2
 fi
-python3 "$DISCOVER_PY" --compendium-root "$COMPENDIUM_ROOT"
 
 if [[ -f "$COMPENDIUM_ROOT/scripts/snapshot-all.sh" && "${SNAPSHOT_PROJECT_SKILLS:-0}" == "1" ]]; then
   echo "==> snapshot project .cursor/ trees (including project-local skills)" >&2

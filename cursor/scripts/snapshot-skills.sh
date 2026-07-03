@@ -50,9 +50,10 @@ mirror_tree "$CURSOR_DIR/skills-cursor" "skills-cursor"
 mirror_tree "$AGENTS_DIR" "agents-skills"
 
 # Provenance / quick-diff manifest, including which entries were symlinks.
+# No timestamp here on purpose: git commit date records "when"; keeping the file
+# content stable means backups only commit when skill content actually changes.
 {
   echo "# Cursor skills snapshot"
-  echo "generated: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
   echo "source: $CURSOR_DIR/{skills,skills-cursor}, $AGENTS_DIR"
   echo "note: symlinked skills are dereferenced (real content copied into mirror)"
   echo

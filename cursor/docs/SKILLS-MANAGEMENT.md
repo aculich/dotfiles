@@ -47,6 +47,34 @@ export CURSOR_COMPENDIUM_ROOT=/Users/me/src/dotfiles-cursor-compendium
 
 Fill `vendor.yaml` / `authored.yaml` manually for important pins; run discovery for the full machine picture.
 
+## justfile recipes (recommended entry point)
+
+From `cursor/`, run `just` to see all recipes. Common ones:
+
+| Recipe | What it does |
+| --- | --- |
+| `just status` | Git status (dotfiles + compendium), skill counts, remote privacy |
+| `just skill-status` | Live-vs-mirror counts, inventory time, last mirror commit |
+| `just skill-drift` | rsync dry-run of live skills vs mirror (what changed) |
+| `just skill-backup-fast` | Mirror global skills + commit (skips slow project scan; ~2s) |
+| `just skill-backup` | Full: mirror + regenerate inventory (project scan ~3min) + commit |
+| `just skill-backup-full` | Also mirror project-local `.cursor/skills` via the compendium |
+| `just skill-discover` | Regenerate `skills-inventory.{json,md}` only |
+| `just remotes` | Verify GitHub remotes are private |
+| `just config-snapshot` | Snapshot mcp/settings/extensions into `snapshots/` |
+| `just install-daily` | launchd agent running `just skill-backup` daily at 06:15 |
+| `just uninstall-daily` / `just daily-status` | Manage the daily agent |
+
+## Keeping regular snapshots
+
+Pick one (they compose):
+
+1. **Manual, frequent:** `just skill-backup-fast` after adding/editing skills (commits only when content changed — no-op otherwise).
+2. **Automated daily (global skills):** `just install-daily` — launchd runs `just skill-backup` at 06:15, commits to dotfiles (local; not pushed).
+3. **Automated daily (project-local + plans):** the compendium launchd example (`compendium/launchd/`) runs `snapshot-all.sh` and commits to the sibling repo. `snapshot-all.sh` now also refreshes the global skills mirror.
+
+Commits are never pushed automatically. Run `just remotes` then `git push` when you want to sync.
+
 ## Day-to-day workflow
 
 ```bash
