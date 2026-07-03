@@ -10,23 +10,21 @@ This reference expands the workflow in `SKILL.md`.
 ~/tools/<tool>-quickstart/
 ├── upstream/
 │   └── <org>__<repo>/
-├── background/
+├── docs/
 │   ├── TECHSTACK.md
 │   ├── ARCHITECTURE.md
 │   ├── RESEARCH_KEYWORDS.md
-│   ├── LANDSCAPE.md
-│   ├── USECASES.md
-│   ├── UPSTREAM_PIN.txt
 │   ├── project-scan-full.json
 │   └── parallel-cache/
+├── design/
+│   ├── LANDSCAPE.md
+│   └── USECASES.md
 ├── EXECSUMMARY.md
 ├── PRAXIS.md
 ├── TOOLBOX.md
 ├── META.md
 └── .gitignore
 ```
-
-**Legacy layout (pre-2026-07):** `docs/` + `design/` — migrate to `background/` when editing an older quickstart.
 
 ### In-place bootstrap (existing `~/tools/<name>/`)
 
@@ -47,28 +45,14 @@ Do not require `upstream/<org>__<repo>/` at the root unless the repo is single-t
 
 1. `.gitignore` and repo hygiene.
 2. Install + smoke tests (`--help`, `version`) — or inventory existing subprojects + manifests.
-3. Write `background/UPSTREAM_PIN.txt` (commit, version, date).
-4. `EXECSUMMARY.md` (purpose, audience, where it fits/does not fit).
-5. `PRAXIS.md` (daily workflow and commands).
-6. `background/TECHSTACK.md` and `background/ARCHITECTURE.md`.
-7. Keyword matrix and landscape searches.
-8. **`npx skills find`** (find-skills): cache JSON → `TOOLBOX.md` (install user-selected skills project-local).
-9. `background/LANDSCAPE.md` and `background/USECASES.md` (include agent-skills landscape + pointer to `TOOLBOX.md`).
-10. **Canonical upstream verification** on all cited repos (see SKILL.md).
-11. `META.md`.
-12. Commit.
-13. Offer tiered follow-up bootstraps for landscape alternatives.
-
-### UPSTREAM_PIN.txt template
-
-```text
-repo: <org>/<repo>
-url: https://github.com/<org>/<repo>
-commit: <full-sha>
-version: <from pyproject/package.json if present>
-pinned: YYYY-MM-DD
-clone_path: upstream/<org>__<repo>
-```
+3. `EXECSUMMARY.md` (purpose, audience, where it fits/does not fit).
+4. `PRAXIS.md` (daily workflow and commands).
+5. `TECHSTACK.md` and `ARCHITECTURE.md`.
+6. Keyword matrix and landscape searches.
+7. **`npx skills find`** (find-skills): cache JSON → `TOOLBOX.md` (install user-selected skills project-local).
+8. `LANDSCAPE.md` and `USECASES.md` (include agent-skills landscape + pointer to `TOOLBOX.md`).
+9. `META.md`.
+10. Commit.
 
 ### TOOLBOX.md template (sections)
 
@@ -79,33 +63,6 @@ clone_path: upstream/<org>__<repo>
 5. **Relevant skills elsewhere** — `~/.cursor/skills/`, `~/.agents/skills/`, MCP plugins
 6. **Non-skill tooling** — CLIs, browser steps
 7. **Maintenance** — `npx skills check` / `update`
-
-## Canonical upstream verification (detail)
-
-Run for every GitHub URL in `background/LANDSCAPE.md` Sources and compatibility matrix.
-
-```bash
-gh api repos/<owner>/<repo> --jq '{fork, parent: .parent.full_name, stars: .stargazers_count, pushed_at, archived}'
-```
-
-| Signal | Action |
-| --- | --- |
-| `fork: true` | Switch citation to `parent.full_name` unless fork is intentionally ahead |
-| Same repo name, different owner, 10x+ star gap | Prefer higher-star canonical org |
-| `archived: true` on upstream | Note in LANDSCAPE; may cite active fork with justification |
-| 0 stars, unknown owner | Do not cite without verification |
-
-Record verification in META or a brief note in LANDSCAPE Sources when a non-obvious choice was made.
-
-## Post-bootstrap alternatives follow-up (detail)
-
-Extract peer tools from `background/LANDSCAPE.md` compatibility matrix and narrative research. Present tiers via structured question:
-
-- **Tier 1:** direct competitors or “likely better” by activity/fit — default recommendation to bootstrap
-- **Tier 2:** complements (orchestrator pairs, adjacent stack layers)
-- **Tier 3:** long tail from search — optional batch
-
-If user selects items, re-invoke this skill with `/tools-quickstart-bootstrap <url>` for each.
 
 ## Dual-tool orchestrator pattern
 
@@ -121,7 +78,7 @@ Recommended shared repo layout:
 
 ```text
 ~/tools/<shared-stack-repo>/
-├── background/
+├── docs/
 │   ├── INTEGRATION_ARCHITECTURE.md
 │   ├── SELF_HOSTING_PLAYBOOK.md
 │   └── INTEROP_MATRIX.md
@@ -138,7 +95,6 @@ Dual-tool checkpoints:
 - Validate each tool independently before linking.
 - Define input/output boundaries before writing orchestration scripts.
 - Track licensing/deployment posture per tool and for the combined stack.
-- Verify canonical upstream for both tools and cited integration peers.
 - Commit each repo independently in logical batches.
 
 ## Canonical section checklist
@@ -163,30 +119,29 @@ Dual-tool checkpoints:
 - Deployment stance
 - Verification notes
 
-### TECHSTACK (background/)
+### TECHSTACK
 
 - Runtime and package manager
 - Dependency graph
 - Provider surface
 - Practical implications
 
-### ARCHITECTURE (background/)
+### ARCHITECTURE
 
 - Mermaid system diagram
 - Layer responsibilities
 - Data/control flow
 - Why this architecture works
 
-### LANDSCAPE (background/)
+### LANDSCAPE
 
 - Concept lens
 - Component lens
 - Narrative post angles
 - Builder post angles
-- Sources (canonical upstream URLs only, unless fork justified)
-- Raw cache pointers
+- Sources and raw cache pointers
 
-### USECASES (background/)
+### USECASES
 
 - Upstream-stated use cases
 - Local-context use cases
@@ -203,7 +158,6 @@ Dual-tool checkpoints:
 ## Quality bar
 
 - Keep claims factual and cited where external.
-- Cite canonical upstream repos; never mirror/fork URLs without justification.
 - Keep docs concise and navigable.
 - Separate observed facts from interpretation.
 - Prefer reproducible commands over prose-only guidance.
