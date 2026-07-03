@@ -1,10 +1,10 @@
 # Skills you author. Symlink from ~/.cursor/skills/<id> to agent-skills monorepo via npx skills.
 
 - id: agent-skills-monorepo
-  repo: ~/projects/agent-skills
+  repo: git@github.com:aculich/agent-skills.git
   local_path: ~/projects/agent-skills/skills/.curated
   compendium_mirror: mirrors/skills-snapshots/skills
-  notes: Canonical source; sync with agent-skills/scripts/sync.sh
+  notes: Install via agent-skills/scripts/sync.sh
 
 - id: envisioning-suite
   repo: git@github.com:aculich/envisioning-skills-suite.git
