@@ -1,12 +1,29 @@
-# Example: add one entry per third-party skill or cached bundle you track.
-# Replace with your real paths (do not commit secrets).
-#
-# - id: example-vendor-skill
-#   kind: path
-#   source: https://example.com/skill-repo
-#   installed_path: /Users/me/.cursor/skills/example-vendor-skill
-#   license: MIT
-#   pin: main@abc1234
-#   notes: Installed manually from upstream
+# Third-party or cached skills — inventory only; do not commit vendor trees into agent-skills.
 
-[]
+- id: datacloud-gcp-pack
+  kind: path
+  source: ~/.cursor/skills/.datacloud_skills_manifest
+  installed_path: ~/.cursor/skills/
+  license: unknown
+  pin: bundleChecksum from manifest
+  notes: GCP/data skills; see agent-skills/registry/vendor.yaml for full list
+
+- id: embedded-wip-voicegen
+  kind: path
+  source: ~/projects/peeq-voicegen-audiocast/skills/
+  installed_path: ~/.cursor/skills/
+  license: unknown
+  notes: wip-distill, wip-harvest, wip-publish symlinks
+
+- id: embedded-cidr-letterhead
+  kind: path
+  source: ~/projects/cidr-org/library__cidrlab/.cursor/skills/cidr-letterhead
+  installed_path: ~/.cursor/skills/cidr-letterhead
+  license: unknown
+
+- id: cursor-managed
+  kind: cursor-plugin-cache
+  source: cursor-built-in
+  installed_path: ~/.cursor/skills-cursor/
+  license: unknown
+  notes: Snapshot via snapshot-skills.sh

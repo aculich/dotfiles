@@ -1,8 +1,12 @@
-# Skills you author. Prefer symlink from ~/.cursor/skills/<id> to a private repo checkout.
-#
-# - id: my-bootstrap-skill
-#   repo: git@github.com:you/my-agent-skills.git
-#   local_path: /Users/me/.cursor/skills/bootstrap-tool-config-repo
-#   compendium_mirror: mirrors/skills-snapshots/bootstrap-tool-config-repo
+# Skills you author. Symlink from ~/.cursor/skills/<id> to agent-skills monorepo via npx skills.
 
-[]
+- id: agent-skills-monorepo
+  repo: ~/projects/agent-skills
+  local_path: ~/projects/agent-skills/skills/.curated
+  compendium_mirror: mirrors/skills-snapshots/skills
+  notes: Canonical source; sync with agent-skills/scripts/sync.sh
+
+- id: envisioning-suite
+  repo: git@github.com:aculich/envisioning-skills-suite.git
+  local_path: ~/projects/envisioning-skills-suite
+  notes: Install via npx skills add ~/projects/envisioning-skills-suite

@@ -1,26 +1,32 @@
 #!/usr/bin/env python3
 """
-Discover Cursor / Agents skills across global and project locations.
+Discover agent skills across global and project locations.
 
-Writes under CURSOR_COMPENDIUM_ROOT (or --compendium-root):
-  - skills-registry/skills-inventory.json
-  - skills-registry/skills-inventory.md
+Writes inventory JSON + markdown under compendium or agent-skills registry:
+  - skills-registry/skills-inventory.json  (dotfiles compendium)
+  - registry/skills-inventory.json         (agent-skills monorepo, with --registry-root)
 
-Does not install or mirror skills; run snapshot-skills.sh and snapshot-all.sh for backups.
+Does not install or mirror skills; run snapshot-skills.sh for backups.
 """
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import re
 import subprocess
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
 HOME = Path.home()
 CURSOR_DIR = HOME / ".cursor"
+CLAUDE_DIR = HOME / ".claude"
+CODEX_DIR = HOME / ".codex"
 AGENTS_DIR = HOME / ".agents" / "skills"
+AGENT_SKILLS_MONOREPO = HOME / "projects" / "agent-skills"
+
 SCAN_ROOTS = [
     HOME / "projects",
     HOME / "tools",
@@ -30,8 +36,80 @@ SCAN_ROOTS = [
 GLOBAL_TREES = {
     "cursor-user": CURSOR_DIR / "skills",
     "cursor-managed": CURSOR_DIR / "skills-cursor",
+    "claude-user": CLAUDE_DIR / "skills",
+    "codex-user": CODEX_DIR / "skills",
     "agents": AGENTS_DIR,
 }
+
+# GCP/datacloud vendor pack (from ~/.cursor/skills/.datacloud_skills_manifest)
+VENDOR_SKILL_IDS = frozenset(
+    {
+        "bigquery-data-transfer-service",
+        "dataform-bigquery",
+        "dbt-bigquery",
+        "discovering-gcp-data-assets",
+        "gcloud-auth-verification",
+        "gcp-composer-troubleshooting",
+        "gcp-data-pipelines",
+        "gcp-dataflow",
+        "gcp-pipeline-orchestration",
+        "gcp-pipeline-resource-provisioning",
+        "gcp-spark",
+        "managing-python-dependencies",
+        "ml-best-practices",
+        "notebook-guidance",
+        "building-data-apps",
+        "data-autocleaning",
+        "developing-with-bigquery",
+    }
+)
+
+# Known product-embedded symlinks (canonical home is another repo)
+EMBEDDED_SKILL_IDS = frozenset(
+    {
+        "wip-distill",
+        "wip-harvest",
+        "wip-publish",
+        "cidr-letterhead",
+    }
+)
+
+# Skills authored in agent-skills monorepo (curated tier)
+AUTHORED_SKILL_IDS = frozenset(
+    {
+        "accidental-data-loss-prevention",
+        "adhd-daily-planner",
+        "adhdev-engineering-partnership",
+        "bootstrap-new-project",
+        "bootstrap-tool-config-repo",
+        "bootstrap-umbrella-client-project",
+        "change-world-critique-quick",
+        "change-world-critique-quick-full",
+        "cidr-bootstrap-project",
+        "compendium-discover-projects",
+        "context-engineering",
+        "deeplistening-method-synthesis",
+        "deeplistening-session-analysis",
+        "fireflies-meeting-export",
+        "limitless-takeout-search",
+        "limitless-takeout-update",
+        "luminary-tech-radar",
+        "meeting-sync",
+        "meeting-sync-and-synthesis",
+        "process-umbrella-incoming",
+        "project-management-guru-adhd",
+        "reflexive-method-authoring-loop",
+        "skill-repair",
+        "specstory-guard",
+        "specstory-link-trail",
+        "specstory-organize",
+        "specstory-project-stats",
+        "specstory-session-summary",
+        "specstory-yak",
+        "tools-quickstart-bootstrap",
+        "op-credentials",
+    }
+)
 
 
 def slug_from_path(path: Path) -> str:
@@ -50,8 +128,6 @@ def slug_from_path(path: Path) -> str:
     except (OSError, subprocess.TimeoutExpired):
         pass
     digest = path.as_posix().encode("utf-8")
-    import hashlib
-
     return f"path-{hashlib.sha256(digest).hexdigest()[:12]}"
 
 
@@ -59,21 +135,120 @@ def skill_name(skill_md: Path) -> str:
     return skill_md.parent.name
 
 
-def classify_global_entry(skill_dir: Path) -> dict:
+def load_vendor_manifest() -> set[str]:
+    manifest_path = CURSOR_DIR / "skills" / ".datacloud_skills_manifest"
+    if not manifest_path.is_file():
+        return set(VENDOR_SKILL_IDS)
+    try:
+        data = json.loads(manifest_path.read_text(encoding="utf-8"))
+        skills = set(data.get("skills", {}).keys())
+        return skills | VENDOR_SKILL_IDS
+    except (json.JSONDecodeError, OSError):
+        return set(VENDOR_SKILL_IDS)
+
+
+def parse_skill_frontmatter(skill_dir: Path) -> dict:
+    skill_md = skill_dir / "SKILL.md"
     resolved = skill_dir.resolve()
+    if not skill_md.exists():
+        skill_md = resolved / "SKILL.md"
+    if not skill_md.is_file():
+        return {}
+    text = skill_md.read_text(encoding="utf-8", errors="replace")
+    if not text.startswith("---"):
+        return {}
+    end = text.find("\n---", 3)
+    if end == -1:
+        return {}
+    block = text[3:end]
+    meta: dict = {}
+    for line in block.splitlines():
+        if ":" not in line:
+            continue
+        key, _, val = line.partition(":")
+        meta[key.strip()] = val.strip().strip('"').strip("'")
+    return meta
+
+
+def monorepo_lifecycle(skill_id: str, monorepo: Path) -> str | None:
+    if not monorepo.is_dir():
+        return None
+    if (monorepo / "skills" / ".experimental" / skill_id).is_dir():
+        return "experimental"
+    if (monorepo / "skills" / ".curated" / skill_id).is_dir():
+        return "curated"
+    if (monorepo / "skills" / skill_id).is_dir():
+        return "curated"
+    return None
+
+
+def classify_skill(
+    skill_id: str,
+    skill_dir: Path,
+    tier: str,
+    vendor_ids: set[str],
+    monorepo: Path,
+) -> dict:
     is_symlink = skill_dir.is_symlink()
+    resolved = skill_dir.resolve()
+    meta = parse_skill_frontmatter(skill_dir)
+    internal = meta.get("metadata", "").find("internal: true") != -1 or (
+        "internal: true" in meta.get("description", "")
+    )
+    # Check YAML metadata.internal properly
+    skill_md = skill_dir / "SKILL.md"
+    if not skill_md.exists():
+        skill_md = resolved / "SKILL.md"
+    if skill_md.is_file():
+        raw = skill_md.read_text(encoding="utf-8", errors="replace")
+        if "internal: true" in raw.split("---")[1] if raw.startswith("---") else raw:
+            internal = True
+
+    lifecycle = monorepo_lifecycle(skill_id, monorepo)
+
+    if skill_id in EMBEDDED_SKILL_IDS or is_symlink:
+        classification = "embedded"
+    elif skill_id in vendor_ids and skill_id not in AUTHORED_SKILL_IDS:
+        classification = "vendor"
+    elif lifecycle == "experimental" or internal:
+        classification = "experimental"
+    elif skill_id in AUTHORED_SKILL_IDS or lifecycle == "curated":
+        classification = "authored"
+    elif tier == "cursor-managed":
+        classification = "vendor"
+    else:
+        classification = "authored"
+
+    symlink_ok = True
+    if is_symlink:
+        try:
+            symlink_ok = resolved.is_dir() and (resolved / "SKILL.md").exists()
+        except OSError:
+            symlink_ok = False
+
     entry = {
-        "id": skill_dir.name,
+        "id": skill_id,
+        "classification": classification,
+        "lifecycle": lifecycle or ("experimental" if classification == "experimental" else "curated"),
+        "tier": tier,
         "path": str(skill_dir),
         "resolved_path": str(resolved),
         "is_symlink": is_symlink,
+        "symlink_ok": symlink_ok,
+        "version": meta.get("version"),
+        "name": meta.get("name", skill_id),
     }
     if is_symlink:
         entry["symlink_target"] = str(skill_dir.readlink())
     return entry
 
 
-def discover_global() -> dict[str, list[dict]]:
+def classify_global_entry(skill_dir: Path, tier: str, vendor_ids: set[str], monorepo: Path) -> dict:
+    return classify_skill(skill_dir.name, skill_dir, tier, vendor_ids, monorepo)
+
+
+def discover_global(monorepo: Path) -> dict[str, list[dict]]:
+    vendor_ids = load_vendor_manifest()
     out: dict[str, list[dict]] = {}
     for tier, root in GLOBAL_TREES.items():
         items: list[dict] = []
@@ -81,24 +256,41 @@ def discover_global() -> dict[str, list[dict]]:
             out[tier] = items
             continue
         for child in sorted(root.iterdir()):
+            if child.name.startswith("."):
+                continue
             if not child.is_dir() and not child.is_symlink():
                 continue
             skill_md = child / "SKILL.md"
-            if not skill_md.exists() and not (child.resolve() / "SKILL.md").exists():
+            resolved_skill = child.resolve() / "SKILL.md"
+            if not skill_md.exists() and not resolved_skill.exists():
                 continue
-            items.append(classify_global_entry(child))
+            items.append(classify_global_entry(child, tier, vendor_ids, monorepo))
         out[tier] = items
     return out
 
 
 PROJECT_FIND_EXCLUDES = [
-    "-not", "-path", "*/node_modules/*",
-    "-not", "-path", "*/.git/*",
-    "-not", "-path", "*/upstream/*",
-    "-not", "-path", "*/.claude/*",
-    "-not", "-path", "*/vendor/*",
-    "-not", "-path", "*/archive/*",
-    "-not", "-path", "*/disabled/*",
+    "-not",
+    "-path",
+    "*/node_modules/*",
+    "-not",
+    "-path",
+    "*/.git/*",
+    "-not",
+    "-path",
+    "*/upstream/*",
+    "-not",
+    "-path",
+    "*/.claude/*",
+    "-not",
+    "-path",
+    "*/vendor/*",
+    "-not",
+    "-path",
+    "*/archive/*",
+    "-not",
+    "-path",
+    "*/disabled/*",
 ]
 
 
@@ -170,26 +362,53 @@ def discover_project_skills() -> list[dict]:
                         if ".cursor/skills" in str(skill_md)
                         else "project-skills-dir"
                     ),
+                    "classification": "embedded",
                 }
             )
     return sorted(found, key=lambda x: (x["project_root"], x["skill"]))
 
 
+def build_summary(global_data: dict[str, list[dict]]) -> dict:
+    by_class: dict[str, int] = {}
+    broken_symlinks: list[str] = []
+    for items in global_data.values():
+        for item in items:
+            cls = item.get("classification", "unknown")
+            by_class[cls] = by_class.get(cls, 0) + 1
+            if item.get("is_symlink") and not item.get("symlink_ok", True):
+                broken_symlinks.append(item["id"])
+    return {"by_classification": by_class, "broken_symlinks": broken_symlinks}
+
+
 def write_markdown(path: Path, payload: dict) -> None:
+    summary = payload.get("summary", {})
     lines = [
         "# Skills inventory (generated)",
         "",
         f"Generated: {payload['generated']}",
         "",
-        "## Global",
+        "## Summary",
         "",
     ]
+    for cls, count in sorted(summary.get("by_classification", {}).items()):
+        lines.append(f"- **{cls}**: {count}")
+    broken = summary.get("broken_symlinks", [])
+    if broken:
+        lines.append(f"- **broken symlinks**: {', '.join(broken)}")
+    lines.extend(["", "## Global", ""])
+
     for tier, items in payload["global"].items():
         lines.append(f"### {tier} ({len(items)})")
         lines.append("")
         for item in items:
-            flag = " (symlink)" if item.get("is_symlink") else ""
-            lines.append(f"- `{item['id']}`{flag} — `{item['path']}`")
+            flags = []
+            if item.get("is_symlink"):
+                flags.append("symlink")
+            if not item.get("symlink_ok", True):
+                flags.append("BROKEN")
+            flag_s = f" ({', '.join(flags)})" if flags else ""
+            cls = item.get("classification", "?")
+            lines.append(f"- `{item['id']}` [{cls}]{flag_s} — `{item['path']}`")
         lines.append("")
 
     lines.append(f"## Project-local ({len(payload['project'])})")
@@ -201,7 +420,9 @@ def write_markdown(path: Path, payload: dict) -> None:
         lines.append(f"### `{proj}`")
         lines.append("")
         for row in rows:
-            lines.append(f"- `{row['skill']}` ({row['layout']}) — `{row['relative_path']}`")
+            lines.append(
+                f"- `{row['skill']}` ({row['layout']}) — `{row['relative_path']}`"
+            )
         lines.append("")
     path.write_text("\n".join(lines), encoding="utf-8")
 
@@ -218,17 +439,36 @@ def main() -> int:
         default=os.environ.get("DOTFILES_CURSOR", str(HOME / "dotfiles" / "cursor")),
         help="Fallback compendium root when CURSOR_COMPENDIUM_ROOT unset",
     )
+    parser.add_argument(
+        "--registry-root",
+        default="",
+        help="Also write registry/skills-inventory.json under this path (e.g. agent-skills monorepo)",
+    )
+    parser.add_argument(
+        "--monorepo",
+        default=str(AGENT_SKILLS_MONOREPO),
+        help="Path to agent-skills monorepo for lifecycle detection",
+    )
     args = parser.parse_args()
 
-    root = Path(args.compendium_root) if args.compendium_root else Path(args.dotfiles_cursor) / "compendium"
+    root = (
+        Path(args.compendium_root)
+        if args.compendium_root
+        else Path(args.dotfiles_cursor) / "compendium"
+    )
     registry = root / "skills-registry"
     registry.mkdir(parents=True, exist_ok=True)
+
+    monorepo = Path(args.monorepo)
+    global_data = discover_global(monorepo)
 
     payload = {
         "generated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "compendium_root": str(root),
-        "global": discover_global(),
+        "monorepo_root": str(monorepo) if monorepo.is_dir() else None,
+        "global": global_data,
         "project": discover_project_skills(),
+        "summary": build_summary(global_data),
     }
 
     json_path = registry / "skills-inventory.json"
@@ -236,9 +476,19 @@ def main() -> int:
     json_path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
     write_markdown(md_path, payload)
 
+    if args.registry_root:
+        reg_root = Path(args.registry_root)
+        reg_dir = reg_root / "registry"
+        reg_dir.mkdir(parents=True, exist_ok=True)
+        reg_json = reg_dir / "skills-inventory.json"
+        reg_md = reg_dir / "skills-inventory.md"
+        reg_json.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+        write_markdown(reg_md, payload)
+        print(f"Also wrote {reg_json}", file=sys.stderr)
+
     g = sum(len(v) for v in payload["global"].values())
     p = len(payload["project"])
-    print(f"Wrote {json_path} ({g} global, {p} project-local skills)", file=__import__("sys").stderr)
+    print(f"Wrote {json_path} ({g} global, {p} project-local skills)", file=sys.stderr)
     return 0
 
 
