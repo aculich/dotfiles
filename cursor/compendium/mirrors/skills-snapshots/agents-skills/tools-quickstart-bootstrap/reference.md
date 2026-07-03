@@ -284,7 +284,7 @@ update-security:
     } | tee "$out"
     aa="{{awesome_awesome}}"
     if [[ -f "$aa/justfile" ]]; then
-      just -d "$aa" --justfile "$aa/justfile" --set date {{date}} lens security || true
+      just -d "$aa" --justfile "$aa/justfile" lens security date={{date}} || true
     fi
     echo ""
     echo "=== AGENT PROMPT ==="

@@ -1,0 +1,81 @@
+# --- OS ---
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+venv/
+.venv/
+env/
+ENV/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+*.cover
+.hypothesis/
+.ipynb_checkpoints/
+
+# --- R ---
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+
+# --- Office / document editors (temp / lock) ---
+~$*
+.~lock.*
+
+# --- Logs & local env files ---
+*.log
+.env
+.env.*
+!.env.example
+
+# --- Local IDE / sandboxes (not shared) ---
+.vscode/
+
+# --- Nested gitignored sibling clones (separate .git roots; document in ARCHITECTURE.md) ---
+# Add the upstream repos this project nests as side-by-side clones (NOT submodules).
+# Common CIDR/ERN clones:
+evictionresearch/
+library/
+upstream/
+
+# --- Shared bundles: commit shared/manifests + artifacts (see shared/README.md) ---
+shared/gdrive-downloads/
+shared/*.eml
+/incoming/
+
+# --- Local-only meeting carve-outs (adjacent topics, personal detail); never commit ---
+outofscope/
+
+# --- SOW analysis scaffold (regenerate with `make sow-analysis`) ---
+docs/_sow-change-analysis-SKELETON.md
+02-request-materials/communications/_email-register-SKELETON.md

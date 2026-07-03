@@ -1,543 +1,1940 @@
 {
-  "generated": "2026-07-03T05:09:09Z",
+  "generated": "2026-07-03T06:35:54Z",
   "compendium_root": "/Users/me/dotfiles/cursor/compendium",
+  "monorepo_root": "/Users/me/projects/agent-skills",
   "global": {
     "cursor-user": [
       {
         "id": "accidental-data-loss-prevention",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/accidental-data-loss-prevention",
         "resolved_path": "/Users/me/.cursor/skills/accidental-data-loss-prevention",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "v1",
+        "name": "accidental-data-loss-prevention"
       },
       {
         "id": "adhd-daily-planner",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/adhd-daily-planner",
         "resolved_path": "/Users/me/.cursor/skills/adhd-daily-planner",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "adhd-daily-planner"
       },
       {
         "id": "adhdev-engineering-partnership",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/adhdev-engineering-partnership",
         "resolved_path": "/Users/me/.cursor/skills/adhdev-engineering-partnership",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "adhdev-engineering-partnership"
       },
       {
         "id": "bigquery-data-transfer-service",
+        "classification": "vendor",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/bigquery-data-transfer-service",
         "resolved_path": "/Users/me/.cursor/skills/bigquery-data-transfer-service",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "v1",
+        "name": "bigquery-data-transfer-service"
       },
       {
         "id": "bootstrap-new-project",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/bootstrap-new-project",
         "resolved_path": "/Users/me/.cursor/skills/bootstrap-new-project",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "bootstrap-new-project"
       },
       {
         "id": "bootstrap-tool-config-repo",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/bootstrap-tool-config-repo",
         "resolved_path": "/Users/me/.cursor/skills/bootstrap-tool-config-repo",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "bootstrap-tool-config-repo"
       },
       {
         "id": "bootstrap-umbrella-client-project",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/bootstrap-umbrella-client-project",
         "resolved_path": "/Users/me/.cursor/skills/bootstrap-umbrella-client-project",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "bootstrap-umbrella-client-project"
       },
       {
         "id": "building-data-apps",
+        "classification": "vendor",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/building-data-apps",
         "resolved_path": "/Users/me/.cursor/skills/building-data-apps",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "v1",
+        "name": "building-data-apps"
       },
       {
         "id": "change-world-critique-quick",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/change-world-critique-quick",
         "resolved_path": "/Users/me/.cursor/skills/change-world-critique-quick",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "change-world-critique-quick"
       },
       {
         "id": "change-world-critique-quick-full",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/change-world-critique-quick-full",
         "resolved_path": "/Users/me/.cursor/skills/change-world-critique-quick-full",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "change-world-critique-quick-full"
       },
       {
         "id": "cidr-bootstrap-project",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/cidr-bootstrap-project",
         "resolved_path": "/Users/me/.cursor/skills/cidr-bootstrap-project",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "cidr-bootstrap-project"
       },
       {
         "id": "cidr-letterhead",
+        "classification": "embedded",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/cidr-letterhead",
         "resolved_path": "/Users/me/projects/cidr-org/library__cidrlab/.cursor/skills/cidr-letterhead",
         "is_symlink": true,
+        "symlink_ok": true,
+        "version": null,
+        "name": "cidr-letterhead",
         "symlink_target": "/Users/me/projects/cidr-org/library__cidrlab/.cursor/skills/cidr-letterhead"
       },
       {
         "id": "compendium-discover-projects",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/compendium-discover-projects",
         "resolved_path": "/Users/me/.cursor/skills/compendium-discover-projects",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "compendium-discover-projects"
       },
       {
         "id": "context-engineering",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/context-engineering",
         "resolved_path": "/Users/me/.cursor/skills/context-engineering",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "context-engineering"
       },
       {
         "id": "data-autocleaning",
+        "classification": "vendor",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/data-autocleaning",
         "resolved_path": "/Users/me/.cursor/skills/data-autocleaning",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "v1",
+        "name": "data-autocleaning"
       },
       {
         "id": "dataform-bigquery",
+        "classification": "vendor",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/dataform-bigquery",
         "resolved_path": "/Users/me/.cursor/skills/dataform-bigquery",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "v2",
+        "name": "dataform-bigquery"
       },
       {
         "id": "dbt-bigquery",
+        "classification": "vendor",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/dbt-bigquery",
         "resolved_path": "/Users/me/.cursor/skills/dbt-bigquery",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "v2",
+        "name": "dbt-bigquery"
       },
       {
         "id": "deeplistening-method-synthesis",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/deeplistening-method-synthesis",
         "resolved_path": "/Users/me/.cursor/skills/deeplistening-method-synthesis",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "deeplistening-method-synthesis"
       },
       {
         "id": "deeplistening-session-analysis",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/deeplistening-session-analysis",
         "resolved_path": "/Users/me/.cursor/skills/deeplistening-session-analysis",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "deeplistening-session-analysis"
       },
       {
         "id": "developing-with-bigquery",
+        "classification": "vendor",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/developing-with-bigquery",
         "resolved_path": "/Users/me/.cursor/skills/developing-with-bigquery",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "v1",
+        "name": "developing-with-bigquery"
       },
       {
         "id": "discovering-gcp-data-assets",
+        "classification": "vendor",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/discovering-gcp-data-assets",
         "resolved_path": "/Users/me/.cursor/skills/discovering-gcp-data-assets",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "v4",
+        "name": "discovering-gcp-data-assets"
       },
       {
         "id": "fireflies-meeting-export",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/fireflies-meeting-export",
         "resolved_path": "/Users/me/.cursor/skills/fireflies-meeting-export",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "fireflies-meeting-export"
       },
       {
         "id": "gcloud-auth-verification",
+        "classification": "vendor",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/gcloud-auth-verification",
         "resolved_path": "/Users/me/.cursor/skills/gcloud-auth-verification",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "v1",
+        "name": "gcloud-auth-verification"
       },
       {
         "id": "gcp-composer-troubleshooting",
+        "classification": "vendor",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/gcp-composer-troubleshooting",
         "resolved_path": "/Users/me/.cursor/skills/gcp-composer-troubleshooting",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "v1",
+        "name": "gcp-composer-troubleshooting"
       },
       {
         "id": "gcp-data-pipelines",
+        "classification": "vendor",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/gcp-data-pipelines",
         "resolved_path": "/Users/me/.cursor/skills/gcp-data-pipelines",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "v1",
+        "name": "gcp-data-pipelines"
       },
       {
         "id": "gcp-dataflow",
+        "classification": "vendor",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/gcp-dataflow",
         "resolved_path": "/Users/me/.cursor/skills/gcp-dataflow",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "v2",
+        "name": "gcp-dataflow"
       },
       {
         "id": "gcp-pipeline-orchestration",
+        "classification": "vendor",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/gcp-pipeline-orchestration",
         "resolved_path": "/Users/me/.cursor/skills/gcp-pipeline-orchestration",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "v1",
+        "name": "gcp-pipeline-orchestration"
       },
       {
         "id": "gcp-pipeline-resource-provisioning",
+        "classification": "vendor",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/gcp-pipeline-resource-provisioning",
         "resolved_path": "/Users/me/.cursor/skills/gcp-pipeline-resource-provisioning",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "v1",
+        "name": "gcp-pipeline-resource-provisioning"
       },
       {
         "id": "gcp-spark",
+        "classification": "vendor",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/gcp-spark",
         "resolved_path": "/Users/me/.cursor/skills/gcp-spark",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "v2",
+        "name": "gcp-spark"
       },
       {
         "id": "limitless-takeout-search",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/limitless-takeout-search",
         "resolved_path": "/Users/me/.cursor/skills/limitless-takeout-search",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "limitless-takeout-search"
       },
       {
         "id": "limitless-takeout-update",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/limitless-takeout-update",
         "resolved_path": "/Users/me/.cursor/skills/limitless-takeout-update",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "limitless-takeout-update"
       },
       {
         "id": "luminary-tech-radar",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/luminary-tech-radar",
         "resolved_path": "/Users/me/.cursor/skills/luminary-tech-radar",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "luminary-tech-radar"
       },
       {
         "id": "managing-python-dependencies",
+        "classification": "vendor",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/managing-python-dependencies",
         "resolved_path": "/Users/me/.cursor/skills/managing-python-dependencies",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "v1",
+        "name": "managing-python-dependencies"
       },
       {
         "id": "meeting-sync",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/meeting-sync",
         "resolved_path": "/Users/me/.cursor/skills/meeting-sync",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "meeting-sync"
       },
       {
         "id": "meeting-sync-and-synthesis",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/meeting-sync-and-synthesis",
         "resolved_path": "/Users/me/.cursor/skills/meeting-sync-and-synthesis",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "meeting-sync-and-synthesis"
       },
       {
         "id": "ml-best-practices",
+        "classification": "vendor",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/ml-best-practices",
         "resolved_path": "/Users/me/.cursor/skills/ml-best-practices",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "v1",
+        "name": "ml-best-practices"
       },
       {
         "id": "notebook-guidance",
+        "classification": "vendor",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/notebook-guidance",
         "resolved_path": "/Users/me/.cursor/skills/notebook-guidance",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "v5",
+        "name": "notebook-guidance"
       },
       {
         "id": "op-credentials",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/op-credentials",
         "resolved_path": "/Users/me/.cursor/skills/op-credentials",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "op-credentials"
       },
       {
         "id": "process-umbrella-incoming",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/process-umbrella-incoming",
         "resolved_path": "/Users/me/.cursor/skills/process-umbrella-incoming",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "process-umbrella-incoming"
       },
       {
         "id": "project-management-guru-adhd",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/project-management-guru-adhd",
         "resolved_path": "/Users/me/.cursor/skills/project-management-guru-adhd",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "project-management-guru-adhd"
       },
       {
         "id": "reflexive-method-authoring-loop",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/reflexive-method-authoring-loop",
         "resolved_path": "/Users/me/.cursor/skills/reflexive-method-authoring-loop",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "reflexive-method-authoring-loop"
       },
       {
         "id": "skill-repair",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/skill-repair",
         "resolved_path": "/Users/me/.cursor/skills/skill-repair",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "v1",
+        "name": "skill-repair"
       },
       {
         "id": "specstory-guard",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/specstory-guard",
         "resolved_path": "/Users/me/.cursor/skills/specstory-guard",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "1.0.0",
+        "name": "specstory-guard"
       },
       {
         "id": "specstory-link-trail",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/specstory-link-trail",
         "resolved_path": "/Users/me/.cursor/skills/specstory-link-trail",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "1.0.0",
+        "name": "specstory-link-trail"
       },
       {
         "id": "specstory-organize",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/specstory-organize",
         "resolved_path": "/Users/me/.cursor/skills/specstory-organize",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "1.0.0",
+        "name": "specstory-organize"
       },
       {
         "id": "specstory-project-stats",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/specstory-project-stats",
         "resolved_path": "/Users/me/.cursor/skills/specstory-project-stats",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "1.0.0",
+        "name": "specstory-project-stats"
       },
       {
         "id": "specstory-session-summary",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/specstory-session-summary",
         "resolved_path": "/Users/me/.cursor/skills/specstory-session-summary",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "1.0",
+        "name": "specstory-session-summary"
       },
       {
         "id": "specstory-yak",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/specstory-yak",
         "resolved_path": "/Users/me/.cursor/skills/specstory-yak",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "1.0.0",
+        "name": "specstory-yak"
       },
       {
         "id": "tools-quickstart-bootstrap",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/tools-quickstart-bootstrap",
         "resolved_path": "/Users/me/.cursor/skills/tools-quickstart-bootstrap",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "tools-quickstart-bootstrap"
       },
       {
         "id": "wip-distill",
+        "classification": "embedded",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/wip-distill",
         "resolved_path": "/Users/me/projects/peeq-voicegen-audiocast/skills/wip-distill",
         "is_symlink": true,
+        "symlink_ok": true,
+        "version": null,
+        "name": "wip-distill",
         "symlink_target": "/Users/me/projects/peeq-voicegen-audiocast/skills/wip-distill"
       },
       {
         "id": "wip-harvest",
+        "classification": "embedded",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/wip-harvest",
         "resolved_path": "/Users/me/projects/peeq-voicegen-audiocast/skills/wip-harvest",
         "is_symlink": true,
+        "symlink_ok": true,
+        "version": null,
+        "name": "wip-harvest",
         "symlink_target": "/Users/me/projects/peeq-voicegen-audiocast/skills/wip-harvest"
       },
       {
         "id": "wip-publish",
+        "classification": "embedded",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/wip-publish",
         "resolved_path": "/Users/me/projects/peeq-voicegen-audiocast/skills/wip-publish",
         "is_symlink": true,
+        "symlink_ok": true,
+        "version": null,
+        "name": "wip-publish",
         "symlink_target": "/Users/me/projects/peeq-voicegen-audiocast/skills/wip-publish"
       }
     ],
     "cursor-managed": [
       {
         "id": "automate",
+        "classification": "vendor",
+        "lifecycle": "curated",
+        "tier": "cursor-managed",
         "path": "/Users/me/.cursor/skills-cursor/automate",
         "resolved_path": "/Users/me/.cursor/skills-cursor/automate",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "automate"
       },
       {
         "id": "babysit",
+        "classification": "vendor",
+        "lifecycle": "curated",
+        "tier": "cursor-managed",
         "path": "/Users/me/.cursor/skills-cursor/babysit",
         "resolved_path": "/Users/me/.cursor/skills-cursor/babysit",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "babysit"
       },
       {
         "id": "canvas",
+        "classification": "vendor",
+        "lifecycle": "curated",
+        "tier": "cursor-managed",
         "path": "/Users/me/.cursor/skills-cursor/canvas",
         "resolved_path": "/Users/me/.cursor/skills-cursor/canvas",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "canvas"
       },
       {
         "id": "create-hook",
+        "classification": "vendor",
+        "lifecycle": "curated",
+        "tier": "cursor-managed",
         "path": "/Users/me/.cursor/skills-cursor/create-hook",
         "resolved_path": "/Users/me/.cursor/skills-cursor/create-hook",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "create-hook"
       },
       {
         "id": "create-rule",
+        "classification": "vendor",
+        "lifecycle": "curated",
+        "tier": "cursor-managed",
         "path": "/Users/me/.cursor/skills-cursor/create-rule",
         "resolved_path": "/Users/me/.cursor/skills-cursor/create-rule",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "create-rule"
       },
       {
         "id": "create-skill",
+        "classification": "vendor",
+        "lifecycle": "curated",
+        "tier": "cursor-managed",
         "path": "/Users/me/.cursor/skills-cursor/create-skill",
         "resolved_path": "/Users/me/.cursor/skills-cursor/create-skill",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "create-skill"
       },
       {
         "id": "create-subagent",
+        "classification": "vendor",
+        "lifecycle": "curated",
+        "tier": "cursor-managed",
         "path": "/Users/me/.cursor/skills-cursor/create-subagent",
         "resolved_path": "/Users/me/.cursor/skills-cursor/create-subagent",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "create-subagent"
       },
       {
         "id": "loop",
+        "classification": "vendor",
+        "lifecycle": "curated",
+        "tier": "cursor-managed",
         "path": "/Users/me/.cursor/skills-cursor/loop",
         "resolved_path": "/Users/me/.cursor/skills-cursor/loop",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "loop"
       },
       {
         "id": "migrate-to-skills",
+        "classification": "vendor",
+        "lifecycle": "curated",
+        "tier": "cursor-managed",
         "path": "/Users/me/.cursor/skills-cursor/migrate-to-skills",
         "resolved_path": "/Users/me/.cursor/skills-cursor/migrate-to-skills",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "migrate-to-skills"
       },
       {
         "id": "onboard",
+        "classification": "vendor",
+        "lifecycle": "curated",
+        "tier": "cursor-managed",
         "path": "/Users/me/.cursor/skills-cursor/onboard",
         "resolved_path": "/Users/me/.cursor/skills-cursor/onboard",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "onboard"
       },
       {
         "id": "review",
+        "classification": "vendor",
+        "lifecycle": "curated",
+        "tier": "cursor-managed",
         "path": "/Users/me/.cursor/skills-cursor/review",
         "resolved_path": "/Users/me/.cursor/skills-cursor/review",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "review"
       },
       {
         "id": "review-bugbot",
+        "classification": "vendor",
+        "lifecycle": "curated",
+        "tier": "cursor-managed",
         "path": "/Users/me/.cursor/skills-cursor/review-bugbot",
         "resolved_path": "/Users/me/.cursor/skills-cursor/review-bugbot",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "review-bugbot"
       },
       {
         "id": "review-security",
+        "classification": "vendor",
+        "lifecycle": "curated",
+        "tier": "cursor-managed",
         "path": "/Users/me/.cursor/skills-cursor/review-security",
         "resolved_path": "/Users/me/.cursor/skills-cursor/review-security",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "review-security"
       },
       {
         "id": "sdk",
+        "classification": "vendor",
+        "lifecycle": "curated",
+        "tier": "cursor-managed",
         "path": "/Users/me/.cursor/skills-cursor/sdk",
         "resolved_path": "/Users/me/.cursor/skills-cursor/sdk",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "sdk"
       },
       {
         "id": "shell",
+        "classification": "vendor",
+        "lifecycle": "curated",
+        "tier": "cursor-managed",
         "path": "/Users/me/.cursor/skills-cursor/shell",
         "resolved_path": "/Users/me/.cursor/skills-cursor/shell",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "shell"
       },
       {
         "id": "split-to-prs",
+        "classification": "vendor",
+        "lifecycle": "curated",
+        "tier": "cursor-managed",
         "path": "/Users/me/.cursor/skills-cursor/split-to-prs",
         "resolved_path": "/Users/me/.cursor/skills-cursor/split-to-prs",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "split-to-prs"
       },
       {
         "id": "statusline",
+        "classification": "vendor",
+        "lifecycle": "curated",
+        "tier": "cursor-managed",
         "path": "/Users/me/.cursor/skills-cursor/statusline",
         "resolved_path": "/Users/me/.cursor/skills-cursor/statusline",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "statusline"
       },
       {
         "id": "update-cli-config",
+        "classification": "vendor",
+        "lifecycle": "curated",
+        "tier": "cursor-managed",
         "path": "/Users/me/.cursor/skills-cursor/update-cli-config",
         "resolved_path": "/Users/me/.cursor/skills-cursor/update-cli-config",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "update-cli-config"
       },
       {
         "id": "update-cursor-settings",
+        "classification": "vendor",
+        "lifecycle": "curated",
+        "tier": "cursor-managed",
         "path": "/Users/me/.cursor/skills-cursor/update-cursor-settings",
         "resolved_path": "/Users/me/.cursor/skills-cursor/update-cursor-settings",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "update-cursor-settings"
+      }
+    ],
+    "claude-user": [
+      {
+        "id": "accidental-data-loss-prevention",
+        "classification": "embedded",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/accidental-data-loss-prevention",
+        "resolved_path": "/Users/me/.agents/skills/accidental-data-loss-prevention",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": "v1",
+        "name": "accidental-data-loss-prevention",
+        "symlink_target": "../../.agents/skills/accidental-data-loss-prevention"
+      },
+      {
+        "id": "adhd-daily-planner",
+        "classification": "embedded",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/adhd-daily-planner",
+        "resolved_path": "/Users/me/.agents/skills/adhd-daily-planner",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": null,
+        "name": "adhd-daily-planner",
+        "symlink_target": "../../.agents/skills/adhd-daily-planner"
+      },
+      {
+        "id": "adhdev-engineering-partnership",
+        "classification": "embedded",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/adhdev-engineering-partnership",
+        "resolved_path": "/Users/me/.agents/skills/adhdev-engineering-partnership",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": null,
+        "name": "adhdev-engineering-partnership",
+        "symlink_target": "../../.agents/skills/adhdev-engineering-partnership"
+      },
+      {
+        "id": "bootstrap-tool-config-repo",
+        "classification": "embedded",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/bootstrap-tool-config-repo",
+        "resolved_path": "/Users/me/.agents/skills/bootstrap-tool-config-repo",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": null,
+        "name": "bootstrap-tool-config-repo",
+        "symlink_target": "../../.agents/skills/bootstrap-tool-config-repo"
+      },
+      {
+        "id": "change-world-critique-quick",
+        "classification": "embedded",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/change-world-critique-quick",
+        "resolved_path": "/Users/me/.agents/skills/change-world-critique-quick",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": null,
+        "name": "change-world-critique-quick",
+        "symlink_target": "../../.agents/skills/change-world-critique-quick"
+      },
+      {
+        "id": "change-world-critique-quick-full",
+        "classification": "embedded",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/change-world-critique-quick-full",
+        "resolved_path": "/Users/me/.agents/skills/change-world-critique-quick-full",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": null,
+        "name": "change-world-critique-quick-full",
+        "symlink_target": "../../.agents/skills/change-world-critique-quick-full"
+      },
+      {
+        "id": "cidr-bootstrap-project",
+        "classification": "embedded",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/cidr-bootstrap-project",
+        "resolved_path": "/Users/me/.agents/skills/cidr-bootstrap-project",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": null,
+        "name": "cidr-bootstrap-project",
+        "symlink_target": "../../.agents/skills/cidr-bootstrap-project"
+      },
+      {
+        "id": "compendium-discover-projects",
+        "classification": "embedded",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/compendium-discover-projects",
+        "resolved_path": "/Users/me/.agents/skills/compendium-discover-projects",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": null,
+        "name": "compendium-discover-projects",
+        "symlink_target": "../../.agents/skills/compendium-discover-projects"
+      },
+      {
+        "id": "deeplistening-method-synthesis",
+        "classification": "embedded",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/deeplistening-method-synthesis",
+        "resolved_path": "/Users/me/.agents/skills/deeplistening-method-synthesis",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": null,
+        "name": "deeplistening-method-synthesis",
+        "symlink_target": "../../.agents/skills/deeplistening-method-synthesis"
+      },
+      {
+        "id": "deeplistening-session-analysis",
+        "classification": "embedded",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/deeplistening-session-analysis",
+        "resolved_path": "/Users/me/.agents/skills/deeplistening-session-analysis",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": null,
+        "name": "deeplistening-session-analysis",
+        "symlink_target": "../../.agents/skills/deeplistening-session-analysis"
+      },
+      {
+        "id": "fireflies-meeting-export",
+        "classification": "embedded",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/fireflies-meeting-export",
+        "resolved_path": "/Users/me/.agents/skills/fireflies-meeting-export",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": null,
+        "name": "fireflies-meeting-export",
+        "symlink_target": "../../.agents/skills/fireflies-meeting-export"
+      },
+      {
+        "id": "google-agents-cli-adk-code",
+        "classification": "embedded",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/google-agents-cli-adk-code",
+        "resolved_path": "/Users/me/.agents/skills/google-agents-cli-adk-code",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": "0.2.0",
+        "name": "google-agents-cli-adk-code",
+        "symlink_target": "../../.agents/skills/google-agents-cli-adk-code"
+      },
+      {
+        "id": "google-agents-cli-deploy",
+        "classification": "embedded",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/google-agents-cli-deploy",
+        "resolved_path": "/Users/me/.agents/skills/google-agents-cli-deploy",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": "0.2.0",
+        "name": "google-agents-cli-deploy",
+        "symlink_target": "../../.agents/skills/google-agents-cli-deploy"
+      },
+      {
+        "id": "google-agents-cli-eval",
+        "classification": "embedded",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/google-agents-cli-eval",
+        "resolved_path": "/Users/me/.agents/skills/google-agents-cli-eval",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": "0.2.0",
+        "name": "google-agents-cli-eval",
+        "symlink_target": "../../.agents/skills/google-agents-cli-eval"
+      },
+      {
+        "id": "google-agents-cli-observability",
+        "classification": "embedded",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/google-agents-cli-observability",
+        "resolved_path": "/Users/me/.agents/skills/google-agents-cli-observability",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": "0.2.0",
+        "name": "google-agents-cli-observability",
+        "symlink_target": "../../.agents/skills/google-agents-cli-observability"
+      },
+      {
+        "id": "google-agents-cli-publish",
+        "classification": "embedded",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/google-agents-cli-publish",
+        "resolved_path": "/Users/me/.agents/skills/google-agents-cli-publish",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": "0.2.0",
+        "name": "google-agents-cli-publish",
+        "symlink_target": "../../.agents/skills/google-agents-cli-publish"
+      },
+      {
+        "id": "google-agents-cli-scaffold",
+        "classification": "embedded",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/google-agents-cli-scaffold",
+        "resolved_path": "/Users/me/.agents/skills/google-agents-cli-scaffold",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": "0.2.0",
+        "name": "google-agents-cli-scaffold",
+        "symlink_target": "../../.agents/skills/google-agents-cli-scaffold"
+      },
+      {
+        "id": "google-agents-cli-workflow",
+        "classification": "embedded",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/google-agents-cli-workflow",
+        "resolved_path": "/Users/me/.agents/skills/google-agents-cli-workflow",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": "0.2.0",
+        "name": "google-agents-cli-workflow",
+        "symlink_target": "../../.agents/skills/google-agents-cli-workflow"
+      },
+      {
+        "id": "limitless-takeout-search",
+        "classification": "embedded",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/limitless-takeout-search",
+        "resolved_path": "/Users/me/.agents/skills/limitless-takeout-search",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": null,
+        "name": "limitless-takeout-search",
+        "symlink_target": "../../.agents/skills/limitless-takeout-search"
+      },
+      {
+        "id": "limitless-takeout-update",
+        "classification": "embedded",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/limitless-takeout-update",
+        "resolved_path": "/Users/me/.agents/skills/limitless-takeout-update",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": null,
+        "name": "limitless-takeout-update",
+        "symlink_target": "../../.agents/skills/limitless-takeout-update"
+      },
+      {
+        "id": "luminary-tech-radar",
+        "classification": "embedded",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/luminary-tech-radar",
+        "resolved_path": "/Users/me/.agents/skills/luminary-tech-radar",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": null,
+        "name": "luminary-tech-radar",
+        "symlink_target": "../../.agents/skills/luminary-tech-radar"
+      },
+      {
+        "id": "meeting-sync",
+        "classification": "embedded",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/meeting-sync",
+        "resolved_path": "/Users/me/.agents/skills/meeting-sync",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": null,
+        "name": "meeting-sync",
+        "symlink_target": "../../.agents/skills/meeting-sync"
+      },
+      {
+        "id": "meeting-sync-and-synthesis",
+        "classification": "embedded",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/meeting-sync-and-synthesis",
+        "resolved_path": "/Users/me/.agents/skills/meeting-sync-and-synthesis",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": null,
+        "name": "meeting-sync-and-synthesis",
+        "symlink_target": "../../.agents/skills/meeting-sync-and-synthesis"
+      },
+      {
+        "id": "op-credentials",
+        "classification": "embedded",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/op-credentials",
+        "resolved_path": "/Users/me/.agents/skills/op-credentials",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": null,
+        "name": "op-credentials",
+        "symlink_target": "../../.agents/skills/op-credentials"
+      },
+      {
+        "id": "portless",
+        "classification": "embedded",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/portless",
+        "resolved_path": "/Users/me/.agents/skills/portless",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": null,
+        "name": "portless",
+        "symlink_target": "../../.agents/skills/portless"
+      },
+      {
+        "id": "process-umbrella-incoming",
+        "classification": "embedded",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/process-umbrella-incoming",
+        "resolved_path": "/Users/me/.agents/skills/process-umbrella-incoming",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": null,
+        "name": "process-umbrella-incoming",
+        "symlink_target": "../../.agents/skills/process-umbrella-incoming"
+      },
+      {
+        "id": "project-management-guru-adhd",
+        "classification": "embedded",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/project-management-guru-adhd",
+        "resolved_path": "/Users/me/.agents/skills/project-management-guru-adhd",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": null,
+        "name": "project-management-guru-adhd",
+        "symlink_target": "../../.agents/skills/project-management-guru-adhd"
+      },
+      {
+        "id": "reflexive-method-authoring-loop",
+        "classification": "embedded",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/reflexive-method-authoring-loop",
+        "resolved_path": "/Users/me/.agents/skills/reflexive-method-authoring-loop",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": null,
+        "name": "reflexive-method-authoring-loop",
+        "symlink_target": "../../.agents/skills/reflexive-method-authoring-loop"
+      },
+      {
+        "id": "repo-evaluator",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/repo-evaluator",
+        "resolved_path": "/Users/me/.claude/skills/repo-evaluator",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "repo-evaluator"
+      },
+      {
+        "id": "setup-contextualizer",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/setup-contextualizer",
+        "resolved_path": "/Users/me/.claude/skills/setup-contextualizer",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "setup-contextualizer"
+      },
+      {
+        "id": "skill-repair",
+        "classification": "embedded",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/skill-repair",
+        "resolved_path": "/Users/me/.agents/skills/skill-repair",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": "v1",
+        "name": "skill-repair",
+        "symlink_target": "../../.agents/skills/skill-repair"
+      },
+      {
+        "id": "specstory-guard",
+        "classification": "embedded",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/specstory-guard",
+        "resolved_path": "/Users/me/.agents/skills/specstory-guard",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": "1.0.0",
+        "name": "specstory-guard",
+        "symlink_target": "../../.agents/skills/specstory-guard"
+      },
+      {
+        "id": "specstory-link-trail",
+        "classification": "embedded",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/specstory-link-trail",
+        "resolved_path": "/Users/me/.agents/skills/specstory-link-trail",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": "1.0.0",
+        "name": "specstory-link-trail",
+        "symlink_target": "../../.agents/skills/specstory-link-trail"
+      },
+      {
+        "id": "specstory-organize",
+        "classification": "embedded",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/specstory-organize",
+        "resolved_path": "/Users/me/.agents/skills/specstory-organize",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": "1.0.0",
+        "name": "specstory-organize",
+        "symlink_target": "../../.agents/skills/specstory-organize"
+      },
+      {
+        "id": "specstory-project-stats",
+        "classification": "embedded",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/specstory-project-stats",
+        "resolved_path": "/Users/me/.agents/skills/specstory-project-stats",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": "1.0.0",
+        "name": "specstory-project-stats",
+        "symlink_target": "../../.agents/skills/specstory-project-stats"
+      },
+      {
+        "id": "specstory-session-summary",
+        "classification": "embedded",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/specstory-session-summary",
+        "resolved_path": "/Users/me/.agents/skills/specstory-session-summary",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": "1.0",
+        "name": "specstory-session-summary",
+        "symlink_target": "../../.agents/skills/specstory-session-summary"
+      },
+      {
+        "id": "specstory-yak",
+        "classification": "embedded",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/specstory-yak",
+        "resolved_path": "/Users/me/.agents/skills/specstory-yak",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": "1.0.0",
+        "name": "specstory-yak",
+        "symlink_target": "../../.agents/skills/specstory-yak"
+      },
+      {
+        "id": "tools-quickstart-bootstrap",
+        "classification": "embedded",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/tools-quickstart-bootstrap",
+        "resolved_path": "/Users/me/.agents/skills/tools-quickstart-bootstrap",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": null,
+        "name": "tools-quickstart-bootstrap",
+        "symlink_target": "../../.agents/skills/tools-quickstart-bootstrap"
+      }
+    ],
+    "codex-user": [
+      {
+        "id": "dev-warmup",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "codex-user",
+        "path": "/Users/me/.codex/skills/dev-warmup",
+        "resolved_path": "/Users/me/.codex/skills/dev-warmup",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "dev-warmup"
+      },
+      {
+        "id": "dynamic-dev-port",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "codex-user",
+        "path": "/Users/me/.codex/skills/dynamic-dev-port",
+        "resolved_path": "/Users/me/.codex/skills/dynamic-dev-port",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "dynamic-dev-port"
+      },
+      {
+        "id": "op-credentials",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "codex-user",
+        "path": "/Users/me/.codex/skills/op-credentials",
+        "resolved_path": "/Users/me/.codex/skills/op-credentials",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "op-credentials"
       }
     ],
     "agents": [
       {
+        "id": "accidental-data-loss-prevention",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/accidental-data-loss-prevention",
+        "resolved_path": "/Users/me/.agents/skills/accidental-data-loss-prevention",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "v1",
+        "name": "accidental-data-loss-prevention"
+      },
+      {
+        "id": "adhd-daily-planner",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/adhd-daily-planner",
+        "resolved_path": "/Users/me/.agents/skills/adhd-daily-planner",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "adhd-daily-planner"
+      },
+      {
+        "id": "adhdev-engineering-partnership",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/adhdev-engineering-partnership",
+        "resolved_path": "/Users/me/.agents/skills/adhdev-engineering-partnership",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "adhdev-engineering-partnership"
+      },
+      {
+        "id": "bootstrap-tool-config-repo",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/bootstrap-tool-config-repo",
+        "resolved_path": "/Users/me/.agents/skills/bootstrap-tool-config-repo",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "bootstrap-tool-config-repo"
+      },
+      {
+        "id": "change-world-critique-quick",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/change-world-critique-quick",
+        "resolved_path": "/Users/me/.agents/skills/change-world-critique-quick",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "change-world-critique-quick"
+      },
+      {
+        "id": "change-world-critique-quick-full",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/change-world-critique-quick-full",
+        "resolved_path": "/Users/me/.agents/skills/change-world-critique-quick-full",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "change-world-critique-quick-full"
+      },
+      {
+        "id": "cidr-bootstrap-project",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/cidr-bootstrap-project",
+        "resolved_path": "/Users/me/.agents/skills/cidr-bootstrap-project",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "cidr-bootstrap-project"
+      },
+      {
+        "id": "compendium-discover-projects",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/compendium-discover-projects",
+        "resolved_path": "/Users/me/.agents/skills/compendium-discover-projects",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "compendium-discover-projects"
+      },
+      {
+        "id": "deeplistening-method-synthesis",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/deeplistening-method-synthesis",
+        "resolved_path": "/Users/me/.agents/skills/deeplistening-method-synthesis",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "deeplistening-method-synthesis"
+      },
+      {
+        "id": "deeplistening-session-analysis",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/deeplistening-session-analysis",
+        "resolved_path": "/Users/me/.agents/skills/deeplistening-session-analysis",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "deeplistening-session-analysis"
+      },
+      {
         "id": "find-skills",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
         "path": "/Users/me/.agents/skills/find-skills",
         "resolved_path": "/Users/me/.agents/skills/find-skills",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "find-skills"
+      },
+      {
+        "id": "fireflies-meeting-export",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/fireflies-meeting-export",
+        "resolved_path": "/Users/me/.agents/skills/fireflies-meeting-export",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "fireflies-meeting-export"
       },
       {
         "id": "google-agents-cli-adk-code",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
         "path": "/Users/me/.agents/skills/google-agents-cli-adk-code",
         "resolved_path": "/Users/me/.agents/skills/google-agents-cli-adk-code",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "0.2.0",
+        "name": "google-agents-cli-adk-code"
       },
       {
         "id": "google-agents-cli-deploy",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
         "path": "/Users/me/.agents/skills/google-agents-cli-deploy",
         "resolved_path": "/Users/me/.agents/skills/google-agents-cli-deploy",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "0.2.0",
+        "name": "google-agents-cli-deploy"
       },
       {
         "id": "google-agents-cli-eval",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
         "path": "/Users/me/.agents/skills/google-agents-cli-eval",
         "resolved_path": "/Users/me/.agents/skills/google-agents-cli-eval",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "0.2.0",
+        "name": "google-agents-cli-eval"
       },
       {
         "id": "google-agents-cli-observability",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
         "path": "/Users/me/.agents/skills/google-agents-cli-observability",
         "resolved_path": "/Users/me/.agents/skills/google-agents-cli-observability",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "0.2.0",
+        "name": "google-agents-cli-observability"
       },
       {
         "id": "google-agents-cli-publish",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
         "path": "/Users/me/.agents/skills/google-agents-cli-publish",
         "resolved_path": "/Users/me/.agents/skills/google-agents-cli-publish",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "0.2.0",
+        "name": "google-agents-cli-publish"
       },
       {
         "id": "google-agents-cli-scaffold",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
         "path": "/Users/me/.agents/skills/google-agents-cli-scaffold",
         "resolved_path": "/Users/me/.agents/skills/google-agents-cli-scaffold",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "0.2.0",
+        "name": "google-agents-cli-scaffold"
       },
       {
         "id": "google-agents-cli-workflow",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
         "path": "/Users/me/.agents/skills/google-agents-cli-workflow",
         "resolved_path": "/Users/me/.agents/skills/google-agents-cli-workflow",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "0.2.0",
+        "name": "google-agents-cli-workflow"
+      },
+      {
+        "id": "limitless-takeout-search",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/limitless-takeout-search",
+        "resolved_path": "/Users/me/.agents/skills/limitless-takeout-search",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "limitless-takeout-search"
+      },
+      {
+        "id": "limitless-takeout-update",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/limitless-takeout-update",
+        "resolved_path": "/Users/me/.agents/skills/limitless-takeout-update",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "limitless-takeout-update"
+      },
+      {
+        "id": "luminary-tech-radar",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/luminary-tech-radar",
+        "resolved_path": "/Users/me/.agents/skills/luminary-tech-radar",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "luminary-tech-radar"
+      },
+      {
+        "id": "meeting-sync",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/meeting-sync",
+        "resolved_path": "/Users/me/.agents/skills/meeting-sync",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "meeting-sync"
+      },
+      {
+        "id": "meeting-sync-and-synthesis",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/meeting-sync-and-synthesis",
+        "resolved_path": "/Users/me/.agents/skills/meeting-sync-and-synthesis",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "meeting-sync-and-synthesis"
+      },
+      {
+        "id": "op-credentials",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/op-credentials",
+        "resolved_path": "/Users/me/.agents/skills/op-credentials",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "op-credentials"
       },
       {
         "id": "paper-fetch",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
         "path": "/Users/me/.agents/skills/paper-fetch",
         "resolved_path": "/Users/me/.agents/skills/paper-fetch",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "paper-fetch"
       },
       {
         "id": "perks",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
         "path": "/Users/me/.agents/skills/perks",
         "resolved_path": "/Users/me/.agents/skills/perks",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "1.0.0",
+        "name": "perks"
       },
       {
         "id": "portless",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
         "path": "/Users/me/.agents/skills/portless",
         "resolved_path": "/Users/me/.agents/skills/portless",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "portless"
+      },
+      {
+        "id": "process-umbrella-incoming",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/process-umbrella-incoming",
+        "resolved_path": "/Users/me/.agents/skills/process-umbrella-incoming",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "process-umbrella-incoming"
+      },
+      {
+        "id": "project-management-guru-adhd",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/project-management-guru-adhd",
+        "resolved_path": "/Users/me/.agents/skills/project-management-guru-adhd",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "project-management-guru-adhd"
       },
       {
         "id": "pubmed-database",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
         "path": "/Users/me/.agents/skills/pubmed-database",
         "resolved_path": "/Users/me/.agents/skills/pubmed-database",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "pubmed-database"
+      },
+      {
+        "id": "reflexive-method-authoring-loop",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/reflexive-method-authoring-loop",
+        "resolved_path": "/Users/me/.agents/skills/reflexive-method-authoring-loop",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "reflexive-method-authoring-loop"
       },
       {
         "id": "repo-story-time",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
         "path": "/Users/me/.agents/skills/repo-story-time",
         "resolved_path": "/Users/me/.agents/skills/repo-story-time",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "repo-story-time"
       },
       {
         "id": "repomix-explorer",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
         "path": "/Users/me/.agents/skills/repomix-explorer",
         "resolved_path": "/Users/me/.agents/skills/repomix-explorer",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "repomix-explorer"
+      },
+      {
+        "id": "skill-repair",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/skill-repair",
+        "resolved_path": "/Users/me/.agents/skills/skill-repair",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "v1",
+        "name": "skill-repair"
       },
       {
         "id": "sofa",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
         "path": "/Users/me/.agents/skills/sofa",
         "resolved_path": "/Users/me/.agents/skills/sofa",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "sofa"
       },
       {
         "id": "sofa-contribute",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
         "path": "/Users/me/.agents/skills/sofa-contribute",
         "resolved_path": "/Users/me/.agents/skills/sofa-contribute",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "sofa-contribute"
       },
       {
         "id": "sofa-status",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
         "path": "/Users/me/.agents/skills/sofa-status",
         "resolved_path": "/Users/me/.agents/skills/sofa-status",
-        "is_symlink": false
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "sofa-status"
+      },
+      {
+        "id": "specstory-guard",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/specstory-guard",
+        "resolved_path": "/Users/me/.agents/skills/specstory-guard",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "1.0.0",
+        "name": "specstory-guard"
+      },
+      {
+        "id": "specstory-link-trail",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/specstory-link-trail",
+        "resolved_path": "/Users/me/.agents/skills/specstory-link-trail",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "1.0.0",
+        "name": "specstory-link-trail"
+      },
+      {
+        "id": "specstory-organize",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/specstory-organize",
+        "resolved_path": "/Users/me/.agents/skills/specstory-organize",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "1.0.0",
+        "name": "specstory-organize"
+      },
+      {
+        "id": "specstory-project-stats",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/specstory-project-stats",
+        "resolved_path": "/Users/me/.agents/skills/specstory-project-stats",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "1.0.0",
+        "name": "specstory-project-stats"
+      },
+      {
+        "id": "specstory-session-summary",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/specstory-session-summary",
+        "resolved_path": "/Users/me/.agents/skills/specstory-session-summary",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "1.0",
+        "name": "specstory-session-summary"
+      },
+      {
+        "id": "specstory-yak",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/specstory-yak",
+        "resolved_path": "/Users/me/.agents/skills/specstory-yak",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "1.0.0",
+        "name": "specstory-yak"
+      },
+      {
+        "id": "tools-quickstart-bootstrap",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/tools-quickstart-bootstrap",
+        "resolved_path": "/Users/me/.agents/skills/tools-quickstart-bootstrap",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "tools-quickstart-bootstrap"
       }
     ]
   },
@@ -546,417 +1943,469 @@
       "skill": "accidental-data-loss-prevention",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/accidental-data-loss-prevention/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/accidental-data-loss-prevention/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "adhd-daily-planner",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/adhd-daily-planner/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/adhd-daily-planner/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "adhdev-engineering-partnership",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/adhdev-engineering-partnership/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/adhdev-engineering-partnership/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "bigquery-data-transfer-service",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/bigquery-data-transfer-service/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/bigquery-data-transfer-service/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "bootstrap-new-project",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/bootstrap-new-project/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/bootstrap-new-project/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "bootstrap-tool-config-repo",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/bootstrap-tool-config-repo/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/bootstrap-tool-config-repo/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "bootstrap-umbrella-client-project",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/bootstrap-umbrella-client-project/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/bootstrap-umbrella-client-project/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "building-data-apps",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/building-data-apps/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/building-data-apps/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "change-world-critique-quick",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/change-world-critique-quick/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/change-world-critique-quick/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "change-world-critique-quick-full",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/change-world-critique-quick-full/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/change-world-critique-quick-full/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "cidr-bootstrap-project",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/cidr-bootstrap-project/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/cidr-bootstrap-project/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "cidr-letterhead",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/cidr-letterhead/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/cidr-letterhead/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "compendium-discover-projects",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/compendium-discover-projects/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/compendium-discover-projects/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "context-engineering",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/context-engineering/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/context-engineering/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "data-autocleaning",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/data-autocleaning/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/data-autocleaning/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "dataform-bigquery",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/dataform-bigquery/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/dataform-bigquery/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "dbt-bigquery",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/dbt-bigquery/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/dbt-bigquery/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "deeplistening-method-synthesis",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/deeplistening-method-synthesis/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/deeplistening-method-synthesis/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "deeplistening-session-analysis",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/deeplistening-session-analysis/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/deeplistening-session-analysis/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "developing-with-bigquery",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/developing-with-bigquery/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/developing-with-bigquery/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "discovering-gcp-data-assets",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/discovering-gcp-data-assets/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/discovering-gcp-data-assets/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "fireflies-meeting-export",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/fireflies-meeting-export/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/fireflies-meeting-export/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "gcloud-auth-verification",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/gcloud-auth-verification/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/gcloud-auth-verification/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "gcp-composer-troubleshooting",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/gcp-composer-troubleshooting/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/gcp-composer-troubleshooting/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "gcp-data-pipelines",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/gcp-data-pipelines/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/gcp-data-pipelines/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "gcp-dataflow",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/gcp-dataflow/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/gcp-dataflow/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "gcp-pipeline-orchestration",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/gcp-pipeline-orchestration/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/gcp-pipeline-orchestration/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "gcp-pipeline-resource-provisioning",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/gcp-pipeline-resource-provisioning/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/gcp-pipeline-resource-provisioning/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "gcp-spark",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/gcp-spark/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/gcp-spark/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "limitless-takeout-search",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/limitless-takeout-search/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/limitless-takeout-search/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "limitless-takeout-update",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/limitless-takeout-update/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/limitless-takeout-update/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "luminary-tech-radar",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/luminary-tech-radar/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/luminary-tech-radar/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "managing-python-dependencies",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/managing-python-dependencies/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/managing-python-dependencies/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "meeting-sync",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/meeting-sync/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/meeting-sync/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "meeting-sync-and-synthesis",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/meeting-sync-and-synthesis/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/meeting-sync-and-synthesis/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "ml-best-practices",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/ml-best-practices/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/ml-best-practices/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "notebook-guidance",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/notebook-guidance/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/notebook-guidance/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "op-credentials",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/op-credentials/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/op-credentials/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "process-umbrella-incoming",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/process-umbrella-incoming/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/process-umbrella-incoming/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "project-management-guru-adhd",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/project-management-guru-adhd/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/project-management-guru-adhd/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "reflexive-method-authoring-loop",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/reflexive-method-authoring-loop/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/reflexive-method-authoring-loop/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "skill-repair",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/skill-repair/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/skill-repair/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "specstory-guard",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/specstory-guard/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/specstory-guard/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "specstory-link-trail",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/specstory-link-trail/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/specstory-link-trail/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "specstory-organize",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/specstory-organize/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/specstory-organize/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "specstory-project-stats",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/specstory-project-stats/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/specstory-project-stats/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "specstory-session-summary",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/specstory-session-summary/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/specstory-session-summary/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "specstory-yak",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/specstory-yak/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/specstory-yak/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "tools-quickstart-bootstrap",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/tools-quickstart-bootstrap/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/tools-quickstart-bootstrap/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "wip-distill",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/wip-distill/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/wip-distill/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "wip-harvest",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/wip-harvest/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/wip-harvest/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "wip-publish",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/wip-publish/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "project_slug": "path-b6a8a1d1a55d",
       "relative_path": "mirrors/skills-snapshots/skills/wip-publish/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "daily-journal",
@@ -964,7 +2413,8 @@
       "project_root": "/Users/me/src/skill-eval/claude-adhd-skills",
       "project_slug": "github-com-ravila4-claude-adhd-skills",
       "relative_path": "skills/daily-journal/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "nudge",
@@ -972,7 +2422,8 @@
       "project_root": "/Users/me/src/skill-eval/claude-adhd-skills",
       "project_slug": "github-com-ravila4-claude-adhd-skills",
       "relative_path": "skills/nudge/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "obsidian-vault",
@@ -980,7 +2431,8 @@
       "project_root": "/Users/me/src/skill-eval/claude-adhd-skills",
       "project_slug": "github-com-ravila4-claude-adhd-skills",
       "relative_path": "skills/obsidian-vault/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     },
     {
       "skill": "test-driven-development",
@@ -988,7 +2440,16 @@
       "project_root": "/Users/me/src/skill-eval/claude-adhd-skills",
       "project_slug": "github-com-ravila4-claude-adhd-skills",
       "relative_path": "skills/test-driven-development/SKILL.md",
-      "layout": "project-skills-dir"
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     }
-  ]
+  ],
+  "summary": {
+    "by_classification": {
+      "authored": 81,
+      "vendor": 36,
+      "embedded": 40
+    },
+    "broken_symlinks": []
+  }
 }

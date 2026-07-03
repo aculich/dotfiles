@@ -2,61 +2,61 @@
   "version": 1,
   "skills": {
     "babysit": {
-      "lastSyncedAt": 1783055227891
+      "lastSyncedAt": 1783059772777
     },
     "canvas": {
-      "lastSyncedAt": 1783055227891
+      "lastSyncedAt": 1783059772777
     },
     "create-hook": {
-      "lastSyncedAt": 1783055227891
+      "lastSyncedAt": 1783059772777
     },
     "create-rule": {
-      "lastSyncedAt": 1783055227891
+      "lastSyncedAt": 1783059772777
     },
     "create-skill": {
-      "lastSyncedAt": 1783055227891
+      "lastSyncedAt": 1783059772777
     },
     "create-subagent": {
-      "lastSyncedAt": 1783055227891
+      "lastSyncedAt": 1783059772777
     },
     "migrate-to-skills": {
-      "lastSyncedAt": 1783055227891
+      "lastSyncedAt": 1783059772777
     },
     "shell": {
-      "lastSyncedAt": 1783055227891
+      "lastSyncedAt": 1783059772777
     },
     "statusline": {
-      "lastSyncedAt": 1783055227891
+      "lastSyncedAt": 1783059772777
     },
     "update-cli-config": {
-      "lastSyncedAt": 1783055227891
+      "lastSyncedAt": 1783059772777
     },
     "update-cursor-settings": {
-      "lastSyncedAt": 1783055227891
+      "lastSyncedAt": 1783059772777
     },
     "split-to-prs": {
-      "lastSyncedAt": 1783055227891
+      "lastSyncedAt": 1783059772777
     },
     "sdk": {
-      "lastSyncedAt": 1783055227891
+      "lastSyncedAt": 1783059772777
     },
     "loop": {
-      "lastSyncedAt": 1783055227891
+      "lastSyncedAt": 1783059772777
     },
     "automate": {
-      "lastSyncedAt": 1783055227891
+      "lastSyncedAt": 1783059772777
     },
     "review": {
-      "lastSyncedAt": 1783055227891
+      "lastSyncedAt": 1783059772777
     },
     "review-bugbot": {
-      "lastSyncedAt": 1783055227891
+      "lastSyncedAt": 1783059772777
     },
     "review-security": {
-      "lastSyncedAt": 1783055227891
+      "lastSyncedAt": 1783059772777
     },
     "onboard": {
-      "lastSyncedAt": 1783055227891
+      "lastSyncedAt": 1783059772777
     }
   },
   "lastInventoryAt": 1783010335124
