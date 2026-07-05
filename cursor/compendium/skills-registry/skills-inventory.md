@@ -1,16 +1,16 @@
 # Skills inventory (generated)
 
-Generated: 2026-07-03T06:35:54Z
+Generated: 2026-07-05T16:12:44Z
 
 ## Summary
 
-- **authored**: 81
-- **embedded**: 40
+- **authored**: 122
+- **embedded**: 80
 - **vendor**: 36
 
 ## Global
 
-### cursor-user (52)
+### cursor-user (73)
 
 - `accidental-data-loss-prevention` [authored] — `/Users/me/.cursor/skills/accidental-data-loss-prevention`
 - `adhd-daily-planner` [authored] — `/Users/me/.cursor/skills/adhd-daily-planner`
@@ -33,6 +33,8 @@ Generated: 2026-07-03T06:35:54Z
 - `deeplistening-session-analysis` [authored] — `/Users/me/.cursor/skills/deeplistening-session-analysis`
 - `developing-with-bigquery` [vendor] — `/Users/me/.cursor/skills/developing-with-bigquery`
 - `discovering-gcp-data-assets` [vendor] — `/Users/me/.cursor/skills/discovering-gcp-data-assets`
+- `embedded-captions` [embedded] (symlink) — `/Users/me/.cursor/skills/embedded-captions`
+- `faceless-explainer` [embedded] (symlink) — `/Users/me/.cursor/skills/faceless-explainer`
 - `fireflies-meeting-export` [authored] — `/Users/me/.cursor/skills/fireflies-meeting-export`
 - `gcloud-auth-verification` [vendor] — `/Users/me/.cursor/skills/gcloud-auth-verification`
 - `gcp-composer-troubleshooting` [vendor] — `/Users/me/.cursor/skills/gcp-composer-troubleshooting`
@@ -41,26 +43,45 @@ Generated: 2026-07-03T06:35:54Z
 - `gcp-pipeline-orchestration` [vendor] — `/Users/me/.cursor/skills/gcp-pipeline-orchestration`
 - `gcp-pipeline-resource-provisioning` [vendor] — `/Users/me/.cursor/skills/gcp-pipeline-resource-provisioning`
 - `gcp-spark` [vendor] — `/Users/me/.cursor/skills/gcp-spark`
+- `general-video` [embedded] (symlink) — `/Users/me/.cursor/skills/general-video`
+- `google-workspace-new-org` [authored] — `/Users/me/.cursor/skills/google-workspace-new-org`
+- `hyperframes` [embedded] (symlink) — `/Users/me/.cursor/skills/hyperframes`
+- `hyperframes-animation` [embedded] (symlink) — `/Users/me/.cursor/skills/hyperframes-animation`
+- `hyperframes-cli` [embedded] (symlink) — `/Users/me/.cursor/skills/hyperframes-cli`
+- `hyperframes-core` [embedded] (symlink) — `/Users/me/.cursor/skills/hyperframes-core`
+- `hyperframes-creative` [embedded] (symlink) — `/Users/me/.cursor/skills/hyperframes-creative`
+- `hyperframes-keyframes` [embedded] (symlink) — `/Users/me/.cursor/skills/hyperframes-keyframes`
+- `hyperframes-media` [embedded] (symlink) — `/Users/me/.cursor/skills/hyperframes-media`
+- `hyperframes-registry` [embedded] (symlink) — `/Users/me/.cursor/skills/hyperframes-registry`
 - `limitless-takeout-search` [authored] — `/Users/me/.cursor/skills/limitless-takeout-search`
 - `limitless-takeout-update` [authored] — `/Users/me/.cursor/skills/limitless-takeout-update`
 - `luminary-tech-radar` [authored] — `/Users/me/.cursor/skills/luminary-tech-radar`
 - `managing-python-dependencies` [vendor] — `/Users/me/.cursor/skills/managing-python-dependencies`
+- `media-use` [embedded] (symlink) — `/Users/me/.cursor/skills/media-use`
 - `meeting-sync` [authored] — `/Users/me/.cursor/skills/meeting-sync`
 - `meeting-sync-and-synthesis` [authored] — `/Users/me/.cursor/skills/meeting-sync-and-synthesis`
 - `ml-best-practices` [vendor] — `/Users/me/.cursor/skills/ml-best-practices`
+- `motion-graphics` [embedded] (symlink) — `/Users/me/.cursor/skills/motion-graphics`
+- `music-to-video` [embedded] (symlink) — `/Users/me/.cursor/skills/music-to-video`
 - `notebook-guidance` [vendor] — `/Users/me/.cursor/skills/notebook-guidance`
 - `op-credentials` [authored] — `/Users/me/.cursor/skills/op-credentials`
+- `pr-to-video` [embedded] (symlink) — `/Users/me/.cursor/skills/pr-to-video`
 - `process-umbrella-incoming` [authored] — `/Users/me/.cursor/skills/process-umbrella-incoming`
+- `product-launch-video` [embedded] (symlink) — `/Users/me/.cursor/skills/product-launch-video`
 - `project-management-guru-adhd` [authored] — `/Users/me/.cursor/skills/project-management-guru-adhd`
 - `reflexive-method-authoring-loop` [authored] — `/Users/me/.cursor/skills/reflexive-method-authoring-loop`
+- `remotion-to-hyperframes` [embedded] (symlink) — `/Users/me/.cursor/skills/remotion-to-hyperframes`
 - `skill-repair` [authored] — `/Users/me/.cursor/skills/skill-repair`
+- `slideshow` [embedded] (symlink) — `/Users/me/.cursor/skills/slideshow`
 - `specstory-guard` [authored] — `/Users/me/.cursor/skills/specstory-guard`
 - `specstory-link-trail` [authored] — `/Users/me/.cursor/skills/specstory-link-trail`
 - `specstory-organize` [authored] — `/Users/me/.cursor/skills/specstory-organize`
 - `specstory-project-stats` [authored] — `/Users/me/.cursor/skills/specstory-project-stats`
 - `specstory-session-summary` [authored] — `/Users/me/.cursor/skills/specstory-session-summary`
 - `specstory-yak` [authored] — `/Users/me/.cursor/skills/specstory-yak`
+- `talking-head-recut` [embedded] (symlink) — `/Users/me/.cursor/skills/talking-head-recut`
 - `tools-quickstart-bootstrap` [authored] — `/Users/me/.cursor/skills/tools-quickstart-bootstrap`
+- `website-to-video` [embedded] (symlink) — `/Users/me/.cursor/skills/website-to-video`
 - `wip-distill` [embedded] (symlink) — `/Users/me/.cursor/skills/wip-distill`
 - `wip-harvest` [embedded] (symlink) — `/Users/me/.cursor/skills/wip-harvest`
 - `wip-publish` [embedded] (symlink) — `/Users/me/.cursor/skills/wip-publish`
@@ -87,7 +108,7 @@ Generated: 2026-07-03T06:35:54Z
 - `update-cli-config` [vendor] — `/Users/me/.cursor/skills-cursor/update-cli-config`
 - `update-cursor-settings` [vendor] — `/Users/me/.cursor/skills-cursor/update-cursor-settings`
 
-### claude-user (38)
+### claude-user (58)
 
 - `accidental-data-loss-prevention` [embedded] (symlink) — `/Users/me/.claude/skills/accidental-data-loss-prevention`
 - `adhd-daily-planner` [embedded] (symlink) — `/Users/me/.claude/skills/adhd-daily-planner`
@@ -99,7 +120,10 @@ Generated: 2026-07-03T06:35:54Z
 - `compendium-discover-projects` [embedded] (symlink) — `/Users/me/.claude/skills/compendium-discover-projects`
 - `deeplistening-method-synthesis` [embedded] (symlink) — `/Users/me/.claude/skills/deeplistening-method-synthesis`
 - `deeplistening-session-analysis` [embedded] (symlink) — `/Users/me/.claude/skills/deeplistening-session-analysis`
+- `embedded-captions` [authored] — `/Users/me/.claude/skills/embedded-captions`
+- `faceless-explainer` [authored] — `/Users/me/.claude/skills/faceless-explainer`
 - `fireflies-meeting-export` [embedded] (symlink) — `/Users/me/.claude/skills/fireflies-meeting-export`
+- `general-video` [authored] — `/Users/me/.claude/skills/general-video`
 - `google-agents-cli-adk-code` [embedded] (symlink) — `/Users/me/.claude/skills/google-agents-cli-adk-code`
 - `google-agents-cli-deploy` [embedded] (symlink) — `/Users/me/.claude/skills/google-agents-cli-deploy`
 - `google-agents-cli-eval` [embedded] (symlink) — `/Users/me/.claude/skills/google-agents-cli-eval`
@@ -107,34 +131,71 @@ Generated: 2026-07-03T06:35:54Z
 - `google-agents-cli-publish` [embedded] (symlink) — `/Users/me/.claude/skills/google-agents-cli-publish`
 - `google-agents-cli-scaffold` [embedded] (symlink) — `/Users/me/.claude/skills/google-agents-cli-scaffold`
 - `google-agents-cli-workflow` [embedded] (symlink) — `/Users/me/.claude/skills/google-agents-cli-workflow`
+- `hyperframes` [authored] — `/Users/me/.claude/skills/hyperframes`
+- `hyperframes-animation` [authored] — `/Users/me/.claude/skills/hyperframes-animation`
+- `hyperframes-cli` [authored] — `/Users/me/.claude/skills/hyperframes-cli`
+- `hyperframes-core` [authored] — `/Users/me/.claude/skills/hyperframes-core`
+- `hyperframes-creative` [authored] — `/Users/me/.claude/skills/hyperframes-creative`
+- `hyperframes-keyframes` [authored] — `/Users/me/.claude/skills/hyperframes-keyframes`
+- `hyperframes-media` [authored] — `/Users/me/.claude/skills/hyperframes-media`
+- `hyperframes-registry` [authored] — `/Users/me/.claude/skills/hyperframes-registry`
 - `limitless-takeout-search` [embedded] (symlink) — `/Users/me/.claude/skills/limitless-takeout-search`
 - `limitless-takeout-update` [embedded] (symlink) — `/Users/me/.claude/skills/limitless-takeout-update`
 - `luminary-tech-radar` [embedded] (symlink) — `/Users/me/.claude/skills/luminary-tech-radar`
+- `media-use` [authored] — `/Users/me/.claude/skills/media-use`
 - `meeting-sync` [embedded] (symlink) — `/Users/me/.claude/skills/meeting-sync`
 - `meeting-sync-and-synthesis` [embedded] (symlink) — `/Users/me/.claude/skills/meeting-sync-and-synthesis`
+- `motion-graphics` [authored] — `/Users/me/.claude/skills/motion-graphics`
+- `music-to-video` [authored] — `/Users/me/.claude/skills/music-to-video`
 - `op-credentials` [embedded] (symlink) — `/Users/me/.claude/skills/op-credentials`
 - `portless` [embedded] (symlink) — `/Users/me/.claude/skills/portless`
+- `pr-to-video` [authored] — `/Users/me/.claude/skills/pr-to-video`
 - `process-umbrella-incoming` [embedded] (symlink) — `/Users/me/.claude/skills/process-umbrella-incoming`
+- `product-launch-video` [authored] — `/Users/me/.claude/skills/product-launch-video`
 - `project-management-guru-adhd` [embedded] (symlink) — `/Users/me/.claude/skills/project-management-guru-adhd`
 - `reflexive-method-authoring-loop` [embedded] (symlink) — `/Users/me/.claude/skills/reflexive-method-authoring-loop`
+- `remotion-to-hyperframes` [authored] — `/Users/me/.claude/skills/remotion-to-hyperframes`
 - `repo-evaluator` [authored] — `/Users/me/.claude/skills/repo-evaluator`
 - `setup-contextualizer` [authored] — `/Users/me/.claude/skills/setup-contextualizer`
 - `skill-repair` [embedded] (symlink) — `/Users/me/.claude/skills/skill-repair`
+- `slideshow` [authored] — `/Users/me/.claude/skills/slideshow`
 - `specstory-guard` [embedded] (symlink) — `/Users/me/.claude/skills/specstory-guard`
 - `specstory-link-trail` [embedded] (symlink) — `/Users/me/.claude/skills/specstory-link-trail`
 - `specstory-organize` [embedded] (symlink) — `/Users/me/.claude/skills/specstory-organize`
 - `specstory-project-stats` [embedded] (symlink) — `/Users/me/.claude/skills/specstory-project-stats`
 - `specstory-session-summary` [embedded] (symlink) — `/Users/me/.claude/skills/specstory-session-summary`
 - `specstory-yak` [embedded] (symlink) — `/Users/me/.claude/skills/specstory-yak`
+- `talking-head-recut` [authored] — `/Users/me/.claude/skills/talking-head-recut`
 - `tools-quickstart-bootstrap` [embedded] (symlink) — `/Users/me/.claude/skills/tools-quickstart-bootstrap`
+- `website-to-video` [authored] — `/Users/me/.claude/skills/website-to-video`
 
-### codex-user (3)
+### codex-user (23)
 
 - `dev-warmup` [authored] — `/Users/me/.codex/skills/dev-warmup`
 - `dynamic-dev-port` [authored] — `/Users/me/.codex/skills/dynamic-dev-port`
+- `embedded-captions` [embedded] (symlink) — `/Users/me/.codex/skills/embedded-captions`
+- `faceless-explainer` [embedded] (symlink) — `/Users/me/.codex/skills/faceless-explainer`
+- `general-video` [embedded] (symlink) — `/Users/me/.codex/skills/general-video`
+- `hyperframes` [embedded] (symlink) — `/Users/me/.codex/skills/hyperframes`
+- `hyperframes-animation` [embedded] (symlink) — `/Users/me/.codex/skills/hyperframes-animation`
+- `hyperframes-cli` [embedded] (symlink) — `/Users/me/.codex/skills/hyperframes-cli`
+- `hyperframes-core` [embedded] (symlink) — `/Users/me/.codex/skills/hyperframes-core`
+- `hyperframes-creative` [embedded] (symlink) — `/Users/me/.codex/skills/hyperframes-creative`
+- `hyperframes-keyframes` [embedded] (symlink) — `/Users/me/.codex/skills/hyperframes-keyframes`
+- `hyperframes-media` [embedded] (symlink) — `/Users/me/.codex/skills/hyperframes-media`
+- `hyperframes-registry` [embedded] (symlink) — `/Users/me/.codex/skills/hyperframes-registry`
+- `media-use` [embedded] (symlink) — `/Users/me/.codex/skills/media-use`
+- `motion-graphics` [embedded] (symlink) — `/Users/me/.codex/skills/motion-graphics`
+- `music-to-video` [embedded] (symlink) — `/Users/me/.codex/skills/music-to-video`
 - `op-credentials` [authored] — `/Users/me/.codex/skills/op-credentials`
+- `pr-to-video` [embedded] (symlink) — `/Users/me/.codex/skills/pr-to-video`
+- `product-launch-video` [embedded] (symlink) — `/Users/me/.codex/skills/product-launch-video`
+- `remotion-to-hyperframes` [embedded] (symlink) — `/Users/me/.codex/skills/remotion-to-hyperframes`
+- `slideshow` [embedded] (symlink) — `/Users/me/.codex/skills/slideshow`
+- `talking-head-recut` [embedded] (symlink) — `/Users/me/.codex/skills/talking-head-recut`
+- `website-to-video` [embedded] (symlink) — `/Users/me/.codex/skills/website-to-video`
 
-### agents (45)
+### agents (65)
 
 - `accidental-data-loss-prevention` [authored] — `/Users/me/.agents/skills/accidental-data-loss-prevention`
 - `adhd-daily-planner` [authored] — `/Users/me/.agents/skills/adhd-daily-planner`
@@ -146,8 +207,11 @@ Generated: 2026-07-03T06:35:54Z
 - `compendium-discover-projects` [authored] — `/Users/me/.agents/skills/compendium-discover-projects`
 - `deeplistening-method-synthesis` [authored] — `/Users/me/.agents/skills/deeplistening-method-synthesis`
 - `deeplistening-session-analysis` [authored] — `/Users/me/.agents/skills/deeplistening-session-analysis`
+- `embedded-captions` [authored] — `/Users/me/.agents/skills/embedded-captions`
+- `faceless-explainer` [authored] — `/Users/me/.agents/skills/faceless-explainer`
 - `find-skills` [authored] — `/Users/me/.agents/skills/find-skills`
 - `fireflies-meeting-export` [authored] — `/Users/me/.agents/skills/fireflies-meeting-export`
+- `general-video` [authored] — `/Users/me/.agents/skills/general-video`
 - `google-agents-cli-adk-code` [authored] — `/Users/me/.agents/skills/google-agents-cli-adk-code`
 - `google-agents-cli-deploy` [authored] — `/Users/me/.agents/skills/google-agents-cli-deploy`
 - `google-agents-cli-eval` [authored] — `/Users/me/.agents/skills/google-agents-cli-eval`
@@ -155,22 +219,37 @@ Generated: 2026-07-03T06:35:54Z
 - `google-agents-cli-publish` [authored] — `/Users/me/.agents/skills/google-agents-cli-publish`
 - `google-agents-cli-scaffold` [authored] — `/Users/me/.agents/skills/google-agents-cli-scaffold`
 - `google-agents-cli-workflow` [authored] — `/Users/me/.agents/skills/google-agents-cli-workflow`
+- `hyperframes` [authored] — `/Users/me/.agents/skills/hyperframes`
+- `hyperframes-animation` [authored] — `/Users/me/.agents/skills/hyperframes-animation`
+- `hyperframes-cli` [authored] — `/Users/me/.agents/skills/hyperframes-cli`
+- `hyperframes-core` [authored] — `/Users/me/.agents/skills/hyperframes-core`
+- `hyperframes-creative` [authored] — `/Users/me/.agents/skills/hyperframes-creative`
+- `hyperframes-keyframes` [authored] — `/Users/me/.agents/skills/hyperframes-keyframes`
+- `hyperframes-media` [authored] — `/Users/me/.agents/skills/hyperframes-media`
+- `hyperframes-registry` [authored] — `/Users/me/.agents/skills/hyperframes-registry`
 - `limitless-takeout-search` [authored] — `/Users/me/.agents/skills/limitless-takeout-search`
 - `limitless-takeout-update` [authored] — `/Users/me/.agents/skills/limitless-takeout-update`
 - `luminary-tech-radar` [authored] — `/Users/me/.agents/skills/luminary-tech-radar`
+- `media-use` [authored] — `/Users/me/.agents/skills/media-use`
 - `meeting-sync` [authored] — `/Users/me/.agents/skills/meeting-sync`
 - `meeting-sync-and-synthesis` [authored] — `/Users/me/.agents/skills/meeting-sync-and-synthesis`
+- `motion-graphics` [authored] — `/Users/me/.agents/skills/motion-graphics`
+- `music-to-video` [authored] — `/Users/me/.agents/skills/music-to-video`
 - `op-credentials` [authored] — `/Users/me/.agents/skills/op-credentials`
 - `paper-fetch` [authored] — `/Users/me/.agents/skills/paper-fetch`
 - `perks` [authored] — `/Users/me/.agents/skills/perks`
 - `portless` [authored] — `/Users/me/.agents/skills/portless`
+- `pr-to-video` [authored] — `/Users/me/.agents/skills/pr-to-video`
 - `process-umbrella-incoming` [authored] — `/Users/me/.agents/skills/process-umbrella-incoming`
+- `product-launch-video` [authored] — `/Users/me/.agents/skills/product-launch-video`
 - `project-management-guru-adhd` [authored] — `/Users/me/.agents/skills/project-management-guru-adhd`
 - `pubmed-database` [authored] — `/Users/me/.agents/skills/pubmed-database`
 - `reflexive-method-authoring-loop` [authored] — `/Users/me/.agents/skills/reflexive-method-authoring-loop`
+- `remotion-to-hyperframes` [authored] — `/Users/me/.agents/skills/remotion-to-hyperframes`
 - `repo-story-time` [authored] — `/Users/me/.agents/skills/repo-story-time`
 - `repomix-explorer` [authored] — `/Users/me/.agents/skills/repomix-explorer`
 - `skill-repair` [authored] — `/Users/me/.agents/skills/skill-repair`
+- `slideshow` [authored] — `/Users/me/.agents/skills/slideshow`
 - `sofa` [authored] — `/Users/me/.agents/skills/sofa`
 - `sofa-contribute` [authored] — `/Users/me/.agents/skills/sofa-contribute`
 - `sofa-status` [authored] — `/Users/me/.agents/skills/sofa-status`
@@ -180,7 +259,9 @@ Generated: 2026-07-03T06:35:54Z
 - `specstory-project-stats` [authored] — `/Users/me/.agents/skills/specstory-project-stats`
 - `specstory-session-summary` [authored] — `/Users/me/.agents/skills/specstory-session-summary`
 - `specstory-yak` [authored] — `/Users/me/.agents/skills/specstory-yak`
+- `talking-head-recut` [authored] — `/Users/me/.agents/skills/talking-head-recut`
 - `tools-quickstart-bootstrap` [authored] — `/Users/me/.agents/skills/tools-quickstart-bootstrap`
+- `website-to-video` [authored] — `/Users/me/.agents/skills/website-to-video`
 
 ## Project-local (56)
 

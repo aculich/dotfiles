@@ -4,6 +4,26 @@ note: symlinked skills are dereferenced (real content copied into mirror)
 
 ## symlinked skills at snapshot time
 /Users/me/.cursor/skills/cidr-letterhead -> /Users/me/projects/cidr-org/library__cidrlab/.cursor/skills/cidr-letterhead
+/Users/me/.cursor/skills/embedded-captions -> ../../.claude/skills/embedded-captions
+/Users/me/.cursor/skills/faceless-explainer -> ../../.claude/skills/faceless-explainer
+/Users/me/.cursor/skills/general-video -> ../../.claude/skills/general-video
+/Users/me/.cursor/skills/hyperframes -> ../../.claude/skills/hyperframes
+/Users/me/.cursor/skills/hyperframes-animation -> ../../.claude/skills/hyperframes-animation
+/Users/me/.cursor/skills/hyperframes-cli -> ../../.claude/skills/hyperframes-cli
+/Users/me/.cursor/skills/hyperframes-core -> ../../.claude/skills/hyperframes-core
+/Users/me/.cursor/skills/hyperframes-creative -> ../../.claude/skills/hyperframes-creative
+/Users/me/.cursor/skills/hyperframes-keyframes -> ../../.claude/skills/hyperframes-keyframes
+/Users/me/.cursor/skills/hyperframes-media -> ../../.claude/skills/hyperframes-media
+/Users/me/.cursor/skills/hyperframes-registry -> ../../.claude/skills/hyperframes-registry
+/Users/me/.cursor/skills/media-use -> ../../.claude/skills/media-use
+/Users/me/.cursor/skills/motion-graphics -> ../../.claude/skills/motion-graphics
+/Users/me/.cursor/skills/music-to-video -> ../../.claude/skills/music-to-video
+/Users/me/.cursor/skills/pr-to-video -> ../../.claude/skills/pr-to-video
+/Users/me/.cursor/skills/product-launch-video -> ../../.claude/skills/product-launch-video
+/Users/me/.cursor/skills/remotion-to-hyperframes -> ../../.claude/skills/remotion-to-hyperframes
+/Users/me/.cursor/skills/slideshow -> ../../.claude/skills/slideshow
+/Users/me/.cursor/skills/talking-head-recut -> ../../.claude/skills/talking-head-recut
+/Users/me/.cursor/skills/website-to-video -> ../../.claude/skills/website-to-video
 /Users/me/.cursor/skills/wip-distill -> /Users/me/projects/peeq-voicegen-audiocast/skills/wip-distill
 /Users/me/.cursor/skills/wip-harvest -> /Users/me/projects/peeq-voicegen-audiocast/skills/wip-harvest
 /Users/me/.cursor/skills/wip-publish -> /Users/me/projects/peeq-voicegen-audiocast/skills/wip-publish

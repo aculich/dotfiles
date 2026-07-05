@@ -180,9 +180,30 @@ Also: **`listProposals`** / proposal sessions apply to **write** flows only — 
 Run **after Phase 1-local** (local copy is faster and has no network dependency).
 
 1. Resolve `user_id` from **conventions** (email or Zoom user id).
-2. `list_recordings` with `from` / `to` (`yyyy-MM-dd`), paginate with `next_page_token` if needed.
-3. For each relevant recording: `download_cloud_recording_file` (or `get_meeting_recordings` + download) for **text only** — `audio_transcript.vtt`, chat `.txt` — into **`raw/zoom_cloud/`**. **Never** commit share/play URLs with embedded tokens.
-4. Log gaps in **`sync_manifest.json`** when cloud transcript is missing but local CC exists.
+2. `list_recordings` with `from` / `to` (`yyyy-MM-dd`), paginate with `next_page_token` if needed. Use `get_meeting_recordings` when you already have a meeting id/uuid.
+3. For each relevant recording, download **every text artifact** from `recording_files[]` into **`raw/zoom_cloud/`** using **`download_cloud_recording_file`** with explicit **`recording_file_id`** per file (preferred over `prefer_file_type` alone when a meeting has many files). Text types to mirror:
+   - **`TRANSCRIPT`** → `audio_transcript.vtt` (canonical when present)
+   - **`CHAT`** → `chat.txt`
+   - **`TIMELINE`** → `timeline.json`
+   - **`SUMMARY`** → `summary.json` (AI summary JSON when Zoom attaches it to cloud recording)
+   - **`CC`** → closed-caption VTT when present
+   - **Never** download MP4/M4A or commit share/play URLs with embedded tokens.
+4. If `recording_file_id` download fails with `no_download_url`, retry with **`prefer_file_type`** (e.g. `TRANSCRIPT`) or refresh via `get_meeting_recordings` first.
+5. Log gaps in **`sync_manifest.json`** when cloud transcript is missing but local CC exists.
+
+**Note:** `download_cloud_recording_file`'s `prefer_file_type` enum may omit `SUMMARY`; always use **`recording_file_id`** from the listing for SUMMARY files.
+
+### Zoom AI Companion notes (no Granola)
+
+When Granola was **not** used but Zoom AI Companion generated templated meeting notes (Quick recap / Next steps / Summary sections), persist the full notes body — do **not** rely on transcript alone.
+
+**Acquisition order (bits-first, no processing scripts):**
+
+1. **`list_recordings` / `get_meeting_recordings`** — check `recording_files[]` for **`file_type: SUMMARY`**; download via **`recording_file_id`** to **`raw/zoom_cloud/summary.json`** (or promote markdown if JSON contains it).
+2. **Repo `incoming/`** — scan for exported `.md` with Zoom task links (`tasks.zoom.us?meetingId=…`) or matching date/title; copy to **`raw/zoom_notes/ai_companion_notes.md`**; refile source to **`incoming/processed/YYYY-MM/`** after mirror.
+3. **Gap:** Zoom REST **`GET /meetings/{uuid}/meeting_summary`** returns **`summary_content`** (markdown) but is **not** exposed in typical Zoom MCP servers today — record in **`sync_manifest.json` `gaps[]`** when neither (1) nor (2) yields notes.
+
+Declare **`raw/zoom_notes/ai_companion_notes.md`** (or cloud SUMMARY) as canonical for recap/action items in **`notes_info.md`**. Cloud VTT remains canonical for diarized quotes.
 
 ### Git (each upstream clone listed in conventions)
 
@@ -230,7 +251,8 @@ Default when conventions set **`mirror_layout: unified_raw`** (Tana co-located w
 <granola_root>/<namespace>/<meetingId>_<SanitizedTitle>_<YYYY-MM-DD>/
   raw/
     zoom_local/       # Phase 1-local copies
-    zoom_cloud/       # Phase 1-mcp VTT + chat
+    zoom_cloud/       # Phase 1-mcp VTT + chat + timeline + SUMMARY when present
+    zoom_notes/       # AI Companion notes export (when no Granola)
     granola/          # private_notes.md, ai_summary.md, transcript_granola.txt
     tana/             # tana_event.json, tana_summary.md, transcript_tana.txt, debug/<uri_slug>/, artifacts/
     incoming/         # operator drops (.md notes)
@@ -243,6 +265,24 @@ Default when conventions set **`mirror_layout: unified_raw`** (Tana co-located w
 **`raw/` is immutable** — promoted/normalized files at mirror root may duplicate pointers but must not replace raw copies.
 
 Legacy split layout (`zoom-transcripts/` + flat granola folder) remains supported when conventions omit `unified_raw`.
+
+### Zoom-only minimal layout (no `.context/conventions.md`)
+
+When the repo has **no** `.context/conventions.md` / Granola / Tana paths and the user wants a simple Zoom ingest, default to:
+
+```
+<repo_root>/meeting-notes/<YYYY-MM-DD>_<SanitizedTitle>/
+  raw/
+    zoom_local/
+    zoom_cloud/
+    zoom_notes/       # ai_companion_notes.md when exported from Zoom
+  transcript.txt      # straight copy of cloud VTT (no conversion)
+  notes_info.md
+  sync_manifest.json
+  metadata.json
+```
+
+Use shell **`cp`** + Zoom MCP **`download_cloud_recording_file`** only — no custom processing scripts. Skip Granola/Tana MCP phases; document skipped sources in **`sync_manifest.json` `gaps[]`**.
 
 1. **Unified / Granola mirror:** `<granola_root>/<namespace>/<uuid-prefix>_<SanitizedTitle>_<MonDDYYYY>/` with:
    - **`private_notes.md`** — full note body from **`get_meetings`** (required).
@@ -332,6 +372,7 @@ Adjust wording to match your team’s facilitation docs if they define PALEO dif
 | `get_meeting_transcript` | `transcript_granola.txt` | Granola-native ASR stream; parallel to Zoom/Tana ASR if both exist. |
 | Tana `readFullTranscript` | `transcript_tana.txt` | Speaker-attributed; parallel to Zoom/Granola. |
 | Zoom `audio_transcript` etc. | `transcript.txt` | Often canonical diarized quotes — declare in `notes_info.md`. |
+| Zoom AI Companion notes (export or SUMMARY) | `raw/zoom_notes/ai_companion_notes.md` | Recap + action items when Granola absent; manual export or cloud `SUMMARY` JSON. |
 | Combined provenance | `metadata.json`, `sync_manifest.json`, `notes_info.md` | URLs, limits (screenshots), which transcript is canonical. |
 
 Projects may rename files via `.context/conventions.md` but must preserve the **same five text artifacts** for Granola mirrors: private notes body, AI summary, Granola transcript, canonical readable transcript policy, and provenance bundle. When Tana is in scope, add **`tana_event.json`**, **`tana_summary.md`**, and **`transcript_tana.txt`** (or document why a source was unavailable).
@@ -396,6 +437,20 @@ When Tana adds MCP tools for edit history or diffs, extend this table and the de
 | `*.vtt` (if saved locally) | `raw/zoom_local/<filename>.vtt` |
 
 Match folder: `~/Documents/Zoom/<YYYY-MM-DD> … <title>/`.
+
+## Appendix G — Zoom cloud `recording_files[]` text types (reference)
+
+| `file_type` | Typical mirror path | Notes |
+|-------------|---------------------|-------|
+| `TRANSCRIPT` | `raw/zoom_cloud/audio_transcript.vtt` | Cloud ASR; usually canonical over local live transcript. |
+| `CHAT` | `raw/zoom_cloud/chat.txt` | In-meeting chat log. |
+| `TIMELINE` | `raw/zoom_cloud/timeline.json` | Speaker/timeline metadata. |
+| `SUMMARY` | `raw/zoom_cloud/summary.json` | AI summary JSON when attached to recording (not always present). |
+| `CC` | `raw/zoom_cloud/closed_caption.vtt` | Closed captions when separate from TRANSCRIPT. |
+
+Download each via **`recording_file_id`** from `list_recordings` / `get_meeting_recordings`. For AI Companion markdown notes not in cloud recording, see **Zoom AI Companion notes (no Granola)** above.
+
+**Not in Zoom MCP today:** `GET /meetings/{uuid}/meeting_summary` → `summary_content` (requires MCP server enhancement).
 
 ## Automation (`just` + CLIs)
 
