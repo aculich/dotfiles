@@ -53,7 +53,7 @@
   "git.autofetch": false,
   "claudeCode.preferredLocation": "panel",
   "specstory.derivedRules.enabled": false,
-  "workbench.colorTheme": "Default Light+",
+  "workbench.colorTheme": "Default Dark+",
   "zenMode.restore": false,
   "terminal.integrated.persistentSessionReviveProcess": "never",
   "codegenPreflight.anthropicApiKey": "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",
