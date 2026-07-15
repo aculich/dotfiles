@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-06T12:30:44Z",
+  "generated": "2026-07-15T03:53:47Z",
   "compendium_root": "/Users/me/dotfiles/cursor/compendium",
   "monorepo_root": "/Users/me/projects/agent-skills",
   "global": {
@@ -41,6 +41,18 @@
         "name": "adhdev-engineering-partnership"
       },
       {
+        "id": "agents-sdk",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
+        "path": "/Users/me/.cursor/skills/agents-sdk",
+        "resolved_path": "/Users/me/.cursor/skills/agents-sdk",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "agents-sdk"
+      },
+      {
         "id": "bigquery-data-transfer-service",
         "classification": "vendor",
         "lifecycle": "curated",
@@ -51,6 +63,18 @@
         "symlink_ok": true,
         "version": "v1",
         "name": "bigquery-data-transfer-service"
+      },
+      {
+        "id": "bootstrap-collaborator",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
+        "path": "/Users/me/.cursor/skills/bootstrap-collaborator",
+        "resolved_path": "/Users/me/.cursor/skills/bootstrap-collaborator",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "bootstrap-collaborator"
       },
       {
         "id": "bootstrap-new-project",
@@ -137,17 +161,64 @@
         "name": "cidr-bootstrap-project"
       },
       {
-        "id": "cidr-letterhead",
-        "classification": "embedded",
+        "id": "cloudflare",
+        "classification": "authored",
         "lifecycle": "curated",
         "tier": "cursor-user",
-        "path": "/Users/me/.cursor/skills/cidr-letterhead",
-        "resolved_path": "/Users/me/projects/cidr-org/library__cidrlab/.cursor/skills/cidr-letterhead",
-        "is_symlink": true,
+        "path": "/Users/me/.cursor/skills/cloudflare",
+        "resolved_path": "/Users/me/.cursor/skills/cloudflare",
+        "is_symlink": false,
         "symlink_ok": true,
         "version": null,
-        "name": "cidr-letterhead",
-        "symlink_target": "/Users/me/projects/cidr-org/library__cidrlab/.cursor/skills/cidr-letterhead"
+        "name": "cloudflare"
+      },
+      {
+        "id": "cloudflare-email-service",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
+        "path": "/Users/me/.cursor/skills/cloudflare-email-service",
+        "resolved_path": "/Users/me/.cursor/skills/cloudflare-email-service",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "cloudflare-email-service"
+      },
+      {
+        "id": "cloudflare-one",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
+        "path": "/Users/me/.cursor/skills/cloudflare-one",
+        "resolved_path": "/Users/me/.cursor/skills/cloudflare-one",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "cloudflare-one"
+      },
+      {
+        "id": "cloudflare-one-migrations",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
+        "path": "/Users/me/.cursor/skills/cloudflare-one-migrations",
+        "resolved_path": "/Users/me/.cursor/skills/cloudflare-one-migrations",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "cloudflare-one-migrations"
+      },
+      {
+        "id": "collab-sync",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
+        "path": "/Users/me/.cursor/skills/collab-sync",
+        "resolved_path": "/Users/me/.cursor/skills/collab-sync",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "collab-sync"
       },
       {
         "id": "compendium-discover-projects",
@@ -246,6 +317,18 @@
         "name": "developing-with-bigquery"
       },
       {
+        "id": "discover-channel",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
+        "path": "/Users/me/.cursor/skills/discover-channel",
+        "resolved_path": "/Users/me/.cursor/skills/discover-channel",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "discover-channel"
+      },
+      {
         "id": "discovering-gcp-data-assets",
         "classification": "vendor",
         "lifecycle": "curated",
@@ -256,6 +339,18 @@
         "symlink_ok": true,
         "version": "v4",
         "name": "discovering-gcp-data-assets"
+      },
+      {
+        "id": "durable-objects",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
+        "path": "/Users/me/.cursor/skills/durable-objects",
+        "resolved_path": "/Users/me/.cursor/skills/durable-objects",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "durable-objects"
       },
       {
         "id": "embedded-captions",
@@ -571,15 +666,16 @@
       },
       {
         "id": "meeting-sync",
-        "classification": "authored",
+        "classification": "embedded",
         "lifecycle": "curated",
         "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/meeting-sync",
-        "resolved_path": "/Users/me/.cursor/skills/meeting-sync",
-        "is_symlink": false,
+        "resolved_path": "/Users/me/.agents/skills/meeting-sync",
+        "is_symlink": true,
         "symlink_ok": true,
         "version": null,
-        "name": "meeting-sync"
+        "name": "meeting-sync",
+        "symlink_target": "/Users/me/.agents/skills/meeting-sync"
       },
       {
         "id": "meeting-sync-and-synthesis",
@@ -592,6 +688,30 @@
         "symlink_ok": true,
         "version": null,
         "name": "meeting-sync-and-synthesis"
+      },
+      {
+        "id": "meeting-sync.stale-2026-07-06",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
+        "path": "/Users/me/.cursor/skills/meeting-sync.stale-2026-07-06",
+        "resolved_path": "/Users/me/.cursor/skills/meeting-sync.stale-2026-07-06",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "meeting-sync"
+      },
+      {
+        "id": "message-in-a-bottle",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
+        "path": "/Users/me/.cursor/skills/message-in-a-bottle",
+        "resolved_path": "/Users/me/.cursor/skills/message-in-a-bottle",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "message-in-a-bottle"
       },
       {
         "id": "ml-best-practices",
@@ -706,6 +826,18 @@
         "name": "project-management-guru-adhd"
       },
       {
+        "id": "quick-stash",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
+        "path": "/Users/me/.cursor/skills/quick-stash",
+        "resolved_path": "/Users/me/.cursor/skills/quick-stash",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "quick-stash"
+      },
+      {
         "id": "reflexive-method-authoring-loop",
         "classification": "authored",
         "lifecycle": "curated",
@@ -729,6 +861,54 @@
         "version": null,
         "name": "remotion-to-hyperframes",
         "symlink_target": "../../.claude/skills/remotion-to-hyperframes"
+      },
+      {
+        "id": "report-reforge",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
+        "path": "/Users/me/.cursor/skills/report-reforge",
+        "resolved_path": "/Users/me/.cursor/skills/report-reforge",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "report-reforge"
+      },
+      {
+        "id": "rowboat-safe-startup",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
+        "path": "/Users/me/.cursor/skills/rowboat-safe-startup",
+        "resolved_path": "/Users/me/.cursor/skills/rowboat-safe-startup",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "rowboat-safe-startup"
+      },
+      {
+        "id": "rowboat-upstream-digest",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
+        "path": "/Users/me/.cursor/skills/rowboat-upstream-digest",
+        "resolved_path": "/Users/me/.cursor/skills/rowboat-upstream-digest",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "rowboat-upstream-digest"
+      },
+      {
+        "id": "sandbox-sdk",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
+        "path": "/Users/me/.cursor/skills/sandbox-sdk",
+        "resolved_path": "/Users/me/.cursor/skills/sandbox-sdk",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "sandbox-sdk"
       },
       {
         "id": "skill-repair",
@@ -841,6 +1021,30 @@
         "symlink_target": "../../.claude/skills/talking-head-recut"
       },
       {
+        "id": "tidy-stash",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
+        "path": "/Users/me/.cursor/skills/tidy-stash",
+        "resolved_path": "/Users/me/.cursor/skills/tidy-stash",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "tidy-stash"
+      },
+      {
+        "id": "tool-landscape-intel",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
+        "path": "/Users/me/.cursor/skills/tool-landscape-intel",
+        "resolved_path": "/Users/me/.cursor/skills/tool-landscape-intel",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "tool-landscape-intel"
+      },
+      {
         "id": "tools-quickstart-bootstrap",
         "classification": "authored",
         "lifecycle": "curated",
@@ -851,6 +1055,30 @@
         "symlink_ok": true,
         "version": null,
         "name": "tools-quickstart-bootstrap"
+      },
+      {
+        "id": "turnstile-spin",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
+        "path": "/Users/me/.cursor/skills/turnstile-spin",
+        "resolved_path": "/Users/me/.cursor/skills/turnstile-spin",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "turnstile-spin"
+      },
+      {
+        "id": "web-perf",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
+        "path": "/Users/me/.cursor/skills/web-perf",
+        "resolved_path": "/Users/me/.cursor/skills/web-perf",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "web-perf"
       },
       {
         "id": "website-to-video",
@@ -903,6 +1131,30 @@
         "version": null,
         "name": "wip-publish",
         "symlink_target": "/Users/me/projects/peeq-voicegen-audiocast/skills/wip-publish"
+      },
+      {
+        "id": "workers-best-practices",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
+        "path": "/Users/me/.cursor/skills/workers-best-practices",
+        "resolved_path": "/Users/me/.cursor/skills/workers-best-practices",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "workers-best-practices"
+      },
+      {
+        "id": "wrangler",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
+        "path": "/Users/me/.cursor/skills/wrangler",
+        "resolved_path": "/Users/me/.cursor/skills/wrangler",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "wrangler"
       }
     ],
     "cursor-managed": [
@@ -1176,6 +1428,18 @@
         "symlink_target": "../../.agents/skills/adhdev-engineering-partnership"
       },
       {
+        "id": "agents-sdk",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/agents-sdk",
+        "resolved_path": "/Users/me/.claude/skills/agents-sdk",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "agents-sdk"
+      },
+      {
         "id": "bootstrap-tool-config-repo",
         "classification": "embedded",
         "lifecycle": "curated",
@@ -1228,6 +1492,54 @@
         "symlink_target": "../../.agents/skills/cidr-bootstrap-project"
       },
       {
+        "id": "cloudflare",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/cloudflare",
+        "resolved_path": "/Users/me/.claude/skills/cloudflare",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "cloudflare"
+      },
+      {
+        "id": "cloudflare-email-service",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/cloudflare-email-service",
+        "resolved_path": "/Users/me/.claude/skills/cloudflare-email-service",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "cloudflare-email-service"
+      },
+      {
+        "id": "cloudflare-one",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/cloudflare-one",
+        "resolved_path": "/Users/me/.claude/skills/cloudflare-one",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "cloudflare-one"
+      },
+      {
+        "id": "cloudflare-one-migrations",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/cloudflare-one-migrations",
+        "resolved_path": "/Users/me/.claude/skills/cloudflare-one-migrations",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "cloudflare-one-migrations"
+      },
+      {
         "id": "compendium-discover-projects",
         "classification": "embedded",
         "lifecycle": "curated",
@@ -1265,6 +1577,18 @@
         "version": null,
         "name": "deeplistening-session-analysis",
         "symlink_target": "../../.agents/skills/deeplistening-session-analysis"
+      },
+      {
+        "id": "durable-objects",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/durable-objects",
+        "resolved_path": "/Users/me/.claude/skills/durable-objects",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "durable-objects"
       },
       {
         "id": "embedded-captions",
@@ -1717,6 +2041,18 @@
         "name": "repo-evaluator"
       },
       {
+        "id": "sandbox-sdk",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/sandbox-sdk",
+        "resolved_path": "/Users/me/.claude/skills/sandbox-sdk",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "sandbox-sdk"
+      },
+      {
         "id": "setup-contextualizer",
         "classification": "authored",
         "lifecycle": "curated",
@@ -1857,6 +2193,30 @@
         "symlink_target": "../../.agents/skills/tools-quickstart-bootstrap"
       },
       {
+        "id": "turnstile-spin",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/turnstile-spin",
+        "resolved_path": "/Users/me/.claude/skills/turnstile-spin",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "turnstile-spin"
+      },
+      {
+        "id": "web-perf",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/web-perf",
+        "resolved_path": "/Users/me/.claude/skills/web-perf",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "web-perf"
+      },
+      {
         "id": "website-to-video",
         "classification": "authored",
         "lifecycle": "curated",
@@ -1867,9 +2227,93 @@
         "symlink_ok": true,
         "version": null,
         "name": "website-to-video"
+      },
+      {
+        "id": "workers-best-practices",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/workers-best-practices",
+        "resolved_path": "/Users/me/.claude/skills/workers-best-practices",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "workers-best-practices"
+      },
+      {
+        "id": "wrangler",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/wrangler",
+        "resolved_path": "/Users/me/.claude/skills/wrangler",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "wrangler"
       }
     ],
     "codex-user": [
+      {
+        "id": "agents-sdk",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "codex-user",
+        "path": "/Users/me/.codex/skills/agents-sdk",
+        "resolved_path": "/Users/me/.codex/skills/agents-sdk",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "agents-sdk"
+      },
+      {
+        "id": "cloudflare",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "codex-user",
+        "path": "/Users/me/.codex/skills/cloudflare",
+        "resolved_path": "/Users/me/.codex/skills/cloudflare",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "cloudflare"
+      },
+      {
+        "id": "cloudflare-email-service",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "codex-user",
+        "path": "/Users/me/.codex/skills/cloudflare-email-service",
+        "resolved_path": "/Users/me/.codex/skills/cloudflare-email-service",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "cloudflare-email-service"
+      },
+      {
+        "id": "cloudflare-one",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "codex-user",
+        "path": "/Users/me/.codex/skills/cloudflare-one",
+        "resolved_path": "/Users/me/.codex/skills/cloudflare-one",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "cloudflare-one"
+      },
+      {
+        "id": "cloudflare-one-migrations",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "codex-user",
+        "path": "/Users/me/.codex/skills/cloudflare-one-migrations",
+        "resolved_path": "/Users/me/.codex/skills/cloudflare-one-migrations",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "cloudflare-one-migrations"
+      },
       {
         "id": "dev-warmup",
         "classification": "authored",
@@ -1881,6 +2325,18 @@
         "symlink_ok": true,
         "version": null,
         "name": "dev-warmup"
+      },
+      {
+        "id": "durable-objects",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "codex-user",
+        "path": "/Users/me/.codex/skills/durable-objects",
+        "resolved_path": "/Users/me/.codex/skills/durable-objects",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "durable-objects"
       },
       {
         "id": "dynamic-dev-port",
@@ -2128,6 +2584,18 @@
         "symlink_target": "../../.claude/skills/remotion-to-hyperframes"
       },
       {
+        "id": "sandbox-sdk",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "codex-user",
+        "path": "/Users/me/.codex/skills/sandbox-sdk",
+        "resolved_path": "/Users/me/.codex/skills/sandbox-sdk",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "sandbox-sdk"
+      },
+      {
         "id": "slideshow",
         "classification": "embedded",
         "lifecycle": "curated",
@@ -2154,6 +2622,30 @@
         "symlink_target": "../../.claude/skills/talking-head-recut"
       },
       {
+        "id": "turnstile-spin",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "codex-user",
+        "path": "/Users/me/.codex/skills/turnstile-spin",
+        "resolved_path": "/Users/me/.codex/skills/turnstile-spin",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "turnstile-spin"
+      },
+      {
+        "id": "web-perf",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "codex-user",
+        "path": "/Users/me/.codex/skills/web-perf",
+        "resolved_path": "/Users/me/.codex/skills/web-perf",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "web-perf"
+      },
+      {
         "id": "website-to-video",
         "classification": "embedded",
         "lifecycle": "curated",
@@ -2165,6 +2657,30 @@
         "version": null,
         "name": "website-to-video",
         "symlink_target": "../../.claude/skills/website-to-video"
+      },
+      {
+        "id": "workers-best-practices",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "codex-user",
+        "path": "/Users/me/.codex/skills/workers-best-practices",
+        "resolved_path": "/Users/me/.codex/skills/workers-best-practices",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "workers-best-practices"
+      },
+      {
+        "id": "wrangler",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "codex-user",
+        "path": "/Users/me/.codex/skills/wrangler",
+        "resolved_path": "/Users/me/.codex/skills/wrangler",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "wrangler"
       }
     ],
     "agents": [
@@ -2203,6 +2719,18 @@
         "symlink_ok": true,
         "version": null,
         "name": "adhdev-engineering-partnership"
+      },
+      {
+        "id": "agents-sdk",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/agents-sdk",
+        "resolved_path": "/Users/me/.agents/skills/agents-sdk",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "agents-sdk"
       },
       {
         "id": "bootstrap-tool-config-repo",
@@ -2253,6 +2781,54 @@
         "name": "cidr-bootstrap-project"
       },
       {
+        "id": "cloudflare",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/cloudflare",
+        "resolved_path": "/Users/me/.agents/skills/cloudflare",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "cloudflare"
+      },
+      {
+        "id": "cloudflare-email-service",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/cloudflare-email-service",
+        "resolved_path": "/Users/me/.agents/skills/cloudflare-email-service",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "cloudflare-email-service"
+      },
+      {
+        "id": "cloudflare-one",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/cloudflare-one",
+        "resolved_path": "/Users/me/.agents/skills/cloudflare-one",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "cloudflare-one"
+      },
+      {
+        "id": "cloudflare-one-migrations",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/cloudflare-one-migrations",
+        "resolved_path": "/Users/me/.agents/skills/cloudflare-one-migrations",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "cloudflare-one-migrations"
+      },
+      {
         "id": "compendium-discover-projects",
         "classification": "authored",
         "lifecycle": "curated",
@@ -2287,6 +2863,18 @@
         "symlink_ok": true,
         "version": null,
         "name": "deeplistening-session-analysis"
+      },
+      {
+        "id": "durable-objects",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/durable-objects",
+        "resolved_path": "/Users/me/.agents/skills/durable-objects",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "durable-objects"
       },
       {
         "id": "embedded-captions",
@@ -2781,6 +3369,18 @@
         "name": "repomix-explorer"
       },
       {
+        "id": "sandbox-sdk",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/sandbox-sdk",
+        "resolved_path": "/Users/me/.agents/skills/sandbox-sdk",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "sandbox-sdk"
+      },
+      {
         "id": "skill-repair",
         "classification": "authored",
         "lifecycle": "curated",
@@ -2937,6 +3537,30 @@
         "name": "tools-quickstart-bootstrap"
       },
       {
+        "id": "turnstile-spin",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/turnstile-spin",
+        "resolved_path": "/Users/me/.agents/skills/turnstile-spin",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "turnstile-spin"
+      },
+      {
+        "id": "web-perf",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/web-perf",
+        "resolved_path": "/Users/me/.agents/skills/web-perf",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "web-perf"
+      },
+      {
         "id": "website-to-video",
         "classification": "authored",
         "lifecycle": "curated",
@@ -2947,10 +3571,43 @@
         "symlink_ok": true,
         "version": null,
         "name": "website-to-video"
+      },
+      {
+        "id": "workers-best-practices",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/workers-best-practices",
+        "resolved_path": "/Users/me/.agents/skills/workers-best-practices",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "workers-best-practices"
+      },
+      {
+        "id": "wrangler",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/wrangler",
+        "resolved_path": "/Users/me/.agents/skills/wrangler",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "wrangler"
       }
     ]
   },
   "project": [
+    {
+      "skill": "a11y-debugging",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/path-cidr-evictionstory-mn-9f23bc71c2b4/.cursor/skills/a11y-debugging/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-cidr-evictionstory-mn-9f23bc71c2b4/.cursor/skills/a11y-debugging/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
     {
       "skill": "accidental-data-loss-prevention",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/accidental-data-loss-prevention/SKILL.md",
@@ -2970,6 +3627,15 @@
       "classification": "embedded"
     },
     {
+      "skill": "adhdev",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/path-storytelling-capsules-12c38336582f/.cursor/skills/adhdev/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-storytelling-capsules-12c38336582f/.cursor/skills/adhdev/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
       "skill": "adhdev-engineering-partnership",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/adhdev-engineering-partnership/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
@@ -2979,12 +3645,129 @@
       "classification": "embedded"
     },
     {
+      "skill": "agent-native-architecture",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/path-writing-income-e2d299d8b155/.cursor/skills/agent-native-architecture/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-writing-income-e2d299d8b155/.cursor/skills/agent-native-architecture/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "agents-sdk",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/agents-sdk/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/agents-sdk/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "ai-usage-alignment-review",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/path-cidr-org-4bd8f5480d99/.cursor/skills/ai-usage-alignment-review/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-cidr-org-4bd8f5480d99/.cursor/skills/ai-usage-alignment-review/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "ashby-astera-jobs-refresh",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/path-astera-envisioning-6b75c84f4b54/.cursor/skills/ashby-astera-jobs-refresh/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-astera-envisioning-6b75c84f4b54/.cursor/skills/ashby-astera-jobs-refresh/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "astera-public-activity-scan",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/path-astera-envisioning-6b75c84f4b54/.cursor/skills/astera-public-activity-scan/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-astera-envisioning-6b75c84f4b54/.cursor/skills/astera-public-activity-scan/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "awesome-lists",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-awesome-awesome/.cursor/skills/awesome-lists/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-awesome-awesome/.cursor/skills/awesome-lists/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "awesome-trends",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-awesome-awesome/.cursor/skills/awesome-trends/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-awesome-awesome/.cursor/skills/awesome-trends/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "baloney-a11y-audit",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-thebaloney-web/.cursor/skills/baloney-a11y-audit/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-thebaloney-web/.cursor/skills/baloney-a11y-audit/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "baloney-deploy-merge",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-thebaloney-web/.cursor/skills/baloney-deploy-merge/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-thebaloney-web/.cursor/skills/baloney-deploy-merge/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "baloney-design-review",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-thebaloney-web/.cursor/skills/baloney-design-review/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-thebaloney-web/.cursor/skills/baloney-design-review/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "baloney-engineering-review",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-thebaloney-web/.cursor/skills/baloney-engineering-review/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-thebaloney-web/.cursor/skills/baloney-engineering-review/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "bayo-site-corpus-update",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-writing-quality/.cursor/skills/bayo-site-corpus-update/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-writing-quality/.cursor/skills/bayo-site-corpus-update/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
       "skill": "bigquery-data-transfer-service",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/bigquery-data-transfer-service/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
       "relative_path": "mirrors/skills-snapshots/skills/bigquery-data-transfer-service/SKILL.md",
       "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "blogup",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/path-futureofme-0120b0f80b55/.cursor/skills/blogup/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-futureofme-0120b0f80b55/.cursor/skills/blogup/SKILL.md",
+      "layout": "project-cursor",
       "classification": "embedded"
     },
     {
@@ -3024,6 +3807,24 @@
       "classification": "embedded"
     },
     {
+      "skill": "buildprompt-from-requests",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-umpire-empire/.cursor/skills/buildprompt-from-requests/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-umpire-empire/.cursor/skills/buildprompt-from-requests/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "capsules-source-to-story",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/path-storytelling-capsules-12c38336582f/.cursor/skills/capsules-source-to-story/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-storytelling-capsules-12c38336582f/.cursor/skills/capsules-source-to-story/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
       "skill": "change-world-critique-quick",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/change-world-critique-quick/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
@@ -3039,6 +3840,60 @@
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
       "relative_path": "mirrors/skills-snapshots/skills/change-world-critique-quick-full/SKILL.md",
       "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "chrome-devtools",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/path-cidr-evictionstory-mn-9f23bc71c2b4/.cursor/skills/chrome-devtools/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-cidr-evictionstory-mn-9f23bc71c2b4/.cursor/skills/chrome-devtools/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "chrome-devtools-cli",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/path-cidr-evictionstory-mn-9f23bc71c2b4/.cursor/skills/chrome-devtools-cli/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-cidr-evictionstory-mn-9f23bc71c2b4/.cursor/skills/chrome-devtools-cli/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "chrome-extension-fork-comparison",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-chrome-extensions/.cursor/skills/chrome-extension-fork-comparison/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-chrome-extensions/.cursor/skills/chrome-extension-fork-comparison/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "chrome-extension-fork-lifecycle",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-chrome-extensions/.cursor/skills/chrome-extension-fork-lifecycle/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-chrome-extensions/.cursor/skills/chrome-extension-fork-lifecycle/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "chrome-extension-landscape-search",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-chrome-extensions/.cursor/skills/chrome-extension-landscape-search/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-chrome-extensions/.cursor/skills/chrome-extension-landscape-search/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "chrome-extension-source-reconstruction",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-chrome-extensions/.cursor/skills/chrome-extension-source-reconstruction/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-chrome-extensions/.cursor/skills/chrome-extension-source-reconstruction/SKILL.md",
+      "layout": "project-cursor",
       "classification": "embedded"
     },
     {
@@ -3060,6 +3915,69 @@
       "classification": "embedded"
     },
     {
+      "skill": "clarify-audience-purpose",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-switchdimension-community/.cursor/skills/envisioning-suite/clarify-audience-purpose/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-switchdimension-community/.cursor/skills/envisioning-suite/clarify-audience-purpose/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "clarify-audience-purpose",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-envisioning-skills-suite-c0e7661115/.cursor/skills/envisioning-suite/clarify-audience-purpose/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/orphan-envisioning-skills-suite-c0e7661115/.cursor/skills/envisioning-suite/clarify-audience-purpose/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "cloudflare",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/cloudflare/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/cloudflare/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "cloudflare-email-service",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/cloudflare-email-service/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/cloudflare-email-service/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "cloudflare-one",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/cloudflare-one/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/cloudflare-one/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "cloudflare-one-migrations",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/cloudflare-one-migrations/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/cloudflare-one-migrations/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "community-plugins-pipeline",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/path-obsidian-tools-37ed7006ebb9/.cursor/skills/community-plugins-pipeline/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-obsidian-tools-37ed7006ebb9/.cursor/skills/community-plugins-pipeline/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
       "skill": "compendium-discover-projects",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/compendium-discover-projects/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
@@ -3078,12 +3996,57 @@
       "classification": "embedded"
     },
     {
+      "skill": "converge-articulate",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-switchdimension-community/.cursor/skills/envisioning-suite/converge-articulate/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-switchdimension-community/.cursor/skills/envisioning-suite/converge-articulate/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "converge-articulate",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-envisioning-skills-suite-c0e7661115/.cursor/skills/envisioning-suite/converge-articulate/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/orphan-envisioning-skills-suite-c0e7661115/.cursor/skills/envisioning-suite/converge-articulate/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "cursor-extension-fork-lifecycle",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/path-cursor-extensions-249d2b54da21/.cursor/skills/cursor-extension-fork-lifecycle/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-cursor-extensions-249d2b54da21/.cursor/skills/cursor-extension-fork-lifecycle/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "cursor-extension-landscape-search",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/path-cursor-extensions-249d2b54da21/.cursor/skills/cursor-extension-landscape-search/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-cursor-extensions-249d2b54da21/.cursor/skills/cursor-extension-landscape-search/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
       "skill": "data-autocleaning",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/data-autocleaning/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
       "relative_path": "mirrors/skills-snapshots/skills/data-autocleaning/SKILL.md",
       "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "data-guide-comment-iteration",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/path-cpc-anti-displacement-9493f643cb9d/.cursor/skills/data-guide-comment-iteration/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-cpc-anti-displacement-9493f643cb9d/.cursor/skills/data-guide-comment-iteration/SKILL.md",
+      "layout": "project-cursor",
       "classification": "embedded"
     },
     {
@@ -3105,6 +4068,15 @@
       "classification": "embedded"
     },
     {
+      "skill": "debug-optimize-lcp",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/path-cidr-evictionstory-mn-9f23bc71c2b4/.cursor/skills/debug-optimize-lcp/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-cidr-evictionstory-mn-9f23bc71c2b4/.cursor/skills/debug-optimize-lcp/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
       "skill": "deeplistening-method-synthesis",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/deeplistening-method-synthesis/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
@@ -3120,6 +4092,42 @@
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
       "relative_path": "mirrors/skills-snapshots/skills/deeplistening-session-analysis/SKILL.md",
       "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "derive-expert-voice-from-transcript",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-fspp-ai-retsina/.cursor/skills/derive-expert-voice-from-transcript/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-fspp-ai-retsina/.cursor/skills/derive-expert-voice-from-transcript/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "develop-extension-chrome",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-chrome-extensions/.cursor/skills/develop-extension-chrome/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-chrome-extensions/.cursor/skills/develop-extension-chrome/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "develop-extension-cursor",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/path-cursor-extensions-249d2b54da21/.cursor/skills/develop-extension-cursor/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-cursor-extensions-249d2b54da21/.cursor/skills/develop-extension-cursor/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "develop-userscript-chrome",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-chrome-extensions/.cursor/skills/develop-userscript-chrome/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-chrome-extensions/.cursor/skills/develop-userscript-chrome/SKILL.md",
+      "layout": "project-cursor",
       "classification": "embedded"
     },
     {
@@ -3141,12 +4149,192 @@
       "classification": "embedded"
     },
     {
+      "skill": "divergent-explore",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-switchdimension-community/.cursor/skills/envisioning-suite/divergent-explore/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-switchdimension-community/.cursor/skills/envisioning-suite/divergent-explore/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "divergent-explore",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-envisioning-skills-suite-c0e7661115/.cursor/skills/envisioning-suite/divergent-explore/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/orphan-envisioning-skills-suite-c0e7661115/.cursor/skills/envisioning-suite/divergent-explore/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "draft-edits-analyze",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/path-sow-draft-kit-0c4ece52ab3a/.cursor/skills/draft-edits-analyze/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-sow-draft-kit-0c4ece52ab3a/.cursor/skills/draft-edits-analyze/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "draft-edits-analyze",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-kit-512fba8992/.cursor/skills/draft-edits-analyze/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/orphan-kit-512fba8992/.cursor/skills/draft-edits-analyze/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "draft-edits-analyze",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-peeq-carb/.cursor/skills/draft-edits-analyze/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-peeq-carb/.cursor/skills/draft-edits-analyze/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "draft-edits-apply",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/path-sow-draft-kit-0c4ece52ab3a/.cursor/skills/draft-edits-apply/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-sow-draft-kit-0c4ece52ab3a/.cursor/skills/draft-edits-apply/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "draft-edits-apply",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-kit-512fba8992/.cursor/skills/draft-edits-apply/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/orphan-kit-512fba8992/.cursor/skills/draft-edits-apply/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "draft-edits-apply",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-peeq-carb/.cursor/skills/draft-edits-apply/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-peeq-carb/.cursor/skills/draft-edits-apply/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "draft-edits-cycle",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-peeq-carb/.cursor/skills/draft-edits-cycle/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-peeq-carb/.cursor/skills/draft-edits-cycle/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "draft-edits-evaluate",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/path-sow-draft-kit-0c4ece52ab3a/.cursor/skills/draft-edits-evaluate/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-sow-draft-kit-0c4ece52ab3a/.cursor/skills/draft-edits-evaluate/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "draft-edits-evaluate",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-kit-512fba8992/.cursor/skills/draft-edits-evaluate/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/orphan-kit-512fba8992/.cursor/skills/draft-edits-evaluate/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "draft-edits-evaluate",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-peeq-carb/.cursor/skills/draft-edits-evaluate/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-peeq-carb/.cursor/skills/draft-edits-evaluate/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "durable-objects",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/durable-objects/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/durable-objects/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "embedded-captions",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/embedded-captions/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/embedded-captions/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "envision-end-state",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-switchdimension-community/.cursor/skills/envisioning-suite/envision-end-state/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-switchdimension-community/.cursor/skills/envisioning-suite/envision-end-state/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "envision-end-state",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-envisioning-skills-suite-c0e7661115/.cursor/skills/envisioning-suite/envision-end-state/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/orphan-envisioning-skills-suite-c0e7661115/.cursor/skills/envisioning-suite/envision-end-state/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "faceless-explainer",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/faceless-explainer/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/faceless-explainer/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "faircare-alignment-review",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/path-cidr-org-4bd8f5480d99/.cursor/skills/faircare-alignment-review/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-cidr-org-4bd8f5480d99/.cursor/skills/faircare-alignment-review/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "find-writing-papers-and-code",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-writing-quality/.cursor/skills/find-writing-papers-and-code/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-writing-quality/.cursor/skills/find-writing-papers-and-code/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
       "skill": "fireflies-meeting-export",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/fireflies-meeting-export/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
       "relative_path": "mirrors/skills-snapshots/skills/fireflies-meeting-export/SKILL.md",
       "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "frontend-design",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/path-writing-income-e2d299d8b155/.cursor/skills/frontend-design/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-writing-income-e2d299d8b155/.cursor/skills/frontend-design/SKILL.md",
+      "layout": "project-cursor",
       "classification": "embedded"
     },
     {
@@ -3213,6 +4401,150 @@
       "classification": "embedded"
     },
     {
+      "skill": "general-video",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/general-video/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/general-video/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "glossary-curation",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/github-cidrlab-cidr-glossary/.cursor/skills/glossary-curation/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-cidrlab-cidr-glossary/.cursor/skills/glossary-curation/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "glossary-promotion",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/path-cidr-glossary-project-04b18d178551/.cursor/skills/glossary-promotion/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-cidr-glossary-project-04b18d178551/.cursor/skills/glossary-promotion/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "glossary-writing",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/github-cidrlab-cidr-glossary/.cursor/skills/glossary-writing/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-cidrlab-cidr-glossary/.cursor/skills/glossary-writing/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "google-workspace-new-org",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/google-workspace-new-org/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/google-workspace-new-org/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "hyperframes",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/hyperframes/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/hyperframes/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "hyperframes-animation",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/hyperframes-animation/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/hyperframes-animation/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "hyperframes-cli",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/hyperframes-cli/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/hyperframes-cli/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "hyperframes-core",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/hyperframes-core/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/hyperframes-core/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "hyperframes-creative",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/hyperframes-creative/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/hyperframes-creative/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "hyperframes-keyframes",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/hyperframes-keyframes/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/hyperframes-keyframes/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "hyperframes-media",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/hyperframes-media/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/hyperframes-media/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "hyperframes-registry",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/hyperframes-registry/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/hyperframes-registry/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "impl-snapshot",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-chatstory/.cursor/skills/impl-snapshot/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-chatstory/.cursor/skills/impl-snapshot/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "kiln-add-model",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-kiln__kiln-ai-4b129dc7c9/.cursor/skills/kiln-add-model/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/orphan-kiln__kiln-ai-4b129dc7c9/.cursor/skills/kiln-add-model/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "kiln-check-deprecation",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-kiln__kiln-ai-4b129dc7c9/.cursor/skills/kiln-check-deprecation/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/orphan-kiln__kiln-ai-4b129dc7c9/.cursor/skills/kiln-check-deprecation/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
       "skill": "limitless-takeout-search",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/limitless-takeout-search/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
@@ -3249,6 +4581,24 @@
       "classification": "embedded"
     },
     {
+      "skill": "mcp-writing-hub",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/path-writing-income-e2d299d8b155/.cursor/skills/mcp-writing-hub/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-writing-income-e2d299d8b155/.cursor/skills/mcp-writing-hub/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "media-use",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/media-use/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/media-use/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
       "skill": "meeting-sync",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/meeting-sync/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
@@ -3267,11 +4617,47 @@
       "classification": "embedded"
     },
     {
+      "skill": "meeting-sync.stale-2026-07-06",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/meeting-sync.stale-2026-07-06/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/meeting-sync.stale-2026-07-06/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "memory-leak-debugging",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/path-cidr-evictionstory-mn-9f23bc71c2b4/.cursor/skills/memory-leak-debugging/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-cidr-evictionstory-mn-9f23bc71c2b4/.cursor/skills/memory-leak-debugging/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
       "skill": "ml-best-practices",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/ml-best-practices/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
       "relative_path": "mirrors/skills-snapshots/skills/ml-best-practices/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "motion-graphics",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/motion-graphics/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/motion-graphics/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "music-to-video",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/music-to-video/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/music-to-video/SKILL.md",
       "layout": "project-skills-dir",
       "classification": "embedded"
     },
@@ -3285,6 +4671,33 @@
       "classification": "embedded"
     },
     {
+      "skill": "nuxt-best-practices",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/path-writing-income-e2d299d8b155/.cursor/skills/nuxt-best-practices/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-writing-income-e2d299d8b155/.cursor/skills/nuxt-best-practices/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "nuxt-ui",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/path-writing-income-e2d299d8b155/.cursor/skills/nuxt-ui/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-writing-income-e2d299d8b155/.cursor/skills/nuxt-ui/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "op-credentials",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/github-tomascupr-sandstorm/.cursor/skills/op-credentials/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-tomascupr-sandstorm/.cursor/skills/op-credentials/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
       "skill": "op-credentials",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/op-credentials/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
@@ -3294,11 +4707,47 @@
       "classification": "embedded"
     },
     {
+      "skill": "personnel-render",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-kit-512fba8992/.cursor/skills/personnel-render/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/orphan-kit-512fba8992/.cursor/skills/personnel-render/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "pr-to-video",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/pr-to-video/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/pr-to-video/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "pretext-upstream-rhythm",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-pretext/.cursor/skills/pretext-upstream-rhythm/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-pretext/.cursor/skills/pretext-upstream-rhythm/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
       "skill": "process-umbrella-incoming",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/process-umbrella-incoming/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
       "relative_path": "mirrors/skills-snapshots/skills/process-umbrella-incoming/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "product-launch-video",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/product-launch-video/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/product-launch-video/SKILL.md",
       "layout": "project-skills-dir",
       "classification": "embedded"
     },
@@ -3312,6 +4761,24 @@
       "classification": "embedded"
     },
     {
+      "skill": "proposal-critique",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/github-cidrlab-cidr-sjsu-chrp-policyai/.cursor/skills/proposal-critique/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-cidrlab-cidr-sjsu-chrp-policyai/.cursor/skills/proposal-critique/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "quickstart-get-running",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/github-tomascupr-sandstorm/.cursor/skills/quickstart-get-running/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-tomascupr-sandstorm/.cursor/skills/quickstart-get-running/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
       "skill": "reflexive-method-authoring-loop",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/reflexive-method-authoring-loop/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
@@ -3321,12 +4788,192 @@
       "classification": "embedded"
     },
     {
+      "skill": "remotion-to-hyperframes",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/remotion-to-hyperframes/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/remotion-to-hyperframes/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "research-plan-voice-brief",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/github-cidrlab-cidr-sjsu-chrp-policyai/.cursor/skills/research-plan-voice-brief/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-cidrlab-cidr-sjsu-chrp-policyai/.cursor/skills/research-plan-voice-brief/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "research-project-bootstrap",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/path-alphaxiv-marimo-d8e7b800db3f/.cursor/skills/research-project-bootstrap/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-alphaxiv-marimo-d8e7b800db3f/.cursor/skills/research-project-bootstrap/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "rll-doc-assembly",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/github-willowempowermentllc-rainbowlearninglibrary/.cursor/skills/rll-doc-assembly/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-willowempowermentllc-rainbowlearninglibrary/.cursor/skills/rll-doc-assembly/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "rowboat-fork-workflow",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/path-rowboat-quickstart-5e8cdadc157b/.cursor/skills/rowboat-fork-workflow/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-rowboat-quickstart-5e8cdadc157b/.cursor/skills/rowboat-fork-workflow/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "rowboat-safe-startup",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/rowboat-safe-startup/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/rowboat-safe-startup/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "rowboat-upstream-digest",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/rowboat-upstream-digest/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/rowboat-upstream-digest/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "sandbox-sdk",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/sandbox-sdk/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/sandbox-sdk/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "sandstorm-quickstart",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/github-tomascupr-sandstorm/.cursor/skills/sandstorm-quickstart/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-tomascupr-sandstorm/.cursor/skills/sandstorm-quickstart/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "scrolly-chrome-debug",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/path-cidr-evictionstory-mn-9f23bc71c2b4/.cursor/skills/scrolly-chrome-debug/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-cidr-evictionstory-mn-9f23bc71c2b4/.cursor/skills/scrolly-chrome-debug/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "skeptical-moderator-rubric-quick",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-writing-quality/.cursor/skills/skeptical-moderator-rubric-quick/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-writing-quality/.cursor/skills/skeptical-moderator-rubric-quick/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "skeptical-quackery-neutralizer-quick",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-writing-quality/.cursor/skills/skeptical-quackery-neutralizer-quick/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-writing-quality/.cursor/skills/skeptical-quackery-neutralizer-quick/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
       "skill": "skill-repair",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/skill-repair/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
       "relative_path": "mirrors/skills-snapshots/skills/skill-repair/SKILL.md",
       "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "slideshow",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/slideshow/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/slideshow/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "smc-policy-capsule",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-cidr-policymap-ca-smc/.cursor/skills/smc-policy-capsule/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-cidr-policymap-ca-smc/.cursor/skills/smc-policy-capsule/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "sow-draft-kit",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/path-sow-draft-kit-0c4ece52ab3a/.cursor/skills/sow-draft-kit/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-sow-draft-kit-0c4ece52ab3a/.cursor/skills/sow-draft-kit/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "sow-draft-kit",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/github-cidrlab-cidr-marin-courts/.cursor/skills/sow-draft-kit/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-cidrlab-cidr-marin-courts/.cursor/skills/sow-draft-kit/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "sow-draft-kit",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-kit-512fba8992/.cursor/skills/sow-draft-kit/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/orphan-kit-512fba8992/.cursor/skills/sow-draft-kit/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "sow-version-analysis",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/path-sow-draft-kit-0c4ece52ab3a/.cursor/skills/sow-version-analysis/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-sow-draft-kit-0c4ece52ab3a/.cursor/skills/sow-version-analysis/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "sow-version-analysis",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/github-cidrlab-cidr-marin-courts/.cursor/skills/sow-version-analysis/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-cidrlab-cidr-marin-courts/.cursor/skills/sow-version-analysis/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "sow-version-analysis",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-kit-512fba8992/.cursor/skills/sow-version-analysis/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/orphan-kit-512fba8992/.cursor/skills/sow-version-analysis/SKILL.md",
+      "layout": "project-cursor",
       "classification": "embedded"
     },
     {
@@ -3384,11 +5031,137 @@
       "classification": "embedded"
     },
     {
+      "skill": "storyvale-essay-pipeline",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/path-storytelling-capsules-12c38336582f/.cursor/skills/storyvale-essay-pipeline/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-storytelling-capsules-12c38336582f/.cursor/skills/storyvale-essay-pipeline/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "storyvale-first-draft",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/path-storytelling-capsules-12c38336582f/.cursor/skills/storyvale-first-draft/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-storytelling-capsules-12c38336582f/.cursor/skills/storyvale-first-draft/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "storyvale-iterate-draft",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/path-storytelling-capsules-12c38336582f/.cursor/skills/storyvale-iterate-draft/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-storytelling-capsules-12c38336582f/.cursor/skills/storyvale-iterate-draft/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "survey-creative-landscape",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-switchdimension-community/.cursor/skills/envisioning-suite/survey-creative-landscape/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-switchdimension-community/.cursor/skills/envisioning-suite/survey-creative-landscape/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "survey-creative-landscape",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-envisioning-skills-suite-c0e7661115/.cursor/skills/envisioning-suite/survey-creative-landscape/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/orphan-envisioning-skills-suite-c0e7661115/.cursor/skills/envisioning-suite/survey-creative-landscape/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "talking-head-recut",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/talking-head-recut/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/talking-head-recut/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "tool-landscape-intel",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/tool-landscape-intel/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/tool-landscape-intel/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
       "skill": "tools-quickstart-bootstrap",
       "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/tools-quickstart-bootstrap/SKILL.md",
       "project_root": "/Users/me/src/dotfiles-cursor-compendium",
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
       "relative_path": "mirrors/skills-snapshots/skills/tools-quickstart-bootstrap/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "troubleshooting",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/path-cidr-evictionstory-mn-9f23bc71c2b4/.cursor/skills/troubleshooting/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-cidr-evictionstory-mn-9f23bc71c2b4/.cursor/skills/troubleshooting/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "turnstile-spin",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/turnstile-spin/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/turnstile-spin/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "unpack-the-question",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-switchdimension-community/.cursor/skills/envisioning-suite/unpack-the-question/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-switchdimension-community/.cursor/skills/envisioning-suite/unpack-the-question/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "unpack-the-question",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-envisioning-skills-suite-c0e7661115/.cursor/skills/envisioning-suite/unpack-the-question/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/orphan-envisioning-skills-suite-c0e7661115/.cursor/skills/envisioning-suite/unpack-the-question/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "vue-best-practices",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/path-writing-income-e2d299d8b155/.cursor/skills/vue-best-practices/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-writing-income-e2d299d8b155/.cursor/skills/vue-best-practices/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "web-perf",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/web-perf/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/web-perf/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "website-to-video",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/website-to-video/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/website-to-video/SKILL.md",
       "layout": "project-skills-dir",
       "classification": "embedded"
     },
@@ -3417,6 +5190,609 @@
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
       "relative_path": "mirrors/skills-snapshots/skills/wip-publish/SKILL.md",
       "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "workers-best-practices",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/workers-best-practices/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/workers-best-practices/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "wrangler",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/wrangler/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/wrangler/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "writing-quality-pipeline",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/github-cidrlab-cidr-sjsu-chrp-policyai/.cursor/skills/writing-quality-pipeline/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-cidrlab-cidr-sjsu-chrp-policyai/.cursor/skills/writing-quality-pipeline/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "youtube-channel-catchup",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/path-continuous-ai-06cb23000be0/.cursor/skills/youtube-channel-catchup/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-continuous-ai-06cb23000be0/.cursor/skills/youtube-channel-catchup/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "accidental-data-loss-prevention",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/accidental-data-loss-prevention/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/accidental-data-loss-prevention/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "adhd-daily-planner",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/adhd-daily-planner/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/adhd-daily-planner/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "adhdev-engineering-partnership",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/adhdev-engineering-partnership/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/adhdev-engineering-partnership/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "agents-sdk",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/agents-sdk/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/agents-sdk/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "bigquery-data-transfer-service",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/bigquery-data-transfer-service/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/bigquery-data-transfer-service/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "bootstrap-new-project",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/bootstrap-new-project/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/bootstrap-new-project/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "bootstrap-tool-config-repo",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/bootstrap-tool-config-repo/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/bootstrap-tool-config-repo/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "bootstrap-umbrella-client-project",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/bootstrap-umbrella-client-project/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/bootstrap-umbrella-client-project/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "building-data-apps",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/building-data-apps/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/building-data-apps/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "change-world-critique-quick",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/change-world-critique-quick/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/change-world-critique-quick/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "change-world-critique-quick-full",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/change-world-critique-quick-full/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/change-world-critique-quick-full/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "cidr-bootstrap-project",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/cidr-bootstrap-project/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/cidr-bootstrap-project/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "cloudflare",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/cloudflare/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/cloudflare/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "cloudflare-email-service",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/cloudflare-email-service/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/cloudflare-email-service/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "cloudflare-one",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/cloudflare-one/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/cloudflare-one/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "cloudflare-one-migrations",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/cloudflare-one-migrations/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/cloudflare-one-migrations/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "compendium-discover-projects",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/compendium-discover-projects/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/compendium-discover-projects/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "context-engineering",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/context-engineering/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/context-engineering/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "data-autocleaning",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/data-autocleaning/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/data-autocleaning/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "dataform-bigquery",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/dataform-bigquery/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/dataform-bigquery/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "dbt-bigquery",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/dbt-bigquery/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/dbt-bigquery/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "deeplistening-method-synthesis",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/deeplistening-method-synthesis/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/deeplistening-method-synthesis/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "deeplistening-session-analysis",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/deeplistening-session-analysis/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/deeplistening-session-analysis/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "developing-with-bigquery",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/developing-with-bigquery/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/developing-with-bigquery/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "discovering-gcp-data-assets",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/discovering-gcp-data-assets/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/discovering-gcp-data-assets/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "durable-objects",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/durable-objects/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/durable-objects/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "fireflies-meeting-export",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/fireflies-meeting-export/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/fireflies-meeting-export/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "gcloud-auth-verification",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/gcloud-auth-verification/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/gcloud-auth-verification/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "gcp-composer-troubleshooting",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/gcp-composer-troubleshooting/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/gcp-composer-troubleshooting/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "gcp-data-pipelines",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/gcp-data-pipelines/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/gcp-data-pipelines/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "gcp-dataflow",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/gcp-dataflow/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/gcp-dataflow/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "gcp-pipeline-orchestration",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/gcp-pipeline-orchestration/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/gcp-pipeline-orchestration/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "gcp-pipeline-resource-provisioning",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/gcp-pipeline-resource-provisioning/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/gcp-pipeline-resource-provisioning/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "gcp-spark",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/gcp-spark/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/gcp-spark/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "google-workspace-new-org",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/google-workspace-new-org/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/google-workspace-new-org/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "limitless-takeout-search",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/limitless-takeout-search/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/limitless-takeout-search/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "limitless-takeout-update",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/limitless-takeout-update/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/limitless-takeout-update/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "luminary-tech-radar",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/luminary-tech-radar/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/luminary-tech-radar/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "managing-python-dependencies",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/managing-python-dependencies/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/managing-python-dependencies/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "meeting-sync-and-synthesis",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/meeting-sync-and-synthesis/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/meeting-sync-and-synthesis/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "meeting-sync.stale-2026-07-06",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/meeting-sync.stale-2026-07-06/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/meeting-sync.stale-2026-07-06/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "ml-best-practices",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/ml-best-practices/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/ml-best-practices/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "notebook-guidance",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/notebook-guidance/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/notebook-guidance/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "op-credentials",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/op-credentials/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/op-credentials/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "process-umbrella-incoming",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/process-umbrella-incoming/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/process-umbrella-incoming/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "project-management-guru-adhd",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/project-management-guru-adhd/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/project-management-guru-adhd/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "reflexive-method-authoring-loop",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/reflexive-method-authoring-loop/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/reflexive-method-authoring-loop/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "rowboat-safe-startup",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/rowboat-safe-startup/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/rowboat-safe-startup/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "rowboat-upstream-digest",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/rowboat-upstream-digest/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/rowboat-upstream-digest/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "sandbox-sdk",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/sandbox-sdk/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/sandbox-sdk/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "skill-repair",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/skill-repair/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/skill-repair/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "specstory-guard",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/specstory-guard/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/specstory-guard/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "specstory-link-trail",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/specstory-link-trail/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/specstory-link-trail/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "specstory-organize",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/specstory-organize/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/specstory-organize/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "specstory-project-stats",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/specstory-project-stats/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/specstory-project-stats/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "specstory-session-summary",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/specstory-session-summary/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/specstory-session-summary/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "specstory-yak",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/specstory-yak/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/specstory-yak/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "tool-landscape-intel",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/tool-landscape-intel/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/tool-landscape-intel/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "tools-quickstart-bootstrap",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/tools-quickstart-bootstrap/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/tools-quickstart-bootstrap/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "turnstile-spin",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/turnstile-spin/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/turnstile-spin/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "web-perf",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/web-perf/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/web-perf/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "workers-best-practices",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/workers-best-practices/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/workers-best-practices/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "wrangler",
+      "skill_path": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor/skills/wrangler/SKILL.md",
+      "project_root": "/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor",
+      "project_slug": "path-dc23c6326eba",
+      "relative_path": "skills/wrangler/SKILL.md",
+      "layout": "project-cursor",
       "classification": "embedded"
     },
     {
@@ -3458,7 +5834,7 @@
   ],
   "summary": {
     "by_classification": {
-      "authored": 122,
+      "authored": 176,
       "vendor": 36,
       "embedded": 80
     },

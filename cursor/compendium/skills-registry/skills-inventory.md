@@ -1,21 +1,23 @@
 # Skills inventory (generated)
 
-Generated: 2026-07-06T12:30:44Z
+Generated: 2026-07-15T03:53:47Z
 
 ## Summary
 
-- **authored**: 122
+- **authored**: 176
 - **embedded**: 80
 - **vendor**: 36
 
 ## Global
 
-### cursor-user (73)
+### cursor-user (94)
 
 - `accidental-data-loss-prevention` [authored] — `/Users/me/.cursor/skills/accidental-data-loss-prevention`
 - `adhd-daily-planner` [authored] — `/Users/me/.cursor/skills/adhd-daily-planner`
 - `adhdev-engineering-partnership` [authored] — `/Users/me/.cursor/skills/adhdev-engineering-partnership`
+- `agents-sdk` [authored] — `/Users/me/.cursor/skills/agents-sdk`
 - `bigquery-data-transfer-service` [vendor] — `/Users/me/.cursor/skills/bigquery-data-transfer-service`
+- `bootstrap-collaborator` [authored] — `/Users/me/.cursor/skills/bootstrap-collaborator`
 - `bootstrap-new-project` [authored] — `/Users/me/.cursor/skills/bootstrap-new-project`
 - `bootstrap-tool-config-repo` [authored] — `/Users/me/.cursor/skills/bootstrap-tool-config-repo`
 - `bootstrap-umbrella-client-project` [authored] — `/Users/me/.cursor/skills/bootstrap-umbrella-client-project`
@@ -23,7 +25,11 @@ Generated: 2026-07-06T12:30:44Z
 - `change-world-critique-quick` [authored] — `/Users/me/.cursor/skills/change-world-critique-quick`
 - `change-world-critique-quick-full` [authored] — `/Users/me/.cursor/skills/change-world-critique-quick-full`
 - `cidr-bootstrap-project` [authored] — `/Users/me/.cursor/skills/cidr-bootstrap-project`
-- `cidr-letterhead` [embedded] (symlink) — `/Users/me/.cursor/skills/cidr-letterhead`
+- `cloudflare` [authored] — `/Users/me/.cursor/skills/cloudflare`
+- `cloudflare-email-service` [authored] — `/Users/me/.cursor/skills/cloudflare-email-service`
+- `cloudflare-one` [authored] — `/Users/me/.cursor/skills/cloudflare-one`
+- `cloudflare-one-migrations` [authored] — `/Users/me/.cursor/skills/cloudflare-one-migrations`
+- `collab-sync` [authored] — `/Users/me/.cursor/skills/collab-sync`
 - `compendium-discover-projects` [authored] — `/Users/me/.cursor/skills/compendium-discover-projects`
 - `context-engineering` [authored] — `/Users/me/.cursor/skills/context-engineering`
 - `data-autocleaning` [vendor] — `/Users/me/.cursor/skills/data-autocleaning`
@@ -32,7 +38,9 @@ Generated: 2026-07-06T12:30:44Z
 - `deeplistening-method-synthesis` [authored] — `/Users/me/.cursor/skills/deeplistening-method-synthesis`
 - `deeplistening-session-analysis` [authored] — `/Users/me/.cursor/skills/deeplistening-session-analysis`
 - `developing-with-bigquery` [vendor] — `/Users/me/.cursor/skills/developing-with-bigquery`
+- `discover-channel` [authored] — `/Users/me/.cursor/skills/discover-channel`
 - `discovering-gcp-data-assets` [vendor] — `/Users/me/.cursor/skills/discovering-gcp-data-assets`
+- `durable-objects` [authored] — `/Users/me/.cursor/skills/durable-objects`
 - `embedded-captions` [embedded] (symlink) — `/Users/me/.cursor/skills/embedded-captions`
 - `faceless-explainer` [embedded] (symlink) — `/Users/me/.cursor/skills/faceless-explainer`
 - `fireflies-meeting-export` [authored] — `/Users/me/.cursor/skills/fireflies-meeting-export`
@@ -58,8 +66,10 @@ Generated: 2026-07-06T12:30:44Z
 - `luminary-tech-radar` [authored] — `/Users/me/.cursor/skills/luminary-tech-radar`
 - `managing-python-dependencies` [vendor] — `/Users/me/.cursor/skills/managing-python-dependencies`
 - `media-use` [embedded] (symlink) — `/Users/me/.cursor/skills/media-use`
-- `meeting-sync` [authored] — `/Users/me/.cursor/skills/meeting-sync`
+- `meeting-sync` [embedded] (symlink) — `/Users/me/.cursor/skills/meeting-sync`
 - `meeting-sync-and-synthesis` [authored] — `/Users/me/.cursor/skills/meeting-sync-and-synthesis`
+- `meeting-sync.stale-2026-07-06` [authored] — `/Users/me/.cursor/skills/meeting-sync.stale-2026-07-06`
+- `message-in-a-bottle` [authored] — `/Users/me/.cursor/skills/message-in-a-bottle`
 - `ml-best-practices` [vendor] — `/Users/me/.cursor/skills/ml-best-practices`
 - `motion-graphics` [embedded] (symlink) — `/Users/me/.cursor/skills/motion-graphics`
 - `music-to-video` [embedded] (symlink) — `/Users/me/.cursor/skills/music-to-video`
@@ -69,8 +79,13 @@ Generated: 2026-07-06T12:30:44Z
 - `process-umbrella-incoming` [authored] — `/Users/me/.cursor/skills/process-umbrella-incoming`
 - `product-launch-video` [embedded] (symlink) — `/Users/me/.cursor/skills/product-launch-video`
 - `project-management-guru-adhd` [authored] — `/Users/me/.cursor/skills/project-management-guru-adhd`
+- `quick-stash` [authored] — `/Users/me/.cursor/skills/quick-stash`
 - `reflexive-method-authoring-loop` [authored] — `/Users/me/.cursor/skills/reflexive-method-authoring-loop`
 - `remotion-to-hyperframes` [embedded] (symlink) — `/Users/me/.cursor/skills/remotion-to-hyperframes`
+- `report-reforge` [authored] — `/Users/me/.cursor/skills/report-reforge`
+- `rowboat-safe-startup` [authored] — `/Users/me/.cursor/skills/rowboat-safe-startup`
+- `rowboat-upstream-digest` [authored] — `/Users/me/.cursor/skills/rowboat-upstream-digest`
+- `sandbox-sdk` [authored] — `/Users/me/.cursor/skills/sandbox-sdk`
 - `skill-repair` [authored] — `/Users/me/.cursor/skills/skill-repair`
 - `slideshow` [embedded] (symlink) — `/Users/me/.cursor/skills/slideshow`
 - `specstory-guard` [authored] — `/Users/me/.cursor/skills/specstory-guard`
@@ -80,11 +95,17 @@ Generated: 2026-07-06T12:30:44Z
 - `specstory-session-summary` [authored] — `/Users/me/.cursor/skills/specstory-session-summary`
 - `specstory-yak` [authored] — `/Users/me/.cursor/skills/specstory-yak`
 - `talking-head-recut` [embedded] (symlink) — `/Users/me/.cursor/skills/talking-head-recut`
+- `tidy-stash` [authored] — `/Users/me/.cursor/skills/tidy-stash`
+- `tool-landscape-intel` [authored] — `/Users/me/.cursor/skills/tool-landscape-intel`
 - `tools-quickstart-bootstrap` [authored] — `/Users/me/.cursor/skills/tools-quickstart-bootstrap`
+- `turnstile-spin` [authored] — `/Users/me/.cursor/skills/turnstile-spin`
+- `web-perf` [authored] — `/Users/me/.cursor/skills/web-perf`
 - `website-to-video` [embedded] (symlink) — `/Users/me/.cursor/skills/website-to-video`
 - `wip-distill` [embedded] (symlink) — `/Users/me/.cursor/skills/wip-distill`
 - `wip-harvest` [embedded] (symlink) — `/Users/me/.cursor/skills/wip-harvest`
 - `wip-publish` [embedded] (symlink) — `/Users/me/.cursor/skills/wip-publish`
+- `workers-best-practices` [authored] — `/Users/me/.cursor/skills/workers-best-practices`
+- `wrangler` [authored] — `/Users/me/.cursor/skills/wrangler`
 
 ### cursor-managed (19)
 
@@ -108,18 +129,24 @@ Generated: 2026-07-06T12:30:44Z
 - `update-cli-config` [vendor] — `/Users/me/.cursor/skills-cursor/update-cli-config`
 - `update-cursor-settings` [vendor] — `/Users/me/.cursor/skills-cursor/update-cursor-settings`
 
-### claude-user (58)
+### claude-user (69)
 
 - `accidental-data-loss-prevention` [embedded] (symlink) — `/Users/me/.claude/skills/accidental-data-loss-prevention`
 - `adhd-daily-planner` [embedded] (symlink) — `/Users/me/.claude/skills/adhd-daily-planner`
 - `adhdev-engineering-partnership` [embedded] (symlink) — `/Users/me/.claude/skills/adhdev-engineering-partnership`
+- `agents-sdk` [authored] — `/Users/me/.claude/skills/agents-sdk`
 - `bootstrap-tool-config-repo` [embedded] (symlink) — `/Users/me/.claude/skills/bootstrap-tool-config-repo`
 - `change-world-critique-quick` [embedded] (symlink) — `/Users/me/.claude/skills/change-world-critique-quick`
 - `change-world-critique-quick-full` [embedded] (symlink) — `/Users/me/.claude/skills/change-world-critique-quick-full`
 - `cidr-bootstrap-project` [embedded] (symlink) — `/Users/me/.claude/skills/cidr-bootstrap-project`
+- `cloudflare` [authored] — `/Users/me/.claude/skills/cloudflare`
+- `cloudflare-email-service` [authored] — `/Users/me/.claude/skills/cloudflare-email-service`
+- `cloudflare-one` [authored] — `/Users/me/.claude/skills/cloudflare-one`
+- `cloudflare-one-migrations` [authored] — `/Users/me/.claude/skills/cloudflare-one-migrations`
 - `compendium-discover-projects` [embedded] (symlink) — `/Users/me/.claude/skills/compendium-discover-projects`
 - `deeplistening-method-synthesis` [embedded] (symlink) — `/Users/me/.claude/skills/deeplistening-method-synthesis`
 - `deeplistening-session-analysis` [embedded] (symlink) — `/Users/me/.claude/skills/deeplistening-session-analysis`
+- `durable-objects` [authored] — `/Users/me/.claude/skills/durable-objects`
 - `embedded-captions` [authored] — `/Users/me/.claude/skills/embedded-captions`
 - `faceless-explainer` [authored] — `/Users/me/.claude/skills/faceless-explainer`
 - `fireflies-meeting-export` [embedded] (symlink) — `/Users/me/.claude/skills/fireflies-meeting-export`
@@ -156,6 +183,7 @@ Generated: 2026-07-06T12:30:44Z
 - `reflexive-method-authoring-loop` [embedded] (symlink) — `/Users/me/.claude/skills/reflexive-method-authoring-loop`
 - `remotion-to-hyperframes` [authored] — `/Users/me/.claude/skills/remotion-to-hyperframes`
 - `repo-evaluator` [authored] — `/Users/me/.claude/skills/repo-evaluator`
+- `sandbox-sdk` [authored] — `/Users/me/.claude/skills/sandbox-sdk`
 - `setup-contextualizer` [authored] — `/Users/me/.claude/skills/setup-contextualizer`
 - `skill-repair` [embedded] (symlink) — `/Users/me/.claude/skills/skill-repair`
 - `slideshow` [authored] — `/Users/me/.claude/skills/slideshow`
@@ -167,11 +195,21 @@ Generated: 2026-07-06T12:30:44Z
 - `specstory-yak` [embedded] (symlink) — `/Users/me/.claude/skills/specstory-yak`
 - `talking-head-recut` [authored] — `/Users/me/.claude/skills/talking-head-recut`
 - `tools-quickstart-bootstrap` [embedded] (symlink) — `/Users/me/.claude/skills/tools-quickstart-bootstrap`
+- `turnstile-spin` [authored] — `/Users/me/.claude/skills/turnstile-spin`
+- `web-perf` [authored] — `/Users/me/.claude/skills/web-perf`
 - `website-to-video` [authored] — `/Users/me/.claude/skills/website-to-video`
+- `workers-best-practices` [authored] — `/Users/me/.claude/skills/workers-best-practices`
+- `wrangler` [authored] — `/Users/me/.claude/skills/wrangler`
 
-### codex-user (23)
+### codex-user (34)
 
+- `agents-sdk` [authored] — `/Users/me/.codex/skills/agents-sdk`
+- `cloudflare` [authored] — `/Users/me/.codex/skills/cloudflare`
+- `cloudflare-email-service` [authored] — `/Users/me/.codex/skills/cloudflare-email-service`
+- `cloudflare-one` [authored] — `/Users/me/.codex/skills/cloudflare-one`
+- `cloudflare-one-migrations` [authored] — `/Users/me/.codex/skills/cloudflare-one-migrations`
 - `dev-warmup` [authored] — `/Users/me/.codex/skills/dev-warmup`
+- `durable-objects` [authored] — `/Users/me/.codex/skills/durable-objects`
 - `dynamic-dev-port` [authored] — `/Users/me/.codex/skills/dynamic-dev-port`
 - `embedded-captions` [embedded] (symlink) — `/Users/me/.codex/skills/embedded-captions`
 - `faceless-explainer` [embedded] (symlink) — `/Users/me/.codex/skills/faceless-explainer`
@@ -191,22 +229,33 @@ Generated: 2026-07-06T12:30:44Z
 - `pr-to-video` [embedded] (symlink) — `/Users/me/.codex/skills/pr-to-video`
 - `product-launch-video` [embedded] (symlink) — `/Users/me/.codex/skills/product-launch-video`
 - `remotion-to-hyperframes` [embedded] (symlink) — `/Users/me/.codex/skills/remotion-to-hyperframes`
+- `sandbox-sdk` [authored] — `/Users/me/.codex/skills/sandbox-sdk`
 - `slideshow` [embedded] (symlink) — `/Users/me/.codex/skills/slideshow`
 - `talking-head-recut` [embedded] (symlink) — `/Users/me/.codex/skills/talking-head-recut`
+- `turnstile-spin` [authored] — `/Users/me/.codex/skills/turnstile-spin`
+- `web-perf` [authored] — `/Users/me/.codex/skills/web-perf`
 - `website-to-video` [embedded] (symlink) — `/Users/me/.codex/skills/website-to-video`
+- `workers-best-practices` [authored] — `/Users/me/.codex/skills/workers-best-practices`
+- `wrangler` [authored] — `/Users/me/.codex/skills/wrangler`
 
-### agents (65)
+### agents (76)
 
 - `accidental-data-loss-prevention` [authored] — `/Users/me/.agents/skills/accidental-data-loss-prevention`
 - `adhd-daily-planner` [authored] — `/Users/me/.agents/skills/adhd-daily-planner`
 - `adhdev-engineering-partnership` [authored] — `/Users/me/.agents/skills/adhdev-engineering-partnership`
+- `agents-sdk` [authored] — `/Users/me/.agents/skills/agents-sdk`
 - `bootstrap-tool-config-repo` [authored] — `/Users/me/.agents/skills/bootstrap-tool-config-repo`
 - `change-world-critique-quick` [authored] — `/Users/me/.agents/skills/change-world-critique-quick`
 - `change-world-critique-quick-full` [authored] — `/Users/me/.agents/skills/change-world-critique-quick-full`
 - `cidr-bootstrap-project` [authored] — `/Users/me/.agents/skills/cidr-bootstrap-project`
+- `cloudflare` [authored] — `/Users/me/.agents/skills/cloudflare`
+- `cloudflare-email-service` [authored] — `/Users/me/.agents/skills/cloudflare-email-service`
+- `cloudflare-one` [authored] — `/Users/me/.agents/skills/cloudflare-one`
+- `cloudflare-one-migrations` [authored] — `/Users/me/.agents/skills/cloudflare-one-migrations`
 - `compendium-discover-projects` [authored] — `/Users/me/.agents/skills/compendium-discover-projects`
 - `deeplistening-method-synthesis` [authored] — `/Users/me/.agents/skills/deeplistening-method-synthesis`
 - `deeplistening-session-analysis` [authored] — `/Users/me/.agents/skills/deeplistening-session-analysis`
+- `durable-objects` [authored] — `/Users/me/.agents/skills/durable-objects`
 - `embedded-captions` [authored] — `/Users/me/.agents/skills/embedded-captions`
 - `faceless-explainer` [authored] — `/Users/me/.agents/skills/faceless-explainer`
 - `find-skills` [authored] — `/Users/me/.agents/skills/find-skills`
@@ -248,6 +297,7 @@ Generated: 2026-07-06T12:30:44Z
 - `remotion-to-hyperframes` [authored] — `/Users/me/.agents/skills/remotion-to-hyperframes`
 - `repo-story-time` [authored] — `/Users/me/.agents/skills/repo-story-time`
 - `repomix-explorer` [authored] — `/Users/me/.agents/skills/repomix-explorer`
+- `sandbox-sdk` [authored] — `/Users/me/.agents/skills/sandbox-sdk`
 - `skill-repair` [authored] — `/Users/me/.agents/skills/skill-repair`
 - `slideshow` [authored] — `/Users/me/.agents/skills/slideshow`
 - `sofa` [authored] — `/Users/me/.agents/skills/sofa`
@@ -261,34 +311,98 @@ Generated: 2026-07-06T12:30:44Z
 - `specstory-yak` [authored] — `/Users/me/.agents/skills/specstory-yak`
 - `talking-head-recut` [authored] — `/Users/me/.agents/skills/talking-head-recut`
 - `tools-quickstart-bootstrap` [authored] — `/Users/me/.agents/skills/tools-quickstart-bootstrap`
+- `turnstile-spin` [authored] — `/Users/me/.agents/skills/turnstile-spin`
+- `web-perf` [authored] — `/Users/me/.agents/skills/web-perf`
 - `website-to-video` [authored] — `/Users/me/.agents/skills/website-to-video`
+- `workers-best-practices` [authored] — `/Users/me/.agents/skills/workers-best-practices`
+- `wrangler` [authored] — `/Users/me/.agents/skills/wrangler`
 
-## Project-local (56)
+## Project-local (248)
 
 ### `/Users/me/src/dotfiles-cursor-compendium`
 
+- `a11y-debugging` (project-cursor) — `mirrors/by-project/path-cidr-evictionstory-mn-9f23bc71c2b4/.cursor/skills/a11y-debugging/SKILL.md`
 - `accidental-data-loss-prevention` (project-skills-dir) — `mirrors/skills-snapshots/skills/accidental-data-loss-prevention/SKILL.md`
 - `adhd-daily-planner` (project-skills-dir) — `mirrors/skills-snapshots/skills/adhd-daily-planner/SKILL.md`
+- `adhdev` (project-cursor) — `mirrors/by-project/path-storytelling-capsules-12c38336582f/.cursor/skills/adhdev/SKILL.md`
 - `adhdev-engineering-partnership` (project-skills-dir) — `mirrors/skills-snapshots/skills/adhdev-engineering-partnership/SKILL.md`
+- `agent-native-architecture` (project-cursor) — `mirrors/by-project/path-writing-income-e2d299d8b155/.cursor/skills/agent-native-architecture/SKILL.md`
+- `agents-sdk` (project-skills-dir) — `mirrors/skills-snapshots/skills/agents-sdk/SKILL.md`
+- `ai-usage-alignment-review` (project-cursor) — `mirrors/by-project/path-cidr-org-4bd8f5480d99/.cursor/skills/ai-usage-alignment-review/SKILL.md`
+- `ashby-astera-jobs-refresh` (project-cursor) — `mirrors/by-project/path-astera-envisioning-6b75c84f4b54/.cursor/skills/ashby-astera-jobs-refresh/SKILL.md`
+- `astera-public-activity-scan` (project-cursor) — `mirrors/by-project/path-astera-envisioning-6b75c84f4b54/.cursor/skills/astera-public-activity-scan/SKILL.md`
+- `awesome-lists` (project-cursor) — `mirrors/by-project/github-aculich-awesome-awesome/.cursor/skills/awesome-lists/SKILL.md`
+- `awesome-trends` (project-cursor) — `mirrors/by-project/github-aculich-awesome-awesome/.cursor/skills/awesome-trends/SKILL.md`
+- `baloney-a11y-audit` (project-cursor) — `mirrors/by-project/github-aculich-thebaloney-web/.cursor/skills/baloney-a11y-audit/SKILL.md`
+- `baloney-deploy-merge` (project-cursor) — `mirrors/by-project/github-aculich-thebaloney-web/.cursor/skills/baloney-deploy-merge/SKILL.md`
+- `baloney-design-review` (project-cursor) — `mirrors/by-project/github-aculich-thebaloney-web/.cursor/skills/baloney-design-review/SKILL.md`
+- `baloney-engineering-review` (project-cursor) — `mirrors/by-project/github-aculich-thebaloney-web/.cursor/skills/baloney-engineering-review/SKILL.md`
+- `bayo-site-corpus-update` (project-cursor) — `mirrors/by-project/github-aculich-writing-quality/.cursor/skills/bayo-site-corpus-update/SKILL.md`
 - `bigquery-data-transfer-service` (project-skills-dir) — `mirrors/skills-snapshots/skills/bigquery-data-transfer-service/SKILL.md`
+- `blogup` (project-cursor) — `mirrors/by-project/path-futureofme-0120b0f80b55/.cursor/skills/blogup/SKILL.md`
 - `bootstrap-new-project` (project-skills-dir) — `mirrors/skills-snapshots/skills/bootstrap-new-project/SKILL.md`
 - `bootstrap-tool-config-repo` (project-skills-dir) — `mirrors/skills-snapshots/skills/bootstrap-tool-config-repo/SKILL.md`
 - `bootstrap-umbrella-client-project` (project-skills-dir) — `mirrors/skills-snapshots/skills/bootstrap-umbrella-client-project/SKILL.md`
 - `building-data-apps` (project-skills-dir) — `mirrors/skills-snapshots/skills/building-data-apps/SKILL.md`
+- `buildprompt-from-requests` (project-cursor) — `mirrors/by-project/github-aculich-umpire-empire/.cursor/skills/buildprompt-from-requests/SKILL.md`
+- `capsules-source-to-story` (project-cursor) — `mirrors/by-project/path-storytelling-capsules-12c38336582f/.cursor/skills/capsules-source-to-story/SKILL.md`
 - `change-world-critique-quick` (project-skills-dir) — `mirrors/skills-snapshots/skills/change-world-critique-quick/SKILL.md`
 - `change-world-critique-quick-full` (project-skills-dir) — `mirrors/skills-snapshots/skills/change-world-critique-quick-full/SKILL.md`
+- `chrome-devtools` (project-cursor) — `mirrors/by-project/path-cidr-evictionstory-mn-9f23bc71c2b4/.cursor/skills/chrome-devtools/SKILL.md`
+- `chrome-devtools-cli` (project-cursor) — `mirrors/by-project/path-cidr-evictionstory-mn-9f23bc71c2b4/.cursor/skills/chrome-devtools-cli/SKILL.md`
+- `chrome-extension-fork-comparison` (project-cursor) — `mirrors/by-project/github-aculich-chrome-extensions/.cursor/skills/chrome-extension-fork-comparison/SKILL.md`
+- `chrome-extension-fork-lifecycle` (project-cursor) — `mirrors/by-project/github-aculich-chrome-extensions/.cursor/skills/chrome-extension-fork-lifecycle/SKILL.md`
+- `chrome-extension-landscape-search` (project-cursor) — `mirrors/by-project/github-aculich-chrome-extensions/.cursor/skills/chrome-extension-landscape-search/SKILL.md`
+- `chrome-extension-source-reconstruction` (project-cursor) — `mirrors/by-project/github-aculich-chrome-extensions/.cursor/skills/chrome-extension-source-reconstruction/SKILL.md`
 - `cidr-bootstrap-project` (project-skills-dir) — `mirrors/skills-snapshots/skills/cidr-bootstrap-project/SKILL.md`
 - `cidr-letterhead` (project-skills-dir) — `mirrors/skills-snapshots/skills/cidr-letterhead/SKILL.md`
+- `clarify-audience-purpose` (project-cursor) — `mirrors/by-project/github-aculich-switchdimension-community/.cursor/skills/envisioning-suite/clarify-audience-purpose/SKILL.md`
+- `clarify-audience-purpose` (project-cursor) — `mirrors/by-project/orphan-envisioning-skills-suite-c0e7661115/.cursor/skills/envisioning-suite/clarify-audience-purpose/SKILL.md`
+- `cloudflare` (project-skills-dir) — `mirrors/skills-snapshots/skills/cloudflare/SKILL.md`
+- `cloudflare-email-service` (project-skills-dir) — `mirrors/skills-snapshots/skills/cloudflare-email-service/SKILL.md`
+- `cloudflare-one` (project-skills-dir) — `mirrors/skills-snapshots/skills/cloudflare-one/SKILL.md`
+- `cloudflare-one-migrations` (project-skills-dir) — `mirrors/skills-snapshots/skills/cloudflare-one-migrations/SKILL.md`
+- `community-plugins-pipeline` (project-cursor) — `mirrors/by-project/path-obsidian-tools-37ed7006ebb9/.cursor/skills/community-plugins-pipeline/SKILL.md`
 - `compendium-discover-projects` (project-skills-dir) — `mirrors/skills-snapshots/skills/compendium-discover-projects/SKILL.md`
 - `context-engineering` (project-skills-dir) — `mirrors/skills-snapshots/skills/context-engineering/SKILL.md`
+- `converge-articulate` (project-cursor) — `mirrors/by-project/github-aculich-switchdimension-community/.cursor/skills/envisioning-suite/converge-articulate/SKILL.md`
+- `converge-articulate` (project-cursor) — `mirrors/by-project/orphan-envisioning-skills-suite-c0e7661115/.cursor/skills/envisioning-suite/converge-articulate/SKILL.md`
+- `cursor-extension-fork-lifecycle` (project-cursor) — `mirrors/by-project/path-cursor-extensions-249d2b54da21/.cursor/skills/cursor-extension-fork-lifecycle/SKILL.md`
+- `cursor-extension-landscape-search` (project-cursor) — `mirrors/by-project/path-cursor-extensions-249d2b54da21/.cursor/skills/cursor-extension-landscape-search/SKILL.md`
 - `data-autocleaning` (project-skills-dir) — `mirrors/skills-snapshots/skills/data-autocleaning/SKILL.md`
+- `data-guide-comment-iteration` (project-cursor) — `mirrors/by-project/path-cpc-anti-displacement-9493f643cb9d/.cursor/skills/data-guide-comment-iteration/SKILL.md`
 - `dataform-bigquery` (project-skills-dir) — `mirrors/skills-snapshots/skills/dataform-bigquery/SKILL.md`
 - `dbt-bigquery` (project-skills-dir) — `mirrors/skills-snapshots/skills/dbt-bigquery/SKILL.md`
+- `debug-optimize-lcp` (project-cursor) — `mirrors/by-project/path-cidr-evictionstory-mn-9f23bc71c2b4/.cursor/skills/debug-optimize-lcp/SKILL.md`
 - `deeplistening-method-synthesis` (project-skills-dir) — `mirrors/skills-snapshots/skills/deeplistening-method-synthesis/SKILL.md`
 - `deeplistening-session-analysis` (project-skills-dir) — `mirrors/skills-snapshots/skills/deeplistening-session-analysis/SKILL.md`
+- `derive-expert-voice-from-transcript` (project-cursor) — `mirrors/by-project/github-aculich-fspp-ai-retsina/.cursor/skills/derive-expert-voice-from-transcript/SKILL.md`
+- `develop-extension-chrome` (project-cursor) — `mirrors/by-project/github-aculich-chrome-extensions/.cursor/skills/develop-extension-chrome/SKILL.md`
+- `develop-extension-cursor` (project-cursor) — `mirrors/by-project/path-cursor-extensions-249d2b54da21/.cursor/skills/develop-extension-cursor/SKILL.md`
+- `develop-userscript-chrome` (project-cursor) — `mirrors/by-project/github-aculich-chrome-extensions/.cursor/skills/develop-userscript-chrome/SKILL.md`
 - `developing-with-bigquery` (project-skills-dir) — `mirrors/skills-snapshots/skills/developing-with-bigquery/SKILL.md`
 - `discovering-gcp-data-assets` (project-skills-dir) — `mirrors/skills-snapshots/skills/discovering-gcp-data-assets/SKILL.md`
+- `divergent-explore` (project-cursor) — `mirrors/by-project/github-aculich-switchdimension-community/.cursor/skills/envisioning-suite/divergent-explore/SKILL.md`
+- `divergent-explore` (project-cursor) — `mirrors/by-project/orphan-envisioning-skills-suite-c0e7661115/.cursor/skills/envisioning-suite/divergent-explore/SKILL.md`
+- `draft-edits-analyze` (project-cursor) — `mirrors/by-project/path-sow-draft-kit-0c4ece52ab3a/.cursor/skills/draft-edits-analyze/SKILL.md`
+- `draft-edits-analyze` (project-cursor) — `mirrors/by-project/orphan-kit-512fba8992/.cursor/skills/draft-edits-analyze/SKILL.md`
+- `draft-edits-analyze` (project-cursor) — `mirrors/by-project/github-aculich-peeq-carb/.cursor/skills/draft-edits-analyze/SKILL.md`
+- `draft-edits-apply` (project-cursor) — `mirrors/by-project/path-sow-draft-kit-0c4ece52ab3a/.cursor/skills/draft-edits-apply/SKILL.md`
+- `draft-edits-apply` (project-cursor) — `mirrors/by-project/orphan-kit-512fba8992/.cursor/skills/draft-edits-apply/SKILL.md`
+- `draft-edits-apply` (project-cursor) — `mirrors/by-project/github-aculich-peeq-carb/.cursor/skills/draft-edits-apply/SKILL.md`
+- `draft-edits-cycle` (project-cursor) — `mirrors/by-project/github-aculich-peeq-carb/.cursor/skills/draft-edits-cycle/SKILL.md`
+- `draft-edits-evaluate` (project-cursor) — `mirrors/by-project/path-sow-draft-kit-0c4ece52ab3a/.cursor/skills/draft-edits-evaluate/SKILL.md`
+- `draft-edits-evaluate` (project-cursor) — `mirrors/by-project/orphan-kit-512fba8992/.cursor/skills/draft-edits-evaluate/SKILL.md`
+- `draft-edits-evaluate` (project-cursor) — `mirrors/by-project/github-aculich-peeq-carb/.cursor/skills/draft-edits-evaluate/SKILL.md`
+- `durable-objects` (project-skills-dir) — `mirrors/skills-snapshots/skills/durable-objects/SKILL.md`
+- `embedded-captions` (project-skills-dir) — `mirrors/skills-snapshots/skills/embedded-captions/SKILL.md`
+- `envision-end-state` (project-cursor) — `mirrors/by-project/github-aculich-switchdimension-community/.cursor/skills/envisioning-suite/envision-end-state/SKILL.md`
+- `envision-end-state` (project-cursor) — `mirrors/by-project/orphan-envisioning-skills-suite-c0e7661115/.cursor/skills/envisioning-suite/envision-end-state/SKILL.md`
+- `faceless-explainer` (project-skills-dir) — `mirrors/skills-snapshots/skills/faceless-explainer/SKILL.md`
+- `faircare-alignment-review` (project-cursor) — `mirrors/by-project/path-cidr-org-4bd8f5480d99/.cursor/skills/faircare-alignment-review/SKILL.md`
+- `find-writing-papers-and-code` (project-cursor) — `mirrors/by-project/github-aculich-writing-quality/.cursor/skills/find-writing-papers-and-code/SKILL.md`
 - `fireflies-meeting-export` (project-skills-dir) — `mirrors/skills-snapshots/skills/fireflies-meeting-export/SKILL.md`
+- `frontend-design` (project-cursor) — `mirrors/by-project/path-writing-income-e2d299d8b155/.cursor/skills/frontend-design/SKILL.md`
 - `gcloud-auth-verification` (project-skills-dir) — `mirrors/skills-snapshots/skills/gcloud-auth-verification/SKILL.md`
 - `gcp-composer-troubleshooting` (project-skills-dir) — `mirrors/skills-snapshots/skills/gcp-composer-troubleshooting/SKILL.md`
 - `gcp-data-pipelines` (project-skills-dir) — `mirrors/skills-snapshots/skills/gcp-data-pipelines/SKILL.md`
@@ -296,29 +410,164 @@ Generated: 2026-07-06T12:30:44Z
 - `gcp-pipeline-orchestration` (project-skills-dir) — `mirrors/skills-snapshots/skills/gcp-pipeline-orchestration/SKILL.md`
 - `gcp-pipeline-resource-provisioning` (project-skills-dir) — `mirrors/skills-snapshots/skills/gcp-pipeline-resource-provisioning/SKILL.md`
 - `gcp-spark` (project-skills-dir) — `mirrors/skills-snapshots/skills/gcp-spark/SKILL.md`
+- `general-video` (project-skills-dir) — `mirrors/skills-snapshots/skills/general-video/SKILL.md`
+- `glossary-curation` (project-cursor) — `mirrors/by-project/github-cidrlab-cidr-glossary/.cursor/skills/glossary-curation/SKILL.md`
+- `glossary-promotion` (project-cursor) — `mirrors/by-project/path-cidr-glossary-project-04b18d178551/.cursor/skills/glossary-promotion/SKILL.md`
+- `glossary-writing` (project-cursor) — `mirrors/by-project/github-cidrlab-cidr-glossary/.cursor/skills/glossary-writing/SKILL.md`
+- `google-workspace-new-org` (project-skills-dir) — `mirrors/skills-snapshots/skills/google-workspace-new-org/SKILL.md`
+- `hyperframes` (project-skills-dir) — `mirrors/skills-snapshots/skills/hyperframes/SKILL.md`
+- `hyperframes-animation` (project-skills-dir) — `mirrors/skills-snapshots/skills/hyperframes-animation/SKILL.md`
+- `hyperframes-cli` (project-skills-dir) — `mirrors/skills-snapshots/skills/hyperframes-cli/SKILL.md`
+- `hyperframes-core` (project-skills-dir) — `mirrors/skills-snapshots/skills/hyperframes-core/SKILL.md`
+- `hyperframes-creative` (project-skills-dir) — `mirrors/skills-snapshots/skills/hyperframes-creative/SKILL.md`
+- `hyperframes-keyframes` (project-skills-dir) — `mirrors/skills-snapshots/skills/hyperframes-keyframes/SKILL.md`
+- `hyperframes-media` (project-skills-dir) — `mirrors/skills-snapshots/skills/hyperframes-media/SKILL.md`
+- `hyperframes-registry` (project-skills-dir) — `mirrors/skills-snapshots/skills/hyperframes-registry/SKILL.md`
+- `impl-snapshot` (project-cursor) — `mirrors/by-project/github-aculich-chatstory/.cursor/skills/impl-snapshot/SKILL.md`
+- `kiln-add-model` (project-cursor) — `mirrors/by-project/orphan-kiln__kiln-ai-4b129dc7c9/.cursor/skills/kiln-add-model/SKILL.md`
+- `kiln-check-deprecation` (project-cursor) — `mirrors/by-project/orphan-kiln__kiln-ai-4b129dc7c9/.cursor/skills/kiln-check-deprecation/SKILL.md`
 - `limitless-takeout-search` (project-skills-dir) — `mirrors/skills-snapshots/skills/limitless-takeout-search/SKILL.md`
 - `limitless-takeout-update` (project-skills-dir) — `mirrors/skills-snapshots/skills/limitless-takeout-update/SKILL.md`
 - `luminary-tech-radar` (project-skills-dir) — `mirrors/skills-snapshots/skills/luminary-tech-radar/SKILL.md`
 - `managing-python-dependencies` (project-skills-dir) — `mirrors/skills-snapshots/skills/managing-python-dependencies/SKILL.md`
+- `mcp-writing-hub` (project-cursor) — `mirrors/by-project/path-writing-income-e2d299d8b155/.cursor/skills/mcp-writing-hub/SKILL.md`
+- `media-use` (project-skills-dir) — `mirrors/skills-snapshots/skills/media-use/SKILL.md`
 - `meeting-sync` (project-skills-dir) — `mirrors/skills-snapshots/skills/meeting-sync/SKILL.md`
 - `meeting-sync-and-synthesis` (project-skills-dir) — `mirrors/skills-snapshots/skills/meeting-sync-and-synthesis/SKILL.md`
+- `meeting-sync.stale-2026-07-06` (project-skills-dir) — `mirrors/skills-snapshots/skills/meeting-sync.stale-2026-07-06/SKILL.md`
+- `memory-leak-debugging` (project-cursor) — `mirrors/by-project/path-cidr-evictionstory-mn-9f23bc71c2b4/.cursor/skills/memory-leak-debugging/SKILL.md`
 - `ml-best-practices` (project-skills-dir) — `mirrors/skills-snapshots/skills/ml-best-practices/SKILL.md`
+- `motion-graphics` (project-skills-dir) — `mirrors/skills-snapshots/skills/motion-graphics/SKILL.md`
+- `music-to-video` (project-skills-dir) — `mirrors/skills-snapshots/skills/music-to-video/SKILL.md`
 - `notebook-guidance` (project-skills-dir) — `mirrors/skills-snapshots/skills/notebook-guidance/SKILL.md`
+- `nuxt-best-practices` (project-cursor) — `mirrors/by-project/path-writing-income-e2d299d8b155/.cursor/skills/nuxt-best-practices/SKILL.md`
+- `nuxt-ui` (project-cursor) — `mirrors/by-project/path-writing-income-e2d299d8b155/.cursor/skills/nuxt-ui/SKILL.md`
+- `op-credentials` (project-cursor) — `mirrors/by-project/github-tomascupr-sandstorm/.cursor/skills/op-credentials/SKILL.md`
 - `op-credentials` (project-skills-dir) — `mirrors/skills-snapshots/skills/op-credentials/SKILL.md`
+- `personnel-render` (project-cursor) — `mirrors/by-project/orphan-kit-512fba8992/.cursor/skills/personnel-render/SKILL.md`
+- `pr-to-video` (project-skills-dir) — `mirrors/skills-snapshots/skills/pr-to-video/SKILL.md`
+- `pretext-upstream-rhythm` (project-cursor) — `mirrors/by-project/github-aculich-pretext/.cursor/skills/pretext-upstream-rhythm/SKILL.md`
 - `process-umbrella-incoming` (project-skills-dir) — `mirrors/skills-snapshots/skills/process-umbrella-incoming/SKILL.md`
+- `product-launch-video` (project-skills-dir) — `mirrors/skills-snapshots/skills/product-launch-video/SKILL.md`
 - `project-management-guru-adhd` (project-skills-dir) — `mirrors/skills-snapshots/skills/project-management-guru-adhd/SKILL.md`
+- `proposal-critique` (project-cursor) — `mirrors/by-project/github-cidrlab-cidr-sjsu-chrp-policyai/.cursor/skills/proposal-critique/SKILL.md`
+- `quickstart-get-running` (project-cursor) — `mirrors/by-project/github-tomascupr-sandstorm/.cursor/skills/quickstart-get-running/SKILL.md`
 - `reflexive-method-authoring-loop` (project-skills-dir) — `mirrors/skills-snapshots/skills/reflexive-method-authoring-loop/SKILL.md`
+- `remotion-to-hyperframes` (project-skills-dir) — `mirrors/skills-snapshots/skills/remotion-to-hyperframes/SKILL.md`
+- `research-plan-voice-brief` (project-cursor) — `mirrors/by-project/github-cidrlab-cidr-sjsu-chrp-policyai/.cursor/skills/research-plan-voice-brief/SKILL.md`
+- `research-project-bootstrap` (project-cursor) — `mirrors/by-project/path-alphaxiv-marimo-d8e7b800db3f/.cursor/skills/research-project-bootstrap/SKILL.md`
+- `rll-doc-assembly` (project-cursor) — `mirrors/by-project/github-willowempowermentllc-rainbowlearninglibrary/.cursor/skills/rll-doc-assembly/SKILL.md`
+- `rowboat-fork-workflow` (project-cursor) — `mirrors/by-project/path-rowboat-quickstart-5e8cdadc157b/.cursor/skills/rowboat-fork-workflow/SKILL.md`
+- `rowboat-safe-startup` (project-skills-dir) — `mirrors/skills-snapshots/skills/rowboat-safe-startup/SKILL.md`
+- `rowboat-upstream-digest` (project-skills-dir) — `mirrors/skills-snapshots/skills/rowboat-upstream-digest/SKILL.md`
+- `sandbox-sdk` (project-skills-dir) — `mirrors/skills-snapshots/skills/sandbox-sdk/SKILL.md`
+- `sandstorm-quickstart` (project-cursor) — `mirrors/by-project/github-tomascupr-sandstorm/.cursor/skills/sandstorm-quickstart/SKILL.md`
+- `scrolly-chrome-debug` (project-cursor) — `mirrors/by-project/path-cidr-evictionstory-mn-9f23bc71c2b4/.cursor/skills/scrolly-chrome-debug/SKILL.md`
+- `skeptical-moderator-rubric-quick` (project-cursor) — `mirrors/by-project/github-aculich-writing-quality/.cursor/skills/skeptical-moderator-rubric-quick/SKILL.md`
+- `skeptical-quackery-neutralizer-quick` (project-cursor) — `mirrors/by-project/github-aculich-writing-quality/.cursor/skills/skeptical-quackery-neutralizer-quick/SKILL.md`
 - `skill-repair` (project-skills-dir) — `mirrors/skills-snapshots/skills/skill-repair/SKILL.md`
+- `slideshow` (project-skills-dir) — `mirrors/skills-snapshots/skills/slideshow/SKILL.md`
+- `smc-policy-capsule` (project-cursor) — `mirrors/by-project/github-aculich-cidr-policymap-ca-smc/.cursor/skills/smc-policy-capsule/SKILL.md`
+- `sow-draft-kit` (project-cursor) — `mirrors/by-project/path-sow-draft-kit-0c4ece52ab3a/.cursor/skills/sow-draft-kit/SKILL.md`
+- `sow-draft-kit` (project-cursor) — `mirrors/by-project/github-cidrlab-cidr-marin-courts/.cursor/skills/sow-draft-kit/SKILL.md`
+- `sow-draft-kit` (project-cursor) — `mirrors/by-project/orphan-kit-512fba8992/.cursor/skills/sow-draft-kit/SKILL.md`
+- `sow-version-analysis` (project-cursor) — `mirrors/by-project/path-sow-draft-kit-0c4ece52ab3a/.cursor/skills/sow-version-analysis/SKILL.md`
+- `sow-version-analysis` (project-cursor) — `mirrors/by-project/github-cidrlab-cidr-marin-courts/.cursor/skills/sow-version-analysis/SKILL.md`
+- `sow-version-analysis` (project-cursor) — `mirrors/by-project/orphan-kit-512fba8992/.cursor/skills/sow-version-analysis/SKILL.md`
 - `specstory-guard` (project-skills-dir) — `mirrors/skills-snapshots/skills/specstory-guard/SKILL.md`
 - `specstory-link-trail` (project-skills-dir) — `mirrors/skills-snapshots/skills/specstory-link-trail/SKILL.md`
 - `specstory-organize` (project-skills-dir) — `mirrors/skills-snapshots/skills/specstory-organize/SKILL.md`
 - `specstory-project-stats` (project-skills-dir) — `mirrors/skills-snapshots/skills/specstory-project-stats/SKILL.md`
 - `specstory-session-summary` (project-skills-dir) — `mirrors/skills-snapshots/skills/specstory-session-summary/SKILL.md`
 - `specstory-yak` (project-skills-dir) — `mirrors/skills-snapshots/skills/specstory-yak/SKILL.md`
+- `storyvale-essay-pipeline` (project-cursor) — `mirrors/by-project/path-storytelling-capsules-12c38336582f/.cursor/skills/storyvale-essay-pipeline/SKILL.md`
+- `storyvale-first-draft` (project-cursor) — `mirrors/by-project/path-storytelling-capsules-12c38336582f/.cursor/skills/storyvale-first-draft/SKILL.md`
+- `storyvale-iterate-draft` (project-cursor) — `mirrors/by-project/path-storytelling-capsules-12c38336582f/.cursor/skills/storyvale-iterate-draft/SKILL.md`
+- `survey-creative-landscape` (project-cursor) — `mirrors/by-project/github-aculich-switchdimension-community/.cursor/skills/envisioning-suite/survey-creative-landscape/SKILL.md`
+- `survey-creative-landscape` (project-cursor) — `mirrors/by-project/orphan-envisioning-skills-suite-c0e7661115/.cursor/skills/envisioning-suite/survey-creative-landscape/SKILL.md`
+- `talking-head-recut` (project-skills-dir) — `mirrors/skills-snapshots/skills/talking-head-recut/SKILL.md`
+- `tool-landscape-intel` (project-skills-dir) — `mirrors/skills-snapshots/skills/tool-landscape-intel/SKILL.md`
 - `tools-quickstart-bootstrap` (project-skills-dir) — `mirrors/skills-snapshots/skills/tools-quickstart-bootstrap/SKILL.md`
+- `troubleshooting` (project-cursor) — `mirrors/by-project/path-cidr-evictionstory-mn-9f23bc71c2b4/.cursor/skills/troubleshooting/SKILL.md`
+- `turnstile-spin` (project-skills-dir) — `mirrors/skills-snapshots/skills/turnstile-spin/SKILL.md`
+- `unpack-the-question` (project-cursor) — `mirrors/by-project/github-aculich-switchdimension-community/.cursor/skills/envisioning-suite/unpack-the-question/SKILL.md`
+- `unpack-the-question` (project-cursor) — `mirrors/by-project/orphan-envisioning-skills-suite-c0e7661115/.cursor/skills/envisioning-suite/unpack-the-question/SKILL.md`
+- `vue-best-practices` (project-cursor) — `mirrors/by-project/path-writing-income-e2d299d8b155/.cursor/skills/vue-best-practices/SKILL.md`
+- `web-perf` (project-skills-dir) — `mirrors/skills-snapshots/skills/web-perf/SKILL.md`
+- `website-to-video` (project-skills-dir) — `mirrors/skills-snapshots/skills/website-to-video/SKILL.md`
 - `wip-distill` (project-skills-dir) — `mirrors/skills-snapshots/skills/wip-distill/SKILL.md`
 - `wip-harvest` (project-skills-dir) — `mirrors/skills-snapshots/skills/wip-harvest/SKILL.md`
 - `wip-publish` (project-skills-dir) — `mirrors/skills-snapshots/skills/wip-publish/SKILL.md`
+- `workers-best-practices` (project-skills-dir) — `mirrors/skills-snapshots/skills/workers-best-practices/SKILL.md`
+- `wrangler` (project-skills-dir) — `mirrors/skills-snapshots/skills/wrangler/SKILL.md`
+- `writing-quality-pipeline` (project-cursor) — `mirrors/by-project/github-cidrlab-cidr-sjsu-chrp-policyai/.cursor/skills/writing-quality-pipeline/SKILL.md`
+- `youtube-channel-catchup` (project-cursor) — `mirrors/by-project/path-continuous-ai-06cb23000be0/.cursor/skills/youtube-channel-catchup/SKILL.md`
+
+### `/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor`
+
+- `accidental-data-loss-prevention` (project-cursor) — `skills/accidental-data-loss-prevention/SKILL.md`
+- `adhd-daily-planner` (project-cursor) — `skills/adhd-daily-planner/SKILL.md`
+- `adhdev-engineering-partnership` (project-cursor) — `skills/adhdev-engineering-partnership/SKILL.md`
+- `agents-sdk` (project-cursor) — `skills/agents-sdk/SKILL.md`
+- `bigquery-data-transfer-service` (project-cursor) — `skills/bigquery-data-transfer-service/SKILL.md`
+- `bootstrap-new-project` (project-cursor) — `skills/bootstrap-new-project/SKILL.md`
+- `bootstrap-tool-config-repo` (project-cursor) — `skills/bootstrap-tool-config-repo/SKILL.md`
+- `bootstrap-umbrella-client-project` (project-cursor) — `skills/bootstrap-umbrella-client-project/SKILL.md`
+- `building-data-apps` (project-cursor) — `skills/building-data-apps/SKILL.md`
+- `change-world-critique-quick` (project-cursor) — `skills/change-world-critique-quick/SKILL.md`
+- `change-world-critique-quick-full` (project-cursor) — `skills/change-world-critique-quick-full/SKILL.md`
+- `cidr-bootstrap-project` (project-cursor) — `skills/cidr-bootstrap-project/SKILL.md`
+- `cloudflare` (project-cursor) — `skills/cloudflare/SKILL.md`
+- `cloudflare-email-service` (project-cursor) — `skills/cloudflare-email-service/SKILL.md`
+- `cloudflare-one` (project-cursor) — `skills/cloudflare-one/SKILL.md`
+- `cloudflare-one-migrations` (project-cursor) — `skills/cloudflare-one-migrations/SKILL.md`
+- `compendium-discover-projects` (project-cursor) — `skills/compendium-discover-projects/SKILL.md`
+- `context-engineering` (project-cursor) — `skills/context-engineering/SKILL.md`
+- `data-autocleaning` (project-cursor) — `skills/data-autocleaning/SKILL.md`
+- `dataform-bigquery` (project-cursor) — `skills/dataform-bigquery/SKILL.md`
+- `dbt-bigquery` (project-cursor) — `skills/dbt-bigquery/SKILL.md`
+- `deeplistening-method-synthesis` (project-cursor) — `skills/deeplistening-method-synthesis/SKILL.md`
+- `deeplistening-session-analysis` (project-cursor) — `skills/deeplistening-session-analysis/SKILL.md`
+- `developing-with-bigquery` (project-cursor) — `skills/developing-with-bigquery/SKILL.md`
+- `discovering-gcp-data-assets` (project-cursor) — `skills/discovering-gcp-data-assets/SKILL.md`
+- `durable-objects` (project-cursor) — `skills/durable-objects/SKILL.md`
+- `fireflies-meeting-export` (project-cursor) — `skills/fireflies-meeting-export/SKILL.md`
+- `gcloud-auth-verification` (project-cursor) — `skills/gcloud-auth-verification/SKILL.md`
+- `gcp-composer-troubleshooting` (project-cursor) — `skills/gcp-composer-troubleshooting/SKILL.md`
+- `gcp-data-pipelines` (project-cursor) — `skills/gcp-data-pipelines/SKILL.md`
+- `gcp-dataflow` (project-cursor) — `skills/gcp-dataflow/SKILL.md`
+- `gcp-pipeline-orchestration` (project-cursor) — `skills/gcp-pipeline-orchestration/SKILL.md`
+- `gcp-pipeline-resource-provisioning` (project-cursor) — `skills/gcp-pipeline-resource-provisioning/SKILL.md`
+- `gcp-spark` (project-cursor) — `skills/gcp-spark/SKILL.md`
+- `google-workspace-new-org` (project-cursor) — `skills/google-workspace-new-org/SKILL.md`
+- `limitless-takeout-search` (project-cursor) — `skills/limitless-takeout-search/SKILL.md`
+- `limitless-takeout-update` (project-cursor) — `skills/limitless-takeout-update/SKILL.md`
+- `luminary-tech-radar` (project-cursor) — `skills/luminary-tech-radar/SKILL.md`
+- `managing-python-dependencies` (project-cursor) — `skills/managing-python-dependencies/SKILL.md`
+- `meeting-sync-and-synthesis` (project-cursor) — `skills/meeting-sync-and-synthesis/SKILL.md`
+- `meeting-sync.stale-2026-07-06` (project-cursor) — `skills/meeting-sync.stale-2026-07-06/SKILL.md`
+- `ml-best-practices` (project-cursor) — `skills/ml-best-practices/SKILL.md`
+- `notebook-guidance` (project-cursor) — `skills/notebook-guidance/SKILL.md`
+- `op-credentials` (project-cursor) — `skills/op-credentials/SKILL.md`
+- `process-umbrella-incoming` (project-cursor) — `skills/process-umbrella-incoming/SKILL.md`
+- `project-management-guru-adhd` (project-cursor) — `skills/project-management-guru-adhd/SKILL.md`
+- `reflexive-method-authoring-loop` (project-cursor) — `skills/reflexive-method-authoring-loop/SKILL.md`
+- `rowboat-safe-startup` (project-cursor) — `skills/rowboat-safe-startup/SKILL.md`
+- `rowboat-upstream-digest` (project-cursor) — `skills/rowboat-upstream-digest/SKILL.md`
+- `sandbox-sdk` (project-cursor) — `skills/sandbox-sdk/SKILL.md`
+- `skill-repair` (project-cursor) — `skills/skill-repair/SKILL.md`
+- `specstory-guard` (project-cursor) — `skills/specstory-guard/SKILL.md`
+- `specstory-link-trail` (project-cursor) — `skills/specstory-link-trail/SKILL.md`
+- `specstory-organize` (project-cursor) — `skills/specstory-organize/SKILL.md`
+- `specstory-project-stats` (project-cursor) — `skills/specstory-project-stats/SKILL.md`
+- `specstory-session-summary` (project-cursor) — `skills/specstory-session-summary/SKILL.md`
+- `specstory-yak` (project-cursor) — `skills/specstory-yak/SKILL.md`
+- `tool-landscape-intel` (project-cursor) — `skills/tool-landscape-intel/SKILL.md`
+- `tools-quickstart-bootstrap` (project-cursor) — `skills/tools-quickstart-bootstrap/SKILL.md`
+- `turnstile-spin` (project-cursor) — `skills/turnstile-spin/SKILL.md`
+- `web-perf` (project-cursor) — `skills/web-perf/SKILL.md`
+- `workers-best-practices` (project-cursor) — `skills/workers-best-practices/SKILL.md`
+- `wrangler` (project-cursor) — `skills/wrangler/SKILL.md`
 
 ### `/Users/me/src/skill-eval/claude-adhd-skills`
 
