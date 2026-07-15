@@ -4,8 +4,8 @@ description: Ingests meeting transcripts from Granola and Zoom MCPs, pulls upstr
 ---
 
 > **DEPRECATED** — Superseded by two generic skills (do not delete this folder per project policy):
-> - **`meeting-sync`** (`~/.cursor/skills/meeting-sync/SKILL.md`) — Phases 1–2 ingest + index; reads **`.context/conventions.md`**.
-> - **`context-engineering`** (`~/.cursor/skills/context-engineering/SKILL.md`) — three-pillar `.context/` lifecycle + Phases 3–4 synthesis + grounding.
+> - **`meeting-sync`** (`~/.agents/skills/meeting-sync/SKILL.md`) — Phases 1–2 ingest + index; reads **`.context/conventions.md`**.
+> - **`context-engineering`** (`~/.agents/skills/context-engineering/SKILL.md`) — three-pillar `.context/` lifecycle + Phases 3–4 synthesis + grounding.
 >
 > Prefer bootstrapping **`.context/`** and project **`conventions.md`** instead of embedding project paths only in this skill’s `project-conventions.md`.
 

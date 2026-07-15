@@ -28,6 +28,8 @@ When the user says to bootstrap **this directory** or an existing path (e.g. `~/
 3. Inventory existing subprojects instead of only vendoring a single new upstream.
 4. Run the **Agent skills landscape** step (below) and write [`TOOLBOX.md`](TOOLBOX.md) at the repo root.
 
+**Multi-tool layer repos** (e.g. `~/tools/markdown-ecosystem/` with `layers/<layer>/<tool>/`): see [markdown-ecosystem-layers.md](markdown-ecosystem-layers.md) — per-tool quickstarts, git submodules, layer-scoped landscape, posts/.
+
 ## Execution workflow
 
 Copy this checklist and update status as you go:

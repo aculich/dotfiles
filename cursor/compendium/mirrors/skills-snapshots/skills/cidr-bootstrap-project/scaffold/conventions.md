@@ -16,9 +16,17 @@
 
 ## Zoom
 
-- **host_user_id:** TODO (email or Zoom user id)
+- **host_user_id:** aaron@cidrlab.org
 - **transcripts_root:** `TODO_transcripts/`
 - **fetch_script:** TODO optional path
+
+## Google Workspace
+
+- **workspace_org:** cidrlab
+- **work_email:** aaron@cidrlab.org
+- **gog_alias:** cidrlab
+- **controller_repo:** ~/tools/google-workspace-tools
+- **manifest:** `.workspace-tools.json` (written by `just attach-project cidrlab <path> none`)
 
 ## Notes
 

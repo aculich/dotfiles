@@ -14,6 +14,7 @@ User is:
 
 - Starting a **new CiDR / ERN engagement** (e.g. a new county, a new contract with a regional collaborative, a new jurisdiction-specific HPRM rollout).
 - Has dropped an **email thread (`.eml`)** or signed contract into `~/projects/cidr-org/incoming/` and wants a dedicated repo to track that engagement end-to-end.
+- Has a **Granola meeting URL or ID** from a kickoff / discovery call and wants a project bootstrapped from that meeting (calendar + email + transcript + screenshots).
 - Wants to mirror the **cidr-marin-courts** structure for a new project (so agents recognize the conventions and `meeting-sync` / `context-engineering` skills work without per-project rewiring).
 
 If the project is **not** a CiDR / ERN research engagement, prefer the generic `bootstrap-new-project` flow.
@@ -95,10 +96,44 @@ Confirm before scaffolding (prefer `AskQuestion` when available; otherwise inlin
 | **Funder / counterparty** (e.g. CORO, 21 Elements / Planning Collaborative, county DoH) | Decides `letterhead-*-sow.md`, signature block, invoice path |
 | **GitHub org and visibility** (cidrlab vs evictionresearch; private by default) | `gh repo create` later |
 | **Related upstream repos** to nest as gitignored clones (e.g. `evictionresearch/california`, `evictionresearch/hprm` (sanmateo branch), `cidrlab/library`) | Sets up `.gitignore` + clone steps + `ARCHITECTURE.md` |
-| **Initial `.eml` source** in `~/projects/cidr-org/incoming/` to copy into the new repo's `incoming/` | Bootstraps comms history |
+| **Initial seed** | `.eml` in `cidr-org/incoming/` **or** Granola meeting URL/ID | Bootstraps comms history or meeting-grounded discovery |
+| **Email lookback** | `all` (default for new relationships) / `90d` / `30d` | Gmail search window for invitee threads |
 | **Period of performance** + **report deadline** (best guess from email) | `intent.md`, `outcomes.md`, `next-actions.md` |
 
 If the user has already named everything in their request, do not re-ask — proceed.
+
+## 1.5 — Meeting-grounded discovery (when seeded by Granola URL/ID)
+
+Run **after** step 1 requirements are known and **before** step 3 directory skeleton when the user provides a Granola meeting URL or ID (alternative or supplement to `.eml` seed). One batch per source, bits-first:
+
+1. **Granola** (`plugin-granola-granola` or `user-granola`):
+   - `list_meetings` / `get_meetings` / `get_meeting_transcript` for the seed ID.
+   - Capture: title, start/end, attendees, `private_notes`, AI `summary`, transcript.
+   - Record Granola URL in conventions (`granola.meeting_id`, `granola.url`).
+
+2. **Google Calendar** (`user-google-workspace`, `user_google_email: aaron@cidrlab.org`):
+   - `get_events` bracketing meeting start/end (±1 day).
+   - Match by title substring or attendee overlap.
+   - Capture: invitee list, conferencing link (Zoom vs Google Meet vs none).
+   - When platform is **Google Meet** with no Zoom link: set `meeting_platform: google_meet` and log `zoom_cloud: not_applicable` in manifest `gaps[]` — do not attempt Zoom MCP.
+
+3. **Gmail** (`search_gmail_messages`, `get_gmail_thread_content`, `user_google_email: aaron@cidrlab.org`):
+   - For each **external invitee** (exclude `@cidrlab.org` internal unless user asks): search `from:` and `to:` queries.
+   - Default lookback: **`email_lookback: all`** (conventions key); user may override to `90d` / `30d`.
+   - Pull thread text via MCP; download attachments via **`gog-as cidrlab gmail`** CLI into `<new-repo>/incoming/` (MCP has no attachment download).
+   - Every staged file: provenance line with Gmail message id, date, sender.
+
+4. **Tana** (optional — still evaluating):
+   - Single `listEvents` probe for meeting date window.
+   - Mirror only if matching event exists; else log gap in discovery notes.
+
+5. **Screenshots:** delegated to **`meeting-sync`** Phase 1-local Shottr step — do not duplicate logic here.
+
+**Pre-fill from discovery** (before context-engineering synthesis):
+- `.context/people.md` — invitees, roles, orgs (e.g. `jeff@zeal-ed.com` → Zeal)
+- `.context/conventions.md` — `granola.title_filters`, `meeting_platform`, `screenshots_root`, `email_lookback`
+- `.context/decisions.md` — D1: bootstrapped from meeting `<title>` on `<date>`
+- `.context/next-actions.md` — action items from Granola notes / email threads (owner + status)
 
 ## 2. Classify git topology (CIDR defaults)
 
@@ -260,7 +295,7 @@ This skill writes **stubs** for all twelve `.context/` files (eleven from the co
 | `monitor.md` | scaffold | External watch table (legislation, court web, partner cadence, GitHub issues) |
 | `sensitive-topics.md` | scaffold | DO NOT / CAREFUL WITH / GOOD FRAMING — copy structure from cidr-marin-courts; tailor to local political context |
 
-After writing stubs, **hand off to the `context-engineering` skill** for substantive synthesis from the `.eml` thread and any GitHub issues you searched.
+After writing stubs, run **`meeting-sync`** (Phases 0–2) for the seed meeting, then hand off to **`context-engineering`** for substantive synthesis from discovery output (`.eml` threads, Gmail pulls, transcript, attachments).
 
 ## 6. Move (don't lose) the email drops
 
@@ -305,13 +340,19 @@ gh repo create cidrlab/<slug> --private --source=. --remote=origin --push
 
 …and let them run it after they've reviewed `.context/` and `AGENTS.md`.
 
-## 9. Hand off to context-engineering
+## 9. Hand off to meeting-sync + context-engineering
 
-Final step: invoke `context-engineering` (or tell the user to invoke it) inside the new repo, pointed at the `.eml` thread that seeded the project, so it can do substantive synthesis on top of the stubs. Confirm:
+Final steps (in order):
 
-- `.context/conventions.md` paths are correct (so `meeting-sync` will work)
+1. **`meeting-sync`** Phases 0–2 inside the new repo — mirror seed meeting (Granola, Shottr screenshots, Zoom if applicable) into `01-background/granola-mirror/` or `01-background/transcripts/` per conventions; write `sync_manifest.json`.
+2. **`context-engineering`** synthesis — fill `.context/` pillars from transcript, emails, attachments; grounding table; digest note under `01-background/` or `notes/`.
+
+Confirm:
+- `.context/conventions.md` paths are correct (so `meeting-sync` will work on subsequent meetings)
 - `.context/values.md` has at least one project-specific guardrail beyond the defaults
 - `.context/sensitive-topics.md` has been touched if the project involves court data, Legal Aid, or politically contentious counties
+
+**Subsequent meetings:** `meeting-sync` (Phases 0–2) → `context-engineering` (Phase 3 feed-forward). **No re-bootstrap.**
 
 ## 10. Execution checklist
 
@@ -319,7 +360,8 @@ Track progress as you go:
 
 ```
 - [ ] Read cidr-marin-courts canonical files (README, AGENTS.md, .gitignore, .context/conventions.md, .context/README.md)
-- [ ] Confirm slug, county, topic, funder, GitHub org, upstream clones, .eml source with user
+- [ ] Confirm slug, county, topic, funder, GitHub org, upstream clones, seed (`.eml` and/or Granola URL) with user
+- [ ] Step 1.5 meeting-grounded discovery when Granola seed: Calendar + Gmail + Granola + Tana probe
 - [ ] Resolve git topology: which upstream repos are gitignored clones vs submodules vs subtree
 - [ ] mkdir directory skeleton (incl. .context/, incoming/, 01-05, shared/, docs/, outofscope/)
 - [ ] Write .gitignore (use cidr-marin-courts as source of truth)
@@ -327,10 +369,11 @@ Track progress as you go:
 - [ ] Write incoming/README.md, communications/README.md, communications/STATUS.md, shared/README.md
 - [ ] Optional: copy Makefile + scripts/build-sow-pdf.sh if SOW PDFs are in scope
 - [ ] Write all .context/ stubs from this skill's scaffold/
-- [ ] Pre-fill conventions.md, people.md, decisions.md, next-actions.md from .eml + user input
-- [ ] Copy (not move) seeding .eml files into incoming/
+- [ ] Pre-fill conventions.md, people.md, decisions.md, next-actions.md from discovery + user input
+- [ ] Copy (not move) seeding .eml / Gmail attachments into incoming/
+- [ ] meeting-sync Phases 0–2 for seed meeting (Granola, Shottr, Zoom if applicable)
 - [ ] git init + first commit (do NOT push)
-- [ ] Hand off to context-engineering for substantive .context/ synthesis
+- [ ] context-engineering synthesis (.context/ pillars, grounding table, digest)
 - [ ] Tell user the gh repo create command to run when ready
 ```
 
@@ -345,8 +388,16 @@ Track progress as you go:
 
 ## See also
 
-- **`context-engineering`** — fills `.context/` substantively after this skill writes stubs
-- **`meeting-sync`** — Granola / Zoom transcript ingest into `01-background/transcripts/`
+**Skill coordination:**
+
+| Phase | Skill | What it does |
+|-------|-------|--------------|
+| Bootstrap (once) | **`cidr-bootstrap-project`** | Scaffold repo + discovery + first meeting ingest |
+| Ingest (every meeting) | **`meeting-sync`** | Granola / Zoom / Tana / Shottr → `raw/` mirrors |
+| Synthesis (after ingest) | **`context-engineering`** | `.context/` pillars, grounding, digest |
+
+- **`context-engineering`** — fills `.context/` substantively after bootstrap stubs
+- **`meeting-sync`** — Granola / Zoom / Shottr transcript ingest into `01-background/`
 - **`bootstrap-new-project`** — generic version of this skill (use for non-CIDR projects)
 - Reference repo: `~/projects/cidr-marin-courts/` (canonical structure)
 - Reference issues: `cidrlab/projects#4`, `evictionresearch/hprm#10`, ER project board #23 (San Mateo timeline)

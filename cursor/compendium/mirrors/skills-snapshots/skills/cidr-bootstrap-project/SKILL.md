@@ -305,7 +305,37 @@ gh repo create cidrlab/<slug> --private --source=. --remote=origin --push
 
 …and let them run it after they've reviewed `.context/` and `AGENTS.md`.
 
-## 9. Hand off to context-engineering
+## 9. Attach Google Workspace tools
+
+Bind the new repo to the **cidrlab** org so Cursor agents use `aaron@cidrlab.org` by default (work account). Auth and OAuth live machine-wide in the controller — this step only writes project-local binding artifacts.
+
+**Prerequisite:** controller must be ready:
+
+```bash
+cd ~/tools/google-workspace-tools && just cidrlab
+```
+
+If that fails, stop and point the user to `~/tools/google-workspace-tools/docs/cidrlab-setup.md` — do not skip attach.
+
+**Engagement repos** (default — work-primary binding):
+
+```bash
+cd ~/tools/google-workspace-tools
+just attach-project cidrlab "<new-repo-path>" none
+```
+
+This writes `.workspace-tools.json`, `.cursor/rules/cidrlab-google-workspace.mdc`, an `AGENTS.md` workspace-tools block, and `.cursor/commands/cidrlab-status.md`.
+
+**LLC admin repos only** (not county engagements — work + admin accounts):
+
+```bash
+just attach-project cidrlab "<new-repo-path>" none \
+  --rule-template llc-admin-cidrlab-google-workspace.mdc
+```
+
+Confirm `.workspace-tools.json` exists at the repo root before handing off.
+
+## 10. Hand off to context-engineering
 
 Final step: invoke `context-engineering` (or tell the user to invoke it) inside the new repo, pointed at the `.eml` thread that seeded the project, so it can do substantive synthesis on top of the stubs. Confirm:
 
@@ -313,7 +343,7 @@ Final step: invoke `context-engineering` (or tell the user to invoke it) inside 
 - `.context/values.md` has at least one project-specific guardrail beyond the defaults
 - `.context/sensitive-topics.md` has been touched if the project involves court data, Legal Aid, or politically contentious counties
 
-## 10. Execution checklist
+## 11. Execution checklist
 
 Track progress as you go:
 
@@ -330,6 +360,8 @@ Track progress as you go:
 - [ ] Pre-fill conventions.md, people.md, decisions.md, next-actions.md from .eml + user input
 - [ ] Copy (not move) seeding .eml files into incoming/
 - [ ] git init + first commit (do NOT push)
+- [ ] Verify `just cidrlab` in controller; run `just attach-project cidrlab <path> none`
+- [ ] Confirm `.workspace-tools.json` exists at repo root
 - [ ] Hand off to context-engineering for substantive .context/ synthesis
 - [ ] Tell user the gh repo create command to run when ready
 ```
@@ -342,6 +374,7 @@ Track progress as you go:
 - **Do not** vendor the ERN state repo or HPRM repo into the new project's tracked tree — keep them as gitignored sibling clones unless the user explicitly says otherwise.
 - **Do not** put racial estimation, defendant names, or unredacted personal phone numbers anywhere in committed markdown — `values.md` and `sensitive-topics.md` carry this rule across all CIDR projects.
 - **Do not** skip the `outofscope/` gitignored carve-out — multi-topic email threads always have content that should not ship.
+- **Do not** skip Workspace tools attach (step 9) — engagement repos need `aaron@cidrlab.org` binding from day one.
 
 ## See also
 
@@ -349,4 +382,5 @@ Track progress as you go:
 - **`meeting-sync`** — Granola / Zoom transcript ingest into `01-background/transcripts/`
 - **`bootstrap-new-project`** — generic version of this skill (use for non-CIDR projects)
 - Reference repo: `~/projects/cidr-marin-courts/` (canonical structure)
+- **Workspace binding:** `~/tools/google-workspace-tools` — `just attach-project cidrlab <path> none` (see step 9)
 - Reference issues: `cidrlab/projects#4`, `evictionresearch/hprm#10`, ER project board #23 (San Mateo timeline)

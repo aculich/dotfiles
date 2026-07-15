@@ -16,6 +16,7 @@ note: symlinked skills are dereferenced (real content copied into mirror)
 /Users/me/.cursor/skills/hyperframes-media -> ../../.claude/skills/hyperframes-media
 /Users/me/.cursor/skills/hyperframes-registry -> ../../.claude/skills/hyperframes-registry
 /Users/me/.cursor/skills/media-use -> ../../.claude/skills/media-use
+/Users/me/.cursor/skills/meeting-sync -> /Users/me/.agents/skills/meeting-sync
 /Users/me/.cursor/skills/motion-graphics -> ../../.claude/skills/motion-graphics
 /Users/me/.cursor/skills/music-to-video -> ../../.claude/skills/music-to-video
 /Users/me/.cursor/skills/pr-to-video -> ../../.claude/skills/pr-to-video

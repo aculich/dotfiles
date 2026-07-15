@@ -10,6 +10,7 @@
 
 - **Bootstrapped by** the `cidr-bootstrap-project` skill from `~/projects/cidr-marin-courts/` as the canonical reference.
 - **Meeting ingest paths** (Granola `user-granola`, Zoom `user-zoom`, `incoming/*.eml` drops): read [`.context/conventions.md`](.context/conventions.md); keep **personal** and **off-scope** segments out of committed markdown and out of `.context/` (use gitignored `outofscope/` for carve-outs). Use **`meeting-sync`** for transcript ingest and **`context-engineering`** for `.context/` updates.
+- **Google Workspace binding:** attached to **cidrlab** org via `just attach-project` (step 9 of bootstrap). Default identity: `aaron@cidrlab.org` / `gog-as cidrlab`. Manifest: [`.workspace-tools.json`](.workspace-tools.json). Status: `cd ~/tools/google-workspace-tools && just cidrlab`.
 - **Primary remote** (when created): `cidrlab/{{PROJECT_SLUG}}` (private by default).
 - **Nested gitignored sibling clones** (`evictionresearch/...`, `library/`, `upstream/...`): each has its own `.git`. Document the policy in [`ARCHITECTURE.md`](ARCHITECTURE.md). PRs go to whichever repo owns the file.
 - **Optional SOW PDF flow:** if `Makefile` is copied from cidr-marin-courts, `make sow-pdf` runs `scripts/build-sow-pdf.sh` (Pandoc + XeLaTeX). Logo resolution uses vendored assets under `02-request-materials/assets/logos/` when present, otherwise fetches from `cidrlab/cidrlab.github.io` via `gh api` and converts with `rsvg-convert`.

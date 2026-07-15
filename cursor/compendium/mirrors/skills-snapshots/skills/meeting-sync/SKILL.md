@@ -54,6 +54,21 @@ Run **before** Phase 1-mcp whenever `zoom_local_root` is set in conventions (def
 
 Also copy engagement-scoped **incoming drops** (`.md`, `.txt`) to **`raw/incoming/`** when present.
 
+### Phase 1-local — Shottr screenshots (standard, no network)
+
+Run **after** Zoom local copy (or in parallel) whenever `screenshots_root` is set in conventions (default `/Users/me/shottr/`).
+
+| Step | Action |
+|------|--------|
+| 1 | Read **`screenshots_root`**, **`screenshots_glob`** (default `SCR-YYYYMMDD-*.{png,jpg,jpeg}`), and **`screenshots_window_buffer_min`** (default 15) from **`.context/conventions.md`**. |
+| 2 | Resolve meeting **start** and **end** from Granola metadata, calendar event, or Tana `readEvent` — required for window matching. |
+| 3 | Match files whose **filename date** (`SCR-YYYYMMDD-…`) equals the meeting date **and** whose **mtime** falls inside `[start − buffer, end + buffer]`. |
+| 4 | **Copy** (never move) each match into **`raw/screenshots/`** inside the unified mirror; preserve original filename. |
+| 5 | For each file, record in **`sync_manifest.json`** → `screenshots[]`: `filename`, `source_path`, `source: shottr_local`, **`captured_at`** (ISO 8601 from mtime), **`offset_from_start`** (`t+MM:SS` computed from meeting start), `mirror_path`. |
+| 6 | If no files match: log gap in manifest `gaps[]`; continue. |
+
+**Timestamp alignment (Phase 2, not Phase 1):** when a timestamped transcript exists, map screenshots to transcript segments — see Phase 2 below. Granola transcripts carry **no** per-line timestamps; Zoom VTT cue times and Tana `[Ns]` lines do.
+
 ### Phase 1a — Umbrella triage (optional)
 
 If the user says **"process incoming"** without naming an engagement **and** files sit in repo-root **`incoming/`** (see `incoming_dir` / `routing_log` in conventions), run **`process-umbrella-incoming`** first to classify, route, and append **`routing_log`**. Then continue with Phase 1b on the resolved **`engagement_incoming_dir`**.
@@ -179,10 +194,57 @@ Also: **`listProposals`** / proposal sessions apply to **write** flows only — 
 
 Run **after Phase 1-local** (local copy is faster and has no network dependency).
 
+**Dual MCP routing (hybrid):** Register both servers in `.cursor/mcp.json` when available:
+
+| Server key | Type | Use for |
+|------------|------|---------|
+| `zoom` (custom stdio) | S2S OAuth | `download_cloud_recording_file`, `get_meeting_summary`, CRUD, in-meeting |
+| `zoom-official` (hosted) | User OAuth PKCE | `get_meeting_assets`, `get_file_content`, `search_meetings`, whiteboards |
+
+See **zoom-deeplistening-agents** `docs/prds/PRD-C-hybrid.md` and `docs/ZOOM-MCP-HYBRID-SETUP.md` (Cursor wiring + OAuth).
+
+**Source honesty** — every mirrored file gets a `source` in `sync_manifest.json`:
+
+| Value | Meaning |
+|-------|---------|
+| `zoom_mcp_custom` | Custom stdio MCP tool |
+| `zoom_mcp_official` | Hosted Zoom MCP tool |
+| `zoom_rest_s2s` | REST via S2S (probe or `get_meeting_summary`) |
+| `incoming_manual` | Browser/manual export from `incoming/` |
+| `zoom_local` | `~/Documents/Zoom/` copy |
+| `shottr_local` | Shottr capture folder (`screenshots_root`, default `/Users/me/shottr/`) |
+
+Never tag `incoming_manual` as `zoom_mcp_custom` or `zoom_mcp_official`.
+
 1. Resolve `user_id` from **conventions** (email or Zoom user id).
-2. `list_recordings` with `from` / `to` (`yyyy-MM-dd`), paginate with `next_page_token` if needed.
-3. For each relevant recording: `download_cloud_recording_file` (or `get_meeting_recordings` + download) for **text only** — `audio_transcript.vtt`, chat `.txt` — into **`raw/zoom_cloud/`**. **Never** commit share/play URLs with embedded tokens.
-4. Log gaps in **`sync_manifest.json`** when cloud transcript is missing but local CC exists.
+2. `list_recordings` with `from` / `to` (`yyyy-MM-dd`), paginate with `next_page_token` if needed. Use `get_meeting_recordings` when you already have a meeting id/uuid.
+3. For each relevant recording, download **every text artifact** from `recording_files[]` into **`raw/zoom_cloud/`** using **`download_cloud_recording_file`** with explicit **`recording_file_id`** per file (preferred over `prefer_file_type` alone when a meeting has many files). Text types to mirror:
+   - **`TRANSCRIPT`** → `audio_transcript.vtt` (canonical when present)
+   - **`CHAT`** → `chat.txt`
+   - **`TIMELINE`** → `timeline.json`
+   - **`SUMMARY`** → `summary.json` (AI summary JSON when Zoom attaches it to cloud recording)
+   - **`CC`** → closed-caption VTT when present
+   - **Never** download MP4/M4A or commit share/play URLs with embedded tokens.
+4. If `recording_file_id` download fails with `no_download_url`, retry with **`prefer_file_type`** (e.g. `TRANSCRIPT`) or refresh via `get_meeting_recordings` first.
+5. Log gaps in **`sync_manifest.json`** when cloud transcript is missing but local CC exists.
+
+**Note:** `download_cloud_recording_file`'s `prefer_file_type` enum may omit `SUMMARY`; always use **`recording_file_id`** from the listing for SUMMARY files.
+
+### Zoom AI Companion notes (no Granola)
+
+When Granola was **not** used but Zoom AI Companion generated meeting notes, persist the full notes body — do **not** rely on transcript alone.
+
+**Acquisition order (bits-first, no processing scripts):**
+
+1. **Official MCP (when OAuth configured):** `get_meeting_assets(meeting_uuid)` → discover doc ids; `get_file_content(doc_id)` → write **`raw/zoom_notes/ai_companion_notes.md`** and **`raw/zoom_official/`** JSON sidecar. Tag `zoom_mcp_official`.
+2. **Custom MCP / REST:** `get_meeting_summary(meeting_uuid)` → save **`raw/zoom_api/meeting_summary.json`**; if `summary_content` is default template only, archive to **`raw/zoom_notes/ai_companion_notes_default_template.md`**. Tag `zoom_rest_s2s` or `zoom_mcp_custom`.
+3. **`list_recordings` / `get_meeting_recordings`** — check `recording_files[]` for **`file_type: SUMMARY`**; download via **`recording_file_id`** to **`raw/zoom_cloud/summary.json`**. Tag `zoom_mcp_custom`.
+4. **Repo `incoming/`** — scan for exported `.md` with Hub links (`docs.zoom.us/doc/…`) or `tasks.zoom.us?meetingId=…`; copy to **`raw/zoom_notes/ai_companion_notes.md`** only when (1)–(3) lack custom template content; refile to **`incoming/processed/YYYY-MM/`**. Tag **`incoming_manual`**.
+5. Store Hub URLs in **`raw/zoom_notes/zoom_doc_url*.txt`** when known.
+
+**Honesty:** REST `meeting_summary.summary_content` is often the **default** Zoom template (~12 KB), not a custom Hub template (~40 KB+). Do not overwrite a custom export with API default without archiving both.
+
+Declare **`raw/zoom_notes/ai_companion_notes.md`** as canonical for recap/action items in **`notes_info.md`**. Cloud VTT remains canonical for diarized quotes.
 
 ### Git (each upstream clone listed in conventions)
 
@@ -230,11 +292,18 @@ Default when conventions set **`mirror_layout: unified_raw`** (Tana co-located w
 <granola_root>/<namespace>/<meetingId>_<SanitizedTitle>_<YYYY-MM-DD>/
   raw/
     zoom_local/       # Phase 1-local copies
-    zoom_cloud/       # Phase 1-mcp VTT + chat
+    zoom_cloud/       # Phase 1-mcp VTT + chat + timeline + SUMMARY when present
+    zoom_api/         # meeting_summary.json (REST / get_meeting_summary)
+    zoom_official/    # hosted MCP payloads when used
+    zoom_docs/        # Hub doc exports via get_file_content
+    zoom_notes/       # AI Companion notes + doc URL sidecars
+    zoom_whiteboards/ # whiteboard exports when present
     granola/          # private_notes.md, ai_summary.md, transcript_granola.txt
     tana/             # tana_event.json, tana_summary.md, transcript_tana.txt, debug/<uri_slug>/, artifacts/
+    screenshots/      # Phase 1-local Shottr copies (SCR-YYYYMMDD-*.{png,jpg,jpeg})
     incoming/         # operator drops (.md notes)
   transcript.txt      # canonical diarized (Phase 2: cloud VTT > local CC > Tana > Granola)
+  screenshot_timeline.md  # Phase 2: screenshot ↔ transcript alignment when timestamps available
   notes_info.md
   sync_manifest.json
   metadata.json
@@ -243,6 +312,24 @@ Default when conventions set **`mirror_layout: unified_raw`** (Tana co-located w
 **`raw/` is immutable** — promoted/normalized files at mirror root may duplicate pointers but must not replace raw copies.
 
 Legacy split layout (`zoom-transcripts/` + flat granola folder) remains supported when conventions omit `unified_raw`.
+
+### Zoom-only minimal layout (no `.context/conventions.md`)
+
+When the repo has **no** `.context/conventions.md` / Granola / Tana paths and the user wants a simple Zoom ingest, default to:
+
+```
+<repo_root>/meeting-notes/<YYYY-MM-DD>_<SanitizedTitle>/
+  raw/
+    zoom_local/
+    zoom_cloud/
+    zoom_notes/       # ai_companion_notes.md when exported from Zoom
+  transcript.txt      # straight copy of cloud VTT (no conversion)
+  notes_info.md
+  sync_manifest.json
+  metadata.json
+```
+
+Use shell **`cp`** + Zoom MCP **`download_cloud_recording_file`** only — no custom processing scripts. Skip Granola/Tana MCP phases; document skipped sources in **`sync_manifest.json` `gaps[]`**.
 
 1. **Unified / Granola mirror:** `<granola_root>/<namespace>/<uuid-prefix>_<SanitizedTitle>_<MonDDYYYY>/` with:
    - **`private_notes.md`** — full note body from **`get_meetings`** (required).
@@ -259,17 +346,35 @@ Legacy split layout (`zoom-transcripts/` + flat granola folder) remains supporte
 5. **`notes/<YYYY-MM-DD>-<project>-transcript.md`:** stub — **links** to `raw/*` paths + promoted files; **do not** paste full transcript.
 6. **`notes/<YYYY-MM-DD>-<project>-notes.md`:** human digest — **Phase 3** (`context-engineering`), not Phase 2.
 
+### Screenshot ↔ transcript alignment (Phase 2)
+
+When **`raw/screenshots/`** is non-empty:
+
+1. Read each screenshot's **`captured_at`** and **`offset_from_start`** from **`sync_manifest.json`**.
+2. Pick the best **timestamped** transcript source (precedence: Zoom cloud VTT > Zoom local VTT/CC > Tana `transcript_tana.txt` `[Ns]` > none).
+3. When a timestamped source exists, write **`screenshot_timeline.md`** at mirror root — one row per screenshot:
+
+   | Screenshot | Captured | Offset | Nearest transcript segment | Speaker / topic |
+   |------------|----------|--------|---------------------------|-----------------|
+   | `SCR-…png` | `2026-07-07T11:17:00-07:00` | `t+17:00` | VTT cue / Tana `[1020s]` excerpt | … |
+
+   - **Zoom VTT:** parse `HH:MM:SS.mmm` cue start times; pick the cue whose start is closest to (and ≤) screenshot offset.
+   - **Tana:** parse `[Ns]` prefix as seconds-from-start; same nearest-segment rule.
+4. When **only Granola** exists (no per-line timestamps), write **`screenshot_timeline.md`** with absolute time + offset columns only; add a **Transcript alignment** note in **`notes_info.md`**: `granola_no_timestamps — re-run Phase 2 after Zoom/Tana backfill to populate segment column`.
+5. Phase 3 digest uses **`screenshot_timeline.md`** for per-screenshot descriptions when the segment column is populated.
+
 ## Outputs checklist
 
 ### Phase 1 (bits first)
 
-- [ ] **Phase 1-local:** `raw/zoom_local/` (+ `raw/incoming/` drops) copied; gaps in manifest
+- [ ] **Phase 1-local:** `raw/zoom_local/`, `raw/screenshots/` (+ `raw/incoming/` drops) copied; per-screenshot timestamps in manifest; gaps logged
 - [ ] **Phase 1-mcp:** `raw/zoom_cloud/`, `raw/granola/`, `raw/tana/` populated in **one batch**; **`raw/tana/debug/`** bundle for every meeting-linked URI; proposals **not** auto-approved
 - [ ] **`sync_manifest.json`** lists every file + `gaps[]` before any digest
 
 ### Phase 2 (organize only)
 
 - [ ] **`transcript.txt`** + **`notes_info.md`** + **`metadata.json`** at mirror root
+- [ ] **`screenshot_timeline.md`** when `raw/screenshots/` non-empty (full alignment or offset-only per transcript source)
 - [ ] **`index.json`** files updated (granola + zoom indices per conventions)
 - [ ] Transcript **stub** only (`meeting-notes-*-transcript.md`) — links, no full paste
 
@@ -332,6 +437,7 @@ Adjust wording to match your team’s facilitation docs if they define PALEO dif
 | `get_meeting_transcript` | `transcript_granola.txt` | Granola-native ASR stream; parallel to Zoom/Tana ASR if both exist. |
 | Tana `readFullTranscript` | `transcript_tana.txt` | Speaker-attributed; parallel to Zoom/Granola. |
 | Zoom `audio_transcript` etc. | `transcript.txt` | Often canonical diarized quotes — declare in `notes_info.md`. |
+| Zoom AI Companion notes (export or SUMMARY) | `raw/zoom_notes/ai_companion_notes.md` | Recap + action items when Granola absent; manual export or cloud `SUMMARY` JSON. |
 | Combined provenance | `metadata.json`, `sync_manifest.json`, `notes_info.md` | URLs, limits (screenshots), which transcript is canonical. |
 
 Projects may rename files via `.context/conventions.md` but must preserve the **same five text artifacts** for Granola mirrors: private notes body, AI summary, Granola transcript, canonical readable transcript policy, and provenance bundle. When Tana is in scope, add **`tana_event.json`**, **`tana_summary.md`**, and **`transcript_tana.txt`** (or document why a source was unavailable).
@@ -386,6 +492,25 @@ When Tana adds MCP tools for edit history or diffs, extend this table and the de
 - **`zoom_local_root`:** `~/Documents/Zoom/` (default)
 - **`zoom_local_glob`:** `*/meeting_saved_*.txt`
 - **`mirror_layout`:** `unified_raw` (recommended) or legacy split
+- **`screenshots_root`:** `/Users/me/shottr/` (Shottr default capture folder)
+- **`screenshots_glob`:** `SCR-YYYYMMDD-*.{png,jpg,jpeg}`
+- **`screenshots_window_buffer_min`:** 15 (minutes before/after meeting window)
+
+## Appendix H — Shottr screenshots → `raw/screenshots/` (reference)
+
+| Source | Mirror path | Manifest fields |
+|--------|-------------|-----------------|
+| Shottr `SCR-YYYYMMDD-*.{png,jpg,jpeg}` | `raw/screenshots/<filename>` | `source: shottr_local`, `captured_at`, `offset_from_start`, `source_path` |
+
+**Window match:** filename date = meeting date; mtime ∈ `[start − buffer, end + buffer]`.
+
+**Transcript alignment sources (Phase 2):**
+
+| Transcript source | Timestamp format | Alignment method |
+|-------------------|------------------|------------------|
+| Zoom cloud/local VTT | `HH:MM:SS.mmm` cue starts | Nearest cue ≤ screenshot offset |
+| Tana `transcript_tana.txt` | `[Ns]` seconds prefix | Nearest line ≤ offset |
+| Granola `transcript_granola.txt` | **None** | Offset-only timeline; note gap in `notes_info.md` |
 
 ## Appendix E — Local Zoom → `raw/zoom_local/` (reference)
 
@@ -396,6 +521,20 @@ When Tana adds MCP tools for edit history or diffs, extend this table and the de
 | `*.vtt` (if saved locally) | `raw/zoom_local/<filename>.vtt` |
 
 Match folder: `~/Documents/Zoom/<YYYY-MM-DD> … <title>/`.
+
+## Appendix G — Zoom cloud `recording_files[]` text types (reference)
+
+| `file_type` | Typical mirror path | Notes |
+|-------------|---------------------|-------|
+| `TRANSCRIPT` | `raw/zoom_cloud/audio_transcript.vtt` | Cloud ASR; usually canonical over local live transcript. |
+| `CHAT` | `raw/zoom_cloud/chat.txt` | In-meeting chat log. |
+| `TIMELINE` | `raw/zoom_cloud/timeline.json` | Speaker/timeline metadata. |
+| `SUMMARY` | `raw/zoom_cloud/summary.json` | AI summary JSON when attached to recording (not always present). |
+| `CC` | `raw/zoom_cloud/closed_caption.vtt` | Closed captions when separate from TRANSCRIPT. |
+
+Download each via **`recording_file_id`** from `list_recordings` / `get_meeting_recordings`. For AI Companion markdown notes not in cloud recording, see **Zoom AI Companion notes (no Granola)** above.
+
+**Not in Zoom MCP today:** `GET /meetings/{uuid}/meeting_summary` → `summary_content` (requires MCP server enhancement).
 
 ## Automation (`just` + CLIs)
 
