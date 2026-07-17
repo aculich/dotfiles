@@ -1,0 +1,568 @@
+{
+  "schema_version": 1,
+  "description": "Ledger of cursor-purification interventions applied to workspace roots",
+  "runs": [
+    {
+      "timestamp": "2026-07-16T17:55:00Z",
+      "mode": "manual",
+      "workspaces": [
+        "continuous-ai"
+      ],
+      "changed": [
+        "continuous-ai"
+      ],
+      "notes": "Prior session: expanded .cursorindexingignore + .vscode watcher/search excludes + TS quieting"
+    },
+    {
+      "timestamp": "2026-07-17T05:29:38Z",
+      "mode": "apply",
+      "workspaces": [
+        "cidr-districtdata",
+        "cidr-glossary-project",
+        "cidr-org",
+        "cidr-zeal",
+        "continuous-ai",
+        "cursor",
+        "ern-cpc",
+        "from-atoz-private",
+        "gcloud-default-1234",
+        "google-workspace-tools",
+        "lam-eda",
+        "llc-admin",
+        "midday-friends",
+        "peeq",
+        "peeq-paleo",
+        "proposal-studio",
+        "rrid",
+        "switchdimension-community",
+        "writing-quality"
+      ],
+      "changed": [
+        "cidr-districtdata",
+        "cidr-glossary-project",
+        "cidr-org",
+        "cidr-zeal",
+        "continuous-ai",
+        "cursor",
+        "ern-cpc",
+        "from-atoz-private",
+        "gcloud-default-1234",
+        "google-workspace-tools",
+        "lam-eda",
+        "llc-admin",
+        "midday-friends",
+        "peeq",
+        "peeq-paleo",
+        "proposal-studio",
+        "rrid",
+        "switchdimension-community",
+        "writing-quality"
+      ],
+      "notes": "Bulk rollout from run-2026-07-16T17-52-03Z status. Before: 0.63GB free, 18 extensionHosts, continuous-ai ~110k files. After capture run-2026-07-17T05-30-18Z (pre-reload): more windows (26 hosts); RAM free 30GB but swap still high \u2014 reload windows for watcher/tsserver effect."
+    },
+    {
+      "timestamp": "2026-07-17T05:33:51Z",
+      "mode": "apply",
+      "workspaces": [
+        "cidr-districtdata",
+        "cidr-glossary-project",
+        "cidr-org",
+        "cidr-zeal",
+        "continuous-ai",
+        "cursor",
+        "ern-cpc",
+        "ern-org",
+        "from-atoz-private",
+        "gcloud-default-1234",
+        "google-workspace-tools",
+        "lam-eda",
+        "llc-admin",
+        "nlp-ems-paramedic",
+        "peeq",
+        "peeq-paleo",
+        "proposal-studio",
+        "rrid",
+        "sovereign-ai-offlineiq",
+        "switchdimension-community",
+        "writing-quality",
+        "zoom-deeplistening-agents"
+      ],
+      "changed": [
+        "ern-org",
+        "nlp-ems-paramedic",
+        "sovereign-ai-offlineiq",
+        "zoom-deeplistening-agents"
+      ]
+    },
+    {
+      "timestamp": "2026-07-17T05:40:43Z",
+      "mode": "apply",
+      "workspaces": [
+        "cidr-districtdata",
+        "cidr-glossary-project",
+        "cidr-org",
+        "cidr-zeal",
+        "continuous-ai",
+        "cursor",
+        "ern-cpc",
+        "ern-org",
+        "from-atoz-private",
+        "gcloud-default-1234",
+        "google-workspace-tools",
+        "lam-eda",
+        "llc-admin",
+        "nlp-ems-paramedic",
+        "peeq",
+        "peeq-paleo",
+        "proposal-studio",
+        "rrid",
+        "sovereign-ai-offlineiq",
+        "switchdimension-community",
+        "writing-quality",
+        "zoom-deeplistening-agents"
+      ],
+      "changed": []
+    },
+    {
+      "timestamp": "2026-07-17T05:41:45Z",
+      "mode": "apply",
+      "workspaces": [
+        "gom-dung"
+      ],
+      "changed": [
+        "gom-dung"
+      ]
+    },
+    {
+      "timestamp": "2026-07-17T05:42:43Z",
+      "mode": "apply",
+      "workspaces": [
+        "continuous-ai"
+      ],
+      "changed": []
+    }
+  ],
+  "workspaces": {
+    "continuous-ai": {
+      "workspace": "continuous-ai",
+      "resolved_path": "/Users/me/projects/continuous-ai",
+      "first_applied": "2026-07-16T17:55:00Z",
+      "last_applied": "2026-07-17T05:42:43Z",
+      "files_touched": [
+        ".cursorindexingignore",
+        ".vscode/settings.json",
+        ".cursorignore"
+      ],
+      "excludes_added": [
+        "hash__hashintel__selfhost",
+        "hash__hashintel__contegral",
+        "panopticon-flow",
+        "panopticon-dashboard",
+        "browser-session-manager",
+        "OB1__NateBJones-Projects",
+        "manus",
+        "phia-clone",
+        "upstream",
+        "archive",
+        "gmail-archive",
+        "incoming",
+        "misc",
+        "continuous-data",
+        "legacy-src",
+        "venv"
+      ],
+      "file_count_at_apply": 109805,
+      "quiet_ts": true,
+      "notes": "ts_quiet; .vscode gitignored locally"
+    },
+    "cidr-districtdata": {
+      "workspace": "cidr-districtdata",
+      "resolved_path": "/Users/me/projects/cidr-districtdata",
+      "first_applied": "2026-07-17T05:29:38Z",
+      "last_applied": "2026-07-17T05:40:43Z",
+      "files_touched": [
+        ".cursorindexingignore",
+        ".vscode/settings.json"
+      ],
+      "excludes_added": [],
+      "file_count_at_apply": 219,
+      "quiet_ts": false,
+      "notes": ""
+    },
+    "cidr-glossary-project": {
+      "workspace": "cidr-glossary-project",
+      "resolved_path": "/Users/me/projects/cidr-org/cidr-glossary-project",
+      "first_applied": "2026-07-17T05:29:38Z",
+      "last_applied": "2026-07-17T05:40:43Z",
+      "files_touched": [
+        ".cursorindexingignore",
+        ".vscode/settings.json"
+      ],
+      "excludes_added": [],
+      "file_count_at_apply": 326,
+      "quiet_ts": false,
+      "notes": "path_override"
+    },
+    "cidr-org": {
+      "workspace": "cidr-org",
+      "resolved_path": "/Users/me/projects/cidr-org",
+      "first_applied": "2026-07-17T05:29:38Z",
+      "last_applied": "2026-07-17T05:40:43Z",
+      "files_touched": [
+        ".cursorindexingignore",
+        ".vscode/settings.json"
+      ],
+      "excludes_added": [
+        "library",
+        "incoming"
+      ],
+      "file_count_at_apply": 22373,
+      "quiet_ts": true,
+      "notes": "ts_quiet"
+    },
+    "cidr-zeal": {
+      "workspace": "cidr-zeal",
+      "resolved_path": "/Users/me/projects/cidr-zeal",
+      "first_applied": "2026-07-17T05:29:38Z",
+      "last_applied": "2026-07-17T05:40:43Z",
+      "files_touched": [
+        ".cursorindexingignore",
+        ".vscode/settings.json"
+      ],
+      "excludes_added": [
+        "incoming"
+      ],
+      "file_count_at_apply": 20723,
+      "quiet_ts": true,
+      "notes": "ts_quiet; .vscode gitignored locally"
+    },
+    "cursor": {
+      "workspace": "cursor",
+      "resolved_path": "/Users/me/dotfiles/cursor",
+      "first_applied": "2026-07-17T05:29:38Z",
+      "last_applied": "2026-07-17T05:40:43Z",
+      "files_touched": [
+        ".cursorindexingignore",
+        ".vscode/settings.json"
+      ],
+      "excludes_added": [
+        "ApplicationSupport",
+        "snapshots"
+      ],
+      "file_count_at_apply": 4920,
+      "quiet_ts": false,
+      "notes": "path_override"
+    },
+    "ern-cpc": {
+      "workspace": "ern-cpc",
+      "resolved_path": "/Users/me/projects/ern-cpc",
+      "first_applied": "2026-07-17T05:29:38Z",
+      "last_applied": "2026-07-17T05:40:43Z",
+      "files_touched": [
+        ".cursorindexingignore",
+        ".vscode/settings.json",
+        ".cursorignore"
+      ],
+      "excludes_added": [
+        "documenting-displacement",
+        "cpc-anti-displacement",
+        "venv",
+        "library"
+      ],
+      "file_count_at_apply": 21086,
+      "quiet_ts": true,
+      "notes": "ts_quiet; .vscode gitignored locally"
+    },
+    "from-atoz-private": {
+      "workspace": "from-atoz-private",
+      "resolved_path": "/Users/me/projects/from-atoz-private",
+      "first_applied": "2026-07-17T05:29:38Z",
+      "last_applied": "2026-07-17T05:40:43Z",
+      "files_touched": [
+        ".cursorindexingignore",
+        ".vscode/settings.json"
+      ],
+      "excludes_added": [],
+      "file_count_at_apply": 102,
+      "quiet_ts": false,
+      "notes": ".vscode gitignored locally"
+    },
+    "gcloud-default-1234": {
+      "workspace": "gcloud-default-1234",
+      "resolved_path": "/Users/me/projects/gcloud-default-1234",
+      "first_applied": "2026-07-17T05:29:38Z",
+      "last_applied": "2026-07-17T05:40:43Z",
+      "files_touched": [
+        ".cursorindexingignore",
+        ".vscode/settings.json"
+      ],
+      "excludes_added": [
+        "forensics",
+        "archive"
+      ],
+      "file_count_at_apply": 1476,
+      "quiet_ts": false,
+      "notes": "watcher:forensics; watcher:archive"
+    },
+    "google-workspace-tools": {
+      "workspace": "google-workspace-tools",
+      "resolved_path": "/Users/me/tools/google-workspace-tools",
+      "first_applied": "2026-07-17T05:29:38Z",
+      "last_applied": "2026-07-17T05:40:43Z",
+      "files_touched": [
+        ".cursorindexingignore",
+        ".vscode/settings.json"
+      ],
+      "excludes_added": [
+        "upstream",
+        "Google-Workspace-Addon-Boilerplate",
+        "clawdbot-quickstart",
+        "random"
+      ],
+      "file_count_at_apply": 22880,
+      "quiet_ts": true,
+      "notes": "ts_quiet; path_override; .vscode gitignored locally"
+    },
+    "lam-eda": {
+      "workspace": "lam-eda",
+      "resolved_path": "/Users/me/aallc/lam/projects/lam-eda",
+      "first_applied": "2026-07-17T05:29:38Z",
+      "last_applied": "2026-07-17T05:40:43Z",
+      "files_touched": [
+        ".cursorindexingignore",
+        ".vscode/settings.json",
+        ".cursorignore"
+      ],
+      "excludes_added": [
+        "lam-starter-scaffold",
+        "linux_isos"
+      ],
+      "file_count_at_apply": 20287,
+      "quiet_ts": true,
+      "notes": "ts_quiet; path_override"
+    },
+    "llc-admin": {
+      "workspace": "llc-admin",
+      "resolved_path": "/Users/me/projects/cidr-org/llc-admin",
+      "first_applied": "2026-07-17T05:29:38Z",
+      "last_applied": "2026-07-17T05:40:43Z",
+      "files_touched": [
+        ".cursorindexingignore",
+        ".vscode/settings.json"
+      ],
+      "excludes_added": [],
+      "file_count_at_apply": 900,
+      "quiet_ts": false,
+      "notes": "path_override"
+    },
+    "midday-friends": {
+      "workspace": "midday-friends",
+      "resolved_path": "/Users/me/tools/midday-friends",
+      "first_applied": "2026-07-17T05:29:38Z",
+      "last_applied": "2026-07-17T05:29:38Z",
+      "files_touched": [
+        ".cursorindexingignore",
+        ".vscode/settings.json"
+      ],
+      "excludes_added": [],
+      "file_count_at_apply": 23,
+      "quiet_ts": false,
+      "notes": "path_override"
+    },
+    "peeq": {
+      "workspace": "peeq",
+      "resolved_path": "/Users/me/aallc/peeq",
+      "first_applied": "2026-07-17T05:29:38Z",
+      "last_applied": "2026-07-17T05:40:43Z",
+      "files_touched": [
+        ".cursorindexingignore",
+        ".vscode/settings.json"
+      ],
+      "excludes_added": [
+        "peeq-reboot",
+        "crb-vision",
+        "storyforward-pushback"
+      ],
+      "file_count_at_apply": 20732,
+      "quiet_ts": false,
+      "notes": "path_override"
+    },
+    "peeq-paleo": {
+      "workspace": "peeq-paleo",
+      "resolved_path": "/Users/me/projects/peeq-paleo",
+      "first_applied": "2026-07-17T05:29:38Z",
+      "last_applied": "2026-07-17T05:40:43Z",
+      "files_touched": [
+        ".cursorindexingignore",
+        ".vscode/settings.json"
+      ],
+      "excludes_added": [],
+      "file_count_at_apply": 61,
+      "quiet_ts": false,
+      "notes": ".vscode gitignored locally"
+    },
+    "proposal-studio": {
+      "workspace": "proposal-studio",
+      "resolved_path": "/Users/me/projects/proposal-studio",
+      "first_applied": "2026-07-17T05:29:38Z",
+      "last_applied": "2026-07-17T05:40:43Z",
+      "files_touched": [
+        ".cursorindexingignore",
+        ".vscode/settings.json"
+      ],
+      "excludes_added": [],
+      "file_count_at_apply": 145,
+      "quiet_ts": false,
+      "notes": ".vscode gitignored locally"
+    },
+    "rrid": {
+      "workspace": "rrid",
+      "resolved_path": "/Users/me/projects/rrid",
+      "first_applied": "2026-07-17T05:29:38Z",
+      "last_applied": "2026-07-17T05:40:43Z",
+      "files_touched": [
+        ".cursorindexingignore",
+        ".vscode/settings.json",
+        ".cursorignore"
+      ],
+      "excludes_added": [
+        "airtable-backups",
+        "airtable-backup-and-takeout",
+        "rrid-softr-migration",
+        "rrid-infra-archive",
+        "badges",
+        "incoming",
+        "airtable-gateway-template-upstream",
+        "pubpub-airtable-gateway",
+        "stanford-paperreview-ai",
+        "alphaxiv-marimo",
+        "rrid-janeway-airtable",
+        "rrid-summer2026-webapp",
+        "upstream",
+        "rrid-summer2026-webapp-pr2",
+        "rrid-summer2026-data-samples",
+        "rrid-org-transform"
+      ],
+      "file_count_at_apply": 20959,
+      "quiet_ts": true,
+      "notes": "ts_quiet"
+    },
+    "switchdimension-community": {
+      "workspace": "switchdimension-community",
+      "resolved_path": "/Users/me/projects/switchdimension-community",
+      "first_applied": "2026-07-17T05:29:38Z",
+      "last_applied": "2026-07-17T05:40:43Z",
+      "files_touched": [
+        ".cursorindexingignore",
+        ".vscode/settings.json",
+        ".cursorignore"
+      ],
+      "excludes_added": [
+        "upstream",
+        "launch-kit-spa-desktop-switchdimension"
+      ],
+      "file_count_at_apply": 23854,
+      "quiet_ts": false,
+      "notes": "watcher:upstream; watcher:launch-kit-spa-desktop-switchdimension; cursorignore for ['upstream']"
+    },
+    "writing-quality": {
+      "workspace": "writing-quality",
+      "resolved_path": "/Users/me/projects/writing-quality",
+      "first_applied": "2026-07-17T05:29:38Z",
+      "last_applied": "2026-07-17T05:40:43Z",
+      "files_touched": [
+        ".cursorindexingignore",
+        ".vscode/settings.json",
+        ".cursorignore"
+      ],
+      "excludes_added": [
+        "upstream",
+        "tough-room",
+        "change-the-world-gpt",
+        "incoming",
+        "videos",
+        "venv"
+      ],
+      "file_count_at_apply": 20218,
+      "quiet_ts": true,
+      "notes": "ts_quiet"
+    },
+    "ern-org": {
+      "workspace": "ern-org",
+      "resolved_path": "/Users/me/projects/ern-org",
+      "first_applied": "2026-07-17T05:33:51Z",
+      "last_applied": "2026-07-17T05:40:43Z",
+      "files_touched": [
+        ".cursorindexingignore",
+        ".vscode/settings.json"
+      ],
+      "excludes_added": [
+        "hprm"
+      ],
+      "file_count_at_apply": 1028,
+      "quiet_ts": false,
+      "notes": "watcher:hprm"
+    },
+    "nlp-ems-paramedic": {
+      "workspace": "nlp-ems-paramedic",
+      "resolved_path": "/Users/me/projects/nlp-ems-paramedic",
+      "first_applied": "2026-07-17T05:33:51Z",
+      "last_applied": "2026-07-17T05:40:43Z",
+      "files_touched": [
+        ".cursorindexingignore",
+        ".vscode/settings.json"
+      ],
+      "excludes_added": [],
+      "file_count_at_apply": 659,
+      "quiet_ts": false,
+      "notes": ""
+    },
+    "sovereign-ai-offlineiq": {
+      "workspace": "sovereign-ai-offlineiq",
+      "resolved_path": "/Users/me/projects/sovereign-ai-offlineiq",
+      "first_applied": "2026-07-17T05:33:51Z",
+      "last_applied": "2026-07-17T05:40:43Z",
+      "files_touched": [
+        ".cursorindexingignore",
+        ".vscode/settings.json"
+      ],
+      "excludes_added": [
+        "upstream"
+      ],
+      "file_count_at_apply": 21322,
+      "quiet_ts": false,
+      "notes": ".vscode gitignored locally"
+    },
+    "zoom-deeplistening-agents": {
+      "workspace": "zoom-deeplistening-agents",
+      "resolved_path": "/Users/me/projects/zoom-deeplistening-agents",
+      "first_applied": "2026-07-17T05:33:51Z",
+      "last_applied": "2026-07-17T05:40:43Z",
+      "files_touched": [
+        ".cursorindexingignore",
+        ".vscode/settings.json"
+      ],
+      "excludes_added": [
+        "tana-meetings",
+        "upstream"
+      ],
+      "file_count_at_apply": 20946,
+      "quiet_ts": true,
+      "notes": "ts_quiet"
+    },
+    "gom-dung": {
+      "workspace": "gom-dung",
+      "resolved_path": "/Users/me/aallc/toxicrockstars/vignettes/gom-dung",
+      "first_applied": "2026-07-17T05:41:45Z",
+      "last_applied": "2026-07-17T05:41:45Z",
+      "files_touched": [
+        ".cursorindexingignore",
+        ".vscode/settings.json"
+      ],
+      "excludes_added": [],
+      "file_count_at_apply": 85,
+      "quiet_ts": false,
+      "notes": "path_override"
+    }
+  }
+}

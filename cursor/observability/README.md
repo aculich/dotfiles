@@ -54,5 +54,12 @@ Committed examples from earlier investigation:
 ### Squelch after diagnosis
 
 1. **User settings** — [settings.json](../settings.json) includes global `files.watcherExclude` and `search.exclude` (see [docs/IGNORING.md](../docs/IGNORING.md)).
-2. **Per-repo** — `.cursorignore`, `.cursorindexingignore`, `.vscode/settings.json` for large trees.
+2. **Per-repo purification** — scan open windows and merge indexing/watcher excludes (updates the ledger under [cursor-purification/](cursor-purification/)):
+
+   ```bash
+   ./scripts/cursor-purification.sh --scan
+   ./scripts/cursor-purification.sh --apply
+   ```
+
+   Then **Developer: Reload Window** on affected workspaces. Manifest: [cursor-purification/MANIFEST.json](cursor-purification/MANIFEST.json). Skill: `~/.cursor/skills/cursor-purification/` (`/cursor-purification`).
 3. **Extensions / MCP** — [scripts/apply-cursor-resource-tuning.sh](../scripts/apply-cursor-resource-tuning.sh) (`snapshot` then `apply`; restart Cursor).

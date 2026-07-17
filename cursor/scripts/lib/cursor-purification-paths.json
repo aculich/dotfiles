@@ -1,0 +1,80 @@
+{
+  "defaults": {
+    "projects_root": "/Users/me/projects"
+  },
+  "overrides": {
+    "cursor": "/Users/me/dotfiles/cursor",
+    "peeq": "/Users/me/aallc/peeq",
+    "lam-eda": "/Users/me/aallc/lam/projects/lam-eda",
+    "google-workspace-tools": "/Users/me/tools/google-workspace-tools",
+    "midday-friends": "/Users/me/tools/midday-friends",
+    "cidr-glossary-project": "/Users/me/projects/cidr-org/cidr-glossary-project",
+    "llc-admin": "/Users/me/projects/cidr-org/llc-admin",
+    "gom-dung": "/Users/me/aallc/toxicrockstars/vignettes/gom-dung"
+  },
+  "skip": [
+    "workspaces"
+  ],
+  "known_heavy": {
+    "continuous-ai": [
+      "hash__hashintel__selfhost",
+      "hash__hashintel__contegral",
+      "panopticon-flow",
+      "panopticon-dashboard",
+      "browser-session-manager",
+      "OB1__NateBJones-Projects",
+      "manus",
+      "phia-clone",
+      "upstream",
+      "archive",
+      "gmail-archive",
+      "incoming",
+      "misc",
+      "continuous-data",
+      "legacy-src"
+    ],
+    "writing-quality": [
+      "upstream",
+      "tough-room",
+      "change-the-world-gpt",
+      "incoming",
+      "videos"
+    ],
+    "switchdimension-community": [
+      "upstream",
+      "launch-kit-spa-desktop-switchdimension"
+    ],
+    "ern-cpc": [
+      "documenting-displacement",
+      "cpc-anti-displacement",
+      "venv",
+      "library"
+    ],
+    "rrid": [
+      "airtable-backups",
+      "airtable-backup-and-takeout",
+      "rrid-softr-migration",
+      "rrid-infra-archive"
+    ],
+    "peeq": [
+      "peeq-reboot",
+      "crb-vision",
+      "storyforward-pushback"
+    ],
+    "lam-eda": [
+      "lam-starter-scaffold",
+      "linux_isos"
+    ],
+    "google-workspace-tools": [
+      "upstream"
+    ],
+    "cursor": [
+      "ApplicationSupport",
+      "snapshots"
+    ],
+    "gcloud-default-1234": [
+      "forensics",
+      "archive"
+    ]
+  }
+}
