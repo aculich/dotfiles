@@ -1,3 +1,40 @@
 {
-    "specstory.cloudSync.enabled": "always"
+    "specstory.cloudSync.enabled": "always",
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/node_modules/**": true,
+        "**/.venv/**": true,
+        "**/venv/**": true,
+        "**/.venv-*/**": true,
+        "**/__pycache__/**": true,
+        "**/.mypy_cache/**": true,
+        "**/.pytest_cache/**": true,
+        "**/.ruff_cache/**": true,
+        "**/.tox/**": true,
+        "**/.nox/**": true,
+        "**/dist/**": true,
+        "**/build/**": true,
+        "**/.specstory/**": true,
+        "**/upstream/**": true,
+        "ApplicationSupport/**": true,
+        "snapshots/**": true
+    },
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/.venv": true,
+        "**/venv": true,
+        "**/.venv-*": true,
+        "**/__pycache__": true,
+        "**/.mypy_cache": true,
+        "**/.pytest_cache": true,
+        "**/.ruff_cache": true,
+        "**/.tox": true,
+        "**/.nox": true,
+        "**/dist": true,
+        "**/build": true,
+        "**/.specstory": true,
+        "**/upstream": true,
+        "ApplicationSupport": true,
+        "snapshots": true
+    }
 }
