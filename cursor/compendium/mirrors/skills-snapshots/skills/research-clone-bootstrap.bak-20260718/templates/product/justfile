@@ -1,0 +1,34 @@
+# {{SLUG}} product recipes — run from product/
+
+set shell := ["zsh", "-cu"]
+
+peers := justfile_directory() / "../peers"
+
+default:
+    @just --list
+
+status:
+    #!/usr/bin/env zsh
+    git status -sb
+    echo "Peers: {{peers}}/clones"
+    ls "{{peers}}/clones" 2>/dev/null | wc -l | xargs -I{} echo "{} clone dirs"
+
+research-clone-all:
+    "{{peers}}/sync.sh"
+
+research-status:
+    #!/usr/bin/env zsh
+    d="{{peers}}/clones"
+    [[ -d "$d" ]] || { echo "(none — just research-clone-all)"; exit 0; }
+    ls -1 "$d" | while read -r n; do
+      printf '  %-40s %s\n' "$n" "$(git -C "$d/$n" rev-parse --short HEAD 2>/dev/null || echo '?')"
+    done
+
+research-workspace:
+    cursor "{{peers}}/{{SLUG}}-research.code-workspace" || open "{{peers}}/{{SLUG}}-research.code-workspace"
+
+product-workspace:
+    cursor "{{justfile_directory()}}/{{SLUG}}.code-workspace" || open "{{justfile_directory()}}/{{SLUG}}.code-workspace"
+
+docs:
+    open "{{justfile_directory()}}/research/SUPER_PRD.md"

@@ -2,9 +2,10 @@
 name: tidy-stash
 description: >-
   Inventories and vacuums existing-repo flotsam (untracked, wrongly committed, or
-  lying-about PII/dumps) into ~/pdv flotsam vintage buckets with provenance.
-  Prefer stop-tracking over history rewrite. Use when the user says tidy-stash,
-  vacuum this repo, clean committed PII out, or move long-standing dumps to pdv.
+  lying-about PII/dumps) into ~/pdv flotsam vintage buckets with provenance and
+  AGENT-BRIEFING.md. Prefer stop-tracking over history rewrite. Use when the user
+  says tidy-stash, vacuum this repo, clean committed PII out, or move long-standing
+  dumps to pdv.
 disable-model-invocation: true
 ---
 
@@ -12,7 +13,11 @@ disable-model-invocation: true
 
 Vacuum **existing** repos: material that is already committed, ignored-but-present, or long-lying clutter that should live in `~/pdv` instead.
 
+> Never drop data without its context and intent — leave a capsule, not a dig site.
+
 For **brand-new uncommitted** one-off files, prefer **`quick-stash`**.
+
+Ethos: `~/pdv/meta/AGENTIC-DATA-STEWARDSHIP-GUIDE.md`. Briefing template: `~/.cursor/skills/chaos-containment/agent-briefing.md`.
 
 ## Resolve vault root
 
@@ -38,7 +43,7 @@ $VAULT_ROOT/partitions/default/capsules/flotsam-and-jetsam/misc/vintage-YYYY-MM/
 Tidy-stash:
 - [ ] Pass A: inventory (read-only) + propose move set
 - [ ] User confirms move set
-- [ ] Pass B: move + provenance + vault commit
+- [ ] Pass B: move + provenance + AGENT-BRIEFING.md + vault commit
 - [ ] Update source .gitignore; stop tracking if needed
 - [ ] Update $VAULT_ROOT/MANIFEST.md
 - [ ] History rewrite only if user explicitly asks
@@ -67,10 +72,11 @@ End with: wait for confirmation before writes.
 2. **Move** files (`mv`). If tracked: `git rm --cached` or `git rm` after move so the working tree does not delete the vault copy — preferred sequence:
    - `mv` working copy to vault (if untracked), **or**
    - copy then `git rm` tracked file after vault has the bytes — safest: `git mv` is wrong across repos; use `mv` then `git rm --cached` / `git rm` in source for tracked paths **only after** the destination has the file
-3. Provenance block in vintage `README.md` (whence, purpose, sensitivity, original path, whether it was tracked)
-4. Commit in `$VAULT_ROOT`
-5. Source repo: add `.gitignore` patterns; commit source cleanup **only if the user wants a source commit**
-6. Append/update `$VAULT_ROOT/MANIFEST.md` for new external→in-pdv entries
+3. Provenance block in vintage `README.md` (whence, purpose, sensitivity, original path, whether it was tracked, path to agent briefing)
+4. **Write `AGENT-BRIEFING.md`** next to the batch (required). Incomplete briefing = incomplete tidy-stash. Use `~/.cursor/skills/chaos-containment/agent-briefing.md`.
+5. Commit in `$VAULT_ROOT`
+6. Source repo: add `.gitignore` patterns; commit source cleanup **only if the user wants a source commit**
+7. Append/update `$VAULT_ROOT/MANIFEST.md` for new external→in-pdv entries
 
 ### History rewrite
 
@@ -90,6 +96,7 @@ Default: **stop tracking + leave history**. If the user explicitly requests hist
 - **Purpose:** `<why>`
 - **Sensitivity:** `<...>`
 - **Files:** `<...>`
+- **Agent briefing:** `<AGENT-BRIEFING.md or path>`
 - **Source follow-up:** `<gitignore / stop-track / history scrub TBD>`
 ```
 
@@ -99,3 +106,4 @@ Default: **stop tracking + leave history**. If the user explicitly requests hist
 - Do not push `$VAULT_ROOT` remotes unless asked
 - Do not delete without moving first
 - Do not use `~/vault` — root is `~/pdv`
+- Do not finish without `AGENT-BRIEFING.md`

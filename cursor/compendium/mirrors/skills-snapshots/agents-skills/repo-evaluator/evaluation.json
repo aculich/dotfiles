@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-02-15T20:06:00Z",
+  "generator": "repo-evaluator",
+  "evaluations": [
+    {
+      "repo": {
+        "name": "aculich/repo-evaluator",
+        "url": "https://github.com/aculich/repo-evaluator",
+        "description": "Claude Code skill for evaluating open source repo health, quality, and viability",
+        "primary_language": "Python",
+        "license": "MIT"
+      },
+      "scores": {
+        "activity_and_freshness": {
+          "score": 9,
+          "max": 20,
+          "details": {
+            "last_commit_date": {"value": "2026-02-15", "points": 8, "max": 8},
+            "commit_frequency": {"value": "rare", "points": 1, "max": 6},
+            "release_cadence": {"value": "none", "points": 0, "max": 6}
+          }
+        },
+        "community_health": {
+          "score": 3,
+          "max": 20,
+          "details": {
+            "stars": {"value": 0, "points": 0, "max": 5},
+            "contributors": {"value": 1, "points": 1, "max": 5},
+            "issue_responsiveness": {"value": "no issues filed", "points": 0, "max": 5},
+            "forks": {"value": 0, "points": 0, "max": 5}
+          }
+        },
+        "documentation_quality": {
+          "score": 11,
+          "max": 20,
+          "details": {
+            "readme_quality": {"value": "Good: purpose, install, usage", "points": 5, "max": 7},
+            "api_docs": {"value": "references/rubric.md and SKILL.md", "points": 3, "max": 5},
+            "examples": {"value": "Usage in README, evals", "points": 2, "max": 4},
+            "contributing_guide": {"value": "None", "points": 1, "max": 4}
+          }
+        },
+        "technical_health": {
+          "score": 4,
+          "max": 20,
+          "details": {
+            "test_coverage": {"value": "No test dirs or config", "points": 0, "max": 6},
+            "ci_cd": {"value": "No CI", "points": 0, "max": 5},
+            "dependency_health": {"value": "No deps/lockfile/bot", "points": 1, "max": 5},
+            "code_quality_signals": {"value": "Clean structure, no linter/formatter", "points": 3, "max": 4}
+          }
+        },
+        "security_posture": {
+          "score": 0,
+          "max": 10,
+          "details": {
+            "security_policy": {"value": "No SECURITY.md", "points": 0, "max": 3},
+            "vulnerability_scanning": {"value": "No evidence", "points": 0, "max": 3},
+            "branch_protection": {"value": "Not visible locally", "points": 0, "max": 4}
+          }
+        },
+        "ecosystem_fit": {
+          "score": 6,
+          "max": 10,
+          "details": {
+            "package_manager": {"value": "Not published", "points": 0, "max": 4},
+            "license_clarity": {"value": "MIT in LICENSE", "points": 3, "max": 3},
+            "integration_ease": {"value": "Copy skill, run scripts", "points": 3, "max": 3}
+          }
+        }
+      },
+      "total_score": 33,
+      "rating": "Poor",
+      "summary": "repo-evaluator is a young skill/tool with a clear purpose and good documentation (README, rubric, SKILL). It scores itself honestly: no CI, no tests, no CONTRIBUTING/SECURITY/Code of Conduct, no releases, and a single contributor. The 33/100 reflects early-stage status rather than bad intent—the rubric and workflow are well thought out.",
+      "strengths": [
+        "Clear README with usage, scoring table, and references",
+        "Structured rubric (references/rubric.md) and CHAOSS mapping",
+        "Standalone scripts (evaluate_repo.py, github_api.py) work out of the box",
+        "MIT license clearly stated",
+        "Simple integration (copy skill or run Python)"
+      ],
+      "concerns": [
+        "No CI/CD, tests, or code quality tooling",
+        "No CONTRIBUTING.md, SECURITY.md, or CODE_OF_CONDUCT",
+        "No releases or tags",
+        "Single contributor; no community metrics yet"
+      ],
+      "recommendation": "Use for internal or skill-based evaluation. Before recommending to others or depending on it, add CI, tests, CONTRIBUTING.md, SECURITY.md, and consider a first release to improve the self-score."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+---
+description: Evaluate repo health and quality using the repo-evaluator rubric (activity, community, docs, technical, security, ecosystem). Produces JSON + Markdown.
+globs:
+alwaysApply: false
+---
+
+# Repo Evaluator
+
+When the user asks to evaluate a repo, score repos, or assess project health:
+
+1. **Gather data**: Run `python3 scripts/evaluate_repo.py /path/to/repo --json` for local repos; use `gh api repos/owner/repo` for GitHub metrics when available.
+2. **Score with rubric**: Apply the 6-category rubric (100 pts total) from `references/rubric.md`: Activity & Freshness (20), Community Health (20), Documentation Quality (20), Technical Health (20), Security Posture (10), Ecosystem Fit (10).
+3. **Output**: Produce both `evaluation.json` (schema with scores per category, total_score, rating, summary, strengths, concerns, recommendation) and `evaluation.md` (human-readable report with score table and details).
+
+For batch mode (e.g. repos in `upstream/`), produce `manifest.json` and `manifest.md` with one evaluation per repo, sorted by score.
+
+Use the full workflow and output templates in this skill's SKILL.md when installed as a skill; otherwise follow the rubric at `references/rubric.md`.

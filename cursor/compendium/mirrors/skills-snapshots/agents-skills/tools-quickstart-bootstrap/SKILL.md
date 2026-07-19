@@ -155,13 +155,18 @@ Do not recommend skills from search alone — follow find-skills quality checks 
 
 ## Ongoing maintenance (justfile)
 
-Every quickstart ships a root **`justfile`** (template in [reference.md](reference.md)). Conventions mirror [awesome-awesome](/Users/me/tools/awesome-awesome/justfile): doc comment per recipe, `default: @just --list --unsorted`, DWIM batch recipe (`just update`).
+Every quickstart ships a root **`justfile`** (template in [reference.md](reference.md)). Conventions mirror [awesome-awesome](/Users/me/tools/awesome-awesome/justfile): doc comment per recipe, `default: @just --list --unsorted`, **`help: default`** (so `just help` lists recipes), DWIM batch recipe (`just update`).
+
+**Runtime visibility:** when the quickstart has a process/compose stack (`ps` recipe), `just status` **ends with `just ps`**, and lifecycle recipes (`start` / `stop`, and equivalents) print **`just ps` before and after** so the human sees the change window.
 
 **Hybrid pattern:** shell recipes gather raw data into `background/parallel-cache/`, then **print a ready-to-paste agent prompt** for synthesis (landscape, TOOLBOX, integrations). Do not auto-edit LANDSCAPE without human/agent review unless the user asks.
 
 | Recipe | Purpose |
 | --- | --- |
-| `just status` | Git state, upstream pin vs remote HEAD, doc freshness |
+| `just` / `just help` | Recipe menu (`help: default`) |
+| `just status` | Git state, upstream pin vs remote HEAD, doc freshness; **ends with `just ps` when a runtime stack exists** |
+| `just ps` | Compose/process status alone |
+| `just start` / `just stop` | Lifecycle; **`just ps` before and after** when applicable |
 | `just update` | Batch: upstream + landscape + skills + integrations + security |
 | `just pin` | Write `background/UPSTREAM_PIN.txt` from current upstream HEAD |
 | `just update-upstream` | Pull vendored clone, re-pin, diffstat since last pin |
@@ -171,6 +176,8 @@ Every quickstart ships a root **`justfile`** (template in [reference.md](referen
 | `just update-security` | Advisories + awesome-awesome security lens, print prompt |
 | `just verify-sources` | Canonical-upstream check for every GitHub URL in LANDSCAPE |
 | `just smoke` | Tool-specific smoke from PRAXIS |
+| `just rotate-status` | Print `ROTATION-PLAN.md` gate (from hot-livewires) |
+| `just doit` | End-to-end ensure-deps → start → open (after rotation election) |
 
 **`update-integrations` tiers:**
 

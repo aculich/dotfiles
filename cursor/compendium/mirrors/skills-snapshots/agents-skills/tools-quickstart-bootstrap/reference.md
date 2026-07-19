@@ -86,12 +86,21 @@ clone_path: upstream/<org>__<repo>
 
 Customize variables at the top per quickstart. **In-place bootstrap:** merge new recipes into an existing justfile; never clobber `default` or domain-specific recipes (e.g. karakeep `run`/`docker`).
 
-Conventions (match awesome-awesome):
+Conventions (match awesome-awesome + agent-skills):
 
 - Doc comment (`# ...`) above every recipe so `just --list` self-documents.
 - `default: @just --list --unsorted`
+- **`help: default`** — `just help` must list recipes (bare `just` alone is not enough; people type `help`).
 - `update` as DWIM batch recipe.
 - awesome-awesome paths guarded with `[ -d "$aa" ]`.
+- **Runtime stack visibility (required when `ps` / compose / daemon recipes exist):**
+  - `just status` ends with `just ps` (or equivalent) after git/pin/docs.
+  - `just start` and `just stop` (and peers) print `just ps` **before and after** the lifecycle action.
+  - **Never `cd` before a nested `just` call** — just resolves the justfile from cwd. Run compose/`cd` in a **subshell** `( cd … && … )`, or pass `--justfile` / `--working-directory` to the repo root.
+- **Terminal color (prefer built-ins, no custom ANSI helpers):**
+  - Section banners: just constants `{{BOLD}}` `{{CYAN}}` `{{NORMAL}}` and `{{style("warning")}}` / `style("error")` / `style("command")` (just ≥1.x with `style()`).
+  - Markdown dumps (e.g. ROTATION-PLAN): prefer `glow` if on PATH (`brew install glow`), else plain `head`.
+  - Optional preference: `export JUST_COMMAND_COLOR=blue` (colors echoed recipe lines; CLI/env only — not a justfile `set`).
 
 ```just
 # <tool>-quickstart maintenance
@@ -115,7 +124,10 @@ date := `date +%F`
 default:
     @just --list --unsorted
 
-# Git + upstream pin + doc freshness
+# Recipe menu (same as bare `just`)
+help: default
+
+# Git + upstream pin + doc freshness (+ runtime ps when stack exists)
 status:
     #!/usr/bin/env bash
     set -euo pipefail
@@ -133,6 +145,9 @@ status:
         echo "Doc $f: $(stat -f '%Sm' -t '%Y-%m-%d' "$f" 2>/dev/null || stat -c '%y' "$f" 2>/dev/null | cut -d' ' -f1)"
       fi
     done
+    # When this quickstart has a runtime stack, always end status with process visibility:
+    # just ps
+    # (omit the call only if there is no ps/compose/daemon recipe)
 
 # Write background/UPSTREAM_PIN.txt from current upstream HEAD
 pin:
@@ -299,6 +314,62 @@ smoke:
     #!/usr/bin/env bash
     set -euo pipefail
     {{smoke_cmd}}
+
+# Show rotation gate status (ROTATION-PLAN.md if present)
+rotate-status:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    if [[ -f ROTATION-PLAN.md ]]; then
+      echo "=== ROTATION-PLAN.md (head) ==="
+      head -30 ROTATION-PLAN.md
+      if rg -q 'Election:.*unset|Status: pending' ROTATION-PLAN.md 2>/dev/null; then
+        echo ""
+        echo "WARN: rotation election still pending — prefer rotate-before-doit, or set Election to skip-legacy-smoke-only"
+      fi
+    else
+      echo "no ROTATION-PLAN.md (ok if no livewires hits)"
+    fi
+
+# End-to-end: deps → start → open UI when ready (after rotation election)
+# Customize ensure-deps / start / open per tool. Refuse if rotation pending unless elected skip.
+doit: rotate-status ensure-deps start open
+    @echo "doit complete — see PRAXIS.md for smoke checks"
+
+# Tool-specific stubs — override in each quickstart justfile
+ensure-deps:
+    @echo "TODO: ensure-deps for {{tool_label}}"
+
+# When a runtime stack exists, bookend with `just ps` before/after.
+# Critical: do NOT `cd` into docker/ before nested `just` — use a subshell for compose.
+# start: ensure-deps
+#     #!/usr/bin/env bash
+#     set -euo pipefail
+#     echo "=== ps (before start) ==="
+#     just ps || true
+#     ( cd {{docker_dir}} && {{compose}} up -d )
+#     echo "=== ps (after start) ==="
+#     just ps
+#
+# stop:
+#     #!/usr/bin/env bash
+#     set -euo pipefail
+#     echo "=== ps (before stop) ==="
+#     just ps || true
+#     ( cd {{docker_dir}} && {{compose}} stop )
+#     echo "=== ps (after stop) ==="
+#     just ps
+
+start:
+    @echo "TODO: start for {{tool_label}}"
+
+stop:
+    @echo "TODO: stop for {{tool_label}}"
+
+ps:
+    @echo "TODO: ps for {{tool_label}} (compose ps / process list)"
+
+open:
+    @echo "TODO: open UI for {{tool_label}}"
 ```
 
 **Per-tool variable examples:**

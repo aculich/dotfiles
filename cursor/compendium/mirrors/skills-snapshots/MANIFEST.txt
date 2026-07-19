@@ -3,8 +3,10 @@ source: /Users/me/.cursor/{skills,skills-cursor}, /Users/me/.agents/skills
 note: symlinked skills are dereferenced (real content copied into mirror)
 
 ## symlinked skills at snapshot time
+/Users/me/.cursor/skills/berkeley-cidr-meeting -> /Users/me/tools/google-workspace-tools/.cursor/skills/berkeley-cidr-meeting
 /Users/me/.cursor/skills/cidr-letterhead -> /Users/me/projects/cidr-org/library__cidrlab/.cursor/skills/cidr-letterhead
 /Users/me/.cursor/skills/embedded-captions -> ../../.claude/skills/embedded-captions
+/Users/me/.cursor/skills/ern-cidr-mail -> /Users/me/tools/google-workspace-tools/.cursor/skills/ern-cidr-mail
 /Users/me/.cursor/skills/faceless-explainer -> ../../.claude/skills/faceless-explainer
 /Users/me/.cursor/skills/general-video -> ../../.claude/skills/general-video
 /Users/me/.cursor/skills/hyperframes -> ../../.claude/skills/hyperframes
@@ -19,9 +21,11 @@ note: symlinked skills are dereferenced (real content copied into mirror)
 /Users/me/.cursor/skills/meeting-sync -> /Users/me/.agents/skills/meeting-sync
 /Users/me/.cursor/skills/motion-graphics -> ../../.claude/skills/motion-graphics
 /Users/me/.cursor/skills/music-to-video -> ../../.claude/skills/music-to-video
+/Users/me/.cursor/skills/peeq-cidr-meeting -> /Users/me/tools/google-workspace-tools/.cursor/skills/peeq-cidr-meeting
 /Users/me/.cursor/skills/pr-to-video -> ../../.claude/skills/pr-to-video
 /Users/me/.cursor/skills/product-launch-video -> ../../.claude/skills/product-launch-video
 /Users/me/.cursor/skills/remotion-to-hyperframes -> ../../.claude/skills/remotion-to-hyperframes
+/Users/me/.cursor/skills/research-clone-bootstrap -> /Users/me/tools/agent-skills/skills/.curated/research-clone-bootstrap
 /Users/me/.cursor/skills/slideshow -> ../../.claude/skills/slideshow
 /Users/me/.cursor/skills/talking-head-recut -> ../../.claude/skills/talking-head-recut
 /Users/me/.cursor/skills/website-to-video -> ../../.claude/skills/website-to-video

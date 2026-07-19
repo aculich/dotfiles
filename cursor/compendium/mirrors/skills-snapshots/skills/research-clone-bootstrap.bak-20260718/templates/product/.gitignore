@@ -1,0 +1,12 @@
+.build/
+.swiftpm/
+DerivedData/
+node_modules/
+.DS_Store
+*.xcuserstate
+.env
+.env.*
+!.env.example
+research/binaries/*
+!research/binaries/.gitignore
+!research/binaries/MANIFEST.json

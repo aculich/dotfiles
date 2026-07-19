@@ -1,0 +1,70 @@
+{
+  "skill_name": "repo-evaluator",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Evaluate the repo at https://github.com/alan-turing-institute/the-turing-way and give me a full scored evaluation with JSON and Markdown output.",
+      "expected_output": "A scored evaluation of the-turing-way across all 6 rubric categories with JSON manifest and Markdown report",
+      "files": [],
+      "assertions": [
+        "Output includes both a JSON file and a Markdown file",
+        "JSON contains schema_version, generated_at, and evaluations array",
+        "All 6 scoring categories are present: activity_and_freshness, community_health, documentation_quality, technical_health, security_posture, ecosystem_fit",
+        "Each category has score, max, and details fields",
+        "total_score is the sum of all category scores",
+        "rating is one of: Excellent, Good, Fair, Poor, Critical",
+        "The evaluation uses gh API or acknowledges GitHub data was used",
+        "Markdown report includes a score table with all 6 categories",
+        "Strengths and concerns lists are present and non-empty",
+        "A recommendation paragraph is included",
+        "Data sources section notes what data was actually available"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "I have several repos cloned in my upstream/ directory. Generate a manifest evaluating all of them and rank them by overall health.",
+      "expected_output": "A batch manifest.json and manifest.md with evaluations of all repos in upstream/, sorted by score",
+      "files": [],
+      "assertions": [
+        "The skill scans the upstream/ directory to find repos",
+        "Output includes manifest.json and manifest.md",
+        "manifest.json has evaluations array with one entry per repo",
+        "manifest.md starts with a summary table sorted by score (highest first)",
+        "Each repo has all 6 scoring categories evaluated",
+        "Repos without .git directories are handled gracefully (noted as non-git or skipped with explanation)",
+        "If GitHub remotes are detected, GitHub API data is fetched",
+        "The summary table includes repo name, total score, and rating for each"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Compare these two repos and tell me which one I should depend on: https://github.com/yamadashy/repomix vs https://github.com/anthropics/sdk-python",
+      "expected_output": "A comparison evaluation of both repos with a clear recommendation on which to choose",
+      "files": [],
+      "assertions": [
+        "Both repos are evaluated with the full rubric",
+        "Output includes comparison.json and comparison.md",
+        "A side-by-side comparison table is present",
+        "Each category score is shown for both repos",
+        "Relative strengths and weaknesses are identified for each",
+        "A clear recommendation is made with reasoning",
+        "The recommendation considers the user's context (dependency use case)"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Evaluate the local repo at . and tell me what I should improve to make it healthier.",
+      "expected_output": "Evaluation of the current directory as a repo, with actionable improvement suggestions",
+      "files": [],
+      "assertions": [
+        "The skill runs evaluate_repo.py or equivalent git commands on the current directory",
+        "All 6 categories are scored",
+        "Low-scoring categories get specific, actionable improvement suggestions",
+        "Missing community files (README, LICENSE, etc.) are called out specifically",
+        "Suggestions are prioritized by impact (e.g., adding a LICENSE is more important than adding badges)",
+        "Output includes both JSON and Markdown",
+        "The tone is constructive, not just a list of failures"
+      ]
+    }
+  ]
+}

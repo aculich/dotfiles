@@ -1,0 +1,2 @@
+# GitHub repos to shallow-clone (owner/repo). Proprietary peers: matrix only.
+# Primary seed repo is appended by bootstrap.sh when seed is a GitHub URL.

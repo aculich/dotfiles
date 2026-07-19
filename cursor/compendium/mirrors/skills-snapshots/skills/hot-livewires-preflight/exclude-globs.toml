@@ -1,0 +1,15 @@
+title = "hot-livewires exclude build caches"
+
+[allowlist]
+description = "Regenerable build/tooling caches"
+paths = [
+  '''(^|/)\.git/''',
+  '''(^|/)target/''',
+  '''(^|/)\.devbox/''',
+  '''(^|/)node_modules/''',
+  '''(^|/)\.next/''',
+  '''(^|/)dist/''',
+  '''(^|/)build/''',
+  '''(^|/)\.venv/''',
+  '''(^|/)__pycache__/''',
+]

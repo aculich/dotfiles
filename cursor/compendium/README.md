@@ -18,6 +18,8 @@ This directory is a **portable scaffold** for a **sibling private git repository
 
 **Source of truth:** Document per artifact whether you edit in the **product repo**, **`~/.cursor`**, or **only** in this compendium. The compendium is primarily a **backup and index**, not a second place to hand-edit product code unless you adopt an explicit sync-back workflow.
 
+**Skills invent:** `scripts/discover-skills.py` here is a **shim** to `$AGENT_SKILLS_ROOT` (default `~/projects/agent-skills`). Do not maintain a forked invent implementation in this tree.
+
 ## Privacy
 
 May contain **MCP configs**, **chat-adjacent** SpecStory data, and **internal** plans. Keep the GitHub repo **private**. Snapshot scripts exclude common secret filenames—extend the denylist before mirroring a new project class.

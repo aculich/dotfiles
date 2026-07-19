@@ -8,9 +8,10 @@ set shell := ["bash", "-eu", "-o", "pipefail", "-c"]
 cursor_dir := justfile_directory()
 dotfiles   := parent_directory(cursor_dir)
 compendium := env_var_or_default("CURSOR_COMPENDIUM_ROOT", cursor_dir / "compendium")
+agent_skills := env_var_or_default("AGENT_SKILLS_ROOT", home_directory() / "projects" / "agent-skills")
 scripts    := cursor_dir / "scripts"
 mirror     := cursor_dir / "compendium/mirrors/skills-snapshots"
-inventory  := cursor_dir / "compendium/skills-registry/skills-inventory.json"
+inventory  := compendium / "skills-registry/skills-inventory.json"
 
 # List available recipes
 default:
@@ -104,9 +105,9 @@ skill-backup-full:
     @SNAPSHOT_PROJECT_SKILLS=1 CURSOR_COMPENDIUM_ROOT="{{compendium}}" "{{scripts}}/snapshot-all-skills.sh"
     @echo "Review and commit in {{compendium}} (and dotfiles if mirror changed)."
 
-# Regenerate the skills inventory only (no mirror copy)
+# Regenerate skills inventory under CURSOR_COMPENDIUM_ROOT (shim → agent-skills discover)
 skill-discover:
-    @python3 "{{cursor_dir}}/compendium/scripts/discover-skills.py" --compendium-root "{{cursor_dir}}/compendium"
+    @python3 "{{agent_skills}}/scripts/discover-skills.py" --compendium-root "{{compendium}}"
 
 # Snapshot Cursor config (mcp/settings/extensions) into snapshots/
 config-snapshot:

@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+
+# Eval workspaces (large, generated)
+*-workspace/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Scaffolding examples (from init_skill.py)
+assets/example_asset.txt
+scripts/example.py
+references/api_reference.md

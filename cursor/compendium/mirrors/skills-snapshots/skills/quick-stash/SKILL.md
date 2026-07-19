@@ -2,9 +2,10 @@
 name: quick-stash
 description: >-
   Moves new uncommitted clutter (PII, research dumps, ad-hoc notes) from any
-  repo into ~/pdv flotsam vintage buckets with provenance, then commits in the
-  vault. Use when the user says quick-stash, stash to pdv/vault, get this out of
-  the repo, or wants flotsam-and-jetsam mark-and-sweep for uncommitted files.
+  repo into ~/pdv flotsam vintage buckets with provenance and AGENT-BRIEFING.md,
+  then commits in the vault. Use when the user says quick-stash, stash to
+  pdv/vault, get this out of the repo, or wants flotsam-and-jetsam mark-and-sweep
+  for uncommitted files.
 disable-model-invocation: true
 ---
 
@@ -12,7 +13,11 @@ disable-model-invocation: true
 
 Move **new / uncommitted** junk out of any project repo into the personal data vault (`~/pdv`) so the repo stays tidy.
 
+> Never drop data without its context and intent — leave a capsule, not a dig site.
+
 Not for vacuuming already-committed history — use **`tidy-stash`** for that.
+
+Ethos: `~/pdv/meta/AGENTIC-DATA-STEWARDSHIP-GUIDE.md`. Briefing template: `~/.cursor/skills/chaos-containment/agent-briefing.md`.
 
 ## Resolve vault root
 
@@ -42,6 +47,7 @@ Quick-stash:
 - [ ] Resolve VAULT_ROOT; ensure vintage-YYYY-MM exists
 - [ ] mv (or git mv in source if tracked-uncommitted) into vintage
 - [ ] Append provenance to vintage README.md
+- [ ] Write AGENT-BRIEFING.md (required — incomplete briefing = incomplete stash)
 - [ ] Commit in $VAULT_ROOT
 - [ ] Optionally add source .gitignore patterns so files do not reappear
 - [ ] Leave source repo clean; do not push vault remotes unless asked
@@ -73,9 +79,20 @@ Append to `$DEST/README.md` (create if needed):
 - **Purpose:** `<why it existed>`
 - **Sensitivity:** `<public | internal | SENSITIVE/PII>`
 - **Files:** `<names moved>`
+- **Agent briefing:** `<AGENT-BRIEFING.md or path>`
 ```
 
-### 4. Commit in the vault
+### 4. Agent briefing (required)
+
+Write `$DEST/AGENT-BRIEFING.md` (or a uniquely named briefing beside a sub-batch if purposes differ).
+
+**Incomplete briefing = incomplete stash.** Do not commit until the briefing exists.
+
+Use the template in `~/.cursor/skills/chaos-containment/agent-briefing.md`. Minimum: one-liner, what, whence, when, purpose (label inferences), sensitivity, moved-by, inventory, intent for receiving agent, anticipated Q&A (≥2–3), do-not, links to `~/pdv/meta/`.
+
+If several unrelated purposes share one vintage month, prefer one briefing per logical batch (subdirectory or dated filename) rather than one vague mega-briefing.
+
+### 5. Commit in the vault
 
 ```bash
 git -C "$VAULT_ROOT" add -A
@@ -89,7 +106,7 @@ EOF
 
 Do **not** `git push` unless the user asks.
 
-### 5. Source repo hygiene
+### 6. Source repo hygiene
 
 If similar files might land again, add ignore patterns in the source `.gitignore`. Do not commit unrelated source changes.
 
@@ -100,3 +117,4 @@ Optionally note the stash in `$VAULT_ROOT/MANIFEST.md` if it is a new accumulati
 - Do not stash into Obsidian `~/vaults` or `~/GranolaVault`
 - Do not rewrite source git history (that is `tidy-stash` + explicit ask)
 - Do not invent a second vault root when `~/pdv` exists
+- Do not finish without `AGENT-BRIEFING.md`
