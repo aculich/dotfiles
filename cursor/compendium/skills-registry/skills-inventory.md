@@ -1,6 +1,6 @@
 # Skills inventory (generated)
 
-Generated: 2026-07-19T01:01:00Z
+Generated: 2026-07-19T06:33:12Z
 
 ## Summary
 
@@ -340,7 +340,13 @@ Generated: 2026-07-19T01:01:00Z
 - `workers-best-practices` [authored] — source: https://github.com/cloudflare/skills
 - `wrangler` [authored] — source: https://github.com/cloudflare/skills
 
-## Project-local (1082)
+## Project-local (1085)
+
+### `/Users/me/projects/agent-wake`
+
+- `agent-wake-handoff` (project-cursor) — `.cursor/skills/agent-wake-handoff/SKILL.md`
+- `agent-wake-missed` (project-cursor) — `.cursor/skills/agent-wake-missed/SKILL.md`
+- `agent-wake-on-event` (project-cursor) — `.cursor/skills/agent-wake-on-event/SKILL.md`
 
 ### `/Users/me/projects/agentic-loops-busywait/clones/OpenHands`
 

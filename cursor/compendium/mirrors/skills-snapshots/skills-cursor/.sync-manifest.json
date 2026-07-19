@@ -2,61 +2,61 @@
   "version": 1,
   "skills": {
     "babysit": {
-      "lastSyncedAt": 1784422795629
+      "lastSyncedAt": 1784442533635
     },
     "canvas": {
-      "lastSyncedAt": 1784422795629
+      "lastSyncedAt": 1784442533635
     },
     "create-hook": {
-      "lastSyncedAt": 1784422795629
+      "lastSyncedAt": 1784442533635
     },
     "create-rule": {
-      "lastSyncedAt": 1784422795629
+      "lastSyncedAt": 1784442533635
     },
     "create-skill": {
-      "lastSyncedAt": 1784422795629
+      "lastSyncedAt": 1784442533635
     },
     "create-subagent": {
-      "lastSyncedAt": 1784422795629
+      "lastSyncedAt": 1784442533635
     },
     "migrate-to-skills": {
-      "lastSyncedAt": 1784422795629
+      "lastSyncedAt": 1784442533635
     },
     "shell": {
-      "lastSyncedAt": 1784422795629
+      "lastSyncedAt": 1784442533635
     },
     "statusline": {
-      "lastSyncedAt": 1784422795629
+      "lastSyncedAt": 1784442533635
     },
     "update-cli-config": {
-      "lastSyncedAt": 1784422795629
+      "lastSyncedAt": 1784442533635
     },
     "update-cursor-settings": {
-      "lastSyncedAt": 1784422795629
+      "lastSyncedAt": 1784442533635
     },
     "split-to-prs": {
-      "lastSyncedAt": 1784422795629
+      "lastSyncedAt": 1784442533635
     },
     "sdk": {
-      "lastSyncedAt": 1784422795629
+      "lastSyncedAt": 1784442533635
     },
     "loop": {
-      "lastSyncedAt": 1784422795629
+      "lastSyncedAt": 1784442533635
     },
     "automate": {
-      "lastSyncedAt": 1784422795629
+      "lastSyncedAt": 1784442533635
     },
     "review": {
-      "lastSyncedAt": 1784422795629
+      "lastSyncedAt": 1784442533635
     },
     "review-bugbot": {
-      "lastSyncedAt": 1784422795629
+      "lastSyncedAt": 1784442533635
     },
     "review-security": {
-      "lastSyncedAt": 1784422795629
+      "lastSyncedAt": 1784442533635
     },
     "onboard": {
-      "lastSyncedAt": 1784422795629
+      "lastSyncedAt": 1784442533635
     }
   },
   "lastInventoryAt": 1784407138072

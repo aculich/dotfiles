@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-19T01:01:00Z",
+  "generated": "2026-07-19T06:33:12Z",
   "compendium_root": "/Users/me/dotfiles/cursor/compendium",
   "monorepo_root": "/Users/me/projects/agent-skills",
   "global": {
@@ -105,7 +105,7 @@
           "type": "local-repo",
           "url": "https://github.com/aculich/google-workspace-tools",
           "install_source_url": "https://github.com/aculich/google-workspace-tools",
-          "commit": "6b776c2437f6da3ca5db57144d5af8f702f07431",
+          "commit": "64cb99f20d949b448b2f5a8f68cceda3d17427cf",
           "local_path": "/Users/me/tools/google-workspace-tools",
           "confidence": "high",
           "via": "git-remote"
@@ -725,7 +725,7 @@
           "type": "local-repo",
           "url": "https://github.com/aculich/google-workspace-tools",
           "install_source_url": "https://github.com/aculich/google-workspace-tools",
-          "commit": "6b776c2437f6da3ca5db57144d5af8f702f07431",
+          "commit": "64cb99f20d949b448b2f5a8f68cceda3d17427cf",
           "local_path": "/Users/me/tools/google-workspace-tools",
           "confidence": "high",
           "via": "git-remote"
@@ -1488,7 +1488,7 @@
           "type": "local-repo",
           "url": "https://github.com/aculich/google-workspace-tools",
           "install_source_url": "https://github.com/aculich/google-workspace-tools",
-          "commit": "6b776c2437f6da3ca5db57144d5af8f702f07431",
+          "commit": "64cb99f20d949b448b2f5a8f68cceda3d17427cf",
           "local_path": "/Users/me/tools/google-workspace-tools",
           "confidence": "high",
           "via": "git-remote"
@@ -6847,6 +6847,33 @@
     ]
   },
   "project": [
+    {
+      "skill": "agent-wake-handoff",
+      "skill_path": "/Users/me/projects/agent-wake/.cursor/skills/agent-wake-handoff/SKILL.md",
+      "project_root": "/Users/me/projects/agent-wake",
+      "project_slug": "github-com-aculich-agent-wake",
+      "relative_path": ".cursor/skills/agent-wake-handoff/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "agent-wake-missed",
+      "skill_path": "/Users/me/projects/agent-wake/.cursor/skills/agent-wake-missed/SKILL.md",
+      "project_root": "/Users/me/projects/agent-wake",
+      "project_slug": "github-com-aculich-agent-wake",
+      "relative_path": ".cursor/skills/agent-wake-missed/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "agent-wake-on-event",
+      "skill_path": "/Users/me/projects/agent-wake/.cursor/skills/agent-wake-on-event/SKILL.md",
+      "project_root": "/Users/me/projects/agent-wake",
+      "project_slug": "github-com-aculich-agent-wake",
+      "relative_path": ".cursor/skills/agent-wake-on-event/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
     {
       "skill": "cross-repo-testing",
       "skill_path": "/Users/me/projects/agentic-loops-busywait/clones/OpenHands/.agents/skills/cross-repo-testing/SKILL.md",
