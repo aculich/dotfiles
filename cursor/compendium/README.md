@@ -1,6 +1,6 @@
 # dotfiles-cursor-compendium (scaffold)
 
-**This machine:** live repo at `/Users/me/src/dotfiles-cursor-compendium` (private GitHub: `aculich/dotfiles-cursor-compendium`). Canonical notes: [`docs/COMPENDIUM.md`](../docs/COMPENDIUM.md).
+**This machine:** live repo at `/Users/me/ops/dotfiles-cursor-compendium` (private GitHub: `aculich/dotfiles-cursor-compendium`). Canonical notes: [`docs/COMPENDIUM.md`](../docs/COMPENDIUM.md). Home-level ops parking lot: `~/ops/README.md`.
 
 This directory is a **portable scaffold** for a **sibling private git repository** that aggregates:
 

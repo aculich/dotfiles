@@ -49,6 +49,9 @@ HOME_PRUNE_TOP = frozenset(
         "miniconda3",
         "anaconda3",
         ".cargo/registry",
+        # Operational sibling repos (not product workspaces); see ~/ops/README.md
+        "ops",
+        "src",  # legacy name for ~/ops
     }
 )
 
@@ -337,11 +340,30 @@ def main() -> int:
     if args.home_maxdepth > 0:
         scan_found |= scan_home_shallow(args.home_maxdepth)
 
-    # Drop global ~/.cursor as a fake project root
-    scan_found.discard(str((HOME / ".cursor").resolve()))
-    scan_found = {p for p in scan_found if Path(p).exists()}
+    def is_forbidden_project_root(path_str: str) -> bool:
+        """Never treat $HOME (or global ~/.cursor) as a snapshot project."""
+        try:
+            rp = Path(path_str).resolve()
+        except OSError:
+            return True
+        home = HOME.resolve()
+        if rp == home or rp == (home / ".cursor"):
+            return True
+        return False
 
-    cursor_existing = {p for p in cursor_known if Path(p).exists()}
+    # Drop global ~/.cursor and $HOME itself (Cursor sometimes lists $HOME as a workspace)
+    scan_found = {
+        p
+        for p in scan_found
+        if Path(p).exists() and not is_forbidden_project_root(p)
+    }
+    scan_found.discard(str((HOME / ".cursor").resolve()))
+
+    cursor_existing = {
+        p
+        for p in cursor_known
+        if Path(p).exists() and not is_forbidden_project_root(p)
+    }
     orphans = scan_found - cursor_existing
     stale = cursor_existing - scan_found
 

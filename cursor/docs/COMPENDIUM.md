@@ -6,16 +6,18 @@ This workspace tracks a **scaffold** under [`compendium/`](compendium/README.md)
 
 | Item | Value |
 | --- | --- |
-| **Path** | `/Users/me/src/dotfiles-cursor-compendium` |
+| **Path** | `/Users/me/ops/dotfiles-cursor-compendium` |
 | **Remote** | [https://github.com/aculich/dotfiles-cursor-compendium](https://github.com/aculich/dotfiles-cursor-compendium) (private) |
-| **Env** | `export CURSOR_COMPENDIUM_ROOT=/Users/me/src/dotfiles-cursor-compendium` |
+| **Env** | `export CURSOR_COMPENDIUM_ROOT=/Users/me/ops/dotfiles-cursor-compendium` |
 
 Add the `export` line to `~/.zshrc` (or use `direnv`) so `scripts/snapshot-all.sh` runs without extra flags.
+
+`~/ops` is the home-level parking lot for **operational sibling repos** (backups / eval scratch)—not product source. See `~/ops/README.md`.
 
 ## Day-to-day
 
 ```bash
-export CURSOR_COMPENDIUM_ROOT=/Users/me/src/dotfiles-cursor-compendium
+export CURSOR_COMPENDIUM_ROOT=/Users/me/ops/dotfiles-cursor-compendium
 cd "$CURSOR_COMPENDIUM_ROOT"
 ./scripts/snapshot-all.sh
 git status
