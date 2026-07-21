@@ -266,34 +266,52 @@ ghstars-clone() {
   ghstars "$@" | xargs -I{} git clone "https://github.com/{}.git"
 }
 
-# List trending GitHub repos via ghapi.huchen.dev (Path A: no upstream clone).
-# Usage: ghtrend [daily|weekly|monthly] [language]
-# Output: author/name stars description (one line per repo).
-# If the API is down or returns empty, prints a message and tries "gh trending" if available.
-ghtrend() {
+# Official GitHub Trending page scraper (stdlib Python). Used when huchen API is down
+# and preferred over gkze/gh-trending (broken HTML selectors as of 2026-07).
+_GHTREND_PAGE="${_GHTREND_PAGE:-$HOME/tools/github-gh-cli/scripts/gh-trending-page.sh}"
+
+_ghtrend_json() {
   local since="${1:-daily}"
   local lang="${2:-}"
   local url="https://ghapi.huchen.dev/repositories?since=${since}"
   [[ -n "$lang" ]] && url="${url}&language=${lang}"
-  local json
-  json=$(curl -sL --max-time 10 "$url" 2>/dev/null)
-  if [[ -z "$json" ]]; then
-    echo "Trending API (ghapi.huchen.dev) returned no data or is unavailable." >&2
-    if command -v gh >/dev/null 2>&1 && gh trending --help >/dev/null 2>&1; then
-      echo "Using gh trending instead:" >&2
-      gh trending
+  local json=""
+  json=$(curl -sL --max-time 8 "$url" 2>/dev/null) || json=""
+  # Require non-empty body: bare newline / empty makes some jq builds exit 0 wrongly.
+  if [[ -n "$json" ]] && echo "$json" | jq -e 'type == "array" and length > 0' >/dev/null 2>&1; then
+    echo "$json"
+    return 0
+  fi
+  # Page scrape fallback (daily|weekly|monthly)
+  if [[ -x "$_GHTREND_PAGE" ]] || [[ -f "$_GHTREND_PAGE" ]]; then
+    if [[ -n "$lang" ]]; then
+      json=$("$_GHTREND_PAGE" "$since" "$lang" --format json 2>/dev/null) || json=""
     else
-      echo "Try: open https://github.com/trending" >&2
-      echo "Or install gh extension: gh extension install gkze/gh-trending" >&2
+      json=$("$_GHTREND_PAGE" "$since" --format json 2>/dev/null) || json=""
     fi
+    if [[ -n "$json" ]] && echo "$json" | jq -e 'type == "array" and length > 0' >/dev/null 2>&1; then
+      echo "$json"
+      return 0
+    fi
+  fi
+  return 1
+}
+
+# List trending GitHub repos.
+# Usage: ghtrend [daily|weekly|monthly] [language]
+# Output: author/name stars description (one line per repo).
+# Tries ghapi.huchen.dev first, then ~/tools/github-gh-cli/scripts/gh-trending-page.sh.
+ghtrend() {
+  local since="${1:-daily}"
+  local lang="${2:-}"
+  local json
+  if ! json=$(_ghtrend_json "$since" "$lang"); then
+    echo "Trending unavailable (huchen API down and page scrape failed)." >&2
+    echo "Try: $_GHTREND_PAGE $since --format lines" >&2
+    echo "Or: open https://github.com/trending?since=${since}" >&2
     return 1
   fi
-  if ! echo "$json" | jq -e 'type == "array" and length > 0' >/dev/null 2>&1; then
-    echo "Trending API returned an empty list (GitHub trending can be empty)." >&2
-    echo "Try: open https://github.com/trending" >&2
-    return 1
-  fi
-  echo "$json" | jq -r '.[] | "\(.author)/\(.name) \(.stars) \(.description // "")"'
+  echo "$json" | jq -r '.[] | "\(.author // (.fullName | split("/")[0]))/\(.name // (.fullName | split("/")[1])) \(.stars // .starsPeriod // "") \(.description // "")"'
 }
 
 # Clone first N trending repos. Usage: ghtrend-clone N [daily|weekly|monthly] [language]
@@ -301,16 +319,13 @@ ghtrend-clone() {
   local n="${1:?Usage: ghtrend-clone N [daily|weekly|monthly] [language]}"
   local since="${2:-daily}"
   local lang="${3:-}"
-  local url="https://ghapi.huchen.dev/repositories?since=${since}"
-  [[ -n "$lang" ]] && url="${url}&language=${lang}"
   local json
-  json=$(curl -sL --max-time 10 "$url" 2>/dev/null)
-  if [[ -z "$json" ]] || ! echo "$json" | jq -e 'type == "array" and length > 0' >/dev/null 2>&1; then
-    echo "Trending API (ghapi.huchen.dev) returned no data or is unavailable." >&2
-    echo "Try: open https://github.com/trending or gh extension install gkze/gh-trending" >&2
+  if ! json=$(_ghtrend_json "$since" "$lang"); then
+    echo "Trending unavailable (huchen API down and page scrape failed)." >&2
+    echo "Try: $_GHTREND_PAGE $since --format json" >&2
     return 1
   fi
-  echo "$json" | jq -r ".[0:${n}][] | \"\(.author)/\(.name)\"" | xargs -I{} git clone "https://github.com/{}.git"
+  echo "$json" | jq -r ".[0:${n}][] | (.fullName // \"\\(.author)/\\(.name)\")" | xargs -I{} git clone "https://github.com/{}.git"
 }
 
 alias ghfork='local f; f() { repo=$1; owner=$(basename $(dirname "$repo")); name=$(basename "$repo"); gh repo fork "$repo" --clone; mv "$name" "${name}__${owner}"; }; f'  # Fork and clone with namespaced dir
