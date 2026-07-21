@@ -37,7 +37,7 @@ Copy this checklist and update status as you go:
 ```markdown
 Quickstart Bootstrap Progress:
 - [ ] 1. Create repo envelope and ignore policy
-- [ ] 1a. Create justfile from template (status / update / smoke recipes)
+- [ ] 1a. Create justfile from template (status / update / smoke recipes), then run create-justfile apply
 - [ ] 2. Vendor upstream source and install locally; write background/UPSTREAM_PIN.txt
 - [ ] 3. Run smoke tests and capture drift
 - [ ] 4. Write baseline docs (EXECSUMMARY, PRAXIS, background/TECHSTACK, background/ARCHITECTURE)
@@ -49,6 +49,15 @@ Quickstart Bootstrap Progress:
 - [ ] 8. Commit only intentional artifacts
 - [ ] 9. Offer follow-up bootstraps for high-signal landscape alternatives (tiered)
 ```
+
+### Step 1a detail — justfile + create-justfile
+
+1. Scaffold the quickstart maintenance justfile from [reference.md](reference.md) (pin / update-landscape / update-skills / smoke / etc.).
+2. Immediately run **`/create-justfile apply`** on the **repo root** (skill: `~/.cursor/skills/create-justfile/`):
+   - Prefer **`--umbrella`** when `upstream/` exists; otherwise **`--minimal`**.
+   - **Merge**, never clobber: keep quickstart-specific recipes (`update`, `pin`, `update-skills`, …) while ensuring the DWIM quartet exists: `help` (`help: default`), `status`, `doctor`, `doit`.
+   - Never overwrite vendored `upstream/**/justfile`.
+3. Verify: `just`, `just help`, `just doctor`.
 
 **In-place checklist variant:** same steps; step 2 becomes “inventory existing tree + optional upstream pin” instead of “clone new upstream only”.
 
@@ -196,6 +205,7 @@ This skill composes with sibling repos/skills — never duplicate their pipeline
 | --- | --- | --- |
 | **awesome-lists** | `~/tools/awesome-awesome/.cursor/skills/awesome-lists/` | Integrations (catalog, clones, adjacency C/D), security/trends lenses |
 | **find-skills** | `npx skills find` | TOOLBOX refresh (`update-skills`) |
+| **create-justfile** | `~/.cursor/skills/create-justfile/` | Step 1a — merge DWIM `help` / `status` / `doctor` / `doit` into root justfile after scaffolding |
 
 **awesome-awesome assets recipes lean on:**
 

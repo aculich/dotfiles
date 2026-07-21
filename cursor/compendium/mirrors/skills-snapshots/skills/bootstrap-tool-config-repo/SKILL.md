@@ -36,7 +36,7 @@ Writes only after **`bootstrap apply`**, **`approve bootstrap`**, **`execute the
 ## 1. Compendium contract
 
 - **Purpose:** Backup + cross-project index—not always the live edit surface for product code.
-- **Location:** Sibling private repo (e.g. `~/src/dotfiles-cursor-compendium`). Set **`CURSOR_COMPENDIUM_ROOT`** to that clone root.
+- **Location:** Sibling private repo (e.g. `~/ops/dotfiles-cursor-compendium`). Set **`CURSOR_COMPENDIUM_ROOT`** to that clone root.
 - **Tracked scaffold in dotfiles:** Reference layout and scripts live under [`dotfiles/cursor/compendium/`](/Users/me/dotfiles/cursor/compendium) in this tree; **copy** that directory to the sibling, `git init`, create private `origin`, then run snapshots into the clone (or maintain the scaffold via submodule—pick one ADR). **Live instance:** see `dotfiles/cursor/docs/COMPENDIUM.md` after bootstrap (path, remote URL, env, launchd).
 - **Secrets:** Never mirror `mcp.json`, raw `.env`, keys, or tokens. Scripts use **`--exclude`** / deny globs; extend denylist in `scripts/README.md` in compendium.
 - **Source of truth:** Document in compendium `README.md`: product repo vs `~/.cursor` vs compendium mirror (avoid silent edit drift).

@@ -127,6 +127,21 @@ default:
 # Recipe menu (same as bare `just`)
 help: default
 
+# Check required CLIs on PATH (extend per-tool)
+doctor:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    ok=0
+    for cmd in git just; do
+      if command -v "$cmd" >/dev/null 2>&1; then
+        echo "OK  $cmd"
+      else
+        echo "MISS $cmd"
+        ok=1
+      fi
+    done
+    exit "$ok"
+
 # Git + upstream pin + doc freshness (+ runtime ps when stack exists)
 status:
     #!/usr/bin/env bash

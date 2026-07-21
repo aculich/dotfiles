@@ -43,7 +43,7 @@ If the user replies with questions only, **stay in dry-run** until an **apply** 
 
 For **every** repo this skill scaffolds (not only umbrellas), add:
 
-- Repo-root **`justfile`** with **`just`** default = **read-only** `status` (git + inbox snapshot + optional Glow markdown). **Inline a minimal pattern in the bootstrapped repo**—do not require copying from another checkout (e.g. `default: status`, `doctor` listing `git`, `just`, stack CLIs; add `glow` only if the repo uses it). See `docs/AUTOMATION.md` in the new repo.
+- Repo-root **`justfile`** with **`just`** default = **read-only** `status` (git + inbox snapshot + optional Glow markdown). **Inline a minimal pattern in the bootstrapped repo**—do not require copying from another checkout (e.g. `default: status`, `doctor` listing `git`, `just`, stack CLIs; add `glow` only if the repo uses it). See `docs/AUTOMATION.md` in the new repo. For **justfile-only** work or DWIM/`doit` enrichment (umbrella vs operational templates), prefer **`create-justfile`** (`~/.cursor/skills/create-justfile/`, slash `/create-justfile`) instead of inventing recipes ad hoc.
 - **`docs/AUTOMATION.md`** explaining **`just`** vs **Cursor slash skills** vs **`cursor-agent`** / **`claude`** CLI, plus manual **Claude Mac app** flows.
 
 Run **`just doctor`** once after apply to verify `PATH` tools.

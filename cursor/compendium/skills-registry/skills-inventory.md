@@ -1,61 +1,65 @@
 # Skills inventory (generated)
 
-Generated: 2026-07-19T06:33:12Z
+Generated: 2026-07-21T20:14:53Z
 
 ## Summary
 
-- **authored**: 184
-- **embedded**: 84
+- **unique skills**: 148 (308 install rows)
+- **authored**: 59 installs / 31 unique
+- **embedded**: 84 installs / 63 unique
+- **installed**: 129 installs / 74 unique
 - **vendor**: 36
 
 ### Provenance (by source type)
 
-- **skill-lock**: 148
-- **authored**: 88
+- **skill-lock**: 150 installs / 49 unique
+- **authored**: 88 installs / 31 unique
 - **vendor**: 36
-- **unknown**: 23
+- **local-estate**: 22 installs / 20 unique
 - **local-repo**: 6
-- **community**: 2
+- **community**: 3
+- **unknown**: 2
 - **frontmatter**: 1
-- **unresolved** (21): bootstrap-collaborator, chaos-containment, collab-sync, cursor-purification, deaccession-guides-and-guards, dev-warmup, google-workspace-new-org, hot-livewires-preflight, meeting-sync.stale-2026-07-06, message-in-a-bottle, perks, quick-stash, repo-evaluator, report-reforge, research-clone-bootstrap.bak-20260718, rowboat-safe-startup, rowboat-upstream-digest, setup-contextualizer, stale-tooling-trial, tidy-stash, tool-landscape-intel — run `scripts/enrich-provenance.py` to attempt web lookup
+- **unresolved** (2): github-trending, product-hunt-search — run `just provenance` (or `scripts/enrich-provenance.py`) to attempt web lookup
 
 ## Global
 
-### cursor-user (104)
+### cursor-user (105)
 
 - `accidental-data-loss-prevention` [authored] — source: https://github.com/aculich/agent-skills
 - `adhd-daily-planner` [authored] — source: https://github.com/aculich/agent-skills
 - `adhdev-engineering-partnership` [authored] — source: https://github.com/aculich/agent-skills
-- `agents-sdk` [authored] — source: https://github.com/cloudflare/skills
+- `agents-sdk` [installed] — source: https://github.com/cloudflare/skills
 - `berkeley-cidr-meeting` [embedded] (symlink) — source: https://github.com/aculich/google-workspace-tools
 - `bigquery-data-transfer-service` [vendor] — source: vendor
-- `bootstrap-collaborator` [authored] ⚠? — source: unknown
+- `bootstrap-collaborator` [installed] — source: local-estate
 - `bootstrap-new-project` [authored] — source: https://github.com/aculich/agent-skills
 - `bootstrap-tool-config-repo` [authored] — source: https://github.com/aculich/agent-skills
 - `bootstrap-umbrella-client-project` [authored] — source: https://github.com/aculich/agent-skills
 - `building-data-apps` [vendor] — source: vendor
 - `change-world-critique-quick` [authored] — source: https://github.com/aculich/agent-skills
 - `change-world-critique-quick-full` [authored] — source: https://github.com/aculich/agent-skills
-- `chaos-containment` [authored] ⚠? — source: unknown
+- `chaos-containment` [installed] — source: local-estate
 - `cidr-bootstrap-project` [authored] — source: https://github.com/aculich/agent-skills
-- `cloudflare` [authored] — source: https://github.com/cloudflare/skills
-- `cloudflare-email-service` [authored] — source: https://github.com/cloudflare/skills
-- `cloudflare-one` [authored] — source: https://github.com/cloudflare/skills
-- `cloudflare-one-migrations` [authored] — source: https://github.com/cloudflare/skills
-- `collab-sync` [authored] ⚠? — source: unknown
+- `cloudflare` [installed] — source: https://github.com/cloudflare/skills
+- `cloudflare-email-service` [installed] — source: https://github.com/cloudflare/skills
+- `cloudflare-one` [installed] — source: https://github.com/cloudflare/skills
+- `cloudflare-one-migrations` [installed] — source: https://github.com/cloudflare/skills
+- `collab-sync` [installed] — source: local-estate
 - `compendium-discover-projects` [authored] — source: https://github.com/aculich/agent-skills
 - `context-engineering` [authored] — source: https://github.com/aculich/agent-skills
-- `cursor-purification` [authored] ⚠? — source: unknown
+- `create-justfile` [installed] — source: local-estate
+- `cursor-purification` [installed] — source: local-estate
 - `data-autocleaning` [vendor] — source: vendor
 - `dataform-bigquery` [vendor] — source: vendor
 - `dbt-bigquery` [vendor] — source: vendor
-- `deaccession-guides-and-guards` [authored] ⚠? — source: unknown
+- `deaccession-guides-and-guards` [installed] — source: local-estate
 - `deeplistening-method-synthesis` [authored] — source: https://github.com/aculich/agent-skills
 - `deeplistening-session-analysis` [authored] — source: https://github.com/aculich/agent-skills
 - `developing-with-bigquery` [vendor] — source: vendor
-- `discover-channel` [authored] ⚠low — source: https://github.com/superamped/ai-marketing-skills
+- `discover-channel` [installed] ⚠low — source: https://github.com/superamped/ai-marketing-skills
 - `discovering-gcp-data-assets` [vendor] — source: vendor
-- `durable-objects` [authored] — source: https://github.com/cloudflare/skills
+- `durable-objects` [installed] — source: https://github.com/cloudflare/skills
 - `embedded-captions` [embedded] (symlink) — source: https://github.com/heygen-com/hyperframes
 - `ern-cidr-mail` [embedded] (symlink) — source: https://github.com/aculich/google-workspace-tools
 - `faceless-explainer` [embedded] (symlink) — source: https://github.com/heygen-com/hyperframes
@@ -68,8 +72,9 @@ Generated: 2026-07-19T06:33:12Z
 - `gcp-pipeline-resource-provisioning` [vendor] — source: vendor
 - `gcp-spark` [vendor] — source: vendor
 - `general-video` [embedded] (symlink) — source: https://github.com/heygen-com/hyperframes
-- `google-workspace-new-org` [authored] ⚠? — source: unknown
-- `hot-livewires-preflight` [authored] ⚠? — source: unknown
+- `github-trending` [installed] ⚠? — source: unknown
+- `google-workspace-new-org` [installed] — source: local-estate
+- `hot-livewires-preflight` [installed] — source: local-estate
 - `hyperframes` [embedded] (symlink) — source: https://github.com/heygen-com/hyperframes
 - `hyperframes-animation` [embedded] (symlink) — source: https://github.com/heygen-com/hyperframes
 - `hyperframes-cli` [embedded] (symlink) — source: https://github.com/heygen-com/hyperframes
@@ -85,8 +90,7 @@ Generated: 2026-07-19T06:33:12Z
 - `media-use` [embedded] (symlink) — source: https://github.com/heygen-com/hyperframes
 - `meeting-sync` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
 - `meeting-sync-and-synthesis` [authored] — source: https://github.com/aculich/agent-skills
-- `meeting-sync.stale-2026-07-06` [authored] ⚠? — source: unknown
-- `message-in-a-bottle` [authored] ⚠? — source: unknown
+- `message-in-a-bottle` [installed] — source: local-estate
 - `ml-best-practices` [vendor] — source: vendor
 - `motion-graphics` [embedded] (symlink) — source: https://github.com/heygen-com/hyperframes
 - `music-to-video` [embedded] (symlink) — source: https://github.com/heygen-com/hyperframes
@@ -95,17 +99,17 @@ Generated: 2026-07-19T06:33:12Z
 - `peeq-cidr-meeting` [embedded] (symlink) — source: https://github.com/aculich/google-workspace-tools
 - `pr-to-video` [embedded] (symlink) — source: https://github.com/heygen-com/hyperframes
 - `process-umbrella-incoming` [authored] — source: https://github.com/aculich/agent-skills
+- `product-hunt-search` [installed] ⚠? — source: unknown
 - `product-launch-video` [embedded] (symlink) — source: https://github.com/heygen-com/hyperframes
 - `project-management-guru-adhd` [authored] — source: https://github.com/aculich/agent-skills
-- `quick-stash` [authored] ⚠? — source: unknown
+- `quick-stash` [installed] — source: local-estate
 - `reflexive-method-authoring-loop` [authored] — source: https://github.com/aculich/agent-skills
 - `remotion-to-hyperframes` [embedded] (symlink) — source: https://github.com/heygen-com/hyperframes
-- `report-reforge` [authored] ⚠? — source: unknown
+- `report-reforge` [installed] — source: local-estate
 - `research-clone-bootstrap` [embedded] (symlink) — source: https://github.com/aculich/research-clone-bootstrap
-- `research-clone-bootstrap.bak-20260718` [authored] ⚠? — source: unknown
-- `rowboat-safe-startup` [authored] ⚠? — source: unknown
-- `rowboat-upstream-digest` [authored] ⚠? — source: unknown
-- `sandbox-sdk` [authored] — source: https://github.com/cloudflare/skills
+- `rowboat-safe-startup` [installed] — source: local-estate
+- `rowboat-upstream-digest` [installed] — source: local-estate
+- `sandbox-sdk` [installed] — source: https://github.com/cloudflare/skills
 - `skill-repair` [authored] — source: https://github.com/aculich/agent-skills
 - `slideshow` [embedded] (symlink) — source: https://github.com/heygen-com/hyperframes
 - `specstory-guard` [authored] — source: https://github.com/aculich/agent-skills
@@ -114,19 +118,19 @@ Generated: 2026-07-19T06:33:12Z
 - `specstory-project-stats` [authored] — source: https://github.com/aculich/agent-skills
 - `specstory-session-summary` [authored] — source: https://github.com/aculich/agent-skills
 - `specstory-yak` [authored] — source: https://github.com/aculich/agent-skills
-- `stale-tooling-trial` [authored] ⚠? — source: unknown
+- `stale-tooling-trial` [installed] — source: local-estate
 - `talking-head-recut` [embedded] (symlink) — source: https://github.com/heygen-com/hyperframes
-- `tidy-stash` [authored] ⚠? — source: unknown
-- `tool-landscape-intel` [authored] ⚠? — source: unknown
+- `tidy-stash` [installed] — source: local-estate
+- `tool-landscape-intel` [installed] — source: local-estate
 - `tools-quickstart-bootstrap` [authored] — source: https://github.com/aculich/agent-skills
-- `turnstile-spin` [authored] — source: https://github.com/cloudflare/skills
-- `web-perf` [authored] — source: https://github.com/cloudflare/skills
+- `turnstile-spin` [installed] — source: https://github.com/cloudflare/skills
+- `web-perf` [installed] — source: https://github.com/cloudflare/skills
 - `website-to-video` [embedded] (symlink) — source: https://github.com/heygen-com/hyperframes
 - `wip-distill` [embedded] (symlink) — source: https://github.com/aculich/peeq-voicegen-audiocast
 - `wip-harvest` [embedded] (symlink) — source: https://github.com/aculich/peeq-voicegen-audiocast
 - `wip-publish` [embedded] (symlink) — source: https://github.com/aculich/peeq-voicegen-audiocast
-- `workers-best-practices` [authored] — source: https://github.com/cloudflare/skills
-- `wrangler` [authored] — source: https://github.com/cloudflare/skills
+- `workers-best-practices` [installed] — source: https://github.com/cloudflare/skills
+- `wrangler` [installed] — source: https://github.com/cloudflare/skills
 
 ### cursor-managed (19)
 
@@ -150,28 +154,28 @@ Generated: 2026-07-19T06:33:12Z
 - `update-cli-config` [vendor] — source: vendor
 - `update-cursor-settings` [vendor] — source: vendor
 
-### claude-user (69)
+### claude-user (70)
 
 - `accidental-data-loss-prevention` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
 - `adhd-daily-planner` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
 - `adhdev-engineering-partnership` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
-- `agents-sdk` [authored] — source: https://github.com/cloudflare/skills
+- `agents-sdk` [installed] — source: https://github.com/cloudflare/skills
 - `bootstrap-tool-config-repo` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
 - `change-world-critique-quick` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
 - `change-world-critique-quick-full` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
 - `cidr-bootstrap-project` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
-- `cloudflare` [authored] — source: https://github.com/cloudflare/skills
-- `cloudflare-email-service` [authored] — source: https://github.com/cloudflare/skills
-- `cloudflare-one` [authored] — source: https://github.com/cloudflare/skills
-- `cloudflare-one-migrations` [authored] — source: https://github.com/cloudflare/skills
+- `cloudflare` [installed] — source: https://github.com/cloudflare/skills
+- `cloudflare-email-service` [installed] — source: https://github.com/cloudflare/skills
+- `cloudflare-one` [installed] — source: https://github.com/cloudflare/skills
+- `cloudflare-one-migrations` [installed] — source: https://github.com/cloudflare/skills
 - `compendium-discover-projects` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
 - `deeplistening-method-synthesis` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
 - `deeplistening-session-analysis` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
-- `durable-objects` [authored] — source: https://github.com/cloudflare/skills
-- `embedded-captions` [authored] — source: https://github.com/heygen-com/hyperframes
-- `faceless-explainer` [authored] — source: https://github.com/heygen-com/hyperframes
+- `durable-objects` [installed] — source: https://github.com/cloudflare/skills
+- `embedded-captions` [installed] — source: https://github.com/heygen-com/hyperframes
+- `faceless-explainer` [installed] — source: https://github.com/heygen-com/hyperframes
 - `fireflies-meeting-export` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
-- `general-video` [authored] — source: https://github.com/heygen-com/hyperframes
+- `general-video` [installed] — source: https://github.com/heygen-com/hyperframes
 - `google-agents-cli-adk-code` [embedded] (symlink) — source: https://github.com/google/agents-cli
 - `google-agents-cli-deploy` [embedded] (symlink) — source: https://github.com/google/agents-cli
 - `google-agents-cli-eval` [embedded] (symlink) — source: https://github.com/google/agents-cli
@@ -179,59 +183,60 @@ Generated: 2026-07-19T06:33:12Z
 - `google-agents-cli-publish` [embedded] (symlink) — source: https://github.com/google/agents-cli
 - `google-agents-cli-scaffold` [embedded] (symlink) — source: https://github.com/google/agents-cli
 - `google-agents-cli-workflow` [embedded] (symlink) — source: https://github.com/google/agents-cli
-- `hyperframes` [authored] — source: https://github.com/heygen-com/hyperframes
-- `hyperframes-animation` [authored] — source: https://github.com/heygen-com/hyperframes
-- `hyperframes-cli` [authored] — source: https://github.com/heygen-com/hyperframes
-- `hyperframes-core` [authored] — source: https://github.com/heygen-com/hyperframes
-- `hyperframes-creative` [authored] — source: https://github.com/heygen-com/hyperframes
-- `hyperframes-keyframes` [authored] — source: https://github.com/heygen-com/hyperframes
-- `hyperframes-media` [authored] — source: https://github.com/heygen-com/hyperframes
-- `hyperframes-registry` [authored] — source: https://github.com/heygen-com/hyperframes
+- `hyperframes` [installed] — source: https://github.com/heygen-com/hyperframes
+- `hyperframes-animation` [installed] — source: https://github.com/heygen-com/hyperframes
+- `hyperframes-cli` [installed] — source: https://github.com/heygen-com/hyperframes
+- `hyperframes-core` [installed] — source: https://github.com/heygen-com/hyperframes
+- `hyperframes-creative` [installed] — source: https://github.com/heygen-com/hyperframes
+- `hyperframes-keyframes` [installed] — source: https://github.com/heygen-com/hyperframes
+- `hyperframes-media` [installed] — source: https://github.com/heygen-com/hyperframes
+- `hyperframes-registry` [installed] — source: https://github.com/heygen-com/hyperframes
 - `limitless-takeout-search` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
 - `limitless-takeout-update` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
 - `luminary-tech-radar` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
-- `media-use` [authored] — source: https://github.com/heygen-com/hyperframes
+- `media-use` [installed] — source: https://github.com/heygen-com/hyperframes
 - `meeting-sync` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
 - `meeting-sync-and-synthesis` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
-- `motion-graphics` [authored] — source: https://github.com/heygen-com/hyperframes
-- `music-to-video` [authored] — source: https://github.com/heygen-com/hyperframes
+- `motion-graphics` [installed] — source: https://github.com/heygen-com/hyperframes
+- `music-to-video` [installed] — source: https://github.com/heygen-com/hyperframes
 - `op-credentials` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
 - `portless` [embedded] (symlink) — source: https://github.com/vercel-labs/portless
-- `pr-to-video` [authored] — source: https://github.com/heygen-com/hyperframes
+- `pr-to-video` [installed] — source: https://github.com/heygen-com/hyperframes
 - `process-umbrella-incoming` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
-- `product-launch-video` [authored] — source: https://github.com/heygen-com/hyperframes
+- `product-launch-video` [installed] — source: https://github.com/heygen-com/hyperframes
 - `project-management-guru-adhd` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
 - `reflexive-method-authoring-loop` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
-- `remotion-to-hyperframes` [authored] — source: https://github.com/heygen-com/hyperframes
-- `repo-evaluator` [authored] ⚠? — source: unknown
-- `sandbox-sdk` [authored] — source: https://github.com/cloudflare/skills
-- `setup-contextualizer` [authored] ⚠? — source: unknown
+- `remotion-to-hyperframes` [installed] — source: https://github.com/heygen-com/hyperframes
+- `repo-evaluator` [installed] — source: local-estate
+- `sandbox-sdk` [installed] — source: https://github.com/cloudflare/skills
+- `setup-contextualizer` [installed] — source: local-estate
 - `skill-repair` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
-- `slideshow` [authored] — source: https://github.com/heygen-com/hyperframes
+- `slideshow` [installed] — source: https://github.com/heygen-com/hyperframes
+- `socialmedia-compounding` [installed] — source: local-estate
 - `specstory-guard` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
 - `specstory-link-trail` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
 - `specstory-organize` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
 - `specstory-project-stats` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
 - `specstory-session-summary` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
 - `specstory-yak` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
-- `talking-head-recut` [authored] — source: https://github.com/heygen-com/hyperframes
+- `talking-head-recut` [installed] — source: https://github.com/heygen-com/hyperframes
 - `tools-quickstart-bootstrap` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
-- `turnstile-spin` [authored] — source: https://github.com/cloudflare/skills
-- `web-perf` [authored] — source: https://github.com/cloudflare/skills
-- `website-to-video` [authored] — source: https://github.com/heygen-com/hyperframes
-- `workers-best-practices` [authored] — source: https://github.com/cloudflare/skills
-- `wrangler` [authored] — source: https://github.com/cloudflare/skills
+- `turnstile-spin` [installed] — source: https://github.com/cloudflare/skills
+- `web-perf` [installed] — source: https://github.com/cloudflare/skills
+- `website-to-video` [installed] — source: https://github.com/heygen-com/hyperframes
+- `workers-best-practices` [installed] — source: https://github.com/cloudflare/skills
+- `wrangler` [installed] — source: https://github.com/cloudflare/skills
 
 ### codex-user (34)
 
-- `agents-sdk` [authored] — source: https://github.com/cloudflare/skills
-- `cloudflare` [authored] — source: https://github.com/cloudflare/skills
-- `cloudflare-email-service` [authored] — source: https://github.com/cloudflare/skills
-- `cloudflare-one` [authored] — source: https://github.com/cloudflare/skills
-- `cloudflare-one-migrations` [authored] — source: https://github.com/cloudflare/skills
-- `dev-warmup` [authored] ⚠? — source: unknown
-- `durable-objects` [authored] — source: https://github.com/cloudflare/skills
-- `dynamic-dev-port` [authored] ⚠low — source: https://github.com/patternsdev/skills
+- `agents-sdk` [installed] — source: https://github.com/cloudflare/skills
+- `cloudflare` [installed] — source: https://github.com/cloudflare/skills
+- `cloudflare-email-service` [installed] — source: https://github.com/cloudflare/skills
+- `cloudflare-one` [installed] — source: https://github.com/cloudflare/skills
+- `cloudflare-one-migrations` [installed] — source: https://github.com/cloudflare/skills
+- `dev-warmup` [installed] — source: local-estate
+- `durable-objects` [installed] — source: https://github.com/cloudflare/skills
+- `dynamic-dev-port` [installed] ⚠low — source: https://github.com/patternsdev/skills
 - `embedded-captions` [embedded] (symlink) — source: https://github.com/heygen-com/hyperframes
 - `faceless-explainer` [embedded] (symlink) — source: https://github.com/heygen-com/hyperframes
 - `general-video` [embedded] (symlink) — source: https://github.com/heygen-com/hyperframes
@@ -250,97 +255,278 @@ Generated: 2026-07-19T06:33:12Z
 - `pr-to-video` [embedded] (symlink) — source: https://github.com/heygen-com/hyperframes
 - `product-launch-video` [embedded] (symlink) — source: https://github.com/heygen-com/hyperframes
 - `remotion-to-hyperframes` [embedded] (symlink) — source: https://github.com/heygen-com/hyperframes
-- `sandbox-sdk` [authored] — source: https://github.com/cloudflare/skills
+- `sandbox-sdk` [installed] — source: https://github.com/cloudflare/skills
 - `slideshow` [embedded] (symlink) — source: https://github.com/heygen-com/hyperframes
 - `talking-head-recut` [embedded] (symlink) — source: https://github.com/heygen-com/hyperframes
-- `turnstile-spin` [authored] — source: https://github.com/cloudflare/skills
-- `web-perf` [authored] — source: https://github.com/cloudflare/skills
+- `turnstile-spin` [installed] — source: https://github.com/cloudflare/skills
+- `web-perf` [installed] — source: https://github.com/cloudflare/skills
 - `website-to-video` [embedded] (symlink) — source: https://github.com/heygen-com/hyperframes
-- `workers-best-practices` [authored] — source: https://github.com/cloudflare/skills
-- `wrangler` [authored] — source: https://github.com/cloudflare/skills
+- `workers-best-practices` [installed] — source: https://github.com/cloudflare/skills
+- `wrangler` [installed] — source: https://github.com/cloudflare/skills
 
-### agents (78)
+### agents (80)
 
 - `accidental-data-loss-prevention` [authored] — source: https://github.com/aculich/agent-skills
 - `adhd-daily-planner` [authored] — source: https://github.com/aculich/agent-skills
 - `adhdev-engineering-partnership` [authored] — source: https://github.com/aculich/agent-skills
-- `agents-sdk` [authored] — source: https://github.com/cloudflare/skills
+- `agents-sdk` [installed] — source: https://github.com/cloudflare/skills
 - `bootstrap-tool-config-repo` [authored] — source: https://github.com/aculich/agent-skills
 - `change-world-critique-quick` [authored] — source: https://github.com/aculich/agent-skills
 - `change-world-critique-quick-full` [authored] — source: https://github.com/aculich/agent-skills
 - `cidr-bootstrap-project` [authored] — source: https://github.com/aculich/agent-skills
-- `cloudflare` [authored] — source: https://github.com/cloudflare/skills
-- `cloudflare-email-service` [authored] — source: https://github.com/cloudflare/skills
-- `cloudflare-one` [authored] — source: https://github.com/cloudflare/skills
-- `cloudflare-one-migrations` [authored] — source: https://github.com/cloudflare/skills
+- `cloudflare` [installed] — source: https://github.com/cloudflare/skills
+- `cloudflare-email-service` [installed] — source: https://github.com/cloudflare/skills
+- `cloudflare-one` [installed] — source: https://github.com/cloudflare/skills
+- `cloudflare-one-migrations` [installed] — source: https://github.com/cloudflare/skills
 - `compendium-discover-projects` [authored] — source: https://github.com/aculich/agent-skills
 - `deeplistening-method-synthesis` [authored] — source: https://github.com/aculich/agent-skills
 - `deeplistening-session-analysis` [authored] — source: https://github.com/aculich/agent-skills
-- `durable-objects` [authored] — source: https://github.com/cloudflare/skills
-- `embedded-captions` [authored] — source: https://github.com/heygen-com/hyperframes
-- `faceless-explainer` [authored] — source: https://github.com/heygen-com/hyperframes
-- `find-skills` [authored] — source: https://github.com/vercel-labs/skills
+- `durable-objects` [installed] — source: https://github.com/cloudflare/skills
+- `embedded-captions` [installed] — source: https://github.com/heygen-com/hyperframes
+- `faceless-explainer` [installed] — source: https://github.com/heygen-com/hyperframes
+- `find-skills` [installed] — source: https://github.com/vercel-labs/skills
 - `fireflies-meeting-export` [authored] — source: https://github.com/aculich/agent-skills
-- `general-video` [authored] — source: https://github.com/heygen-com/hyperframes
-- `google-agents-cli-adk-code` [authored] — source: https://github.com/google/agents-cli
-- `google-agents-cli-deploy` [authored] — source: https://github.com/google/agents-cli
-- `google-agents-cli-eval` [authored] — source: https://github.com/google/agents-cli
-- `google-agents-cli-observability` [authored] — source: https://github.com/google/agents-cli
-- `google-agents-cli-publish` [authored] — source: https://github.com/google/agents-cli
-- `google-agents-cli-scaffold` [authored] — source: https://github.com/google/agents-cli
-- `google-agents-cli-workflow` [authored] — source: https://github.com/google/agents-cli
-- `hyperframes` [authored] — source: https://github.com/heygen-com/hyperframes
-- `hyperframes-animation` [authored] — source: https://github.com/heygen-com/hyperframes
-- `hyperframes-cli` [authored] — source: https://github.com/heygen-com/hyperframes
-- `hyperframes-core` [authored] — source: https://github.com/heygen-com/hyperframes
-- `hyperframes-creative` [authored] — source: https://github.com/heygen-com/hyperframes
-- `hyperframes-keyframes` [authored] — source: https://github.com/heygen-com/hyperframes
-- `hyperframes-media` [authored] — source: https://github.com/heygen-com/hyperframes
-- `hyperframes-registry` [authored] — source: https://github.com/heygen-com/hyperframes
+- `general-video` [installed] — source: https://github.com/heygen-com/hyperframes
+- `google-agents-cli-adk-code` [installed] — source: https://github.com/google/agents-cli
+- `google-agents-cli-deploy` [installed] — source: https://github.com/google/agents-cli
+- `google-agents-cli-eval` [installed] — source: https://github.com/google/agents-cli
+- `google-agents-cli-observability` [installed] — source: https://github.com/google/agents-cli
+- `google-agents-cli-publish` [installed] — source: https://github.com/google/agents-cli
+- `google-agents-cli-scaffold` [installed] — source: https://github.com/google/agents-cli
+- `google-agents-cli-workflow` [installed] — source: https://github.com/google/agents-cli
+- `hyperframes` [installed] — source: https://github.com/heygen-com/hyperframes
+- `hyperframes-animation` [installed] — source: https://github.com/heygen-com/hyperframes
+- `hyperframes-cli` [installed] — source: https://github.com/heygen-com/hyperframes
+- `hyperframes-core` [installed] — source: https://github.com/heygen-com/hyperframes
+- `hyperframes-creative` [installed] — source: https://github.com/heygen-com/hyperframes
+- `hyperframes-keyframes` [installed] — source: https://github.com/heygen-com/hyperframes
+- `hyperframes-media` [installed] — source: https://github.com/heygen-com/hyperframes
+- `hyperframes-registry` [installed] — source: https://github.com/heygen-com/hyperframes
 - `limitless-takeout-search` [authored] — source: https://github.com/aculich/agent-skills
 - `limitless-takeout-update` [authored] — source: https://github.com/aculich/agent-skills
 - `luminary-tech-radar` [authored] — source: https://github.com/aculich/agent-skills
-- `media-use` [authored] — source: https://github.com/heygen-com/hyperframes
+- `media-use` [installed] — source: https://github.com/heygen-com/hyperframes
 - `meeting-sync` [authored] — source: https://github.com/aculich/agent-skills
 - `meeting-sync-and-synthesis` [authored] — source: https://github.com/aculich/agent-skills
-- `motion-graphics` [authored] — source: https://github.com/heygen-com/hyperframes
-- `music-to-video` [authored] — source: https://github.com/heygen-com/hyperframes
+- `motion-graphics` [installed] — source: https://github.com/heygen-com/hyperframes
+- `music-to-video` [installed] — source: https://github.com/heygen-com/hyperframes
 - `op-credentials` [authored] — source: https://github.com/aculich/agent-skills
-- `paper-fetch` [authored] — source: https://github.com/agents365-ai/paper-fetch
-- `perks` [authored] ⚠? — source: unknown
-- `portless` [authored] — source: https://github.com/vercel-labs/portless
-- `pr-to-video` [authored] — source: https://github.com/heygen-com/hyperframes
+- `paper-fetch` [installed] — source: https://github.com/agents365-ai/paper-fetch
+- `perks` [installed] — source: https://makerperks.com
+- `portless` [installed] — source: https://github.com/vercel-labs/portless
+- `pr-to-video` [installed] — source: https://github.com/heygen-com/hyperframes
 - `process-umbrella-incoming` [authored] — source: https://github.com/aculich/agent-skills
-- `product-launch-video` [authored] — source: https://github.com/heygen-com/hyperframes
+- `product-launch-video` [installed] — source: https://github.com/heygen-com/hyperframes
 - `project-management-guru-adhd` [authored] — source: https://github.com/aculich/agent-skills
-- `pubmed-database` [authored] — source: https://github.com/google-deepmind/science-skills
+- `pubmed-database` [installed] — source: https://github.com/google-deepmind/science-skills
 - `reflexive-method-authoring-loop` [authored] — source: https://github.com/aculich/agent-skills
-- `remotion-to-hyperframes` [authored] — source: https://github.com/heygen-com/hyperframes
-- `repo-evaluator` [authored] ⚠? — source: unknown
-- `repo-story-time` [authored] — source: https://github.com/github/awesome-copilot
-- `repomix-explorer` [authored] — source: https://github.com/yamadashy/repomix
-- `sandbox-sdk` [authored] — source: https://github.com/cloudflare/skills
-- `setup-contextualizer` [authored] ⚠? — source: unknown
+- `remotion-to-hyperframes` [installed] — source: https://github.com/heygen-com/hyperframes
+- `repo-evaluator` [installed] — source: local-estate
+- `repo-story-time` [installed] — source: https://github.com/github/awesome-copilot
+- `repomix-explorer` [installed] — source: https://github.com/yamadashy/repomix
+- `sandbox-sdk` [installed] — source: https://github.com/cloudflare/skills
+- `setup-contextualizer` [installed] — source: local-estate
 - `skill-repair` [authored] — source: https://github.com/aculich/agent-skills
-- `slideshow` [authored] — source: https://github.com/heygen-com/hyperframes
-- `sofa` [authored] — source: https://agents.stackoverflow.com/.well-known/agent-skills/sofa/SKILL.md
-- `sofa-contribute` [authored] — source: https://agents.stackoverflow.com/.well-known/agent-skills/sofa-contribute/SKILL.md
-- `sofa-status` [authored] — source: https://agents.stackoverflow.com/.well-known/agent-skills/sofa-status/SKILL.md
+- `slideshow` [installed] — source: https://github.com/heygen-com/hyperframes
+- `sofa` [installed] — source: https://agents.stackoverflow.com/.well-known/agent-skills/sofa/SKILL.md
+- `sofa-contribute` [installed] — source: https://agents.stackoverflow.com/.well-known/agent-skills/sofa-contribute/SKILL.md
+- `sofa-status` [installed] — source: https://agents.stackoverflow.com/.well-known/agent-skills/sofa-status/SKILL.md
 - `specstory-guard` [authored] — source: https://github.com/aculich/agent-skills
 - `specstory-link-trail` [authored] — source: https://github.com/aculich/agent-skills
 - `specstory-organize` [authored] — source: https://github.com/aculich/agent-skills
 - `specstory-project-stats` [authored] — source: https://github.com/aculich/agent-skills
 - `specstory-session-summary` [authored] — source: https://github.com/aculich/agent-skills
 - `specstory-yak` [authored] — source: https://github.com/aculich/agent-skills
-- `talking-head-recut` [authored] — source: https://github.com/heygen-com/hyperframes
+- `talking-head-recut` [installed] — source: https://github.com/heygen-com/hyperframes
 - `tools-quickstart-bootstrap` [authored] — source: https://github.com/aculich/agent-skills
-- `turnstile-spin` [authored] — source: https://github.com/cloudflare/skills
-- `web-perf` [authored] — source: https://github.com/cloudflare/skills
-- `website-to-video` [authored] — source: https://github.com/heygen-com/hyperframes
-- `workers-best-practices` [authored] — source: https://github.com/cloudflare/skills
-- `wrangler` [authored] — source: https://github.com/cloudflare/skills
+- `turnstile-spin` [installed] — source: https://github.com/cloudflare/skills
+- `web-perf` [installed] — source: https://github.com/cloudflare/skills
+- `website-to-video` [installed] — source: https://github.com/heygen-com/hyperframes
+- `workers-best-practices` [installed] — source: https://github.com/cloudflare/skills
+- `wrangler` [installed] — source: https://github.com/cloudflare/skills
+- `writing-great-skills` [installed] — source: https://github.com/mattpocock/skills
+- `writing-skills` [installed] — source: https://github.com/obra/superpowers
 
-## Project-local (1085)
+## Project-local (1074)
+
+### `/Users/me/ops/dotfiles-cursor-compendium`
+
+- `a11y-debugging` (project-cursor) — `mirrors/by-project/path-cidr-evictionstory-mn-9f23bc71c2b4/.cursor/skills/a11y-debugging/SKILL.md`
+- `accidental-data-loss-prevention` (project-skills-dir) — `mirrors/skills-snapshots/skills/accidental-data-loss-prevention/SKILL.md`
+- `adhd-daily-planner` (project-skills-dir) — `mirrors/skills-snapshots/skills/adhd-daily-planner/SKILL.md`
+- `adhdev` (project-cursor) — `mirrors/by-project/path-storytelling-capsules-12c38336582f/.cursor/skills/adhdev/SKILL.md`
+- `adhdev-engineering-partnership` (project-skills-dir) — `mirrors/skills-snapshots/skills/adhdev-engineering-partnership/SKILL.md`
+- `agent-native-architecture` (project-cursor) — `mirrors/by-project/path-writing-income-e2d299d8b155/.cursor/skills/agent-native-architecture/SKILL.md`
+- `agents-sdk` (project-skills-dir) — `mirrors/skills-snapshots/skills/agents-sdk/SKILL.md`
+- `ai-usage-alignment-review` (project-cursor) — `mirrors/by-project/path-cidr-org-4bd8f5480d99/.cursor/skills/ai-usage-alignment-review/SKILL.md`
+- `ashby-astera-jobs-refresh` (project-cursor) — `mirrors/by-project/path-astera-envisioning-6b75c84f4b54/.cursor/skills/ashby-astera-jobs-refresh/SKILL.md`
+- `astera-public-activity-scan` (project-cursor) — `mirrors/by-project/path-astera-envisioning-6b75c84f4b54/.cursor/skills/astera-public-activity-scan/SKILL.md`
+- `awesome-lists` (project-cursor) — `mirrors/by-project/github-aculich-awesome-awesome/.cursor/skills/awesome-lists/SKILL.md`
+- `awesome-trends` (project-cursor) — `mirrors/by-project/github-aculich-awesome-awesome/.cursor/skills/awesome-trends/SKILL.md`
+- `baloney-a11y-audit` (project-cursor) — `mirrors/by-project/github-aculich-thebaloney-web/.cursor/skills/baloney-a11y-audit/SKILL.md`
+- `baloney-deploy-merge` (project-cursor) — `mirrors/by-project/github-aculich-thebaloney-web/.cursor/skills/baloney-deploy-merge/SKILL.md`
+- `baloney-design-review` (project-cursor) — `mirrors/by-project/github-aculich-thebaloney-web/.cursor/skills/baloney-design-review/SKILL.md`
+- `baloney-engineering-review` (project-cursor) — `mirrors/by-project/github-aculich-thebaloney-web/.cursor/skills/baloney-engineering-review/SKILL.md`
+- `bayo-site-corpus-update` (project-cursor) — `mirrors/by-project/github-aculich-writing-quality/.cursor/skills/bayo-site-corpus-update/SKILL.md`
+- `bigquery-data-transfer-service` (project-skills-dir) — `mirrors/skills-snapshots/skills/bigquery-data-transfer-service/SKILL.md`
+- `blogup` (project-cursor) — `mirrors/by-project/path-futureofme-0120b0f80b55/.cursor/skills/blogup/SKILL.md`
+- `bootstrap-new-project` (project-skills-dir) — `mirrors/skills-snapshots/skills/bootstrap-new-project/SKILL.md`
+- `bootstrap-tool-config-repo` (project-skills-dir) — `mirrors/skills-snapshots/skills/bootstrap-tool-config-repo/SKILL.md`
+- `bootstrap-umbrella-client-project` (project-skills-dir) — `mirrors/skills-snapshots/skills/bootstrap-umbrella-client-project/SKILL.md`
+- `building-data-apps` (project-skills-dir) — `mirrors/skills-snapshots/skills/building-data-apps/SKILL.md`
+- `buildprompt-from-requests` (project-cursor) — `mirrors/by-project/github-aculich-umpire-empire/.cursor/skills/buildprompt-from-requests/SKILL.md`
+- `capsules-source-to-story` (project-cursor) — `mirrors/by-project/path-storytelling-capsules-12c38336582f/.cursor/skills/capsules-source-to-story/SKILL.md`
+- `change-world-critique-quick` (project-skills-dir) — `mirrors/skills-snapshots/skills/change-world-critique-quick/SKILL.md`
+- `change-world-critique-quick-full` (project-skills-dir) — `mirrors/skills-snapshots/skills/change-world-critique-quick-full/SKILL.md`
+- `chrome-devtools` (project-cursor) — `mirrors/by-project/path-cidr-evictionstory-mn-9f23bc71c2b4/.cursor/skills/chrome-devtools/SKILL.md`
+- `chrome-devtools-cli` (project-cursor) — `mirrors/by-project/path-cidr-evictionstory-mn-9f23bc71c2b4/.cursor/skills/chrome-devtools-cli/SKILL.md`
+- `chrome-extension-fork-comparison` (project-cursor) — `mirrors/by-project/github-aculich-chrome-extensions/.cursor/skills/chrome-extension-fork-comparison/SKILL.md`
+- `chrome-extension-fork-lifecycle` (project-cursor) — `mirrors/by-project/github-aculich-chrome-extensions/.cursor/skills/chrome-extension-fork-lifecycle/SKILL.md`
+- `chrome-extension-landscape-search` (project-cursor) — `mirrors/by-project/github-aculich-chrome-extensions/.cursor/skills/chrome-extension-landscape-search/SKILL.md`
+- `chrome-extension-source-reconstruction` (project-cursor) — `mirrors/by-project/github-aculich-chrome-extensions/.cursor/skills/chrome-extension-source-reconstruction/SKILL.md`
+- `cidr-bootstrap-project` (project-skills-dir) — `mirrors/skills-snapshots/skills/cidr-bootstrap-project/SKILL.md`
+- `cidr-letterhead` (project-skills-dir) — `mirrors/skills-snapshots/skills/cidr-letterhead/SKILL.md`
+- `cloudflare` (project-skills-dir) — `mirrors/skills-snapshots/skills/cloudflare/SKILL.md`
+- `cloudflare-email-service` (project-skills-dir) — `mirrors/skills-snapshots/skills/cloudflare-email-service/SKILL.md`
+- `cloudflare-one` (project-skills-dir) — `mirrors/skills-snapshots/skills/cloudflare-one/SKILL.md`
+- `cloudflare-one-migrations` (project-skills-dir) — `mirrors/skills-snapshots/skills/cloudflare-one-migrations/SKILL.md`
+- `community-plugins-pipeline` (project-cursor) — `mirrors/by-project/path-obsidian-tools-37ed7006ebb9/.cursor/skills/community-plugins-pipeline/SKILL.md`
+- `compendium-discover-projects` (project-skills-dir) — `mirrors/skills-snapshots/skills/compendium-discover-projects/SKILL.md`
+- `context-engineering` (project-skills-dir) — `mirrors/skills-snapshots/skills/context-engineering/SKILL.md`
+- `cursor-extension-fork-lifecycle` (project-cursor) — `mirrors/by-project/path-cursor-extensions-249d2b54da21/.cursor/skills/cursor-extension-fork-lifecycle/SKILL.md`
+- `cursor-extension-landscape-search` (project-cursor) — `mirrors/by-project/path-cursor-extensions-249d2b54da21/.cursor/skills/cursor-extension-landscape-search/SKILL.md`
+- `data-autocleaning` (project-skills-dir) — `mirrors/skills-snapshots/skills/data-autocleaning/SKILL.md`
+- `data-guide-comment-iteration` (project-cursor) — `mirrors/by-project/path-cpc-anti-displacement-9493f643cb9d/.cursor/skills/data-guide-comment-iteration/SKILL.md`
+- `dataform-bigquery` (project-skills-dir) — `mirrors/skills-snapshots/skills/dataform-bigquery/SKILL.md`
+- `dbt-bigquery` (project-skills-dir) — `mirrors/skills-snapshots/skills/dbt-bigquery/SKILL.md`
+- `debug-optimize-lcp` (project-cursor) — `mirrors/by-project/path-cidr-evictionstory-mn-9f23bc71c2b4/.cursor/skills/debug-optimize-lcp/SKILL.md`
+- `deeplistening-method-synthesis` (project-skills-dir) — `mirrors/skills-snapshots/skills/deeplistening-method-synthesis/SKILL.md`
+- `deeplistening-session-analysis` (project-skills-dir) — `mirrors/skills-snapshots/skills/deeplistening-session-analysis/SKILL.md`
+- `derive-expert-voice-from-transcript` (project-cursor) — `mirrors/by-project/github-aculich-fspp-ai-retsina/.cursor/skills/derive-expert-voice-from-transcript/SKILL.md`
+- `develop-extension-chrome` (project-cursor) — `mirrors/by-project/github-aculich-chrome-extensions/.cursor/skills/develop-extension-chrome/SKILL.md`
+- `develop-extension-cursor` (project-cursor) — `mirrors/by-project/path-cursor-extensions-249d2b54da21/.cursor/skills/develop-extension-cursor/SKILL.md`
+- `develop-userscript-chrome` (project-cursor) — `mirrors/by-project/github-aculich-chrome-extensions/.cursor/skills/develop-userscript-chrome/SKILL.md`
+- `developing-with-bigquery` (project-skills-dir) — `mirrors/skills-snapshots/skills/developing-with-bigquery/SKILL.md`
+- `discovering-gcp-data-assets` (project-skills-dir) — `mirrors/skills-snapshots/skills/discovering-gcp-data-assets/SKILL.md`
+- `draft-edits-analyze` (project-cursor) — `mirrors/by-project/github-aculich-peeq-carb/.cursor/skills/draft-edits-analyze/SKILL.md`
+- `draft-edits-analyze` (project-cursor) — `mirrors/by-project/orphan-kit-512fba8992/.cursor/skills/draft-edits-analyze/SKILL.md`
+- `draft-edits-analyze` (project-cursor) — `mirrors/by-project/path-sow-draft-kit-0c4ece52ab3a/.cursor/skills/draft-edits-analyze/SKILL.md`
+- `draft-edits-apply` (project-cursor) — `mirrors/by-project/github-aculich-peeq-carb/.cursor/skills/draft-edits-apply/SKILL.md`
+- `draft-edits-apply` (project-cursor) — `mirrors/by-project/orphan-kit-512fba8992/.cursor/skills/draft-edits-apply/SKILL.md`
+- `draft-edits-apply` (project-cursor) — `mirrors/by-project/path-sow-draft-kit-0c4ece52ab3a/.cursor/skills/draft-edits-apply/SKILL.md`
+- `draft-edits-cycle` (project-cursor) — `mirrors/by-project/github-aculich-peeq-carb/.cursor/skills/draft-edits-cycle/SKILL.md`
+- `draft-edits-evaluate` (project-cursor) — `mirrors/by-project/github-aculich-peeq-carb/.cursor/skills/draft-edits-evaluate/SKILL.md`
+- `draft-edits-evaluate` (project-cursor) — `mirrors/by-project/orphan-kit-512fba8992/.cursor/skills/draft-edits-evaluate/SKILL.md`
+- `draft-edits-evaluate` (project-cursor) — `mirrors/by-project/path-sow-draft-kit-0c4ece52ab3a/.cursor/skills/draft-edits-evaluate/SKILL.md`
+- `durable-objects` (project-skills-dir) — `mirrors/skills-snapshots/skills/durable-objects/SKILL.md`
+- `embedded-captions` (project-skills-dir) — `mirrors/skills-snapshots/skills/embedded-captions/SKILL.md`
+- `faceless-explainer` (project-skills-dir) — `mirrors/skills-snapshots/skills/faceless-explainer/SKILL.md`
+- `faircare-alignment-review` (project-cursor) — `mirrors/by-project/path-cidr-org-4bd8f5480d99/.cursor/skills/faircare-alignment-review/SKILL.md`
+- `find-writing-papers-and-code` (project-cursor) — `mirrors/by-project/github-aculich-writing-quality/.cursor/skills/find-writing-papers-and-code/SKILL.md`
+- `fireflies-meeting-export` (project-skills-dir) — `mirrors/skills-snapshots/skills/fireflies-meeting-export/SKILL.md`
+- `frontend-design` (project-cursor) — `mirrors/by-project/path-writing-income-e2d299d8b155/.cursor/skills/frontend-design/SKILL.md`
+- `gcloud-auth-verification` (project-skills-dir) — `mirrors/skills-snapshots/skills/gcloud-auth-verification/SKILL.md`
+- `gcp-composer-troubleshooting` (project-skills-dir) — `mirrors/skills-snapshots/skills/gcp-composer-troubleshooting/SKILL.md`
+- `gcp-data-pipelines` (project-skills-dir) — `mirrors/skills-snapshots/skills/gcp-data-pipelines/SKILL.md`
+- `gcp-dataflow` (project-skills-dir) — `mirrors/skills-snapshots/skills/gcp-dataflow/SKILL.md`
+- `gcp-pipeline-orchestration` (project-skills-dir) — `mirrors/skills-snapshots/skills/gcp-pipeline-orchestration/SKILL.md`
+- `gcp-pipeline-resource-provisioning` (project-skills-dir) — `mirrors/skills-snapshots/skills/gcp-pipeline-resource-provisioning/SKILL.md`
+- `gcp-spark` (project-skills-dir) — `mirrors/skills-snapshots/skills/gcp-spark/SKILL.md`
+- `general-video` (project-skills-dir) — `mirrors/skills-snapshots/skills/general-video/SKILL.md`
+- `glossary-curation` (project-cursor) — `mirrors/by-project/github-cidrlab-cidr-glossary/.cursor/skills/glossary-curation/SKILL.md`
+- `glossary-promotion` (project-cursor) — `mirrors/by-project/path-cidr-glossary-project-04b18d178551/.cursor/skills/glossary-promotion/SKILL.md`
+- `glossary-writing` (project-cursor) — `mirrors/by-project/github-cidrlab-cidr-glossary/.cursor/skills/glossary-writing/SKILL.md`
+- `google-workspace-new-org` (project-skills-dir) — `mirrors/skills-snapshots/skills/google-workspace-new-org/SKILL.md`
+- `hyperframes` (project-skills-dir) — `mirrors/skills-snapshots/skills/hyperframes/SKILL.md`
+- `hyperframes-animation` (project-skills-dir) — `mirrors/skills-snapshots/skills/hyperframes-animation/SKILL.md`
+- `hyperframes-cli` (project-skills-dir) — `mirrors/skills-snapshots/skills/hyperframes-cli/SKILL.md`
+- `hyperframes-core` (project-skills-dir) — `mirrors/skills-snapshots/skills/hyperframes-core/SKILL.md`
+- `hyperframes-creative` (project-skills-dir) — `mirrors/skills-snapshots/skills/hyperframes-creative/SKILL.md`
+- `hyperframes-keyframes` (project-skills-dir) — `mirrors/skills-snapshots/skills/hyperframes-keyframes/SKILL.md`
+- `hyperframes-media` (project-skills-dir) — `mirrors/skills-snapshots/skills/hyperframes-media/SKILL.md`
+- `hyperframes-registry` (project-skills-dir) — `mirrors/skills-snapshots/skills/hyperframes-registry/SKILL.md`
+- `impl-snapshot` (project-cursor) — `mirrors/by-project/github-aculich-chatstory/.cursor/skills/impl-snapshot/SKILL.md`
+- `kiln-add-model` (project-cursor) — `mirrors/by-project/orphan-kiln__kiln-ai-4b129dc7c9/.cursor/skills/kiln-add-model/SKILL.md`
+- `kiln-check-deprecation` (project-cursor) — `mirrors/by-project/orphan-kiln__kiln-ai-4b129dc7c9/.cursor/skills/kiln-check-deprecation/SKILL.md`
+- `limitless-takeout-search` (project-skills-dir) — `mirrors/skills-snapshots/skills/limitless-takeout-search/SKILL.md`
+- `limitless-takeout-update` (project-skills-dir) — `mirrors/skills-snapshots/skills/limitless-takeout-update/SKILL.md`
+- `luminary-tech-radar` (project-skills-dir) — `mirrors/skills-snapshots/skills/luminary-tech-radar/SKILL.md`
+- `managing-python-dependencies` (project-skills-dir) — `mirrors/skills-snapshots/skills/managing-python-dependencies/SKILL.md`
+- `mcp-writing-hub` (project-cursor) — `mirrors/by-project/path-writing-income-e2d299d8b155/.cursor/skills/mcp-writing-hub/SKILL.md`
+- `media-use` (project-skills-dir) — `mirrors/skills-snapshots/skills/media-use/SKILL.md`
+- `meeting-sync` (project-skills-dir) — `mirrors/skills-snapshots/skills/meeting-sync/SKILL.md`
+- `meeting-sync-and-synthesis` (project-skills-dir) — `mirrors/skills-snapshots/skills/meeting-sync-and-synthesis/SKILL.md`
+- `meeting-sync.stale-2026-07-06` (project-skills-dir) — `mirrors/skills-snapshots/skills/meeting-sync.stale-2026-07-06/SKILL.md`
+- `memory-leak-debugging` (project-cursor) — `mirrors/by-project/path-cidr-evictionstory-mn-9f23bc71c2b4/.cursor/skills/memory-leak-debugging/SKILL.md`
+- `ml-best-practices` (project-skills-dir) — `mirrors/skills-snapshots/skills/ml-best-practices/SKILL.md`
+- `motion-graphics` (project-skills-dir) — `mirrors/skills-snapshots/skills/motion-graphics/SKILL.md`
+- `music-to-video` (project-skills-dir) — `mirrors/skills-snapshots/skills/music-to-video/SKILL.md`
+- `notebook-guidance` (project-skills-dir) — `mirrors/skills-snapshots/skills/notebook-guidance/SKILL.md`
+- `nuxt-best-practices` (project-cursor) — `mirrors/by-project/path-writing-income-e2d299d8b155/.cursor/skills/nuxt-best-practices/SKILL.md`
+- `nuxt-ui` (project-cursor) — `mirrors/by-project/path-writing-income-e2d299d8b155/.cursor/skills/nuxt-ui/SKILL.md`
+- `op-credentials` (project-skills-dir) — `mirrors/skills-snapshots/skills/op-credentials/SKILL.md`
+- `op-credentials` (project-cursor) — `mirrors/by-project/github-tomascupr-sandstorm/.cursor/skills/op-credentials/SKILL.md`
+- `personnel-render` (project-cursor) — `mirrors/by-project/orphan-kit-512fba8992/.cursor/skills/personnel-render/SKILL.md`
+- `pr-to-video` (project-skills-dir) — `mirrors/skills-snapshots/skills/pr-to-video/SKILL.md`
+- `pretext-upstream-rhythm` (project-cursor) — `mirrors/by-project/github-aculich-pretext/.cursor/skills/pretext-upstream-rhythm/SKILL.md`
+- `process-umbrella-incoming` (project-skills-dir) — `mirrors/skills-snapshots/skills/process-umbrella-incoming/SKILL.md`
+- `product-launch-video` (project-skills-dir) — `mirrors/skills-snapshots/skills/product-launch-video/SKILL.md`
+- `project-management-guru-adhd` (project-skills-dir) — `mirrors/skills-snapshots/skills/project-management-guru-adhd/SKILL.md`
+- `proposal-critique` (project-cursor) — `mirrors/by-project/github-cidrlab-cidr-sjsu-chrp-policyai/.cursor/skills/proposal-critique/SKILL.md`
+- `quickstart-get-running` (project-cursor) — `mirrors/by-project/github-tomascupr-sandstorm/.cursor/skills/quickstart-get-running/SKILL.md`
+- `reflexive-method-authoring-loop` (project-skills-dir) — `mirrors/skills-snapshots/skills/reflexive-method-authoring-loop/SKILL.md`
+- `remotion-to-hyperframes` (project-skills-dir) — `mirrors/skills-snapshots/skills/remotion-to-hyperframes/SKILL.md`
+- `research-plan-voice-brief` (project-cursor) — `mirrors/by-project/github-cidrlab-cidr-sjsu-chrp-policyai/.cursor/skills/research-plan-voice-brief/SKILL.md`
+- `research-project-bootstrap` (project-cursor) — `mirrors/by-project/path-alphaxiv-marimo-d8e7b800db3f/.cursor/skills/research-project-bootstrap/SKILL.md`
+- `rll-doc-assembly` (project-cursor) — `mirrors/by-project/github-willowempowermentllc-rainbowlearninglibrary/.cursor/skills/rll-doc-assembly/SKILL.md`
+- `rowboat-fork-workflow` (project-cursor) — `mirrors/by-project/path-rowboat-quickstart-5e8cdadc157b/.cursor/skills/rowboat-fork-workflow/SKILL.md`
+- `rowboat-safe-startup` (project-skills-dir) — `mirrors/skills-snapshots/skills/rowboat-safe-startup/SKILL.md`
+- `rowboat-upstream-digest` (project-skills-dir) — `mirrors/skills-snapshots/skills/rowboat-upstream-digest/SKILL.md`
+- `sandbox-sdk` (project-skills-dir) — `mirrors/skills-snapshots/skills/sandbox-sdk/SKILL.md`
+- `sandstorm-quickstart` (project-cursor) — `mirrors/by-project/github-tomascupr-sandstorm/.cursor/skills/sandstorm-quickstart/SKILL.md`
+- `scrolly-chrome-debug` (project-cursor) — `mirrors/by-project/path-cidr-evictionstory-mn-9f23bc71c2b4/.cursor/skills/scrolly-chrome-debug/SKILL.md`
+- `skeptical-moderator-rubric-quick` (project-cursor) — `mirrors/by-project/github-aculich-writing-quality/.cursor/skills/skeptical-moderator-rubric-quick/SKILL.md`
+- `skeptical-quackery-neutralizer-quick` (project-cursor) — `mirrors/by-project/github-aculich-writing-quality/.cursor/skills/skeptical-quackery-neutralizer-quick/SKILL.md`
+- `skill-repair` (project-skills-dir) — `mirrors/skills-snapshots/skills/skill-repair/SKILL.md`
+- `slideshow` (project-skills-dir) — `mirrors/skills-snapshots/skills/slideshow/SKILL.md`
+- `smc-policy-capsule` (project-cursor) — `mirrors/by-project/github-aculich-cidr-policymap-ca-smc/.cursor/skills/smc-policy-capsule/SKILL.md`
+- `sow-draft-kit` (project-cursor) — `mirrors/by-project/orphan-kit-512fba8992/.cursor/skills/sow-draft-kit/SKILL.md`
+- `sow-draft-kit` (project-cursor) — `mirrors/by-project/github-cidrlab-cidr-marin-courts/.cursor/skills/sow-draft-kit/SKILL.md`
+- `sow-draft-kit` (project-cursor) — `mirrors/by-project/path-sow-draft-kit-0c4ece52ab3a/.cursor/skills/sow-draft-kit/SKILL.md`
+- `sow-version-analysis` (project-cursor) — `mirrors/by-project/orphan-kit-512fba8992/.cursor/skills/sow-version-analysis/SKILL.md`
+- `sow-version-analysis` (project-cursor) — `mirrors/by-project/github-cidrlab-cidr-marin-courts/.cursor/skills/sow-version-analysis/SKILL.md`
+- `sow-version-analysis` (project-cursor) — `mirrors/by-project/path-sow-draft-kit-0c4ece52ab3a/.cursor/skills/sow-version-analysis/SKILL.md`
+- `specstory-guard` (project-skills-dir) — `mirrors/skills-snapshots/skills/specstory-guard/SKILL.md`
+- `specstory-link-trail` (project-skills-dir) — `mirrors/skills-snapshots/skills/specstory-link-trail/SKILL.md`
+- `specstory-organize` (project-skills-dir) — `mirrors/skills-snapshots/skills/specstory-organize/SKILL.md`
+- `specstory-project-stats` (project-skills-dir) — `mirrors/skills-snapshots/skills/specstory-project-stats/SKILL.md`
+- `specstory-session-summary` (project-skills-dir) — `mirrors/skills-snapshots/skills/specstory-session-summary/SKILL.md`
+- `specstory-yak` (project-skills-dir) — `mirrors/skills-snapshots/skills/specstory-yak/SKILL.md`
+- `storyvale-essay-pipeline` (project-cursor) — `mirrors/by-project/path-storytelling-capsules-12c38336582f/.cursor/skills/storyvale-essay-pipeline/SKILL.md`
+- `storyvale-first-draft` (project-cursor) — `mirrors/by-project/path-storytelling-capsules-12c38336582f/.cursor/skills/storyvale-first-draft/SKILL.md`
+- `storyvale-iterate-draft` (project-cursor) — `mirrors/by-project/path-storytelling-capsules-12c38336582f/.cursor/skills/storyvale-iterate-draft/SKILL.md`
+- `talking-head-recut` (project-skills-dir) — `mirrors/skills-snapshots/skills/talking-head-recut/SKILL.md`
+- `tool-landscape-intel` (project-skills-dir) — `mirrors/skills-snapshots/skills/tool-landscape-intel/SKILL.md`
+- `tools-quickstart-bootstrap` (project-skills-dir) — `mirrors/skills-snapshots/skills/tools-quickstart-bootstrap/SKILL.md`
+- `troubleshooting` (project-cursor) — `mirrors/by-project/path-cidr-evictionstory-mn-9f23bc71c2b4/.cursor/skills/troubleshooting/SKILL.md`
+- `turnstile-spin` (project-skills-dir) — `mirrors/skills-snapshots/skills/turnstile-spin/SKILL.md`
+- `vue-best-practices` (project-cursor) — `mirrors/by-project/path-writing-income-e2d299d8b155/.cursor/skills/vue-best-practices/SKILL.md`
+- `web-perf` (project-skills-dir) — `mirrors/skills-snapshots/skills/web-perf/SKILL.md`
+- `website-to-video` (project-skills-dir) — `mirrors/skills-snapshots/skills/website-to-video/SKILL.md`
+- `wip-distill` (project-skills-dir) — `mirrors/skills-snapshots/skills/wip-distill/SKILL.md`
+- `wip-harvest` (project-skills-dir) — `mirrors/skills-snapshots/skills/wip-harvest/SKILL.md`
+- `wip-publish` (project-skills-dir) — `mirrors/skills-snapshots/skills/wip-publish/SKILL.md`
+- `workers-best-practices` (project-skills-dir) — `mirrors/skills-snapshots/skills/workers-best-practices/SKILL.md`
+- `wrangler` (project-skills-dir) — `mirrors/skills-snapshots/skills/wrangler/SKILL.md`
+- `writing-quality-pipeline` (project-cursor) — `mirrors/by-project/github-cidrlab-cidr-sjsu-chrp-policyai/.cursor/skills/writing-quality-pipeline/SKILL.md`
+- `youtube-channel-catchup` (project-cursor) — `mirrors/by-project/path-continuous-ai-06cb23000be0/.cursor/skills/youtube-channel-catchup/SKILL.md`
+
+### `/Users/me/ops/skill-eval/claude-adhd-skills`
+
+- `daily-journal` (project-skills-dir) — `skills/daily-journal/SKILL.md`
+- `nudge` (project-skills-dir) — `skills/nudge/SKILL.md`
+- `obsidian-vault` (project-skills-dir) — `skills/obsidian-vault/SKILL.md`
+- `test-driven-development` (project-skills-dir) — `skills/test-driven-development/SKILL.md`
 
 ### `/Users/me/projects/agent-wake`
 
@@ -479,11 +665,26 @@ Generated: 2026-07-19T06:33:12Z
 - `superpowers-writing-plans` (project-skills-dir) — `.skills/skills/superpowers-writing-plans/SKILL.md`
 - `youtube-channel-catchup` (project-cursor) — `.cursor/skills/youtube-channel-catchup/SKILL.md`
 
+### `/Users/me/projects/from-atoz-dunegon`
+
+- `bootstrap-collaborator` (project-cursor) — `.cursor/skills/bootstrap-collaborator/SKILL.md`
+- `collab-sync` (project-cursor) — `.cursor/skills/collab-sync/SKILL.md`
+- `create-justfile` (project-cursor) — `.cursor/skills/create-justfile/SKILL.md`
+- `discover-channel` (project-cursor) — `.cursor/skills/discover-channel/SKILL.md`
+- `message-in-a-bottle` (project-cursor) — `.cursor/skills/message-in-a-bottle/SKILL.md`
+
 ### `/Users/me/projects/from-atoz-private`
 
 - `bootstrap-collaborator` (project-cursor) — `.cursor/skills/bootstrap-collaborator/SKILL.md`
 - `collab-sync` (project-cursor) — `.cursor/skills/collab-sync/SKILL.md`
+- `create-justfile` (project-cursor) — `.cursor/skills/create-justfile/SKILL.md`
 - `discover-channel` (project-cursor) — `.cursor/skills/discover-channel/SKILL.md`
+- `message-in-a-bottle` (project-cursor) — `.cursor/skills/message-in-a-bottle/SKILL.md`
+
+### `/Users/me/projects/from-ztoa-private`
+
+- `bootstrap-collaborator` (project-cursor) — `.cursor/skills/bootstrap-collaborator/SKILL.md`
+- `create-justfile` (project-cursor) — `.cursor/skills/create-justfile/SKILL.md`
 - `message-in-a-bottle` (project-cursor) — `.cursor/skills/message-in-a-bottle/SKILL.md`
 
 ### `/Users/me/projects/fspp-ai-retsina`
@@ -545,9 +746,17 @@ Generated: 2026-07-19T06:33:12Z
 - `perks` (project-skills-dir) — `skills/perks/SKILL.md`
 - `perks` (project-skills-dir) — `.agents/skills/perks/SKILL.md`
 
+### `/Users/me/projects/peeq-collabs`
+
+- `bootstrap-peeq-coordination` (project-cursor) — `.cursor/skills/bootstrap-peeq-coordination/SKILL.md`
+
 ### `/Users/me/projects/peeq-lavender-data/lavender-ai-skills`
 
 - `lavender-google-review-response` (project-skills-dir) — `skills/lavender-google-review-response/SKILL.md`
+
+### `/Users/me/projects/peeq-siy-contacts`
+
+- `siy-contacts-ingest` (project-cursor) — `.cursor/skills/siy-contacts-ingest/SKILL.md`
 
 ### `/Users/me/projects/peeq-voicegen-audiocast`
 
@@ -740,251 +949,7 @@ Generated: 2026-07-19T06:33:12Z
 - `find-writing-papers-and-code` (project-cursor) — `.cursor/skills/find-writing-papers-and-code/SKILL.md`
 - `skeptical-moderator-rubric-quick` (project-cursor) — `.cursor/skills/skeptical-moderator-rubric-quick/SKILL.md`
 - `skeptical-quackery-neutralizer-quick` (project-cursor) — `.cursor/skills/skeptical-quackery-neutralizer-quick/SKILL.md`
-
-### `/Users/me/src/dotfiles-cursor-compendium`
-
-- `a11y-debugging` (project-cursor) — `mirrors/by-project/path-cidr-evictionstory-mn-9f23bc71c2b4/.cursor/skills/a11y-debugging/SKILL.md`
-- `accidental-data-loss-prevention` (project-skills-dir) — `mirrors/skills-snapshots/skills/accidental-data-loss-prevention/SKILL.md`
-- `adhd-daily-planner` (project-skills-dir) — `mirrors/skills-snapshots/skills/adhd-daily-planner/SKILL.md`
-- `adhdev` (project-cursor) — `mirrors/by-project/path-storytelling-capsules-12c38336582f/.cursor/skills/adhdev/SKILL.md`
-- `adhdev-engineering-partnership` (project-skills-dir) — `mirrors/skills-snapshots/skills/adhdev-engineering-partnership/SKILL.md`
-- `agent-native-architecture` (project-cursor) — `mirrors/by-project/path-writing-income-e2d299d8b155/.cursor/skills/agent-native-architecture/SKILL.md`
-- `agents-sdk` (project-skills-dir) — `mirrors/skills-snapshots/skills/agents-sdk/SKILL.md`
-- `ai-usage-alignment-review` (project-cursor) — `mirrors/by-project/path-cidr-org-4bd8f5480d99/.cursor/skills/ai-usage-alignment-review/SKILL.md`
-- `ashby-astera-jobs-refresh` (project-cursor) — `mirrors/by-project/path-astera-envisioning-6b75c84f4b54/.cursor/skills/ashby-astera-jobs-refresh/SKILL.md`
-- `astera-public-activity-scan` (project-cursor) — `mirrors/by-project/path-astera-envisioning-6b75c84f4b54/.cursor/skills/astera-public-activity-scan/SKILL.md`
-- `awesome-lists` (project-cursor) — `mirrors/by-project/github-aculich-awesome-awesome/.cursor/skills/awesome-lists/SKILL.md`
-- `awesome-trends` (project-cursor) — `mirrors/by-project/github-aculich-awesome-awesome/.cursor/skills/awesome-trends/SKILL.md`
-- `baloney-a11y-audit` (project-cursor) — `mirrors/by-project/github-aculich-thebaloney-web/.cursor/skills/baloney-a11y-audit/SKILL.md`
-- `baloney-deploy-merge` (project-cursor) — `mirrors/by-project/github-aculich-thebaloney-web/.cursor/skills/baloney-deploy-merge/SKILL.md`
-- `baloney-design-review` (project-cursor) — `mirrors/by-project/github-aculich-thebaloney-web/.cursor/skills/baloney-design-review/SKILL.md`
-- `baloney-engineering-review` (project-cursor) — `mirrors/by-project/github-aculich-thebaloney-web/.cursor/skills/baloney-engineering-review/SKILL.md`
-- `bayo-site-corpus-update` (project-cursor) — `mirrors/by-project/github-aculich-writing-quality/.cursor/skills/bayo-site-corpus-update/SKILL.md`
-- `bigquery-data-transfer-service` (project-skills-dir) — `mirrors/skills-snapshots/skills/bigquery-data-transfer-service/SKILL.md`
-- `blogup` (project-cursor) — `mirrors/by-project/path-futureofme-0120b0f80b55/.cursor/skills/blogup/SKILL.md`
-- `bootstrap-new-project` (project-skills-dir) — `mirrors/skills-snapshots/skills/bootstrap-new-project/SKILL.md`
-- `bootstrap-tool-config-repo` (project-skills-dir) — `mirrors/skills-snapshots/skills/bootstrap-tool-config-repo/SKILL.md`
-- `bootstrap-umbrella-client-project` (project-skills-dir) — `mirrors/skills-snapshots/skills/bootstrap-umbrella-client-project/SKILL.md`
-- `building-data-apps` (project-skills-dir) — `mirrors/skills-snapshots/skills/building-data-apps/SKILL.md`
-- `buildprompt-from-requests` (project-cursor) — `mirrors/by-project/github-aculich-umpire-empire/.cursor/skills/buildprompt-from-requests/SKILL.md`
-- `capsules-source-to-story` (project-cursor) — `mirrors/by-project/path-storytelling-capsules-12c38336582f/.cursor/skills/capsules-source-to-story/SKILL.md`
-- `change-world-critique-quick` (project-skills-dir) — `mirrors/skills-snapshots/skills/change-world-critique-quick/SKILL.md`
-- `change-world-critique-quick-full` (project-skills-dir) — `mirrors/skills-snapshots/skills/change-world-critique-quick-full/SKILL.md`
-- `chrome-devtools` (project-cursor) — `mirrors/by-project/path-cidr-evictionstory-mn-9f23bc71c2b4/.cursor/skills/chrome-devtools/SKILL.md`
-- `chrome-devtools-cli` (project-cursor) — `mirrors/by-project/path-cidr-evictionstory-mn-9f23bc71c2b4/.cursor/skills/chrome-devtools-cli/SKILL.md`
-- `chrome-extension-fork-comparison` (project-cursor) — `mirrors/by-project/github-aculich-chrome-extensions/.cursor/skills/chrome-extension-fork-comparison/SKILL.md`
-- `chrome-extension-fork-lifecycle` (project-cursor) — `mirrors/by-project/github-aculich-chrome-extensions/.cursor/skills/chrome-extension-fork-lifecycle/SKILL.md`
-- `chrome-extension-landscape-search` (project-cursor) — `mirrors/by-project/github-aculich-chrome-extensions/.cursor/skills/chrome-extension-landscape-search/SKILL.md`
-- `chrome-extension-source-reconstruction` (project-cursor) — `mirrors/by-project/github-aculich-chrome-extensions/.cursor/skills/chrome-extension-source-reconstruction/SKILL.md`
-- `cidr-bootstrap-project` (project-skills-dir) — `mirrors/skills-snapshots/skills/cidr-bootstrap-project/SKILL.md`
-- `cidr-letterhead` (project-skills-dir) — `mirrors/skills-snapshots/skills/cidr-letterhead/SKILL.md`
-- `cloudflare` (project-skills-dir) — `mirrors/skills-snapshots/skills/cloudflare/SKILL.md`
-- `cloudflare-email-service` (project-skills-dir) — `mirrors/skills-snapshots/skills/cloudflare-email-service/SKILL.md`
-- `cloudflare-one` (project-skills-dir) — `mirrors/skills-snapshots/skills/cloudflare-one/SKILL.md`
-- `cloudflare-one-migrations` (project-skills-dir) — `mirrors/skills-snapshots/skills/cloudflare-one-migrations/SKILL.md`
-- `community-plugins-pipeline` (project-cursor) — `mirrors/by-project/path-obsidian-tools-37ed7006ebb9/.cursor/skills/community-plugins-pipeline/SKILL.md`
-- `compendium-discover-projects` (project-skills-dir) — `mirrors/skills-snapshots/skills/compendium-discover-projects/SKILL.md`
-- `context-engineering` (project-skills-dir) — `mirrors/skills-snapshots/skills/context-engineering/SKILL.md`
-- `cursor-extension-fork-lifecycle` (project-cursor) — `mirrors/by-project/path-cursor-extensions-249d2b54da21/.cursor/skills/cursor-extension-fork-lifecycle/SKILL.md`
-- `cursor-extension-landscape-search` (project-cursor) — `mirrors/by-project/path-cursor-extensions-249d2b54da21/.cursor/skills/cursor-extension-landscape-search/SKILL.md`
-- `data-autocleaning` (project-skills-dir) — `mirrors/skills-snapshots/skills/data-autocleaning/SKILL.md`
-- `data-guide-comment-iteration` (project-cursor) — `mirrors/by-project/path-cpc-anti-displacement-9493f643cb9d/.cursor/skills/data-guide-comment-iteration/SKILL.md`
-- `dataform-bigquery` (project-skills-dir) — `mirrors/skills-snapshots/skills/dataform-bigquery/SKILL.md`
-- `dbt-bigquery` (project-skills-dir) — `mirrors/skills-snapshots/skills/dbt-bigquery/SKILL.md`
-- `debug-optimize-lcp` (project-cursor) — `mirrors/by-project/path-cidr-evictionstory-mn-9f23bc71c2b4/.cursor/skills/debug-optimize-lcp/SKILL.md`
-- `deeplistening-method-synthesis` (project-skills-dir) — `mirrors/skills-snapshots/skills/deeplistening-method-synthesis/SKILL.md`
-- `deeplistening-session-analysis` (project-skills-dir) — `mirrors/skills-snapshots/skills/deeplistening-session-analysis/SKILL.md`
-- `derive-expert-voice-from-transcript` (project-cursor) — `mirrors/by-project/github-aculich-fspp-ai-retsina/.cursor/skills/derive-expert-voice-from-transcript/SKILL.md`
-- `develop-extension-chrome` (project-cursor) — `mirrors/by-project/github-aculich-chrome-extensions/.cursor/skills/develop-extension-chrome/SKILL.md`
-- `develop-extension-cursor` (project-cursor) — `mirrors/by-project/path-cursor-extensions-249d2b54da21/.cursor/skills/develop-extension-cursor/SKILL.md`
-- `develop-userscript-chrome` (project-cursor) — `mirrors/by-project/github-aculich-chrome-extensions/.cursor/skills/develop-userscript-chrome/SKILL.md`
-- `developing-with-bigquery` (project-skills-dir) — `mirrors/skills-snapshots/skills/developing-with-bigquery/SKILL.md`
-- `discovering-gcp-data-assets` (project-skills-dir) — `mirrors/skills-snapshots/skills/discovering-gcp-data-assets/SKILL.md`
-- `draft-edits-analyze` (project-cursor) — `mirrors/by-project/github-aculich-peeq-carb/.cursor/skills/draft-edits-analyze/SKILL.md`
-- `draft-edits-analyze` (project-cursor) — `mirrors/by-project/orphan-kit-512fba8992/.cursor/skills/draft-edits-analyze/SKILL.md`
-- `draft-edits-analyze` (project-cursor) — `mirrors/by-project/path-sow-draft-kit-0c4ece52ab3a/.cursor/skills/draft-edits-analyze/SKILL.md`
-- `draft-edits-apply` (project-cursor) — `mirrors/by-project/github-aculich-peeq-carb/.cursor/skills/draft-edits-apply/SKILL.md`
-- `draft-edits-apply` (project-cursor) — `mirrors/by-project/orphan-kit-512fba8992/.cursor/skills/draft-edits-apply/SKILL.md`
-- `draft-edits-apply` (project-cursor) — `mirrors/by-project/path-sow-draft-kit-0c4ece52ab3a/.cursor/skills/draft-edits-apply/SKILL.md`
-- `draft-edits-cycle` (project-cursor) — `mirrors/by-project/github-aculich-peeq-carb/.cursor/skills/draft-edits-cycle/SKILL.md`
-- `draft-edits-evaluate` (project-cursor) — `mirrors/by-project/github-aculich-peeq-carb/.cursor/skills/draft-edits-evaluate/SKILL.md`
-- `draft-edits-evaluate` (project-cursor) — `mirrors/by-project/orphan-kit-512fba8992/.cursor/skills/draft-edits-evaluate/SKILL.md`
-- `draft-edits-evaluate` (project-cursor) — `mirrors/by-project/path-sow-draft-kit-0c4ece52ab3a/.cursor/skills/draft-edits-evaluate/SKILL.md`
-- `durable-objects` (project-skills-dir) — `mirrors/skills-snapshots/skills/durable-objects/SKILL.md`
-- `embedded-captions` (project-skills-dir) — `mirrors/skills-snapshots/skills/embedded-captions/SKILL.md`
-- `faceless-explainer` (project-skills-dir) — `mirrors/skills-snapshots/skills/faceless-explainer/SKILL.md`
-- `faircare-alignment-review` (project-cursor) — `mirrors/by-project/path-cidr-org-4bd8f5480d99/.cursor/skills/faircare-alignment-review/SKILL.md`
-- `find-writing-papers-and-code` (project-cursor) — `mirrors/by-project/github-aculich-writing-quality/.cursor/skills/find-writing-papers-and-code/SKILL.md`
-- `fireflies-meeting-export` (project-skills-dir) — `mirrors/skills-snapshots/skills/fireflies-meeting-export/SKILL.md`
-- `frontend-design` (project-cursor) — `mirrors/by-project/path-writing-income-e2d299d8b155/.cursor/skills/frontend-design/SKILL.md`
-- `gcloud-auth-verification` (project-skills-dir) — `mirrors/skills-snapshots/skills/gcloud-auth-verification/SKILL.md`
-- `gcp-composer-troubleshooting` (project-skills-dir) — `mirrors/skills-snapshots/skills/gcp-composer-troubleshooting/SKILL.md`
-- `gcp-data-pipelines` (project-skills-dir) — `mirrors/skills-snapshots/skills/gcp-data-pipelines/SKILL.md`
-- `gcp-dataflow` (project-skills-dir) — `mirrors/skills-snapshots/skills/gcp-dataflow/SKILL.md`
-- `gcp-pipeline-orchestration` (project-skills-dir) — `mirrors/skills-snapshots/skills/gcp-pipeline-orchestration/SKILL.md`
-- `gcp-pipeline-resource-provisioning` (project-skills-dir) — `mirrors/skills-snapshots/skills/gcp-pipeline-resource-provisioning/SKILL.md`
-- `gcp-spark` (project-skills-dir) — `mirrors/skills-snapshots/skills/gcp-spark/SKILL.md`
-- `general-video` (project-skills-dir) — `mirrors/skills-snapshots/skills/general-video/SKILL.md`
-- `glossary-curation` (project-cursor) — `mirrors/by-project/github-cidrlab-cidr-glossary/.cursor/skills/glossary-curation/SKILL.md`
-- `glossary-promotion` (project-cursor) — `mirrors/by-project/path-cidr-glossary-project-04b18d178551/.cursor/skills/glossary-promotion/SKILL.md`
-- `glossary-writing` (project-cursor) — `mirrors/by-project/github-cidrlab-cidr-glossary/.cursor/skills/glossary-writing/SKILL.md`
-- `google-workspace-new-org` (project-skills-dir) — `mirrors/skills-snapshots/skills/google-workspace-new-org/SKILL.md`
-- `hyperframes` (project-skills-dir) — `mirrors/skills-snapshots/skills/hyperframes/SKILL.md`
-- `hyperframes-animation` (project-skills-dir) — `mirrors/skills-snapshots/skills/hyperframes-animation/SKILL.md`
-- `hyperframes-cli` (project-skills-dir) — `mirrors/skills-snapshots/skills/hyperframes-cli/SKILL.md`
-- `hyperframes-core` (project-skills-dir) — `mirrors/skills-snapshots/skills/hyperframes-core/SKILL.md`
-- `hyperframes-creative` (project-skills-dir) — `mirrors/skills-snapshots/skills/hyperframes-creative/SKILL.md`
-- `hyperframes-keyframes` (project-skills-dir) — `mirrors/skills-snapshots/skills/hyperframes-keyframes/SKILL.md`
-- `hyperframes-media` (project-skills-dir) — `mirrors/skills-snapshots/skills/hyperframes-media/SKILL.md`
-- `hyperframes-registry` (project-skills-dir) — `mirrors/skills-snapshots/skills/hyperframes-registry/SKILL.md`
-- `impl-snapshot` (project-cursor) — `mirrors/by-project/github-aculich-chatstory/.cursor/skills/impl-snapshot/SKILL.md`
-- `kiln-add-model` (project-cursor) — `mirrors/by-project/orphan-kiln__kiln-ai-4b129dc7c9/.cursor/skills/kiln-add-model/SKILL.md`
-- `kiln-check-deprecation` (project-cursor) — `mirrors/by-project/orphan-kiln__kiln-ai-4b129dc7c9/.cursor/skills/kiln-check-deprecation/SKILL.md`
-- `limitless-takeout-search` (project-skills-dir) — `mirrors/skills-snapshots/skills/limitless-takeout-search/SKILL.md`
-- `limitless-takeout-update` (project-skills-dir) — `mirrors/skills-snapshots/skills/limitless-takeout-update/SKILL.md`
-- `luminary-tech-radar` (project-skills-dir) — `mirrors/skills-snapshots/skills/luminary-tech-radar/SKILL.md`
-- `managing-python-dependencies` (project-skills-dir) — `mirrors/skills-snapshots/skills/managing-python-dependencies/SKILL.md`
-- `mcp-writing-hub` (project-cursor) — `mirrors/by-project/path-writing-income-e2d299d8b155/.cursor/skills/mcp-writing-hub/SKILL.md`
-- `media-use` (project-skills-dir) — `mirrors/skills-snapshots/skills/media-use/SKILL.md`
-- `meeting-sync` (project-skills-dir) — `mirrors/skills-snapshots/skills/meeting-sync/SKILL.md`
-- `meeting-sync-and-synthesis` (project-skills-dir) — `mirrors/skills-snapshots/skills/meeting-sync-and-synthesis/SKILL.md`
-- `meeting-sync.stale-2026-07-06` (project-skills-dir) — `mirrors/skills-snapshots/skills/meeting-sync.stale-2026-07-06/SKILL.md`
-- `memory-leak-debugging` (project-cursor) — `mirrors/by-project/path-cidr-evictionstory-mn-9f23bc71c2b4/.cursor/skills/memory-leak-debugging/SKILL.md`
-- `ml-best-practices` (project-skills-dir) — `mirrors/skills-snapshots/skills/ml-best-practices/SKILL.md`
-- `motion-graphics` (project-skills-dir) — `mirrors/skills-snapshots/skills/motion-graphics/SKILL.md`
-- `music-to-video` (project-skills-dir) — `mirrors/skills-snapshots/skills/music-to-video/SKILL.md`
-- `notebook-guidance` (project-skills-dir) — `mirrors/skills-snapshots/skills/notebook-guidance/SKILL.md`
-- `nuxt-best-practices` (project-cursor) — `mirrors/by-project/path-writing-income-e2d299d8b155/.cursor/skills/nuxt-best-practices/SKILL.md`
-- `nuxt-ui` (project-cursor) — `mirrors/by-project/path-writing-income-e2d299d8b155/.cursor/skills/nuxt-ui/SKILL.md`
-- `op-credentials` (project-skills-dir) — `mirrors/skills-snapshots/skills/op-credentials/SKILL.md`
-- `op-credentials` (project-cursor) — `mirrors/by-project/github-tomascupr-sandstorm/.cursor/skills/op-credentials/SKILL.md`
-- `personnel-render` (project-cursor) — `mirrors/by-project/orphan-kit-512fba8992/.cursor/skills/personnel-render/SKILL.md`
-- `pr-to-video` (project-skills-dir) — `mirrors/skills-snapshots/skills/pr-to-video/SKILL.md`
-- `pretext-upstream-rhythm` (project-cursor) — `mirrors/by-project/github-aculich-pretext/.cursor/skills/pretext-upstream-rhythm/SKILL.md`
-- `process-umbrella-incoming` (project-skills-dir) — `mirrors/skills-snapshots/skills/process-umbrella-incoming/SKILL.md`
-- `product-launch-video` (project-skills-dir) — `mirrors/skills-snapshots/skills/product-launch-video/SKILL.md`
-- `project-management-guru-adhd` (project-skills-dir) — `mirrors/skills-snapshots/skills/project-management-guru-adhd/SKILL.md`
-- `proposal-critique` (project-cursor) — `mirrors/by-project/github-cidrlab-cidr-sjsu-chrp-policyai/.cursor/skills/proposal-critique/SKILL.md`
-- `quickstart-get-running` (project-cursor) — `mirrors/by-project/github-tomascupr-sandstorm/.cursor/skills/quickstart-get-running/SKILL.md`
-- `reflexive-method-authoring-loop` (project-skills-dir) — `mirrors/skills-snapshots/skills/reflexive-method-authoring-loop/SKILL.md`
-- `remotion-to-hyperframes` (project-skills-dir) — `mirrors/skills-snapshots/skills/remotion-to-hyperframes/SKILL.md`
-- `research-plan-voice-brief` (project-cursor) — `mirrors/by-project/github-cidrlab-cidr-sjsu-chrp-policyai/.cursor/skills/research-plan-voice-brief/SKILL.md`
-- `research-project-bootstrap` (project-cursor) — `mirrors/by-project/path-alphaxiv-marimo-d8e7b800db3f/.cursor/skills/research-project-bootstrap/SKILL.md`
-- `rll-doc-assembly` (project-cursor) — `mirrors/by-project/github-willowempowermentllc-rainbowlearninglibrary/.cursor/skills/rll-doc-assembly/SKILL.md`
-- `rowboat-fork-workflow` (project-cursor) — `mirrors/by-project/path-rowboat-quickstart-5e8cdadc157b/.cursor/skills/rowboat-fork-workflow/SKILL.md`
-- `rowboat-safe-startup` (project-skills-dir) — `mirrors/skills-snapshots/skills/rowboat-safe-startup/SKILL.md`
-- `rowboat-upstream-digest` (project-skills-dir) — `mirrors/skills-snapshots/skills/rowboat-upstream-digest/SKILL.md`
-- `sandbox-sdk` (project-skills-dir) — `mirrors/skills-snapshots/skills/sandbox-sdk/SKILL.md`
-- `sandstorm-quickstart` (project-cursor) — `mirrors/by-project/github-tomascupr-sandstorm/.cursor/skills/sandstorm-quickstart/SKILL.md`
-- `scrolly-chrome-debug` (project-cursor) — `mirrors/by-project/path-cidr-evictionstory-mn-9f23bc71c2b4/.cursor/skills/scrolly-chrome-debug/SKILL.md`
-- `skeptical-moderator-rubric-quick` (project-cursor) — `mirrors/by-project/github-aculich-writing-quality/.cursor/skills/skeptical-moderator-rubric-quick/SKILL.md`
-- `skeptical-quackery-neutralizer-quick` (project-cursor) — `mirrors/by-project/github-aculich-writing-quality/.cursor/skills/skeptical-quackery-neutralizer-quick/SKILL.md`
-- `skill-repair` (project-skills-dir) — `mirrors/skills-snapshots/skills/skill-repair/SKILL.md`
-- `slideshow` (project-skills-dir) — `mirrors/skills-snapshots/skills/slideshow/SKILL.md`
-- `smc-policy-capsule` (project-cursor) — `mirrors/by-project/github-aculich-cidr-policymap-ca-smc/.cursor/skills/smc-policy-capsule/SKILL.md`
-- `sow-draft-kit` (project-cursor) — `mirrors/by-project/orphan-kit-512fba8992/.cursor/skills/sow-draft-kit/SKILL.md`
-- `sow-draft-kit` (project-cursor) — `mirrors/by-project/github-cidrlab-cidr-marin-courts/.cursor/skills/sow-draft-kit/SKILL.md`
-- `sow-draft-kit` (project-cursor) — `mirrors/by-project/path-sow-draft-kit-0c4ece52ab3a/.cursor/skills/sow-draft-kit/SKILL.md`
-- `sow-version-analysis` (project-cursor) — `mirrors/by-project/orphan-kit-512fba8992/.cursor/skills/sow-version-analysis/SKILL.md`
-- `sow-version-analysis` (project-cursor) — `mirrors/by-project/github-cidrlab-cidr-marin-courts/.cursor/skills/sow-version-analysis/SKILL.md`
-- `sow-version-analysis` (project-cursor) — `mirrors/by-project/path-sow-draft-kit-0c4ece52ab3a/.cursor/skills/sow-version-analysis/SKILL.md`
-- `specstory-guard` (project-skills-dir) — `mirrors/skills-snapshots/skills/specstory-guard/SKILL.md`
-- `specstory-link-trail` (project-skills-dir) — `mirrors/skills-snapshots/skills/specstory-link-trail/SKILL.md`
-- `specstory-organize` (project-skills-dir) — `mirrors/skills-snapshots/skills/specstory-organize/SKILL.md`
-- `specstory-project-stats` (project-skills-dir) — `mirrors/skills-snapshots/skills/specstory-project-stats/SKILL.md`
-- `specstory-session-summary` (project-skills-dir) — `mirrors/skills-snapshots/skills/specstory-session-summary/SKILL.md`
-- `specstory-yak` (project-skills-dir) — `mirrors/skills-snapshots/skills/specstory-yak/SKILL.md`
-- `storyvale-essay-pipeline` (project-cursor) — `mirrors/by-project/path-storytelling-capsules-12c38336582f/.cursor/skills/storyvale-essay-pipeline/SKILL.md`
-- `storyvale-first-draft` (project-cursor) — `mirrors/by-project/path-storytelling-capsules-12c38336582f/.cursor/skills/storyvale-first-draft/SKILL.md`
-- `storyvale-iterate-draft` (project-cursor) — `mirrors/by-project/path-storytelling-capsules-12c38336582f/.cursor/skills/storyvale-iterate-draft/SKILL.md`
-- `talking-head-recut` (project-skills-dir) — `mirrors/skills-snapshots/skills/talking-head-recut/SKILL.md`
-- `tool-landscape-intel` (project-skills-dir) — `mirrors/skills-snapshots/skills/tool-landscape-intel/SKILL.md`
-- `tools-quickstart-bootstrap` (project-skills-dir) — `mirrors/skills-snapshots/skills/tools-quickstart-bootstrap/SKILL.md`
-- `troubleshooting` (project-cursor) — `mirrors/by-project/path-cidr-evictionstory-mn-9f23bc71c2b4/.cursor/skills/troubleshooting/SKILL.md`
-- `turnstile-spin` (project-skills-dir) — `mirrors/skills-snapshots/skills/turnstile-spin/SKILL.md`
-- `vue-best-practices` (project-cursor) — `mirrors/by-project/path-writing-income-e2d299d8b155/.cursor/skills/vue-best-practices/SKILL.md`
-- `web-perf` (project-skills-dir) — `mirrors/skills-snapshots/skills/web-perf/SKILL.md`
-- `website-to-video` (project-skills-dir) — `mirrors/skills-snapshots/skills/website-to-video/SKILL.md`
-- `wip-distill` (project-skills-dir) — `mirrors/skills-snapshots/skills/wip-distill/SKILL.md`
-- `wip-harvest` (project-skills-dir) — `mirrors/skills-snapshots/skills/wip-harvest/SKILL.md`
-- `wip-publish` (project-skills-dir) — `mirrors/skills-snapshots/skills/wip-publish/SKILL.md`
-- `workers-best-practices` (project-skills-dir) — `mirrors/skills-snapshots/skills/workers-best-practices/SKILL.md`
-- `wrangler` (project-skills-dir) — `mirrors/skills-snapshots/skills/wrangler/SKILL.md`
-- `writing-quality-pipeline` (project-cursor) — `mirrors/by-project/github-cidrlab-cidr-sjsu-chrp-policyai/.cursor/skills/writing-quality-pipeline/SKILL.md`
-- `youtube-channel-catchup` (project-cursor) — `mirrors/by-project/path-continuous-ai-06cb23000be0/.cursor/skills/youtube-channel-catchup/SKILL.md`
-
-### `/Users/me/src/dotfiles-cursor-compendium/mirrors/by-project/orphan-me-c033a7efb1/.cursor`
-
-- `accidental-data-loss-prevention` (project-cursor) — `skills/accidental-data-loss-prevention/SKILL.md`
-- `adhd-daily-planner` (project-cursor) — `skills/adhd-daily-planner/SKILL.md`
-- `adhdev-engineering-partnership` (project-cursor) — `skills/adhdev-engineering-partnership/SKILL.md`
-- `agents-sdk` (project-cursor) — `skills/agents-sdk/SKILL.md`
-- `bigquery-data-transfer-service` (project-cursor) — `skills/bigquery-data-transfer-service/SKILL.md`
-- `bootstrap-new-project` (project-cursor) — `skills/bootstrap-new-project/SKILL.md`
-- `bootstrap-tool-config-repo` (project-cursor) — `skills/bootstrap-tool-config-repo/SKILL.md`
-- `bootstrap-umbrella-client-project` (project-cursor) — `skills/bootstrap-umbrella-client-project/SKILL.md`
-- `building-data-apps` (project-cursor) — `skills/building-data-apps/SKILL.md`
-- `change-world-critique-quick` (project-cursor) — `skills/change-world-critique-quick/SKILL.md`
-- `change-world-critique-quick-full` (project-cursor) — `skills/change-world-critique-quick-full/SKILL.md`
-- `cidr-bootstrap-project` (project-cursor) — `skills/cidr-bootstrap-project/SKILL.md`
-- `cloudflare` (project-cursor) — `skills/cloudflare/SKILL.md`
-- `cloudflare-email-service` (project-cursor) — `skills/cloudflare-email-service/SKILL.md`
-- `cloudflare-one` (project-cursor) — `skills/cloudflare-one/SKILL.md`
-- `cloudflare-one-migrations` (project-cursor) — `skills/cloudflare-one-migrations/SKILL.md`
-- `compendium-discover-projects` (project-cursor) — `skills/compendium-discover-projects/SKILL.md`
-- `context-engineering` (project-cursor) — `skills/context-engineering/SKILL.md`
-- `data-autocleaning` (project-cursor) — `skills/data-autocleaning/SKILL.md`
-- `dataform-bigquery` (project-cursor) — `skills/dataform-bigquery/SKILL.md`
-- `dbt-bigquery` (project-cursor) — `skills/dbt-bigquery/SKILL.md`
-- `deeplistening-method-synthesis` (project-cursor) — `skills/deeplistening-method-synthesis/SKILL.md`
-- `deeplistening-session-analysis` (project-cursor) — `skills/deeplistening-session-analysis/SKILL.md`
-- `developing-with-bigquery` (project-cursor) — `skills/developing-with-bigquery/SKILL.md`
-- `discovering-gcp-data-assets` (project-cursor) — `skills/discovering-gcp-data-assets/SKILL.md`
-- `durable-objects` (project-cursor) — `skills/durable-objects/SKILL.md`
-- `fireflies-meeting-export` (project-cursor) — `skills/fireflies-meeting-export/SKILL.md`
-- `gcloud-auth-verification` (project-cursor) — `skills/gcloud-auth-verification/SKILL.md`
-- `gcp-composer-troubleshooting` (project-cursor) — `skills/gcp-composer-troubleshooting/SKILL.md`
-- `gcp-data-pipelines` (project-cursor) — `skills/gcp-data-pipelines/SKILL.md`
-- `gcp-dataflow` (project-cursor) — `skills/gcp-dataflow/SKILL.md`
-- `gcp-pipeline-orchestration` (project-cursor) — `skills/gcp-pipeline-orchestration/SKILL.md`
-- `gcp-pipeline-resource-provisioning` (project-cursor) — `skills/gcp-pipeline-resource-provisioning/SKILL.md`
-- `gcp-spark` (project-cursor) — `skills/gcp-spark/SKILL.md`
-- `google-workspace-new-org` (project-cursor) — `skills/google-workspace-new-org/SKILL.md`
-- `limitless-takeout-search` (project-cursor) — `skills/limitless-takeout-search/SKILL.md`
-- `limitless-takeout-update` (project-cursor) — `skills/limitless-takeout-update/SKILL.md`
-- `luminary-tech-radar` (project-cursor) — `skills/luminary-tech-radar/SKILL.md`
-- `managing-python-dependencies` (project-cursor) — `skills/managing-python-dependencies/SKILL.md`
-- `meeting-sync-and-synthesis` (project-cursor) — `skills/meeting-sync-and-synthesis/SKILL.md`
-- `meeting-sync.stale-2026-07-06` (project-cursor) — `skills/meeting-sync.stale-2026-07-06/SKILL.md`
-- `ml-best-practices` (project-cursor) — `skills/ml-best-practices/SKILL.md`
-- `notebook-guidance` (project-cursor) — `skills/notebook-guidance/SKILL.md`
-- `op-credentials` (project-cursor) — `skills/op-credentials/SKILL.md`
-- `process-umbrella-incoming` (project-cursor) — `skills/process-umbrella-incoming/SKILL.md`
-- `project-management-guru-adhd` (project-cursor) — `skills/project-management-guru-adhd/SKILL.md`
-- `reflexive-method-authoring-loop` (project-cursor) — `skills/reflexive-method-authoring-loop/SKILL.md`
-- `rowboat-safe-startup` (project-cursor) — `skills/rowboat-safe-startup/SKILL.md`
-- `rowboat-upstream-digest` (project-cursor) — `skills/rowboat-upstream-digest/SKILL.md`
-- `sandbox-sdk` (project-cursor) — `skills/sandbox-sdk/SKILL.md`
-- `skill-repair` (project-cursor) — `skills/skill-repair/SKILL.md`
-- `specstory-guard` (project-cursor) — `skills/specstory-guard/SKILL.md`
-- `specstory-link-trail` (project-cursor) — `skills/specstory-link-trail/SKILL.md`
-- `specstory-organize` (project-cursor) — `skills/specstory-organize/SKILL.md`
-- `specstory-project-stats` (project-cursor) — `skills/specstory-project-stats/SKILL.md`
-- `specstory-session-summary` (project-cursor) — `skills/specstory-session-summary/SKILL.md`
-- `specstory-yak` (project-cursor) — `skills/specstory-yak/SKILL.md`
-- `tool-landscape-intel` (project-cursor) — `skills/tool-landscape-intel/SKILL.md`
-- `tools-quickstart-bootstrap` (project-cursor) — `skills/tools-quickstart-bootstrap/SKILL.md`
-- `turnstile-spin` (project-cursor) — `skills/turnstile-spin/SKILL.md`
-- `web-perf` (project-cursor) — `skills/web-perf/SKILL.md`
-- `workers-best-practices` (project-cursor) — `skills/workers-best-practices/SKILL.md`
-- `wrangler` (project-cursor) — `skills/wrangler/SKILL.md`
-
-### `/Users/me/src/skill-eval/claude-adhd-skills`
-
-- `daily-journal` (project-skills-dir) — `skills/daily-journal/SKILL.md`
-- `nudge` (project-skills-dir) — `skills/nudge/SKILL.md`
-- `obsidian-vault` (project-skills-dir) — `skills/obsidian-vault/SKILL.md`
-- `test-driven-development` (project-skills-dir) — `skills/test-driven-development/SKILL.md`
+- `socialmedia-compounding` (project-cursor) — `.cursor/skills/socialmedia-compounding/SKILL.md`
 
 ### `/Users/me/tools/agentic-ux/tambo__aculich`
 
@@ -1070,6 +1035,55 @@ Generated: 2026-07-19T06:33:12Z
 - `cursor-extension-fork-lifecycle` (project-cursor) — `.cursor/skills/cursor-extension-fork-lifecycle/SKILL.md`
 - `cursor-extension-landscape-search` (project-cursor) — `.cursor/skills/cursor-extension-landscape-search/SKILL.md`
 - `develop-extension-cursor` (project-cursor) — `.cursor/skills/develop-extension-cursor/SKILL.md`
+
+### `/Users/me/tools/cursor-extensions/active/claude-marketplace/repo__cline__cline`
+
+- `cline-sdk` (project-skills-dir) — `.agents/skills/cline-sdk/SKILL.md`
+- `create-pull-request` (project-skills-dir) — `.agents/skills/create-pull-request/SKILL.md`
+- `opentui` (project-skills-dir) — `.agents/skills/opentui/SKILL.md`
+- `publish-cli` (project-skills-dir) — `.cline/skills/publish-cli/SKILL.md`
+- `publish-ui` (project-skills-dir) — `.cline/skills/publish-ui/SKILL.md`
+
+### `/Users/me/tools/cursor-extensions/active/claude-marketplace/repo__goodfoot-io__compare-branch-extension`
+
+- `card` (project-skills-dir) — `codex/runtime/skills/card/SKILL.md`
+- `card` (project-skills-dir) — `claude/runtime/skills/card/SKILL.md`
+- `card-developer` (project-skills-dir) — `codex/runtime/skills/card-developer/SKILL.md`
+- `card-developer` (project-skills-dir) — `claude/runtime/skills/card-developer/SKILL.md`
+- `card-experience-evaluator` (project-skills-dir) — `codex/runtime/skills/card-experience-evaluator/SKILL.md`
+- `card-experience-evaluator` (project-skills-dir) — `claude/runtime/skills/card-experience-evaluator/SKILL.md`
+- `card-failure-mode` (project-skills-dir) — `codex/runtime/skills/card-failure-mode/SKILL.md`
+- `card-failure-mode` (project-skills-dir) — `claude/runtime/skills/card-failure-mode/SKILL.md`
+- `card-plan-failure-mode` (project-skills-dir) — `codex/runtime/skills/card-plan-failure-mode/SKILL.md`
+- `card-plan-failure-mode` (project-skills-dir) — `claude/runtime/skills/card-plan-failure-mode/SKILL.md`
+- `card-planner` (project-skills-dir) — `codex/runtime/skills/card-planner/SKILL.md`
+- `card-planner` (project-skills-dir) — `claude/runtime/skills/card-planner/SKILL.md`
+- `card-pre-existing-condition` (project-skills-dir) — `codex/runtime/skills/card-pre-existing-condition/SKILL.md`
+- `card-pre-existing-condition` (project-skills-dir) — `claude/runtime/skills/card-pre-existing-condition/SKILL.md`
+- `cards` (project-skills-dir) — `codex/cards/skills/cards/SKILL.md`
+- `cards` (project-skills-dir) — `claude/cards/skills/cards/SKILL.md`
+- `chat-routing` (project-skills-dir) — `codex/runtime/skills/chat-routing/SKILL.md`
+- `chat-routing` (project-skills-dir) — `claude/runtime/skills/chat-routing/SKILL.md`
+- `debug` (project-skills-dir) — `skills/debug/SKILL.md`
+- `interview` (project-skills-dir) — `codex/runtime/skills/interview/SKILL.md`
+- `interview` (project-skills-dir) — `claude/runtime/skills/interview/SKILL.md`
+- `markdown` (project-skills-dir) — `skills/markdown/SKILL.md`
+- `notes` (project-skills-dir) — `skills/notes/SKILL.md`
+- `refactoring` (project-skills-dir) — `codex/runtime/skills/refactoring/SKILL.md`
+- `refactoring` (project-skills-dir) — `claude/runtime/skills/refactoring/SKILL.md`
+- `sdk` (project-skills-dir) — `codex/cards-sdk/skills/sdk/SKILL.md`
+- `sdk` (project-skills-dir) — `claude/cards-sdk/skills/sdk/SKILL.md`
+- `slice` (project-skills-dir) — `codex/runtime/skills/slice/SKILL.md`
+- `slice` (project-skills-dir) — `claude/runtime/skills/slice/SKILL.md`
+- `spike` (project-skills-dir) — `codex/runtime/skills/spike/SKILL.md`
+- `spike` (project-skills-dir) — `claude/runtime/skills/spike/SKILL.md`
+- `tdd-bootstrap` (project-skills-dir) — `codex/runtime/skills/tdd-bootstrap/SKILL.md`
+- `tdd-bootstrap` (project-skills-dir) — `claude/runtime/skills/tdd-bootstrap/SKILL.md`
+
+### `/Users/me/tools/cursor-extensions/active/claude-marketplace/repo__vishalguptax__claude-code-manager`
+
+- `frontend-design` (project-skills-dir) — `.agents/skills/frontend-design/SKILL.md`
+- `vercel-react-best-practices` (project-skills-dir) — `.agents/skills/vercel-react-best-practices/SKILL.md`
 
 ### `/Users/me/tools/datasette-ecosystem`
 

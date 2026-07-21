@@ -110,7 +110,19 @@ In the `gog-as cidrlab calendar create` command above, `--summary` must be `"Zoo
 
 ## CLI / cursor-agent
 
-Prefer in-Cursor MCP. Headless:
+**Preferred headless path:** `zoom-for` (attach-aware) in this repo:
+
+```bash
+source ~/tools/google-workspace-tools/scripts/google-workspace-cli-aliases.zsh
+zoom-for "Meeting title substr"          # next match
+zoom-for --project rrid --today          # all RRID|RR\ID matches today (bCal + RR\ID Dev)
+just zoom-for --project rrid --today --dry-run
+```
+
+Creates CiDR Zoom + cCal `"Zoom for "` shadow. Optional `--patch-source` rewrites that
+source instance’s location; `--draft-mail` drafts (does not send) organizer mail.
+
+Prefer in-Cursor MCP for interactive skill runs. Alternate headless:
 
 ```bash
 cursor-agent -p --approve-mcps --force "Run berkeley-cidr-meeting for '<title or event id>'"
