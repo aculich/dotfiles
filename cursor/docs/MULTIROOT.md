@@ -16,7 +16,7 @@ For **ignore and AI scope** (`.gitignore`, `.cursorignore`, watcher excludes), s
 - **Agents and multi-root** — Cursor’s changelog describes **multi-root workspaces** in the **Agents** window so a session can target **more than one folder** (e.g. frontend + backend + shared lib) without re-adding folders every turn. [Cursor: Multitask, Worktrees, and Multi-root Workspaces (2024-04-26)](https://cursor.com/changelog/04-24-26)
 - **Indexing surface** — Each added root **increases** what the editor can index. Cross-repo and multi-service setups benefit from **aggressive** `.cursorignore` and clear **rules** (e.g. which tree owns which domain). [Developer Toolkit: multi-repo workflows (third-party)](https://developertoolkit.ai/en/cursor-ide/advanced-techniques/multi-repo-workflows/)
 - **Reported friction (validate on your build)** — Community threads describe **chat** appearing to use only the **first** opened folder after “Add Folder to Workspace,” and **repeated re-indexing** when adding roots. Treat these as **signals to test**, not stable API guarantees: [forum: multi-root chat context](https://forum.cursor.com/t/how-to-use-cursor-in-multi-root-mode/109645), [forum: indexing loops](https://forum.cursor.com/t/when-i-use-add-folder-to-workspace-codebase-indexing-is-triggered-repeatedly/77053)
-- **Cloud / remote agents** — Multi-root helps **one window** see several trees; **Cursor Cloud** and other agent hosts still depend on **what is in the attached workspace, branch, and project rules**. Prefer explicit **docs and rules** for boundaries; see Cursor docs and changelog as the source of truth for current behavior.
+- **Cloud / remote agents** — Multi-root helps **one window** see several trees; **Cursor Cloud** and other agent hosts still depend on **what is in the attached workspace, branch, and project rules**. Prefer explicit **docs and rules** for boundaries; see Cursor docs and changelog as the source of truth for current behavior. Field notes (costs, dirty-tree gotchas, when to stay local): [cursor-cloud-agents-vs-local.md](cursor-cloud-agents-vs-local.md).
 
 ## 3. VS Code ergonomics (stable reference)
 
@@ -78,7 +78,7 @@ These are **examples**, not requirements.
 
 - **Same repo** — `git pull`; **DVC** (if used) `dvc pull` for the data for your **current commit** [DVC](https://dvc.org/doc/understanding-dvc)
 - **Slightly different** trees — `direnv`, documented **env** vars, and committed **`README` / `CONTRIBUTING`** reduce “works on my machine” drift
-- **Cloud dev / agents** — Check **which roots** the cloud environment **checks out**, **branch** rules, and **secret** injection; **multi-root** on a laptop may not **map 1:1** to a remote container with one path—**document** the “happy path” for your team
+- **Cloud dev / agents** — Check **which roots** the cloud environment **checks out**, **branch** rules, and **secret** injection; **multi-root** on a laptop may not **map 1:1** to a remote container with one path—**document** the “happy path” for your team. Deeper Cloud vs local notes: [cursor-cloud-agents-vs-local.md](cursor-cloud-agents-vs-local.md).
 - **Cursor** — Re-read [ignore rules](https://cursor.com/docs/reference/ignore-file) and **indexing** settings when switching machines; global Cursor ignore vs **committed** repo rules affect **teammate parity**
 
 ## 8. Sources
@@ -99,4 +99,4 @@ Every URL referenced above (for re-checking as tools evolve):
 - [DVC: Understanding DVC](https://dvc.org/doc/understanding-dvc)
 - [DVC tracking guide (Mintlify)](https://mintlify.com/treeverse/dvc/guide/tracking-data)
 
-**Related in this repo:** [IGNORING.md](IGNORING.md) · [MULTIROOT-cursor-lifecycle.md](MULTIROOT-cursor-lifecycle.md) (Cursor chat history, renames, plans, archival tools) · [PROSE-VCS.md](PROSE-VCS.md) (markdown/plans in git vs prose-aware review) · [worktree-vcs-landscape.md](worktree-vcs-landscape.md) · [COMPENDIUM.md](COMPENDIUM.md) (private sibling backup repo) · [CURRENT_STATE.md](../CURRENT_STATE.md)
+**Related in this repo:** [IGNORING.md](IGNORING.md) · [MULTIROOT-cursor-lifecycle.md](MULTIROOT-cursor-lifecycle.md) (Cursor chat history, renames, plans, archival tools) · [cursor-cloud-agents-vs-local.md](cursor-cloud-agents-vs-local.md) · [PROSE-VCS.md](PROSE-VCS.md) (markdown/plans in git vs prose-aware review) · [worktree-vcs-landscape.md](worktree-vcs-landscape.md) · [COMPENDIUM.md](COMPENDIUM.md) (private sibling backup repo) · [CURRENT_STATE.md](../CURRENT_STATE.md)

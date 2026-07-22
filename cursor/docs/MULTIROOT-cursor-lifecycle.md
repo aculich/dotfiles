@@ -157,4 +157,4 @@ Tools and adjacent products:
 
 **Research capture (parallel-cli):** raw search JSON for follow-up questions is saved at [cursor-workspace-lifecycle-parallel-search.json](cursor-workspace-lifecycle-parallel-search.json) in this directory.
 
-**Related in this repo:** [MULTIROOT.md](MULTIROOT.md) · [IGNORING.md](IGNORING.md) · [COMPENDIUM.md](COMPENDIUM.md) · [CURRENT_STATE.md](../CURRENT_STATE.md)
+**Related in this repo:** [MULTIROOT.md](MULTIROOT.md) · [IGNORING.md](IGNORING.md) · [cursor-cloud-agents-vs-local.md](cursor-cloud-agents-vs-local.md) (Cloud Agents vs local; why one chat cannot take over another window) · [COMPENDIUM.md](COMPENDIUM.md) · [CURRENT_STATE.md](../CURRENT_STATE.md)

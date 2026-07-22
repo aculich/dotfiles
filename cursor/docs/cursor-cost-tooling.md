@@ -1,6 +1,6 @@
 # Cursor cost tooling: estimate, measure, reconcile
 
-Companion to [cursor-plans-agents-guide.md](cursor-plans-agents-guide.md) (plan execution) and [cursor-pricing-snapshot.md](cursor-pricing-snapshot.md) (rate card).
+Companion to [cursor-plans-agents-guide.md](cursor-plans-agents-guide.md) (plan execution) and [cursor-pricing-snapshot.md](cursor-pricing-snapshot.md) (rate card). For **Cloud Agents** API pricing + spend limits vs local chats, see [cursor-cloud-agents-vs-local.md](cursor-cloud-agents-vs-local.md).
 
 Three phases:
 

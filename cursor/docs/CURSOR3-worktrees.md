@@ -4,7 +4,7 @@ This guide prioritizes **new Cursor 3 material published in March-April 2026** a
 
 It then translates those findings into a practical workflow you can run day-to-day.
 
-**Related in this repo:** [blog/worktrees-second-ledger.md](blog/worktrees-second-ledger.md) · [blog/worktrees-isolation-spectrum.md](blog/worktrees-isolation-spectrum.md) · [worktree-vcs-landscape.md](worktree-vcs-landscape.md) (June 2026 research: frontier providers, OSS ADEs, prose VCS) · [PROSE-VCS.md](PROSE-VCS.md)
+**Related in this repo:** [blog/worktrees-second-ledger.md](blog/worktrees-second-ledger.md) · [blog/worktrees-isolation-spectrum.md](blog/worktrees-isolation-spectrum.md) · [worktree-vcs-landscape.md](worktree-vcs-landscape.md) (June 2026 research: frontier providers, OSS ADEs, prose VCS) · [PROSE-VCS.md](PROSE-VCS.md) · [cursor-cloud-agents-vs-local.md](cursor-cloud-agents-vs-local.md) (Cloud vs local costs, limits, chat handoff — when *not* to use Cloud)
 
 ---
 
@@ -85,7 +85,7 @@ Practical conclusion: **treat worktree isolation as "verify, do not assume"** du
 - Use **single local agent** for quick edits, tiny bugfixes, short loops.
 - Use **`/worktree`** for medium tasks that should stay isolated before apply.
 - Use **`/best-of-n`** only for high-value ambiguous tasks (architecture/algorithm/refactor style differences).
-- Use **cloud agents** for long-running work where you want to close laptop and review artifacts later.
+- Use **cloud agents** for long-running work where you want to close laptop and review artifacts later. Skip Cloud when the task needs dirty local state, local-only tooling, or a tight approval loop — see [cursor-cloud-agents-vs-local.md](cursor-cloud-agents-vs-local.md).
 
 ### B. Partition work to avoid merge pain
 
@@ -163,7 +163,7 @@ Borrowing from older but still-relevant Cursor guidance:
 1. **Plan** in one chat for each independent task.
 2. For each approved plan, run **one worktree-backed agent**.
 3. For only the hardest task, run **best-of-n**.
-4. Use cloud handoff for anything expected to run more than ~20-30 minutes.
+4. Use cloud handoff for anything expected to run more than ~20-30 minutes **and** already has a usable cloud env (otherwise prefer local — [cursor-cloud-agents-vs-local.md](cursor-cloud-agents-vs-local.md)).
 5. Apply changes one worktree at a time, validating after each apply.
 6. Keep commits small and per-task to reduce merge/revert pain.
 
@@ -197,3 +197,4 @@ Track these before standardizing team workflow:
 - [Claude Code worktrees](https://code.claude.com/docs/en/worktrees)
 - [Emdash ADE](https://github.com/generalaction/emdash)
 - [worktree-vcs-landscape.md](worktree-vcs-landscape.md) (this repo)
+- [cursor-cloud-agents-vs-local.md](cursor-cloud-agents-vs-local.md) (this repo — Cloud vs local field notes)
