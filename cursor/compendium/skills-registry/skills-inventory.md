@@ -1,13 +1,13 @@
 # Skills inventory (generated)
 
-Generated: 2026-07-21T20:14:53Z
+Generated: 2026-07-22T01:19:34Z
 
 ## Summary
 
-- **unique skills**: 148 (308 install rows)
+- **unique skills**: 149 (309 install rows)
 - **authored**: 59 installs / 31 unique
 - **embedded**: 84 installs / 63 unique
-- **installed**: 129 installs / 74 unique
+- **installed**: 130 installs / 75 unique
 - **vendor**: 36
 
 ### Provenance (by source type)
@@ -17,14 +17,14 @@ Generated: 2026-07-21T20:14:53Z
 - **vendor**: 36
 - **local-estate**: 22 installs / 20 unique
 - **local-repo**: 6
+- **unknown**: 3
 - **community**: 3
-- **unknown**: 2
 - **frontmatter**: 1
-- **unresolved** (2): github-trending, product-hunt-search — run `just provenance` (or `scripts/enrich-provenance.py`) to attempt web lookup
+- **unresolved** (3): bootstrap-project-umbrella, github-trending, product-hunt-search — run `just provenance` (or `scripts/enrich-provenance.py`) to attempt web lookup
 
 ## Global
 
-### cursor-user (105)
+### cursor-user (106)
 
 - `accidental-data-loss-prevention` [authored] — source: https://github.com/aculich/agent-skills
 - `adhd-daily-planner` [authored] — source: https://github.com/aculich/agent-skills
@@ -34,6 +34,7 @@ Generated: 2026-07-21T20:14:53Z
 - `bigquery-data-transfer-service` [vendor] — source: vendor
 - `bootstrap-collaborator` [installed] — source: local-estate
 - `bootstrap-new-project` [authored] — source: https://github.com/aculich/agent-skills
+- `bootstrap-project-umbrella` [installed] ⚠? — source: unknown
 - `bootstrap-tool-config-repo` [authored] — source: https://github.com/aculich/agent-skills
 - `bootstrap-umbrella-client-project` [authored] — source: https://github.com/aculich/agent-skills
 - `building-data-apps` [vendor] — source: vendor

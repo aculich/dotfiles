@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-21T20:14:53Z",
+  "generated": "2026-07-22T01:19:34Z",
   "compendium_root": "/Users/me/dotfiles/cursor/compendium",
   "monorepo_root": "/Users/me/projects/agent-skills",
   "global": {
@@ -169,6 +169,24 @@
           "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
           "via": "authored-registry"
+        }
+      },
+      {
+        "id": "bootstrap-project-umbrella",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "cursor-user",
+        "path": "/Users/me/.cursor/skills/bootstrap-project-umbrella",
+        "resolved_path": "/Users/me/.cursor/skills/bootstrap-project-umbrella",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "bootstrap-project-umbrella",
+        "source": {
+          "type": "unknown",
+          "url": null,
+          "confidence": "none",
+          "via": "unresolved"
         }
       },
       {
@@ -16671,18 +16689,18 @@
     }
   ],
   "summary": {
-    "install_rows": 308,
-    "unique_skills": 148,
+    "install_rows": 309,
+    "unique_skills": 149,
     "by_classification": {
       "authored": 59,
-      "installed": 129,
+      "installed": 130,
       "embedded": 84,
       "vendor": 36
     },
     "by_classification_unique": {
       "authored": 31,
       "embedded": 63,
-      "installed": 74,
+      "installed": 75,
       "vendor": 36
     },
     "by_source_type": {
@@ -16691,8 +16709,8 @@
       "local-repo": 6,
       "vendor": 36,
       "local-estate": 22,
+      "unknown": 3,
       "community": 3,
-      "unknown": 2,
       "frontmatter": 1
     },
     "by_source_type_unique": {
@@ -16702,11 +16720,12 @@
       "local-estate": 20,
       "local-repo": 6,
       "skill-lock": 49,
-      "unknown": 2,
+      "unknown": 3,
       "vendor": 36
     },
     "broken_symlinks": [],
     "unknown_source": [
+      "bootstrap-project-umbrella",
       "github-trending",
       "product-hunt-search"
     ]
