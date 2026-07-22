@@ -64,24 +64,22 @@ direnv allow
 
 ### GitHub Trending
 
-Requires `gh` and (for full setup) the gh-trending extension. See **[GITHUB_TRENDING_SETUP.md](GITHUB_TRENDING_SETUP.md)** to install on a new machine.
+See **[GITHUB_TRENDING_SETUP.md](GITHUB_TRENDING_SETUP.md)**. Official page scrape via `ghtrend` (huchen API is dead; `gkze/gh-trending` is broken).
 
 ```bash
-# Install extension (one-time)
-gh extension install gkze/gh-trending
-
-# List trending repos (alias tries API, then gh trending)
+# List trending (daily|weekly|monthly)
 ghtrend
 ghtrend weekly
 ghtrend daily python
 
-# Direct extension (table or JSON)
-gh trending
-gh trending --web
-gh trending -o json
+# JSON for scripts / agents
+~/tools/github-gh-cli/scripts/gh-trending-page.sh weekly --format json | jq 'length'
 
-# Clone first N trending repos
+# Clone first N
 ghtrend-clone 3 weekly
+
+# Separate: topic/star velocity (NOT the Trending page)
+ghta 20
 ```
 
 ### FZF, jq, markdown

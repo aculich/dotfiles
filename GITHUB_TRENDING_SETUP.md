@@ -1,90 +1,79 @@
 # GitHub Trending Setup
 
-This document describes how to get **GitHub trending repos** working in this dotfiles setup: the `ghtrend` / `ghtrend-clone` aliases and the `gh trending` extension. Use it to recreate the setup on a new machine.
+How to get **official GitHub Trending** (`daily` / `weekly` / `monthly`) working in this dotfiles setup.
 
-## What’s in place
+## What’s in place (2026-07 refresh)
 
-- **`ghtrend`** (in `zsh/aliases.zsh`) – Lists trending repos. Tries the public API (ghapi.huchen.dev) first; if that fails, falls back to `gh trending` when the extension is installed.
-- **`ghtrend-clone N`** – Clones the first N trending repos (same API; no extension fallback for clone).
-- **`gh trending`** – Provided by the **gh-trending** extension. Shows trending repos in a table (or JSON), with optional language filter and `--web` to open in the browser.
+| Command | Source | Notes |
+|---------|--------|-------|
+| **`ghtrend [since] [lang]`** | `ghapi.huchen.dev` → else **page scrape** | Primary CLI. Since: `daily` (default), `weekly`, `monthly`. |
+| **`ghtrend-clone N [...]`** | Same as `ghtrend` | Clones first N repos from that list. |
+| **`gh-trending-page.sh`** | [`~/tools/github-gh-cli/scripts/`](file:///Users/me/tools/github-gh-cli/scripts/gh-trending-page.sh) | Stdlib Python scrape of `github.com/trending?since=…`. Prefer `--format json` for agents/MCP. |
+| **`gh trending`** (gkze extension) | Installed under `~/.local/share/gh/extensions/gh-trending` | **Broken as of 2026-07** (empty table; HTML selector drift). Keep installed but do not rely on it. |
+| **`ghta` / `gh-trending-discovery.sh`** | `~/tools/github-gh-cli` | **Different signal:** GitHub Search API by topic/stars/recency — label as “topic velocity,” not official Trending. |
+
+Aliases live in [`zsh/aliases.zsh`](zsh/aliases.zsh) (`ghtrend`, `ghtrend-clone`, `_ghtrend_json`).
 
 ## Prerequisites
 
-- **GitHub CLI (`gh`)**  
-  Install if needed:
-  ```bash
-  brew install gh
-  ```
-- **Authenticated `gh`** (for any `gh`-based features):
-  ```bash
-  gh auth login
-  ```
-- **jq** (used by `ghtrend` when the API works):
-  ```bash
-  brew install jq
-  ```
-- **curl** – Usually present on macOS.
-
-## Install the gh-trending extension
-
-One-time install:
-
 ```bash
-gh extension install gkze/gh-trending
+brew install gh jq
+# python3 is required for the page scraper (stdlib only; no pip packages)
+gh auth login   # optional for scrape; required for gh-trending-discovery / ghta
 ```
-
-- Extension is installed under: **`~/.local/share/gh/extensions/gh-trending`**
-- To see it:
-  ```bash
-  gh extension list
-  ```
-- To upgrade later:
-  ```bash
-  gh extension upgrade gh-trending
-  ```
 
 ## Verify
 
 ```bash
-# Extension (table output; may log some scrape warnings to stderr)
-gh trending
+source ~/dotfiles/zsh/aliases.zsh   # or open a new shell
 
-# With options
-gh trending --help
-gh trending python
-gh trending --web
-gh trending -o json
-
-# Dotfiles alias (uses API first; if API is down, runs gh trending when extension is installed)
 ghtrend
 ghtrend weekly
+ghtrend monthly
 ghtrend daily python
+
+# Raw JSON (best for scripts / future MCP)
+~/tools/github-gh-cli/scripts/gh-trending-page.sh weekly --format json | jq '.[0]'
+
+# Clone top 3 this week
+# ghtrend-clone 3 weekly
 ```
 
 ## Recreating on another machine
 
-1. Install prerequisites: `gh`, `jq` (and `curl` if missing).
-2. Log in: `gh auth login`.
-3. Install the extension: `gh extension install gkze/gh-trending`.
-4. Ensure this repo’s zsh config is active (e.g. `~/.zshrc` sources `dotfiles/zsh/aliases.zsh` or you use the professional zsh setup).
-5. Reload the shell or run `source ~/dotfiles/zsh/aliases.zsh` (adjust path if your dotfiles live elsewhere).
-6. Run `ghtrend` or `gh trending` to confirm.
+1. Install `gh`, `jq`, and ensure `python3` exists.
+2. Clone/sync this dotfiles repo and `~/tools/github-gh-cli` (or set `_GHTREND_PAGE` to the scraper path).
+3. Source `zsh/aliases.zsh`.
+4. Run `ghtrend weekly` — should list repos even when `ghapi.huchen.dev` is down.
+5. Optional: `gh extension install gkze/gh-trending` (nice-to-have; currently broken).
 
-## Behavior summary
+## Known failures (do not use as primary)
 
-| Command           | Source              | Notes |
-|-------------------|---------------------|--------|
-| `ghtrend [since] [lang]` | ghapi.huchen.dev → else `gh trending` | API can be down; then extension is used automatically. |
-| `ghtrend-clone N [...]`  | ghapi.huchen.dev only   | No extension fallback; requires API. |
-| `gh trending [lang]`     | Extension (scrapes GitHub) | Can log “Did not find href” to stderr; table/JSON still printed. |
+- **`ghapi.huchen.dev`** — DNS dead (Jul 2026); aliases still try it first, then fall back.
+- **`gkze/gh-trending`** — scrape selectors outdated; emits `Did not find href attr` and empty tables.
+- **Apify / paid trending actors** — not recommended for day-to-day.
 
-## If the public API is down
+## Future Cursor MCP (thin wrapper)
 
-- **`ghtrend`** will print a short message and, if the extension is installed, run **`gh trending`** for you.
-- You can always run **`gh trending`** directly, or open **https://github.com/trending** in the browser.
+Do **not** invent a separate stack. When you want agent-global access, mirror Product Hunt:
+
+```json
+{
+  "mcpServers": {
+    "github-trending": {
+      "command": "/Users/me/tools/github-gh-cli/scripts/gh-trending-page.sh",
+      "args": ["daily", "--format", "json"]
+    }
+  }
+}
+```
+
+Better: a tiny wrapper that accepts `since` as an MCP tool argument and shells out to `gh-trending-page.py --since … --format json`. Same pattern as `producthunt-quickstart/scripts/run-product-hunt-mcp.sh`.
 
 ## References
 
-- Extension repo: [gkze/gh-trending](https://github.com/gkze/gh-trending)
-- Public API (used by `ghtrend` when available): [huchenme/github-trending-api](https://github.com/huchenme/github-trending-api) (live at ghapi.huchen.dev)
-- Aliases: `zsh/aliases.zsh` (search for `ghtrend` or `gh trending`)
+- Page scraper: `~/tools/github-gh-cli/scripts/gh-trending-page.py`
+- Topic velocity (complement): `~/tools/github-gh-cli/scripts/gh-trending-discovery.sh`
+- PH × GH compare (example consumer): `~/tools/producthunt-quickstart/docs/TRENDS_COMPARE.md`
+- Extension (legacy): [gkze/gh-trending](https://github.com/gkze/gh-trending)
+- Dead public API: [huchenme/github-trending-api](https://github.com/huchenme/github-trending-api)
