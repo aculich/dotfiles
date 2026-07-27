@@ -31,6 +31,8 @@ Same agent fundamentals (tools, models, rules/skills mindset) as a local Agent c
 
 **How to start:** Desktop Agent input → **Cloud**; [cursor.com/agents](https://cursor.com/agents); CLI prepend `&` to hand off mid-conversation; `@cursor` on PR/issue/Slack/Linear; API / Automations.
 
+**Agents Window clutter / Archive All:** not what Automations are for — see [agents-window-hygiene.md](agents-window-hygiene.md).
+
 **“Move to Cloud” gotcha:** Transfers conversation context, **not** uncommitted local files. Agent starts from a **clean remote** state — commit or stash first if dirty work must be included.
 
 ---

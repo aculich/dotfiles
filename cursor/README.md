@@ -15,6 +15,8 @@ These scripts help you:
 
 For a **sibling private git repo** that backs up global `~/.cursor/plans`, per-project `.cursor/` / `.specstory/` (selective), and tracks **vendor vs authored** skills, see **[docs/COMPENDIUM.md](docs/COMPENDIUM.md)** (live path, `gh` remote, env var, launchd). The scaffold under [`compendium/`](compendium/README.md) matches that layout. Personal Cursor skill: **`bootstrap-tool-config-repo`** in `~/.cursor/skills/bootstrap-tool-config-repo/`.
 
+**Ops status:** agent context lives in [`.context/`](.context/); CLI health is `just status`; interactive dashboard is the Cursor canvas `cursor-ops-status` (path in `.context/conventions.md`).
+
 ## Quick Start
 
 ```bash

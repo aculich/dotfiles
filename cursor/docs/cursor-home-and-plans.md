@@ -25,6 +25,7 @@ This doc matches the layout under `~/dotfiles/cursor`: [snapshots/workspace/](..
 
 ## Related
 
+- [agents-window-hygiene.md](agents-window-hygiene.md) — Agents Window listing, Archive All, inventory script (no Automations shortcut).
 - [cursor-cloud-agents-vs-local.md](cursor-cloud-agents-vs-local.md) — Cloud Agents vs local Agent (costs, dirty-tree handoff, when to skip Cloud).
 - [IGNORING.md](IGNORING.md) — git vs `.cursorignore` / `.cursorindexingignore` vs VS Code watcher and search excludes; monorepo vs subfolder roots.
 - [LAYOUT.md](LAYOUT.md) — separating product source, pipeline, artifacts, and vendored research; notes for `storytelling-capsules` and how to generalize.

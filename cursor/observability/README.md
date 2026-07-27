@@ -1,9 +1,9 @@
 # Observability
 
 - **`perf/`** — process logs, status captures, and ad-hoc diagnostics (formerly top-level `cursor-perf/`).
-- **`inventories/`** — JSON output from [scripts/cursor-home-inventory.sh](../scripts/cursor-home-inventory.sh). Files are **gitignored** by default; add a baseline with `git add -f observability/inventories/<file>.json`.
+- **`inventories/`** — JSON output from [scripts/cursor-home-inventory.sh](../scripts/cursor-home-inventory.sh) and Agents Window dumps from [scripts/cursor-agents-inventory.sh](../scripts/cursor-agents-inventory.sh). JSON/CSV are **gitignored** by default; commit a snapshot `README.md` or `git add -f` when you want a baseline.
 
-See [docs/cursor-home-and-plans.md](../docs/cursor-home-and-plans.md).
+See [docs/cursor-home-and-plans.md](../docs/cursor-home-and-plans.md) · [docs/agents-window-hygiene.md](../docs/agents-window-hygiene.md).
 
 ## Performance snapshot and report
 
