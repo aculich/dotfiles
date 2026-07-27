@@ -3,6 +3,9 @@ name: specstory-organize
 description: Organize SpecStory AI coding sessions in .specstory/history into year/month folders. Run when user says "organize my history", "clean up specstory", "sort my sessions", or "organize specstory files".
 license: Apache-2.0
 metadata:
+  source:
+    upstream: https://github.com/aculich/agent-skills
+    canonical: https://github.com/aculich/agent-skills
   author: SpecStory, Inc.
   version: "1.0.0"
   argument-hint: "[--dry-run]"

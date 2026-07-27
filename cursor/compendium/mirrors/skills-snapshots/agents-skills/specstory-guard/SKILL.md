@@ -3,6 +3,9 @@ name: specstory-guard
 description: Install a pre-commit hook that scans .specstory/history for secrets before commits. Run when user says "set up secret scanning", "install specstory guard", "protect my history", or "check for secrets".
 license: Apache-2.0
 metadata:
+  source:
+    upstream: https://github.com/aculich/agent-skills
+    canonical: https://github.com/aculich/agent-skills
   author: SpecStory, Inc.
   version: "1.0.0"
   argument-hint: "[install|scan|check|uninstall] [--root PATH]"

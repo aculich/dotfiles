@@ -157,6 +157,8 @@ Propose promoting a nested tree to its own git repo (or moving an accidental nes
 - Apply only after confirm
 - Leave a short README at the old path (or pointer) with the steward one-liner if anything remains
 
+**Skills / slash commands:** If the tree is primarily Agent Skills (`SKILL.md`) or Cursor slash commands (`~/.cursor/commands` / `assets/cursor-command.md`), **defer to `/skill-propagate`** (`skill-propagate-offshoot`) instead of generic extract. That skill generalizes product strings, roots a pack, and leaves a pointer capsule.
+
 ---
 
 ## vendor-map
@@ -200,5 +202,7 @@ For every moved batch:
 - [patterns.md](patterns.md) — living pattern registry
 - [agent-briefing.md](agent-briefing.md) — briefing template
 - `hot-livewires-preflight`, `stale-tooling-trial`, `deaccession-guides-and-guards`, `quick-stash`, `tidy-stash`, `research-clone-bootstrap`
+- `skill-propagate-offshoot` (`/skill-propagate`) — skill/command offshoots; defer from `extract`
+- Next propagate candidate: see `~/projects/agent-skills/docs/PROPAGATION-CANDIDATES.md`
 - Ethos: `~/pdv/meta/AGENTIC-DATA-STEWARDSHIP-GUIDE.md`, `~/pdv/meta/DEACCESSIONING-GUIDE.md`
 - `~/pdv/meta/` — Manifesto + Guide

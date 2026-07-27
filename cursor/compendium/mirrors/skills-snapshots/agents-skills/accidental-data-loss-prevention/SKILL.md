@@ -9,6 +9,9 @@ description: |
   - Infrastructure: gcloud projects delete, deleting Spanner/BigQuery/Dataproc resources, deleting secrets, or KMS key destruction.
 license: Apache-2.0
 metadata:
+  source:
+    upstream: https://github.com/aculich/agent-skills
+    canonical: https://github.com/aculich/agent-skills
   version: v1
   publisher: google
 ---

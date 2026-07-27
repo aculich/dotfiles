@@ -2,62 +2,65 @@
   "version": 1,
   "skills": {
     "babysit": {
-      "lastSyncedAt": 1784682179589
+      "lastSyncedAt": 1785178319099
     },
     "canvas": {
-      "lastSyncedAt": 1784682179589
+      "lastSyncedAt": 1785178319099
     },
     "create-hook": {
-      "lastSyncedAt": 1784682179589
+      "lastSyncedAt": 1785178319099
     },
     "create-rule": {
-      "lastSyncedAt": 1784682179589
+      "lastSyncedAt": 1785178319099
     },
     "create-skill": {
-      "lastSyncedAt": 1784682179589
+      "lastSyncedAt": 1785178319099
     },
     "create-subagent": {
-      "lastSyncedAt": 1784682179589
+      "lastSyncedAt": 1785178319099
     },
     "migrate-to-skills": {
-      "lastSyncedAt": 1784682179589
+      "lastSyncedAt": 1785178319099
     },
     "shell": {
-      "lastSyncedAt": 1784682179589
+      "lastSyncedAt": 1785178319099
     },
     "statusline": {
-      "lastSyncedAt": 1784682179589
+      "lastSyncedAt": 1785178319099
     },
     "update-cli-config": {
-      "lastSyncedAt": 1784682179589
+      "lastSyncedAt": 1785178319099
     },
     "update-cursor-settings": {
-      "lastSyncedAt": 1784682179589
+      "lastSyncedAt": 1785178319099
     },
     "split-to-prs": {
-      "lastSyncedAt": 1784682179589
+      "lastSyncedAt": 1785178319099
     },
     "sdk": {
-      "lastSyncedAt": 1784682179589
+      "lastSyncedAt": 1785178319099
     },
     "loop": {
-      "lastSyncedAt": 1784682179589
-    },
-    "automate": {
-      "lastSyncedAt": 1784682179589
+      "lastSyncedAt": 1785178319099
     },
     "review": {
-      "lastSyncedAt": 1784682179589
+      "lastSyncedAt": 1785178319099
     },
     "review-bugbot": {
-      "lastSyncedAt": 1784682179589
+      "lastSyncedAt": 1785178319099
     },
     "review-security": {
-      "lastSyncedAt": 1784682179589
+      "lastSyncedAt": 1785178319099
+    },
+    "automate": {
+      "lastSyncedAt": 1785178319099
     },
     "onboard": {
-      "lastSyncedAt": 1784682179589
+      "lastSyncedAt": 1785178319099
+    },
+    "env-setup": {
+      "lastSyncedAt": 1785178319099
     }
   },
-  "lastInventoryAt": 1784669254599
+  "lastInventoryAt": 1785103595004
 }

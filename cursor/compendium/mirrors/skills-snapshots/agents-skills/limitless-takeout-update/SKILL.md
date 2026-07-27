@@ -1,6 +1,10 @@
 ---
 name: limitless-takeout-update
 description: Runs incremental Limitless takeout updates to fetch new lifelogs and chats since the last dump. Use when the user asks to update limitless data, run incremental takeout, sync limitless archive, or refresh limitless pendant data.
+metadata:
+  source:
+    upstream: https://github.com/aculich/agent-skills
+    canonical: https://github.com/aculich/agent-skills
 ---
 
 # Limitless Takeout Update

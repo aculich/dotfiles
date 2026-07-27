@@ -4,6 +4,9 @@ description: Time-blind friendly planning, executive function support, and daily
   actually work for neurodivergent minds.
 allowed-tools: Read, Edit, Write, Bash, Glob, Grep, WebFetch, WebSearch, Task
 metadata:
+  source:
+    upstream: https://github.com/aculich/agent-skills
+    canonical: https://github.com/aculich/agent-skills
   category: Lifestyle & Personal
   pairs-with:
   - skill: project-management-guru-adhd

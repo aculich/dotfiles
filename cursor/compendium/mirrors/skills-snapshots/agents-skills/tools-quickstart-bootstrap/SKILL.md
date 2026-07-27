@@ -2,6 +2,10 @@
 name: tools-quickstart-bootstrap
 description: Bootstrap a new tool quickstart repository under ~/tools/*-quickstart with vendored upstream source, executable validation, architecture/techstack docs, landscape/use-case synthesis, and reusable process capture. Use when setting up a new quickstart, evaluating a newly discovered developer tool, or standardizing a repeatable onboarding workflow.
 disable-model-invocation: true
+metadata:
+  source:
+    upstream: https://github.com/aculich/agent-skills
+    canonical: https://github.com/aculich/agent-skills
 ---
 
 # Tools Quickstart Bootstrap
@@ -28,8 +32,6 @@ When the user says to bootstrap **this directory** or an existing path (e.g. `~/
 3. Inventory existing subprojects instead of only vendoring a single new upstream.
 4. Run the **Agent skills landscape** step (below) and write [`TOOLBOX.md`](TOOLBOX.md) at the repo root.
 
-**Multi-tool layer repos** (e.g. `~/tools/markdown-ecosystem/` with `layers/<layer>/<tool>/`): see [markdown-ecosystem-layers.md](markdown-ecosystem-layers.md) — per-tool quickstarts, git submodules, layer-scoped landscape, posts/.
-
 ## Execution workflow
 
 Copy this checklist and update status as you go:
@@ -37,7 +39,7 @@ Copy this checklist and update status as you go:
 ```markdown
 Quickstart Bootstrap Progress:
 - [ ] 1. Create repo envelope and ignore policy
-- [ ] 1a. Create justfile from template (status / update / smoke recipes), then run create-justfile apply
+- [ ] 1a. Create justfile from template (status / update / smoke recipes)
 - [ ] 2. Vendor upstream source and install locally; write background/UPSTREAM_PIN.txt
 - [ ] 3. Run smoke tests and capture drift
 - [ ] 4. Write baseline docs (EXECSUMMARY, PRAXIS, background/TECHSTACK, background/ARCHITECTURE)
@@ -49,15 +51,6 @@ Quickstart Bootstrap Progress:
 - [ ] 8. Commit only intentional artifacts
 - [ ] 9. Offer follow-up bootstraps for high-signal landscape alternatives (tiered)
 ```
-
-### Step 1a detail — justfile + create-justfile
-
-1. Scaffold the quickstart maintenance justfile from [reference.md](reference.md) (pin / update-landscape / update-skills / smoke / etc.).
-2. Immediately run **`/create-justfile apply`** on the **repo root** (skill: `~/.cursor/skills/create-justfile/`):
-   - Prefer **`--umbrella`** when `upstream/` exists; otherwise **`--minimal`**.
-   - **Merge**, never clobber: keep quickstart-specific recipes (`update`, `pin`, `update-skills`, …) while ensuring the DWIM quartet exists: `help` (`help: default`), `status`, `doctor`, `doit`.
-   - Never overwrite vendored `upstream/**/justfile`.
-3. Verify: `just`, `just help`, `just doctor`.
 
 **In-place checklist variant:** same steps; step 2 becomes “inventory existing tree + optional upstream pin” instead of “clone new upstream only”.
 
@@ -164,18 +157,13 @@ Do not recommend skills from search alone — follow find-skills quality checks 
 
 ## Ongoing maintenance (justfile)
 
-Every quickstart ships a root **`justfile`** (template in [reference.md](reference.md)). Conventions mirror [awesome-awesome](/Users/me/tools/awesome-awesome/justfile): doc comment per recipe, `default: @just --list --unsorted`, **`help: default`** (so `just help` lists recipes), DWIM batch recipe (`just update`).
-
-**Runtime visibility:** when the quickstart has a process/compose stack (`ps` recipe), `just status` **ends with `just ps`**, and lifecycle recipes (`start` / `stop`, and equivalents) print **`just ps` before and after** so the human sees the change window.
+Every quickstart ships a root **`justfile`** (template in [reference.md](reference.md)). Conventions mirror [awesome-awesome](/Users/me/tools/awesome-awesome/justfile): doc comment per recipe, `default: @just --list --unsorted`, DWIM batch recipe (`just update`).
 
 **Hybrid pattern:** shell recipes gather raw data into `background/parallel-cache/`, then **print a ready-to-paste agent prompt** for synthesis (landscape, TOOLBOX, integrations). Do not auto-edit LANDSCAPE without human/agent review unless the user asks.
 
 | Recipe | Purpose |
 | --- | --- |
-| `just` / `just help` | Recipe menu (`help: default`) |
-| `just status` | Git state, upstream pin vs remote HEAD, doc freshness; **ends with `just ps` when a runtime stack exists** |
-| `just ps` | Compose/process status alone |
-| `just start` / `just stop` | Lifecycle; **`just ps` before and after** when applicable |
+| `just status` | Git state, upstream pin vs remote HEAD, doc freshness |
 | `just update` | Batch: upstream + landscape + skills + integrations + security |
 | `just pin` | Write `background/UPSTREAM_PIN.txt` from current upstream HEAD |
 | `just update-upstream` | Pull vendored clone, re-pin, diffstat since last pin |
@@ -185,8 +173,6 @@ Every quickstart ships a root **`justfile`** (template in [reference.md](referen
 | `just update-security` | Advisories + awesome-awesome security lens, print prompt |
 | `just verify-sources` | Canonical-upstream check for every GitHub URL in LANDSCAPE |
 | `just smoke` | Tool-specific smoke from PRAXIS |
-| `just rotate-status` | Print `ROTATION-PLAN.md` gate (from hot-livewires) |
-| `just doit` | End-to-end ensure-deps → start → open (after rotation election) |
 
 **`update-integrations` tiers:**
 
@@ -205,7 +191,6 @@ This skill composes with sibling repos/skills — never duplicate their pipeline
 | --- | --- | --- |
 | **awesome-lists** | `~/tools/awesome-awesome/.cursor/skills/awesome-lists/` | Integrations (catalog, clones, adjacency C/D), security/trends lenses |
 | **find-skills** | `npx skills find` | TOOLBOX refresh (`update-skills`) |
-| **create-justfile** | `~/.cursor/skills/create-justfile/` | Step 1a — merge DWIM `help` / `status` / `doctor` / `doit` into root justfile after scaffolding |
 
 **awesome-awesome assets recipes lean on:**
 

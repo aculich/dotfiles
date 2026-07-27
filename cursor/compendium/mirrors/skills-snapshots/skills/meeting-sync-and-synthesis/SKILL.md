@@ -1,11 +1,15 @@
 ---
 name: meeting-sync-and-synthesis
 description: Ingests meeting transcripts from Granola and Zoom MCPs, pulls upstream git (including LFS-safe pulls), indexes artifacts into repo conventions, and synthesizes multi-layer project updates (capstone status, stakeholder context, vision). Use when the user asks to sync meetings, pull latest transcripts, update progress docs after a meeting, routinize Granola/Zoom/git ingest, or capture "where we are" plus big-picture narrative for a capstone or partner project.
+metadata:
+  source:
+    upstream: https://github.com/aculich/agent-skills
+    canonical: https://github.com/aculich/agent-skills
 ---
 
 > **DEPRECATED** — Superseded by two generic skills (do not delete this folder per project policy):
-> - **`meeting-sync`** (`~/.agents/skills/meeting-sync/SKILL.md`) — Phases 1–2 ingest + index; reads **`.context/conventions.md`**.
-> - **`context-engineering`** (`~/.agents/skills/context-engineering/SKILL.md`) — three-pillar `.context/` lifecycle + Phases 3–4 synthesis + grounding.
+> - **`meeting-sync`** (`~/.cursor/skills/meeting-sync/SKILL.md`) — Phases 1–2 ingest + index; reads **`.context/conventions.md`**.
+> - **`context-engineering`** (`~/.cursor/skills/context-engineering/SKILL.md`) — three-pillar `.context/` lifecycle + Phases 3–4 synthesis + grounding.
 >
 > Prefer bootstrapping **`.context/`** and project **`conventions.md`** instead of embedding project paths only in this skill’s `project-conventions.md`.
 

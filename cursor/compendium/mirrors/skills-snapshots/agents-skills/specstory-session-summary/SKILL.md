@@ -2,6 +2,9 @@
 name: specstory-session-summary
 description: Summarize recent SpecStory AI coding sessions in standup format. Use when the user wants to review sessions from .specstory/history, prepare for standups, track work progress, or understand what was accomplished.
 metadata:
+  source:
+    upstream: https://github.com/aculich/agent-skills
+    canonical: https://github.com/aculich/agent-skills
   author: SpecStory
   version: "1.0"
 ---

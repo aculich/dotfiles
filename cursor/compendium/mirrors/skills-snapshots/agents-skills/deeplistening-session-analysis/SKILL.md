@@ -1,6 +1,10 @@
 ---
 name: deeplistening-session-analysis
 description: Produces the four-artifact session meta-analysis bundle (facilitator critique · subject standpoint · LLM-as-facilitator counterfactual · imagined LLM dialog) from a single DeepListening practice session's evidence set (Zoom VTT + Granola notes + screenshare frames). Anchors every claim to cue numbers or line ranges; respects the three-strata evidence model (G1 auto-notes / G2 live-prompts / G3 LLM responses). Writes lineage + journal entries back to the project's `.metacontext/` shelf if present. Use when the user says "analyze this session", "L1 analysis", "soundboard critique", "standpoint analysis", "imagined LLM dialog", or gives evidence paths for a single Matt / Aaron / DeepListening / paramedic / ambient-AI session.
+metadata:
+  source:
+    upstream: https://github.com/aculich/agent-skills
+    canonical: https://github.com/aculich/agent-skills
 ---
 
 # DeepListening session meta-analysis (L1)

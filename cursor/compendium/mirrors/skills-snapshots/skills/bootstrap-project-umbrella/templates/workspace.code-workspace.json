@@ -1,0 +1,14 @@
+{
+  "folders": [
+    { "name": "{{SLUG}} (meta)", "path": "../{{SLUG}}" },
+    { "name": "inquiry", "path": "../{{SLUG}}/inquiry" },
+    { "name": "product", "path": "../{{SLUG}}/product" },
+    { "name": "studies", "path": "../{{SLUG}}/studies" }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/node_modules": true,
+      "**/.venv": true
+    }
+  }
+}

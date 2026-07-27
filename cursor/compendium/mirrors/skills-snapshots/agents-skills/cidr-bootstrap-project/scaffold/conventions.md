@@ -19,19 +19,6 @@
 - **host_user_id:** TODO (email or Zoom user id)
 - **transcripts_root:** `TODO_transcripts/`
 - **fetch_script:** TODO optional path
-- **meeting_platform:** TODO (`zoom` | `google_meet` | `none`)
-
-## Screenshots (Shottr)
-
-- **screenshots_root:** `/Users/me/shottr/`
-- **screenshots_glob:** `SCR-YYYYMMDD-*.{png,jpg,jpeg}`
-- **screenshots_window_buffer_min:** 15
-
-## Gmail discovery (bootstrap)
-
-- **email_lookback:** `all` (alternatives: `90d`, `30d`)
-- **google_workspace_email:** `aaron@cidrlab.org`
-- **mcp_server_google:** `user-google-workspace`
 
 ## Notes
 

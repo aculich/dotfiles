@@ -5,6 +5,10 @@ description: >-
   plus a disk scan for .cursor/.claude/.specstory markers; classify orphans vs
   stale. Use for daily compendium updates, snapshot-all prep, or auditing
   unknown project roots under ~/projects and ~/tools.
+metadata:
+  source:
+    upstream: https://github.com/aculich/agent-skills
+    canonical: https://github.com/aculich/agent-skills
 ---
 
 # Compendium project discovery

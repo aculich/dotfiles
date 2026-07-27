@@ -6,6 +6,10 @@ description: >-
   manifest, index, and derived formats (MD, JSON, CSV, SRT). Use when the user
   wants Fireflies MCP, bulk meeting downloads, all export permutations, meeting
   asset archives, or transcript id from a fireflies.ai/view URL.
+metadata:
+  source:
+    upstream: https://github.com/aculich/agent-skills
+    canonical: https://github.com/aculich/agent-skills
 ---
 
 # Fireflies meeting export (MCP + local archive)

@@ -2,6 +2,10 @@
 name: bootstrap-tool-config-repo
 description: Normalizes dotfiles tool-config repos (Cursor, Claude, Antigravity) with dry-run then apply, attic/ for non-destructive moves, and a sibling private compendium git repo for mirrored project .cursor/, .specstory/, global and per-project plans, plus skills-registry (vendor vs authored vs project). Documents autocommit presets (default daily on compendium only). Use when reorganizing cursor/ config tracking, setting up cross-project backups, or cloning the pattern for another IDE home.
 disable-model-invocation: true
+metadata:
+  source:
+    upstream: https://github.com/aculich/agent-skills
+    canonical: https://github.com/aculich/agent-skills
 ---
 
 # Bootstrap tool-config repo and compendium

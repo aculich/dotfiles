@@ -1,6 +1,10 @@
 ---
 name: limitless-takeout-search
 description: Searches local Limitless takeout dump files for lifelogs, chats, or text content by date range, keywords, or lifelog ID. Use when the user asks to search limitless data, find a conversation, look up a lifelog, query their pendant history, or find something they said/heard.
+metadata:
+  source:
+    upstream: https://github.com/aculich/agent-skills
+    canonical: https://github.com/aculich/agent-skills
 ---
 
 # Limitless Takeout Search

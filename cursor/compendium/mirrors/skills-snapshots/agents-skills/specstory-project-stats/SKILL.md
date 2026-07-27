@@ -3,6 +3,9 @@ name: specstory-project-stats
 description: Fetch project statistics from SpecStory Cloud. Run when user says "get project stats", "show SpecStory stats", "project statistics", "how many sessions", or "SpecStory metrics".
 license: Apache-2.0
 metadata:
+  source:
+    upstream: https://github.com/aculich/agent-skills
+    canonical: https://github.com/aculich/agent-skills
   author: SpecStory, Inc.
   version: "1.0.0"
 allowed-tools: Bash(node *)

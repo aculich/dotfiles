@@ -2,6 +2,10 @@
 name: process-umbrella-incoming
 description: Classifies and routes unscoped drops from the repo-root incoming/ inbox across engagements/, procurement/, compliance/, and client-shared/; stages new RFP/RFO signals under incoming/opportunities/ and promotes confirmed stubs via git mv to engagements/<slug>/; appends incoming/ROUTING-LOG.md. Use when the user says process incoming, triage inbox, route this eml, new RFP or RFO in email, or when material landed at repo root without an engagement owner. Pair with meeting-sync Phase 1b after the engagement is known; pair with bootstrap-umbrella on apply passes that clear opportunities/.
 disable-model-invocation: true
+metadata:
+  source:
+    upstream: https://github.com/aculich/agent-skills
+    canonical: https://github.com/aculich/agent-skills
 ---
 
 # Process umbrella incoming

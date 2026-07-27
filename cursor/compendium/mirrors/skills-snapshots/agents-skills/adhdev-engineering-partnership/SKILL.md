@@ -1,6 +1,11 @@
 ---
 name: adhdev-engineering-partnership
 description: ADHD-aware engineering collaboration protocol for the human + agent pair. Use when a project is a multi-week build, when the user mentions ADHD, focus, hyperfocus, sidequest, time-box, "next tiny action", drift, or context switching, when an `ADHDEV.md` is present in the workspace, or whenever the agent is about to spawn broad exploration, refactor sweeps, or parallel branches that could fragment one mainline goal. Encodes mainline-vs-sidequest branch policy, time-boxed spikes, written checkpoints, session-end handoff notes, and shame-free pacing. Pairs with `adhd-daily-planner` (day shape) and `project-management-guru-adhd` (context-switch tax, hyperfocus rules).
+metadata:
+  source:
+    upstream: https://github.com/aculich/adhdev-skills
+    canonical: https://github.com/aculich/agent-skills
+    pack: https://github.com/aculich/adhdev-skills
 ---
 
 # ADHDEV — engineering partnership for ADHD-aware focus
@@ -10,7 +15,7 @@ should structure work and conversations to **protect deep focus**, **reduce
 context-switching cost**, and **make the next step obvious** when the user
 sits back down — without falling into shame-driven overwork.
 
-It is the engineering-process complement to two installed lifestyle skills:
+It is the engineering-process complement to two skills in this pack:
 
 - `adhd-daily-planner` — day-level structure, transition buffers, 3-Things,
   shutdown ritual.
@@ -20,13 +25,15 @@ It is the engineering-process complement to two installed lifestyle skills:
 Read those if you are about to do day planning, time blocking, or hyperfocus
 intervention. Read this skill when you are about to **act on code**.
 
+For action-first *reply shape* (not process), see `adhdev-output-shape`.
+
 ## When to invoke
 
 Activate this skill when any of the following are true:
 
-- The workspace contains an `ADHDEV.md` (anywhere, e.g.
-  `storyvale-engine/docs/ADHDEV.md`). Read it once at the start of the
-  session and treat it as authoritative for that repo's mainline definition.
+- The workspace contains an `ADHDEV.md` (anywhere). Read it once at the start
+  of the session and treat it as authoritative for that repo's mainline
+  definition.
 - The user says any of: "stay focused", "don't drift", "sidequest",
   "time-box", "spike", "next tiny action", "what was I doing", "I have
   ADHD", "I'm distracted", "we're hyperfocused", "let's wrap up".
@@ -124,8 +131,8 @@ unsure, default to a single trailing block at the bottom of `ADHDEV.md` or a
 
 ## Working-together rules with the agent
 
-These are condensed from patterns that hold up well for ADHD developer + AI
-collaboration ([Zack Proser — *Claude as My External Brain*](https://zackproser.com/blog/claude-external-brain-adhd-autistic);
+Condensed from patterns that hold up for ADHD developer + AI collaboration
+([Zack Proser — *Claude as My External Brain*](https://zackproser.com/blog/claude-external-brain-adhd-autistic);
 ravila4's `claude-adhd-skills/CLAUDE.md`):
 
 - **Concur through action, not validation.** When an idea is good, build
@@ -162,15 +169,13 @@ When a drift signal fires, do not lecture. Offer a small reset:
 
 ## Time-boxing and hyperfocus
 
-For deeper interrupt rules (when to leave hyperfocus alone, when to gently
-check in, when to firmly stop), defer to
-`project-management-guru-adhd/SKILL.md`. Defaults that are safe for any
-session in this skill:
+For deeper interrupt rules, defer to `project-management-guru-adhd/SKILL.md`.
+Defaults safe for any session:
 
 - Sidequest branches: 45-90 minutes, then commit, log outcome, return to
   mainline before closing the session.
-- Spikes (exploratory hypothesis-testing): write the hypothesis in one line
-  before starting; output is a short note kept-or-thrown-away.
+- Spikes: write the hypothesis in one line before starting; output is a
+  short note kept-or-thrown-away.
 - Long sessions: every ~90 minutes, offer a transition-buffer prompt
   ("save work, water, two-minute walk?") rather than continuing silently.
 
@@ -187,13 +192,12 @@ session in this skill:
 
 ## Repo integration
 
-If a repo has its own `ADHDEV.md` (e.g.
-[`storyvale-engine/docs/ADHDEV.md`](../../../projects/storytelling-capsules/storyvale-engine/docs/ADHDEV.md)),
-that file's table of mainline vs sidequest branches **wins** over any
-defaults in this skill. Read it first, then apply this skill on top.
+If a repo has its own `ADHDEV.md`, that file's mainline vs sidequest table
+**wins** over defaults in this skill. Read it first, then apply this skill
+on top.
 
-If a repo has no `ADHDEV.md` and the user wants this protocol, the smallest
-adoption is a six-line file at repo root:
+If a repo has no `ADHDEV.md`, use the pack template (`templates/ADHDEV.md`)
+or this six-line stub at repo root:
 
 ```markdown
 # ADHDEV
@@ -206,9 +210,6 @@ adoption is a six-line file at repo root:
 - Drift check date:
 ```
 
-That single file gives this skill the variables it needs without any tooling
-install.
-
 ## Out of scope
 
 - Medical or diagnostic claims. ADHD is mentioned as a working context, not
@@ -219,22 +220,18 @@ install.
 - Cross-team accountability or HR-style management — that lives in
   `project-management-guru-adhd` if at all.
 
-## Minimal example: applying this skill in one turn
+## Minimal example
 
 User: "let's keep working on the gallery refresh."
 
 Agent (good):
 
-> "Mainline check: the most recent ADHDEV.md says today's theme is
-> 'I2V reliability + one great demo'. The gallery refresh isn't on that
-> theme. Options: (a) park gallery on `feature/creative-surface` for a 60
-> -minute time-box; (b) capture as a one-liner in NEXT.md and stay on the
-> demo; (c) override and switch the mainline theme. Which?"
+> "Mainline check: ADHDEV.md says today's theme is '{theme}'. The gallery
+> refresh isn't on that theme. Options: (a) park on a sidequest branch for
+> a 60-minute time-box; (b) capture in the inbox and stay on mainline;
+> (c) override and switch the mainline theme. Which?"
 
 Agent (bad):
 
-> "Sure, I'll start refactoring the gallery and the catalog and the
-> Pretext template at once."
-
-The first response respects the protocol. The second is exactly the drift
-this skill is here to prevent.
+> "Sure, I'll start refactoring the gallery and the catalog and three other
+> surfaces at once."

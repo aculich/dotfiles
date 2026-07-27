@@ -1,6 +1,10 @@
 ---
 name: reflexive-method-authoring-loop
 description: Orchestrator for the four-level method-authoring loop (L0 practice → L1 session analysis → L2 method synthesis → L3 reflexive authoring). Identifies the current level, names the loop when it's implicit, bootstraps `.metacontext/` in a new project, invokes the L1 and L2 skills as subroutines, and closes the loop with lineage + journal entries. Can also run in journal-only mode when the user surfaces a reflexive moment in conversation without doing new L1/L2 work. Self-referential — this skill was authored by running itself. Use when the user says "is this meta or meta-meta?", "let's make this repeatable", "name the loop", "bootstrap metacontext", "close the loop", "what did the method learn about itself?", "run the whole thing end to end", or any phrasing that surfaces the authoring-about-authoring layer.
+metadata:
+  source:
+    upstream: https://github.com/aculich/agent-skills
+    canonical: https://github.com/aculich/agent-skills
 ---
 
 # Reflexive method-authoring loop (L3)

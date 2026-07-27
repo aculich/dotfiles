@@ -1,6 +1,10 @@
 ---
 name: deeplistening-method-synthesis
 description: Synthesizes or extends portable DeepListening methodology from one or more L1 session-analysis bundles plus a prior-art web search. Produces or updates the five-file methodology bundle (ROLE · AMBIENT-AI-COUPLING · TERMINOLOGY · METHODS-MAP-EXTENSIONS · ONTOLOGY-EPISTEMOLOGY) as non-destructive sibling files under peeq-crb-nexus/meta-methods/deep-listening/. Never edits canonical METHODS-MAP or TERMINOLOGY in place. Writes lineage + journal entries back to the consumer project's `.metacontext/` shelf. Use when the user says "synthesize methodology", "extend meta-methods/deep-listening", "run L2", "update portable methodology", "add to DeepListening methodology", or is ready to promote patterns from several L1 passes into reusable methodology.
+metadata:
+  source:
+    upstream: https://github.com/aculich/agent-skills
+    canonical: https://github.com/aculich/agent-skills
 ---
 
 # DeepListening method synthesis (L2)

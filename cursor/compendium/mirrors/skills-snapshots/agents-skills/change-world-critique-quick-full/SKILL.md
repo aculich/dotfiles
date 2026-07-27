@@ -1,6 +1,10 @@
 ---
 name: change-world-critique-quick-full
 description: Runs the full change-the-world-gpt single-draft pipeline (batch one post, judge, comparison, cost, value) into a timestamped sibling directory with critiques/, responses/*.json, and reports. Use when the user wants structured API metadata, evaluation_report, COMPARISON/COST/VALUE, or affix -full / full critique output for one markdown draft.
+metadata:
+  source:
+    upstream: https://github.com/aculich/agent-skills
+    canonical: https://github.com/aculich/agent-skills
 ---
 
 # Change-the-world critique (full single draft)

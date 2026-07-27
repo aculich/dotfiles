@@ -3,6 +3,8 @@ source: /Users/me/.cursor/{skills,skills-cursor}, /Users/me/.agents/skills
 note: symlinked skills are dereferenced (real content copied into mirror)
 
 ## symlinked skills at snapshot time
+/Users/me/.agents/skills/skill-propagate-offshoot -> /Users/me/projects/agent-skills/skills/.experimental/skill-propagate-offshoot
+/Users/me/.cursor/skills/bcal-declutter -> /Users/me/tools/google-workspace-tools/.cursor/skills/bcal-declutter
 /Users/me/.cursor/skills/berkeley-cidr-meeting -> /Users/me/tools/google-workspace-tools/.cursor/skills/berkeley-cidr-meeting
 /Users/me/.cursor/skills/cidr-letterhead -> /Users/me/projects/cidr-org/library__cidrlab/.cursor/skills/cidr-letterhead
 /Users/me/.cursor/skills/embedded-captions -> ../../.claude/skills/embedded-captions
@@ -19,6 +21,7 @@ note: symlinked skills are dereferenced (real content copied into mirror)
 /Users/me/.cursor/skills/hyperframes-registry -> ../../.claude/skills/hyperframes-registry
 /Users/me/.cursor/skills/media-use -> ../../.claude/skills/media-use
 /Users/me/.cursor/skills/meeting-sync -> /Users/me/.agents/skills/meeting-sync
+/Users/me/.cursor/skills/meeting-sync-and-synthesis -> /Users/me/.agents/skills/meeting-sync-and-synthesis
 /Users/me/.cursor/skills/motion-graphics -> ../../.claude/skills/motion-graphics
 /Users/me/.cursor/skills/music-to-video -> ../../.claude/skills/music-to-video
 /Users/me/.cursor/skills/peeq-cidr-meeting -> /Users/me/tools/google-workspace-tools/.cursor/skills/peeq-cidr-meeting

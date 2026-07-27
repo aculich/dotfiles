@@ -1,6 +1,10 @@
 ---
 name: change-world-critique-quick
 description: Runs change-the-world-gpt critique_draft.py on a markdown draft and writes a timestamped sibling .md only. Use when the user wants a fast single-model critique, one-off draft feedback, or mentions critique_draft, quick critique, or sibling critique output without batch reports.
+metadata:
+  source:
+    upstream: https://github.com/aculich/agent-skills
+    canonical: https://github.com/aculich/agent-skills
 ---
 
 # Change-the-world critique (quick)

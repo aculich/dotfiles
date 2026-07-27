@@ -3,6 +3,9 @@ name: specstory-yak
 description: Analyze your SpecStory AI coding sessions in .specstory/history for yak shaving - when your initial goal got derailed into rabbit holes. Run when user says "analyze my yak shaving", "check for rabbit holes", "how distracted was I", or "yak shave score".
 license: Apache-2.0
 metadata:
+  source:
+    upstream: https://github.com/aculich/agent-skills
+    canonical: https://github.com/aculich/agent-skills
   author: specstory
   version: "1.0.0"
   argument-hint: "[days|date-range]"

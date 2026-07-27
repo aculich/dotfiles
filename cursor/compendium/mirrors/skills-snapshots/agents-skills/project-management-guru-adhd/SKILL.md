@@ -5,6 +5,9 @@ description: Expert project manager for ADHD engineers managing multiple concurr
   management, rigid waterfall processes, or general productivity advice without ADHD context.
 allowed-tools: Read,Write,Edit,TodoWrite,mcp__firecrawl__firecrawl_search,WebFetch,mcp__SequentialThinking__sequentialthinking
 metadata:
+  source:
+    upstream: https://github.com/aculich/agent-skills
+    canonical: https://github.com/aculich/agent-skills
   category: Productivity & Meta
   pairs-with:
   - skill: adhd-daily-planner

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-22T01:19:34Z",
+  "generated": "2026-07-27T18:54:26Z",
   "compendium_root": "/Users/me/dotfiles/cursor/compendium",
   "monorepo_root": "/Users/me/projects/agent-skills",
   "global": {
@@ -90,6 +90,28 @@
         }
       },
       {
+        "id": "bcal-declutter",
+        "classification": "embedded",
+        "lifecycle": "installed",
+        "tier": "cursor-user",
+        "path": "/Users/me/.cursor/skills/bcal-declutter",
+        "resolved_path": "/Users/me/tools/google-workspace-tools/.cursor/skills/bcal-declutter",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": null,
+        "name": "bcal-declutter",
+        "symlink_target": "/Users/me/tools/google-workspace-tools/.cursor/skills/bcal-declutter",
+        "source": {
+          "type": "local-repo",
+          "url": "https://github.com/aculich/google-workspace-tools",
+          "install_source_url": "https://github.com/aculich/google-workspace-tools",
+          "commit": "bd523501d70606c3c4a3f813e12ea50d14cb2427",
+          "local_path": "/Users/me/tools/google-workspace-tools",
+          "confidence": "high",
+          "via": "git-remote"
+        }
+      },
+      {
         "id": "berkeley-cidr-meeting",
         "classification": "embedded",
         "lifecycle": "installed",
@@ -105,7 +127,7 @@
           "type": "local-repo",
           "url": "https://github.com/aculich/google-workspace-tools",
           "install_source_url": "https://github.com/aculich/google-workspace-tools",
-          "commit": "4f1662c8ce6ab3e3089a4b9ea12074506acc166f",
+          "commit": "bd523501d70606c3c4a3f813e12ea50d14cb2427",
           "local_path": "/Users/me/tools/google-workspace-tools",
           "confidence": "high",
           "via": "git-remote"
@@ -327,6 +349,28 @@
           "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
           "via": "authored-registry"
+        }
+      },
+      {
+        "id": "cidr-letterhead",
+        "classification": "embedded",
+        "lifecycle": "installed",
+        "tier": "cursor-user",
+        "path": "/Users/me/.cursor/skills/cidr-letterhead",
+        "resolved_path": "/Users/me/projects/cidr-org/library__cidrlab/.cursor/skills/cidr-letterhead",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": null,
+        "name": "cidr-letterhead",
+        "symlink_target": "/Users/me/projects/cidr-org/library__cidrlab/.cursor/skills/cidr-letterhead",
+        "source": {
+          "type": "local-repo",
+          "url": "https://github.com/cidrlab/library",
+          "install_source_url": "https://github.com/cidrlab/library",
+          "commit": "ab6f2f47de0d6f23bdc94e1c0e4f1002c5adbe93",
+          "local_path": "/Users/me/projects/cidr-org/library__cidrlab",
+          "confidence": "high",
+          "via": "git-remote"
         }
       },
       {
@@ -590,6 +634,24 @@
         }
       },
       {
+        "id": "dd-cli-usage",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "cursor-user",
+        "path": "/Users/me/.cursor/skills/dd-cli-usage",
+        "resolved_path": "/Users/me/.cursor/skills/dd-cli-usage",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "dd-cli-usage",
+        "source": {
+          "type": "unknown",
+          "url": null,
+          "confidence": "none",
+          "via": "unresolved"
+        }
+      },
+      {
         "id": "deaccession-guides-and-guards",
         "classification": "installed",
         "lifecycle": "installed",
@@ -779,7 +841,7 @@
           "type": "local-repo",
           "url": "https://github.com/aculich/google-workspace-tools",
           "install_source_url": "https://github.com/aculich/google-workspace-tools",
-          "commit": "4f1662c8ce6ab3e3089a4b9ea12074506acc166f",
+          "commit": "bd523501d70606c3c4a3f813e12ea50d14cb2427",
           "local_path": "/Users/me/tools/google-workspace-tools",
           "confidence": "high",
           "via": "git-remote"
@@ -1386,22 +1448,22 @@
       },
       {
         "id": "meeting-sync-and-synthesis",
-        "classification": "authored",
+        "classification": "embedded",
         "lifecycle": "curated",
         "tier": "cursor-user",
         "path": "/Users/me/.cursor/skills/meeting-sync-and-synthesis",
-        "resolved_path": "/Users/me/.cursor/skills/meeting-sync-and-synthesis",
-        "is_symlink": false,
+        "resolved_path": "/Users/me/.agents/skills/meeting-sync-and-synthesis",
+        "is_symlink": true,
         "symlink_ok": true,
         "version": null,
         "name": "meeting-sync-and-synthesis",
+        "symlink_target": "/Users/me/.agents/skills/meeting-sync-and-synthesis",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -1536,6 +1598,24 @@
         }
       },
       {
+        "id": "orx",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "cursor-user",
+        "path": "/Users/me/.cursor/skills/orx",
+        "resolved_path": "/Users/me/.cursor/skills/orx",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "orx",
+        "source": {
+          "type": "unknown",
+          "url": null,
+          "confidence": "none",
+          "via": "unresolved"
+        }
+      },
+      {
         "id": "peeq-cidr-meeting",
         "classification": "embedded",
         "lifecycle": "installed",
@@ -1551,7 +1631,7 @@
           "type": "local-repo",
           "url": "https://github.com/aculich/google-workspace-tools",
           "install_source_url": "https://github.com/aculich/google-workspace-tools",
-          "commit": "4f1662c8ce6ab3e3089a4b9ea12074506acc166f",
+          "commit": "bd523501d70606c3c4a3f813e12ea50d14cb2427",
           "local_path": "/Users/me/tools/google-workspace-tools",
           "confidence": "high",
           "via": "git-remote"
@@ -2445,6 +2525,25 @@
         }
       },
       {
+        "id": "env-setup",
+        "classification": "vendor",
+        "lifecycle": "installed",
+        "tier": "cursor-managed",
+        "path": "/Users/me/.cursor/skills-cursor/env-setup",
+        "resolved_path": "/Users/me/.cursor/skills-cursor/env-setup",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "env-setup",
+        "source": {
+          "type": "vendor",
+          "url": null,
+          "confidence": "high",
+          "via": "vendor-registry",
+          "note": "vendored bundle / cursor-managed; not a public repo"
+        }
+      },
+      {
         "id": "loop",
         "classification": "vendor",
         "lifecycle": "installed",
@@ -2687,12 +2786,11 @@
         "name": "accidental-data-loss-prevention",
         "symlink_target": "../../.agents/skills/accidental-data-loss-prevention",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -2708,12 +2806,11 @@
         "name": "adhd-daily-planner",
         "symlink_target": "../../.agents/skills/adhd-daily-planner",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -2729,12 +2826,31 @@
         "name": "adhdev-engineering-partnership",
         "symlink_target": "../../.agents/skills/adhdev-engineering-partnership",
         "source": {
-          "type": "authored",
-          "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
+          "type": "frontmatter",
+          "url": "https://github.com/aculich/adhdev-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/adhdev-skills"
+        }
+      },
+      {
+        "id": "adhdev-output-shape",
+        "classification": "embedded",
+        "lifecycle": "installed",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/adhdev-output-shape",
+        "resolved_path": "/Users/me/.agents/skills/adhdev-output-shape",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": null,
+        "name": "adhdev-output-shape",
+        "symlink_target": "../../.agents/skills/adhdev-output-shape",
+        "source": {
+          "type": "frontmatter",
+          "url": "https://github.com/aculich/adhdev-skills",
+          "confidence": "high",
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/adhdev-skills"
         }
       },
       {
@@ -2775,12 +2891,11 @@
         "name": "bootstrap-tool-config-repo",
         "symlink_target": "../../.agents/skills/bootstrap-tool-config-repo",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -2796,12 +2911,11 @@
         "name": "change-world-critique-quick",
         "symlink_target": "../../.agents/skills/change-world-critique-quick",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -2817,12 +2931,11 @@
         "name": "change-world-critique-quick-full",
         "symlink_target": "../../.agents/skills/change-world-critique-quick-full",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -2838,12 +2951,11 @@
         "name": "cidr-bootstrap-project",
         "symlink_target": "../../.agents/skills/cidr-bootstrap-project",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -2959,12 +3071,11 @@
         "name": "compendium-discover-projects",
         "symlink_target": "../../.agents/skills/compendium-discover-projects",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -2980,12 +3091,11 @@
         "name": "deeplistening-method-synthesis",
         "symlink_target": "../../.agents/skills/deeplistening-method-synthesis",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -3001,12 +3111,11 @@
         "name": "deeplistening-session-analysis",
         "symlink_target": "../../.agents/skills/deeplistening-session-analysis",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -3097,12 +3206,11 @@
         "name": "fireflies-meeting-export",
         "symlink_target": "../../.agents/skills/fireflies-meeting-export",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -3525,12 +3633,11 @@
         "name": "limitless-takeout-search",
         "symlink_target": "../../.agents/skills/limitless-takeout-search",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -3546,12 +3653,11 @@
         "name": "limitless-takeout-update",
         "symlink_target": "../../.agents/skills/limitless-takeout-update",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -3567,12 +3673,11 @@
         "name": "luminary-tech-radar",
         "symlink_target": "../../.agents/skills/luminary-tech-radar",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -3634,12 +3739,11 @@
         "name": "meeting-sync-and-synthesis",
         "symlink_target": "../../.agents/skills/meeting-sync-and-synthesis",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -3705,12 +3809,29 @@
         "name": "op-credentials",
         "symlink_target": "../../.agents/skills/op-credentials",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
+        }
+      },
+      {
+        "id": "orx",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/orx",
+        "resolved_path": "/Users/me/.claude/skills/orx",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "orx",
+        "source": {
+          "type": "unknown",
+          "url": null,
+          "confidence": "none",
+          "via": "unresolved"
         }
       },
       {
@@ -3777,12 +3898,11 @@
         "name": "process-umbrella-incoming",
         "symlink_target": "../../.agents/skills/process-umbrella-incoming",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -3823,12 +3943,11 @@
         "name": "project-management-guru-adhd",
         "symlink_target": "../../.agents/skills/project-management-guru-adhd",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -3844,12 +3963,11 @@
         "name": "reflexive-method-authoring-loop",
         "symlink_target": "../../.agents/skills/reflexive-method-authoring-loop",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -3899,6 +4017,26 @@
         }
       },
       {
+        "id": "research-clone-bootstrap",
+        "classification": "embedded",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/research-clone-bootstrap",
+        "resolved_path": "/Users/me/.agents/skills/research-clone-bootstrap",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": "1.0.0",
+        "name": "research-clone-bootstrap",
+        "symlink_target": "../../.agents/skills/research-clone-bootstrap",
+        "source": {
+          "type": "frontmatter",
+          "url": "https://github.com/aculich/research-clone-bootstrap",
+          "confidence": "high",
+          "via": "frontmatter:homepage",
+          "install_source_url": "https://github.com/aculich/research-clone-bootstrap"
+        }
+      },
+      {
         "id": "sandbox-sdk",
         "classification": "installed",
         "lifecycle": "installed",
@@ -3945,6 +4083,26 @@
         }
       },
       {
+        "id": "skill-propagate-offshoot",
+        "classification": "embedded",
+        "lifecycle": "experimental",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/skill-propagate-offshoot",
+        "resolved_path": "/Users/me/projects/agent-skills/skills/.experimental/skill-propagate-offshoot",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": null,
+        "name": "skill-propagate-offshoot",
+        "symlink_target": "/Users/me/.agents/skills/skill-propagate-offshoot",
+        "source": {
+          "type": "frontmatter",
+          "url": "https://github.com/aculich/agent-skills",
+          "confidence": "high",
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
+        }
+      },
+      {
         "id": "skill-repair",
         "classification": "embedded",
         "lifecycle": "curated",
@@ -3957,12 +4115,11 @@
         "name": "skill-repair",
         "symlink_target": "../../.agents/skills/skill-repair",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -4024,12 +4181,11 @@
         "name": "specstory-guard",
         "symlink_target": "../../.agents/skills/specstory-guard",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -4045,12 +4201,11 @@
         "name": "specstory-link-trail",
         "symlink_target": "../../.agents/skills/specstory-link-trail",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -4066,12 +4221,11 @@
         "name": "specstory-organize",
         "symlink_target": "../../.agents/skills/specstory-organize",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -4087,12 +4241,11 @@
         "name": "specstory-project-stats",
         "symlink_target": "../../.agents/skills/specstory-project-stats",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -4108,12 +4261,11 @@
         "name": "specstory-session-summary",
         "symlink_target": "../../.agents/skills/specstory-session-summary",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -4129,12 +4281,11 @@
         "name": "specstory-yak",
         "symlink_target": "../../.agents/skills/specstory-yak",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -4175,12 +4326,11 @@
         "name": "tools-quickstart-bootstrap",
         "symlink_target": "../../.agents/skills/tools-quickstart-bootstrap",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -5184,12 +5334,11 @@
         "version": "v1",
         "name": "accidental-data-loss-prevention",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -5204,12 +5353,11 @@
         "version": null,
         "name": "adhd-daily-planner",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -5224,12 +5372,30 @@
         "version": null,
         "name": "adhdev-engineering-partnership",
         "source": {
-          "type": "authored",
-          "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
+          "type": "frontmatter",
+          "url": "https://github.com/aculich/adhdev-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/adhdev-skills"
+        }
+      },
+      {
+        "id": "adhdev-output-shape",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/adhdev-output-shape",
+        "resolved_path": "/Users/me/.agents/skills/adhdev-output-shape",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "adhdev-output-shape",
+        "source": {
+          "type": "frontmatter",
+          "url": "https://github.com/aculich/adhdev-skills",
+          "confidence": "high",
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/adhdev-skills"
         }
       },
       {
@@ -5269,12 +5435,11 @@
         "version": null,
         "name": "bootstrap-tool-config-repo",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -5289,12 +5454,11 @@
         "version": null,
         "name": "change-world-critique-quick",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -5309,12 +5473,11 @@
         "version": null,
         "name": "change-world-critique-quick-full",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -5329,12 +5492,29 @@
         "version": null,
         "name": "cidr-bootstrap-project",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
+        }
+      },
+      {
+        "id": "clarify-audience-purpose",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/clarify-audience-purpose",
+        "resolved_path": "/Users/me/.agents/skills/clarify-audience-purpose",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "clarify-audience-purpose",
+        "source": {
+          "type": "unknown",
+          "url": null,
+          "confidence": "none",
+          "via": "unresolved"
         }
       },
       {
@@ -5449,12 +5629,29 @@
         "version": null,
         "name": "compendium-discover-projects",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
+        }
+      },
+      {
+        "id": "converge-articulate",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/converge-articulate",
+        "resolved_path": "/Users/me/.agents/skills/converge-articulate",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "converge-articulate",
+        "source": {
+          "type": "unknown",
+          "url": null,
+          "confidence": "none",
+          "via": "unresolved"
         }
       },
       {
@@ -5469,12 +5666,11 @@
         "version": null,
         "name": "deeplistening-method-synthesis",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -5489,12 +5685,29 @@
         "version": null,
         "name": "deeplistening-session-analysis",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
+        }
+      },
+      {
+        "id": "divergent-explore",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/divergent-explore",
+        "resolved_path": "/Users/me/.agents/skills/divergent-explore",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "divergent-explore",
+        "source": {
+          "type": "unknown",
+          "url": null,
+          "confidence": "none",
+          "via": "unresolved"
         }
       },
       {
@@ -5545,6 +5758,24 @@
           "updated_at": "2026-07-03T12:35:29.641Z",
           "confidence": "high",
           "via": "skill-lock"
+        }
+      },
+      {
+        "id": "envision-end-state",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/envision-end-state",
+        "resolved_path": "/Users/me/.agents/skills/envision-end-state",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "envision-end-state",
+        "source": {
+          "type": "unknown",
+          "url": null,
+          "confidence": "none",
+          "via": "unresolved"
         }
       },
       {
@@ -5609,12 +5840,11 @@
         "version": null,
         "name": "fireflies-meeting-export",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -6029,12 +6259,11 @@
         "version": null,
         "name": "limitless-takeout-search",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -6049,12 +6278,11 @@
         "version": null,
         "name": "limitless-takeout-update",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -6069,12 +6297,11 @@
         "version": null,
         "name": "luminary-tech-radar",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -6134,12 +6361,11 @@
         "version": null,
         "name": "meeting-sync-and-synthesis",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -6193,6 +6419,26 @@
         }
       },
       {
+        "id": "northstar",
+        "classification": "experimental",
+        "lifecycle": "experimental",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/northstar",
+        "resolved_path": "/Users/me/.agents/skills/northstar",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "0.1.0",
+        "name": "northstar",
+        "source": {
+          "type": "authored",
+          "url": "https://github.com/aculich/agent-skills",
+          "install_source_url": "https://github.com/aculich/agent-skills",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
+          "confidence": "high",
+          "via": "authored-registry"
+        }
+      },
+      {
         "id": "op-credentials",
         "classification": "authored",
         "lifecycle": "curated",
@@ -6204,12 +6450,29 @@
         "version": null,
         "name": "op-credentials",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
+        }
+      },
+      {
+        "id": "orx",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/orx",
+        "resolved_path": "/Users/me/.agents/skills/orx",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "orx",
+        "source": {
+          "type": "unknown",
+          "url": null,
+          "confidence": "none",
+          "via": "unresolved"
         }
       },
       {
@@ -6321,12 +6584,11 @@
         "version": null,
         "name": "process-umbrella-incoming",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -6366,12 +6628,11 @@
         "version": null,
         "name": "project-management-guru-adhd",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -6411,12 +6672,11 @@
         "version": null,
         "name": "reflexive-method-authoring-loop",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -6516,6 +6776,25 @@
         }
       },
       {
+        "id": "research-clone-bootstrap",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/research-clone-bootstrap",
+        "resolved_path": "/Users/me/.agents/skills/research-clone-bootstrap",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "1.0.0",
+        "name": "research-clone-bootstrap",
+        "source": {
+          "type": "frontmatter",
+          "url": "https://github.com/aculich/research-clone-bootstrap",
+          "confidence": "high",
+          "via": "frontmatter:homepage",
+          "install_source_url": "https://github.com/aculich/research-clone-bootstrap"
+        }
+      },
+      {
         "id": "sandbox-sdk",
         "classification": "installed",
         "lifecycle": "installed",
@@ -6562,6 +6841,26 @@
         }
       },
       {
+        "id": "skill-propagate-offshoot",
+        "classification": "embedded",
+        "lifecycle": "experimental",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/skill-propagate-offshoot",
+        "resolved_path": "/Users/me/projects/agent-skills/skills/.experimental/skill-propagate-offshoot",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": null,
+        "name": "skill-propagate-offshoot",
+        "symlink_target": "/Users/me/projects/agent-skills/skills/.experimental/skill-propagate-offshoot",
+        "source": {
+          "type": "frontmatter",
+          "url": "https://github.com/aculich/agent-skills",
+          "confidence": "high",
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
+        }
+      },
+      {
         "id": "skill-repair",
         "classification": "authored",
         "lifecycle": "curated",
@@ -6573,12 +6872,11 @@
         "version": "v1",
         "name": "skill-repair",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -6690,12 +6988,11 @@
         "version": "1.0.0",
         "name": "specstory-guard",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -6710,12 +7007,11 @@
         "version": "1.0.0",
         "name": "specstory-link-trail",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -6730,12 +7026,11 @@
         "version": "1.0.0",
         "name": "specstory-organize",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -6750,12 +7045,11 @@
         "version": "1.0.0",
         "name": "specstory-project-stats",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -6770,12 +7064,11 @@
         "version": "1.0",
         "name": "specstory-session-summary",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -6790,12 +7083,29 @@
         "version": "1.0.0",
         "name": "specstory-yak",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
+        }
+      },
+      {
+        "id": "survey-creative-landscape",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/survey-creative-landscape",
+        "resolved_path": "/Users/me/.agents/skills/survey-creative-landscape",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "survey-creative-landscape",
+        "source": {
+          "type": "unknown",
+          "url": null,
+          "confidence": "none",
+          "via": "unresolved"
         }
       },
       {
@@ -6835,12 +7145,11 @@
         "version": null,
         "name": "tools-quickstart-bootstrap",
         "source": {
-          "type": "authored",
+          "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
-          "install_source_url": "https://github.com/aculich/agent-skills",
-          "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
-          "via": "authored-registry"
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -6866,6 +7175,24 @@
           "updated_at": "2026-07-17T12:10:08.228Z",
           "confidence": "high",
           "via": "skill-lock"
+        }
+      },
+      {
+        "id": "unpack-the-question",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/unpack-the-question",
+        "resolved_path": "/Users/me/.agents/skills/unpack-the-question",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "unpack-the-question",
+        "source": {
+          "type": "unknown",
+          "url": null,
+          "confidence": "none",
+          "via": "unresolved"
         }
       },
       {
@@ -7076,6 +7403,33 @@
       "classification": "embedded"
     },
     {
+      "skill": "agent-wake-handoff",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/orphan-agent-wake-4f700dfba9/.cursor/skills/agent-wake-handoff/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/orphan-agent-wake-4f700dfba9/.cursor/skills/agent-wake-handoff/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "agent-wake-missed",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/orphan-agent-wake-4f700dfba9/.cursor/skills/agent-wake-missed/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/orphan-agent-wake-4f700dfba9/.cursor/skills/agent-wake-missed/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "agent-wake-on-event",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/orphan-agent-wake-4f700dfba9/.cursor/skills/agent-wake-on-event/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/orphan-agent-wake-4f700dfba9/.cursor/skills/agent-wake-on-event/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
       "skill": "agents-sdk",
       "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/agents-sdk/SKILL.md",
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
@@ -7175,6 +7529,24 @@
       "classification": "embedded"
     },
     {
+      "skill": "berkeley-cidr-meeting",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/berkeley-cidr-meeting/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/berkeley-cidr-meeting/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "berkeley-cidr-meeting",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-google-workspace-tools/.cursor/skills/berkeley-cidr-meeting/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-google-workspace-tools/.cursor/skills/berkeley-cidr-meeting/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
       "skill": "bigquery-data-transfer-service",
       "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/bigquery-data-transfer-service/SKILL.md",
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
@@ -7193,11 +7565,65 @@
       "classification": "embedded"
     },
     {
+      "skill": "bootstrap-collaborator",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/bootstrap-collaborator/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/bootstrap-collaborator/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "bootstrap-collaborator",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/orphan-from-atoz-dunegon-c6b39c15b5/.cursor/skills/bootstrap-collaborator/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/orphan-from-atoz-dunegon-c6b39c15b5/.cursor/skills/bootstrap-collaborator/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "bootstrap-collaborator",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-from-atoz-private/.cursor/skills/bootstrap-collaborator/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-from-atoz-private/.cursor/skills/bootstrap-collaborator/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "bootstrap-collaborator",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/github-ez-walk-from-ztoa-private/.cursor/skills/bootstrap-collaborator/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-ez-walk-from-ztoa-private/.cursor/skills/bootstrap-collaborator/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
       "skill": "bootstrap-new-project",
       "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/bootstrap-new-project/SKILL.md",
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
       "relative_path": "mirrors/skills-snapshots/skills/bootstrap-new-project/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "bootstrap-peeq-coordination",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-peeq-collabs/.cursor/skills/bootstrap-peeq-coordination/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-peeq-collabs/.cursor/skills/bootstrap-peeq-coordination/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "bootstrap-project-umbrella",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/bootstrap-project-umbrella/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/bootstrap-project-umbrella/SKILL.md",
       "layout": "project-skills-dir",
       "classification": "embedded"
     },
@@ -7265,6 +7691,15 @@
       "classification": "embedded"
     },
     {
+      "skill": "chaos-containment",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/chaos-containment/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/chaos-containment/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
       "skill": "chrome-devtools",
       "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/path-cidr-evictionstory-mn-9f23bc71c2b4/.cursor/skills/chrome-devtools/SKILL.md",
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
@@ -7328,15 +7763,6 @@
       "classification": "embedded"
     },
     {
-      "skill": "cidr-letterhead",
-      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/cidr-letterhead/SKILL.md",
-      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
-      "relative_path": "mirrors/skills-snapshots/skills/cidr-letterhead/SKILL.md",
-      "layout": "project-skills-dir",
-      "classification": "embedded"
-    },
-    {
       "skill": "cloudflare",
       "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/cloudflare/SKILL.md",
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
@@ -7373,6 +7799,33 @@
       "classification": "embedded"
     },
     {
+      "skill": "collab-sync",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/collab-sync/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/collab-sync/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "collab-sync",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/orphan-from-atoz-dunegon-c6b39c15b5/.cursor/skills/collab-sync/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/orphan-from-atoz-dunegon-c6b39c15b5/.cursor/skills/collab-sync/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "collab-sync",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-from-atoz-private/.cursor/skills/collab-sync/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-from-atoz-private/.cursor/skills/collab-sync/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
       "skill": "community-plugins-pipeline",
       "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/path-obsidian-tools-37ed7006ebb9/.cursor/skills/community-plugins-pipeline/SKILL.md",
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
@@ -7400,6 +7853,42 @@
       "classification": "embedded"
     },
     {
+      "skill": "create-justfile",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/create-justfile/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/create-justfile/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "create-justfile",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/orphan-from-atoz-dunegon-c6b39c15b5/.cursor/skills/create-justfile/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/orphan-from-atoz-dunegon-c6b39c15b5/.cursor/skills/create-justfile/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "create-justfile",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-from-atoz-private/.cursor/skills/create-justfile/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-from-atoz-private/.cursor/skills/create-justfile/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "create-justfile",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/github-ez-walk-from-ztoa-private/.cursor/skills/create-justfile/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-ez-walk-from-ztoa-private/.cursor/skills/create-justfile/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
       "skill": "cursor-extension-fork-lifecycle",
       "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/path-cursor-extensions-249d2b54da21/.cursor/skills/cursor-extension-fork-lifecycle/SKILL.md",
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
@@ -7415,6 +7904,15 @@
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
       "relative_path": "mirrors/by-project/path-cursor-extensions-249d2b54da21/.cursor/skills/cursor-extension-landscape-search/SKILL.md",
       "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "cursor-purification",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/cursor-purification/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/cursor-purification/SKILL.md",
+      "layout": "project-skills-dir",
       "classification": "embedded"
     },
     {
@@ -7450,6 +7948,15 @@
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
       "relative_path": "mirrors/skills-snapshots/skills/dbt-bigquery/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "deaccession-guides-and-guards",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/deaccession-guides-and-guards/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/deaccession-guides-and-guards/SKILL.md",
       "layout": "project-skills-dir",
       "classification": "embedded"
     },
@@ -7523,6 +8030,33 @@
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
       "relative_path": "mirrors/skills-snapshots/skills/developing-with-bigquery/SKILL.md",
       "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "discover-channel",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/discover-channel/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/discover-channel/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "discover-channel",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/orphan-from-atoz-dunegon-c6b39c15b5/.cursor/skills/discover-channel/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/orphan-from-atoz-dunegon-c6b39c15b5/.cursor/skills/discover-channel/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "discover-channel",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-from-atoz-private/.cursor/skills/discover-channel/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-from-atoz-private/.cursor/skills/discover-channel/SKILL.md",
+      "layout": "project-cursor",
       "classification": "embedded"
     },
     {
@@ -7643,6 +8177,24 @@
       "classification": "embedded"
     },
     {
+      "skill": "ern-cidr-mail",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/ern-cidr-mail/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/ern-cidr-mail/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "ern-cidr-mail",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-google-workspace-tools/.cursor/skills/ern-cidr-mail/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-google-workspace-tools/.cursor/skills/ern-cidr-mail/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
       "skill": "faceless-explainer",
       "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/faceless-explainer/SKILL.md",
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
@@ -7760,6 +8312,15 @@
       "classification": "embedded"
     },
     {
+      "skill": "github-trending",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/github-trending/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/github-trending/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
       "skill": "glossary-curation",
       "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/github-cidrlab-cidr-glossary/.cursor/skills/glossary-curation/SKILL.md",
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
@@ -7792,6 +8353,15 @@
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
       "relative_path": "mirrors/skills-snapshots/skills/google-workspace-new-org/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "hot-livewires-preflight",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/hot-livewires-preflight/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/hot-livewires-preflight/SKILL.md",
       "layout": "project-skills-dir",
       "classification": "embedded"
     },
@@ -7985,6 +8555,42 @@
       "classification": "embedded"
     },
     {
+      "skill": "message-in-a-bottle",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/message-in-a-bottle/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/message-in-a-bottle/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "message-in-a-bottle",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/orphan-from-atoz-dunegon-c6b39c15b5/.cursor/skills/message-in-a-bottle/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/orphan-from-atoz-dunegon-c6b39c15b5/.cursor/skills/message-in-a-bottle/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "message-in-a-bottle",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-from-atoz-private/.cursor/skills/message-in-a-bottle/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-from-atoz-private/.cursor/skills/message-in-a-bottle/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "message-in-a-bottle",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/github-ez-walk-from-ztoa-private/.cursor/skills/message-in-a-bottle/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-ez-walk-from-ztoa-private/.cursor/skills/message-in-a-bottle/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
       "skill": "ml-best-practices",
       "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/ml-best-practices/SKILL.md",
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
@@ -8057,6 +8663,24 @@
       "classification": "embedded"
     },
     {
+      "skill": "peeq-cidr-meeting",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/peeq-cidr-meeting/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/peeq-cidr-meeting/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "peeq-cidr-meeting",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-google-workspace-tools/.cursor/skills/peeq-cidr-meeting/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-google-workspace-tools/.cursor/skills/peeq-cidr-meeting/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
       "skill": "personnel-render",
       "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/orphan-kit-512fba8992/.cursor/skills/personnel-render/SKILL.md",
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
@@ -8093,6 +8717,15 @@
       "classification": "embedded"
     },
     {
+      "skill": "product-hunt-search",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/product-hunt-search/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/product-hunt-search/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
       "skill": "product-launch-video",
       "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/product-launch-video/SKILL.md",
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
@@ -8120,6 +8753,15 @@
       "classification": "embedded"
     },
     {
+      "skill": "quick-stash",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/quick-stash/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/quick-stash/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
       "skill": "quickstart-get-running",
       "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/github-tomascupr-sandstorm/.cursor/skills/quickstart-get-running/SKILL.md",
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
@@ -8143,6 +8785,33 @@
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
       "relative_path": "mirrors/skills-snapshots/skills/remotion-to-hyperframes/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "report-reforge",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/report-reforge/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/report-reforge/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "research-clone-bootstrap",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/research-clone-bootstrap/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/research-clone-bootstrap/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "research-clone-bootstrap.bak-20260718",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/research-clone-bootstrap.bak-20260718/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/research-clone-bootstrap.bak-20260718/SKILL.md",
       "layout": "project-skills-dir",
       "classification": "embedded"
     },
@@ -8201,6 +8870,15 @@
       "classification": "embedded"
     },
     {
+      "skill": "rrid-meta-coord",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/path-rrid-ucb-73374e9c511d/.cursor/skills/rrid-meta-coord/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-rrid-ucb-73374e9c511d/.cursor/skills/rrid-meta-coord/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
       "skill": "sandbox-sdk",
       "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/sandbox-sdk/SKILL.md",
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
@@ -8224,6 +8902,15 @@
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
       "relative_path": "mirrors/by-project/path-cidr-evictionstory-mn-9f23bc71c2b4/.cursor/skills/scrolly-chrome-debug/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "siy-contacts-ingest",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-peeq-siy-contacts/.cursor/skills/siy-contacts-ingest/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-peeq-siy-contacts/.cursor/skills/siy-contacts-ingest/SKILL.md",
       "layout": "project-cursor",
       "classification": "embedded"
     },
@@ -8269,6 +8956,15 @@
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
       "relative_path": "mirrors/by-project/github-aculich-cidr-policymap-ca-smc/.cursor/skills/smc-policy-capsule/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "socialmedia-compounding",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-writing-quality/.cursor/skills/socialmedia-compounding/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-writing-quality/.cursor/skills/socialmedia-compounding/SKILL.md",
       "layout": "project-cursor",
       "classification": "embedded"
     },
@@ -8381,6 +9077,15 @@
       "classification": "embedded"
     },
     {
+      "skill": "stale-tooling-trial",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/stale-tooling-trial/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/stale-tooling-trial/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
       "skill": "storyvale-essay-pipeline",
       "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/path-storytelling-capsules-12c38336582f/.cursor/skills/storyvale-essay-pipeline/SKILL.md",
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
@@ -8413,6 +9118,15 @@
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
       "relative_path": "mirrors/skills-snapshots/skills/talking-head-recut/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "tidy-stash",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/tidy-stash/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/tidy-stash/SKILL.md",
       "layout": "project-skills-dir",
       "classification": "embedded"
     },
@@ -8575,6 +9289,42 @@
       "project_root": "/Users/me/ops/skill-eval/claude-adhd-skills",
       "project_slug": "github-com-ravila4-claude-adhd-skills",
       "relative_path": "skills/test-driven-development/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "adhd-daily-planner",
+      "skill_path": "/Users/me/projects/adhdev-skills/skills/adhd-daily-planner/SKILL.md",
+      "project_root": "/Users/me/projects/adhdev-skills",
+      "project_slug": "github-com-aculich-adhdev-skills",
+      "relative_path": "skills/adhd-daily-planner/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "adhdev-engineering-partnership",
+      "skill_path": "/Users/me/projects/adhdev-skills/skills/adhdev-engineering-partnership/SKILL.md",
+      "project_root": "/Users/me/projects/adhdev-skills",
+      "project_slug": "github-com-aculich-adhdev-skills",
+      "relative_path": "skills/adhdev-engineering-partnership/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "adhdev-output-shape",
+      "skill_path": "/Users/me/projects/adhdev-skills/skills/adhdev-output-shape/SKILL.md",
+      "project_root": "/Users/me/projects/adhdev-skills",
+      "project_slug": "github-com-aculich-adhdev-skills",
+      "relative_path": "skills/adhdev-output-shape/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "project-management-guru-adhd",
+      "skill_path": "/Users/me/projects/adhdev-skills/skills/project-management-guru-adhd/SKILL.md",
+      "project_root": "/Users/me/projects/adhdev-skills",
+      "project_slug": "github-com-aculich-adhdev-skills",
+      "relative_path": "skills/project-management-guru-adhd/SKILL.md",
       "layout": "project-skills-dir",
       "classification": "embedded"
     },
@@ -9011,6 +9761,15 @@
       "classification": "embedded"
     },
     {
+      "skill": "unpack-the-conversation",
+      "skill_path": "/Users/me/projects/cidr-org/.cursor/skills/unpack-the-conversation/SKILL.md",
+      "project_root": "/Users/me/projects/cidr-org",
+      "project_slug": "path-4bd8f5480d99",
+      "relative_path": ".cursor/skills/unpack-the-conversation/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
       "skill": "glossary-promotion",
       "skill_path": "/Users/me/projects/cidr-org/cidr-glossary-project/.cursor/skills/glossary-promotion/SKILL.md",
       "project_root": "/Users/me/projects/cidr-org/cidr-glossary-project",
@@ -9034,6 +9793,42 @@
       "project_root": "/Users/me/projects/cidr-org/cidr-glossary-project/cidr-glossary",
       "project_slug": "github-com-cidrlab-cidr-glossary",
       "relative_path": ".cursor/skills/glossary-writing/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "cidr-letterhead",
+      "skill_path": "/Users/me/projects/cidr-org/library__cidrlab/.cursor/skills/cidr-letterhead/SKILL.md",
+      "project_root": "/Users/me/projects/cidr-org/library__cidrlab",
+      "project_slug": "github-com-cidrlab-library",
+      "relative_path": ".cursor/skills/cidr-letterhead/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "admin-outbound-calendar",
+      "skill_path": "/Users/me/projects/cidr-org/llc-admin/.cursor/skills/admin-outbound-calendar/SKILL.md",
+      "project_root": "/Users/me/projects/cidr-org/llc-admin",
+      "project_slug": "github-com-cidrlab-llc-admin",
+      "relative_path": ".cursor/skills/admin-outbound-calendar/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "llc-admin-refresh",
+      "skill_path": "/Users/me/projects/cidr-org/llc-admin/.cursor/skills/llc-admin-refresh/SKILL.md",
+      "project_root": "/Users/me/projects/cidr-org/llc-admin",
+      "project_slug": "github-com-cidrlab-llc-admin",
+      "relative_path": ".cursor/skills/llc-admin-refresh/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "llc-admin-setup",
+      "skill_path": "/Users/me/projects/cidr-org/llc-admin/.cursor/skills/llc-admin-setup/SKILL.md",
+      "project_root": "/Users/me/projects/cidr-org/llc-admin",
+      "project_slug": "github-com-cidrlab-llc-admin",
+      "relative_path": ".cursor/skills/llc-admin-setup/SKILL.md",
       "layout": "project-cursor",
       "classification": "embedded"
     },
@@ -9704,6 +10499,15 @@
       "classification": "embedded"
     },
     {
+      "skill": "makerperks",
+      "skill_path": "/Users/me/projects/makerperks/skills/makerperks/SKILL.md",
+      "project_root": "/Users/me/projects/makerperks",
+      "project_slug": "github-com-aculich-makerperks",
+      "relative_path": "skills/makerperks/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
       "skill": "openspec-apply-change",
       "skill_path": "/Users/me/projects/makerperks/.codex/skills/openspec-apply-change/SKILL.md",
       "project_root": "/Users/me/projects/makerperks",
@@ -9736,15 +10540,6 @@
       "project_root": "/Users/me/projects/makerperks",
       "project_slug": "github-com-aculich-makerperks",
       "relative_path": ".codex/skills/openspec-propose/SKILL.md",
-      "layout": "project-skills-dir",
-      "classification": "embedded"
-    },
-    {
-      "skill": "perks",
-      "skill_path": "/Users/me/projects/makerperks/skills/perks/SKILL.md",
-      "project_root": "/Users/me/projects/makerperks",
-      "project_slug": "github-com-aculich-makerperks",
-      "relative_path": "skills/perks/SKILL.md",
       "layout": "project-skills-dir",
       "classification": "embedded"
     },
@@ -11063,6 +11858,24 @@
       "classification": "embedded"
     },
     {
+      "skill": "agent-browser",
+      "skill_path": "/Users/me/tools/agentic-browser-quickstart/.agents/skills/agent-browser/SKILL.md",
+      "project_root": "/Users/me/tools/agentic-browser-quickstart",
+      "project_slug": "path-31f69ac85908",
+      "relative_path": ".agents/skills/agent-browser/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "playwright-cli",
+      "skill_path": "/Users/me/tools/agentic-browser-quickstart/.agents/skills/playwright-cli/SKILL.md",
+      "project_root": "/Users/me/tools/agentic-browser-quickstart",
+      "project_slug": "path-31f69ac85908",
+      "relative_path": ".agents/skills/playwright-cli/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
       "skill": "add-components-to-registry",
       "skill_path": "/Users/me/tools/agentic-ux/tambo__aculich/plugins/tambo/skills/add-components-to-registry/SKILL.md",
       "project_root": "/Users/me/tools/agentic-ux/tambo__aculich",
@@ -11879,6 +12692,15 @@
       "project_slug": "path-9c19b6fb9ce0",
       "relative_path": ".agents/skills/data-visualization/SKILL.md",
       "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "bcal-declutter",
+      "skill_path": "/Users/me/tools/google-workspace-tools/.cursor/skills/bcal-declutter/SKILL.md",
+      "project_root": "/Users/me/tools/google-workspace-tools",
+      "project_slug": "github-com-aculich-google-workspace-tools",
+      "relative_path": ".cursor/skills/bcal-declutter/SKILL.md",
+      "layout": "project-cursor",
       "classification": "embedded"
     },
     {
@@ -16689,45 +17511,55 @@
     }
   ],
   "summary": {
-    "install_rows": 309,
-    "unique_skills": 149,
+    "install_rows": 329,
+    "unique_skills": 163,
     "by_classification": {
       "authored": 59,
-      "installed": 130,
-      "embedded": 84,
-      "vendor": 36
+      "installed": 141,
+      "embedded": 91,
+      "vendor": 37,
+      "experimental": 1
     },
     "by_classification_unique": {
-      "authored": 31,
-      "embedded": 63,
-      "installed": 75,
-      "vendor": 36
+      "authored": 32,
+      "embedded": 67,
+      "experimental": 1,
+      "installed": 84,
+      "vendor": 37
     },
     "by_source_type": {
-      "authored": 88,
+      "authored": 34,
       "skill-lock": 150,
-      "local-repo": 6,
-      "vendor": 36,
+      "local-repo": 8,
+      "vendor": 37,
       "local-estate": 22,
-      "unknown": 3,
+      "unknown": 13,
       "community": 3,
-      "frontmatter": 1
+      "frontmatter": 62
     },
     "by_source_type_unique": {
       "authored": 31,
       "community": 3,
-      "frontmatter": 1,
+      "frontmatter": 30,
       "local-estate": 20,
-      "local-repo": 6,
+      "local-repo": 8,
       "skill-lock": 49,
-      "unknown": 3,
-      "vendor": 36
+      "unknown": 11,
+      "vendor": 37
     },
     "broken_symlinks": [],
     "unknown_source": [
       "bootstrap-project-umbrella",
+      "clarify-audience-purpose",
+      "converge-articulate",
+      "dd-cli-usage",
+      "divergent-explore",
+      "envision-end-state",
       "github-trending",
-      "product-hunt-search"
+      "orx",
+      "product-hunt-search",
+      "survey-creative-landscape",
+      "unpack-the-question"
     ]
   }
 }

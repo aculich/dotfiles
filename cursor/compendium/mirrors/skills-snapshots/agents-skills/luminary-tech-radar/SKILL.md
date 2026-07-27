@@ -1,6 +1,10 @@
 ---
 name: luminary-tech-radar
 description: Mirrors a public GitHub user plus gists, tier-searches related repos, samples fork traction, runs two parallel-cli web searches to JSON, and writes RADAR + LANDSCAPE markdown reports. Use for “tech radar”, “mirror all repos”, “track luminary”, “gist mirror”, “fork analysis”, or repeating the Karpathy-style workflow for another GitHub handle.
+metadata:
+  source:
+    upstream: https://github.com/aculich/agent-skills
+    canonical: https://github.com/aculich/agent-skills
 ---
 
 # Luminary Tech Radar

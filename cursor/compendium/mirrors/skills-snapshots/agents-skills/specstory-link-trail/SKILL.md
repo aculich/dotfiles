@@ -3,6 +3,9 @@ name: specstory-link-trail
 description: Track all URLs fetched during SpecStory AI coding sessions. Run when user says "show my link trail", "what URLs did I visit", "list fetched links", or "show web fetches".
 license: Apache-2.0
 metadata:
+  source:
+    upstream: https://github.com/aculich/agent-skills
+    canonical: https://github.com/aculich/agent-skills
   author: SpecStory, Inc.
   version: "1.0.0"
   argument-hint: "[history-file-or-pattern]"
