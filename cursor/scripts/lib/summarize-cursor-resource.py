@@ -133,6 +133,7 @@ def swapusage() -> dict:
 
 
 def write_hotspots(path: Path, hosts: list[dict], hot: list[dict]) -> None:
+    by_rss = sorted(hosts, key=lambda h: h["rss_mb"], reverse=True)
     lines = [
         "# Extension-host hotspots",
         "",
@@ -148,6 +149,8 @@ def write_hotspots(path: Path, hosts: list[dict], hot: list[dict]) -> None:
         lines.append("")
     lines.extend(
         [
+            "## By CPU",
+            "",
             "| CPU % | RSS MB | PID | Kind | Workspace |",
             "|---:|---:|---:|---|---|",
         ]
@@ -159,6 +162,23 @@ def write_hotspots(path: Path, hosts: list[dict], hot: list[dict]) -> None:
         )
     if not hot:
         lines.append("| — | — | — | — | (none above threshold) |")
+    lines.extend(
+        [
+            "",
+            "## By RSS (resident memory)",
+            "",
+            "RSS ≈ Activity Monitor **Real Mem** — pages currently resident for that process "
+            "(not private-only, not compressed-system-wide).",
+            "",
+            "| RSS MB | CPU % | PID | Kind | Workspace |",
+            "|---:|---:|---:|---|---|",
+        ]
+    )
+    for h in by_rss[:25]:
+        lines.append(
+            f"| {h['rss_mb']:.1f} | {h['cpu_pct']:.1f} | {h['pid']} | "
+            f"`{h['kind']}` | `{h['workspace']}` |"
+        )
     lines.append("")
     path.write_text("\n".join(lines) + "\n")
 
@@ -196,6 +216,25 @@ def write_report(
     for h in hosts[:20]:
         lines.append(
             f"| {h['cpu_pct']:.1f} | {h['rss_mb']:.1f} | {h['pid']} | "
+            f"`{h['kind']}` | `{h['workspace']}` |"
+        )
+    by_rss = sorted(hosts, key=lambda h: h["rss_mb"], reverse=True)
+    lines.extend(
+        [
+            "",
+            "## Top extension-hosts by RSS (resident memory)",
+            "",
+            "RSS comes from `ps` `rss` (KB→MB). Closest cheap CLI analogue to Activity Monitor "
+            "**Real Mem** — resident pages for that process. Not private-only; not system compressed "
+            "memory. High RSS + low CPU often means a heavy idle workspace (language server, indexes).",
+            "",
+            "| RSS MB | CPU % | PID | Kind | Workspace |",
+            "|---:|---:|---:|---|---|",
+        ]
+    )
+    for h in by_rss[:20]:
+        lines.append(
+            f"| {h['rss_mb']:.1f} | {h['cpu_pct']:.1f} | {h['pid']} | "
             f"`{h['kind']}` | `{h['workspace']}` |"
         )
     lines.extend(["", "## Mitigation strategies (diagnose-first)", ""])
@@ -320,6 +359,14 @@ def main() -> int:
         samples=samples,
     )
 
+    by_rss = sorted(hosts, key=lambda h: h["rss_mb"], reverse=True)
+    host_row = lambda h: {
+        "workspace": h["workspace"],
+        "kind": h["kind"],
+        "cpu_pct": h["cpu_pct"],
+        "rss_mb": h["rss_mb"],
+        "pid": h["pid"],
+    }
     summary = {
         "generated_at": generated_at,
         "out_dir": str(out_dir),
@@ -327,16 +374,14 @@ def main() -> int:
         "hot_count": len(hot),
         "hot_threshold_cpu": HOT_THRESHOLD,
         "simultaneous_hot": len(hot) >= 2,
-        "top_hosts": [
-            {
-                "workspace": h["workspace"],
-                "kind": h["kind"],
-                "cpu_pct": h["cpu_pct"],
-                "rss_mb": h["rss_mb"],
-                "pid": h["pid"],
-            }
-            for h in hosts[:12]
-        ],
+        "top_hosts": [host_row(h) for h in hosts[:12]],
+        "top_hosts_by_rss": [host_row(h) for h in by_rss[:12]],
+        "memory_metric": {
+            "name": "rss_mb",
+            "source": "ps rss (KB) / 1024",
+            "approx": "Activity Monitor Real Mem",
+            "not": "private memory, compressed memory, or VM size",
+        },
         "loadavg": system["loadavg"],
         "swap_used_mb": (system.get("swap") or {}).get("swap_used_mb"),
         "pressure_hint": (system.get("memory_pressure") or {}).get("pressure_hint"),

@@ -95,7 +95,7 @@
   "workbench.editorAssociations": {
     "*.md": "default"
   },
-  "editor.minimap.enabled": false,
+  "editor.minimap.enabled": true,
   "editor.renderWhitespace": "none",
   "editor.semanticHighlighting.enabled": false,
   "git.blame.statusBarItem.enabled": true,
