@@ -5,8 +5,10 @@
 - **project_slug:** `cursor-ops`
 - **repo_root:** `/Users/me/dotfiles/cursor`
 - **dotfiles_root:** `/Users/me/dotfiles`
-- **task_runner:** `just` — default recipe lists help; **`just status`** is the read-only health entrypoint
+- **task_runner:** `just` — default recipe lists help; **`just status`** is read-only health; **`just doit`** is DWIM (status + resource forensics, diagnose-only)
 - **status_canvas:** `/Users/me/.cursor/projects/Users-me-dotfiles-cursor/canvases/cursor-ops-status.canvas.tsx`
+- **resource_snapshot:** `just resource-snapshot` → `observability/perf/resource-*/` (pointer: `observability/perf/last-resource-snapshot.txt`)
+- **macos_cli_landscape:** `~/tools/macosx-tools/research/macos-system-info/CLI-RESOURCE-TOOLS.md`
 
 ## Key paths
 

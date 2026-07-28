@@ -10,5 +10,8 @@ observability/inventories/**/*.csv
 # Timestamped perf captures from scripts/cursor-perf-report.sh
 observability/perf/run-*/
 
+# Resource forensics snapshots (just resource-snapshot / just doit)
+observability/perf/resource-*/
+
 # Large process-history dumps (can exceed GitHub's 100MB limit)
 observability/perf/cursor-process-history-*.jsonl

@@ -114,6 +114,25 @@ config-snapshot:
     @"{{scripts}}/snapshot-cursor-config.sh"
 
 # ------------------------------------------------------------------
+# Resources / DWIM
+# ------------------------------------------------------------------
+
+# Activity-Monitor-style Cursor + system snapshot (diagnose-only; never kills)
+resource-snapshot:
+    @"{{scripts}}/cursor-resource-snapshot.sh"
+
+# Tip: interactive watchers (not a long-running just job)
+resource-watch:
+    @echo "Interactive: run 'btop' (installed) for a TUI Activity Monitor."
+    @echo "Apple Silicon power (optional): brew install macmon && macmon"
+    @echo "Scripted Cursor forensics: just resource-snapshot  (or just doit)"
+    @echo "Landscape notes: ~/tools/macosx-tools/research/macos-system-info/CLI-RESOURCE-TOOLS.md"
+
+# DWIM: status + resource snapshot + tips (never auto-tune / never kill)
+doit:
+    @"{{scripts}}/cursor-doit.sh"
+
+# ------------------------------------------------------------------
 # Automation
 # ------------------------------------------------------------------
 

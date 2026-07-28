@@ -5,9 +5,20 @@
 
 See [docs/cursor-home-and-plans.md](../docs/cursor-home-and-plans.md) · [docs/agents-window-hygiene.md](../docs/agents-window-hygiene.md).
 
-## Performance snapshot and report
+## Resource forensics (Activity Monitor–style)
 
-Run while Cursor is open (ideally when you want to diagnose idle CPU/RAM):
+Preferred when many `Cursor Helper (Plugin): extension-host` processes look hot while windows are “idle”:
+
+```bash
+cd ~/dotfiles/cursor
+just resource-snapshot    # or: just doit
+```
+
+Writes **`observability/perf/resource-<UTC-ts>/`** with parsed extension-hosts by workspace, memory pressure, hotspots, and mitigation tips (diagnose-only — does not kill windows). Latest path: `observability/perf/last-resource-snapshot.txt`. Interactive glance: `just resource-watch` (`btop` / optional `macmon`). Landscape notes live in `~/tools/macosx-tools/research/macos-system-info/CLI-RESOURCE-TOOLS.md`.
+
+## Performance snapshot and report (`cursor -s`)
+
+Run while Cursor is open (ideally when you want to diagnose idle CPU/RAM). Note: `cursor -s` can hang under heavy load; resource-snapshot skips it unless `CURSOR_STATUS=1`.
 
 ```bash
 cd ~/dotfiles/cursor

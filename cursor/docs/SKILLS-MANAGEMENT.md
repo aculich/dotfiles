@@ -25,12 +25,12 @@ A **private backup repo scaffold** for cross-project Cursor artifacts:
 - Optional `.specstory/` (rules-only by default)
 - **Global skills snapshots** under `mirrors/skills-snapshots/`
 
-**Created:** May 2026, following the `bootstrap-tool-config-repo` skill pattern (dotfiles scaffold commit `4ef330f`, 2026-06-12). **Live sibling repo:** `~/src/dotfiles-cursor-compendium` → private GitHub `aculich/dotfiles-cursor-compendium`. The dotfiles tree keeps the **canonical scripts**; copy or sync scaffold changes into the sibling when you change layout.
+**Created:** May 2026, following the `bootstrap-tool-config-repo` skill pattern (dotfiles scaffold commit `4ef330f`, 2026-06-12). **Live sibling repo:** `/Users/me/ops/dotfiles-cursor-compendium` → private GitHub `aculich/dotfiles-cursor-compendium`. The dotfiles tree keeps the **canonical scripts**; copy or sync scaffold changes into the sibling when you change layout.
 
 Set in shell profile:
 
 ```bash
-export CURSOR_COMPENDIUM_ROOT=/Users/me/src/dotfiles-cursor-compendium
+export CURSOR_COMPENDIUM_ROOT=/Users/me/ops/dotfiles-cursor-compendium
 ```
 
 ### skills-registry (`compendium/skills-registry/`)
@@ -85,7 +85,7 @@ Commits are never pushed automatically. Run `just remotes` then `git push` when 
 ~/dotfiles/cursor/scripts/snapshot-all-skills.sh
 
 # 3. Mirror project .cursor/ trees (includes project-local skills)
-export CURSOR_COMPENDIUM_ROOT=~/src/dotfiles-cursor-compendium
+export CURSOR_COMPENDIUM_ROOT=/Users/me/ops/dotfiles-cursor-compendium
 cd "$CURSOR_COMPENDIUM_ROOT"
 ./scripts/snapshot-all.sh    # discover projects, sync plans, snapshot each project
 
