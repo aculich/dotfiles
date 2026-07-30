@@ -203,14 +203,18 @@ scaffold-lineages:
         echo "ATTACH existing {{gh_owner}}/$name"
       else
         gh repo create "{{gh_owner}}/$name" --private --description "{{tool_label}} private fork (metarepo lineage)" >/dev/null
-        # Seed from upstream (full history preferred for private divergence)
+        # Seed main only (avoid mirroring every upstream tag/branch)
         local tmp
         tmp="$(mktemp -d)"
-        git clone --bare "{{upstream_url}}.git" "$tmp/upstream.git"
-        git -C "$tmp/upstream.git" push --mirror "git@github.com:{{gh_owner}}/$name.git" || \
-          git -C "$tmp/upstream.git" push --mirror "https://github.com/{{gh_owner}}/$name.git"
+        git clone --depth 1 --branch main "{{upstream_url}}.git" "$tmp/src"
+        git -C "$tmp/src" remote remove origin
+        git -C "$tmp/src" remote add origin "git@github.com:{{gh_owner}}/$name.git"
+        if ! git -C "$tmp/src" push -u origin main; then
+          git -C "$tmp/src" remote set-url origin "https://github.com/{{gh_owner}}/$name.git"
+          git -C "$tmp/src" push -u origin main
+        fi
         rm -rf "$tmp"
-        echo "CREATED private {{gh_owner}}/$name (mirrored from upstream)"
+        echo "CREATED private {{gh_owner}}/$name (main seeded from upstream)"
       fi
       if [[ ! -d "$dest/.git" ]]; then
         gh repo clone "{{gh_owner}}/$name" "$dest"
