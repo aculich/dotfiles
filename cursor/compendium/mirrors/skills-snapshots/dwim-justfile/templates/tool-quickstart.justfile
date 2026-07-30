@@ -136,7 +136,7 @@ doit: doctor ensure-upstream
     echo "=== Next: Phase C (from PHASES.md) ==="
     just _phase-brief C
 
-# just phase B|C|D|E
+# just phase A|B|C|D|R|E
 phase name:
     #!/usr/bin/env bash
     set -euo pipefail
@@ -156,24 +156,29 @@ phase name:
         echo ""
         echo "Machine next: just scaffold-lineages   (WITHOUT_TEAM=1 to skip team)"
         ;;
+      R|r)
+        just _phase-brief R
+        echo ""
+        echo "Machine next: just scaffold-runtime"
+        ;;
       E|e)
         just _phase-brief E
         ;;
       *)
-        echo "Usage: just phase A|B|C|D|E"
+        echo "Usage: just phase A|B|C|D|R|E"
         exit 1
         ;;
     esac
 
-# Run B then hand off to C (agent continues kit)
+# Run B then hand off toward C→D→R
 phases:
     #!/usr/bin/env bash
     set -euo pipefail
     just phase B
     echo ""
     echo "=== Kit hand-off ==="
-    echo "Phase B done. Continue in Cursor: Phase C brief above, then Phase D (just scaffold-lineages)."
-    echo "Or: just phase C / just phase D"
+    echo "Phase B done. Continue: just phase C → scaffold-lineages → phase D → scaffold-runtime → phase R"
+    echo "Branch tip: git checkout -b regen/<laptop> before regenerating (generate-and-compare)."
 
 # Phase D: public GitHub fork + personal private + team private (unless WITHOUT_TEAM=1)
 scaffold-lineages:
@@ -234,6 +239,46 @@ scaffold-lineages:
 
     echo ""
     echo "scaffold-lineages done. Next: write FORKS.md + PLAYBOOK.md (just phase D brief)."
+
+# Phase R: ensure forks + print runtime checklist (agent writes recipes)
+scaffold-runtime:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    just ensure-upstream
+    mkdir -p forks dossier/overlays
+    missing=0
+    for d in forks/public forks/personal forks/team; do
+      if [[ -d "$d/.git" ]]; then
+        echo "OK  $d"
+      else
+        echo "MISS $d — run: just scaffold-lineages"
+        missing=1
+      fi
+    done
+    if [[ -d "{{upstream_dir}}" ]]; then
+      if ls "{{upstream_dir}}"/*.xcodeproj >/dev/null 2>&1 || ls "{{upstream_dir}}"/**/*.xcodeproj >/dev/null 2>&1; then
+        echo "SHAPE xcodeproj detected — prefer LOCAL_BUILD recipes"
+      fi
+      if [[ -f "{{upstream_dir}}/Casks" ]] || grep -qi homebrew "{{upstream_dir}}/README.md" 2>/dev/null; then
+        echo "SHAPE brew hints in upstream README — consider cask for Upstream track"
+      fi
+    fi
+    echo ""
+    echo "=== Phase R checklist ==="
+    echo "1. Agent: just phase R (write just recipes + flavor xcconfigs + deepen PRAXIS/PLAYBOOK)"
+    echo "2. Upstream install on this Mac"
+    echo "3. Personal/team flavors with io.github.aculich.* bundle IDs; push forks"
+    echo "4. Rewrite doit to daily-driver DWIM; prove one key function"
+    [[ "$missing" -eq 0 ]] || exit 1
+
+# Fresh laptop / after Phase R: lineages then daily-driver doit
+bootstrap-machine: scaffold-lineages
+    #!/usr/bin/env bash
+    set -euo pipefail
+    echo "=== bootstrap-machine ==="
+    just scaffold-runtime || true
+    just doit
+    echo "bootstrap-machine finished — if doit is still smoke-only, complete Phase R first."
 
 open-folder:
     #!/usr/bin/env bash

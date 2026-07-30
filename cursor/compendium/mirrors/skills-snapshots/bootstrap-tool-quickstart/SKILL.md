@@ -91,3 +91,7 @@ Also ship [`templates/PHASES.md`](../dwim-justfile/templates/PHASES.md) (substit
 - Landscape: `bootstrap-tool-landscape`
 - Justfile: `dwim-justfile`
 - Fork lineages: `quickstart-fork-lineage`
+
+## After Phase D — Runtime (Phase R)
+
+Singleton metarepos continue with **Phase R** (`just phase R` / `scaffold-runtime`): generate LOCAL_BUILD or brew install recipes and `io.github.aculich.*` flavor identities. Multi-laptop: push PHASES on `main`, then `regen/<laptop>` branches (see SIDEQUEST.md / COMPARE_REGEN.md). Do not bulk-copy legacy quickstart justfiles as the primary path.
