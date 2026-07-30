@@ -203,10 +203,10 @@ scaffold-lineages:
         echo "ATTACH existing {{gh_owner}}/$name"
       else
         gh repo create "{{gh_owner}}/$name" --private --description "{{tool_label}} private fork (metarepo lineage)" >/dev/null
-        # Seed main only (avoid mirroring every upstream tag/branch)
+        # Seed main with full history of that branch (shallow push lacks parent objects)
         local tmp
         tmp="$(mktemp -d)"
-        git clone --depth 1 --branch main "{{upstream_url}}.git" "$tmp/src"
+        git clone --branch main --single-branch "{{upstream_url}}.git" "$tmp/src"
         git -C "$tmp/src" remote remove origin
         git -C "$tmp/src" remote add origin "git@github.com:{{gh_owner}}/$name.git"
         if ! git -C "$tmp/src" push -u origin main; then
