@@ -1,25 +1,23 @@
 # Bootstrap a tool quickstart metarepo (Phase A)
 
-Create `~/tools/<slug>-quickstart/` (or in-place / `*-metarepo` if asked) with upstream pin and real `just doit`.
+Create `~/tools/<slug>-metarepo/` with upstream pin, PHASES.md, and real `just doit`.
 
 ## Usage
 
 ```
 /bootstrap-quickstart owner/repo
-/bootstrap-quickstart Beingpax/VoiceInk
-/bootstrap-quickstart owner/repo https://example.com/product
+/bootstrap-quickstart yazinsai/OpenOats
 ```
 
 ## Implementation
 
 1. Read skill: `~/.cursor/skills/bootstrap-tool-quickstart/SKILL.md`
-2. Follow Phase A checklist only (no dossier/PRD/PLAYBOOK)
-3. Install justfile from `~/.cursor/skills/dwim-justfile/templates/tool-quickstart.justfile`
-4. Commit Phase A; print: open folder → `just doit`
-5. Do not open Cursor mid-A; inception UX in exemplar `INCEPTION.md`
+2. Default path: `~/tools/<slug>-metarepo` (not `-quickstart`)
+3. Ship PHASES.md + tool-quickstart.justfile from `~/.cursor/skills/dwim-justfile/templates/`
+4. Phase A only; hand-off: open folder → `just doit` → `just phase C` / `just scaffold-lineages`
+5. Phase D default triad: public + personal + team (`WITHOUT_TEAM=1` to skip team)
 
 ## Related
 
 - Landscape: `/bootstrap-landscape`
-- Justfile only: `/dwim-justfile`
-- Alias skill names: `tools-quickstart-bootstrap`, `bootstrap-product-quickstart`
+- Justfile: `/dwim-justfile`

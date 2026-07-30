@@ -1,11 +1,17 @@
 # {{TOOL_LABEL}} — tool quickstart metarepo DWIM
-# Phase B: `just doit` (doctor → pin → smoke → functional-proof checklist → Phase C prompt)
+# Phases: see PHASES.md | B = just doit | D lineages = just scaffold-lineages
 
 tool_label := "{{TOOL_LABEL}}"
 upstream_url := "{{UPSTREAM_URL}}"
 upstream_dir := "{{UPSTREAM_DIR}}"
 pin_file := "{{PIN_FILE}}"
 root_dir := justfile_directory()
+gh_owner := "{{GH_OWNER}}"
+upstream_owner := "{{UPSTREAM_OWNER}}"
+upstream_repo := "{{UPSTREAM_REPO}}"
+public_fork_name := "{{PUBLIC_FORK_NAME}}"
+personal_repo := "{{PERSONAL_REPO}}"
+team_repo := "{{TEAM_REPO}}"
 
 default:
     @just --list --unsorted
@@ -15,19 +21,19 @@ help: default
 status:
     #!/usr/bin/env bash
     set -euo pipefail
-    echo "=== {{tool_label}} quickstart status ==="
+    echo "=== {{tool_label}} metarepo status ==="
     git status -sb 2>/dev/null || echo "(not a git repo)"
     if [[ -d "{{upstream_dir}}/.git" ]]; then
       echo "Upstream local: $(git -C {{upstream_dir}} rev-parse --short HEAD 2>/dev/null || echo missing)"
-      echo "Upstream remote: $(git -C {{upstream_dir}} ls-remote origin HEAD 2>/dev/null | cut -f1 | head -c 12 || echo unavailable)"
     else
       echo "Upstream: {{upstream_dir}} not cloned"
     fi
     [[ -f {{pin_file}} ]] && echo "Pin file:" && cat {{pin_file}} || echo "Pin file: missing (run: just pin)"
-    for f in META.md PRAXIS.md EXECSUMMARY.md QUICKSTART.md; do
-      if [[ -f "$f" ]]; then
-        echo "Doc $f: present"
-      fi
+    for f in META.md PRAXIS.md EXECSUMMARY.md PRD.md PHASES.md FORKS.md PLAYBOOK.md; do
+      [[ -f "$f" ]] && echo "Doc $f: present"
+    done
+    for d in forks/public forks/personal forks/team; do
+      [[ -d "$d/.git" ]] && echo "OK  $d" || echo "MISS $d"
     done
 
 doctor:
@@ -45,7 +51,7 @@ doctor:
     if command -v gh >/dev/null 2>&1; then
       echo "OK  gh"
     else
-      echo "WARN gh (optional for landscape/API checks)"
+      echo "WARN gh (needed for scaffold-lineages)"
     fi
     if [[ -d "{{upstream_dir}}/.git" ]]; then
       echo "OK  upstream clone {{upstream_dir}} @ $(git -C {{upstream_dir}} rev-parse --short HEAD)"
@@ -82,8 +88,6 @@ pin:
     echo "Wrote {{pin_file}}"
     cat "{{pin_file}}"
 
-# Tool-specific: override in the metarepo once install path is known.
-# Default smoke = upstream tree exists + README or obvious entrypoint present.
 smoke: ensure-upstream
     #!/usr/bin/env bash
     set -euo pipefail
@@ -96,7 +100,18 @@ smoke: ensure-upstream
     fi
     echo "OK  smoke baseline (replace with install/--help/launch checks when known)"
 
-# Phase B DWIM — real path, not a placeholder
+# Extract ## Phase X section from PHASES.md (through next ## or EOF)
+_phase-brief PHASE:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    [[ -f PHASES.md ]] || { echo "Missing PHASES.md"; exit 1; }
+    awk -v p="{{PHASE}}" '
+      $0 ~ "^## Phase " p " " || $0 ~ "^## Phase " p " —" || $0 ~ "^## Phase " p "$" {show=1}
+      show && $0 ~ /^## Phase / && $0 !~ "^## Phase " p {exit}
+      show {print}
+    ' PHASES.md
+
+# Phase B DWIM
 doit: doctor ensure-upstream
     #!/usr/bin/env bash
     set -euo pipefail
@@ -118,12 +133,103 @@ doit: doctor ensure-upstream
       echo "Open: {{root_dir}}"
     fi
     echo ""
-    echo "=== Phase C paste prompt (inquiry + per-tool PRD) ==="
-    if [[ -f PHASE_C_PROMPT.md ]]; then
-      cat PHASE_C_PROMPT.md
+    echo "=== Next: Phase C (from PHASES.md) ==="
+    just _phase-brief C
+
+# just phase B|C|D|E
+phase name:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    case "{{name}}" in
+      A|a)
+        echo "Phase A is the bootstrap skill (/bootstrap-quickstart), not re-run here."
+        just _phase-brief A
+        ;;
+      B|b)
+        just doit
+        ;;
+      C|c)
+        just _phase-brief C
+        ;;
+      D|d)
+        just _phase-brief D
+        echo ""
+        echo "Machine next: just scaffold-lineages   (WITHOUT_TEAM=1 to skip team)"
+        ;;
+      E|e)
+        just _phase-brief E
+        ;;
+      *)
+        echo "Usage: just phase A|B|C|D|E"
+        exit 1
+        ;;
+    esac
+
+# Run B then hand off to C (agent continues kit)
+phases:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    just phase B
+    echo ""
+    echo "=== Kit hand-off ==="
+    echo "Phase B done. Continue in Cursor: Phase C brief above, then Phase D (just scaffold-lineages)."
+    echo "Or: just phase C / just phase D"
+
+# Phase D: public GitHub fork + personal private + team private (unless WITHOUT_TEAM=1)
+scaffold-lineages:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    command -v gh >/dev/null || { echo "MISS gh"; exit 1; }
+    [[ -d "{{upstream_dir}}/.git" ]] || just ensure-upstream
+    mkdir -p forks
+
+    echo "=== Public GitHub fork {{gh_owner}}/{{public_fork_name}} ==="
+    if gh repo view "{{gh_owner}}/{{public_fork_name}}" >/dev/null 2>&1; then
+      echo "ATTACH existing {{gh_owner}}/{{public_fork_name}}"
     else
-      echo "Missing PHASE_C_PROMPT.md — copy from dwim-justfile skill bundle."
+      gh repo fork "{{upstream_owner}}/{{upstream_repo}}" --fork-name "{{public_fork_name}}" --clone=false
+      echo "CREATED fork {{gh_owner}}/{{public_fork_name}}"
     fi
+    if [[ ! -d forks/public/.git ]]; then
+      gh repo clone "{{gh_owner}}/{{public_fork_name}}" forks/public
+    else
+      echo "OK  forks/public present"
+    fi
+
+    _private_fork() {
+      local name="$1" dest="$2"
+      echo "=== Private fork {{gh_owner}}/$name → $dest ==="
+      if gh repo view "{{gh_owner}}/$name" >/dev/null 2>&1; then
+        echo "ATTACH existing {{gh_owner}}/$name"
+      else
+        gh repo create "{{gh_owner}}/$name" --private --description "{{tool_label}} private fork (metarepo lineage)" >/dev/null
+        # Seed from upstream (full history preferred for private divergence)
+        local tmp
+        tmp="$(mktemp -d)"
+        git clone --bare "{{upstream_url}}.git" "$tmp/upstream.git"
+        git -C "$tmp/upstream.git" push --mirror "git@github.com:{{gh_owner}}/$name.git" || \
+          git -C "$tmp/upstream.git" push --mirror "https://github.com/{{gh_owner}}/$name.git"
+        rm -rf "$tmp"
+        echo "CREATED private {{gh_owner}}/$name (mirrored from upstream)"
+      fi
+      if [[ ! -d "$dest/.git" ]]; then
+        gh repo clone "{{gh_owner}}/$name" "$dest"
+      fi
+      git -C "$dest" remote remove upstream 2>/dev/null || true
+      git -C "$dest" remote add upstream "{{upstream_url}}.git"
+      git -C "$dest" remote -v
+    }
+
+    _private_fork "{{personal_repo}}" forks/personal
+
+    if [[ "${WITHOUT_TEAM:-}" == "1" ]]; then
+      echo "SKIP team (WITHOUT_TEAM=1)"
+    else
+      _private_fork "{{team_repo}}" forks/team
+    fi
+
+    echo ""
+    echo "scaffold-lineages done. Next: write FORKS.md + PLAYBOOK.md (just phase D brief)."
 
 open-folder:
     #!/usr/bin/env bash

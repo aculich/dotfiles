@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-27T18:54:26Z",
+  "generated": "2026-07-30T07:09:57Z",
   "compendium_root": "/Users/me/dotfiles/cursor/compendium",
   "monorepo_root": "/Users/me/projects/agent-skills",
   "global": {
@@ -65,6 +65,24 @@
         }
       },
       {
+        "id": "agent-meep",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "cursor-user",
+        "path": "/Users/me/.cursor/skills/agent-meep",
+        "resolved_path": "/Users/me/.cursor/skills/agent-meep",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "agent-meep",
+        "source": {
+          "type": "unknown",
+          "url": null,
+          "confidence": "none",
+          "via": "unresolved"
+        }
+      },
+      {
         "id": "agents-sdk",
         "classification": "installed",
         "lifecycle": "installed",
@@ -105,7 +123,7 @@
           "type": "local-repo",
           "url": "https://github.com/aculich/google-workspace-tools",
           "install_source_url": "https://github.com/aculich/google-workspace-tools",
-          "commit": "bd523501d70606c3c4a3f813e12ea50d14cb2427",
+          "commit": "4e7ac8d4781394253c4832c2a99e4d931c381d8c",
           "local_path": "/Users/me/tools/google-workspace-tools",
           "confidence": "high",
           "via": "git-remote"
@@ -127,7 +145,7 @@
           "type": "local-repo",
           "url": "https://github.com/aculich/google-workspace-tools",
           "install_source_url": "https://github.com/aculich/google-workspace-tools",
-          "commit": "bd523501d70606c3c4a3f813e12ea50d14cb2427",
+          "commit": "4e7ac8d4781394253c4832c2a99e4d931c381d8c",
           "local_path": "/Users/me/tools/google-workspace-tools",
           "confidence": "high",
           "via": "git-remote"
@@ -194,6 +212,24 @@
         }
       },
       {
+        "id": "bootstrap-product-quickstart",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "cursor-user",
+        "path": "/Users/me/.cursor/skills/bootstrap-product-quickstart",
+        "resolved_path": "/Users/me/.cursor/skills/bootstrap-product-quickstart",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "bootstrap-product-quickstart",
+        "source": {
+          "type": "unknown",
+          "url": null,
+          "confidence": "none",
+          "via": "unresolved"
+        }
+      },
+      {
         "id": "bootstrap-project-umbrella",
         "classification": "installed",
         "lifecycle": "installed",
@@ -229,6 +265,42 @@
           "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
           "via": "authored-registry"
+        }
+      },
+      {
+        "id": "bootstrap-tool-landscape",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "cursor-user",
+        "path": "/Users/me/.cursor/skills/bootstrap-tool-landscape",
+        "resolved_path": "/Users/me/.cursor/skills/bootstrap-tool-landscape",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "bootstrap-tool-landscape",
+        "source": {
+          "type": "unknown",
+          "url": null,
+          "confidence": "none",
+          "via": "unresolved"
+        }
+      },
+      {
+        "id": "bootstrap-tool-quickstart",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "cursor-user",
+        "path": "/Users/me/.cursor/skills/bootstrap-tool-quickstart",
+        "resolved_path": "/Users/me/.cursor/skills/bootstrap-tool-quickstart",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "bootstrap-tool-quickstart",
+        "source": {
+          "type": "unknown",
+          "url": null,
+          "confidence": "none",
+          "via": "unresolved"
         }
       },
       {
@@ -800,6 +872,24 @@
         }
       },
       {
+        "id": "dwim-justfile",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "cursor-user",
+        "path": "/Users/me/.cursor/skills/dwim-justfile",
+        "resolved_path": "/Users/me/.cursor/skills/dwim-justfile",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "dwim-justfile",
+        "source": {
+          "type": "unknown",
+          "url": null,
+          "confidence": "none",
+          "via": "unresolved"
+        }
+      },
+      {
         "id": "embedded-captions",
         "classification": "embedded",
         "lifecycle": "installed",
@@ -841,7 +931,7 @@
           "type": "local-repo",
           "url": "https://github.com/aculich/google-workspace-tools",
           "install_source_url": "https://github.com/aculich/google-workspace-tools",
-          "commit": "bd523501d70606c3c4a3f813e12ea50d14cb2427",
+          "commit": "4e7ac8d4781394253c4832c2a99e4d931c381d8c",
           "local_path": "/Users/me/tools/google-workspace-tools",
           "confidence": "high",
           "via": "git-remote"
@@ -1631,7 +1721,7 @@
           "type": "local-repo",
           "url": "https://github.com/aculich/google-workspace-tools",
           "install_source_url": "https://github.com/aculich/google-workspace-tools",
-          "commit": "bd523501d70606c3c4a3f813e12ea50d14cb2427",
+          "commit": "4e7ac8d4781394253c4832c2a99e4d931c381d8c",
           "local_path": "/Users/me/tools/google-workspace-tools",
           "confidence": "high",
           "via": "git-remote"
@@ -1766,6 +1856,24 @@
           "type": "local-estate",
           "url": null,
           "via": "manual:estate"
+        }
+      },
+      {
+        "id": "quickstart-fork-lineage",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "cursor-user",
+        "path": "/Users/me/.cursor/skills/quickstart-fork-lineage",
+        "resolved_path": "/Users/me/.cursor/skills/quickstart-fork-lineage",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "quickstart-fork-lineage",
+        "source": {
+          "type": "unknown",
+          "url": null,
+          "confidence": "none",
+          "via": "unresolved"
         }
       },
       {
@@ -2525,25 +2633,6 @@
         }
       },
       {
-        "id": "env-setup",
-        "classification": "vendor",
-        "lifecycle": "installed",
-        "tier": "cursor-managed",
-        "path": "/Users/me/.cursor/skills-cursor/env-setup",
-        "resolved_path": "/Users/me/.cursor/skills-cursor/env-setup",
-        "is_symlink": false,
-        "symlink_ok": true,
-        "version": null,
-        "name": "env-setup",
-        "source": {
-          "type": "vendor",
-          "url": null,
-          "confidence": "high",
-          "via": "vendor-registry",
-          "note": "vendored bundle / cursor-managed; not a public repo"
-        }
-      },
-      {
         "id": "loop",
         "classification": "vendor",
         "lifecycle": "installed",
@@ -2879,6 +2968,24 @@
         }
       },
       {
+        "id": "bootstrap-product-quickstart",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/bootstrap-product-quickstart",
+        "resolved_path": "/Users/me/.claude/skills/bootstrap-product-quickstart",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "bootstrap-product-quickstart",
+        "source": {
+          "type": "unknown",
+          "url": null,
+          "confidence": "none",
+          "via": "unresolved"
+        }
+      },
+      {
         "id": "bootstrap-tool-config-repo",
         "classification": "embedded",
         "lifecycle": "curated",
@@ -2896,6 +3003,42 @@
           "confidence": "high",
           "via": "frontmatter:upstream",
           "canonical_upstream_url": "https://github.com/aculich/agent-skills"
+        }
+      },
+      {
+        "id": "bootstrap-tool-landscape",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/bootstrap-tool-landscape",
+        "resolved_path": "/Users/me/.claude/skills/bootstrap-tool-landscape",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "bootstrap-tool-landscape",
+        "source": {
+          "type": "unknown",
+          "url": null,
+          "confidence": "none",
+          "via": "unresolved"
+        }
+      },
+      {
+        "id": "bootstrap-tool-quickstart",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/bootstrap-tool-quickstart",
+        "resolved_path": "/Users/me/.claude/skills/bootstrap-tool-quickstart",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "bootstrap-tool-quickstart",
+        "source": {
+          "type": "unknown",
+          "url": null,
+          "confidence": "none",
+          "via": "unresolved"
         }
       },
       {
@@ -3141,6 +3284,24 @@
           "updated_at": "2026-07-17T12:10:08.228Z",
           "confidence": "high",
           "via": "skill-lock"
+        }
+      },
+      {
+        "id": "dwim-justfile",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/dwim-justfile",
+        "resolved_path": "/Users/me/.claude/skills/dwim-justfile",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "dwim-justfile",
+        "source": {
+          "type": "unknown",
+          "url": null,
+          "confidence": "none",
+          "via": "unresolved"
         }
       },
       {
@@ -7394,6 +7555,33 @@
       "classification": "embedded"
     },
     {
+      "skill": "admin-outbound-calendar",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/github-cidrlab-llc-admin/.cursor/skills/admin-outbound-calendar/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-cidrlab-llc-admin/.cursor/skills/admin-outbound-calendar/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "admin-outbound-mail",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/github-cidrlab-llc-admin/.cursor/skills/admin-outbound-mail/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-cidrlab-llc-admin/.cursor/skills/admin-outbound-mail/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "agent-meep",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/agent-meep/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/agent-meep/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
       "skill": "agent-native-architecture",
       "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/path-writing-income-e2d299d8b155/.cursor/skills/agent-native-architecture/SKILL.md",
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
@@ -7525,6 +7713,24 @@
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
       "relative_path": "mirrors/by-project/github-aculich-writing-quality/.cursor/skills/bayo-site-corpus-update/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "bcal-declutter",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/bcal-declutter/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/bcal-declutter/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "bcal-declutter",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-google-workspace-tools/.cursor/skills/bcal-declutter/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-google-workspace-tools/.cursor/skills/bcal-declutter/SKILL.md",
       "layout": "project-cursor",
       "classification": "embedded"
     },
@@ -7763,6 +7969,15 @@
       "classification": "embedded"
     },
     {
+      "skill": "cidr-letterhead",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/cidr-letterhead/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/cidr-letterhead/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
       "skill": "cloudflare",
       "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/cloudflare/SKILL.md",
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
@@ -7948,6 +8163,15 @@
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
       "relative_path": "mirrors/skills-snapshots/skills/dbt-bigquery/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "dd-cli-usage",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/dd-cli-usage/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/dd-cli-usage/SKILL.md",
       "layout": "project-skills-dir",
       "classification": "embedded"
     },
@@ -8483,6 +8707,24 @@
       "classification": "embedded"
     },
     {
+      "skill": "llc-admin-refresh",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/github-cidrlab-llc-admin/.cursor/skills/llc-admin-refresh/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-cidrlab-llc-admin/.cursor/skills/llc-admin-refresh/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "llc-admin-setup",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/github-cidrlab-llc-admin/.cursor/skills/llc-admin-setup/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-cidrlab-llc-admin/.cursor/skills/llc-admin-setup/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
       "skill": "luminary-tech-radar",
       "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/luminary-tech-radar/SKILL.md",
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
@@ -8533,15 +8775,6 @@
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
       "relative_path": "mirrors/skills-snapshots/skills/meeting-sync-and-synthesis/SKILL.md",
-      "layout": "project-skills-dir",
-      "classification": "embedded"
-    },
-    {
-      "skill": "meeting-sync.stale-2026-07-06",
-      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/meeting-sync.stale-2026-07-06/SKILL.md",
-      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
-      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
-      "relative_path": "mirrors/skills-snapshots/skills/meeting-sync.stale-2026-07-06/SKILL.md",
       "layout": "project-skills-dir",
       "classification": "embedded"
     },
@@ -8663,6 +8896,15 @@
       "classification": "embedded"
     },
     {
+      "skill": "orx",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/orx/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/orx/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
       "skill": "peeq-cidr-meeting",
       "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/peeq-cidr-meeting/SKILL.md",
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
@@ -8758,6 +9000,15 @@
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
       "relative_path": "mirrors/skills-snapshots/skills/quick-stash/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "quickstart-fork-lineage",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/quickstart-fork-lineage/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/quickstart-fork-lineage/SKILL.md",
       "layout": "project-skills-dir",
       "classification": "embedded"
     },
@@ -9164,6 +9415,15 @@
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
       "relative_path": "mirrors/skills-snapshots/skills/turnstile-spin/SKILL.md",
       "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "unpack-the-conversation",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/path-cidr-org-4bd8f5480d99/.cursor/skills/unpack-the-conversation/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-cidr-org-4bd8f5480d99/.cursor/skills/unpack-the-conversation/SKILL.md",
+      "layout": "project-cursor",
       "classification": "embedded"
     },
     {
@@ -9811,6 +10071,15 @@
       "project_root": "/Users/me/projects/cidr-org/llc-admin",
       "project_slug": "github-com-cidrlab-llc-admin",
       "relative_path": ".cursor/skills/admin-outbound-calendar/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "admin-outbound-mail",
+      "skill_path": "/Users/me/projects/cidr-org/llc-admin/.cursor/skills/admin-outbound-mail/SKILL.md",
+      "project_root": "/Users/me/projects/cidr-org/llc-admin",
+      "project_slug": "github-com-cidrlab-llc-admin",
+      "relative_path": ".cursor/skills/admin-outbound-mail/SKILL.md",
       "layout": "project-cursor",
       "classification": "embedded"
     },
@@ -17511,29 +17780,29 @@
     }
   ],
   "summary": {
-    "install_rows": 329,
-    "unique_skills": 163,
+    "install_rows": 338,
+    "unique_skills": 168,
     "by_classification": {
       "authored": 59,
-      "installed": 141,
+      "installed": 151,
       "embedded": 91,
-      "vendor": 37,
+      "vendor": 36,
       "experimental": 1
     },
     "by_classification_unique": {
       "authored": 32,
       "embedded": 67,
       "experimental": 1,
-      "installed": 84,
-      "vendor": 37
+      "installed": 90,
+      "vendor": 36
     },
     "by_source_type": {
       "authored": 34,
+      "unknown": 23,
       "skill-lock": 150,
       "local-repo": 8,
-      "vendor": 37,
+      "vendor": 36,
       "local-estate": 22,
-      "unknown": 13,
       "community": 3,
       "frontmatter": 62
     },
@@ -17544,20 +17813,26 @@
       "local-estate": 20,
       "local-repo": 8,
       "skill-lock": 49,
-      "unknown": 11,
-      "vendor": 37
+      "unknown": 17,
+      "vendor": 36
     },
     "broken_symlinks": [],
     "unknown_source": [
+      "agent-meep",
+      "bootstrap-product-quickstart",
       "bootstrap-project-umbrella",
+      "bootstrap-tool-landscape",
+      "bootstrap-tool-quickstart",
       "clarify-audience-purpose",
       "converge-articulate",
       "dd-cli-usage",
       "divergent-explore",
+      "dwim-justfile",
       "envision-end-state",
       "github-trending",
       "orx",
       "product-hunt-search",
+      "quickstart-fork-lineage",
       "survey-creative-landscape",
       "unpack-the-question"
     ]
