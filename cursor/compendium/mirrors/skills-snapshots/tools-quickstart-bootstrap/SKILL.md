@@ -1,0 +1,18 @@
+---
+name: tools-quickstart-bootstrap
+description: >-
+  Alias of bootstrap-tool-quickstart. Prefer ~/.cursor/skills/bootstrap-tool-quickstart.
+disable-model-invocation: true
+metadata:
+  source:
+    upstream: https://github.com/aculich/agent-skills
+    canonical: https://github.com/aculich/agent-skills
+---
+
+# Tools Quickstart Bootstrap → bootstrap-tool-quickstart
+
+Canonical skill: read **`~/.cursor/skills/bootstrap-tool-quickstart/SKILL.md`** (or sibling under `~/.claude/skills/bootstrap-tool-quickstart/`).
+
+Phases A–E with PRD in C and PLAYBOOK in D. Docs dir for new trees: **`dossier/`**. Slash: `/bootstrap-quickstart`.
+
+Legacy deep checklist (full dossier in one shot) is **superseded** for new bootstraps: Phase A is envelope-only; Phase C fleshes inquiry + PRD.
