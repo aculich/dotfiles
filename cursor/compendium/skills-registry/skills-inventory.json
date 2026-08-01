@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-30T07:09:57Z",
+  "generated": "2026-08-01T03:58:27Z",
   "compendium_root": "/Users/me/dotfiles/cursor/compendium",
   "monorepo_root": "/Users/me/projects/agent-skills",
   "global": {
@@ -123,7 +123,7 @@
           "type": "local-repo",
           "url": "https://github.com/aculich/google-workspace-tools",
           "install_source_url": "https://github.com/aculich/google-workspace-tools",
-          "commit": "4e7ac8d4781394253c4832c2a99e4d931c381d8c",
+          "commit": "b05c88a03c5d94d89ac17c5b98ffa3c7a35aa9e3",
           "local_path": "/Users/me/tools/google-workspace-tools",
           "confidence": "high",
           "via": "git-remote"
@@ -145,7 +145,7 @@
           "type": "local-repo",
           "url": "https://github.com/aculich/google-workspace-tools",
           "install_source_url": "https://github.com/aculich/google-workspace-tools",
-          "commit": "4e7ac8d4781394253c4832c2a99e4d931c381d8c",
+          "commit": "b05c88a03c5d94d89ac17c5b98ffa3c7a35aa9e3",
           "local_path": "/Users/me/tools/google-workspace-tools",
           "confidence": "high",
           "via": "git-remote"
@@ -168,6 +168,24 @@
           "confidence": "high",
           "via": "vendor-registry",
           "note": "vendored bundle / cursor-managed; not a public repo"
+        }
+      },
+      {
+        "id": "bootstrap-aar",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "cursor-user",
+        "path": "/Users/me/.cursor/skills/bootstrap-aar",
+        "resolved_path": "/Users/me/.cursor/skills/bootstrap-aar",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "bootstrap-aar",
+        "source": {
+          "type": "unknown",
+          "url": null,
+          "confidence": "none",
+          "via": "unresolved"
         }
       },
       {
@@ -240,6 +258,24 @@
         "symlink_ok": true,
         "version": null,
         "name": "bootstrap-project-umbrella",
+        "source": {
+          "type": "unknown",
+          "url": null,
+          "confidence": "none",
+          "via": "unresolved"
+        }
+      },
+      {
+        "id": "bootstrap-regen",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "cursor-user",
+        "path": "/Users/me/.cursor/skills/bootstrap-regen",
+        "resolved_path": "/Users/me/.cursor/skills/bootstrap-regen",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "bootstrap-regen",
         "source": {
           "type": "unknown",
           "url": null,
@@ -931,7 +967,7 @@
           "type": "local-repo",
           "url": "https://github.com/aculich/google-workspace-tools",
           "install_source_url": "https://github.com/aculich/google-workspace-tools",
-          "commit": "4e7ac8d4781394253c4832c2a99e4d931c381d8c",
+          "commit": "b05c88a03c5d94d89ac17c5b98ffa3c7a35aa9e3",
           "local_path": "/Users/me/tools/google-workspace-tools",
           "confidence": "high",
           "via": "git-remote"
@@ -1721,7 +1757,7 @@
           "type": "local-repo",
           "url": "https://github.com/aculich/google-workspace-tools",
           "install_source_url": "https://github.com/aculich/google-workspace-tools",
-          "commit": "4e7ac8d4781394253c4832c2a99e4d931c381d8c",
+          "commit": "b05c88a03c5d94d89ac17c5b98ffa3c7a35aa9e3",
           "local_path": "/Users/me/tools/google-workspace-tools",
           "confidence": "high",
           "via": "git-remote"
@@ -2519,16 +2555,16 @@
         }
       },
       {
-        "id": "babysit",
+        "id": "autopilot",
         "classification": "vendor",
         "lifecycle": "installed",
         "tier": "cursor-managed",
-        "path": "/Users/me/.cursor/skills-cursor/babysit",
-        "resolved_path": "/Users/me/.cursor/skills-cursor/babysit",
+        "path": "/Users/me/.cursor/skills-cursor/autopilot",
+        "resolved_path": "/Users/me/.cursor/skills-cursor/autopilot",
         "is_symlink": false,
         "symlink_ok": true,
         "version": null,
-        "name": "babysit",
+        "name": "autopilot",
         "source": {
           "type": "vendor",
           "url": null,
@@ -2643,6 +2679,25 @@
         "symlink_ok": true,
         "version": null,
         "name": "loop",
+        "source": {
+          "type": "vendor",
+          "url": null,
+          "confidence": "high",
+          "via": "vendor-registry",
+          "note": "vendored bundle / cursor-managed; not a public repo"
+        }
+      },
+      {
+        "id": "migrate-to-builds",
+        "classification": "vendor",
+        "lifecycle": "installed",
+        "tier": "cursor-managed",
+        "path": "/Users/me/.cursor/skills-cursor/migrate-to-builds",
+        "resolved_path": "/Users/me/.cursor/skills-cursor/migrate-to-builds",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "migrate-to-builds",
         "source": {
           "type": "vendor",
           "url": null,
@@ -2968,6 +3023,24 @@
         }
       },
       {
+        "id": "bootstrap-aar",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/bootstrap-aar",
+        "resolved_path": "/Users/me/.claude/skills/bootstrap-aar",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "bootstrap-aar",
+        "source": {
+          "type": "unknown",
+          "url": null,
+          "confidence": "none",
+          "via": "unresolved"
+        }
+      },
+      {
         "id": "bootstrap-product-quickstart",
         "classification": "installed",
         "lifecycle": "installed",
@@ -2978,6 +3051,24 @@
         "symlink_ok": true,
         "version": null,
         "name": "bootstrap-product-quickstart",
+        "source": {
+          "type": "unknown",
+          "url": null,
+          "confidence": "none",
+          "via": "unresolved"
+        }
+      },
+      {
+        "id": "bootstrap-regen",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/bootstrap-regen",
+        "resolved_path": "/Users/me/.claude/skills/bootstrap-regen",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "bootstrap-regen",
         "source": {
           "type": "unknown",
           "url": null,
@@ -7825,6 +7916,15 @@
       "classification": "embedded"
     },
     {
+      "skill": "bootstrap-product-quickstart",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/bootstrap-product-quickstart/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/bootstrap-product-quickstart/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
       "skill": "bootstrap-project-umbrella",
       "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/bootstrap-project-umbrella/SKILL.md",
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
@@ -7839,6 +7939,24 @@
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
       "relative_path": "mirrors/skills-snapshots/skills/bootstrap-tool-config-repo/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "bootstrap-tool-landscape",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/bootstrap-tool-landscape/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/bootstrap-tool-landscape/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "bootstrap-tool-quickstart",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/bootstrap-tool-quickstart/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/bootstrap-tool-quickstart/SKILL.md",
       "layout": "project-skills-dir",
       "classification": "embedded"
     },
@@ -8388,6 +8506,15 @@
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
       "relative_path": "mirrors/skills-snapshots/skills/durable-objects/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "dwim-justfile",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/dwim-justfile/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/dwim-justfile/SKILL.md",
       "layout": "project-skills-dir",
       "classification": "embedded"
     },
@@ -10084,6 +10211,15 @@
       "classification": "embedded"
     },
     {
+      "skill": "docs-feedback-wait",
+      "skill_path": "/Users/me/projects/cidr-org/llc-admin/.cursor/skills/docs-feedback-wait/SKILL.md",
+      "project_root": "/Users/me/projects/cidr-org/llc-admin",
+      "project_slug": "github-com-cidrlab-llc-admin",
+      "relative_path": ".cursor/skills/docs-feedback-wait/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
       "skill": "llc-admin-refresh",
       "skill_path": "/Users/me/projects/cidr-org/llc-admin/.cursor/skills/llc-admin-refresh/SKILL.md",
       "project_root": "/Users/me/projects/cidr-org/llc-admin",
@@ -11002,6 +11138,15 @@
       "classification": "embedded"
     },
     {
+      "skill": "deploy",
+      "skill_path": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp/.cursor/skills/deploy/SKILL.md",
+      "project_root": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp",
+      "project_slug": "github-com-rrid-ucb-rrid-summer2026-webapp",
+      "relative_path": ".cursor/skills/deploy/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
       "skill": "drizzle",
       "skill_path": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp/.agents/skills/drizzle/SKILL.md",
       "project_root": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp",
@@ -11134,6 +11279,15 @@
       "project_slug": "github-com-rrid-ucb-rrid-summer2026-webapp",
       "relative_path": ".agents/skills/zod/SKILL.md",
       "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "hats-session-status",
+      "skill_path": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp-design/.cursor/skills/hats-session-status/SKILL.md",
+      "project_root": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp-design",
+      "project_slug": "github-com-rrid-ucb-rrid-summer2026-webapp-design",
+      "relative_path": ".cursor/skills/hats-session-status/SKILL.md",
+      "layout": "project-cursor",
       "classification": "embedded"
     },
     {
@@ -11413,6 +11567,51 @@
       "project_slug": "github-com-rrid-ucb-rrid-summer2026-webapp",
       "relative_path": ".agents/skills/zod/SKILL.md",
       "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "draft-edits-analyze",
+      "skill_path": "/Users/me/projects/sow-draft-kit/.cursor/skills/draft-edits-analyze/SKILL.md",
+      "project_root": "/Users/me/projects/sow-draft-kit",
+      "project_slug": "path-d0342cea5243",
+      "relative_path": ".cursor/skills/draft-edits-analyze/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "draft-edits-apply",
+      "skill_path": "/Users/me/projects/sow-draft-kit/.cursor/skills/draft-edits-apply/SKILL.md",
+      "project_root": "/Users/me/projects/sow-draft-kit",
+      "project_slug": "path-d0342cea5243",
+      "relative_path": ".cursor/skills/draft-edits-apply/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "draft-edits-evaluate",
+      "skill_path": "/Users/me/projects/sow-draft-kit/.cursor/skills/draft-edits-evaluate/SKILL.md",
+      "project_root": "/Users/me/projects/sow-draft-kit",
+      "project_slug": "path-d0342cea5243",
+      "relative_path": ".cursor/skills/draft-edits-evaluate/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "sow-draft-kit",
+      "skill_path": "/Users/me/projects/sow-draft-kit/.cursor/skills/sow-draft-kit/SKILL.md",
+      "project_root": "/Users/me/projects/sow-draft-kit",
+      "project_slug": "path-d0342cea5243",
+      "relative_path": ".cursor/skills/sow-draft-kit/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "sow-version-analysis",
+      "skill_path": "/Users/me/projects/sow-draft-kit/.cursor/skills/sow-version-analysis/SKILL.md",
+      "project_root": "/Users/me/projects/sow-draft-kit",
+      "project_slug": "path-d0342cea5243",
+      "relative_path": ".cursor/skills/sow-version-analysis/SKILL.md",
+      "layout": "project-cursor",
       "classification": "embedded"
     },
     {
@@ -15610,6 +15809,15 @@
       "classification": "embedded"
     },
     {
+      "skill": "bootstrap-aar",
+      "skill_path": "/Users/me/tools/openoats-metarepo/.cursor/skills/bootstrap-aar/SKILL.md",
+      "project_root": "/Users/me/tools/openoats-metarepo",
+      "project_slug": "github-com-aculich-openoats-metarepo",
+      "relative_path": ".cursor/skills/bootstrap-aar/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
       "skill": "rowboat-fork-workflow",
       "skill_path": "/Users/me/tools/rowboat-quickstart/.cursor/skills/rowboat-fork-workflow/SKILL.md",
       "project_root": "/Users/me/tools/rowboat-quickstart",
@@ -17777,31 +17985,40 @@
       "relative_path": "experiments/mcp-genmedia/sample-agents/geminicli/sample_extensions/google-genmedia/skills/producer/SKILL.md",
       "layout": "project-skills-dir",
       "classification": "embedded"
+    },
+    {
+      "skill": "bootstrap-aar",
+      "skill_path": "/Users/me/tools/voiceink-metarepo/.cursor/skills/bootstrap-aar/SKILL.md",
+      "project_root": "/Users/me/tools/voiceink-metarepo",
+      "project_slug": "github-com-aculich-voiceink-metarepo",
+      "relative_path": ".cursor/skills/bootstrap-aar/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
     }
   ],
   "summary": {
-    "install_rows": 338,
-    "unique_skills": 168,
+    "install_rows": 343,
+    "unique_skills": 171,
     "by_classification": {
       "authored": 59,
-      "installed": 151,
+      "installed": 155,
       "embedded": 91,
-      "vendor": 36,
+      "vendor": 37,
       "experimental": 1
     },
     "by_classification_unique": {
       "authored": 32,
       "embedded": 67,
       "experimental": 1,
-      "installed": 90,
-      "vendor": 36
+      "installed": 92,
+      "vendor": 37
     },
     "by_source_type": {
       "authored": 34,
-      "unknown": 23,
+      "unknown": 27,
       "skill-lock": 150,
       "local-repo": 8,
-      "vendor": 36,
+      "vendor": 37,
       "local-estate": 22,
       "community": 3,
       "frontmatter": 62
@@ -17813,14 +18030,16 @@
       "local-estate": 20,
       "local-repo": 8,
       "skill-lock": 49,
-      "unknown": 17,
-      "vendor": 36
+      "unknown": 19,
+      "vendor": 37
     },
     "broken_symlinks": [],
     "unknown_source": [
       "agent-meep",
+      "bootstrap-aar",
       "bootstrap-product-quickstart",
       "bootstrap-project-umbrella",
+      "bootstrap-regen",
       "bootstrap-tool-landscape",
       "bootstrap-tool-quickstart",
       "clarify-audience-purpose",
