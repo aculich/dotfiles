@@ -2,69 +2,44 @@
 name: dwim-justfile
 description: >-
   Scaffolds or enriches a repo-root justfile with DWIM defaults (help, status,
-  doctor, doit). Prefer tool-quickstart.justfile for *-quickstart metarepos.
-  Alias: create-justfile. Use for /dwim-justfile, /create-justfile, just doit.
+  doctor, doit, phase, phases, scaffold-lineages, scaffold-runtime). Prefer
+  tool-quickstart.justfile + PHASES.md for *-metarepo trees. Alias: create-justfile.
 disable-model-invocation: true
 ---
 
 # DWIM Justfile
 
-**Alias:** `create-justfile` (same skill; prefer this name going forward).
-
-## When to apply
-
-User wants a root justfile, enrichment of an existing one, `/dwim-justfile`, or `/create-justfile`. Not a full Phase A envelope — that is `bootstrap-tool-quickstart`.
-
-## Minimal defaults (always)
-
-| Recipe | Role |
-|--------|------|
-| `default` / `help` | `@just --list --unsorted` |
-| `status` | Read-only snapshot |
-| `doctor` | Check required CLIs |
-| `doit` | DWIM happy path for *this* project |
+**Alias:** `create-justfile`.
 
 ## Templates
 
 | Situation | Template |
 |-----------|----------|
-| Tool quickstart metarepo (`*-quickstart`, `upstream/`, pin) | [templates/tool-quickstart.justfile](templates/tool-quickstart.justfile) + [templates/PHASE_C_PROMPT.md](templates/PHASE_C_PROMPT.md) |
-| Docs-only / unknown (non-quickstart) | Prefer shaping `doit` from stack; fall back to thin stub that runs `doctor` + `status` + opens README — **never** print “fill in happy path” |
-| Umbrella / operational | Still available under `~/.cursor/skills/create-justfile/templates/` until migrated |
+| Tool quickstart metarepo | [templates/tool-quickstart.justfile](templates/tool-quickstart.justfile) + [templates/PHASES.md](templates/PHASES.md) |
+| Docs-only / unknown | `create-justfile/templates/minimal.justfile` — never “fill in happy path” |
 
-Default for `~/tools/*-quickstart`: **tool-quickstart**.
+## Recipes (tool-quickstart)
 
-## Shape `doit` (no placeholder exit)
+| Recipe | Role |
+|--------|------|
+| `doit` / `phase B` | Thin smoke **or** delegates to `runtime-doit` when Phase R imported |
+| `phase C\|D\|R\|E` | Print PHASES.md section |
+| `phases` | B then kit hand-off |
+| `scaffold-lineages` | Phase D: public + personal + team (`WITHOUT_TEAM=1` skips team) |
+| `scaffold-runtime` | Phase R checklist; agent writes `runtime.justfile` |
+| `import? 'runtime.justfile'` | Optional Phase R overlay (always ship the import line) |
 
-| Signal | `doit` shape |
-|--------|----------------|
-| Tool quickstart | `doctor` → ensure pin/upstream → `smoke` → print functional-proof checklist → open folder → print Phase C paste prompt |
-| `docker-compose` / `compose.yaml` | ensure-deps → start → wait HTTP → smoke |
-| `package.json` with `dev`/`start` | install if needed → run/dev |
-| Docs-only | `status` → open README |
-| Unknown | `doctor` + `status` + echo next-step guesses from tree (README/Makefile/package.json); exit 0 without a fake “fill in” recipe |
+Do **not** ship `PHASE_C_PROMPT.md` — use PHASES.md §C.
 
-## Execution contract
+## Pitfalls (learned WorkHorse regen)
 
-### Pass A — dry-run (required for **Existing**)
-
-1. Read current justfile; note missing recipes.
-2. Emit dry-run report prefixed `[plan]`.
-3. End with: `NO FILES WRITTEN — DRY RUN ONLY`.
-
-### Pass B — apply
-
-Write after `apply` / `overwrite justfile` / greenfield create intent.
-
-## Hard rules
-
-1. Never `cd` before nested `just` — use subshells for compose.
-2. Do not replace vendored `upstream/**/justfile`.
-3. After write: `just` (list) and `just doctor`.
+1. **`just --summary` is one space-separated line.** Never `grep '^runtime-doit$'`. Use:
+   `just --summary | tr ' ' '\n' | grep -qx 'runtime-doit'`.
+2. **Phase R must not rewrite envelope `doit`.** Add `runtime.justfile` with a recipe named **`runtime-doit`**. Envelope already has `import?` + smart `doit`.
+3. **Broken multiline inside a shebang recipe** (e.g. a literal newline inside `tr ' ' '…'`) can make later `$0` awk look like just syntax errors — keep the detection on one physical line.
+4. **`doctor` must not hard-fail on missing upstream.** Fresh SideQuest clones have no `upstream/` yet; thin `doit` / `runtime-doit` call `ensure-upstream` to clone. Warn only; hard-fail only on missing `git`/`just`. Thin `doit` order: `ensure-upstream` → `doctor` → `pin` → `smoke`.
 
 ## Related
 
-- Singleton bootstrap: `bootstrap-tool-quickstart`
-- Landscape: `bootstrap-tool-landscape`
-- Exemplar mature justfile: `~/tools/voiceink-quickstart/justfile`
-- TIL: `~/tools/toolchain-2026/learning/til/process/dwim-justfile-status-help-doit.md`
+- Bootstrap: `bootstrap-tool-quickstart` (default dir `~/tools/<slug>-metarepo`)
+- Compare: [templates/COMPARE_REGEN.md](templates/COMPARE_REGEN.md), [templates/SIDEQUEST.md](templates/SIDEQUEST.md)

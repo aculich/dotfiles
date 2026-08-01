@@ -1,63 +1,66 @@
 {
   "version": 1,
   "skills": {
-    "babysit": {
-      "lastSyncedAt": 1785394251040
-    },
     "canvas": {
-      "lastSyncedAt": 1785394251040
+      "lastSyncedAt": 1785556677766
     },
     "create-hook": {
-      "lastSyncedAt": 1785394251040
+      "lastSyncedAt": 1785556677766
     },
     "create-rule": {
-      "lastSyncedAt": 1785394251040
+      "lastSyncedAt": 1785556677766
     },
     "create-skill": {
-      "lastSyncedAt": 1785394251040
+      "lastSyncedAt": 1785556677766
     },
     "create-subagent": {
-      "lastSyncedAt": 1785394251040
+      "lastSyncedAt": 1785556677766
     },
     "migrate-to-skills": {
-      "lastSyncedAt": 1785394251040
+      "lastSyncedAt": 1785556677766
     },
     "shell": {
-      "lastSyncedAt": 1785394251040
+      "lastSyncedAt": 1785556677766
     },
     "statusline": {
-      "lastSyncedAt": 1785394251040
+      "lastSyncedAt": 1785556677766
     },
     "update-cli-config": {
-      "lastSyncedAt": 1785394251040
+      "lastSyncedAt": 1785556677766
     },
     "update-cursor-settings": {
-      "lastSyncedAt": 1785394251040
+      "lastSyncedAt": 1785556677766
     },
     "split-to-prs": {
-      "lastSyncedAt": 1785394251040
+      "lastSyncedAt": 1785556677766
     },
     "sdk": {
-      "lastSyncedAt": 1785394251040
+      "lastSyncedAt": 1785556677766
     },
     "loop": {
-      "lastSyncedAt": 1785394251040
+      "lastSyncedAt": 1785556677766
     },
     "review": {
-      "lastSyncedAt": 1785394251040
+      "lastSyncedAt": 1785556677766
     },
     "review-bugbot": {
-      "lastSyncedAt": 1785394251040
+      "lastSyncedAt": 1785556677766
     },
     "review-security": {
-      "lastSyncedAt": 1785394251040
+      "lastSyncedAt": 1785556677766
     },
     "automate": {
-      "lastSyncedAt": 1785394251040
+      "lastSyncedAt": 1785556677766
     },
     "onboard": {
-      "lastSyncedAt": 1785394251040
+      "lastSyncedAt": 1785556677766
+    },
+    "autopilot": {
+      "lastSyncedAt": 1785556677766
+    },
+    "migrate-to-builds": {
+      "lastSyncedAt": 1785556677766
     }
   },
-  "lastInventoryAt": 1785365049592
+  "lastInventoryAt": 1785539121008
 }
