@@ -1,0 +1,108 @@
+=== probe 2026-07-31T00:09:15Z ===
+--- ~/.cursor top ---
+total 94696
+drwxr-xr-x@   52 me  staff      1664 Jul 22 22:23 .
+drwxr-x---+  446 me  staff     14272 Jul 30 17:08 ..
+drwxr-xr-x    12 me  staff       384 Jul 30 17:08 .git
+-rw-r--r--     1 me  staff       985 Apr  6 10:22 .gitignore
+-rw-r--r--     1 me  staff        21 May 29 09:43 .mcp-servers-disabled
+-rw-r--r--     1 me  staff        94 Jul 22 19:11 agent-cli-state.json
+drwxr-xr-x     2 me  staff        64 Jun 16 13:44 agents
+drwxr-xr-x     3 me  staff        96 Jul 30 17:09 ai-tracking
+-rw-r--r--@    1 me  staff       798 Jan 29  2025 argv.json
+-rwxr-xr-x     1 me  staff      1793 Dec 28  2025 backup-cursor.sh
+drwxr-xr-x    18 me  staff       576 Jul 30 11:31 browser-logs
+drwxr-xr-x     9 me  staff       288 Jul 22 19:12 chats
+-rw-r--r--     1 me  staff      1801 Jul 22 22:13 cli-config.json
+drwxr-xr-x    31 me  staff       992 Jul 30 09:04 commands
+-rw-r--r--     1 me  staff      6519 Nov 21  2025 cursor-file-locations-analysis-2025-11-22.md
+drwxr-xr-x     2 me  staff        64 Jul 11 04:11 debug-logs
+drwxr-xr-x@  122 me  staff      3904 Jul 30 09:16 extensions
+-rw-r--r--     1 me  staff      4293 Nov 21  2025 extensions-disabled-2025-11-22-01-20.md
+-rw-r--r--     1 me  staff     14095 Nov 21  2025 extensions-removed-2025-11-22.md
+-rw-r--r--     1 me  staff      2452 Nov 21  2025 extensions-to-disable-settings.json
+drwxr-xr-x     3 me  staff        96 Jan  1  2026 hooks
+drwxr-xr-x    17 me  staff       544 Dec  7  2025 hooks_blueplane
+-rw-------     1 me  staff       184 May 29 11:36 hooks.json
+-rw-r--r--     1 me  staff       616 Mar 23 09:28 hooks.json.bak.20260412051645
+-rw-r--r--     1 me  staff       979 Nov 14  2025 hooks.json.blueplane
+-rw-r--r--     1 me  staff      1465 Jul 30 17:07 ide_state.json
+-rw-r--r--     1 me  staff       827 May 25  2025 mcp__2025-05-25.json
+-rw-------     1 me  staff      2357 Jul 22 22:21 mcp.json
+-rw-------     1 me  staff       602 Feb  5 03:24 mcp.json-2026-02-05
+-rw-r--r--     1 me  staff       671 May 27  2025 mcp.json.2025-05-27
+-rw-------     1 me  staff       602 Feb  5 03:25 mcp.json.2026-02-05
+-rw-r--r--     1 me  staff       823 May  6  2025 mcp.json.bak
+-rw-------     1 me  staff      1981 Jul 21 22:59 mcp.json.bak-editlens-20260721-225914
+-rw-------     1 me  staff      2158 Jul 22 22:21 mcp.json.bak.20260722222108
+-rw-------     1 me  staff      2102 Dec 25  2025 mcp.json.disabled
+-rw-r--r--     1 me  staff       671 May 25  2025 mcp.json.latest-disabled
+-rw-------     1 me  staff         0 May 25  2025 mcp.json.lock
+-rw-------     1 me  staff        25 Dec 25  2025 mcp.json.minimal
+-rw-r--r--     1 me  staff       899 Jun  3 12:37 mcp.servers.stash.json
+--- plans count ---
+    1513
+--- chats store.db ---
+      27
+--- canvases dirs ---
+     280
+--- sample canvas files ---
+/Users/me/.cursor/projects/Users-me-projects-writing-quality/canvases/cidr-wa-critique-comparison.canvas.tsx
+/Users/me/.cursor/projects/Users-me-projects-rrid-ucb/canvases/rrid-github-coordination.canvas.tsx
+/Users/me/.cursor/projects/Users-me-tools-macosx-tools/canvases/macos-system-info.canvas.tsx
+/Users/me/.cursor/projects/Users-me-projects-cidr-zeal/canvases/rwc-education-factor-matrix.canvas.tsx
+/Users/me/.cursor/projects/Users-me-projects-cidr-zeal/canvases/yarmouth-ab-deep-discrepancy.canvas.tsx
+/Users/me/.cursor/projects/Users-me-projects-workspaces/canvases/personal-data-sors-review.canvas.tsx
+/Users/me/.cursor/projects/Users-me-projects-workspaces/canvases/workspaces-status.canvas.tsx
+/Users/me/.cursor/projects/Users-me-projects-gcloud-default-1234/canvases/infra-scan-comparison.canvas.tsx
+/Users/me/.cursor/projects/Users-me-tools-voiceink-quickstart/canvases/voiceink-lineage.canvas.tsx
+/Users/me/.cursor/projects/Users-me-tools-voiceink-quickstart/canvases/bootstrap-phase-c.canvas.tsx
+/Users/me/.cursor/projects/Users-me-tools-voiceink-quickstart/canvases/metarepo-regen-status.canvas.tsx
+/Users/me/.cursor/projects/Users-me-tools-voiceink-quickstart/canvases/bootstrap-overview.canvas.tsx
+/Users/me/.cursor/projects/Users-me-projects-cidr-org-llc-admin/canvases/llc-admin-status.canvas.tsx
+/Users/me/.cursor/projects/Users-me-projects-peeq-leginfo/canvases/leginfo-data-centers.canvas.tsx
+/Users/me/.cursor/projects/Users-me-projects-peeq-leginfo/canvases/fair-care-data-profile.canvas.tsx
+--- agent-transcripts ---
+     239
+    1643
+--- workspaceStorage ---
+     820
+--- sample workspace.json ---
+FILE /Users/me/Library/Application Support/Cursor/User/workspaceStorage/ad8316de0edfff49cfd059d4dfd6caf2/workspace.json
+{
+  "folder": "file:///Users/me/projects/commuteworld"
+}
+FILE /Users/me/Library/Application Support/Cursor/User/workspaceStorage/0d032500df317115876aba9012986370/workspace.json
+{
+  "folder": "file:///Users/me/projects"
+}
+FILE /Users/me/Library/Application Support/Cursor/User/workspaceStorage/dd6e7550e3671f5c10230e71e5f1bb8c/workspace.json
+{
+  "folder": "file:///Users/me/projects/chathistory/test-project1"
+}
+FILE /Users/me/Library/Application Support/Cursor/User/workspaceStorage/2df92f56068572445f3a5ebf16f6756f/workspace.json
+{
+  "folder": "file:///Users/me/projects/cursor-fps/upstream/gemini-2-tts"
+}
+FILE /Users/me/Library/Application Support/Cursor/User/workspaceStorage/c7f58959a581a07e5589a47c5fbe7608/workspace.json
+{
+  "folder": "file:///Users/me/tools/plotly-demo"
+}
+--- globalStorage state.vscdb ---
+-rw-r--r--  1 me  staff  30840471552 Jul 30 17:09 /Users/me/Library/Application Support/Cursor/User/globalStorage/state.vscdb
+--- project folder for this workspace ---
+total 8
+drwxr-xr-x   10 me  staff    320 Apr 16 13:59 .
+drwxr-xr-x  476 me  staff  15232 Jul 29 23:48 ..
+drwxr-xr-x    7 me  staff    224 Jul 28 09:47 agent-tools
+drwxr-xr-x   32 me  staff   1024 Jul 28 09:33 agent-transcripts
+drwxr-xr-x   72 me  staff   2304 Jul 28 09:32 assets
+drwxr-xr-x    6 me  staff    192 Jul 28 09:12 canvases
+-rw-r--r--    1 me  staff     37 Oct 29  2025 mcp-cache.json
+drwxr-xr-x   21 me  staff    672 Jul 30 17:06 mcps
+drwxr-xr-x    2 me  staff     64 Jul 30 17:06 terminals
+drwxr-xr-x    7 me  staff    224 Jun 17 15:01 uploads
+cursor-ops-status.canvas.data.json
+cursor-ops-status.canvas.tsx
+node_modules
+tsconfig.json

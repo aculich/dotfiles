@@ -71,3 +71,11 @@ Not primary ingest for this ops repo. Use product docs under `docs/` and invento
 - **cloud_vs_local:** `docs/cursor-cloud-agents-vs-local.md`
 - **keybindings_guide:** `docs/keybindings-guide.md`
 - **agents_window_hygiene:** `docs/agents-window-hygiene.md`
+- **cursor_architecture:** `docs/cursor-architecture.md`
+- **cursor_storage_map:** `docs/cursor-storage-map.md`
+- **cursor_settings_guide:** `docs/cursor-settings-guide.md`
+- **cursor_canvases:** `docs/cursor-canvases.md`
+- **cursor_tools_superprd:** `docs/cursor-tools-superprd.md`
+- **cursor_tools_ontology:** `docs/cursor-tools-ontology.md`
+- **cursor_internals_version:** `docs/cursor-internals-VERSION.md`
+- **tool_clusters:** `docs/tools/`

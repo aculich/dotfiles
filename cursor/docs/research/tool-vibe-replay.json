@@ -1,0 +1,62 @@
+{
+  "search_id": "search_7678cb036bc10ef46d93b9ae5c4ba2e1",
+  "session_id": "session_7678cb036bc10ef46d93b9ae5c4ba2e1",
+  "status": "ok",
+  "results": [
+    {
+      "url": "https://vibe-replay.com/",
+      "title": "vibe-replay - Turn AI coding sessions into shareable replays",
+      "publish_date": null,
+      "excerpts": [
+        "Replay, analyze, and share your Claude Code, Cursor, Codex, and Pi AI coding sessions as interactive web replays. One command, one self-contained HTML file. Free and open source."
+      ]
+    },
+    {
+      "url": "https://github.com/vercel-labs/skills/issues/907",
+      "title": "Listing: Request indexing for tuo-lei/vibe-replay \u00b7 Issue #907 \u00b7 vercel-labs/skills",
+      "publish_date": "2026-04-11",
+      "excerpts": [
+        "vibe-replay <strong>turns AI coding sessions (Claude Code, Cursor) into shareable, interactive HTML replays</strong>."
+      ]
+    },
+    {
+      "url": "https://vibe-replay.com/explore/",
+      "title": "Explore Public AI Coding Replays \u2014 Claude Code, Cursor, Codex & Pi | vibe-replay",
+      "publish_date": null,
+      "excerpts": [
+        "vibe-replay | Blog Explore Insights\n\n[Star](https://github.com/tuo-lei/vibe-replay)\n\nBlog Explore Replays Insights [GitHub](https://github.com/tuo-lei/vibe-replay)\n\n# Public AI coding replays\n\nClaude Code, Cursor, Codex & Pi sessions shared by the community\n\nRecent Popular\n\nWatch real AI coding sessions from\nClaude Code, Cursor, Codex, and Pi \u2014 full prompts, tool calls, file diffs, and thinking blocks\nrendered as an interactive timeline. Each replay is a self-contained HTML file you can open\noffline, embed in a PR, or share as a link.\n\nWant to share your own? Run `npx vibe-replay --gist` or `npx vibe-replay --cloud` and your replay will appear here.\n\nLoading replays...\n\n\u25b6\n\n## No replays yet\n\nBe the first to share a replay!\n\n$ npx vibe-replay --gist\n\n## Frequently asked questions\n\n### What are AI coding session replays?\nReplays capture every prompt, tool call, file edit, and AI thinking step from a Claude Code, Cursor, Codex, or Pi session, then render them as an interactive timeline you can scrub through. Browse public replays here to see how others build with AI.\n\n### How do I share my own replay?\n\nRun `npx vibe-replay --gist` (publishes to GitHub Gist) or `npx vibe-replay --cloud` (publishes to vibe-replay cloud). Both produce a public URL you can share. Replays show up here automatically.\n\n### Which agents can I replay?\n\nClaude Code, Cursor, Codex, and Pi \u2014 all auto-discovered from local files, no extra instrumentation. vibe-replay reads JSONL for Claude Code and SQLite/JSONL for Cursor, and every provider renders with full prompt history, tool calls, diffs, and thinking blocks.\n\n### Are replays self-contained?\n\nEvery replay is a single static HTML file with all assets inlined \u2014 no external requests, no tracking. Open it offline, host it on any static server, or attach it to a PR.\nvibe-replay \u00b7 [MIT](https://opensource.org/licenses/MIT)\n\nBlog Explore Insights [GitHub](https://github.com/tuo-lei/vibe-replay) [npm](https://www.npmjs.com/package/vibe-replay)"
+      ]
+    },
+    {
+      "url": "https://github.com/hesreallyhim/awesome-claude-code/issues/1482",
+      "title": "Add vibe-replay to Tooling section \u00b7 Issue #1482 \u00b7 hesreallyhim/awesome-claude-code",
+      "publish_date": "2026-04-11",
+      "excerpts": [
+        "Why it fits: Similar to existing Tooling entries like cclogviewer and Vibe-Log, vibe-replay works directly with Claude Code session data (.jsonl files) to produce interactive visualizations. It supports both Claude Code and Cursor, auto-discovers sessions, and exports as self-contained HTML, animated SVG/GIF, or markdown for PRs. Website: https://vibe-replay.com npm: https://www.npmjs.com/package/vibe-replay"
+      ]
+    },
+    {
+      "url": "https://cursor.com/product",
+      "title": "Cursor Agents Build faster with a team of agents. Agents plan, build, and test.",
+      "publish_date": null,
+      "excerpts": [
+        "Cursor Agents"
+      ]
+    },
+    {
+      "url": "https://eliya.io/blog/vibe-coding/tools",
+      "title": "10 Vibe Coding Tools in 2025: Key Features & How to Pick the Best",
+      "publish_date": "2025-08-06",
+      "excerpts": [
+        "* **Real-Time Collaborative Editing:** Allows multiple developers to edit the same codebase simultaneously, with conflict resolution tools.\n* **Inline Commenting & Code Review:** Enables seamless discussions and code reviews directly in the editor.\n* **AI-Powered Code Suggestions:** Offers context-aware autocompletion and refactoring tips.\n* **Version History & Replay:** Let teams review code history and replay changes for debugging or training.\n* **Secure Remote Access:** End-to-end encryption ensures data integrity for distributed teams.\n\n**What it can improve**\n\n[Cursor](https://www.reddit.com/r/cursor/comments/1fk1tzg/im_really_disappointed_with_cursor_ai_paid_sub/) could improve its reliability when editing code. Users report it sometimes introduces unintended changes or breaks existing logic, making debugging harder. More precise, context-aware edits would enhance trust in its suggestions.\n\n**Best For**\nBest for remote and hybrid development teams who want to collaborate in real time on the same codebase, perform live code reviews, and leverage AI-assisted code suggestions to boost code quality and reduce friction.\n\n**Ratings**\n\n* [Rated 4.8/5 on G2](https://www.g2.com/sellers/cursor)\n* [Rated 2.0/5 on Trustpilot](https://www.trustpilot.com/review/cursor.com)\n\n[**Pricing**](https://cursor.com/pricing)\n\nFree plan with limited usage. Pro plan at $20/month includes faster completions and full project context. Ideal for full-time devs working across large repos.\n\n### 3\\. [**GitHub Copilot**](https://github.com/features/copilot)\n\nGithub\n\nGitHub Copilot remains a staple for developers looking to automate repetitive code generation. It excels in autocompleting common patterns, test cases, and data manipulation tasks.\n\nCopilot alone now supports over 1.3 million paying users across 50,000 companies, According to [Microsoft](https://www.microsoft."
+      ]
+    }
+  ],
+  "usage": [
+    {
+      "name": "sku_search",
+      "count": 1
+    }
+  ],
+  "warnings": []
+}
