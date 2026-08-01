@@ -39,8 +39,26 @@ live_a=$(ls -1 ~/.agents/skills 2>/dev/null | wc -l | tr -d ' ')
 mir_a=$(ls -1 "$mirror/agents-skills" 2>/dev/null | wc -l | tr -d ' ')
 if [[ "$live_c" != "$mir_c" || "$live_a" != "$mir_a" ]]; then
   echo ""
-  echo "Skill counts differ from mirror (live skills=$live_c/$live_a mirror=$mir_c/$mir_a)."
-  echo "Tip: just skill-backup-fast"
+  echo "Skill counts differ from scaffold mirror (live skills=$live_c/$live_a mirror=$mir_c/$mir_a)."
+  echo "Tip: just skill-backup-fast   # commits into dotfiles (does not push)"
+fi
+
+ops="${CURSOR_COMPENDIUM_ROOT:-$HOME/ops/dotfiles-cursor-compendium}"
+if [[ -d "$ops/.git" ]]; then
+  if ! git -C "$ops" diff --quiet 2>/dev/null || ! git -C "$ops" diff --cached --quiet 2>/dev/null \
+     || [[ -n "$(git -C "$ops" ls-files --others --exclude-standard 2>/dev/null | head -1)" ]]; then
+    echo ""
+    echo "Ops compendium has uncommitted changes: $ops"
+    echo "Tip: just compendium-backup   # snapshot + commit + push private GH"
+  elif [[ -n "$(git -C "$ops" rev-list --count '@{upstream}..HEAD' 2>/dev/null)" ]] \
+     && [[ "$(git -C "$ops" rev-list --count '@{upstream}..HEAD' 2>/dev/null)" != "0" ]]; then
+    echo ""
+    echo "Ops compendium is ahead of origin (unpushed commits)."
+    echo "Tip: just compendium-push"
+  fi
+else
+  echo ""
+  echo "Tip: set CURSOR_COMPENDIUM_ROOT to ~/ops/dotfiles-cursor-compendium for private DR push."
 fi
 
 echo ""

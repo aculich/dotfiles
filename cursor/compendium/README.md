@@ -26,4 +26,4 @@ May contain **MCP configs**, **chat-adjacent** SpecStory data, and **internal** 
 
 ## Automation
 
-See `launchd/` for an optional **daily** snapshot + commit example. Default posture: **compendium repo only**—do not point automation at `dotfiles/cursor` unless you deliberately opt in.
+See `launchd/` for a **daily** snapshot that ends in **commit + push** (via `scripts/commit-and-push.sh`). From `~/dotfiles/cursor`: `just install-compendium-daily`. Opt out of publish with `COMPENDIUM_AUTO_PUSH=0`. Default posture: **ops sibling repo only**—do not point automation at the scaffold under `dotfiles/cursor` unless you deliberately opt in.

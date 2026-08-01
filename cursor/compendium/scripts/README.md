@@ -14,8 +14,8 @@ All scripts pass `--exclude='mcp.json'` and similar. Edit the `RSYNC_EXCLUDES` v
 | `discover-project-paths.py` | Merge **Cursor-known** workspace roots with a **disk scan** for `.cursor/`, `.claude/`, `.specstory/` under `~/projects`, `~/tools`, optional roots, and shallow `$HOME`; write `project-paths.txt` + `discover-report.json` (orphans vs stale). |
 | `sync-global-plans.sh` | `~/.cursor/plans` → `plans/global/` |
 | `snapshot-project.sh` | One project `.cursor/`, `.cursor/plans`, optional `.specstory` rules-only |
-| `snapshot-all.sh` | Runs skills invent (unless `SKILL_DISCOVER=0`), project-path discover (unless `COMPENDIUM_AUTO_DISCOVER=0`), then global plans, then each line in `project-paths.txt` |
-
+| `snapshot-all.sh` | Runs skills invent (unless `SKILL_DISCOVER=0`), project-path discover (unless `COMPENDIUM_AUTO_DISCOVER=0`), then global plans, then each line in `project-paths.txt`, then **`commit-and-push.sh`** unless `COMPENDIUM_AUTO_PUSH=0` |
+| `commit-and-push.sh` | Verify GitHub remote is PRIVATE, `git add -A`, commit if dirty, `git push` |
 ### skills invent
 
 Prefer from agent-skills: `just invent-compendium`, or from dotfiles/cursor: `just skill-discover` (both call the canonical script with `--compendium-root` = `CURSOR_COMPENDIUM_ROOT`).

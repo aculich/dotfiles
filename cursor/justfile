@@ -1,9 +1,15 @@
 # Cursor config + skills management recipes
 #
+# Layers:
+#   agent-skills  — authoring SoT (~/projects/agent-skills)
+#   skill-*       — mirror live installs into dotfiles (commit locally; does not push)
+#   compendium-*  — private ops DR at CURSOR_COMPENDIUM_ROOT (snapshot commits + pushes)
+#
 # Run `just` (or `just help`) for the list. Requires: bash, git, rsync, python3.
-# Optional: gh (privacy checks), just (obviously).
+# Optional: gh (privacy checks).
 
 set shell := ["bash", "-eu", "-o", "pipefail", "-c"]
+set unstable := true
 
 cursor_dir := justfile_directory()
 dotfiles   := parent_directory(cursor_dir)
@@ -13,9 +19,9 @@ scripts    := cursor_dir / "scripts"
 mirror     := cursor_dir / "compendium/mirrors/skills-snapshots"
 inventory  := compendium / "skills-registry/skills-inventory.json"
 
-# List available recipes
+# List recipes by group (skills = local commit; compendium = private GH push)
 default:
-    @just --list --unsorted
+    @just --list --list-heading $'Cursor recipes — skills commit in dotfiles (no push); compendium-backup pushes ops DR:\n'
 
 alias help := default
 
@@ -23,20 +29,24 @@ alias help := default
 # Status
 # ------------------------------------------------------------------
 
-# High-level status of all cursor-related tracking (git, skills, remotes)
+# High-level status (git, skills, remotes privacy)
+[group('status')]
 status: git-status skill-status remotes
     @echo ""
-    @echo "Tip: 'just skill-backup' to snapshot+commit global skills."
+    @echo "Tip: 'just compendium-backup' for ops DR (commit+push)."
+    @echo "Tip: 'just skill-backup' for global skill mirrors in dotfiles (commit only)."
 
-# Git status for dotfiles and the sibling compendium repo
+# Git status for dotfiles and the sibling ops compendium repo
+[group('status')]
 git-status:
     @echo "== git: dotfiles ({{dotfiles}}) =="
     @git -C "{{dotfiles}}" status --short --branch | head -20 || true
     @echo ""
     @echo "== git: compendium ({{compendium}}) =="
-    @if [[ -d "{{compendium}}/.git" ]]; then git -C "{{compendium}}" status --short --branch | head -20; else echo "(no compendium git repo at {{compendium}})"; fi
+    @if [[ -d "{{compendium}}/.git" ]]; then git -C "{{compendium}}" status --short --branch | head -20; else echo "(no compendium git repo at {{compendium}}; set CURSOR_COMPENDIUM_ROOT)"; fi
 
-# Skills counts (live vs mirror) and last snapshot time
+# Skills counts (live vs dotfiles scaffold mirror) and last snapshot time
+[group('status')]
 skill-status:
     @echo "== skills =="
     @printf "live   ~/.cursor/skills        : %s\n" "$(ls -1 ~/.cursor/skills 2>/dev/null | wc -l | tr -d ' ')"
@@ -48,7 +58,8 @@ skill-status:
     @if [[ -f "{{inventory}}" ]]; then printf "inventory generated            : %s\n" "$(python3 -c 'import json;print(json.load(open("{{inventory}}"))["generated"])' 2>/dev/null || echo unknown)"; else echo "inventory                      : (none; run 'just skill-discover')"; fi
     @printf "last mirror commit             : %s\n" "$(git -C "{{dotfiles}}" log -1 --format='%cs %h %s' -- cursor/compendium/mirrors/skills-snapshots 2>/dev/null || echo none)"
 
-# Show live-vs-mirror drift (which skills changed since last backup)
+# Show live-vs-mirror drift (which skills changed since last skill-backup)
+[group('status')]
 skill-drift:
     #!/usr/bin/env bash
     set -uo pipefail
@@ -64,7 +75,8 @@ skill-drift:
     check ~/.cursor/skills-cursor skills-cursor
     check ~/.agents/skills        agents-skills
 
-# Verify GitHub remotes for skills/compendium are private
+# Verify GitHub remotes for dotfiles + ops compendium are PRIVATE (no push)
+[group('status')]
 remotes:
     @echo "== remote privacy =="
     @"{{scripts}}/verify-private-remotes.sh" || true
@@ -72,22 +84,37 @@ remotes:
 alias verify-private := remotes
 
 # ------------------------------------------------------------------
-# Backup
+# Skills (dotfiles mirror — commit only, does not push)
 # ------------------------------------------------------------------
 
-# Mirror global skills (~/.cursor + ~/.agents) and regenerate inventory (into dotfiles)
-skill-snapshot:
-    @CURSOR_COMPENDIUM_ROOT="{{cursor_dir}}/compendium" "{{scripts}}/snapshot-all-skills.sh"
-
-# Snapshot global skills AND commit the mirror+inventory in dotfiles (with full inventory scan)
+# Mirror global skills, refresh inventory, commit in dotfiles (does not push)
+[group('skills')]
 skill-backup: skill-snapshot _skill-commit
 
-# Fast global-skills backup: mirror + commit, skipping the slow project inventory scan
+# Same as skill-backup but skip project inventory scan (does not push)
+[group('skills')]
 skill-backup-fast:
     @SKILL_DISCOVER=0 CURSOR_COMPENDIUM_ROOT="{{cursor_dir}}/compendium" "{{scripts}}/snapshot-all-skills.sh"
     @just _skill-commit
 
-# (internal) stage the mirror+inventory and commit if changed
+# Mirror + inventory only into scaffold; no commit
+[group('skills')]
+skill-snapshot:
+    @CURSOR_COMPENDIUM_ROOT="{{cursor_dir}}/compendium" "{{scripts}}/snapshot-all-skills.sh"
+
+# Include project-local skills into CURSOR_COMPENDIUM_ROOT; prefer compendium-backup for push
+[group('skills')]
+skill-backup-full:
+    @SNAPSHOT_PROJECT_SKILLS=1 CURSOR_COMPENDIUM_ROOT="{{compendium}}" "{{scripts}}/snapshot-all-skills.sh"
+    @echo "Wrote under {{compendium}}. Prefer 'just compendium-backup' for full ops snapshot+push."
+
+# Regenerate skills inventory under CURSOR_COMPENDIUM_ROOT (shim → agent-skills discover)
+[group('skills')]
+skill-discover:
+    @python3 "{{agent_skills}}/scripts/discover-skills.py" --compendium-root "{{compendium}}"
+
+# (internal) stage the mirror+inventory and commit if changed — does not push
+[private]
 _skill-commit:
     #!/usr/bin/env bash
     set -euo pipefail
@@ -100,16 +127,48 @@ _skill-commit:
       echo "Committed skill snapshot to dotfiles (not pushed)."
     fi
 
-# Full backup including project-local .cursor/skills via the compendium (slow)
-skill-backup-full:
-    @SNAPSHOT_PROJECT_SKILLS=1 CURSOR_COMPENDIUM_ROOT="{{compendium}}" "{{scripts}}/snapshot-all-skills.sh"
-    @echo "Review and commit in {{compendium}} (and dotfiles if mirror changed)."
+# ------------------------------------------------------------------
+# Compendium (ops DR — commit + push to private GH)
+# ------------------------------------------------------------------
 
-# Regenerate skills inventory under CURSOR_COMPENDIUM_ROOT (shim → agent-skills discover)
-skill-discover:
-    @python3 "{{agent_skills}}/scripts/discover-skills.py" --compendium-root "{{compendium}}"
+# Snapshot ops CURSOR_COMPENDIUM_ROOT and commit+push (COMPENDIUM_AUTO_PUSH=0 to skip push)
+[group('compendium')]
+compendium-backup:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    root="{{compendium}}"
+    if [[ ! -x "${root}/scripts/snapshot-all.sh" ]]; then
+      echo "compendium-backup: missing ${root}/scripts/snapshot-all.sh" >&2
+      echo "Set CURSOR_COMPENDIUM_ROOT to ~/ops/dotfiles-cursor-compendium" >&2
+      exit 1
+    fi
+    if [[ ! -d "${root}/.git" ]]; then
+      echo "compendium-backup: ${root} is not a git repo (scaffold-only?). Use the live ops tree." >&2
+      exit 1
+    fi
+    export CURSOR_COMPENDIUM_ROOT="${root}"
+    "${root}/scripts/snapshot-all.sh"
+
+# Commit+push ops tree without re-running snapshot (privacy check included)
+[group('compendium')]
+compendium-push:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    root="{{compendium}}"
+    export CURSOR_COMPENDIUM_ROOT="${root}"
+    "${root}/scripts/commit-and-push.sh"
+
+# Short git status for the ops compendium only
+[group('compendium')]
+compendium-status:
+    @if [[ -d "{{compendium}}/.git" ]]; then git -C "{{compendium}}" status --short --branch; else echo "(no git repo at {{compendium}})"; fi
+
+# ------------------------------------------------------------------
+# Config
+# ------------------------------------------------------------------
 
 # Snapshot Cursor config (mcp/settings/extensions) into snapshots/
+[group('config')]
 config-snapshot:
     @"{{scripts}}/snapshot-cursor-config.sh"
 
@@ -117,26 +176,92 @@ config-snapshot:
 # Resources / DWIM
 # ------------------------------------------------------------------
 
+# DWIM: status + resource snapshot + tips (never auto-tune / never kill)
+[group('resources')]
+doit:
+    @"{{scripts}}/cursor-doit.sh"
+
 # Activity-Monitor-style Cursor + system snapshot (diagnose-only; never kills)
+[group('resources')]
 resource-snapshot:
     @"{{scripts}}/cursor-resource-snapshot.sh"
 
 # Tip: interactive watchers (not a long-running just job)
+[group('resources')]
 resource-watch:
     @echo "Interactive: run 'btop' (installed) for a TUI Activity Monitor."
     @echo "Apple Silicon power (optional): brew install macmon && macmon"
     @echo "Scripted Cursor forensics: just resource-snapshot  (or just doit)"
     @echo "Landscape notes: ~/tools/macosx-tools/research/macos-system-info/CLI-RESOURCE-TOOLS.md"
 
-# DWIM: status + resource snapshot + tips (never auto-tune / never kill)
-doit:
-    @"{{scripts}}/cursor-doit.sh"
-
 # ------------------------------------------------------------------
 # Automation
 # ------------------------------------------------------------------
 
-# Install a daily launchd agent that runs `just skill-backup` at 06:15
+# Install daily LaunchAgent: ops compendium snapshot+push at 06:00
+[group('automation')]
+install-compendium-daily:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    root="{{compendium}}"
+    if [[ ! -d "${root}/.git" ]]; then
+      echo "install-compendium-daily: ${root} is not a git repo; set CURSOR_COMPENDIUM_ROOT" >&2
+      exit 1
+    fi
+    plist=~/Library/LaunchAgents/com.user.cursor-compendium-daily.plist
+    python3 - "$plist" "$root" <<'PY'
+    import pathlib, sys, xml.sax.saxutils as x
+    plist, root = pathlib.Path(sys.argv[1]), sys.argv[2]
+    cmd = f'export CURSOR_COMPENDIUM_ROOT={root}; cd "$CURSOR_COMPENDIUM_ROOT" && ./scripts/snapshot-all.sh'
+    escaped = x.escape(cmd)
+    plist.write_text(
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" '
+        '"http://www.apple.com/DTDs/PropertyList-1.0.dtd">\n'
+        '<plist version="1.0">\n'
+        '<dict>\n'
+        '  <key>Label</key>\n'
+        '  <string>com.user.cursor-compendium-daily</string>\n'
+        '  <key>ProgramArguments</key>\n'
+        '  <array>\n'
+        '    <string>/bin/bash</string>\n'
+        '    <string>-lc</string>\n'
+        f'    <string>{escaped}</string>\n'
+        '  </array>\n'
+        '  <key>StartCalendarInterval</key>\n'
+        '  <dict>\n'
+        '    <key>Hour</key>\n'
+        '    <integer>6</integer>\n'
+        '    <key>Minute</key>\n'
+        '    <integer>0</integer>\n'
+        '  </dict>\n'
+        '  <key>StandardOutPath</key>\n'
+        '  <string>/tmp/cursor-compendium-daily.log</string>\n'
+        '  <key>StandardErrorPath</key>\n'
+        '  <string>/tmp/cursor-compendium-daily.err</string>\n'
+        '</dict>\n'
+        '</plist>\n'
+    )
+    PY
+    launchctl bootout "gui/$(id -u)/com.user.cursor-compendium-daily" 2>/dev/null || true
+    launchctl bootstrap "gui/$(id -u)" "$plist"
+    echo "Installed daily ops compendium snapshot+push at 06:00 -> $plist"
+    echo "Logs: /tmp/cursor-compendium-daily.log (.err)"
+
+# Remove the daily ops compendium LaunchAgent
+[group('automation')]
+uninstall-compendium-daily:
+    @launchctl bootout "gui/$(id -u)/com.user.cursor-compendium-daily" 2>/dev/null || true
+    @rm -f ~/Library/LaunchAgents/com.user.cursor-compendium-daily.plist
+    @echo "Removed daily ops compendium agent."
+
+# Show status of the daily ops compendium LaunchAgent
+[group('automation')]
+compendium-daily-status:
+    @launchctl print "gui/$(id -u)/com.user.cursor-compendium-daily" 2>/dev/null | grep -E "state|program|pid" || echo "not installed (run 'just install-compendium-daily')"
+
+# Install a daily launchd agent that runs `just skill-backup` at 06:15 (dotfiles commit only)
+[group('automation')]
 install-daily:
     #!/usr/bin/env bash
     set -euo pipefail
@@ -167,12 +292,14 @@ install-daily:
     echo "Installed daily skill-backup at 06:15 -> $plist"
     echo "Logs: /tmp/cursor-skill-backup.log (.err)"
 
-# Remove the daily launchd agent
+# Remove the daily skill-backup LaunchAgent
+[group('automation')]
 uninstall-daily:
     @launchctl bootout "gui/$(id -u)/com.user.cursor-skill-backup" 2>/dev/null || true
     @rm -f ~/Library/LaunchAgents/com.user.cursor-skill-backup.plist
     @echo "Removed daily skill-backup agent."
 
-# Show status of the daily launchd agent
+# Show status of the daily skill-backup LaunchAgent
+[group('automation')]
 daily-status:
     @launchctl print "gui/$(id -u)/com.user.cursor-skill-backup" 2>/dev/null | grep -E "state|program|pid" || echo "not installed (run 'just install-daily')"
