@@ -64,6 +64,7 @@ Chaos-containment:
 - [ ] Classify notable paths
 - [ ] Emit containment report (mark briefing-required rows)
 - [ ] Stop and wait — unless user already named paths + a verb
+- [ ] Before any apply/offload/stash move: chatstory-preserve (Step 0.5)
 ```
 
 ### 0. Hot livewires (mandatory before classify)
@@ -76,6 +77,14 @@ Invoke [`hot-livewires-preflight`](file:///Users/me/.cursor/skills/hot-livewires
 - Write `LIVEWIRES-BRIEFING.md`; do not continue deaccession until verified-live is triaged
 
 If the tree looks like a **stale tooling trial** (nested third-party `.git`, personal wrapper, multi-GB `target`/`.devbox`, `.specstory`), also invoke [`stale-tooling-trial`](file:///Users/me/.cursor/skills/stale-tooling-trial/SKILL.md).
+
+### 0.5. chatstory-preserve (mandatory before bytes move)
+
+Before `apply`, `offload`, or `quick-stash` relocates or deletes any path that has SpecStory / Cursor workspace / Claude chat artifacts, invoke [`chatstory-preserve`](file:///Users/me/.cursor/skills/chatstory-preserve/SKILL.md):
+
+- Dry-run inventory first; `--apply` PDV capsule before transport
+- Incomplete preserve = incomplete move (unless user says `preserve-waive: <path>`)
+- Link capsule path from `OFFLOAD.md` / MARK-AND-SWEEP / stash briefing
 
 ### 1. Scan
 
@@ -133,9 +142,10 @@ Multi-destination relocate. Prefer the name **offload** in prose.
 1. Read `.workspace-tools.json` for `gog_alias` / org
 2. If missing: tell user to `attach-workspace <org>` — do not guess foreign orgs
 3. Respect org isolation (bound org only unless explicit cross-org override)
-4. Upload with `gog-as <alias> drive …` under something like `Chaos-Containment/<repo>/<YYYY-MM>/`
-5. Write local `OFFLOAD.md` (steward one-liner + whence/purpose/Drive path)
-6. Remove or gitignore local copy **only after confirm**
+4. **chatstory-preserve** on paths with chat artifacts before upload/remove
+5. Upload with `gog-as <alias> drive …` under something like `Chaos-Containment/<repo>/<YYYY-MM>/`
+6. Write local `OFFLOAD.md` (steward one-liner + whence/purpose/Drive path + preserve capsule link)
+7. Remove or gitignore local copy **only after confirm**
 
 ---
 
@@ -144,6 +154,8 @@ Multi-destination relocate. Prefer the name **offload** in prose.
 Hand off to [`quick-stash`](file:///Users/me/.cursor/skills/quick-stash/SKILL.md).
 
 **Required:** `AGENT-BRIEFING.md` per [agent-briefing.md](agent-briefing.md). Incomplete briefing = incomplete stash.
+
+Before stashing project trees / `.specstory`, run [`chatstory-preserve`](file:///Users/me/.cursor/skills/chatstory-preserve/SKILL.md).
 
 Use for PII / personal / secrets that must not stay in an OSS or project tree. Not for vacuuming already-committed history — that is `tidy-stash`.
 
@@ -179,8 +191,9 @@ Execute the **last proposed plan** from this conversation only after the user co
 
 For every moved batch:
 
+- [ ] **chatstory-preserve --apply** (or explicit `preserve-waive`) for paths with chat artifacts
 - [ ] Bytes at destination
-- [ ] Briefing / OFFLOAD / pointer README with one-liner
+- [ ] Briefing / OFFLOAD / pointer README with one-liner (+ capsule link)
 - [ ] Provenance where applicable
 - [ ] Source hygiene (gitignore) if needed
 - [ ] Pattern registry update if novel
@@ -194,6 +207,7 @@ For every moved batch:
 - Never cross-org Drive without workspace binding + isolation rules
 - Confirm targets before offload/stash
 - **Incomplete agent briefing = incomplete move**
+- **Incomplete chatstory-preserve = incomplete move** (unless `preserve-waive: <path>`)
 - Follow `accidental-data-loss-prevention` for irreversible ops
 
 ## See also
@@ -201,7 +215,7 @@ For every moved batch:
 - [destinations.md](destinations.md) — PDV / Drive / LFS / DVC / chaos vault
 - [patterns.md](patterns.md) — living pattern registry
 - [agent-briefing.md](agent-briefing.md) — briefing template
-- `hot-livewires-preflight`, `stale-tooling-trial`, `deaccession-guides-and-guards`, `quick-stash`, `tidy-stash`, `research-clone-bootstrap`
+- `hot-livewires-preflight`, `chatstory-preserve`, `stale-tooling-trial`, `deaccession-guides-and-guards`, `quick-stash`, `tidy-stash`, `research-clone-bootstrap`
 - `skill-propagate-offshoot` (`/skill-propagate`) — skill/command offshoots; defer from `extract`
 - Next propagate candidate: see `~/projects/agent-skills/docs/PROPAGATION-CANDIDATES.md`
 - Ethos: `~/pdv/meta/AGENTIC-DATA-STEWARDSHIP-GUIDE.md`, `~/pdv/meta/DEACCESSIONING-GUIDE.md`

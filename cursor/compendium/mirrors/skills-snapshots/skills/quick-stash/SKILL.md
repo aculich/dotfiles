@@ -44,6 +44,7 @@ Copy this checklist:
 ```text
 Quick-stash:
 - [ ] Confirm file/dir targets with user (never delete; move only)
+- [ ] If targets are project trees or contain .specstory / Cursor workspace history: chatstory-preserve first
 - [ ] Resolve VAULT_ROOT; ensure vintage-YYYY-MM exists
 - [ ] mv (or git mv in source if tracked-uncommitted) into vintage
 - [ ] Append provenance to vintage README.md
@@ -52,6 +53,10 @@ Quick-stash:
 - [ ] Optionally add source .gitignore patterns so files do not reappear
 - [ ] Leave source repo clean; do not push vault remotes unless asked
 ```
+
+### 0. chatstory-preserve (when applicable)
+
+If any stash target is a project tree, contains `.specstory/`, or is otherwise a Cursor/Claude workspace with chat history, invoke [`chatstory-preserve`](file:///Users/me/.cursor/skills/chatstory-preserve/SKILL.md) **before** the move (`--apply` capsule, or user `preserve-waive: <path>`). Link the capsule from the stash briefing. Incomplete preserve = incomplete stash for those paths.
 
 ### 1. Confirm targets
 

@@ -6,6 +6,7 @@ note: symlinked skills are dereferenced (real content copied into mirror)
 /Users/me/.agents/skills/skill-propagate-offshoot -> /Users/me/projects/agent-skills/skills/.experimental/skill-propagate-offshoot
 /Users/me/.cursor/skills/bcal-declutter -> /Users/me/tools/google-workspace-tools/.cursor/skills/bcal-declutter
 /Users/me/.cursor/skills/berkeley-cidr-meeting -> /Users/me/tools/google-workspace-tools/.cursor/skills/berkeley-cidr-meeting
+/Users/me/.cursor/skills/chatstory-preserve -> /Users/me/projects/agent-skills/skills/.experimental/chatstory-preserve
 /Users/me/.cursor/skills/cidr-letterhead -> /Users/me/projects/cidr-org/library__cidrlab/.cursor/skills/cidr-letterhead
 /Users/me/.cursor/skills/embedded-captions -> ../../.claude/skills/embedded-captions
 /Users/me/.cursor/skills/ern-cidr-mail -> /Users/me/tools/google-workspace-tools/.cursor/skills/ern-cidr-mail

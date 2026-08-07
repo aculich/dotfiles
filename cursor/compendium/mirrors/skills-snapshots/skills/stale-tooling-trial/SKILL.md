@@ -20,7 +20,7 @@ Stale tooling trial:
 - [ ] 0. hot-livewires-preflight (mandatory)
 - [ ] 1. Assess remotes/fork/commits/dirty/size/intent metadata
 - [ ] 2. Brief classification
-- [ ] 3. Preserve (PDV SpecStory; heritage non-secret; chaos already for creds)
+- [ ] 3. Preserve: chatstory-preserve --apply (SpecStory/Cursor/Claude/Chatstory); heritage non-secret; chaos already for creds
 - [ ] 4. MARK-AND-SWEEP.md (no hard-delete unless user applies sweep)
 - [ ] 5. tools-quickstart-bootstrap → ~/tools/<tool>-quickstart/
 - [ ] 6. Rotation election (recommend rotate before doit)
@@ -47,10 +47,11 @@ See [assessment-checklist.md](assessment-checklist.md).
 
 ## Step 2–4 — Brief, preserve, mark
 
-- PDV: contaminated SpecStory + redacted briefing ([capsule-layout.md](capsule-layout.md))
+- **Chat / SpecStory / plans:** invoke [`chatstory-preserve`](file:///Users/me/.cursor/skills/chatstory-preserve/SKILL.md) `--apply` on the trial ROOT (and nested swept trees). Incomplete preserve = incomplete mark-and-sweep unless `preserve-waive: <path>`.
+- PDV: chatstory-preserve capsule + redacted briefing; heritage/patches per [capsule-layout.md](capsule-layout.md)
 - Heritage: non-secret wrapper docs → later quickstart `background/heritage/`
-- Write `MARK-AND-SWEEP.md` at old root pointing at capsule + new quickstart path
-- Optional reclaim: delete `target/` / `.devbox/` **only after user confirm**
+- Write `MARK-AND-SWEEP.md` at old root pointing at **chatstory-preserve capsule**, chaos items, + new quickstart path
+- Optional reclaim: delete `target/` / `.devbox/` **only after user confirm** (and after preserve)
 
 ## Step 5 — Bootstrap
 

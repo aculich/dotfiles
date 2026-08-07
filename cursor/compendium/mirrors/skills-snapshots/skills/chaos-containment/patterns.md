@@ -81,6 +81,15 @@ Living catalog for `/chaos-containment offload`. When a new destination or trans
 
 ---
 
+### Chat history preserve before sweep (chatstory-preserve)
+
+- **Signals:** Path to move/delete has `.specstory/`, is/was a Cursor project/workspace, has Claude project chats, or Chatstory partition `{slug}__{key}`
+- **Destination:** PDV capsule `chatstory-preserve-{slug}__{key}/` + Chatstory vault **pointer** (do not duplicate full `~/.chatstory` partition)
+- **Transport:** `chatstory-preserve` skill — freshen Chatstory when possible, then copy SpecStory / agent-transcripts / matched plans
+- **Briefing:** required `AGENT-BRIEFING.md` + `MANIFEST.md` + `CHATSTORY-POINTER.md`
+- **Example:** macosx-tools umbrella before offload/sweep; `universal-inbox` MARK-AND-SWEEP capsule
+- **Added:** 2026-07-31 — context: chaos-containment gate + Chatstory naming
+
 ## How to append a new pattern
 
 ```markdown
