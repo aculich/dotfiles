@@ -53,7 +53,7 @@
   "git.autofetch": false,
   "claudeCode.preferredLocation": "panel",
   "specstory.derivedRules.enabled": false,
-  "workbench.colorTheme": "Tomorrow Night Blue",
+  "workbench.colorTheme": "Solarized Dark",
   "zenMode.restore": false,
   "terminal.integrated.persistentSessionReviveProcess": "never",
   "explorer.fileNesting.patterns": {
@@ -304,5 +304,54 @@
   ],
   "files.associations": {
     "*.txt": "markdown"
-  }
+  },
+  "cursorToys.projects.enabled": true,
+  "cursorToys.projects.openDashboardOnStartup": false,
+  "cursorToys.projects.openInNewWindow": true,
+  "cursorToys.cursorPet.enabled": false,
+  "cursorToys.cursorPet.showStatusBar": false,
+  "cursorToys.notepads.showStatusBar": true,
+  "cursorToys.cli.cursortoysPackageSpec": "@latest",
+  "cursorToys.sidebar.hiddenViews": [
+    "notepads",
+    "kanban",
+    "clipboard",
+    "commands",
+    "prompts",
+    "plans",
+    "skills",
+    "hooks",
+    "mcpb",
+    "http",
+    "inlineAnnotations"
+  ],
+  "cursorToys.releaseNotes.showOnStartup": false,
+  "cursorToys.kanban.showStatusBar": true,
+  "cursorToys.clipboard.bindStandardKeys": false,
+  "cursorToys.clipboard.enabled": false,
+  "cursorToys.clipboard.syncWithSystem": false,
+  "cursorToys.gistDefaultVisibility": "ask",
+  "cursorToys.inlineAnnotations.updateOnType": false,
+  "cursorToys.sidebar.explorerViews": [
+    "notepads",
+    "kanban",
+    "clipboard",
+    "commands",
+    "prompts",
+    "plans",
+    "skills",
+    "hooks",
+    "mcpb",
+    "http",
+    "inlineAnnotations"
+  ],
+  "cursorToys.personalCommandsView": "both",
+  "cursorToys.allowedExtensions": [
+    "md",
+    "mdc",
+    "txt",
+    "json",
+    "req",
+    "request"
+  ]
 }
