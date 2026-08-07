@@ -169,11 +169,3 @@ Produce a **reviewable implementation plan** (do not execute yet) that includes:
 7. **Risks**: false “changed” signals from mtimes; progress bars in CI/launchd; scaffold/ops script drift.
 
 After the plan, stop and wait for my review before implementing.
-
----
-
-## Operator notes (not for the planner)
-
-- Paste the section above into **Plan mode** (or Agent with “plan only / no edits”).
-- After the plan lands, reject it if **`doit` became a backup**, or if **phase A does not kill the Snapshot wall**, or if **ops sync is missing**.
-- Former filename: `prompt-just-skills.md` (renamed — this brief is primarily compendium backup UX).
