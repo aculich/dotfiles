@@ -41,4 +41,8 @@ if [[ -d "${PROJ}/.specstory" ]]; then
     "${PROJ}/.specstory/" "${MIRROR}/.specstory/" || true
 fi
 
-echo "Snapshot ${PROJ} -> mirrors/by-project/${SLUG}/ (+ plans if any)"
+# Per-path log line only under COMPENDIUM_LOG=verbose (progress/quiet stay silent;
+# snapshot-all.sh owns the progress counter and summary).
+if [[ "${COMPENDIUM_LOG:-progress}" == "verbose" ]]; then
+  echo "Snapshot ${PROJ} -> mirrors/by-project/${SLUG}/ (+ plans if any)"
+fi

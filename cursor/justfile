@@ -163,6 +163,25 @@ compendium-push:
 compendium-status:
     @if [[ -d "{{compendium}}/.git" ]]; then git -C "{{compendium}}" status --short --branch; else echo "(no git repo at {{compendium}})"; fi
 
+# Sync canonical scaffold scripts into the ops compendium (run after editing compendium/scripts/)
+[group('compendium')]
+compendium-sync-scripts:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    root="{{compendium}}"
+    src="{{cursor_dir}}/compendium/scripts"
+    if [[ ! -d "${root}/.git" ]]; then
+      echo "compendium-sync-scripts: ${root} is not the ops git repo; set CURSOR_COMPENDIUM_ROOT" >&2
+      exit 1
+    fi
+    rsync -a --exclude '__pycache__/' --exclude '*.pyc' "${src}/" "${root}/scripts/"
+    if diff -rq -x '__pycache__' -x '*.pyc' "${src}" "${root}/scripts" >/dev/null 2>&1; then
+      echo "Synced ${src}/ -> ${root}/scripts/ (trees match)."
+    else
+      echo "Synced ${src}/ -> ${root}/scripts/ (ops has extra local files; scaffold files are current):"
+      diff -rq -x '__pycache__' -x '*.pyc' "${src}" "${root}/scripts" | sed 's/^/  /' || true
+    fi
+
 # ------------------------------------------------------------------
 # Config
 # ------------------------------------------------------------------

@@ -41,8 +41,16 @@ git add -A
 if git diff --cached --quiet; then
   echo "commit-and-push: nothing to commit."
 else
-  git commit -m "chore(compendium): snapshot $(date +%Y-%m-%d)"
-  echo "commit-and-push: committed."
+  # Show what is about to land: name-status list (capped) + the --stat summary line.
+  echo "commit-and-push: staged changes:"
+  git diff --cached --name-status | head -20 | sed 's/^/  /'
+  n_files="$(git diff --cached --name-status | wc -l | tr -d ' ')"
+  if [[ "${n_files}" -gt 20 ]]; then
+    echo "  ... and $(( n_files - 20 )) more files"
+  fi
+  git diff --cached --stat | tail -1 | sed 's/^ */  /'
+  git commit --quiet -m "chore(compendium): snapshot $(date +%Y-%m-%d)"
+  echo "commit-and-push: committed $(git rev-parse --short HEAD)."
 fi
 
 branch="$(git rev-parse --abbrev-ref HEAD)"
