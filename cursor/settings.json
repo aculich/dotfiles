@@ -53,7 +53,7 @@
   "git.autofetch": false,
   "claudeCode.preferredLocation": "panel",
   "specstory.derivedRules.enabled": false,
-  "workbench.colorTheme": "Solarized Dark",
+  "workbench.colorTheme": "Solarized Light",
   "zenMode.restore": false,
   "terminal.integrated.persistentSessionReviveProcess": "never",
   "explorer.fileNesting.patterns": {
