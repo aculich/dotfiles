@@ -2,6 +2,18 @@
 
 Requires **`rsync`**. Set **`CURSOR_COMPENDIUM_ROOT`** to the compendium git root (the copy of this scaffold you made sibling to dotfiles).
 
+These files are the **canonical source**; the ops sibling runs its own copies. After editing here, run `just compendium-sync-scripts` (from `~/dotfiles/cursor`) so the ops tree picks up changes.
+
+## Logging
+
+`COMPENDIUM_LOG=quiet|progress|verbose` (default `progress`) controls output; helpers live in `lib/logging.sh`:
+
+- `progress` — rewriting progress line (TTY) or throttled lines (non-TTY, e.g. launchd), signal lines for notable events, final summary block
+- `quiet` — summary and errors only
+- `verbose` — legacy per-path `Snapshot ...` lines and discover ticks
+
+`snapshot-all.sh` exports `DISCOVER_QUIET=1` to mute `[discover +N.Ns]` ticks unless verbose.
+
 ## Denylist
 
 All scripts pass `--exclude='mcp.json'` and similar. Edit the `RSYNC_EXCLUDES` variable in each script before mirroring new sensitive patterns.
@@ -10,6 +22,7 @@ All scripts pass `--exclude='mcp.json'` and similar. Edit the `RSYNC_EXCLUDES` v
 
 | Script | Role |
 | --- | --- |
+| `lib/logging.sh` | Shared `COMPENDIUM_LOG` helpers (progress / signal / verbose / summary formatting) — source, do not execute |
 | `discover-skills.py` | **Shim only** — execs `$AGENT_SKILLS_ROOT/scripts/discover-skills.py` (default `~/projects/agent-skills`). Do not fork invent logic here. |
 | `discover-project-paths.py` | Merge **Cursor-known** workspace roots with a **disk scan** for `.cursor/`, `.claude/`, `.specstory/` under `~/projects`, `~/tools`, optional roots, and shallow `$HOME`; write `project-paths.txt` + `discover-report.json` (orphans vs stale). |
 | `sync-global-plans.sh` | `~/.cursor/plans` → `plans/global/` |

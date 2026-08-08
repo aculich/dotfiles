@@ -49,6 +49,8 @@ Fill `vendor.yaml` / `authored.yaml` manually for important pins; run discovery 
 
 ## justfile recipes (recommended entry point)
 
+Day-to-day trio: **`just doit`** (diagnose only — status + resource snapshot + tips; it is *not* a backup), **`just compendium-backup`** (ops DR: snapshot + commit + push private GH), **`just skill-backup`** / **`skill-backup-fast`** (mirror global skills into dotfiles, local commit, no push). Backup verbosity is controlled by `COMPENDIUM_LOG=quiet|progress|verbose` (see [COMPENDIUM.md](COMPENDIUM.md)).
+
 From `cursor/`, run `just` to see all recipes. Common ones:
 
 | Recipe | What it does |
