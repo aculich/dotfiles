@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-01T03:58:27Z",
+  "generated": "2026-08-09T13:15:49Z",
   "compendium_root": "/Users/me/dotfiles/cursor/compendium",
   "monorepo_root": "/Users/me/projects/agent-skills",
   "global": {
@@ -123,7 +123,7 @@
           "type": "local-repo",
           "url": "https://github.com/aculich/google-workspace-tools",
           "install_source_url": "https://github.com/aculich/google-workspace-tools",
-          "commit": "b05c88a03c5d94d89ac17c5b98ffa3c7a35aa9e3",
+          "commit": "eb24f0399c824ae246b2c642d2c7de5fceb9cc61",
           "local_path": "/Users/me/tools/google-workspace-tools",
           "confidence": "high",
           "via": "git-remote"
@@ -145,7 +145,7 @@
           "type": "local-repo",
           "url": "https://github.com/aculich/google-workspace-tools",
           "install_source_url": "https://github.com/aculich/google-workspace-tools",
-          "commit": "b05c88a03c5d94d89ac17c5b98ffa3c7a35aa9e3",
+          "commit": "eb24f0399c824ae246b2c642d2c7de5fceb9cc61",
           "local_path": "/Users/me/tools/google-workspace-tools",
           "confidence": "high",
           "via": "git-remote"
@@ -200,13 +200,10 @@
         "version": null,
         "name": "bootstrap-collaborator",
         "source": {
-          "confidence": "high",
-          "manual": true,
-          "note": "Estate-local global install; not in monorepo; no skill-lock / skills.sh match",
-          "resolved_at": "2026-07-20",
-          "type": "local-estate",
+          "type": "unknown",
           "url": null,
-          "via": "manual:estate"
+          "confidence": "none",
+          "via": "unresolved"
         }
       },
       {
@@ -430,13 +427,30 @@
         "version": null,
         "name": "chaos-containment",
         "source": {
-          "confidence": "high",
-          "manual": true,
-          "note": "Estate-local global install; not in monorepo; no skill-lock / skills.sh match",
-          "resolved_at": "2026-07-20",
-          "type": "local-estate",
+          "type": "unknown",
           "url": null,
-          "via": "manual:estate"
+          "confidence": "none",
+          "via": "unresolved"
+        }
+      },
+      {
+        "id": "chatstory-preserve",
+        "classification": "embedded",
+        "lifecycle": "experimental",
+        "tier": "cursor-user",
+        "path": "/Users/me/.cursor/skills/chatstory-preserve",
+        "resolved_path": "/Users/me/projects/agent-skills/skills/.experimental/chatstory-preserve",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": null,
+        "name": "chatstory-preserve",
+        "symlink_target": "/Users/me/projects/agent-skills/skills/.experimental/chatstory-preserve",
+        "source": {
+          "type": "frontmatter",
+          "url": "https://github.com/aculich/agent-skills",
+          "confidence": "high",
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -593,13 +607,10 @@
         "version": null,
         "name": "collab-sync",
         "source": {
-          "confidence": "high",
-          "manual": true,
-          "note": "Estate-local global install; not in monorepo; no skill-lock / skills.sh match",
-          "resolved_at": "2026-07-20",
-          "type": "local-estate",
+          "type": "unknown",
           "url": null,
-          "via": "manual:estate"
+          "confidence": "none",
+          "via": "unresolved"
         }
       },
       {
@@ -654,13 +665,10 @@
         "version": null,
         "name": "create-justfile",
         "source": {
-          "confidence": "high",
-          "manual": true,
-          "note": "Estate-local global install; not in monorepo; no skill-lock / skills.sh match",
-          "resolved_at": "2026-07-20",
-          "type": "local-estate",
+          "type": "unknown",
           "url": null,
-          "via": "manual:estate"
+          "confidence": "none",
+          "via": "unresolved"
         }
       },
       {
@@ -675,13 +683,10 @@
         "version": null,
         "name": "cursor-purification",
         "source": {
-          "confidence": "high",
-          "manual": true,
-          "note": "Estate-local global install; not in monorepo; no skill-lock / skills.sh match",
-          "resolved_at": "2026-07-20",
-          "type": "local-estate",
+          "type": "unknown",
           "url": null,
-          "via": "manual:estate"
+          "confidence": "none",
+          "via": "unresolved"
         }
       },
       {
@@ -771,13 +776,10 @@
         "version": null,
         "name": "deaccession-guides-and-guards",
         "source": {
-          "confidence": "high",
-          "manual": true,
-          "note": "Estate-local global install; not in monorepo; no skill-lock / skills.sh match",
-          "resolved_at": "2026-07-20",
-          "type": "local-estate",
+          "type": "unknown",
           "url": null,
-          "via": "manual:estate"
+          "confidence": "none",
+          "via": "unresolved"
         }
       },
       {
@@ -851,16 +853,10 @@
         "version": null,
         "name": "discover-channel",
         "source": {
-          "confidence": "low",
-          "exact_match": false,
-          "installs": 50,
-          "matched_skill": "superamped/ai-marketing-skills@channel-discovery",
-          "resolved_at": "2026-07-17",
-          "skills_sh": "https://skills.sh/superamped/ai-marketing-skills/channel-discovery",
-          "type": "community",
-          "url": "https://github.com/superamped/ai-marketing-skills",
-          "via": "web:skills.sh",
-          "install_source_url": "https://github.com/superamped/ai-marketing-skills"
+          "type": "unknown",
+          "url": null,
+          "confidence": "none",
+          "via": "unresolved"
         }
       },
       {
@@ -967,7 +963,7 @@
           "type": "local-repo",
           "url": "https://github.com/aculich/google-workspace-tools",
           "install_source_url": "https://github.com/aculich/google-workspace-tools",
-          "commit": "b05c88a03c5d94d89ac17c5b98ffa3c7a35aa9e3",
+          "commit": "eb24f0399c824ae246b2c642d2c7de5fceb9cc61",
           "local_path": "/Users/me/tools/google-workspace-tools",
           "confidence": "high",
           "via": "git-remote"
@@ -1208,13 +1204,10 @@
         "version": null,
         "name": "google-workspace-new-org",
         "source": {
-          "confidence": "high",
-          "manual": true,
-          "note": "Estate-local global install; not in monorepo; no skill-lock / skills.sh match",
-          "resolved_at": "2026-07-20",
-          "type": "local-estate",
+          "type": "unknown",
           "url": null,
-          "via": "manual:estate"
+          "confidence": "none",
+          "via": "unresolved"
         }
       },
       {
@@ -1229,13 +1222,10 @@
         "version": null,
         "name": "hot-livewires-preflight",
         "source": {
-          "confidence": "high",
-          "manual": true,
-          "note": "Estate-local global install; not in monorepo; no skill-lock / skills.sh match",
-          "resolved_at": "2026-07-20",
-          "type": "local-estate",
+          "type": "unknown",
           "url": null,
-          "via": "manual:estate"
+          "confidence": "none",
+          "via": "unresolved"
         }
       },
       {
@@ -1604,13 +1594,10 @@
         "version": null,
         "name": "message-in-a-bottle",
         "source": {
-          "confidence": "high",
-          "manual": true,
-          "note": "Estate-local global install; not in monorepo; no skill-lock / skills.sh match",
-          "resolved_at": "2026-07-20",
-          "type": "local-estate",
+          "type": "unknown",
           "url": null,
-          "via": "manual:estate"
+          "confidence": "none",
+          "via": "unresolved"
         }
       },
       {
@@ -1757,7 +1744,7 @@
           "type": "local-repo",
           "url": "https://github.com/aculich/google-workspace-tools",
           "install_source_url": "https://github.com/aculich/google-workspace-tools",
-          "commit": "b05c88a03c5d94d89ac17c5b98ffa3c7a35aa9e3",
+          "commit": "eb24f0399c824ae246b2c642d2c7de5fceb9cc61",
           "local_path": "/Users/me/tools/google-workspace-tools",
           "confidence": "high",
           "via": "git-remote"
@@ -1885,13 +1872,10 @@
         "version": null,
         "name": "quick-stash",
         "source": {
-          "confidence": "high",
-          "manual": true,
-          "note": "Estate-local global install; not in monorepo; no skill-lock / skills.sh match",
-          "resolved_at": "2026-07-20",
-          "type": "local-estate",
+          "type": "unknown",
           "url": null,
-          "via": "manual:estate"
+          "confidence": "none",
+          "via": "unresolved"
         }
       },
       {
@@ -1970,13 +1954,10 @@
         "version": null,
         "name": "report-reforge",
         "source": {
-          "confidence": "high",
-          "manual": true,
-          "note": "Estate-local global install; not in monorepo; no skill-lock / skills.sh match",
-          "resolved_at": "2026-07-20",
-          "type": "local-estate",
+          "type": "unknown",
           "url": null,
-          "via": "manual:estate"
+          "confidence": "none",
+          "via": "unresolved"
         }
       },
       {
@@ -2011,13 +1992,10 @@
         "version": null,
         "name": "rowboat-safe-startup",
         "source": {
-          "confidence": "high",
-          "manual": true,
-          "note": "Estate-local global install; not in monorepo; no skill-lock / skills.sh match",
-          "resolved_at": "2026-07-20",
-          "type": "local-estate",
+          "type": "unknown",
           "url": null,
-          "via": "manual:estate"
+          "confidence": "none",
+          "via": "unresolved"
         }
       },
       {
@@ -2032,13 +2010,10 @@
         "version": null,
         "name": "rowboat-upstream-digest",
         "source": {
-          "confidence": "high",
-          "manual": true,
-          "note": "Estate-local global install; not in monorepo; no skill-lock / skills.sh match",
-          "resolved_at": "2026-07-20",
-          "type": "local-estate",
+          "type": "unknown",
           "url": null,
-          "via": "manual:estate"
+          "confidence": "none",
+          "via": "unresolved"
         }
       },
       {
@@ -2244,13 +2219,10 @@
         "version": null,
         "name": "stale-tooling-trial",
         "source": {
-          "confidence": "high",
-          "manual": true,
-          "note": "Estate-local global install; not in monorepo; no skill-lock / skills.sh match",
-          "resolved_at": "2026-07-20",
-          "type": "local-estate",
+          "type": "unknown",
           "url": null,
-          "via": "manual:estate"
+          "confidence": "none",
+          "via": "unresolved"
         }
       },
       {
@@ -2291,13 +2263,10 @@
         "version": null,
         "name": "tidy-stash",
         "source": {
-          "confidence": "high",
-          "manual": true,
-          "note": "Estate-local global install; not in monorepo; no skill-lock / skills.sh match",
-          "resolved_at": "2026-07-20",
-          "type": "local-estate",
+          "type": "unknown",
           "url": null,
-          "via": "manual:estate"
+          "confidence": "none",
+          "via": "unresolved"
         }
       },
       {
@@ -2312,13 +2281,10 @@
         "version": null,
         "name": "tool-landscape-intel",
         "source": {
-          "confidence": "high",
-          "manual": true,
-          "note": "Estate-local global install; not in monorepo; no skill-lock / skills.sh match",
-          "resolved_at": "2026-07-20",
-          "type": "local-estate",
+          "type": "unknown",
           "url": null,
-          "via": "manual:estate"
+          "confidence": "none",
+          "via": "unresolved"
         }
       },
       {
@@ -2688,25 +2654,6 @@
         }
       },
       {
-        "id": "migrate-to-builds",
-        "classification": "vendor",
-        "lifecycle": "installed",
-        "tier": "cursor-managed",
-        "path": "/Users/me/.cursor/skills-cursor/migrate-to-builds",
-        "resolved_path": "/Users/me/.cursor/skills-cursor/migrate-to-builds",
-        "is_symlink": false,
-        "symlink_ok": true,
-        "version": null,
-        "name": "migrate-to-builds",
-        "source": {
-          "type": "vendor",
-          "url": null,
-          "confidence": "high",
-          "via": "vendor-registry",
-          "note": "vendored bundle / cursor-managed; not a public repo"
-        }
-      },
-      {
         "id": "migrate-to-skills",
         "classification": "vendor",
         "lifecycle": "installed",
@@ -2736,6 +2683,25 @@
         "symlink_ok": true,
         "version": null,
         "name": "onboard",
+        "source": {
+          "type": "vendor",
+          "url": null,
+          "confidence": "high",
+          "via": "vendor-registry",
+          "note": "vendored bundle / cursor-managed; not a public repo"
+        }
+      },
+      {
+        "id": "rename-chat",
+        "classification": "vendor",
+        "lifecycle": "installed",
+        "tier": "cursor-managed",
+        "path": "/Users/me/.cursor/skills-cursor/rename-chat",
+        "resolved_path": "/Users/me/.cursor/skills-cursor/rename-chat",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "rename-chat",
         "source": {
           "type": "vendor",
           "url": null,
@@ -4259,13 +4225,10 @@
         "version": null,
         "name": "repo-evaluator",
         "source": {
-          "confidence": "high",
-          "manual": true,
-          "note": "Local/private skill copy; no skills.sh match; not in monorepo",
-          "resolved_at": "2026-07-20",
-          "type": "local-estate",
+          "type": "unknown",
           "url": null,
-          "via": "manual:estate"
+          "confidence": "none",
+          "via": "unresolved"
         }
       },
       {
@@ -4325,13 +4288,10 @@
         "version": null,
         "name": "setup-contextualizer",
         "source": {
-          "confidence": "high",
-          "manual": true,
-          "note": "Local/private skill copy; no skills.sh match; not in monorepo",
-          "resolved_at": "2026-07-20",
-          "type": "local-estate",
+          "type": "unknown",
           "url": null,
-          "via": "manual:estate"
+          "confidence": "none",
+          "via": "unresolved"
         }
       },
       {
@@ -4411,13 +4371,10 @@
         "version": null,
         "name": "socialmedia-compounding",
         "source": {
-          "confidence": "high",
-          "manual": true,
-          "note": "Local/private skill copy; no skills.sh match; not in monorepo",
-          "resolved_at": "2026-07-20",
-          "type": "local-estate",
+          "type": "unknown",
           "url": null,
-          "via": "manual:estate"
+          "confidence": "none",
+          "via": "unresolved"
         }
       },
       {
@@ -4849,13 +4806,10 @@
         "version": null,
         "name": "dev-warmup",
         "source": {
-          "confidence": "high",
-          "manual": true,
-          "note": "Estate-local global install; not in monorepo; no skill-lock / skills.sh match",
-          "resolved_at": "2026-07-20",
-          "type": "local-estate",
+          "type": "unknown",
           "url": null,
-          "via": "manual:estate"
+          "confidence": "none",
+          "via": "unresolved"
         }
       },
       {
@@ -4895,16 +4849,10 @@
         "version": null,
         "name": "dynamic-dev-port",
         "source": {
-          "confidence": "low",
-          "exact_match": false,
-          "installs": 671,
-          "matched_skill": "patternsdev/skills@dynamic-import",
-          "resolved_at": "2026-07-17",
-          "skills_sh": "https://skills.sh/patternsdev/skills/dynamic-import",
-          "type": "community",
-          "url": "https://github.com/patternsdev/skills",
-          "via": "web:skills.sh",
-          "install_source_url": "https://github.com/patternsdev/skills"
+          "type": "unknown",
+          "url": null,
+          "confidence": "none",
+          "via": "unresolved"
         }
       },
       {
@@ -6764,14 +6712,10 @@
         "version": "1.0.0",
         "name": "perks",
         "source": {
-          "confidence": "high",
-          "manual": true,
-          "note": "MakerPerks perks skill; author metadata.author=makerperks; not on skills.sh",
-          "resolved_at": "2026-07-20",
-          "type": "community",
-          "url": "https://makerperks.com",
-          "via": "manual:frontmatter-author",
-          "install_source_url": "https://makerperks.com"
+          "type": "unknown",
+          "url": null,
+          "confidence": "none",
+          "via": "unresolved"
         }
       },
       {
@@ -6968,13 +6912,10 @@
         "version": null,
         "name": "repo-evaluator",
         "source": {
-          "confidence": "high",
-          "manual": true,
-          "note": "Local/private skill copy; no skills.sh match; not in monorepo",
-          "resolved_at": "2026-07-20",
-          "type": "local-estate",
+          "type": "unknown",
           "url": null,
-          "via": "manual:estate"
+          "confidence": "none",
+          "via": "unresolved"
         }
       },
       {
@@ -7083,13 +7024,10 @@
         "version": null,
         "name": "setup-contextualizer",
         "source": {
-          "confidence": "high",
-          "manual": true,
-          "note": "Local/private skill copy; no skills.sh match; not in monorepo",
-          "resolved_at": "2026-07-20",
-          "type": "local-estate",
+          "type": "unknown",
           "url": null,
-          "via": "manual:estate"
+          "confidence": "none",
+          "via": "unresolved"
         }
       },
       {
@@ -7619,6 +7557,15 @@
       "classification": "embedded"
     },
     {
+      "skill": "add-new-location",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-my-hunger/.cursor/skills/add-new-location/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-my-hunger/.cursor/skills/add-new-location/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
       "skill": "adhd-daily-planner",
       "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/adhd-daily-planner/SKILL.md",
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
@@ -7862,6 +7809,33 @@
       "classification": "embedded"
     },
     {
+      "skill": "bootstrap-aar",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/bootstrap-aar/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/bootstrap-aar/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "bootstrap-aar",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/path-voiceink-metarepo-ce2c121ea9fe/.cursor/skills/bootstrap-aar/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-voiceink-metarepo-ce2c121ea9fe/.cursor/skills/bootstrap-aar/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "bootstrap-aar",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-openoats-metarepo/.cursor/skills/bootstrap-aar/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-openoats-metarepo/.cursor/skills/bootstrap-aar/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
       "skill": "bootstrap-collaborator",
       "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/bootstrap-collaborator/SKILL.md",
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
@@ -7930,6 +7904,15 @@
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
       "relative_path": "mirrors/skills-snapshots/skills/bootstrap-project-umbrella/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "bootstrap-regen",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/bootstrap-regen/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/bootstrap-regen/SKILL.md",
       "layout": "project-skills-dir",
       "classification": "embedded"
     },
@@ -8020,6 +8003,15 @@
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
       "relative_path": "mirrors/skills-snapshots/skills/chaos-containment/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "chatstory-preserve",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/chatstory-preserve/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/chatstory-preserve/SKILL.md",
       "layout": "project-skills-dir",
       "classification": "embedded"
     },
@@ -8240,6 +8232,15 @@
       "classification": "embedded"
     },
     {
+      "skill": "cursor-extension-security-review",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/path-cursor-extensions-249d2b54da21/.cursor/skills/cursor-extension-security-review/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-cursor-extensions-249d2b54da21/.cursor/skills/cursor-extension-security-review/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
       "skill": "cursor-purification",
       "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/cursor-purification/SKILL.md",
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
@@ -8285,6 +8286,15 @@
       "classification": "embedded"
     },
     {
+      "skill": "dd-cli-upgrade",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-my-hunger/.cursor/skills/dd-cli-upgrade/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-my-hunger/.cursor/skills/dd-cli-upgrade/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
       "skill": "dd-cli-usage",
       "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/dd-cli-usage/SKILL.md",
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
@@ -8327,6 +8337,15 @@
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
       "relative_path": "mirrors/skills-snapshots/skills/deeplistening-session-analysis/SKILL.md",
       "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "deploy",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/github-rrid-ucb-rrid-summer2026-webapp/.cursor/skills/deploy/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-rrid-ucb-rrid-summer2026-webapp/.cursor/skills/deploy/SKILL.md",
+      "layout": "project-cursor",
       "classification": "embedded"
     },
     {
@@ -8411,6 +8430,15 @@
       "classification": "embedded"
     },
     {
+      "skill": "docs-feedback-wait",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/github-cidrlab-llc-admin/.cursor/skills/docs-feedback-wait/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-cidrlab-llc-admin/.cursor/skills/docs-feedback-wait/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
       "skill": "draft-edits-analyze",
       "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-peeq-carb/.cursor/skills/draft-edits-analyze/SKILL.md",
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
@@ -8425,6 +8453,15 @@
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
       "relative_path": "mirrors/by-project/orphan-kit-512fba8992/.cursor/skills/draft-edits-analyze/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "draft-edits-analyze",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/path-sow-draft-kit-d0342cea5243/.cursor/skills/draft-edits-analyze/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-sow-draft-kit-d0342cea5243/.cursor/skills/draft-edits-analyze/SKILL.md",
       "layout": "project-cursor",
       "classification": "embedded"
     },
@@ -8452,6 +8489,15 @@
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
       "relative_path": "mirrors/by-project/orphan-kit-512fba8992/.cursor/skills/draft-edits-apply/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "draft-edits-apply",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/path-sow-draft-kit-d0342cea5243/.cursor/skills/draft-edits-apply/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-sow-draft-kit-d0342cea5243/.cursor/skills/draft-edits-apply/SKILL.md",
       "layout": "project-cursor",
       "classification": "embedded"
     },
@@ -8488,6 +8534,15 @@
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
       "relative_path": "mirrors/by-project/orphan-kit-512fba8992/.cursor/skills/draft-edits-evaluate/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "draft-edits-evaluate",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/path-sow-draft-kit-d0342cea5243/.cursor/skills/draft-edits-evaluate/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-sow-draft-kit-d0342cea5243/.cursor/skills/draft-edits-evaluate/SKILL.md",
       "layout": "project-cursor",
       "classification": "embedded"
     },
@@ -8708,6 +8763,15 @@
       "classification": "embedded"
     },
     {
+      "skill": "hats-session-status",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/github-rrid-ucb-rrid-summer2026-webapp-design/.cursor/skills/hats-session-status/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-rrid-ucb-rrid-summer2026-webapp-design/.cursor/skills/hats-session-status/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
       "skill": "hot-livewires-preflight",
       "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/hot-livewires-preflight/SKILL.md",
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
@@ -8848,6 +8912,15 @@
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
       "relative_path": "mirrors/by-project/github-cidrlab-llc-admin/.cursor/skills/llc-admin-setup/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "location-sense-preflight",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-my-hunger/.cursor/skills/location-sense-preflight/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-my-hunger/.cursor/skills/location-sense-preflight/SKILL.md",
       "layout": "project-cursor",
       "classification": "embedded"
     },
@@ -9357,6 +9430,15 @@
     },
     {
       "skill": "sow-draft-kit",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/path-sow-draft-kit-d0342cea5243/.cursor/skills/sow-draft-kit/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-sow-draft-kit-d0342cea5243/.cursor/skills/sow-draft-kit/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "sow-draft-kit",
       "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/github-cidrlab-cidr-marin-courts/.cursor/skills/sow-draft-kit/SKILL.md",
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
@@ -9379,6 +9461,15 @@
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
       "relative_path": "mirrors/by-project/orphan-kit-512fba8992/.cursor/skills/sow-version-analysis/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "sow-version-analysis",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/path-sow-draft-kit-d0342cea5243/.cursor/skills/sow-version-analysis/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-sow-draft-kit-d0342cea5243/.cursor/skills/sow-version-analysis/SKILL.md",
       "layout": "project-cursor",
       "classification": "embedded"
     },
@@ -9578,6 +9669,15 @@
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
       "relative_path": "mirrors/skills-snapshots/skills/website-to-video/SKILL.md",
       "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "weekend-social-flow",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-my-hunger/.cursor/skills/weekend-social-flow/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-my-hunger/.cursor/skills/weekend-social-flow/SKILL.md",
+      "layout": "project-cursor",
       "classification": "embedded"
     },
     {
@@ -11129,6 +11229,15 @@
       "classification": "embedded"
     },
     {
+      "skill": "pilot-comms-calendar",
+      "skill_path": "/Users/me/projects/rrid-ucb/rrid-summer2026-pilot/.cursor/skills/pilot-comms-calendar/SKILL.md",
+      "project_root": "/Users/me/projects/rrid-ucb/rrid-summer2026-pilot",
+      "project_slug": "github-com-rrid-ucb-rrid-summer2026-pilot",
+      "relative_path": ".cursor/skills/pilot-comms-calendar/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
       "skill": "commit-push-deploy-dev",
       "skill_path": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp/.agents/skills/commit-push-deploy-dev/SKILL.md",
       "project_root": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp",
@@ -12470,6 +12579,501 @@
       "classification": "embedded"
     },
     {
+      "skill": "TanStack Router",
+      "skill_path": "/Users/me/tools/ai-metarepo/demos/mastra-wild/tanstack/.agents/skills/TanStack Router/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo",
+      "project_slug": "github-com-aculich-ai-metarepo",
+      "relative_path": "demos/mastra-wild/tanstack/.agents/skills/TanStack Router/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "TanStack Start",
+      "skill_path": "/Users/me/tools/ai-metarepo/demos/mastra-wild/tanstack/.agents/skills/TanStack Start/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo",
+      "project_slug": "github-com-aculich-ai-metarepo",
+      "relative_path": "demos/mastra-wild/tanstack/.agents/skills/TanStack Start/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "TanStack Table",
+      "skill_path": "/Users/me/tools/ai-metarepo/demos/mastra-wild/tanstack/.agents/skills/TanStack Table/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo",
+      "project_slug": "github-com-aculich-ai-metarepo",
+      "relative_path": "demos/mastra-wild/tanstack/.agents/skills/TanStack Table/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "agent-development",
+      "skill_path": "/Users/me/tools/ai-metarepo/demos/mastra-wild/tanstack/.agents/skills/agent-development/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo",
+      "project_slug": "github-com-aculich-ai-metarepo",
+      "relative_path": "demos/mastra-wild/tanstack/.agents/skills/agent-development/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "ai-sdk-ui",
+      "skill_path": "/Users/me/tools/ai-metarepo/demos/mastra-wild/tanstack/.agents/skills/ai-sdk-ui/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo",
+      "project_slug": "github-com-aculich-ai-metarepo",
+      "relative_path": "demos/mastra-wild/tanstack/.agents/skills/ai-sdk-ui/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "better-auth",
+      "skill_path": "/Users/me/tools/ai-metarepo/demos/mastra-wild/tanstack/.agents/skills/better-auth/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo",
+      "project_slug": "github-com-aculich-ai-metarepo",
+      "relative_path": "demos/mastra-wild/tanstack/.agents/skills/better-auth/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "code-standards",
+      "skill_path": "/Users/me/tools/ai-metarepo/demos/mastra-templates/github-pr-code-review-agent/workspace/skills/code-standards/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo",
+      "project_slug": "github-com-aculich-ai-metarepo",
+      "relative_path": "demos/mastra-templates/github-pr-code-review-agent/workspace/skills/code-standards/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "google-gemini-api",
+      "skill_path": "/Users/me/tools/ai-metarepo/demos/mastra-wild/tanstack/.agents/skills/google-gemini-api/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo",
+      "project_slug": "github-com-aculich-ai-metarepo",
+      "relative_path": "demos/mastra-wild/tanstack/.agents/skills/google-gemini-api/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "google-gemini-embeddings",
+      "skill_path": "/Users/me/tools/ai-metarepo/demos/mastra-wild/tanstack/.agents/skills/google-gemini-embeddings/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo",
+      "project_slug": "github-com-aculich-ai-metarepo",
+      "relative_path": "demos/mastra-wild/tanstack/.agents/skills/google-gemini-embeddings/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "motion",
+      "skill_path": "/Users/me/tools/ai-metarepo/demos/mastra-wild/tanstack/.agents/skills/motion/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo",
+      "project_slug": "github-com-aculich-ai-metarepo",
+      "relative_path": "demos/mastra-wild/tanstack/.agents/skills/motion/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "performance-review",
+      "skill_path": "/Users/me/tools/ai-metarepo/demos/mastra-templates/github-pr-code-review-agent/workspace/skills/performance-review/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo",
+      "project_slug": "github-com-aculich-ai-metarepo",
+      "relative_path": "demos/mastra-templates/github-pr-code-review-agent/workspace/skills/performance-review/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "security-review",
+      "skill_path": "/Users/me/tools/ai-metarepo/demos/mastra-templates/github-pr-code-review-agent/workspace/skills/security-review/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo",
+      "project_slug": "github-com-aculich-ai-metarepo",
+      "relative_path": "demos/mastra-templates/github-pr-code-review-agent/workspace/skills/security-review/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "seo-meta",
+      "skill_path": "/Users/me/tools/ai-metarepo/demos/mastra-wild/tanstack/.agents/skills/seo-meta/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo",
+      "project_slug": "github-com-aculich-ai-metarepo",
+      "relative_path": "demos/mastra-wild/tanstack/.agents/skills/seo-meta/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "skill-creator",
+      "skill_path": "/Users/me/tools/ai-metarepo/demos/mastra-wild/tanstack/.agents/skills/skill-creator/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo",
+      "project_slug": "github-com-aculich-ai-metarepo",
+      "relative_path": "demos/mastra-wild/tanstack/.agents/skills/skill-creator/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "skill-review",
+      "skill_path": "/Users/me/tools/ai-metarepo/demos/mastra-wild/tanstack/.agents/skills/skill-review/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo",
+      "project_slug": "github-com-aculich-ai-metarepo",
+      "relative_path": "demos/mastra-wild/tanstack/.agents/skills/skill-review/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "tailwind-patterns",
+      "skill_path": "/Users/me/tools/ai-metarepo/demos/mastra-wild/tanstack/.agents/skills/tailwind-patterns/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo",
+      "project_slug": "github-com-aculich-ai-metarepo",
+      "relative_path": "demos/mastra-wild/tanstack/.agents/skills/tailwind-patterns/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "tailwind-v4-shadcn",
+      "skill_path": "/Users/me/tools/ai-metarepo/demos/mastra-wild/tanstack/.agents/skills/tailwind-v4-shadcn/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo",
+      "project_slug": "github-com-aculich-ai-metarepo",
+      "relative_path": "demos/mastra-wild/tanstack/.agents/skills/tailwind-v4-shadcn/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "tanstack-query",
+      "skill_path": "/Users/me/tools/ai-metarepo/demos/mastra-wild/tanstack/.agents/skills/tanstack-query/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo",
+      "project_slug": "github-com-aculich-ai-metarepo",
+      "relative_path": "demos/mastra-wild/tanstack/.agents/skills/tanstack-query/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "tool-ui",
+      "skill_path": "/Users/me/tools/ai-metarepo/demos/mastra-wild/tanstack/.agent/skills/tool-ui/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo",
+      "project_slug": "github-com-aculich-ai-metarepo",
+      "relative_path": "demos/mastra-wild/tanstack/.agent/skills/tool-ui/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "add-function-examples",
+      "skill_path": "/Users/me/tools/ai-metarepo/forks/personal/skills/add-function-examples/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo/forks/personal",
+      "project_slug": "github-com-aculich-ai-personal",
+      "relative_path": "skills/add-function-examples/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "add-harness-package",
+      "skill_path": "/Users/me/tools/ai-metarepo/forks/personal/skills/add-harness-package/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo/forks/personal",
+      "project_slug": "github-com-aculich-ai-personal",
+      "relative_path": "skills/add-harness-package/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "add-provider-package",
+      "skill_path": "/Users/me/tools/ai-metarepo/forks/personal/skills/add-provider-package/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo/forks/personal",
+      "project_slug": "github-com-aculich-ai-personal",
+      "relative_path": "skills/add-provider-package/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "adr-skill",
+      "skill_path": "/Users/me/tools/ai-metarepo/forks/personal/skills/adr-skill/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo/forks/personal",
+      "project_slug": "github-com-aculich-ai-personal",
+      "relative_path": "skills/adr-skill/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "capture-api-response-test-fixture",
+      "skill_path": "/Users/me/tools/ai-metarepo/forks/personal/skills/capture-api-response-test-fixture/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo/forks/personal",
+      "project_slug": "github-com-aculich-ai-personal",
+      "relative_path": "skills/capture-api-response-test-fixture/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "develop-ai-functions-example",
+      "skill_path": "/Users/me/tools/ai-metarepo/forks/personal/skills/develop-ai-functions-example/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo/forks/personal",
+      "project_slug": "github-com-aculich-ai-personal",
+      "relative_path": "skills/develop-ai-functions-example/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "list-npm-package-content",
+      "skill_path": "/Users/me/tools/ai-metarepo/forks/personal/skills/list-npm-package-content/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo/forks/personal",
+      "project_slug": "github-com-aculich-ai-personal",
+      "relative_path": "skills/list-npm-package-content/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "major-version-mode",
+      "skill_path": "/Users/me/tools/ai-metarepo/forks/personal/skills/major-version-mode/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo/forks/personal",
+      "project_slug": "github-com-aculich-ai-personal",
+      "relative_path": "skills/major-version-mode/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "migrate-ai-sdk-v6-to-v7",
+      "skill_path": "/Users/me/tools/ai-metarepo/forks/personal/skills/migrate-ai-sdk-v6-to-v7/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo/forks/personal",
+      "project_slug": "github-com-aculich-ai-personal",
+      "relative_path": "skills/migrate-ai-sdk-v6-to-v7/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "update-harness-dependencies",
+      "skill_path": "/Users/me/tools/ai-metarepo/forks/personal/skills/update-harness-dependencies/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo/forks/personal",
+      "project_slug": "github-com-aculich-ai-personal",
+      "relative_path": "skills/update-harness-dependencies/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "update-provider-models",
+      "skill_path": "/Users/me/tools/ai-metarepo/forks/personal/skills/update-provider-models/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo/forks/personal",
+      "project_slug": "github-com-aculich-ai-personal",
+      "relative_path": "skills/update-provider-models/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "use-ai-sdk",
+      "skill_path": "/Users/me/tools/ai-metarepo/forks/personal/skills/use-ai-sdk/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo/forks/personal",
+      "project_slug": "github-com-aculich-ai-personal",
+      "relative_path": "skills/use-ai-sdk/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "add-function-examples",
+      "skill_path": "/Users/me/tools/ai-metarepo/forks/public/skills/add-function-examples/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo/forks/public",
+      "project_slug": "github-com-aculich-ai",
+      "relative_path": "skills/add-function-examples/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "add-harness-package",
+      "skill_path": "/Users/me/tools/ai-metarepo/forks/public/skills/add-harness-package/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo/forks/public",
+      "project_slug": "github-com-aculich-ai",
+      "relative_path": "skills/add-harness-package/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "add-provider-package",
+      "skill_path": "/Users/me/tools/ai-metarepo/forks/public/skills/add-provider-package/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo/forks/public",
+      "project_slug": "github-com-aculich-ai",
+      "relative_path": "skills/add-provider-package/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "adr-skill",
+      "skill_path": "/Users/me/tools/ai-metarepo/forks/public/skills/adr-skill/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo/forks/public",
+      "project_slug": "github-com-aculich-ai",
+      "relative_path": "skills/adr-skill/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "capture-api-response-test-fixture",
+      "skill_path": "/Users/me/tools/ai-metarepo/forks/public/skills/capture-api-response-test-fixture/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo/forks/public",
+      "project_slug": "github-com-aculich-ai",
+      "relative_path": "skills/capture-api-response-test-fixture/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "develop-ai-functions-example",
+      "skill_path": "/Users/me/tools/ai-metarepo/forks/public/skills/develop-ai-functions-example/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo/forks/public",
+      "project_slug": "github-com-aculich-ai",
+      "relative_path": "skills/develop-ai-functions-example/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "list-npm-package-content",
+      "skill_path": "/Users/me/tools/ai-metarepo/forks/public/skills/list-npm-package-content/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo/forks/public",
+      "project_slug": "github-com-aculich-ai",
+      "relative_path": "skills/list-npm-package-content/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "major-version-mode",
+      "skill_path": "/Users/me/tools/ai-metarepo/forks/public/skills/major-version-mode/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo/forks/public",
+      "project_slug": "github-com-aculich-ai",
+      "relative_path": "skills/major-version-mode/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "migrate-ai-sdk-v6-to-v7",
+      "skill_path": "/Users/me/tools/ai-metarepo/forks/public/skills/migrate-ai-sdk-v6-to-v7/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo/forks/public",
+      "project_slug": "github-com-aculich-ai",
+      "relative_path": "skills/migrate-ai-sdk-v6-to-v7/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "update-harness-dependencies",
+      "skill_path": "/Users/me/tools/ai-metarepo/forks/public/skills/update-harness-dependencies/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo/forks/public",
+      "project_slug": "github-com-aculich-ai",
+      "relative_path": "skills/update-harness-dependencies/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "update-provider-models",
+      "skill_path": "/Users/me/tools/ai-metarepo/forks/public/skills/update-provider-models/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo/forks/public",
+      "project_slug": "github-com-aculich-ai",
+      "relative_path": "skills/update-provider-models/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "use-ai-sdk",
+      "skill_path": "/Users/me/tools/ai-metarepo/forks/public/skills/use-ai-sdk/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo/forks/public",
+      "project_slug": "github-com-aculich-ai",
+      "relative_path": "skills/use-ai-sdk/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "add-function-examples",
+      "skill_path": "/Users/me/tools/ai-metarepo/forks/team/skills/add-function-examples/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo/forks/team",
+      "project_slug": "github-com-aculich-ai-team",
+      "relative_path": "skills/add-function-examples/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "add-harness-package",
+      "skill_path": "/Users/me/tools/ai-metarepo/forks/team/skills/add-harness-package/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo/forks/team",
+      "project_slug": "github-com-aculich-ai-team",
+      "relative_path": "skills/add-harness-package/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "add-provider-package",
+      "skill_path": "/Users/me/tools/ai-metarepo/forks/team/skills/add-provider-package/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo/forks/team",
+      "project_slug": "github-com-aculich-ai-team",
+      "relative_path": "skills/add-provider-package/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "adr-skill",
+      "skill_path": "/Users/me/tools/ai-metarepo/forks/team/skills/adr-skill/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo/forks/team",
+      "project_slug": "github-com-aculich-ai-team",
+      "relative_path": "skills/adr-skill/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "capture-api-response-test-fixture",
+      "skill_path": "/Users/me/tools/ai-metarepo/forks/team/skills/capture-api-response-test-fixture/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo/forks/team",
+      "project_slug": "github-com-aculich-ai-team",
+      "relative_path": "skills/capture-api-response-test-fixture/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "develop-ai-functions-example",
+      "skill_path": "/Users/me/tools/ai-metarepo/forks/team/skills/develop-ai-functions-example/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo/forks/team",
+      "project_slug": "github-com-aculich-ai-team",
+      "relative_path": "skills/develop-ai-functions-example/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "list-npm-package-content",
+      "skill_path": "/Users/me/tools/ai-metarepo/forks/team/skills/list-npm-package-content/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo/forks/team",
+      "project_slug": "github-com-aculich-ai-team",
+      "relative_path": "skills/list-npm-package-content/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "major-version-mode",
+      "skill_path": "/Users/me/tools/ai-metarepo/forks/team/skills/major-version-mode/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo/forks/team",
+      "project_slug": "github-com-aculich-ai-team",
+      "relative_path": "skills/major-version-mode/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "migrate-ai-sdk-v6-to-v7",
+      "skill_path": "/Users/me/tools/ai-metarepo/forks/team/skills/migrate-ai-sdk-v6-to-v7/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo/forks/team",
+      "project_slug": "github-com-aculich-ai-team",
+      "relative_path": "skills/migrate-ai-sdk-v6-to-v7/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "update-harness-dependencies",
+      "skill_path": "/Users/me/tools/ai-metarepo/forks/team/skills/update-harness-dependencies/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo/forks/team",
+      "project_slug": "github-com-aculich-ai-team",
+      "relative_path": "skills/update-harness-dependencies/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "update-provider-models",
+      "skill_path": "/Users/me/tools/ai-metarepo/forks/team/skills/update-provider-models/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo/forks/team",
+      "project_slug": "github-com-aculich-ai-team",
+      "relative_path": "skills/update-provider-models/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "use-ai-sdk",
+      "skill_path": "/Users/me/tools/ai-metarepo/forks/team/skills/use-ai-sdk/SKILL.md",
+      "project_root": "/Users/me/tools/ai-metarepo/forks/team",
+      "project_slug": "github-com-aculich-ai-team",
+      "relative_path": "skills/use-ai-sdk/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
       "skill": "prd",
       "skill_path": "/Users/me/tools/anthonyshew-tools/anthonyshew/agents/.cursor/skills/prd/SKILL.md",
       "project_root": "/Users/me/tools/anthonyshew-tools/anthonyshew/agents",
@@ -12761,7 +13365,7 @@
       "skill": "cursor-extension-fork-lifecycle",
       "skill_path": "/Users/me/tools/cursor-extensions/.cursor/skills/cursor-extension-fork-lifecycle/SKILL.md",
       "project_root": "/Users/me/tools/cursor-extensions",
-      "project_slug": "path-249d2b54da21",
+      "project_slug": "github-com-aculich-cursor-extensions",
       "relative_path": ".cursor/skills/cursor-extension-fork-lifecycle/SKILL.md",
       "layout": "project-cursor",
       "classification": "embedded"
@@ -12770,8 +13374,17 @@
       "skill": "cursor-extension-landscape-search",
       "skill_path": "/Users/me/tools/cursor-extensions/.cursor/skills/cursor-extension-landscape-search/SKILL.md",
       "project_root": "/Users/me/tools/cursor-extensions",
-      "project_slug": "path-249d2b54da21",
+      "project_slug": "github-com-aculich-cursor-extensions",
       "relative_path": ".cursor/skills/cursor-extension-landscape-search/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "cursor-extension-security-review",
+      "skill_path": "/Users/me/tools/cursor-extensions/.cursor/skills/cursor-extension-security-review/SKILL.md",
+      "project_root": "/Users/me/tools/cursor-extensions",
+      "project_slug": "github-com-aculich-cursor-extensions",
+      "relative_path": ".cursor/skills/cursor-extension-security-review/SKILL.md",
       "layout": "project-cursor",
       "classification": "embedded"
     },
@@ -12779,7 +13392,7 @@
       "skill": "develop-extension-cursor",
       "skill_path": "/Users/me/tools/cursor-extensions/.cursor/skills/develop-extension-cursor/SKILL.md",
       "project_root": "/Users/me/tools/cursor-extensions",
-      "project_slug": "path-249d2b54da21",
+      "project_slug": "github-com-aculich-cursor-extensions",
       "relative_path": ".cursor/skills/develop-extension-cursor/SKILL.md",
       "layout": "project-cursor",
       "classification": "embedded"
@@ -13208,6 +13821,33 @@
       "classification": "embedded"
     },
     {
+      "skill": "pymobiledevice3-device-operator",
+      "skill_path": "/Users/me/tools/ipad-mac-cli/peers/clones/doronz88__pymobiledevice3/.codex/skills/pymobiledevice3-device-operator/SKILL.md",
+      "project_root": "/Users/me/tools/ipad-mac-cli/peers/clones/doronz88__pymobiledevice3",
+      "project_slug": "github-com-doronz88-pymobiledevice3",
+      "relative_path": ".codex/skills/pymobiledevice3-device-operator/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "pymobiledevice3-device-operator",
+      "skill_path": "/Users/me/tools/ipad-mac-cli/peers/clones/doronz88__pymobiledevice3/misc/claude-plugin/skills/pymobiledevice3-device-operator/SKILL.md",
+      "project_root": "/Users/me/tools/ipad-mac-cli/peers/clones/doronz88__pymobiledevice3",
+      "project_slug": "github-com-doronz88-pymobiledevice3",
+      "relative_path": "misc/claude-plugin/skills/pymobiledevice3-device-operator/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "tss-batch-prefetch",
+      "skill_path": "/Users/me/tools/ipad-mac-cli/peers/clones/doronz88__pymobiledevice3/.codex/skills/tss-batch-prefetch/SKILL.md",
+      "project_root": "/Users/me/tools/ipad-mac-cli/peers/clones/doronz88__pymobiledevice3",
+      "project_slug": "github-com-doronz88-pymobiledevice3",
+      "relative_path": ".codex/skills/tss-batch-prefetch/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
       "skill": "design-taste-frontend",
       "skill_path": "/Users/me/tools/macosx-tools/labs/raycast/peers/clones/SuperCmdLabs__SuperCmd/.agents/skills/design-taste-frontend/SKILL.md",
       "project_root": "/Users/me/tools/macosx-tools/labs/raycast/peers/clones/SuperCmdLabs__SuperCmd",
@@ -13277,6 +13917,42 @@
       "project_slug": "github-com-Wox-launcher-Wox",
       "relative_path": ".agents/skills/wox-update-changelog/SKILL.md",
       "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "add-new-location",
+      "skill_path": "/Users/me/tools/my-hunger/.cursor/skills/add-new-location/SKILL.md",
+      "project_root": "/Users/me/tools/my-hunger",
+      "project_slug": "github-com-aculich-my-hunger",
+      "relative_path": ".cursor/skills/add-new-location/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "dd-cli-upgrade",
+      "skill_path": "/Users/me/tools/my-hunger/.cursor/skills/dd-cli-upgrade/SKILL.md",
+      "project_root": "/Users/me/tools/my-hunger",
+      "project_slug": "github-com-aculich-my-hunger",
+      "relative_path": ".cursor/skills/dd-cli-upgrade/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "location-sense-preflight",
+      "skill_path": "/Users/me/tools/my-hunger/.cursor/skills/location-sense-preflight/SKILL.md",
+      "project_root": "/Users/me/tools/my-hunger",
+      "project_slug": "github-com-aculich-my-hunger",
+      "relative_path": ".cursor/skills/location-sense-preflight/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "weekend-social-flow",
+      "skill_path": "/Users/me/tools/my-hunger/.cursor/skills/weekend-social-flow/SKILL.md",
+      "project_root": "/Users/me/tools/my-hunger",
+      "project_slug": "github-com-aculich-my-hunger",
+      "relative_path": ".cursor/skills/weekend-social-flow/SKILL.md",
+      "layout": "project-cursor",
       "classification": "embedded"
     },
     {
@@ -17997,62 +18673,81 @@
     }
   ],
   "summary": {
-    "install_rows": 343,
-    "unique_skills": 171,
+    "install_rows": 344,
+    "unique_skills": 172,
     "by_classification": {
       "authored": 59,
       "installed": 155,
-      "embedded": 91,
+      "embedded": 92,
       "vendor": 37,
       "experimental": 1
     },
     "by_classification_unique": {
       "authored": 32,
-      "embedded": 67,
+      "embedded": 68,
       "experimental": 1,
       "installed": 92,
       "vendor": 37
     },
     "by_source_type": {
       "authored": 34,
-      "unknown": 27,
+      "unknown": 52,
       "skill-lock": 150,
       "local-repo": 8,
       "vendor": 37,
-      "local-estate": 22,
-      "community": 3,
-      "frontmatter": 62
+      "frontmatter": 63
     },
     "by_source_type_unique": {
       "authored": 31,
-      "community": 3,
-      "frontmatter": 30,
-      "local-estate": 20,
+      "frontmatter": 31,
       "local-repo": 8,
       "skill-lock": 49,
-      "unknown": 19,
+      "unknown": 42,
       "vendor": 37
     },
     "broken_symlinks": [],
     "unknown_source": [
       "agent-meep",
       "bootstrap-aar",
+      "bootstrap-collaborator",
       "bootstrap-product-quickstart",
       "bootstrap-project-umbrella",
       "bootstrap-regen",
       "bootstrap-tool-landscape",
       "bootstrap-tool-quickstart",
+      "chaos-containment",
       "clarify-audience-purpose",
+      "collab-sync",
       "converge-articulate",
+      "create-justfile",
+      "cursor-purification",
       "dd-cli-usage",
+      "deaccession-guides-and-guards",
+      "dev-warmup",
+      "discover-channel",
       "divergent-explore",
       "dwim-justfile",
+      "dynamic-dev-port",
       "envision-end-state",
       "github-trending",
+      "google-workspace-new-org",
+      "hot-livewires-preflight",
+      "message-in-a-bottle",
       "orx",
+      "perks",
       "product-hunt-search",
+      "quick-stash",
       "quickstart-fork-lineage",
+      "repo-evaluator",
+      "report-reforge",
+      "rowboat-safe-startup",
+      "rowboat-upstream-digest",
+      "setup-contextualizer",
+      "socialmedia-compounding",
+      "stale-tooling-trial",
       "survey-creative-landscape",
+      "tidy-stash",
+      "tool-landscape-intel",
       "unpack-the-question"
     ]
   }

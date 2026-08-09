@@ -21,3 +21,5 @@ dd-cli cart add-items --help  # leaf: options and usage
 ```
 
 Do not pre-map the full tree. Drill deeper only when you need the next level.
+
+Upgrades, GitHub release checks, cart-safe post-install smoke, decompile/diff, and version archives → project skill `dd-cli-upgrade` in `my-hunger` (`.cursor/skills/dd-cli-upgrade/`).
