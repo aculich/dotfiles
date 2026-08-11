@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-09T13:15:49Z",
+  "generated": "2026-08-11T13:15:34Z",
   "compendium_root": "/Users/me/dotfiles/cursor/compendium",
   "monorepo_root": "/Users/me/projects/agent-skills",
   "global": {
@@ -123,7 +123,7 @@
           "type": "local-repo",
           "url": "https://github.com/aculich/google-workspace-tools",
           "install_source_url": "https://github.com/aculich/google-workspace-tools",
-          "commit": "eb24f0399c824ae246b2c642d2c7de5fceb9cc61",
+          "commit": "0c9d4c0c4419de049ddceec9910818dffa163ec5",
           "local_path": "/Users/me/tools/google-workspace-tools",
           "confidence": "high",
           "via": "git-remote"
@@ -145,7 +145,7 @@
           "type": "local-repo",
           "url": "https://github.com/aculich/google-workspace-tools",
           "install_source_url": "https://github.com/aculich/google-workspace-tools",
-          "commit": "eb24f0399c824ae246b2c642d2c7de5fceb9cc61",
+          "commit": "0c9d4c0c4419de049ddceec9910818dffa163ec5",
           "local_path": "/Users/me/tools/google-workspace-tools",
           "confidence": "high",
           "via": "git-remote"
@@ -963,7 +963,7 @@
           "type": "local-repo",
           "url": "https://github.com/aculich/google-workspace-tools",
           "install_source_url": "https://github.com/aculich/google-workspace-tools",
-          "commit": "eb24f0399c824ae246b2c642d2c7de5fceb9cc61",
+          "commit": "0c9d4c0c4419de049ddceec9910818dffa163ec5",
           "local_path": "/Users/me/tools/google-workspace-tools",
           "confidence": "high",
           "via": "git-remote"
@@ -1744,7 +1744,7 @@
           "type": "local-repo",
           "url": "https://github.com/aculich/google-workspace-tools",
           "install_source_url": "https://github.com/aculich/google-workspace-tools",
-          "commit": "eb24f0399c824ae246b2c642d2c7de5fceb9cc61",
+          "commit": "0c9d4c0c4419de049ddceec9910818dffa163ec5",
           "local_path": "/Users/me/tools/google-workspace-tools",
           "confidence": "high",
           "via": "git-remote"
@@ -9366,6 +9366,15 @@
       "classification": "embedded"
     },
     {
+      "skill": "siy-person-dossier",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-peeq-siy-contacts/.cursor/skills/siy-person-dossier/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-peeq-siy-contacts/.cursor/skills/siy-person-dossier/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
       "skill": "skeptical-moderator-rubric-quick",
       "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-writing-quality/.cursor/skills/skeptical-moderator-rubric-quick/SKILL.md",
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
@@ -11085,6 +11094,15 @@
       "classification": "embedded"
     },
     {
+      "skill": "siy-person-dossier",
+      "skill_path": "/Users/me/projects/peeq-siy-contacts/.cursor/skills/siy-person-dossier/SKILL.md",
+      "project_root": "/Users/me/projects/peeq-siy-contacts",
+      "project_slug": "github-com-aculich-peeq-siy-contacts",
+      "relative_path": ".cursor/skills/siy-person-dossier/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
       "skill": "baloney-scan",
       "skill_path": "/Users/me/projects/peeq-voicegen-audiocast/skills/baloney-scan/SKILL.md",
       "project_root": "/Users/me/projects/peeq-voicegen-audiocast",
@@ -11397,6 +11415,123 @@
       "project_slug": "github-com-rrid-ucb-rrid-summer2026-webapp-design",
       "relative_path": ".cursor/skills/hats-session-status/SKILL.md",
       "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "commit-push-deploy-dev",
+      "skill_path": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp-fix-part2-frp8/.agents/skills/commit-push-deploy-dev/SKILL.md",
+      "project_root": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp-fix-part2-frp8",
+      "project_slug": "github-com-rrid-ucb-rrid-summer2026-webapp",
+      "relative_path": ".agents/skills/commit-push-deploy-dev/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "deploy",
+      "skill_path": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp-fix-part2-frp8/.cursor/skills/deploy/SKILL.md",
+      "project_root": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp-fix-part2-frp8",
+      "project_slug": "github-com-rrid-ucb-rrid-summer2026-webapp",
+      "relative_path": ".cursor/skills/deploy/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "drizzle",
+      "skill_path": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp-fix-part2-frp8/.agents/skills/drizzle/SKILL.md",
+      "project_root": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp-fix-part2-frp8",
+      "project_slug": "github-com-rrid-ucb-rrid-summer2026-webapp",
+      "relative_path": ".agents/skills/drizzle/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "drizzle-migrations",
+      "skill_path": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp-fix-part2-frp8/.agents/skills/drizzle-migrations/SKILL.md",
+      "project_root": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp-fix-part2-frp8",
+      "project_slug": "github-com-rrid-ucb-rrid-summer2026-webapp",
+      "relative_path": ".agents/skills/drizzle-migrations/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "frontend-design",
+      "skill_path": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp-fix-part2-frp8/.agents/skills/frontend-design/SKILL.md",
+      "project_root": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp-fix-part2-frp8",
+      "project_slug": "github-com-rrid-ucb-rrid-summer2026-webapp",
+      "relative_path": ".agents/skills/frontend-design/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "tailwind-v4-shadcn",
+      "skill_path": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp-fix-part2-frp8/.agents/skills/tailwind-v4-shadcn/SKILL.md",
+      "project_root": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp-fix-part2-frp8",
+      "project_slug": "github-com-rrid-ucb-rrid-summer2026-webapp",
+      "relative_path": ".agents/skills/tailwind-v4-shadcn/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "tanstack-query",
+      "skill_path": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp-fix-part2-frp8/.agents/skills/tanstack-query/SKILL.md",
+      "project_root": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp-fix-part2-frp8",
+      "project_slug": "github-com-rrid-ucb-rrid-summer2026-webapp",
+      "relative_path": ".agents/skills/tanstack-query/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "vercel-composition-patterns",
+      "skill_path": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp-fix-part2-frp8/.agents/skills/vercel-composition-patterns/SKILL.md",
+      "project_root": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp-fix-part2-frp8",
+      "project_slug": "github-com-rrid-ucb-rrid-summer2026-webapp",
+      "relative_path": ".agents/skills/vercel-composition-patterns/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "vercel-react-best-practices",
+      "skill_path": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp-fix-part2-frp8/.agents/skills/vercel-react-best-practices/SKILL.md",
+      "project_root": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp-fix-part2-frp8",
+      "project_slug": "github-com-rrid-ucb-rrid-summer2026-webapp",
+      "relative_path": ".agents/skills/vercel-react-best-practices/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "vitest",
+      "skill_path": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp-fix-part2-frp8/.agents/skills/vitest/SKILL.md",
+      "project_root": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp-fix-part2-frp8",
+      "project_slug": "github-com-rrid-ucb-rrid-summer2026-webapp",
+      "relative_path": ".agents/skills/vitest/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "web-design-guidelines",
+      "skill_path": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp-fix-part2-frp8/.agents/skills/web-design-guidelines/SKILL.md",
+      "project_root": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp-fix-part2-frp8",
+      "project_slug": "github-com-rrid-ucb-rrid-summer2026-webapp",
+      "relative_path": ".agents/skills/web-design-guidelines/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "webapp-testing",
+      "skill_path": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp-fix-part2-frp8/.agents/skills/webapp-testing/SKILL.md",
+      "project_root": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp-fix-part2-frp8",
+      "project_slug": "github-com-rrid-ucb-rrid-summer2026-webapp",
+      "relative_path": ".agents/skills/webapp-testing/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "zod",
+      "skill_path": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp-fix-part2-frp8/.agents/skills/zod/SKILL.md",
+      "project_root": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp-fix-part2-frp8",
+      "project_slug": "github-com-rrid-ucb-rrid-summer2026-webapp",
+      "relative_path": ".agents/skills/zod/SKILL.md",
+      "layout": "project-skills-dir",
       "classification": "embedded"
     },
     {
@@ -16491,6 +16626,15 @@
       "project_slug": "github-com-aculich-openoats-metarepo",
       "relative_path": ".cursor/skills/bootstrap-aar/SKILL.md",
       "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "gpt-researcher",
+      "skill_path": "/Users/me/tools/oss-research/gpt-researcher/skills/gpt-researcher/SKILL.md",
+      "project_root": "/Users/me/tools/oss-research/gpt-researcher",
+      "project_slug": "github-com-assafelovic-gpt-researcher",
+      "relative_path": "skills/gpt-researcher/SKILL.md",
+      "layout": "project-skills-dir",
       "classification": "embedded"
     },
     {

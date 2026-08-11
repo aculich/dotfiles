@@ -1,6 +1,6 @@
 # Skills inventory (generated)
 
-Generated: 2026-08-09T13:15:49Z
+Generated: 2026-08-11T13:15:34Z
 
 ## Summary
 
@@ -382,7 +382,7 @@ Generated: 2026-08-09T13:15:49Z
 - `writing-great-skills` [installed] — source: https://github.com/mattpocock/skills
 - `writing-skills` [installed] — source: https://github.com/obra/superpowers
 
-## Project-local (1237)
+## Project-local (1253)
 
 ### `/Users/me/ops/dotfiles-cursor-compendium`
 
@@ -589,6 +589,7 @@ Generated: 2026-08-09T13:15:49Z
 - `sandstorm-quickstart` (project-cursor) — `mirrors/by-project/github-tomascupr-sandstorm/.cursor/skills/sandstorm-quickstart/SKILL.md`
 - `scrolly-chrome-debug` (project-cursor) — `mirrors/by-project/path-cidr-evictionstory-mn-9f23bc71c2b4/.cursor/skills/scrolly-chrome-debug/SKILL.md`
 - `siy-contacts-ingest` (project-cursor) — `mirrors/by-project/github-aculich-peeq-siy-contacts/.cursor/skills/siy-contacts-ingest/SKILL.md`
+- `siy-person-dossier` (project-cursor) — `mirrors/by-project/github-aculich-peeq-siy-contacts/.cursor/skills/siy-person-dossier/SKILL.md`
 - `skeptical-moderator-rubric-quick` (project-cursor) — `mirrors/by-project/github-aculich-writing-quality/.cursor/skills/skeptical-moderator-rubric-quick/SKILL.md`
 - `skeptical-quackery-neutralizer-quick` (project-cursor) — `mirrors/by-project/github-aculich-writing-quality/.cursor/skills/skeptical-quackery-neutralizer-quick/SKILL.md`
 - `skill-repair` (project-skills-dir) — `mirrors/skills-snapshots/skills/skill-repair/SKILL.md`
@@ -888,6 +889,7 @@ Generated: 2026-08-09T13:15:49Z
 ### `/Users/me/projects/peeq-siy-contacts`
 
 - `siy-contacts-ingest` (project-cursor) — `.cursor/skills/siy-contacts-ingest/SKILL.md`
+- `siy-person-dossier` (project-cursor) — `.cursor/skills/siy-person-dossier/SKILL.md`
 
 ### `/Users/me/projects/peeq-voicegen-audiocast`
 
@@ -941,6 +943,22 @@ Generated: 2026-08-09T13:15:49Z
 ### `/Users/me/projects/rrid-ucb/rrid-summer2026-webapp-design`
 
 - `hats-session-status` (project-cursor) — `.cursor/skills/hats-session-status/SKILL.md`
+
+### `/Users/me/projects/rrid-ucb/rrid-summer2026-webapp-fix-part2-frp8`
+
+- `commit-push-deploy-dev` (project-skills-dir) — `.agents/skills/commit-push-deploy-dev/SKILL.md`
+- `deploy` (project-cursor) — `.cursor/skills/deploy/SKILL.md`
+- `drizzle` (project-skills-dir) — `.agents/skills/drizzle/SKILL.md`
+- `drizzle-migrations` (project-skills-dir) — `.agents/skills/drizzle-migrations/SKILL.md`
+- `frontend-design` (project-skills-dir) — `.agents/skills/frontend-design/SKILL.md`
+- `tailwind-v4-shadcn` (project-skills-dir) — `.agents/skills/tailwind-v4-shadcn/SKILL.md`
+- `tanstack-query` (project-skills-dir) — `.agents/skills/tanstack-query/SKILL.md`
+- `vercel-composition-patterns` (project-skills-dir) — `.agents/skills/vercel-composition-patterns/SKILL.md`
+- `vercel-react-best-practices` (project-skills-dir) — `.agents/skills/vercel-react-best-practices/SKILL.md`
+- `vitest` (project-skills-dir) — `.agents/skills/vitest/SKILL.md`
+- `web-design-guidelines` (project-skills-dir) — `.agents/skills/web-design-guidelines/SKILL.md`
+- `webapp-testing` (project-skills-dir) — `.agents/skills/webapp-testing/SKILL.md`
+- `zod` (project-skills-dir) — `.agents/skills/zod/SKILL.md`
 
 ### `/Users/me/projects/rrid/alphaxiv-marimo`
 
@@ -1882,6 +1900,10 @@ Generated: 2026-08-09T13:15:49Z
 ### `/Users/me/tools/openoats-metarepo`
 
 - `bootstrap-aar` (project-cursor) — `.cursor/skills/bootstrap-aar/SKILL.md`
+
+### `/Users/me/tools/oss-research/gpt-researcher`
+
+- `gpt-researcher` (project-skills-dir) — `skills/gpt-researcher/SKILL.md`
 
 ### `/Users/me/tools/rowboat-quickstart`
 
