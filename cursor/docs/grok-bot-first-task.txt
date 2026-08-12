@@ -1,0 +1,6 @@
+Open https://docs.x.ai/grok-bot/get-started in the Agent Computer browser.
+Summarize the install prerequisites and the first three setup steps in 5 bullets.
+Do not sign into any third-party sites.
+Do not change any settings, files, or dashboards.
+Do not send messages or emails.
+If anything requires authentication, CAPTCHA, or approval, stop and ask me.

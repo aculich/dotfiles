@@ -33,6 +33,8 @@ Same agent fundamentals (tools, models, rules/skills mindset) as a local Agent c
 
 **Agents Window clutter / Archive All:** not what Automations are for — see [agents-window-hygiene.md](agents-window-hygiene.md).
 
+**Not the same product:** [Grok Bot](grok-bot-setup.md) is a standalone SpaceXAI/Cursor agent app with its own cloud computer (desktop/iOS). Cursor Cloud Agents remain the in-product VM/agents path documented above.
+
 **“Move to Cloud” gotcha:** Transfers conversation context, **not** uncommitted local files. Agent starts from a **clean remote** state — commit or stash first if dirty work must be included.
 
 ---

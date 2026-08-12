@@ -73,3 +73,4 @@ When you change layout or scripts under `dotfiles/cursor/compendium/`, copy or m
 - Personal skill: `~/.cursor/skills/compendium-discover-projects/SKILL.md`
 - [MULTIROOT-cursor-lifecycle.md](MULTIROOT-cursor-lifecycle.md) (plans paths and chat history)
 - [cursor-cloud-agents-vs-local.md](cursor-cloud-agents-vs-local.md) (Cloud vs local; skills SoT stays in `~/projects/agent-skills`)
+- [grok-bot-setup.md](grok-bot-setup.md) (standalone Grok Bot agent app: eligibility, install, configure, first read-only task)

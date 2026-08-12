@@ -1,0 +1,26 @@
+Grok Bot configuration checklist
+================================
+
+Verified on this Mac (2026-08-12):
+[x] Eligible plan: Cursor Ultra (active)
+[x] Privacy: PRIVACY_MODE_NO_TRAINING (not Legacy)
+[x] App installed: /Applications/Grok Bot.app 0.16.0
+[x] Signed in with Cursor (Aaron Culich)
+[x] First Bot created: Call Coach
+[x] Settings → General → Agent → Execution on Local Computer: Ask every time
+[x] Settings → General → Auto-review: ON
+[x] First read-only task completed (docs.x.ai/grok-bot/get-started summary)
+
+Still recommended in Settings → General → Auto-review Rules
+(each "When Grok Bot wants to" → "It should: Ask first"):
+[ ] send any external email
+[ ] change a production dashboard
+[ ] publish, delete, purchase, or change permissions
+
+Plugins (Settings / sidebar Plugins):
+[ ] Install only connectors you need; prefer connectors over raw browser
+[ ] Skip Zoom/Granola until you intentionally want Call Coach workflows
+
+First task prompt: docs/grok-bot-first-task.txt
+Full guide: docs/grok-bot-setup.md
+Helper: scripts/grok-bot-setup.sh

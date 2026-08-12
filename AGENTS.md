@@ -16,4 +16,5 @@
 - Third-party tools and reference repos are often cloned under `upstream/` using a `repo__owner` directory naming convention aligned with existing git helpers in this dotfiles tree.
 - Cursor keybindings live in `cursor/keybindings.json`; observability and conflict-resolution workflows for keybindings are documented in `cursor/docs/keybindings-guide.md`.
 - Cursor product learnings (Cloud vs local agents, handoffs, costs) live under `cursor/docs/`; start with `cursor/docs/cursor-cloud-agents-vs-local.md`. Skills authoring/install SoT is `~/projects/agent-skills`, not `cursor/`.
+- Grok Bot is a standalone SpaceXAI/Cursor agent app (not the IDE model picker); setup notes and first-task prompt live in `cursor/docs/grok-bot-setup.md` with helper `cursor/scripts/grok-bot-setup.sh`.
 - Agents Window sidebar clean-slate is manual per-workspace **Archive All** (Automations cannot do it); inventory via `cursor/scripts/cursor-agents-inventory.sh` and notes in `cursor/docs/agents-window-hygiene.md`.
