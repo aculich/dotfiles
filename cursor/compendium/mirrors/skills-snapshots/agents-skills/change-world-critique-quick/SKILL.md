@@ -32,6 +32,7 @@ Prefer `REPO/.venv/bin/python` when it exists; else `python3`.
 | `--reasoning-effort` | OpenAI only: `none` \| `low` \| `medium` \| `high` \| `xhigh`. |
 | `-p` / `--prompt-file` | System prompt file (default `change-the-world-gpt/prompts/change-world-system.txt`). |
 | `--dotenv` | Explicit `.env` path (else loads `REPO/.env` and `REPO/change-the-world-gpt/.env`). |
+| `--keep-source-frontmatter` | Opt out of the default behavior: source YAML frontmatter and Obsidian preamble are **stripped from the model input** (content only; provenance and output naming still read the full file, and the critique records `source_frontmatter_stripped: true`). |
 
 **Outputs:** assistant markdown to stdout; if `-o` is set, same content to that file. Every critique is prefixed with **YAML frontmatter** (model/provider, source paths, `title`, `critique_of`, tags) unless `--no-emit-frontmatter`. **No** JSON sidecar, manifest, cost, or judge (use the `-full` skill for that).
 

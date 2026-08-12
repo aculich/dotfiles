@@ -1,29 +1,29 @@
 # Skills inventory (generated)
 
-Generated: 2026-08-11T13:15:34Z
+Generated: 2026-08-12T13:15:41Z
 
 ## Summary
 
-- **unique skills**: 172 (344 install rows)
+- **unique skills**: 177 (354 install rows)
 - **authored**: 59 installs / 32 unique
 - **embedded**: 92 installs / 68 unique
 - **experimental**: 1
-- **installed**: 155 installs / 92 unique
+- **installed**: 165 installs / 97 unique
 - **vendor**: 37
 
 ### Provenance (by source type)
 
-- **skill-lock**: 150 installs / 49 unique
+- **skill-lock**: 151 installs / 50 unique
 - **frontmatter**: 63 installs / 31 unique
-- **unknown**: 52 installs / 42 unique
+- **unknown**: 61 installs / 46 unique
 - **vendor**: 37
 - **authored**: 34 installs / 31 unique
 - **local-repo**: 8
-- **unresolved** (42): agent-meep, bootstrap-aar, bootstrap-collaborator, bootstrap-product-quickstart, bootstrap-project-umbrella, bootstrap-regen, bootstrap-tool-landscape, bootstrap-tool-quickstart, chaos-containment, clarify-audience-purpose, collab-sync, converge-articulate, create-justfile, cursor-purification, dd-cli-usage, deaccession-guides-and-guards, dev-warmup, discover-channel, divergent-explore, dwim-justfile, dynamic-dev-port, envision-end-state, github-trending, google-workspace-new-org, hot-livewires-preflight, message-in-a-bottle, orx, perks, product-hunt-search, quick-stash, quickstart-fork-lineage, repo-evaluator, report-reforge, rowboat-safe-startup, rowboat-upstream-digest, setup-contextualizer, socialmedia-compounding, stale-tooling-trial, survey-creative-landscape, tidy-stash, tool-landscape-intel, unpack-the-question — run `just provenance` (or `scripts/enrich-provenance.py`) to attempt web lookup
+- **unresolved** (46): agent-meep, bootstrap-aar, bootstrap-collaborator, bootstrap-product-quickstart, bootstrap-project-umbrella, bootstrap-regen, bootstrap-tool-landscape, bootstrap-tool-quickstart, chaos-containment, clarify-audience-purpose, code-to-prd, collab-sync, converge-articulate, create-justfile, cursor-purification, dd-cli-usage, deaccession-guides-and-guards, dev-warmup, discover-channel, divergent-explore, dwim-justfile, dynamic-dev-port, envision-end-state, github-trending, google-workspace-new-org, hot-livewires-preflight, message-in-a-bottle, op-project-credentials, orx, perks, prd, product-hunt-search, quick-stash, quickstart-fork-lineage, repo-evaluator, report-reforge, retroprd, rowboat-safe-startup, rowboat-upstream-digest, setup-contextualizer, socialmedia-compounding, stale-tooling-trial, survey-creative-landscape, tidy-stash, tool-landscape-intel, unpack-the-question — run `just provenance` (or `scripts/enrich-provenance.py`) to attempt web lookup
 
 ## Global
 
-### cursor-user (119)
+### cursor-user (123)
 
 - `accidental-data-loss-prevention` [authored] — source: https://github.com/aculich/agent-skills
 - `adhd-daily-planner` [authored] — source: https://github.com/aculich/agent-skills
@@ -54,6 +54,7 @@ Generated: 2026-08-11T13:15:34Z
 - `cloudflare-email-service` [installed] — source: https://github.com/cloudflare/skills
 - `cloudflare-one` [installed] — source: https://github.com/cloudflare/skills
 - `cloudflare-one-migrations` [installed] — source: https://github.com/cloudflare/skills
+- `code-to-prd` [installed] ⚠? — source: unknown
 - `collab-sync` [installed] ⚠? — source: unknown
 - `compendium-discover-projects` [authored] — source: https://github.com/aculich/agent-skills
 - `context-engineering` [authored] — source: https://github.com/aculich/agent-skills
@@ -107,9 +108,11 @@ Generated: 2026-08-11T13:15:34Z
 - `music-to-video` [embedded] (symlink) — source: https://github.com/heygen-com/hyperframes
 - `notebook-guidance` [vendor] — source: vendor
 - `op-credentials` [authored] — source: https://github.com/aculich/agent-skills
+- `op-project-credentials` [installed] ⚠? — source: unknown
 - `orx` [installed] ⚠? — source: unknown
 - `peeq-cidr-meeting` [embedded] (symlink) — source: https://github.com/aculich/google-workspace-tools
 - `pr-to-video` [embedded] (symlink) — source: https://github.com/heygen-com/hyperframes
+- `prd` [installed] ⚠? — source: unknown
 - `process-umbrella-incoming` [authored] — source: https://github.com/aculich/agent-skills
 - `product-hunt-search` [installed] ⚠? — source: unknown
 - `product-launch-video` [embedded] (symlink) — source: https://github.com/heygen-com/hyperframes
@@ -120,6 +123,7 @@ Generated: 2026-08-11T13:15:34Z
 - `remotion-to-hyperframes` [embedded] (symlink) — source: https://github.com/heygen-com/hyperframes
 - `report-reforge` [installed] ⚠? — source: unknown
 - `research-clone-bootstrap` [embedded] (symlink) — source: https://github.com/aculich/research-clone-bootstrap
+- `retroprd` [installed] ⚠? — source: unknown
 - `rowboat-safe-startup` [installed] ⚠? — source: unknown
 - `rowboat-upstream-digest` [installed] ⚠? — source: unknown
 - `sandbox-sdk` [installed] — source: https://github.com/cloudflare/skills
@@ -168,7 +172,7 @@ Generated: 2026-08-11T13:15:34Z
 - `update-cli-config` [vendor] — source: vendor
 - `update-cursor-settings` [vendor] — source: vendor
 
-### claude-user (80)
+### claude-user (84)
 
 - `accidental-data-loss-prevention` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
 - `adhd-daily-planner` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
@@ -188,6 +192,7 @@ Generated: 2026-08-11T13:15:34Z
 - `cloudflare-email-service` [installed] — source: https://github.com/cloudflare/skills
 - `cloudflare-one` [installed] — source: https://github.com/cloudflare/skills
 - `cloudflare-one-migrations` [installed] — source: https://github.com/cloudflare/skills
+- `code-to-prd` [installed] ⚠? — source: unknown
 - `compendium-discover-projects` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
 - `deeplistening-method-synthesis` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
 - `deeplistening-session-analysis` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
@@ -221,9 +226,11 @@ Generated: 2026-08-11T13:15:34Z
 - `motion-graphics` [installed] — source: https://github.com/heygen-com/hyperframes
 - `music-to-video` [installed] — source: https://github.com/heygen-com/hyperframes
 - `op-credentials` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
+- `op-project-credentials` [installed] ⚠? — source: unknown
 - `orx` [installed] ⚠? — source: unknown
 - `portless` [embedded] (symlink) — source: https://github.com/vercel-labs/portless
 - `pr-to-video` [installed] — source: https://github.com/heygen-com/hyperframes
+- `prd` [installed] ⚠? — source: unknown
 - `process-umbrella-incoming` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
 - `product-launch-video` [installed] — source: https://github.com/heygen-com/hyperframes
 - `project-management-guru-adhd` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
@@ -231,6 +238,7 @@ Generated: 2026-08-11T13:15:34Z
 - `remotion-to-hyperframes` [installed] — source: https://github.com/heygen-com/hyperframes
 - `repo-evaluator` [installed] ⚠? — source: unknown
 - `research-clone-bootstrap` [embedded] (symlink) — source: https://github.com/aculich/research-clone-bootstrap
+- `retroprd` [installed] ⚠? — source: unknown
 - `sandbox-sdk` [installed] — source: https://github.com/cloudflare/skills
 - `setup-contextualizer` [installed] ⚠? — source: unknown
 - `skill-propagate-offshoot` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
@@ -288,7 +296,7 @@ Generated: 2026-08-11T13:15:34Z
 - `workers-best-practices` [installed] — source: https://github.com/cloudflare/skills
 - `wrangler` [installed] — source: https://github.com/cloudflare/skills
 
-### agents (91)
+### agents (93)
 
 - `accidental-data-loss-prevention` [authored] — source: https://github.com/aculich/agent-skills
 - `adhd-daily-planner` [authored] — source: https://github.com/aculich/agent-skills
@@ -316,6 +324,7 @@ Generated: 2026-08-11T13:15:34Z
 - `find-skills` [installed] — source: https://github.com/vercel-labs/skills
 - `fireflies-meeting-export` [authored] — source: https://github.com/aculich/agent-skills
 - `general-video` [installed] — source: https://github.com/heygen-com/hyperframes
+- `gog` [installed] — source: https://github.com/openclaw/openclaw
 - `google-agents-cli-adk-code` [installed] — source: https://github.com/google/agents-cli
 - `google-agents-cli-deploy` [installed] — source: https://github.com/google/agents-cli
 - `google-agents-cli-eval` [installed] — source: https://github.com/google/agents-cli
@@ -356,6 +365,7 @@ Generated: 2026-08-11T13:15:34Z
 - `repo-story-time` [installed] — source: https://github.com/github/awesome-copilot
 - `repomix-explorer` [installed] — source: https://github.com/yamadashy/repomix
 - `research-clone-bootstrap` [authored] — source: https://github.com/aculich/research-clone-bootstrap
+- `retroprd` [installed] ⚠? — source: unknown
 - `sandbox-sdk` [installed] — source: https://github.com/cloudflare/skills
 - `setup-contextualizer` [installed] ⚠? — source: unknown
 - `skill-propagate-offshoot` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
@@ -382,7 +392,7 @@ Generated: 2026-08-11T13:15:34Z
 - `writing-great-skills` [installed] — source: https://github.com/mattpocock/skills
 - `writing-skills` [installed] — source: https://github.com/obra/superpowers
 
-## Project-local (1253)
+## Project-local (1257)
 
 ### `/Users/me/ops/dotfiles-cursor-compendium`
 
@@ -451,6 +461,7 @@ Generated: 2026-08-11T13:15:34Z
 - `cloudflare-email-service` (project-skills-dir) — `mirrors/skills-snapshots/skills/cloudflare-email-service/SKILL.md`
 - `cloudflare-one` (project-skills-dir) — `mirrors/skills-snapshots/skills/cloudflare-one/SKILL.md`
 - `cloudflare-one-migrations` (project-skills-dir) — `mirrors/skills-snapshots/skills/cloudflare-one-migrations/SKILL.md`
+- `code-to-prd` (project-skills-dir) — `mirrors/skills-snapshots/skills/code-to-prd/SKILL.md`
 - `collab-sync` (project-skills-dir) — `mirrors/skills-snapshots/skills/collab-sync/SKILL.md`
 - `collab-sync` (project-cursor) — `mirrors/by-project/orphan-from-atoz-dunegon-c6b39c15b5/.cursor/skills/collab-sync/SKILL.md`
 - `collab-sync` (project-cursor) — `mirrors/by-project/github-aculich-from-atoz-private/.cursor/skills/collab-sync/SKILL.md`
@@ -559,11 +570,13 @@ Generated: 2026-08-11T13:15:34Z
 - `nuxt-ui` (project-cursor) — `mirrors/by-project/path-writing-income-e2d299d8b155/.cursor/skills/nuxt-ui/SKILL.md`
 - `op-credentials` (project-skills-dir) — `mirrors/skills-snapshots/skills/op-credentials/SKILL.md`
 - `op-credentials` (project-cursor) — `mirrors/by-project/github-tomascupr-sandstorm/.cursor/skills/op-credentials/SKILL.md`
+- `op-project-credentials` (project-skills-dir) — `mirrors/skills-snapshots/skills/op-project-credentials/SKILL.md`
 - `orx` (project-skills-dir) — `mirrors/skills-snapshots/skills/orx/SKILL.md`
 - `peeq-cidr-meeting` (project-skills-dir) — `mirrors/skills-snapshots/skills/peeq-cidr-meeting/SKILL.md`
 - `peeq-cidr-meeting` (project-cursor) — `mirrors/by-project/github-aculich-google-workspace-tools/.cursor/skills/peeq-cidr-meeting/SKILL.md`
 - `personnel-render` (project-cursor) — `mirrors/by-project/orphan-kit-512fba8992/.cursor/skills/personnel-render/SKILL.md`
 - `pr-to-video` (project-skills-dir) — `mirrors/skills-snapshots/skills/pr-to-video/SKILL.md`
+- `prd` (project-skills-dir) — `mirrors/skills-snapshots/skills/prd/SKILL.md`
 - `pretext-upstream-rhythm` (project-cursor) — `mirrors/by-project/github-aculich-pretext/.cursor/skills/pretext-upstream-rhythm/SKILL.md`
 - `process-umbrella-incoming` (project-skills-dir) — `mirrors/skills-snapshots/skills/process-umbrella-incoming/SKILL.md`
 - `product-hunt-search` (project-skills-dir) — `mirrors/skills-snapshots/skills/product-hunt-search/SKILL.md`
@@ -580,6 +593,7 @@ Generated: 2026-08-11T13:15:34Z
 - `research-clone-bootstrap.bak-20260718` (project-skills-dir) — `mirrors/skills-snapshots/skills/research-clone-bootstrap.bak-20260718/SKILL.md`
 - `research-plan-voice-brief` (project-cursor) — `mirrors/by-project/github-cidrlab-cidr-sjsu-chrp-policyai/.cursor/skills/research-plan-voice-brief/SKILL.md`
 - `research-project-bootstrap` (project-cursor) — `mirrors/by-project/path-alphaxiv-marimo-d8e7b800db3f/.cursor/skills/research-project-bootstrap/SKILL.md`
+- `retroprd` (project-skills-dir) — `mirrors/skills-snapshots/skills/retroprd/SKILL.md`
 - `rll-doc-assembly` (project-cursor) — `mirrors/by-project/github-willowempowermentllc-rainbowlearninglibrary/.cursor/skills/rll-doc-assembly/SKILL.md`
 - `rowboat-fork-workflow` (project-cursor) — `mirrors/by-project/path-rowboat-quickstart-5e8cdadc157b/.cursor/skills/rowboat-fork-workflow/SKILL.md`
 - `rowboat-safe-startup` (project-skills-dir) — `mirrors/skills-snapshots/skills/rowboat-safe-startup/SKILL.md`

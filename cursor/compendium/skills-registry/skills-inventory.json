@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-11T13:15:34Z",
+  "generated": "2026-08-12T13:15:41Z",
   "compendium_root": "/Users/me/dotfiles/cursor/compendium",
   "monorepo_root": "/Users/me/projects/agent-skills",
   "global": {
@@ -593,6 +593,24 @@
           "updated_at": "2026-07-17T12:10:08.227Z",
           "confidence": "high",
           "via": "skill-lock"
+        }
+      },
+      {
+        "id": "code-to-prd",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "cursor-user",
+        "path": "/Users/me/.cursor/skills/code-to-prd",
+        "resolved_path": "/Users/me/.cursor/skills/code-to-prd",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "2.1.2",
+        "name": "code-to-prd",
+        "source": {
+          "type": "unknown",
+          "url": null,
+          "confidence": "none",
+          "via": "unresolved"
         }
       },
       {
@@ -1711,6 +1729,24 @@
         }
       },
       {
+        "id": "op-project-credentials",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "cursor-user",
+        "path": "/Users/me/.cursor/skills/op-project-credentials",
+        "resolved_path": "/Users/me/.cursor/skills/op-project-credentials",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "op-project-credentials",
+        "source": {
+          "type": "unknown",
+          "url": null,
+          "confidence": "none",
+          "via": "unresolved"
+        }
+      },
+      {
         "id": "orx",
         "classification": "installed",
         "lifecycle": "installed",
@@ -1774,6 +1810,24 @@
           "updated_at": "2026-07-03T12:35:29.659Z",
           "confidence": "high",
           "via": "skill-lock"
+        }
+      },
+      {
+        "id": "prd",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "cursor-user",
+        "path": "/Users/me/.cursor/skills/prd",
+        "resolved_path": "/Users/me/.cursor/skills/prd",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "prd",
+        "source": {
+          "type": "unknown",
+          "url": null,
+          "confidence": "none",
+          "via": "unresolved"
         }
       },
       {
@@ -1978,6 +2032,24 @@
           "confidence": "high",
           "via": "frontmatter:homepage",
           "install_source_url": "https://github.com/aculich/research-clone-bootstrap"
+        }
+      },
+      {
+        "id": "retroprd",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "cursor-user",
+        "path": "/Users/me/.cursor/skills/retroprd",
+        "resolved_path": "/Users/me/.cursor/skills/retroprd",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "1.1",
+        "name": "retroprd",
+        "source": {
+          "type": "unknown",
+          "url": null,
+          "confidence": "none",
+          "via": "unresolved"
         }
       },
       {
@@ -3259,6 +3331,24 @@
         }
       },
       {
+        "id": "code-to-prd",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/code-to-prd",
+        "resolved_path": "/Users/me/.claude/skills/code-to-prd",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "2.1.2",
+        "name": "code-to-prd",
+        "source": {
+          "type": "unknown",
+          "url": null,
+          "confidence": "none",
+          "via": "unresolved"
+        }
+      },
+      {
         "id": "compendium-discover-projects",
         "classification": "embedded",
         "lifecycle": "curated",
@@ -4035,6 +4125,24 @@
         }
       },
       {
+        "id": "op-project-credentials",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/op-project-credentials",
+        "resolved_path": "/Users/me/.claude/skills/op-project-credentials",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "op-project-credentials",
+        "source": {
+          "type": "unknown",
+          "url": null,
+          "confidence": "none",
+          "via": "unresolved"
+        }
+      },
+      {
         "id": "orx",
         "classification": "installed",
         "lifecycle": "installed",
@@ -4101,6 +4209,24 @@
           "updated_at": "2026-07-03T12:35:29.659Z",
           "confidence": "high",
           "via": "skill-lock"
+        }
+      },
+      {
+        "id": "prd",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/prd",
+        "resolved_path": "/Users/me/.claude/skills/prd",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "prd",
+        "source": {
+          "type": "unknown",
+          "url": null,
+          "confidence": "none",
+          "via": "unresolved"
         }
       },
       {
@@ -4249,6 +4375,24 @@
           "confidence": "high",
           "via": "frontmatter:homepage",
           "install_source_url": "https://github.com/aculich/research-clone-bootstrap"
+        }
+      },
+      {
+        "id": "retroprd",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/retroprd",
+        "resolved_path": "/Users/me/.claude/skills/retroprd",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "1.1",
+        "name": "retroprd",
+        "source": {
+          "type": "unknown",
+          "url": null,
+          "confidence": "none",
+          "via": "unresolved"
         }
       },
       {
@@ -6073,6 +6217,31 @@
         }
       },
       {
+        "id": "gog",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/gog",
+        "resolved_path": "/Users/me/.agents/skills/gog",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "gog",
+        "source": {
+          "type": "skill-lock",
+          "url": "https://github.com/openclaw/openclaw",
+          "install_source_url": "https://github.com/openclaw/openclaw",
+          "install_ref": "openclaw/openclaw",
+          "source_type": "github",
+          "folder_hash": "ceca95bf1ce9e1e66d6fac7f58b0ab69ae9e1771",
+          "skill_path": "skills/gog/SKILL.md",
+          "installed_at": "2026-08-12T06:15:49.258Z",
+          "updated_at": "2026-08-12T06:15:49.258Z",
+          "confidence": "high",
+          "via": "skill-lock"
+        }
+      },
+      {
         "id": "google-agents-cli-adk-code",
         "classification": "installed",
         "lifecycle": "installed",
@@ -6985,6 +7154,24 @@
           "confidence": "high",
           "via": "frontmatter:homepage",
           "install_source_url": "https://github.com/aculich/research-clone-bootstrap"
+        }
+      },
+      {
+        "id": "retroprd",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/retroprd",
+        "resolved_path": "/Users/me/.agents/skills/retroprd",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "1.1",
+        "name": "retroprd",
+        "source": {
+          "type": "unknown",
+          "url": null,
+          "confidence": "none",
+          "via": "unresolved"
         }
       },
       {
@@ -8124,6 +8311,15 @@
       "classification": "embedded"
     },
     {
+      "skill": "code-to-prd",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/code-to-prd/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/code-to-prd/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
       "skill": "collab-sync",
       "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/collab-sync/SKILL.md",
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
@@ -9096,6 +9292,15 @@
       "classification": "embedded"
     },
     {
+      "skill": "op-project-credentials",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/op-project-credentials/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/op-project-credentials/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
       "skill": "orx",
       "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/orx/SKILL.md",
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
@@ -9137,6 +9342,15 @@
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
       "relative_path": "mirrors/skills-snapshots/skills/pr-to-video/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "prd",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/prd/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/prd/SKILL.md",
       "layout": "project-skills-dir",
       "classification": "embedded"
     },
@@ -9282,6 +9496,15 @@
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
       "relative_path": "mirrors/by-project/path-alphaxiv-marimo-d8e7b800db3f/.cursor/skills/research-project-bootstrap/SKILL.md",
       "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "retroprd",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/retroprd/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/retroprd/SKILL.md",
+      "layout": "project-skills-dir",
       "classification": "embedded"
     },
     {
@@ -18817,11 +19040,11 @@
     }
   ],
   "summary": {
-    "install_rows": 344,
-    "unique_skills": 172,
+    "install_rows": 354,
+    "unique_skills": 177,
     "by_classification": {
       "authored": 59,
-      "installed": 155,
+      "installed": 165,
       "embedded": 92,
       "vendor": 37,
       "experimental": 1
@@ -18830,13 +19053,13 @@
       "authored": 32,
       "embedded": 68,
       "experimental": 1,
-      "installed": 92,
+      "installed": 97,
       "vendor": 37
     },
     "by_source_type": {
       "authored": 34,
-      "unknown": 52,
-      "skill-lock": 150,
+      "unknown": 61,
+      "skill-lock": 151,
       "local-repo": 8,
       "vendor": 37,
       "frontmatter": 63
@@ -18845,8 +19068,8 @@
       "authored": 31,
       "frontmatter": 31,
       "local-repo": 8,
-      "skill-lock": 49,
-      "unknown": 42,
+      "skill-lock": 50,
+      "unknown": 46,
       "vendor": 37
     },
     "broken_symlinks": [],
@@ -18861,6 +19084,7 @@
       "bootstrap-tool-quickstart",
       "chaos-containment",
       "clarify-audience-purpose",
+      "code-to-prd",
       "collab-sync",
       "converge-articulate",
       "create-justfile",
@@ -18877,13 +19101,16 @@
       "google-workspace-new-org",
       "hot-livewires-preflight",
       "message-in-a-bottle",
+      "op-project-credentials",
       "orx",
       "perks",
+      "prd",
       "product-hunt-search",
       "quick-stash",
       "quickstart-fork-lineage",
       "repo-evaluator",
       "report-reforge",
+      "retroprd",
       "rowboat-safe-startup",
       "rowboat-upstream-digest",
       "setup-contextualizer",
