@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{ brand.short_name or brand.name }} — Services</title>
+  <style>
+    @page { size: letter; margin: 0.55in 0.65in; }
+    :root {
+      --ink: {{ brand.colors.ink }};
+      --paper: {{ brand.colors.paper }};
+      --accent: {{ brand.colors.accent }};
+      --muted: {{ brand.colors.muted }};
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "{{ brand.fonts.body }}", "Iowan Old Style", Georgia, serif;
+      font-size: 10.5pt;
+      line-height: 1.35;
+    }
+    h1, h2, .brand {
+      font-family: "{{ brand.fonts.display }}", "Iowan Old Style", Georgia, serif;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+    .sheet { min-height: 10.4in; }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 3px solid var(--accent);
+      padding-bottom: 0.35rem;
+      margin-bottom: 0.7rem;
+    }
+    .brand { font-size: 22pt; margin: 0; }
+    .meta { color: var(--muted); font-size: 9pt; text-align: right; }
+    .tagline { margin: 0.35rem 0 0.8rem; font-size: 12pt; max-width: 38em; }
+    h2 { font-size: 11pt; color: var(--accent); margin: 0.85rem 0 0.35rem; text-transform: none; }
+    .models { display: grid; grid-template-columns: 1fr 1fr; gap: 0.35rem 1.2rem; }
+    .models p { margin: 0 0 0.25rem; }
+    .offer {
+      break-inside: avoid;
+      margin: 0 0 0.55rem;
+      padding-bottom: 0.35rem;
+      border-bottom: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
+    }
+    .offer h3 { margin: 0; font-size: 11pt; }
+    .price { color: var(--accent); font-weight: 600; }
+    ul { margin: 0.2rem 0 0; padding-left: 1.1rem; }
+    li { margin: 0; }
+    table { width: 100%; border-collapse: collapse; font-size: 9.5pt; }
+    th, td { text-align: left; padding: 0.18rem 0.3rem 0.18rem 0; border-bottom: 1px solid color-mix(in srgb, var(--ink) 12%, transparent); vertical-align: top; }
+    th { color: var(--muted); font-weight: 600; }
+    footer {
+      margin-top: 0.8rem;
+      padding-top: 0.4rem;
+      border-top: 2px solid var(--ink);
+      display: flex;
+      justify-content: space-between;
+      font-size: 9pt;
+    }
+    a { color: var(--ink); }
+  </style>
+</head>
+<body>
+  <div class="sheet">
+    <header>
+      <p class="brand">{{ brand.name }}</p>
+      <div class="meta">
+        <div>Services overview</div>
+        <div>Effective {{ effective_date }}</div>
+      </div>
+    </header>
+    <p class="tagline">{{ brand.tagline }}</p>
+    <p>{{ who_we_help }}</p>
+
+    <h2>How we engage</h2>
+    <div class="models">
+      {% for m in engagement_models %}
+      <p><strong>{{ m.name }}.</strong> {{ m.summary }}</p>
+      {% endfor %}
+    </div>
+
+    <h2>Offerings</h2>
+    {% for o in public_offerings %}
+    <section class="offer">
+      <h3>{{ o.name }}{% if publish.show_from_prices and o.pricing and o.pricing.from_price %} — <span class="price">From {{ o.pricing.from_price | money }}</span>{% endif %}</h3>
+      <p>{{ o.summary }}</p>
+      {% if o.includes %}
+      <ul>
+        {% for item in o.includes %}<li>{{ item }}</li>{% endfor %}
+      </ul>
+      {% endif %}
+    </section>
+    {% endfor %}
+
+    {% if publish.show_hourly_client and hourly_ladder %}
+    <h2>Time and materials</h2>
+    <table>
+      <thead><tr><th>Level</th><th>Rate</th><th>When</th></tr></thead>
+      <tbody>
+      {% for row in hourly_ladder %}
+        <tr>
+          <td>{{ row.name }}</td>
+          <td>{{ row | rate_range }}</td>
+          <td>{{ row.description }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    {% endif %}
+
+    <h2>Terms</h2>
+    <p>
+      Net {{ terms.net_days }}.
+      {{ terms.deposit_pct_fixed_price }}% deposit on fixed-price work.
+      {{ terms.late_fee_pct }}% late fee after {{ terms.late_fee_after_days }} days.
+      {{ terms.travel }}
+    </p>
+
+    <footer>
+      <div>{{ brand.email }} · {{ brand.website }}</div>
+      <div>{% if cta %}{{ cta.label }}{% endif %}</div>
+    </footer>
+  </div>
+</body>
+</html>

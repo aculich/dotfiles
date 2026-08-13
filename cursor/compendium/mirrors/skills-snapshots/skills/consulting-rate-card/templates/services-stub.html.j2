@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Services — {{ brand.name }}</title>
+  <style>
+    :root {
+      --ink: {{ brand.colors.ink }};
+      --paper: {{ brand.colors.paper }};
+      --accent: {{ brand.colors.accent }};
+      --muted: {{ brand.colors.muted }};
+    }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "{{ brand.fonts.body }}", Georgia, serif;
+      line-height: 1.45;
+    }
+    .services {
+      max-width: 42rem;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 4rem;
+    }
+    h1, h2 {
+      font-family: "{{ brand.fonts.display }}", Georgia, serif;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+    h1 { font-size: 2rem; margin-bottom: 0.35rem; }
+    .lede { color: var(--muted); margin-bottom: 2rem; }
+    article { margin: 0 0 1.75rem; }
+    h2 { font-size: 1.25rem; margin: 0 0 0.35rem; }
+    .from { color: var(--accent); font-weight: 600; }
+    a { color: var(--ink); }
+  </style>
+</head>
+<body>
+  <section class="services">
+    <h1>Services</h1>
+    <p class="lede">{{ brand.tagline }}</p>
+    <p>{{ who_we_help }}</p>
+    {% for o in public_offerings %}
+    <article>
+      <h2>{{ o.name }}</h2>
+      <p>{{ o.summary }}</p>
+      {% if o.includes %}
+      <ul>
+        {% for item in o.includes %}<li>{{ item }}</li>{% endfor %}
+      </ul>
+      {% endif %}
+      {% if publish.show_from_prices and o.pricing and o.pricing.from_price %}
+      <p class="from">From {{ o.pricing.from_price | money }}</p>
+      {% endif %}
+    </article>
+    {% endfor %}
+    <p>Custom scopes are quoted in a written SOW. <a href="mailto:{{ brand.email }}">{{ brand.email }}</a></p>
+  </section>
+</body>
+</html>

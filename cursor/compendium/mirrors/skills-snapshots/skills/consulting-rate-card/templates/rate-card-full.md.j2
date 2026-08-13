@@ -1,0 +1,81 @@
+# {{ brand.name }} — consulting rate card
+
+**Entity:** {{ brand.entity }}
+**Effective:** {{ effective_date }}
+**Contact:** {{ brand.email }} · {{ brand.website }}
+
+{{ brand.tagline }}
+
+{{ who_we_help }}
+
+## Engagement models
+
+{% for m in engagement_models %}
+- **{{ m.name }}** — {{ m.summary }}
+{% endfor %}
+
+## Offerings
+
+{% for o in offerings %}
+### {{ o.name }}
+
+{{ o.summary }}
+
+{% if o.pricing and o.pricing.from_price %}**From {{ o.pricing.from_price | money }}**{% if o.duration %} · {{ o.duration }}{% endif %}
+
+{% endif %}
+{% if o.outcomes %}
+**Outcomes**
+{% for x in o.outcomes %}
+- {{ x }}
+{% endfor %}
+{% endif %}
+{% if o.includes %}
+**Includes**
+{% for x in o.includes %}
+- {{ x }}
+{% endfor %}
+{% endif %}
+{% if o.excludes %}
+**Excludes**
+{% for x in o.excludes %}
+- {{ x }}
+{% endfor %}
+{% endif %}
+{% if o.pricing and o.pricing.tiers %}
+| Tier | Price | Notes |
+|------|-------|-------|
+{% for t in o.pricing.tiers %}| {{ t.name }} | {{ t.price | money }} | {{ t.note or "" }} |
+{% endfor %}
+{% endif %}
+
+{% endfor %}
+
+{% if publish.show_hourly_client and hourly_ladder %}
+## Time and materials
+
+| Level | Rate | When |
+|-------|------|------|
+{% for row in hourly_ladder %}| {{ row.name }} | {{ row | rate_range }} | {{ row.description }} |
+{% endfor %}
+{% endif %}
+
+{% if retainers %}
+## Retainers
+
+| Commitment | Rate | Notes |
+|------------|------|-------|
+{% for r in retainers %}| {{ r.name }}{% if r.min_hours_month %} ({{ r.min_hours_month }}+ hrs/month){% endif %} | {{ r.rate | money }}/hr | {{ r.notes }} |
+{% endfor %}
+{% endif %}
+
+## Terms
+
+- Payment: Net {{ terms.net_days }}
+- Late fee: {{ terms.late_fee_pct }}% after {{ terms.late_fee_after_days }} days
+- Deposit: {{ terms.deposit_pct_fixed_price }}% on fixed-price engagements
+- Travel: {{ terms.travel }}
+- Retainers: {{ terms.retainer_rollover }}
+- Scope: {{ terms.change_orders }}
+
+{% if cta %}{{ cta.label }}: {{ cta.url or brand.email }}{% endif %}

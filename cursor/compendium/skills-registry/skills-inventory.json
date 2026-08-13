@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-12T13:15:41Z",
+  "generated": "2026-08-13T13:16:14Z",
   "compendium_root": "/Users/me/dotfiles/cursor/compendium",
   "monorepo_root": "/Users/me/projects/agent-skills",
   "global": {
@@ -652,6 +652,24 @@
         }
       },
       {
+        "id": "consulting-rate-card",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "cursor-user",
+        "path": "/Users/me/.cursor/skills/consulting-rate-card",
+        "resolved_path": "/Users/me/.cursor/skills/consulting-rate-card",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "consulting-rate-card",
+        "source": {
+          "type": "unknown",
+          "url": null,
+          "confidence": "none",
+          "via": "unresolved"
+        }
+      },
+      {
         "id": "context-engineering",
         "classification": "authored",
         "lifecycle": "curated",
@@ -932,6 +950,24 @@
         "symlink_ok": true,
         "version": null,
         "name": "dwim-justfile",
+        "source": {
+          "type": "unknown",
+          "url": null,
+          "confidence": "none",
+          "via": "unresolved"
+        }
+      },
+      {
+        "id": "email-send-verify",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "cursor-user",
+        "path": "/Users/me/.cursor/skills/email-send-verify",
+        "resolved_path": "/Users/me/.cursor/skills/email-send-verify",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "email-send-verify",
         "source": {
           "type": "unknown",
           "url": null,
@@ -2298,6 +2334,24 @@
         }
       },
       {
+        "id": "standpoint-scenario-forecast",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "cursor-user",
+        "path": "/Users/me/.cursor/skills/standpoint-scenario-forecast",
+        "resolved_path": "/Users/me/.cursor/skills/standpoint-scenario-forecast",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "standpoint-scenario-forecast",
+        "source": {
+          "type": "unknown",
+          "url": null,
+          "confidence": "none",
+          "via": "unresolved"
+        }
+      },
+      {
         "id": "talking-head-recut",
         "classification": "embedded",
         "lifecycle": "installed",
@@ -2402,6 +2456,24 @@
           "updated_at": "2026-07-17T12:10:08.228Z",
           "confidence": "high",
           "via": "skill-lock"
+        }
+      },
+      {
+        "id": "voice-contrast-analysis",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "cursor-user",
+        "path": "/Users/me/.cursor/skills/voice-contrast-analysis",
+        "resolved_path": "/Users/me/.cursor/skills/voice-contrast-analysis",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "voice-contrast-analysis",
+        "source": {
+          "type": "unknown",
+          "url": null,
+          "confidence": "none",
+          "via": "unresolved"
         }
       },
       {
@@ -8365,6 +8437,15 @@
       "classification": "embedded"
     },
     {
+      "skill": "consulting-rate-card",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/consulting-rate-card/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/consulting-rate-card/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
       "skill": "context-engineering",
       "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/context-engineering/SKILL.md",
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
@@ -8766,6 +8847,15 @@
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
       "relative_path": "mirrors/skills-snapshots/skills/dwim-justfile/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "email-send-verify",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/email-send-verify/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/email-send-verify/SKILL.md",
       "layout": "project-skills-dir",
       "classification": "embedded"
     },
@@ -9787,6 +9877,15 @@
       "classification": "embedded"
     },
     {
+      "skill": "standpoint-scenario-forecast",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/standpoint-scenario-forecast/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/standpoint-scenario-forecast/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
       "skill": "storyvale-essay-pipeline",
       "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/path-storytelling-capsules-12c38336582f/.cursor/skills/storyvale-essay-pipeline/SKILL.md",
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
@@ -9874,6 +9973,15 @@
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
       "relative_path": "mirrors/by-project/path-cidr-org-4bd8f5480d99/.cursor/skills/unpack-the-conversation/SKILL.md",
       "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "voice-contrast-analysis",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/voice-contrast-analysis/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/voice-contrast-analysis/SKILL.md",
+      "layout": "project-skills-dir",
       "classification": "embedded"
     },
     {
@@ -19040,11 +19148,11 @@
     }
   ],
   "summary": {
-    "install_rows": 354,
-    "unique_skills": 177,
+    "install_rows": 358,
+    "unique_skills": 181,
     "by_classification": {
       "authored": 59,
-      "installed": 165,
+      "installed": 169,
       "embedded": 92,
       "vendor": 37,
       "experimental": 1
@@ -19053,12 +19161,12 @@
       "authored": 32,
       "embedded": 68,
       "experimental": 1,
-      "installed": 97,
+      "installed": 101,
       "vendor": 37
     },
     "by_source_type": {
       "authored": 34,
-      "unknown": 61,
+      "unknown": 65,
       "skill-lock": 151,
       "local-repo": 8,
       "vendor": 37,
@@ -19069,7 +19177,7 @@
       "frontmatter": 31,
       "local-repo": 8,
       "skill-lock": 50,
-      "unknown": 46,
+      "unknown": 50,
       "vendor": 37
     },
     "broken_symlinks": [],
@@ -19086,6 +19194,7 @@
       "clarify-audience-purpose",
       "code-to-prd",
       "collab-sync",
+      "consulting-rate-card",
       "converge-articulate",
       "create-justfile",
       "cursor-purification",
@@ -19096,6 +19205,7 @@
       "divergent-explore",
       "dwim-justfile",
       "dynamic-dev-port",
+      "email-send-verify",
       "envision-end-state",
       "github-trending",
       "google-workspace-new-org",
@@ -19116,10 +19226,12 @@
       "setup-contextualizer",
       "socialmedia-compounding",
       "stale-tooling-trial",
+      "standpoint-scenario-forecast",
       "survey-creative-landscape",
       "tidy-stash",
       "tool-landscape-intel",
-      "unpack-the-question"
+      "unpack-the-question",
+      "voice-contrast-analysis"
     ]
   }
 }

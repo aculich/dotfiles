@@ -1,29 +1,29 @@
 # Skills inventory (generated)
 
-Generated: 2026-08-12T13:15:41Z
+Generated: 2026-08-13T13:16:14Z
 
 ## Summary
 
-- **unique skills**: 177 (354 install rows)
+- **unique skills**: 181 (358 install rows)
 - **authored**: 59 installs / 32 unique
 - **embedded**: 92 installs / 68 unique
 - **experimental**: 1
-- **installed**: 165 installs / 97 unique
+- **installed**: 169 installs / 101 unique
 - **vendor**: 37
 
 ### Provenance (by source type)
 
 - **skill-lock**: 151 installs / 50 unique
+- **unknown**: 65 installs / 50 unique
 - **frontmatter**: 63 installs / 31 unique
-- **unknown**: 61 installs / 46 unique
 - **vendor**: 37
 - **authored**: 34 installs / 31 unique
 - **local-repo**: 8
-- **unresolved** (46): agent-meep, bootstrap-aar, bootstrap-collaborator, bootstrap-product-quickstart, bootstrap-project-umbrella, bootstrap-regen, bootstrap-tool-landscape, bootstrap-tool-quickstart, chaos-containment, clarify-audience-purpose, code-to-prd, collab-sync, converge-articulate, create-justfile, cursor-purification, dd-cli-usage, deaccession-guides-and-guards, dev-warmup, discover-channel, divergent-explore, dwim-justfile, dynamic-dev-port, envision-end-state, github-trending, google-workspace-new-org, hot-livewires-preflight, message-in-a-bottle, op-project-credentials, orx, perks, prd, product-hunt-search, quick-stash, quickstart-fork-lineage, repo-evaluator, report-reforge, retroprd, rowboat-safe-startup, rowboat-upstream-digest, setup-contextualizer, socialmedia-compounding, stale-tooling-trial, survey-creative-landscape, tidy-stash, tool-landscape-intel, unpack-the-question — run `just provenance` (or `scripts/enrich-provenance.py`) to attempt web lookup
+- **unresolved** (50): agent-meep, bootstrap-aar, bootstrap-collaborator, bootstrap-product-quickstart, bootstrap-project-umbrella, bootstrap-regen, bootstrap-tool-landscape, bootstrap-tool-quickstart, chaos-containment, clarify-audience-purpose, code-to-prd, collab-sync, consulting-rate-card, converge-articulate, create-justfile, cursor-purification, dd-cli-usage, deaccession-guides-and-guards, dev-warmup, discover-channel, divergent-explore, dwim-justfile, dynamic-dev-port, email-send-verify, envision-end-state, github-trending, google-workspace-new-org, hot-livewires-preflight, message-in-a-bottle, op-project-credentials, orx, perks, prd, product-hunt-search, quick-stash, quickstart-fork-lineage, repo-evaluator, report-reforge, retroprd, rowboat-safe-startup, rowboat-upstream-digest, setup-contextualizer, socialmedia-compounding, stale-tooling-trial, standpoint-scenario-forecast, survey-creative-landscape, tidy-stash, tool-landscape-intel, unpack-the-question, voice-contrast-analysis — run `just provenance` (or `scripts/enrich-provenance.py`) to attempt web lookup
 
 ## Global
 
-### cursor-user (123)
+### cursor-user (127)
 
 - `accidental-data-loss-prevention` [authored] — source: https://github.com/aculich/agent-skills
 - `adhd-daily-planner` [authored] — source: https://github.com/aculich/agent-skills
@@ -57,6 +57,7 @@ Generated: 2026-08-12T13:15:41Z
 - `code-to-prd` [installed] ⚠? — source: unknown
 - `collab-sync` [installed] ⚠? — source: unknown
 - `compendium-discover-projects` [authored] — source: https://github.com/aculich/agent-skills
+- `consulting-rate-card` [installed] ⚠? — source: unknown
 - `context-engineering` [authored] — source: https://github.com/aculich/agent-skills
 - `create-justfile` [installed] ⚠? — source: unknown
 - `cursor-purification` [installed] ⚠? — source: unknown
@@ -72,6 +73,7 @@ Generated: 2026-08-12T13:15:41Z
 - `discovering-gcp-data-assets` [vendor] — source: vendor
 - `durable-objects` [installed] — source: https://github.com/cloudflare/skills
 - `dwim-justfile` [installed] ⚠? — source: unknown
+- `email-send-verify` [installed] ⚠? — source: unknown
 - `embedded-captions` [embedded] (symlink) — source: https://github.com/heygen-com/hyperframes
 - `ern-cidr-mail` [embedded] (symlink) — source: https://github.com/aculich/google-workspace-tools
 - `faceless-explainer` [embedded] (symlink) — source: https://github.com/heygen-com/hyperframes
@@ -136,11 +138,13 @@ Generated: 2026-08-12T13:15:41Z
 - `specstory-session-summary` [authored] — source: https://github.com/aculich/agent-skills
 - `specstory-yak` [authored] — source: https://github.com/aculich/agent-skills
 - `stale-tooling-trial` [installed] ⚠? — source: unknown
+- `standpoint-scenario-forecast` [installed] ⚠? — source: unknown
 - `talking-head-recut` [embedded] (symlink) — source: https://github.com/heygen-com/hyperframes
 - `tidy-stash` [installed] ⚠? — source: unknown
 - `tool-landscape-intel` [installed] ⚠? — source: unknown
 - `tools-quickstart-bootstrap` [authored] — source: https://github.com/aculich/agent-skills
 - `turnstile-spin` [installed] — source: https://github.com/cloudflare/skills
+- `voice-contrast-analysis` [installed] ⚠? — source: unknown
 - `web-perf` [installed] — source: https://github.com/cloudflare/skills
 - `website-to-video` [embedded] (symlink) — source: https://github.com/heygen-com/hyperframes
 - `wip-distill` [embedded] (symlink) — source: https://github.com/aculich/peeq-voicegen-audiocast
@@ -392,7 +396,7 @@ Generated: 2026-08-12T13:15:41Z
 - `writing-great-skills` [installed] — source: https://github.com/mattpocock/skills
 - `writing-skills` [installed] — source: https://github.com/obra/superpowers
 
-## Project-local (1257)
+## Project-local (1261)
 
 ### `/Users/me/ops/dotfiles-cursor-compendium`
 
@@ -467,6 +471,7 @@ Generated: 2026-08-12T13:15:41Z
 - `collab-sync` (project-cursor) — `mirrors/by-project/github-aculich-from-atoz-private/.cursor/skills/collab-sync/SKILL.md`
 - `community-plugins-pipeline` (project-cursor) — `mirrors/by-project/path-obsidian-tools-37ed7006ebb9/.cursor/skills/community-plugins-pipeline/SKILL.md`
 - `compendium-discover-projects` (project-skills-dir) — `mirrors/skills-snapshots/skills/compendium-discover-projects/SKILL.md`
+- `consulting-rate-card` (project-skills-dir) — `mirrors/skills-snapshots/skills/consulting-rate-card/SKILL.md`
 - `context-engineering` (project-skills-dir) — `mirrors/skills-snapshots/skills/context-engineering/SKILL.md`
 - `create-justfile` (project-skills-dir) — `mirrors/skills-snapshots/skills/create-justfile/SKILL.md`
 - `create-justfile` (project-cursor) — `mirrors/by-project/orphan-from-atoz-dunegon-c6b39c15b5/.cursor/skills/create-justfile/SKILL.md`
@@ -512,6 +517,7 @@ Generated: 2026-08-12T13:15:41Z
 - `draft-edits-evaluate` (project-cursor) — `mirrors/by-project/path-sow-draft-kit-0c4ece52ab3a/.cursor/skills/draft-edits-evaluate/SKILL.md`
 - `durable-objects` (project-skills-dir) — `mirrors/skills-snapshots/skills/durable-objects/SKILL.md`
 - `dwim-justfile` (project-skills-dir) — `mirrors/skills-snapshots/skills/dwim-justfile/SKILL.md`
+- `email-send-verify` (project-skills-dir) — `mirrors/skills-snapshots/skills/email-send-verify/SKILL.md`
 - `embedded-captions` (project-skills-dir) — `mirrors/skills-snapshots/skills/embedded-captions/SKILL.md`
 - `ern-cidr-mail` (project-skills-dir) — `mirrors/skills-snapshots/skills/ern-cidr-mail/SKILL.md`
 - `ern-cidr-mail` (project-cursor) — `mirrors/by-project/github-aculich-google-workspace-tools/.cursor/skills/ern-cidr-mail/SKILL.md`
@@ -625,6 +631,7 @@ Generated: 2026-08-12T13:15:41Z
 - `specstory-session-summary` (project-skills-dir) — `mirrors/skills-snapshots/skills/specstory-session-summary/SKILL.md`
 - `specstory-yak` (project-skills-dir) — `mirrors/skills-snapshots/skills/specstory-yak/SKILL.md`
 - `stale-tooling-trial` (project-skills-dir) — `mirrors/skills-snapshots/skills/stale-tooling-trial/SKILL.md`
+- `standpoint-scenario-forecast` (project-skills-dir) — `mirrors/skills-snapshots/skills/standpoint-scenario-forecast/SKILL.md`
 - `storyvale-essay-pipeline` (project-cursor) — `mirrors/by-project/path-storytelling-capsules-12c38336582f/.cursor/skills/storyvale-essay-pipeline/SKILL.md`
 - `storyvale-first-draft` (project-cursor) — `mirrors/by-project/path-storytelling-capsules-12c38336582f/.cursor/skills/storyvale-first-draft/SKILL.md`
 - `storyvale-iterate-draft` (project-cursor) — `mirrors/by-project/path-storytelling-capsules-12c38336582f/.cursor/skills/storyvale-iterate-draft/SKILL.md`
@@ -635,6 +642,7 @@ Generated: 2026-08-12T13:15:41Z
 - `troubleshooting` (project-cursor) — `mirrors/by-project/path-cidr-evictionstory-mn-9f23bc71c2b4/.cursor/skills/troubleshooting/SKILL.md`
 - `turnstile-spin` (project-skills-dir) — `mirrors/skills-snapshots/skills/turnstile-spin/SKILL.md`
 - `unpack-the-conversation` (project-cursor) — `mirrors/by-project/path-cidr-org-4bd8f5480d99/.cursor/skills/unpack-the-conversation/SKILL.md`
+- `voice-contrast-analysis` (project-skills-dir) — `mirrors/skills-snapshots/skills/voice-contrast-analysis/SKILL.md`
 - `vue-best-practices` (project-cursor) — `mirrors/by-project/path-writing-income-e2d299d8b155/.cursor/skills/vue-best-practices/SKILL.md`
 - `web-perf` (project-skills-dir) — `mirrors/skills-snapshots/skills/web-perf/SKILL.md`
 - `website-to-video` (project-skills-dir) — `mirrors/skills-snapshots/skills/website-to-video/SKILL.md`

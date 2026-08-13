@@ -1,0 +1,167 @@
+schema_version: 1
+effective_date: "2026-08-01"
+brand:
+  id: example-studio
+  name: Example Studio LLC
+  short_name: Example
+  tagline: Systems that match how the work actually happens
+  entity: Example Studio LLC
+  website: https://example.studio
+  email: hello@example.studio
+  voice: Direct, specific, no emoji.
+  colors:
+    ink: "#1c1917"
+    paper: "#eef2f1"
+    accent: "#0f766e"
+    muted: "#57534e"
+  fonts:
+    display: Fraunces
+    body: Figtree
+who_we_help: >
+  Operators and technical leads at mid-size organizations who need a bounded
+  engagement, not a standing body shop.
+problems:
+  - Critical systems have no owner and no written picture of how they fail.
+  - Custom quotes stall because the buyer cannot compare options.
+  - Hourly work expands without a decision about what "done" means.
+engagement_models:
+  - id: project
+    name: Project (fixed scope)
+    summary: Named deliverables, fixed price, written excludes.
+  - id: retainer
+    name: Advisory retainer
+    summary: Reserved access for judgment and oversight, not staff-aug.
+  - id: tm
+    name: Time and materials
+    summary: Discovery, troubleshooting, or scope that is still moving.
+  - id: hybrid
+    name: Hybrid
+    summary: A short T&M discovery, then a fixed-price build.
+offerings:
+  - id: systems-review
+    name: Systems review
+    category: diagnostic
+    summary: A time-boxed review that produces a ranked findings memo and a 90-day sequence.
+    outcomes:
+      - Named risks ranked by severity
+      - A 90-day remediation sequence the team can run without us
+    includes:
+      - Stakeholder interviews
+      - Architecture and runbook review
+      - Written memo and readout
+    excludes:
+      - Implementation of remediations
+      - 24/7 on-call
+    duration: 3–5 weeks
+    public: true
+    pricing:
+      model: project
+      from_price: 25000
+      currency: USD
+      tiers:
+        - name: Core
+          price: 25000
+          note: Review, memo, readout
+        - name: With implementation plan
+          price: 35000
+          note: Adds a sequenced backlog and owner map
+  - id: pipeline-build
+    name: Data pipeline implementation
+    category: build
+    summary: A production path from source systems to a documented warehouse or lakehouse slice.
+    outcomes:
+      - One production pipeline with monitoring
+      - Handoff notes the next engineer can run
+    includes:
+      - Ingest, transform, and scheduled run
+      - Basic alerting
+      - Knowledge-transfer session
+    excludes:
+      - Multi-year platform rebuilds
+      - Unrelated dashboard programs
+    duration: 2–4 weeks
+    public: true
+    pricing:
+      model: project
+      from_price: 15000
+      currency: USD
+hourly_ladder:
+  - id: maintenance
+    name: Maintenance
+    rate_low: 200
+    rate_high: 250
+    unit: hour
+    description: Minor updates and troubleshooting.
+    public_client: true
+  - id: standard
+    name: Standard
+    rate_low: 250
+    rate_high: 300
+    unit: hour
+    description: Hands-on implementation and integration.
+    public_client: true
+  - id: strategic
+    name: Strategic
+    rate_low: 300
+    rate_high: 450
+    unit: hour
+    description: Architecture, AI/ML, and high-stakes design.
+    public_client: true
+  - id: emergency
+    name: Emergency / on-call
+    rate_low: 500
+    rate_high: 500
+    unit: hour
+    description: Urgent response outside business hours.
+    public_client: true
+retainers:
+  - id: standard
+    name: Standard retainer
+    min_hours_month: 10
+    rate: 275
+    notes: Priority scheduling. Unused hours do not roll over.
+  - id: priority
+    name: Priority retainer
+    min_hours_month: 20
+    rate: 250
+    notes: Dedicated capacity at a volume rate.
+cost_floor:
+  min_hourly: 200
+  new_client_project_floor: 20000
+  exceptions:
+    - pipeline-build
+  notes: >
+    New-client setup and stakeholder load do not shrink with scope.
+    Bounded SKUs listed in exceptions may sit under the project floor.
+discount_policy:
+  stack:
+    - partner
+    - first_engagement
+    - mission
+    - reusability
+  notes: Start from sticker. Name every cut in the SOW.
+sector_tiers:
+  - id: corporate
+    label: Corporate
+    hourly_sticker: 350
+  - id: nonprofit
+    label: Nonprofit / research
+    hourly_sticker: 200
+compliance:
+  regime: none
+  notes: ""
+terms:
+  net_days: 15
+  late_fee_pct: 5
+  late_fee_after_days: 30
+  deposit_pct_fixed_price: 50
+  travel: Billed separately at cost for on-site work.
+  retainer_rollover: Unused hours do not roll over unless the SOW says otherwise.
+  change_orders: Work outside includes[] is a written change order.
+publish:
+  show_from_prices: true
+  show_hourly: false
+  show_hourly_client: true
+cta:
+  label: Request a scoped proposal
+  url: https://example.studio/contact

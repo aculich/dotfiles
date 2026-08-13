@@ -1,0 +1,119 @@
+---
+marp: true
+paginate: true
+title: "{{ brand.name }} — Services"
+description: "{{ brand.tagline }}"
+style: |
+  {{ google_fonts_css }}
+  section {
+    background: {{ brand.colors.paper }};
+    color: {{ brand.colors.ink }};
+    font-family: "{{ brand.fonts.body }}", Georgia, serif;
+    padding: 56px 64px;
+  }
+  h1, h2 {
+    font-family: "{{ brand.fonts.display }}", Georgia, serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: {{ brand.colors.ink }};
+  }
+  h1 { font-size: 48px; }
+  h2 { font-size: 32px; }
+  footer { color: {{ brand.colors.muted }}; }
+  em.price { color: {{ brand.colors.accent }}; font-style: normal; font-weight: 600; }
+  ul { line-height: 1.45; }
+---
+
+<!-- _class: lead -->
+
+# {{ brand.name }}
+
+{{ brand.tagline }}
+
+{{ who_we_help }}
+
+{{ brand.website }}
+
+---
+
+# Who this is for
+
+{% for p in problems %}
+- {{ p }}
+{% endfor %}
+
+---
+
+# How we work
+
+{% for m in engagement_models %}
+- **{{ m.name }}** — {{ m.summary }}
+{% endfor %}
+
+We lead with named packages. Time and materials is for discovery and change orders, not the default.
+
+---
+{% for o in public_offerings %}
+
+# {{ o.name }}
+
+{{ o.summary }}
+
+{% if publish.show_from_prices and o.pricing and o.pricing.from_price %}
+*From {{ o.pricing.from_price | money }}*{.price}
+{% endif %}
+
+{% if o.includes %}
+**Includes**
+{% for item in o.includes %}
+- {{ item }}
+{% endfor %}
+{% endif %}
+
+{% if o.excludes %}
+**Not included:** {{ o.excludes | join("; ") }}
+{% endif %}
+
+{% if o.duration %}Typical span: {{ o.duration }}{% endif %}
+
+---
+{% endfor %}
+
+# Working rhythm
+
+1. Short discovery to confirm fit and constraints.
+2. Written scope with includes, excludes, and a from-price or fixed quote.
+3. Delivery against that scope. Anything outside it is a change order.
+4. Handoff notes so the work survives the engagement.
+
+---
+
+# Terms
+
+- Invoices: Net {{ terms.net_days }}
+- Fixed-price deposit: {{ terms.deposit_pct_fixed_price }}%
+- Late invoices: {{ terms.late_fee_pct }}% after {{ terms.late_fee_after_days }} days
+- {{ terms.travel }}
+- {{ terms.retainer_rollover }}
+
+**{{ cta.label if cta else "Request a scoped proposal" }}**
+{{ brand.email }} · {{ brand.website }}
+
+{% if publish.show_hourly_client and hourly_ladder %}
+---
+
+# Appendix — time and materials
+
+For discovery, troubleshooting, and work outside a package.
+
+{% for row in hourly_ladder %}
+- **{{ row.name }}** — {{ row | rate_range }} — {{ row.description }}
+{% endfor %}
+
+{% if retainers %}
+**Retainers**
+{% for r in retainers %}
+- {{ r.name }}{% if r.min_hours_month %} ({{ r.min_hours_month }}+ hrs/month){% endif %}: {{ r.rate | money }}/hr. {{ r.notes }}
+{% endfor %}
+{% endif %}
+{% endif %}

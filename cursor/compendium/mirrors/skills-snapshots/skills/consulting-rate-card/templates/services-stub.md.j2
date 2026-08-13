@@ -1,0 +1,35 @@
+# Services
+
+{{ brand.tagline }}
+
+{{ who_we_help }}
+
+{% for o in public_offerings %}
+## {{ o.name }}
+
+{{ o.summary }}
+
+{% if o.includes %}
+{% for item in o.includes %}
+- {{ item }}
+{% endfor %}
+{% endif %}
+
+{% if publish.show_from_prices and o.pricing and o.pricing.from_price %}
+**From {{ o.pricing.from_price | money }}**
+{% endif %}
+
+{% endfor %}
+
+{% if publish.show_hourly and hourly_ladder %}
+## Time and materials
+
+| Level | Rate | When |
+|-------|------|------|
+{% for row in hourly_ladder %}| {{ row.name }} | {{ row | rate_range }} | {{ row.description }} |
+{% endfor %}
+{% endif %}
+
+Custom scopes and retainers are quoted in a written SOW — {{ brand.email }}.
+
+{% if cta %}[{{ cta.label }}]({{ cta.url or brand.website }}){% endif %}
