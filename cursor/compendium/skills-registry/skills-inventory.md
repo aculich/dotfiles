@@ -1,6 +1,6 @@
 # Skills inventory (generated)
 
-Generated: 2026-08-13T13:16:14Z
+Generated: 2026-08-14T13:21:40Z
 
 ## Summary
 
@@ -396,7 +396,7 @@ Generated: 2026-08-13T13:16:14Z
 - `writing-great-skills` [installed] — source: https://github.com/mattpocock/skills
 - `writing-skills` [installed] — source: https://github.com/obra/superpowers
 
-## Project-local (1261)
+## Project-local (1263)
 
 ### `/Users/me/ops/dotfiles-cursor-compendium`
 
@@ -560,6 +560,7 @@ Generated: 2026-08-13T13:16:14Z
 - `luminary-tech-radar` (project-skills-dir) — `mirrors/skills-snapshots/skills/luminary-tech-radar/SKILL.md`
 - `managing-python-dependencies` (project-skills-dir) — `mirrors/skills-snapshots/skills/managing-python-dependencies/SKILL.md`
 - `mcp-writing-hub` (project-cursor) — `mirrors/by-project/path-writing-income-e2d299d8b155/.cursor/skills/mcp-writing-hub/SKILL.md`
+- `media-transcript` (project-cursor) — `mirrors/by-project/github-aculich-media-transcript-processing/.cursor/skills/media-transcript/SKILL.md`
 - `media-use` (project-skills-dir) — `mirrors/skills-snapshots/skills/media-use/SKILL.md`
 - `meeting-sync` (project-skills-dir) — `mirrors/skills-snapshots/skills/meeting-sync/SKILL.md`
 - `meeting-sync-and-synthesis` (project-skills-dir) — `mirrors/skills-snapshots/skills/meeting-sync-and-synthesis/SKILL.md`
@@ -899,6 +900,10 @@ Generated: 2026-08-13T13:16:14Z
 - `openspec-explore` (project-skills-dir) — `.codex/skills/openspec-explore/SKILL.md`
 - `openspec-propose` (project-skills-dir) — `.codex/skills/openspec-propose/SKILL.md`
 - `perks` (project-skills-dir) — `.agents/skills/perks/SKILL.md`
+
+### `/Users/me/projects/media-transcript-processing`
+
+- `media-transcript` (project-cursor) — `.cursor/skills/media-transcript/SKILL.md`
 
 ### `/Users/me/projects/peeq-collabs`
 

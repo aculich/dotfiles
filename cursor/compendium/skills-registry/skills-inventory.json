@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-13T13:16:14Z",
+  "generated": "2026-08-14T13:21:40Z",
   "compendium_root": "/Users/me/dotfiles/cursor/compendium",
   "monorepo_root": "/Users/me/projects/agent-skills",
   "global": {
@@ -9238,6 +9238,15 @@
       "classification": "embedded"
     },
     {
+      "skill": "media-transcript",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-media-transcript-processing/.cursor/skills/media-transcript/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-media-transcript-processing/.cursor/skills/media-transcript/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
       "skill": "media-use",
       "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/media-use/SKILL.md",
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
@@ -11395,6 +11404,15 @@
       "project_slug": "github-com-aculich-makerperks",
       "relative_path": ".agents/skills/perks/SKILL.md",
       "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "media-transcript",
+      "skill_path": "/Users/me/projects/media-transcript-processing/.cursor/skills/media-transcript/SKILL.md",
+      "project_root": "/Users/me/projects/media-transcript-processing",
+      "project_slug": "github-com-aculich-media-transcript-processing",
+      "relative_path": ".cursor/skills/media-transcript/SKILL.md",
+      "layout": "project-cursor",
       "classification": "embedded"
     },
     {
