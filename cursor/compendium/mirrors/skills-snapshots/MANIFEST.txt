@@ -3,6 +3,7 @@ source: /Users/me/.cursor/{skills,skills-cursor}, /Users/me/.agents/skills
 note: symlinked skills are dereferenced (real content copied into mirror)
 
 ## symlinked skills at snapshot time
+/Users/me/.agents/skills/scienceskillscommon -> /Users/me/.agents/scienceskillscommon
 /Users/me/.agents/skills/skill-propagate-offshoot -> /Users/me/projects/agent-skills/skills/.experimental/skill-propagate-offshoot
 /Users/me/.cursor/skills/bcal-declutter -> /Users/me/tools/google-workspace-tools/.cursor/skills/bcal-declutter
 /Users/me/.cursor/skills/berkeley-cidr-meeting -> /Users/me/tools/google-workspace-tools/.cursor/skills/berkeley-cidr-meeting

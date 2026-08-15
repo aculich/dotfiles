@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-14T13:21:40Z",
+  "generated": "2026-08-15T14:59:52Z",
   "compendium_root": "/Users/me/dotfiles/cursor/compendium",
   "monorepo_root": "/Users/me/projects/agent-skills",
   "global": {
@@ -471,6 +471,24 @@
           "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
           "via": "authored-registry"
+        }
+      },
+      {
+        "id": "cidr-client-share-tags",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "cursor-user",
+        "path": "/Users/me/.cursor/skills/cidr-client-share-tags",
+        "resolved_path": "/Users/me/.cursor/skills/cidr-client-share-tags",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "cidr-client-share-tags",
+        "source": {
+          "type": "unknown",
+          "url": null,
+          "confidence": "none",
+          "via": "unresolved"
         }
       },
       {
@@ -8338,6 +8356,15 @@
       "classification": "embedded"
     },
     {
+      "skill": "cidr-client-share-tags",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/cidr-client-share-tags/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/cidr-client-share-tags/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
       "skill": "cidr-letterhead",
       "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/cidr-letterhead/SKILL.md",
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
@@ -12817,6 +12844,15 @@
       "project_slug": "github-com-aculich-umpire-empire",
       "relative_path": "skills/sprint-planning/SKILL.md",
       "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "just-doit",
+      "skill_path": "/Users/me/projects/ucsf-capralab-briefing/.cursor/skills/just-doit/SKILL.md",
+      "project_root": "/Users/me/projects/ucsf-capralab-briefing",
+      "project_slug": "github-com-aculich-ucsf-capralab-briefing",
+      "relative_path": ".cursor/skills/just-doit/SKILL.md",
+      "layout": "project-cursor",
       "classification": "embedded"
     },
     {
@@ -19166,11 +19202,11 @@
     }
   ],
   "summary": {
-    "install_rows": 358,
-    "unique_skills": 181,
+    "install_rows": 359,
+    "unique_skills": 182,
     "by_classification": {
       "authored": 59,
-      "installed": 169,
+      "installed": 170,
       "embedded": 92,
       "vendor": 37,
       "experimental": 1
@@ -19179,12 +19215,12 @@
       "authored": 32,
       "embedded": 68,
       "experimental": 1,
-      "installed": 101,
+      "installed": 102,
       "vendor": 37
     },
     "by_source_type": {
       "authored": 34,
-      "unknown": 65,
+      "unknown": 66,
       "skill-lock": 151,
       "local-repo": 8,
       "vendor": 37,
@@ -19195,7 +19231,7 @@
       "frontmatter": 31,
       "local-repo": 8,
       "skill-lock": 50,
-      "unknown": 50,
+      "unknown": 51,
       "vendor": 37
     },
     "broken_symlinks": [],
@@ -19209,6 +19245,7 @@
       "bootstrap-tool-landscape",
       "bootstrap-tool-quickstart",
       "chaos-containment",
+      "cidr-client-share-tags",
       "clarify-audience-purpose",
       "code-to-prd",
       "collab-sync",
