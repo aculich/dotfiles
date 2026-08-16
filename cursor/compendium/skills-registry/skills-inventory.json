@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-15T14:59:52Z",
+  "generated": "2026-08-16T15:49:21Z",
   "compendium_root": "/Users/me/dotfiles/cursor/compendium",
   "monorepo_root": "/Users/me/projects/agent-skills",
   "global": {
@@ -8374,6 +8374,15 @@
       "classification": "embedded"
     },
     {
+      "skill": "cli-quiet-progress",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/path-continuous-ai-06cb23000be0/.cursor/skills/cli-quiet-progress/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-continuous-ai-06cb23000be0/.cursor/skills/cli-quiet-progress/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
       "skill": "cloudflare",
       "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/cloudflare/SKILL.md",
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
@@ -9171,6 +9180,15 @@
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
       "relative_path": "mirrors/by-project/github-aculich-chatstory/.cursor/skills/impl-snapshot/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "just-doit",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-ucsf-capralab-briefing/.cursor/skills/just-doit/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-ucsf-capralab-briefing/.cursor/skills/just-doit/SKILL.md",
       "layout": "project-cursor",
       "classification": "embedded"
     },
@@ -10792,6 +10810,15 @@
       "project_slug": "github-com-runkids-skillshare",
       "relative_path": "skills/skillshare/SKILL.md",
       "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "cli-quiet-progress",
+      "skill_path": "/Users/me/projects/continuous-ai/.cursor/skills/cli-quiet-progress/SKILL.md",
+      "project_root": "/Users/me/projects/continuous-ai",
+      "project_slug": "github-com-aculich-continuous-ai",
+      "relative_path": ".cursor/skills/cli-quiet-progress/SKILL.md",
+      "layout": "project-cursor",
       "classification": "embedded"
     },
     {
@@ -14479,7 +14506,7 @@
       "skill": "community-plugins-pipeline",
       "skill_path": "/Users/me/tools/obsidian-tools/.cursor/skills/community-plugins-pipeline/SKILL.md",
       "project_root": "/Users/me/tools/obsidian-tools",
-      "project_slug": "path-37ed7006ebb9",
+      "project_slug": "github-com-aculich-obsidian-tools",
       "relative_path": ".cursor/skills/community-plugins-pipeline/SKILL.md",
       "layout": "project-cursor",
       "classification": "embedded"
@@ -17026,7 +17053,7 @@
       "skill": "rowboat-fork-workflow",
       "skill_path": "/Users/me/tools/rowboat-quickstart/.cursor/skills/rowboat-fork-workflow/SKILL.md",
       "project_root": "/Users/me/tools/rowboat-quickstart",
-      "project_slug": "path-5e8cdadc157b",
+      "project_slug": "github-com-aculich-rowboat-quickstart",
       "relative_path": ".cursor/skills/rowboat-fork-workflow/SKILL.md",
       "layout": "project-cursor",
       "classification": "embedded"

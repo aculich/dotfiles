@@ -1,6 +1,6 @@
 # Skills inventory (generated)
 
-Generated: 2026-08-15T14:59:52Z
+Generated: 2026-08-16T15:49:21Z
 
 ## Summary
 
@@ -397,7 +397,7 @@ Generated: 2026-08-15T14:59:52Z
 - `writing-great-skills` [installed] — source: https://github.com/mattpocock/skills
 - `writing-skills` [installed] — source: https://github.com/obra/superpowers
 
-## Project-local (1265)
+## Project-local (1268)
 
 ### `/Users/me/ops/dotfiles-cursor-compendium`
 
@@ -463,6 +463,7 @@ Generated: 2026-08-15T14:59:52Z
 - `cidr-bootstrap-project` (project-skills-dir) — `mirrors/skills-snapshots/skills/cidr-bootstrap-project/SKILL.md`
 - `cidr-client-share-tags` (project-skills-dir) — `mirrors/skills-snapshots/skills/cidr-client-share-tags/SKILL.md`
 - `cidr-letterhead` (project-skills-dir) — `mirrors/skills-snapshots/skills/cidr-letterhead/SKILL.md`
+- `cli-quiet-progress` (project-cursor) — `mirrors/by-project/path-continuous-ai-06cb23000be0/.cursor/skills/cli-quiet-progress/SKILL.md`
 - `cloudflare` (project-skills-dir) — `mirrors/skills-snapshots/skills/cloudflare/SKILL.md`
 - `cloudflare-email-service` (project-skills-dir) — `mirrors/skills-snapshots/skills/cloudflare-email-service/SKILL.md`
 - `cloudflare-one` (project-skills-dir) — `mirrors/skills-snapshots/skills/cloudflare-one/SKILL.md`
@@ -552,6 +553,7 @@ Generated: 2026-08-15T14:59:52Z
 - `hyperframes-media` (project-skills-dir) — `mirrors/skills-snapshots/skills/hyperframes-media/SKILL.md`
 - `hyperframes-registry` (project-skills-dir) — `mirrors/skills-snapshots/skills/hyperframes-registry/SKILL.md`
 - `impl-snapshot` (project-cursor) — `mirrors/by-project/github-aculich-chatstory/.cursor/skills/impl-snapshot/SKILL.md`
+- `just-doit` (project-cursor) — `mirrors/by-project/github-aculich-ucsf-capralab-briefing/.cursor/skills/just-doit/SKILL.md`
 - `kiln-add-model` (project-cursor) — `mirrors/by-project/orphan-kiln__kiln-ai-4b129dc7c9/.cursor/skills/kiln-add-model/SKILL.md`
 - `kiln-check-deprecation` (project-cursor) — `mirrors/by-project/orphan-kiln__kiln-ai-4b129dc7c9/.cursor/skills/kiln-check-deprecation/SKILL.md`
 - `limitless-takeout-search` (project-skills-dir) — `mirrors/skills-snapshots/skills/limitless-takeout-search/SKILL.md`
@@ -807,6 +809,7 @@ Generated: 2026-08-15T14:59:52Z
 
 ### `/Users/me/projects/continuous-ai`
 
+- `cli-quiet-progress` (project-cursor) — `.cursor/skills/cli-quiet-progress/SKILL.md`
 - `compound-brainstorming` (project-skills-dir) — `.skills/skills/compound-brainstorming/SKILL.md`
 - `compound-document-review` (project-skills-dir) — `.skills/skills/compound-document-review/SKILL.md`
 - `compound-orchestrating-swarms` (project-skills-dir) — `.skills/skills/compound-orchestrating-swarms/SKILL.md`
