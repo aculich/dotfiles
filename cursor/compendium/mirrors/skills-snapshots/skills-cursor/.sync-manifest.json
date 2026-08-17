@@ -2,64 +2,64 @@
   "version": 1,
   "skills": {
     "canvas": {
-      "lastSyncedAt": 1786887292173
+      "lastSyncedAt": 1786931192815
     },
     "create-hook": {
-      "lastSyncedAt": 1786887292173
+      "lastSyncedAt": 1786931192815
     },
     "create-rule": {
-      "lastSyncedAt": 1786887292173
+      "lastSyncedAt": 1786931192815
     },
     "create-skill": {
-      "lastSyncedAt": 1786887292173
+      "lastSyncedAt": 1786931192815
     },
     "create-subagent": {
-      "lastSyncedAt": 1786887292173
+      "lastSyncedAt": 1786931192815
     },
     "migrate-to-skills": {
-      "lastSyncedAt": 1786887292173
+      "lastSyncedAt": 1786931192815
     },
     "shell": {
-      "lastSyncedAt": 1786887292173
+      "lastSyncedAt": 1786931192815
     },
     "statusline": {
-      "lastSyncedAt": 1786887292173
+      "lastSyncedAt": 1786931192815
     },
     "update-cli-config": {
-      "lastSyncedAt": 1786887292173
+      "lastSyncedAt": 1786931192815
     },
     "update-cursor-settings": {
-      "lastSyncedAt": 1786887292173
+      "lastSyncedAt": 1786931192815
     },
     "split-to-prs": {
-      "lastSyncedAt": 1786887292173
+      "lastSyncedAt": 1786931192815
     },
     "sdk": {
-      "lastSyncedAt": 1786887292173
+      "lastSyncedAt": 1786931192815
     },
     "loop": {
-      "lastSyncedAt": 1786887292173
+      "lastSyncedAt": 1786931192815
     },
     "review": {
-      "lastSyncedAt": 1786887292173
+      "lastSyncedAt": 1786931192815
     },
     "review-bugbot": {
-      "lastSyncedAt": 1786887292173
+      "lastSyncedAt": 1786931192815
     },
     "review-security": {
-      "lastSyncedAt": 1786887292173
+      "lastSyncedAt": 1786931192815
     },
     "automate": {
-      "lastSyncedAt": 1786887292173
+      "lastSyncedAt": 1786931192815
     },
     "onboard": {
-      "lastSyncedAt": 1786887292173
+      "lastSyncedAt": 1786931192815
     },
     "autopilot": {
-      "lastSyncedAt": 1786887292173
+      "lastSyncedAt": 1786931192815
     },
     "rename-chat": {
-      "lastSyncedAt": 1786887292173
+      "lastSyncedAt": 1786931192815
     }
   },
   "lastInventoryAt": 1786860673838

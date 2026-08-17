@@ -1,6 +1,6 @@
 # Skills inventory (generated)
 
-Generated: 2026-08-16T15:49:21Z
+Generated: 2026-08-17T13:44:19Z
 
 ## Summary
 
@@ -397,7 +397,7 @@ Generated: 2026-08-16T15:49:21Z
 - `writing-great-skills` [installed] — source: https://github.com/mattpocock/skills
 - `writing-skills` [installed] — source: https://github.com/obra/superpowers
 
-## Project-local (1268)
+## Project-local (1279)
 
 ### `/Users/me/ops/dotfiles-cursor-compendium`
 
@@ -730,6 +730,15 @@ Generated: 2026-08-16T15:49:21Z
 ### `/Users/me/projects/chatstory`
 
 - `impl-snapshot` (project-cursor) — `.cursor/skills/impl-snapshot/SKILL.md`
+
+### `/Users/me/projects/chatstory/.scratch/clones/agentgrep`
+
+- `testing-mcp-with-cli-agents` (project-skills-dir) — `.agents/skills/testing-mcp-with-cli-agents/SKILL.md`
+- `textual-non-blocking-pump` (project-skills-dir) — `.agents/skills/textual-non-blocking-pump/SKILL.md`
+
+### `/Users/me/projects/chatstory/.scratch/clones/vibe-replay`
+
+- `replay` (project-skills-dir) — `skills/replay/SKILL.md`
 
 ### `/Users/me/projects/chyp-app/pixie-capstone`
 
@@ -1400,6 +1409,14 @@ Generated: 2026-08-16T15:49:21Z
 
 - `add-new-location` (project-cursor) — `.cursor/skills/add-new-location/SKILL.md`
 - `dd-cli-upgrade` (project-cursor) — `.cursor/skills/dd-cli-upgrade/SKILL.md`
+- `hunger-day` (project-cursor) — `.cursor/skills/hunger-day/SKILL.md`
+- `hunger-here` (project-cursor) — `.cursor/skills/hunger-here/SKILL.md`
+- `hunger-next` (project-cursor) — `.cursor/skills/hunger-next/SKILL.md`
+- `hunger-preflight` (project-cursor) — `.cursor/skills/hunger-preflight/SKILL.md`
+- `hunger-reflow` (project-cursor) — `.cursor/skills/hunger-reflow/SKILL.md`
+- `hunger-update` (project-cursor) — `.cursor/skills/hunger-update/SKILL.md`
+- `hunger-week` (project-cursor) — `.cursor/skills/hunger-week/SKILL.md`
+- `hunger-weekend` (project-cursor) — `.cursor/skills/hunger-weekend/SKILL.md`
 - `location-sense-preflight` (project-cursor) — `.cursor/skills/location-sense-preflight/SKILL.md`
 - `weekend-social-flow` (project-cursor) — `.cursor/skills/weekend-social-flow/SKILL.md`
 

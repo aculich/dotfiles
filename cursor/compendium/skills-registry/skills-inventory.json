@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-16T15:49:21Z",
+  "generated": "2026-08-17T13:44:19Z",
   "compendium_root": "/Users/me/dotfiles/cursor/compendium",
   "monorepo_root": "/Users/me/projects/agent-skills",
   "global": {
@@ -10480,6 +10480,33 @@
       "classification": "embedded"
     },
     {
+      "skill": "testing-mcp-with-cli-agents",
+      "skill_path": "/Users/me/projects/chatstory/.scratch/clones/agentgrep/.agents/skills/testing-mcp-with-cli-agents/SKILL.md",
+      "project_root": "/Users/me/projects/chatstory/.scratch/clones/agentgrep",
+      "project_slug": "github-com-tony-agentgrep",
+      "relative_path": ".agents/skills/testing-mcp-with-cli-agents/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "textual-non-blocking-pump",
+      "skill_path": "/Users/me/projects/chatstory/.scratch/clones/agentgrep/.agents/skills/textual-non-blocking-pump/SKILL.md",
+      "project_root": "/Users/me/projects/chatstory/.scratch/clones/agentgrep",
+      "project_slug": "github-com-tony-agentgrep",
+      "relative_path": ".agents/skills/textual-non-blocking-pump/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "replay",
+      "skill_path": "/Users/me/projects/chatstory/.scratch/clones/vibe-replay/skills/replay/SKILL.md",
+      "project_root": "/Users/me/projects/chatstory/.scratch/clones/vibe-replay",
+      "project_slug": "github-com-tuo-lei-vibe-replay",
+      "relative_path": "skills/replay/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
       "skill": "rll-doc-assembly",
       "skill_path": "/Users/me/projects/chyp-app/pixie-capstone/.cursor/skills/rll-doc-assembly/SKILL.md",
       "project_root": "/Users/me/projects/chyp-app/pixie-capstone",
@@ -14481,6 +14508,78 @@
       "project_root": "/Users/me/tools/my-hunger",
       "project_slug": "github-com-aculich-my-hunger",
       "relative_path": ".cursor/skills/dd-cli-upgrade/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "hunger-day",
+      "skill_path": "/Users/me/tools/my-hunger/.cursor/skills/hunger-day/SKILL.md",
+      "project_root": "/Users/me/tools/my-hunger",
+      "project_slug": "github-com-aculich-my-hunger",
+      "relative_path": ".cursor/skills/hunger-day/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "hunger-here",
+      "skill_path": "/Users/me/tools/my-hunger/.cursor/skills/hunger-here/SKILL.md",
+      "project_root": "/Users/me/tools/my-hunger",
+      "project_slug": "github-com-aculich-my-hunger",
+      "relative_path": ".cursor/skills/hunger-here/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "hunger-next",
+      "skill_path": "/Users/me/tools/my-hunger/.cursor/skills/hunger-next/SKILL.md",
+      "project_root": "/Users/me/tools/my-hunger",
+      "project_slug": "github-com-aculich-my-hunger",
+      "relative_path": ".cursor/skills/hunger-next/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "hunger-preflight",
+      "skill_path": "/Users/me/tools/my-hunger/.cursor/skills/hunger-preflight/SKILL.md",
+      "project_root": "/Users/me/tools/my-hunger",
+      "project_slug": "github-com-aculich-my-hunger",
+      "relative_path": ".cursor/skills/hunger-preflight/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "hunger-reflow",
+      "skill_path": "/Users/me/tools/my-hunger/.cursor/skills/hunger-reflow/SKILL.md",
+      "project_root": "/Users/me/tools/my-hunger",
+      "project_slug": "github-com-aculich-my-hunger",
+      "relative_path": ".cursor/skills/hunger-reflow/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "hunger-update",
+      "skill_path": "/Users/me/tools/my-hunger/.cursor/skills/hunger-update/SKILL.md",
+      "project_root": "/Users/me/tools/my-hunger",
+      "project_slug": "github-com-aculich-my-hunger",
+      "relative_path": ".cursor/skills/hunger-update/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "hunger-week",
+      "skill_path": "/Users/me/tools/my-hunger/.cursor/skills/hunger-week/SKILL.md",
+      "project_root": "/Users/me/tools/my-hunger",
+      "project_slug": "github-com-aculich-my-hunger",
+      "relative_path": ".cursor/skills/hunger-week/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "hunger-weekend",
+      "skill_path": "/Users/me/tools/my-hunger/.cursor/skills/hunger-weekend/SKILL.md",
+      "project_root": "/Users/me/tools/my-hunger",
+      "project_slug": "github-com-aculich-my-hunger",
+      "relative_path": ".cursor/skills/hunger-weekend/SKILL.md",
       "layout": "project-cursor",
       "classification": "embedded"
     },
