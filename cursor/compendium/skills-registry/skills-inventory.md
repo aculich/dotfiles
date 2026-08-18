@@ -1,22 +1,22 @@
 # Skills inventory (generated)
 
-Generated: 2026-08-17T13:44:19Z
+Generated: 2026-08-18T13:15:42Z
 
 ## Summary
 
-- **unique skills**: 182 (359 install rows)
+- **unique skills**: 185 (362 install rows)
 - **authored**: 59 installs / 32 unique
 - **embedded**: 92 installs / 68 unique
 - **experimental**: 1
 - **installed**: 170 installs / 102 unique
-- **vendor**: 37
+- **vendor**: 40
 
 ### Provenance (by source type)
 
 - **skill-lock**: 151 installs / 50 unique
 - **unknown**: 66 installs / 51 unique
 - **frontmatter**: 63 installs / 31 unique
-- **vendor**: 37
+- **vendor**: 40
 - **authored**: 34 installs / 31 unique
 - **local-repo**: 8
 - **unresolved** (51): agent-meep, bootstrap-aar, bootstrap-collaborator, bootstrap-product-quickstart, bootstrap-project-umbrella, bootstrap-regen, bootstrap-tool-landscape, bootstrap-tool-quickstart, chaos-containment, cidr-client-share-tags, clarify-audience-purpose, code-to-prd, collab-sync, consulting-rate-card, converge-articulate, create-justfile, cursor-purification, dd-cli-usage, deaccession-guides-and-guards, dev-warmup, discover-channel, divergent-explore, dwim-justfile, dynamic-dev-port, email-send-verify, envision-end-state, github-trending, google-workspace-new-org, hot-livewires-preflight, message-in-a-bottle, op-project-credentials, orx, perks, prd, product-hunt-search, quick-stash, quickstart-fork-lineage, repo-evaluator, report-reforge, retroprd, rowboat-safe-startup, rowboat-upstream-digest, setup-contextualizer, socialmedia-compounding, stale-tooling-trial, standpoint-scenario-forecast, survey-creative-landscape, tidy-stash, tool-landscape-intel, unpack-the-question, voice-contrast-analysis — run `just provenance` (or `scripts/enrich-provenance.py`) to attempt web lookup
@@ -154,7 +154,7 @@ Generated: 2026-08-17T13:44:19Z
 - `workers-best-practices` [installed] — source: https://github.com/cloudflare/skills
 - `wrangler` [installed] — source: https://github.com/cloudflare/skills
 
-### cursor-managed (20)
+### cursor-managed (23)
 
 - `automate` [vendor] — source: vendor
 - `autopilot` [vendor] — source: vendor
@@ -165,12 +165,15 @@ Generated: 2026-08-17T13:44:19Z
 - `create-subagent` [vendor] — source: vendor
 - `loop` [vendor] — source: vendor
 - `migrate-to-skills` [vendor] — source: vendor
+- `new-repo` [vendor] — source: vendor
 - `onboard` [vendor] — source: vendor
+- `origin` [vendor] — source: vendor
 - `rename-chat` [vendor] — source: vendor
 - `review` [vendor] — source: vendor
 - `review-bugbot` [vendor] — source: vendor
 - `review-security` [vendor] — source: vendor
 - `sdk` [vendor] — source: vendor
+- `share` [vendor] — source: vendor
 - `shell` [vendor] — source: vendor
 - `split-to-prs` [vendor] — source: vendor
 - `statusline` [vendor] — source: vendor
@@ -397,7 +400,7 @@ Generated: 2026-08-17T13:44:19Z
 - `writing-great-skills` [installed] — source: https://github.com/mattpocock/skills
 - `writing-skills` [installed] — source: https://github.com/obra/superpowers
 
-## Project-local (1279)
+## Project-local (1289)
 
 ### `/Users/me/ops/dotfiles-cursor-compendium`
 
@@ -544,6 +547,14 @@ Generated: 2026-08-17T13:44:19Z
 - `google-workspace-new-org` (project-skills-dir) — `mirrors/skills-snapshots/skills/google-workspace-new-org/SKILL.md`
 - `hats-session-status` (project-cursor) — `mirrors/by-project/github-rrid-ucb-rrid-summer2026-webapp-design/.cursor/skills/hats-session-status/SKILL.md`
 - `hot-livewires-preflight` (project-skills-dir) — `mirrors/skills-snapshots/skills/hot-livewires-preflight/SKILL.md`
+- `hunger-day` (project-cursor) — `mirrors/by-project/github-aculich-my-hunger/.cursor/skills/hunger-day/SKILL.md`
+- `hunger-here` (project-cursor) — `mirrors/by-project/github-aculich-my-hunger/.cursor/skills/hunger-here/SKILL.md`
+- `hunger-next` (project-cursor) — `mirrors/by-project/github-aculich-my-hunger/.cursor/skills/hunger-next/SKILL.md`
+- `hunger-preflight` (project-cursor) — `mirrors/by-project/github-aculich-my-hunger/.cursor/skills/hunger-preflight/SKILL.md`
+- `hunger-reflow` (project-cursor) — `mirrors/by-project/github-aculich-my-hunger/.cursor/skills/hunger-reflow/SKILL.md`
+- `hunger-update` (project-cursor) — `mirrors/by-project/github-aculich-my-hunger/.cursor/skills/hunger-update/SKILL.md`
+- `hunger-week` (project-cursor) — `mirrors/by-project/github-aculich-my-hunger/.cursor/skills/hunger-week/SKILL.md`
+- `hunger-weekend` (project-cursor) — `mirrors/by-project/github-aculich-my-hunger/.cursor/skills/hunger-weekend/SKILL.md`
 - `hyperframes` (project-skills-dir) — `mirrors/skills-snapshots/skills/hyperframes/SKILL.md`
 - `hyperframes-animation` (project-skills-dir) — `mirrors/skills-snapshots/skills/hyperframes-animation/SKILL.md`
 - `hyperframes-cli` (project-skills-dir) — `mirrors/skills-snapshots/skills/hyperframes-cli/SKILL.md`
@@ -619,6 +630,7 @@ Generated: 2026-08-17T13:44:19Z
 - `skeptical-quackery-neutralizer-quick` (project-cursor) — `mirrors/by-project/github-aculich-writing-quality/.cursor/skills/skeptical-quackery-neutralizer-quick/SKILL.md`
 - `skill-repair` (project-skills-dir) — `mirrors/skills-snapshots/skills/skill-repair/SKILL.md`
 - `slideshow` (project-skills-dir) — `mirrors/skills-snapshots/skills/slideshow/SKILL.md`
+- `sloptastic-daily-brief` (project-cursor) — `mirrors/by-project/path-sloptastic-1aff6d5d5ece/.cursor/skills/sloptastic-daily-brief/SKILL.md`
 - `smc-policy-capsule` (project-cursor) — `mirrors/by-project/github-aculich-cidr-policymap-ca-smc/.cursor/skills/smc-policy-capsule/SKILL.md`
 - `socialmedia-compounding` (project-cursor) — `mirrors/by-project/github-aculich-writing-quality/.cursor/skills/socialmedia-compounding/SKILL.md`
 - `sow-draft-kit` (project-cursor) — `mirrors/by-project/orphan-kit-512fba8992/.cursor/skills/sow-draft-kit/SKILL.md`
@@ -1040,6 +1052,10 @@ Generated: 2026-08-17T13:44:19Z
 - `vitest` (project-skills-dir) — `.agents/skills/vitest/SKILL.md`
 - `webapp-testing` (project-skills-dir) — `.agents/skills/webapp-testing/SKILL.md`
 - `zod` (project-skills-dir) — `.agents/skills/zod/SKILL.md`
+
+### `/Users/me/projects/sloptastic`
+
+- `sloptastic-daily-brief` (project-cursor) — `.cursor/skills/sloptastic-daily-brief/SKILL.md`
 
 ### `/Users/me/projects/sow-draft-kit`
 

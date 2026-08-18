@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-17T13:44:19Z",
+  "generated": "2026-08-18T13:15:42Z",
   "compendium_root": "/Users/me/dotfiles/cursor/compendium",
   "monorepo_root": "/Users/me/projects/agent-skills",
   "global": {
@@ -123,7 +123,7 @@
           "type": "local-repo",
           "url": "https://github.com/aculich/google-workspace-tools",
           "install_source_url": "https://github.com/aculich/google-workspace-tools",
-          "commit": "0c9d4c0c4419de049ddceec9910818dffa163ec5",
+          "commit": "113ddc15e9becebc7ea08f0afe91f6f15998c5a4",
           "local_path": "/Users/me/tools/google-workspace-tools",
           "confidence": "high",
           "via": "git-remote"
@@ -145,7 +145,7 @@
           "type": "local-repo",
           "url": "https://github.com/aculich/google-workspace-tools",
           "install_source_url": "https://github.com/aculich/google-workspace-tools",
-          "commit": "0c9d4c0c4419de049ddceec9910818dffa163ec5",
+          "commit": "113ddc15e9becebc7ea08f0afe91f6f15998c5a4",
           "local_path": "/Users/me/tools/google-workspace-tools",
           "confidence": "high",
           "via": "git-remote"
@@ -1035,7 +1035,7 @@
           "type": "local-repo",
           "url": "https://github.com/aculich/google-workspace-tools",
           "install_source_url": "https://github.com/aculich/google-workspace-tools",
-          "commit": "0c9d4c0c4419de049ddceec9910818dffa163ec5",
+          "commit": "113ddc15e9becebc7ea08f0afe91f6f15998c5a4",
           "local_path": "/Users/me/tools/google-workspace-tools",
           "confidence": "high",
           "via": "git-remote"
@@ -1834,7 +1834,7 @@
           "type": "local-repo",
           "url": "https://github.com/aculich/google-workspace-tools",
           "install_source_url": "https://github.com/aculich/google-workspace-tools",
-          "commit": "0c9d4c0c4419de049ddceec9910818dffa163ec5",
+          "commit": "113ddc15e9becebc7ea08f0afe91f6f15998c5a4",
           "local_path": "/Users/me/tools/google-workspace-tools",
           "confidence": "high",
           "via": "git-remote"
@@ -2835,6 +2835,25 @@
         }
       },
       {
+        "id": "new-repo",
+        "classification": "vendor",
+        "lifecycle": "installed",
+        "tier": "cursor-managed",
+        "path": "/Users/me/.cursor/skills-cursor/new-repo",
+        "resolved_path": "/Users/me/.cursor/skills-cursor/new-repo",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "new-repo",
+        "source": {
+          "type": "vendor",
+          "url": null,
+          "confidence": "high",
+          "via": "vendor-registry",
+          "note": "vendored bundle / cursor-managed; not a public repo"
+        }
+      },
+      {
         "id": "onboard",
         "classification": "vendor",
         "lifecycle": "installed",
@@ -2845,6 +2864,25 @@
         "symlink_ok": true,
         "version": null,
         "name": "onboard",
+        "source": {
+          "type": "vendor",
+          "url": null,
+          "confidence": "high",
+          "via": "vendor-registry",
+          "note": "vendored bundle / cursor-managed; not a public repo"
+        }
+      },
+      {
+        "id": "origin",
+        "classification": "vendor",
+        "lifecycle": "installed",
+        "tier": "cursor-managed",
+        "path": "/Users/me/.cursor/skills-cursor/origin",
+        "resolved_path": "/Users/me/.cursor/skills-cursor/origin",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "origin",
         "source": {
           "type": "vendor",
           "url": null,
@@ -2940,6 +2978,25 @@
         "symlink_ok": true,
         "version": null,
         "name": "sdk",
+        "source": {
+          "type": "vendor",
+          "url": null,
+          "confidence": "high",
+          "via": "vendor-registry",
+          "note": "vendored bundle / cursor-managed; not a public repo"
+        }
+      },
+      {
+        "id": "share",
+        "classification": "vendor",
+        "lifecycle": "installed",
+        "tier": "cursor-managed",
+        "path": "/Users/me/.cursor/skills-cursor/share",
+        "resolved_path": "/Users/me/.cursor/skills-cursor/share",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "share",
         "source": {
           "type": "vendor",
           "url": null,
@@ -9103,6 +9160,78 @@
       "classification": "embedded"
     },
     {
+      "skill": "hunger-day",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-my-hunger/.cursor/skills/hunger-day/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-my-hunger/.cursor/skills/hunger-day/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "hunger-here",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-my-hunger/.cursor/skills/hunger-here/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-my-hunger/.cursor/skills/hunger-here/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "hunger-next",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-my-hunger/.cursor/skills/hunger-next/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-my-hunger/.cursor/skills/hunger-next/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "hunger-preflight",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-my-hunger/.cursor/skills/hunger-preflight/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-my-hunger/.cursor/skills/hunger-preflight/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "hunger-reflow",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-my-hunger/.cursor/skills/hunger-reflow/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-my-hunger/.cursor/skills/hunger-reflow/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "hunger-update",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-my-hunger/.cursor/skills/hunger-update/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-my-hunger/.cursor/skills/hunger-update/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "hunger-week",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-my-hunger/.cursor/skills/hunger-week/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-my-hunger/.cursor/skills/hunger-week/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "hunger-weekend",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-my-hunger/.cursor/skills/hunger-weekend/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-aculich-my-hunger/.cursor/skills/hunger-weekend/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
       "skill": "hyperframes",
       "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/hyperframes/SKILL.md",
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
@@ -9775,6 +9904,15 @@
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
       "relative_path": "mirrors/skills-snapshots/skills/slideshow/SKILL.md",
       "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "sloptastic-daily-brief",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/path-sloptastic-1aff6d5d5ece/.cursor/skills/sloptastic-daily-brief/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-sloptastic-1aff6d5d5ece/.cursor/skills/sloptastic-daily-brief/SKILL.md",
+      "layout": "project-cursor",
       "classification": "embedded"
     },
     {
@@ -12241,6 +12379,15 @@
       "project_slug": "github-com-rrid-ucb-rrid-summer2026-webapp",
       "relative_path": ".agents/skills/zod/SKILL.md",
       "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "sloptastic-daily-brief",
+      "skill_path": "/Users/me/projects/sloptastic/.cursor/skills/sloptastic-daily-brief/SKILL.md",
+      "project_root": "/Users/me/projects/sloptastic",
+      "project_slug": "github-com-aculich-sloptastic",
+      "relative_path": ".cursor/skills/sloptastic-daily-brief/SKILL.md",
+      "layout": "project-cursor",
       "classification": "embedded"
     },
     {
@@ -19328,13 +19475,13 @@
     }
   ],
   "summary": {
-    "install_rows": 359,
-    "unique_skills": 182,
+    "install_rows": 362,
+    "unique_skills": 185,
     "by_classification": {
       "authored": 59,
       "installed": 170,
       "embedded": 92,
-      "vendor": 37,
+      "vendor": 40,
       "experimental": 1
     },
     "by_classification_unique": {
@@ -19342,14 +19489,14 @@
       "embedded": 68,
       "experimental": 1,
       "installed": 102,
-      "vendor": 37
+      "vendor": 40
     },
     "by_source_type": {
       "authored": 34,
       "unknown": 66,
       "skill-lock": 151,
       "local-repo": 8,
-      "vendor": 37,
+      "vendor": 40,
       "frontmatter": 63
     },
     "by_source_type_unique": {
@@ -19358,7 +19505,7 @@
       "local-repo": 8,
       "skill-lock": 50,
       "unknown": 51,
-      "vendor": 37
+      "vendor": 40
     },
     "broken_symlinks": [],
     "unknown_source": [
