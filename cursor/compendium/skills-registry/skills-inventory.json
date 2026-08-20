@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-19T13:15:40Z",
+  "generated": "2026-08-20T13:27:47Z",
   "compendium_root": "/Users/me/dotfiles/cursor/compendium",
   "monorepo_root": "/Users/me/projects/agent-skills",
   "global": {
@@ -2788,6 +2788,25 @@
         "symlink_ok": true,
         "version": null,
         "name": "create-subagent",
+        "source": {
+          "type": "vendor",
+          "url": null,
+          "confidence": "high",
+          "via": "vendor-registry",
+          "note": "vendored bundle / cursor-managed; not a public repo"
+        }
+      },
+      {
+        "id": "goal",
+        "classification": "vendor",
+        "lifecycle": "installed",
+        "tier": "cursor-managed",
+        "path": "/Users/me/.cursor/skills-cursor/goal",
+        "resolved_path": "/Users/me/.cursor/skills-cursor/goal",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "goal",
         "source": {
           "type": "vendor",
           "url": null,
@@ -6759,6 +6778,31 @@
           "skill_path": "skills/hyperframes-registry/SKILL.md",
           "installed_at": "2026-07-03T12:35:29.655Z",
           "updated_at": "2026-07-03T12:35:29.655Z",
+          "confidence": "high",
+          "via": "skill-lock"
+        }
+      },
+      {
+        "id": "last30days",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/last30days",
+        "resolved_path": "/Users/me/.agents/skills/last30days",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "3.21.1",
+        "name": "last30days",
+        "source": {
+          "type": "skill-lock",
+          "url": "https://github.com/mvanhorn/last30days-skill",
+          "install_source_url": "https://github.com/mvanhorn/last30days-skill",
+          "install_ref": "mvanhorn/last30days-skill",
+          "source_type": "github",
+          "folder_hash": "b13edbca71cecea9b33ce932d420161ea6ce4ea3",
+          "skill_path": "skills/last30days/SKILL.md",
+          "installed_at": "2026-08-19T15:27:02.690Z",
+          "updated_at": "2026-08-19T15:27:02.690Z",
           "confidence": "high",
           "via": "skill-lock"
         }
@@ -19475,37 +19519,37 @@
     }
   ],
   "summary": {
-    "install_rows": 362,
-    "unique_skills": 185,
+    "install_rows": 364,
+    "unique_skills": 187,
     "by_classification": {
       "authored": 59,
-      "installed": 170,
+      "installed": 171,
       "embedded": 92,
-      "vendor": 40,
+      "vendor": 41,
       "experimental": 1
     },
     "by_classification_unique": {
       "authored": 32,
       "embedded": 68,
       "experimental": 1,
-      "installed": 102,
-      "vendor": 40
+      "installed": 103,
+      "vendor": 41
     },
     "by_source_type": {
       "authored": 34,
       "unknown": 66,
-      "skill-lock": 151,
+      "skill-lock": 152,
       "local-repo": 8,
-      "vendor": 40,
+      "vendor": 41,
       "frontmatter": 63
     },
     "by_source_type_unique": {
       "authored": 31,
       "frontmatter": 31,
       "local-repo": 8,
-      "skill-lock": 50,
+      "skill-lock": 51,
       "unknown": 51,
-      "vendor": 40
+      "vendor": 41
     },
     "broken_symlinks": [],
     "unknown_source": [

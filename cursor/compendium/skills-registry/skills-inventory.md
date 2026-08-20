@@ -1,22 +1,22 @@
 # Skills inventory (generated)
 
-Generated: 2026-08-19T13:15:40Z
+Generated: 2026-08-20T13:27:47Z
 
 ## Summary
 
-- **unique skills**: 185 (362 install rows)
+- **unique skills**: 187 (364 install rows)
 - **authored**: 59 installs / 32 unique
 - **embedded**: 92 installs / 68 unique
 - **experimental**: 1
-- **installed**: 170 installs / 102 unique
-- **vendor**: 40
+- **installed**: 171 installs / 103 unique
+- **vendor**: 41
 
 ### Provenance (by source type)
 
-- **skill-lock**: 151 installs / 50 unique
+- **skill-lock**: 152 installs / 51 unique
 - **unknown**: 66 installs / 51 unique
 - **frontmatter**: 63 installs / 31 unique
-- **vendor**: 40
+- **vendor**: 41
 - **authored**: 34 installs / 31 unique
 - **local-repo**: 8
 - **unresolved** (51): agent-meep, bootstrap-aar, bootstrap-collaborator, bootstrap-product-quickstart, bootstrap-project-umbrella, bootstrap-regen, bootstrap-tool-landscape, bootstrap-tool-quickstart, chaos-containment, cidr-client-share-tags, clarify-audience-purpose, code-to-prd, collab-sync, consulting-rate-card, converge-articulate, create-justfile, cursor-purification, dd-cli-usage, deaccession-guides-and-guards, dev-warmup, discover-channel, divergent-explore, dwim-justfile, dynamic-dev-port, email-send-verify, envision-end-state, github-trending, google-workspace-new-org, hot-livewires-preflight, message-in-a-bottle, op-project-credentials, orx, perks, prd, product-hunt-search, quick-stash, quickstart-fork-lineage, repo-evaluator, report-reforge, retroprd, rowboat-safe-startup, rowboat-upstream-digest, setup-contextualizer, socialmedia-compounding, stale-tooling-trial, standpoint-scenario-forecast, survey-creative-landscape, tidy-stash, tool-landscape-intel, unpack-the-question, voice-contrast-analysis — run `just provenance` (or `scripts/enrich-provenance.py`) to attempt web lookup
@@ -154,7 +154,7 @@ Generated: 2026-08-19T13:15:40Z
 - `workers-best-practices` [installed] — source: https://github.com/cloudflare/skills
 - `wrangler` [installed] — source: https://github.com/cloudflare/skills
 
-### cursor-managed (23)
+### cursor-managed (24)
 
 - `automate` [vendor] — source: vendor
 - `autopilot` [vendor] — source: vendor
@@ -163,6 +163,7 @@ Generated: 2026-08-19T13:15:40Z
 - `create-rule` [vendor] — source: vendor
 - `create-skill` [vendor] — source: vendor
 - `create-subagent` [vendor] — source: vendor
+- `goal` [vendor] — source: vendor
 - `loop` [vendor] — source: vendor
 - `migrate-to-skills` [vendor] — source: vendor
 - `new-repo` [vendor] — source: vendor
@@ -304,7 +305,7 @@ Generated: 2026-08-19T13:15:40Z
 - `workers-best-practices` [installed] — source: https://github.com/cloudflare/skills
 - `wrangler` [installed] — source: https://github.com/cloudflare/skills
 
-### agents (93)
+### agents (94)
 
 - `accidental-data-loss-prevention` [authored] — source: https://github.com/aculich/agent-skills
 - `adhd-daily-planner` [authored] — source: https://github.com/aculich/agent-skills
@@ -348,6 +349,7 @@ Generated: 2026-08-19T13:15:40Z
 - `hyperframes-keyframes` [installed] — source: https://github.com/heygen-com/hyperframes
 - `hyperframes-media` [installed] — source: https://github.com/heygen-com/hyperframes
 - `hyperframes-registry` [installed] — source: https://github.com/heygen-com/hyperframes
+- `last30days` [installed] — source: https://github.com/mvanhorn/last30days-skill
 - `limitless-takeout-search` [authored] — source: https://github.com/aculich/agent-skills
 - `limitless-takeout-update` [authored] — source: https://github.com/aculich/agent-skills
 - `luminary-tech-radar` [authored] — source: https://github.com/aculich/agent-skills
