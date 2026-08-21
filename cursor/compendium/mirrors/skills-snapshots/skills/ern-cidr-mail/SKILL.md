@@ -13,7 +13,7 @@ Global install: `just ern-cidr-mail-install` → symlink under `~/.cursor/skills
 | Step | Hat / email | Tool |
 |------|-------------|------|
 | Resolve auspice | Project attach (`projects.ern`) or user phrase | `.workspace-tools.json` / registry |
-| Draft requester-facing ERN mail | `berkeley-spa-ern` → `evictions@berkeley.edu` (fallback `berkeley-ern` until SPA live) | `just mail-draft-as` or MCP `draft_gmail_message` |
+| Draft requester-facing ERN mail | `berkeley-spa-ern` → `evictions@berkeley.edu` | `just mail-draft-as` or MCP `draft_gmail_message` |
 | Optional notify / collab | `cidrlab-aaron` / Tim berkeley | Draft CC or separate notify — **not** From for requesters |
 | CiDR contract delivery | `cidrlab-*` only | Never `@berkeley.edu` From |
 
@@ -27,7 +27,7 @@ Out of scope: NSF POSE / BIDS LoS (use RRID attach + [docs/notes/2026-07-16-bids
 Task Progress:
 - [ ] 1. Resolve auspice (ERN vs CiDR) from attach or user
 - [ ] 2. Pick From hat from From matrix
-- [ ] 3. Confirm SPA status if using berkeley-spa-ern (planned → fallback)
+- [ ] 3. Confirm SPA token (`gog-as evictions` / `just ern`) if using berkeley-spa-ern
 - [ ] 4. Create draft only (mail-draft-as or MCP) — do not send
 - [ ] 5. Optional: CC/notify other-side principal
 - [ ] 6. Report draft id / mailbox / hat used
@@ -37,7 +37,7 @@ Task Progress:
 
 | Scenario | From hat |
 |----------|----------|
-| HPRM / public ERN reply | `berkeley-spa-ern` (fallback `berkeley-ern`) |
+| HPRM / public ERN reply | `berkeley-spa-ern` |
 | ERN internal | `berkeley-ern` |
 | CiDR contract | `cidrlab-aaron` or `cidrlab-admin` |
 
@@ -46,13 +46,13 @@ Task Progress:
 Prefer CLI (verifies account routing):
 
 ```bash
-just mail-draft-as berkeley-ern \
+just mail-draft-as berkeley-spa-ern \
   --to 'requester@example.org' \
   --subject 'HPRM data request' \
   --body '…'
 ```
 
-When SPA is live, use `berkeley-spa-ern` / `evictions`. MCP `draft_gmail_message` as the same mailbox is OK if account fingerprint matches — verify From before reporting.
+When SPA gog token is missing, `mail-draft-as` will fail rather than silently fall back (hat status is live). Report clearly; do not draft as cidrlab.
 
 **Do not send.**
 

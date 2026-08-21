@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-20T13:27:47Z",
+  "generated": "2026-08-21T13:15:36Z",
   "compendium_root": "/Users/me/dotfiles/cursor/compendium",
   "monorepo_root": "/Users/me/projects/agent-skills",
   "global": {
@@ -123,7 +123,7 @@
           "type": "local-repo",
           "url": "https://github.com/aculich/google-workspace-tools",
           "install_source_url": "https://github.com/aculich/google-workspace-tools",
-          "commit": "113ddc15e9becebc7ea08f0afe91f6f15998c5a4",
+          "commit": "44fcf1cc969bc55f766ea4ba1657c2507991492b",
           "local_path": "/Users/me/tools/google-workspace-tools",
           "confidence": "high",
           "via": "git-remote"
@@ -145,7 +145,7 @@
           "type": "local-repo",
           "url": "https://github.com/aculich/google-workspace-tools",
           "install_source_url": "https://github.com/aculich/google-workspace-tools",
-          "commit": "113ddc15e9becebc7ea08f0afe91f6f15998c5a4",
+          "commit": "44fcf1cc969bc55f766ea4ba1657c2507991492b",
           "local_path": "/Users/me/tools/google-workspace-tools",
           "confidence": "high",
           "via": "git-remote"
@@ -1035,7 +1035,7 @@
           "type": "local-repo",
           "url": "https://github.com/aculich/google-workspace-tools",
           "install_source_url": "https://github.com/aculich/google-workspace-tools",
-          "commit": "113ddc15e9becebc7ea08f0afe91f6f15998c5a4",
+          "commit": "44fcf1cc969bc55f766ea4ba1657c2507991492b",
           "local_path": "/Users/me/tools/google-workspace-tools",
           "confidence": "high",
           "via": "git-remote"
@@ -1834,7 +1834,7 @@
           "type": "local-repo",
           "url": "https://github.com/aculich/google-workspace-tools",
           "install_source_url": "https://github.com/aculich/google-workspace-tools",
-          "commit": "113ddc15e9becebc7ea08f0afe91f6f15998c5a4",
+          "commit": "44fcf1cc969bc55f766ea4ba1657c2507991492b",
           "local_path": "/Users/me/tools/google-workspace-tools",
           "confidence": "high",
           "via": "git-remote"
