@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-22T19:42:37Z",
+  "generated": "2026-08-23T17:42:25Z",
   "compendium_root": "/Users/me/dotfiles/cursor/compendium",
   "monorepo_root": "/Users/me/projects/agent-skills",
   "global": {
@@ -10940,7 +10940,7 @@
       "skill": "cidr-letterhead",
       "skill_path": "/Users/me/projects/cidr-org/library__cidrlab/.cursor/skills/cidr-letterhead/SKILL.md",
       "project_root": "/Users/me/projects/cidr-org/library__cidrlab",
-      "project_slug": "path-c7df8dc67e13",
+      "project_slug": "github-com-cidrlab-library",
       "relative_path": ".cursor/skills/cidr-letterhead/SKILL.md",
       "layout": "project-cursor",
       "classification": "embedded"
