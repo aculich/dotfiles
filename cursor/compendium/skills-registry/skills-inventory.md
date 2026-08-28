@@ -1,6 +1,6 @@
 # Skills inventory (generated)
 
-Generated: 2026-08-27T13:15:44Z
+Generated: 2026-08-28T13:15:37Z
 
 ## Summary
 
@@ -404,7 +404,7 @@ Generated: 2026-08-27T13:15:44Z
 - `writing-skills` [installed] — source: https://github.com/obra/superpowers
 - `written-communication` [installed] — source: https://github.com/refoundai/lenny-skills
 
-## Project-local (2161)
+## Project-local (2167)
 
 ### `/Users/me/ops/dotfiles-cursor-compendium`
 
@@ -712,6 +712,15 @@ Generated: 2026-08-27T13:15:44Z
 - `release-notes` (project-skills-dir) — `examples/agent-skills/src/skills/release-notes/SKILL.md`
 - `reproduce` (project-skills-dir) — `agent-think/skills/reproduce/SKILL.md`
 - `test-plan` (project-skills-dir) — `examples/agent-skills/src/skills/test-plan/SKILL.md`
+
+### `/Users/me/projects/agy-android-macos-setup`
+
+- `android-auto-dhu` (project-skills-dir) — `templates/workspace-skeleton/.agents/skills/android-auto-dhu/SKILL.md`
+- `android-auto-dhu` (project-skills-dir) — `.agents/skills/android-auto-dhu/SKILL.md`
+- `android-cli` (project-skills-dir) — `templates/workspace-skeleton/.agents/skills/android-cli/SKILL.md`
+- `android-cli` (project-skills-dir) — `.agents/skills/android-cli/SKILL.md`
+- `android-doctor` (project-skills-dir) — `templates/workspace-skeleton/.agents/skills/android-doctor/SKILL.md`
+- `android-doctor` (project-skills-dir) — `.agents/skills/android-doctor/SKILL.md`
 
 ### `/Users/me/projects/ai-vision-2025/radar/karpathy/mirrors/related/Ss1024sS__LLM-wiki`
 
