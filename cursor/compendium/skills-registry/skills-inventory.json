@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-28T13:15:37Z",
+  "generated": "2026-08-29T13:15:38Z",
   "compendium_root": "/Users/me/dotfiles/cursor/compendium",
   "monorepo_root": "/Users/me/projects/agent-skills",
   "global": {
@@ -10402,6 +10402,33 @@
       "project_root": "/Users/me/ops/skill-eval/claude-adhd-skills",
       "project_slug": "github-com-ravila4-claude-adhd-skills",
       "relative_path": "skills/test-driven-development/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "android-auto-dhu",
+      "skill_path": "/Users/me/projects/Vela/.agents/skills/android-auto-dhu/SKILL.md",
+      "project_root": "/Users/me/projects/Vela",
+      "project_slug": "github-com-PimpinPumpkin-Vela",
+      "relative_path": ".agents/skills/android-auto-dhu/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "android-cli",
+      "skill_path": "/Users/me/projects/Vela/.agents/skills/android-cli/SKILL.md",
+      "project_root": "/Users/me/projects/Vela",
+      "project_slug": "github-com-PimpinPumpkin-Vela",
+      "relative_path": ".agents/skills/android-cli/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "android-doctor",
+      "skill_path": "/Users/me/projects/Vela/.agents/skills/android-doctor/SKILL.md",
+      "project_root": "/Users/me/projects/Vela",
+      "project_slug": "github-com-PimpinPumpkin-Vela",
+      "relative_path": ".agents/skills/android-doctor/SKILL.md",
       "layout": "project-skills-dir",
       "classification": "embedded"
     },

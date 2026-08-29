@@ -2,77 +2,77 @@
   "version": 1,
   "skills": {
     "canvas": {
-      "lastSyncedAt": 1787922779859
+      "lastSyncedAt": 1788003302556
     },
     "create-hook": {
-      "lastSyncedAt": 1787922779859
+      "lastSyncedAt": 1788003302556
     },
     "create-rule": {
-      "lastSyncedAt": 1787922779859
+      "lastSyncedAt": 1788003302556
     },
     "create-skill": {
-      "lastSyncedAt": 1787922779859
+      "lastSyncedAt": 1788003302556
     },
     "create-subagent": {
-      "lastSyncedAt": 1787922779859
+      "lastSyncedAt": 1788003302556
     },
     "migrate-to-skills": {
-      "lastSyncedAt": 1787922779859
+      "lastSyncedAt": 1788003302556
     },
     "shell": {
-      "lastSyncedAt": 1787922779859
+      "lastSyncedAt": 1788003302556
     },
     "statusline": {
-      "lastSyncedAt": 1787922779859
+      "lastSyncedAt": 1788003302556
     },
     "update-cli-config": {
-      "lastSyncedAt": 1787922779859
+      "lastSyncedAt": 1788003302556
     },
     "update-cursor-settings": {
-      "lastSyncedAt": 1787922779859
+      "lastSyncedAt": 1788003302556
     },
     "split-to-prs": {
-      "lastSyncedAt": 1787922779859
+      "lastSyncedAt": 1788003302556
     },
     "sdk": {
-      "lastSyncedAt": 1787922779859
+      "lastSyncedAt": 1788003302556
     },
     "loop": {
-      "lastSyncedAt": 1787922779859
+      "lastSyncedAt": 1788003302556
     },
     "review": {
-      "lastSyncedAt": 1787922779859
+      "lastSyncedAt": 1788003302556
     },
     "review-bugbot": {
-      "lastSyncedAt": 1787922779859
+      "lastSyncedAt": 1788003302556
     },
     "review-security": {
-      "lastSyncedAt": 1787922779859
+      "lastSyncedAt": 1788003302556
     },
     "automate": {
-      "lastSyncedAt": 1787922779859
+      "lastSyncedAt": 1788003302556
     },
     "onboard": {
-      "lastSyncedAt": 1787922779859
+      "lastSyncedAt": 1788003302556
     },
     "autopilot": {
-      "lastSyncedAt": 1787922779859
+      "lastSyncedAt": 1788003302556
     },
     "rename-chat": {
-      "lastSyncedAt": 1787922779859
+      "lastSyncedAt": 1788003302556
     },
     "new-repo": {
-      "lastSyncedAt": 1787922779859
+      "lastSyncedAt": 1788003302556
     },
     "origin": {
-      "lastSyncedAt": 1787922779859
+      "lastSyncedAt": 1788003302556
     },
     "share": {
-      "lastSyncedAt": 1787922779859
+      "lastSyncedAt": 1788003302556
     },
     "goal": {
-      "lastSyncedAt": 1787922779859
+      "lastSyncedAt": 1788003302556
     }
   },
-  "lastInventoryAt": 1787845770773
+  "lastInventoryAt": 1787932518467
 }

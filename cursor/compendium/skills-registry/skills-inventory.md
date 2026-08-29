@@ -1,6 +1,6 @@
 # Skills inventory (generated)
 
-Generated: 2026-08-28T13:15:37Z
+Generated: 2026-08-29T13:15:38Z
 
 ## Summary
 
@@ -404,7 +404,7 @@ Generated: 2026-08-28T13:15:37Z
 - `writing-skills` [installed] — source: https://github.com/obra/superpowers
 - `written-communication` [installed] — source: https://github.com/refoundai/lenny-skills
 
-## Project-local (2167)
+## Project-local (2170)
 
 ### `/Users/me/ops/dotfiles-cursor-compendium`
 
@@ -682,6 +682,12 @@ Generated: 2026-08-28T13:15:37Z
 - `nudge` (project-skills-dir) — `skills/nudge/SKILL.md`
 - `obsidian-vault` (project-skills-dir) — `skills/obsidian-vault/SKILL.md`
 - `test-driven-development` (project-skills-dir) — `skills/test-driven-development/SKILL.md`
+
+### `/Users/me/projects/Vela`
+
+- `android-auto-dhu` (project-skills-dir) — `.agents/skills/android-auto-dhu/SKILL.md`
+- `android-cli` (project-skills-dir) — `.agents/skills/android-cli/SKILL.md`
+- `android-doctor` (project-skills-dir) — `.agents/skills/android-doctor/SKILL.md`
 
 ### `/Users/me/projects/adhdev-skills`
 
