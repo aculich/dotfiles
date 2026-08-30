@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-29T13:15:38Z",
+  "generated": "2026-08-30T15:42:26Z",
   "compendium_root": "/Users/me/dotfiles/cursor/compendium",
   "monorepo_root": "/Users/me/projects/agent-skills",
   "global": {
@@ -11807,6 +11807,51 @@
       "project_slug": "github-com-aculich-media-transcript-processing",
       "relative_path": ".cursor/skills/media-transcript/SKILL.md",
       "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "android-auto-dhu",
+      "skill_path": "/Users/me/projects/organicmaps/.agents/skills/android-auto-dhu/SKILL.md",
+      "project_root": "/Users/me/projects/organicmaps",
+      "project_slug": "github-com-organicmaps-organicmaps",
+      "relative_path": ".agents/skills/android-auto-dhu/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "android-cli",
+      "skill_path": "/Users/me/projects/organicmaps/.agents/skills/android-cli/SKILL.md",
+      "project_root": "/Users/me/projects/organicmaps",
+      "project_slug": "github-com-organicmaps-organicmaps",
+      "relative_path": ".agents/skills/android-cli/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "android-doctor",
+      "skill_path": "/Users/me/projects/organicmaps/.agents/skills/android-doctor/SKILL.md",
+      "project_root": "/Users/me/projects/organicmaps",
+      "project_slug": "github-com-organicmaps-organicmaps",
+      "relative_path": ".agents/skills/android-doctor/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "om-review",
+      "skill_path": "/Users/me/projects/organicmaps/.agents/skills/om-review/SKILL.md",
+      "project_root": "/Users/me/projects/organicmaps",
+      "project_slug": "github-com-organicmaps-organicmaps",
+      "relative_path": ".agents/skills/om-review/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "om-review",
+      "skill_path": "/Users/me/projects/organicmaps-upstream/.agents/skills/om-review/SKILL.md",
+      "project_root": "/Users/me/projects/organicmaps-upstream",
+      "project_slug": "github-com-organicmaps-organicmaps",
+      "relative_path": ".agents/skills/om-review/SKILL.md",
+      "layout": "project-skills-dir",
       "classification": "embedded"
     },
     {

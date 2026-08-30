@@ -1,6 +1,6 @@
 # Skills inventory (generated)
 
-Generated: 2026-08-29T13:15:38Z
+Generated: 2026-08-30T15:42:26Z
 
 ## Summary
 
@@ -404,7 +404,7 @@ Generated: 2026-08-29T13:15:38Z
 - `writing-skills` [installed] — source: https://github.com/obra/superpowers
 - `written-communication` [installed] — source: https://github.com/refoundai/lenny-skills
 
-## Project-local (2170)
+## Project-local (2175)
 
 ### `/Users/me/ops/dotfiles-cursor-compendium`
 
@@ -949,6 +949,17 @@ Generated: 2026-08-29T13:15:38Z
 ### `/Users/me/projects/media-transcript-processing`
 
 - `media-transcript` (project-cursor) — `.cursor/skills/media-transcript/SKILL.md`
+
+### `/Users/me/projects/organicmaps`
+
+- `android-auto-dhu` (project-skills-dir) — `.agents/skills/android-auto-dhu/SKILL.md`
+- `android-cli` (project-skills-dir) — `.agents/skills/android-cli/SKILL.md`
+- `android-doctor` (project-skills-dir) — `.agents/skills/android-doctor/SKILL.md`
+- `om-review` (project-skills-dir) — `.agents/skills/om-review/SKILL.md`
+
+### `/Users/me/projects/organicmaps-upstream`
+
+- `om-review` (project-skills-dir) — `.agents/skills/om-review/SKILL.md`
 
 ### `/Users/me/projects/peeq-collabs`
 
