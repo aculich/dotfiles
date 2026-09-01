@@ -1,12 +1,12 @@
 # Skills inventory (generated)
 
-Generated: 2026-08-31T15:11:47Z
+Generated: 2026-09-01T14:28:22Z
 
 ## Summary
 
-- **unique skills**: 189 (366 install rows)
-- **authored**: 59 installs / 32 unique
-- **embedded**: 92 installs / 68 unique
+- **unique skills**: 189 (372 install rows)
+- **authored**: 62 installs / 32 unique
+- **embedded**: 95 installs / 71 unique
 - **experimental**: 1
 - **installed**: 173 installs / 105 unique
 - **vendor**: 41
@@ -14,8 +14,8 @@ Generated: 2026-08-31T15:11:47Z
 ### Provenance (by source type)
 
 - **skill-lock**: 154 installs / 53 unique
+- **frontmatter**: 69 installs / 34 unique
 - **unknown**: 66 installs / 51 unique
-- **frontmatter**: 63 installs / 31 unique
 - **vendor**: 41
 - **authored**: 34 installs / 31 unique
 - **local-repo**: 8
@@ -181,7 +181,7 @@ Generated: 2026-08-31T15:11:47Z
 - `update-cli-config` [vendor] — source: vendor
 - `update-cursor-settings` [vendor] — source: vendor
 
-### claude-user (84)
+### claude-user (87)
 
 - `accidental-data-loss-prevention` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
 - `adhd-daily-planner` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
@@ -189,11 +189,13 @@ Generated: 2026-08-31T15:11:47Z
 - `adhdev-output-shape` [embedded] (symlink) — source: https://github.com/aculich/adhdev-skills
 - `agents-sdk` [installed] — source: https://github.com/cloudflare/skills
 - `bootstrap-aar` [installed] ⚠? — source: unknown
+- `bootstrap-new-project` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
 - `bootstrap-product-quickstart` [installed] ⚠? — source: unknown
 - `bootstrap-regen` [installed] ⚠? — source: unknown
 - `bootstrap-tool-config-repo` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
 - `bootstrap-tool-landscape` [installed] ⚠? — source: unknown
 - `bootstrap-tool-quickstart` [installed] ⚠? — source: unknown
+- `bootstrap-umbrella-client-project` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
 - `change-world-critique-quick` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
 - `change-world-critique-quick-full` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
 - `cidr-bootstrap-project` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
@@ -203,6 +205,7 @@ Generated: 2026-08-31T15:11:47Z
 - `cloudflare-one-migrations` [installed] — source: https://github.com/cloudflare/skills
 - `code-to-prd` [installed] ⚠? — source: unknown
 - `compendium-discover-projects` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
+- `context-engineering` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
 - `deeplistening-method-synthesis` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
 - `deeplistening-session-analysis` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
 - `durable-objects` [installed] — source: https://github.com/cloudflare/skills
@@ -305,14 +308,16 @@ Generated: 2026-08-31T15:11:47Z
 - `workers-best-practices` [installed] — source: https://github.com/cloudflare/skills
 - `wrangler` [installed] — source: https://github.com/cloudflare/skills
 
-### agents (96)
+### agents (99)
 
 - `accidental-data-loss-prevention` [authored] — source: https://github.com/aculich/agent-skills
 - `adhd-daily-planner` [authored] — source: https://github.com/aculich/agent-skills
 - `adhdev-engineering-partnership` [authored] — source: https://github.com/aculich/adhdev-skills
 - `adhdev-output-shape` [installed] — source: https://github.com/aculich/adhdev-skills
 - `agents-sdk` [installed] — source: https://github.com/cloudflare/skills
+- `bootstrap-new-project` [authored] — source: https://github.com/aculich/agent-skills
 - `bootstrap-tool-config-repo` [authored] — source: https://github.com/aculich/agent-skills
+- `bootstrap-umbrella-client-project` [authored] — source: https://github.com/aculich/agent-skills
 - `change-world-critique-quick` [authored] — source: https://github.com/aculich/agent-skills
 - `change-world-critique-quick-full` [authored] — source: https://github.com/aculich/agent-skills
 - `cidr-bootstrap-project` [authored] — source: https://github.com/aculich/agent-skills
@@ -322,6 +327,7 @@ Generated: 2026-08-31T15:11:47Z
 - `cloudflare-one` [installed] — source: https://github.com/cloudflare/skills
 - `cloudflare-one-migrations` [installed] — source: https://github.com/cloudflare/skills
 - `compendium-discover-projects` [authored] — source: https://github.com/aculich/agent-skills
+- `context-engineering` [authored] — source: https://github.com/aculich/agent-skills
 - `converge-articulate` [installed] ⚠? — source: unknown
 - `deeplistening-method-synthesis` [authored] — source: https://github.com/aculich/agent-skills
 - `deeplistening-session-analysis` [authored] — source: https://github.com/aculich/agent-skills

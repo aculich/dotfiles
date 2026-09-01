@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-31T15:11:47Z",
+  "generated": "2026-09-01T14:28:22Z",
   "compendium_root": "/Users/me/dotfiles/cursor/compendium",
   "monorepo_root": "/Users/me/projects/agent-skills",
   "global": {
@@ -3245,6 +3245,26 @@
         }
       },
       {
+        "id": "bootstrap-new-project",
+        "classification": "embedded",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/bootstrap-new-project",
+        "resolved_path": "/Users/me/.agents/skills/bootstrap-new-project",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": null,
+        "name": "bootstrap-new-project",
+        "symlink_target": "../../.agents/skills/bootstrap-new-project",
+        "source": {
+          "type": "frontmatter",
+          "url": "https://github.com/aculich/agent-skills",
+          "confidence": "high",
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
+        }
+      },
+      {
         "id": "bootstrap-product-quickstart",
         "classification": "installed",
         "lifecycle": "installed",
@@ -3334,6 +3354,26 @@
           "url": null,
           "confidence": "none",
           "via": "unresolved"
+        }
+      },
+      {
+        "id": "bootstrap-umbrella-client-project",
+        "classification": "embedded",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/bootstrap-umbrella-client-project",
+        "resolved_path": "/Users/me/.agents/skills/bootstrap-umbrella-client-project",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": null,
+        "name": "bootstrap-umbrella-client-project",
+        "symlink_target": "../../.agents/skills/bootstrap-umbrella-client-project",
+        "source": {
+          "type": "frontmatter",
+          "url": "https://github.com/aculich/agent-skills",
+          "confidence": "high",
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
         }
       },
       {
@@ -3526,6 +3566,26 @@
         "version": null,
         "name": "compendium-discover-projects",
         "symlink_target": "../../.agents/skills/compendium-discover-projects",
+        "source": {
+          "type": "frontmatter",
+          "url": "https://github.com/aculich/agent-skills",
+          "confidence": "high",
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
+        }
+      },
+      {
+        "id": "context-engineering",
+        "classification": "embedded",
+        "lifecycle": "curated",
+        "tier": "claude-user",
+        "path": "/Users/me/.claude/skills/context-engineering",
+        "resolved_path": "/Users/me/.agents/skills/context-engineering",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": null,
+        "name": "context-engineering",
+        "symlink_target": "../../.agents/skills/context-engineering",
         "source": {
           "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
@@ -5934,6 +5994,25 @@
         }
       },
       {
+        "id": "bootstrap-new-project",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/bootstrap-new-project",
+        "resolved_path": "/Users/me/.agents/skills/bootstrap-new-project",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "bootstrap-new-project",
+        "source": {
+          "type": "frontmatter",
+          "url": "https://github.com/aculich/agent-skills",
+          "confidence": "high",
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
+        }
+      },
+      {
         "id": "bootstrap-tool-config-repo",
         "classification": "authored",
         "lifecycle": "curated",
@@ -5944,6 +6023,25 @@
         "symlink_ok": true,
         "version": null,
         "name": "bootstrap-tool-config-repo",
+        "source": {
+          "type": "frontmatter",
+          "url": "https://github.com/aculich/agent-skills",
+          "confidence": "high",
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
+        }
+      },
+      {
+        "id": "bootstrap-umbrella-client-project",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/bootstrap-umbrella-client-project",
+        "resolved_path": "/Users/me/.agents/skills/bootstrap-umbrella-client-project",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "bootstrap-umbrella-client-project",
         "source": {
           "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
@@ -6138,6 +6236,25 @@
         "symlink_ok": true,
         "version": null,
         "name": "compendium-discover-projects",
+        "source": {
+          "type": "frontmatter",
+          "url": "https://github.com/aculich/agent-skills",
+          "confidence": "high",
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
+        }
+      },
+      {
+        "id": "context-engineering",
+        "classification": "authored",
+        "lifecycle": "curated",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/context-engineering",
+        "resolved_path": "/Users/me/.agents/skills/context-engineering",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "context-engineering",
         "source": {
           "type": "frontmatter",
           "url": "https://github.com/aculich/agent-skills",
@@ -27543,18 +27660,18 @@
     }
   ],
   "summary": {
-    "install_rows": 366,
+    "install_rows": 372,
     "unique_skills": 189,
     "by_classification": {
-      "authored": 59,
+      "authored": 62,
       "installed": 173,
-      "embedded": 92,
+      "embedded": 95,
       "vendor": 41,
       "experimental": 1
     },
     "by_classification_unique": {
       "authored": 32,
-      "embedded": 68,
+      "embedded": 71,
       "experimental": 1,
       "installed": 105,
       "vendor": 41
@@ -27565,11 +27682,11 @@
       "skill-lock": 154,
       "local-repo": 8,
       "vendor": 41,
-      "frontmatter": 63
+      "frontmatter": 69
     },
     "by_source_type_unique": {
       "authored": 31,
-      "frontmatter": 31,
+      "frontmatter": 34,
       "local-repo": 8,
       "skill-lock": 53,
       "unknown": 51,

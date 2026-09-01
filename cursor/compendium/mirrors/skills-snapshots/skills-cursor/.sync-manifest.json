@@ -1,78 +1,78 @@
 {
   "version": 1,
   "skills": {
+    "autopilot": {
+      "lastSyncedAt": 1788267644575
+    },
     "canvas": {
-      "lastSyncedAt": 1788168144395
-    },
-    "create-hook": {
-      "lastSyncedAt": 1788168144395
-    },
-    "create-rule": {
-      "lastSyncedAt": 1788168144395
-    },
-    "create-skill": {
-      "lastSyncedAt": 1788168144395
-    },
-    "create-subagent": {
-      "lastSyncedAt": 1788168144395
-    },
-    "migrate-to-skills": {
-      "lastSyncedAt": 1788168144395
-    },
-    "shell": {
-      "lastSyncedAt": 1788168144395
-    },
-    "statusline": {
-      "lastSyncedAt": 1788168144395
-    },
-    "update-cli-config": {
-      "lastSyncedAt": 1788168144395
-    },
-    "update-cursor-settings": {
-      "lastSyncedAt": 1788168144395
-    },
-    "split-to-prs": {
-      "lastSyncedAt": 1788168144395
-    },
-    "sdk": {
-      "lastSyncedAt": 1788168144395
-    },
-    "loop": {
-      "lastSyncedAt": 1788168144395
-    },
-    "review": {
-      "lastSyncedAt": 1788168144395
-    },
-    "review-bugbot": {
-      "lastSyncedAt": 1788168144395
-    },
-    "review-security": {
-      "lastSyncedAt": 1788168144395
+      "lastSyncedAt": 1788267644575
     },
     "automate": {
-      "lastSyncedAt": 1788168144395
+      "lastSyncedAt": 1788267644575
     },
-    "onboard": {
-      "lastSyncedAt": 1788168144395
+    "create-hook": {
+      "lastSyncedAt": 1788267644575
     },
-    "autopilot": {
-      "lastSyncedAt": 1788168144395
+    "create-rule": {
+      "lastSyncedAt": 1788267644575
     },
-    "rename-chat": {
-      "lastSyncedAt": 1788168144395
+    "create-skill": {
+      "lastSyncedAt": 1788267644575
     },
-    "new-repo": {
-      "lastSyncedAt": 1788168144395
+    "create-subagent": {
+      "lastSyncedAt": 1788267644575
     },
-    "origin": {
-      "lastSyncedAt": 1788168144395
-    },
-    "share": {
-      "lastSyncedAt": 1788168144395
+    "sdk": {
+      "lastSyncedAt": 1788267644575
     },
     "goal": {
-      "lastSyncedAt": 1788168144395
+      "lastSyncedAt": 1788267644575
+    },
+    "loop": {
+      "lastSyncedAt": 1788267644575
+    },
+    "migrate-to-skills": {
+      "lastSyncedAt": 1788267644575
+    },
+    "new-repo": {
+      "lastSyncedAt": 1788267644575
+    },
+    "origin": {
+      "lastSyncedAt": 1788267644575
+    },
+    "share": {
+      "lastSyncedAt": 1788267644575
+    },
+    "onboard": {
+      "lastSyncedAt": 1788267644575
+    },
+    "review": {
+      "lastSyncedAt": 1788267644575
+    },
+    "review-bugbot": {
+      "lastSyncedAt": 1788267644575
+    },
+    "review-security": {
+      "lastSyncedAt": 1788267644575
+    },
+    "rename-chat": {
+      "lastSyncedAt": 1788267644575
+    },
+    "shell": {
+      "lastSyncedAt": 1788267644575
+    },
+    "split-to-prs": {
+      "lastSyncedAt": 1788267644575
+    },
+    "statusline": {
+      "lastSyncedAt": 1788267644575
+    },
+    "update-cli-config": {
+      "lastSyncedAt": 1788267644575
+    },
+    "update-cursor-settings": {
+      "lastSyncedAt": 1788267644575
     }
   },
-  "lastInventoryAt": 1788125377457
+  "lastInventoryAt": 1788239836947
 }
