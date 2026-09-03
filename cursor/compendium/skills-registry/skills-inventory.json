@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-02T13:15:42Z",
+  "generated": "2026-09-03T13:17:00Z",
   "compendium_root": "/Users/me/dotfiles/cursor/compendium",
   "monorepo_root": "/Users/me/projects/agent-skills",
   "global": {
@@ -123,7 +123,7 @@
           "type": "local-repo",
           "url": "https://github.com/aculich/google-workspace-tools",
           "install_source_url": "https://github.com/aculich/google-workspace-tools",
-          "commit": "19002feabafd74029c2f073390721961741855f2",
+          "commit": "514deb1e135f0911dda0389bd6a8cb9d2ce27290",
           "local_path": "/Users/me/tools/google-workspace-tools",
           "confidence": "high",
           "via": "git-remote"
@@ -145,7 +145,7 @@
           "type": "local-repo",
           "url": "https://github.com/aculich/google-workspace-tools",
           "install_source_url": "https://github.com/aculich/google-workspace-tools",
-          "commit": "19002feabafd74029c2f073390721961741855f2",
+          "commit": "514deb1e135f0911dda0389bd6a8cb9d2ce27290",
           "local_path": "/Users/me/tools/google-workspace-tools",
           "confidence": "high",
           "via": "git-remote"
@@ -1035,7 +1035,7 @@
           "type": "local-repo",
           "url": "https://github.com/aculich/google-workspace-tools",
           "install_source_url": "https://github.com/aculich/google-workspace-tools",
-          "commit": "19002feabafd74029c2f073390721961741855f2",
+          "commit": "514deb1e135f0911dda0389bd6a8cb9d2ce27290",
           "local_path": "/Users/me/tools/google-workspace-tools",
           "confidence": "high",
           "via": "git-remote"
@@ -1834,7 +1834,7 @@
           "type": "local-repo",
           "url": "https://github.com/aculich/google-workspace-tools",
           "install_source_url": "https://github.com/aculich/google-workspace-tools",
-          "commit": "19002feabafd74029c2f073390721961741855f2",
+          "commit": "514deb1e135f0911dda0389bd6a8cb9d2ce27290",
           "local_path": "/Users/me/tools/google-workspace-tools",
           "confidence": "high",
           "via": "git-remote"
@@ -6933,7 +6933,7 @@
         "resolved_path": "/Users/me/.agents/skills/last30days",
         "is_symlink": false,
         "symlink_ok": true,
-        "version": "3.21.1",
+        "version": "3.23.0",
         "name": "last30days",
         "source": {
           "type": "skill-lock",
@@ -6941,10 +6941,10 @@
           "install_source_url": "https://github.com/mvanhorn/last30days-skill",
           "install_ref": "mvanhorn/last30days-skill",
           "source_type": "github",
-          "folder_hash": "b13edbca71cecea9b33ce932d420161ea6ce4ea3",
+          "folder_hash": "8ad480e1d12578bb4ce787653cae761136ec0b2a",
           "skill_path": "skills/last30days/SKILL.md",
           "installed_at": "2026-08-19T15:27:02.690Z",
-          "updated_at": "2026-08-19T15:27:02.690Z",
+          "updated_at": "2026-09-02T22:58:34.015Z",
           "confidence": "high",
           "via": "skill-lock"
         }
