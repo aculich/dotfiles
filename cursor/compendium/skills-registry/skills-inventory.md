@@ -1,6 +1,6 @@
 # Skills inventory (generated)
 
-Generated: 2026-09-03T13:17:00Z
+Generated: 2026-09-04T13:29:34Z
 
 ## Summary
 
@@ -410,7 +410,7 @@ Generated: 2026-09-03T13:17:00Z
 - `writing-skills` [installed] — source: https://github.com/obra/superpowers
 - `written-communication` [installed] — source: https://github.com/refoundai/lenny-skills
 
-## Project-local (2175)
+## Project-local (2171)
 
 ### `/Users/me/ops/dotfiles-cursor-compendium`
 
@@ -1014,18 +1014,14 @@ Generated: 2026-09-03T13:17:00Z
 - `commit-push-deploy-dev` (project-skills-dir) — `.agents/skills/commit-push-deploy-dev/SKILL.md`
 - `deploy` (project-cursor) — `.cursor/skills/deploy/SKILL.md`
 - `drizzle` (project-skills-dir) — `.agents/skills/drizzle/SKILL.md`
-- `drizzle-best-practices` (project-skills-dir) — `.agents/skills/drizzle-best-practices/SKILL.md`
 - `drizzle-migrations` (project-skills-dir) — `.agents/skills/drizzle-migrations/SKILL.md`
-- `express-rest-api` (project-skills-dir) — `.agents/skills/express-rest-api/SKILL.md`
 - `frontend-design` (project-skills-dir) — `.agents/skills/frontend-design/SKILL.md`
-- `playwright-e2e-init` (project-skills-dir) — `.agents/skills/playwright-e2e-init/SKILL.md`
-- `railway-deployment` (project-skills-dir) — `.agents/skills/railway-deployment/SKILL.md`
-- `react-vite-expert` (project-skills-dir) — `.agents/skills/react-vite-expert/SKILL.md`
 - `tailwind-v4-shadcn` (project-skills-dir) — `.agents/skills/tailwind-v4-shadcn/SKILL.md`
 - `tanstack-query` (project-skills-dir) — `.agents/skills/tanstack-query/SKILL.md`
 - `vercel-composition-patterns` (project-skills-dir) — `.agents/skills/vercel-composition-patterns/SKILL.md`
 - `vercel-react-best-practices` (project-skills-dir) — `.agents/skills/vercel-react-best-practices/SKILL.md`
 - `vitest` (project-skills-dir) — `.agents/skills/vitest/SKILL.md`
+- `web-design-guidelines` (project-skills-dir) — `.agents/skills/web-design-guidelines/SKILL.md`
 - `webapp-testing` (project-skills-dir) — `.agents/skills/webapp-testing/SKILL.md`
 - `zod` (project-skills-dir) — `.agents/skills/zod/SKILL.md`
 

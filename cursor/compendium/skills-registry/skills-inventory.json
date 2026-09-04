@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-03T13:17:00Z",
+  "generated": "2026-09-04T13:29:34Z",
   "compendium_root": "/Users/me/dotfiles/cursor/compendium",
   "monorepo_root": "/Users/me/projects/agent-skills",
   "global": {
@@ -12188,15 +12188,6 @@
       "classification": "embedded"
     },
     {
-      "skill": "drizzle-best-practices",
-      "skill_path": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp/.agents/skills/drizzle-best-practices/SKILL.md",
-      "project_root": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp",
-      "project_slug": "github-com-rrid-ucb-rrid-summer2026-webapp",
-      "relative_path": ".agents/skills/drizzle-best-practices/SKILL.md",
-      "layout": "project-skills-dir",
-      "classification": "embedded"
-    },
-    {
       "skill": "drizzle-migrations",
       "skill_path": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp/.agents/skills/drizzle-migrations/SKILL.md",
       "project_root": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp",
@@ -12206,47 +12197,11 @@
       "classification": "embedded"
     },
     {
-      "skill": "express-rest-api",
-      "skill_path": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp/.agents/skills/express-rest-api/SKILL.md",
-      "project_root": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp",
-      "project_slug": "github-com-rrid-ucb-rrid-summer2026-webapp",
-      "relative_path": ".agents/skills/express-rest-api/SKILL.md",
-      "layout": "project-skills-dir",
-      "classification": "embedded"
-    },
-    {
       "skill": "frontend-design",
       "skill_path": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp/.agents/skills/frontend-design/SKILL.md",
       "project_root": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp",
       "project_slug": "github-com-rrid-ucb-rrid-summer2026-webapp",
       "relative_path": ".agents/skills/frontend-design/SKILL.md",
-      "layout": "project-skills-dir",
-      "classification": "embedded"
-    },
-    {
-      "skill": "playwright-e2e-init",
-      "skill_path": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp/.agents/skills/playwright-e2e-init/SKILL.md",
-      "project_root": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp",
-      "project_slug": "github-com-rrid-ucb-rrid-summer2026-webapp",
-      "relative_path": ".agents/skills/playwright-e2e-init/SKILL.md",
-      "layout": "project-skills-dir",
-      "classification": "embedded"
-    },
-    {
-      "skill": "railway-deployment",
-      "skill_path": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp/.agents/skills/railway-deployment/SKILL.md",
-      "project_root": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp",
-      "project_slug": "github-com-rrid-ucb-rrid-summer2026-webapp",
-      "relative_path": ".agents/skills/railway-deployment/SKILL.md",
-      "layout": "project-skills-dir",
-      "classification": "embedded"
-    },
-    {
-      "skill": "react-vite-expert",
-      "skill_path": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp/.agents/skills/react-vite-expert/SKILL.md",
-      "project_root": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp",
-      "project_slug": "github-com-rrid-ucb-rrid-summer2026-webapp",
-      "relative_path": ".agents/skills/react-vite-expert/SKILL.md",
       "layout": "project-skills-dir",
       "classification": "embedded"
     },
@@ -12292,6 +12247,15 @@
       "project_root": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp",
       "project_slug": "github-com-rrid-ucb-rrid-summer2026-webapp",
       "relative_path": ".agents/skills/vitest/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "web-design-guidelines",
+      "skill_path": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp/.agents/skills/web-design-guidelines/SKILL.md",
+      "project_root": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp",
+      "project_slug": "github-com-rrid-ucb-rrid-summer2026-webapp",
+      "relative_path": ".agents/skills/web-design-guidelines/SKILL.md",
       "layout": "project-skills-dir",
       "classification": "embedded"
     },
