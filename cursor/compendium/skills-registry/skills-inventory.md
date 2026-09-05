@@ -1,6 +1,6 @@
 # Skills inventory (generated)
 
-Generated: 2026-09-04T13:29:34Z
+Generated: 2026-09-05T18:04:45Z
 
 ## Summary
 
@@ -410,7 +410,7 @@ Generated: 2026-09-04T13:29:34Z
 - `writing-skills` [installed] — source: https://github.com/obra/superpowers
 - `written-communication` [installed] — source: https://github.com/refoundai/lenny-skills
 
-## Project-local (2171)
+## Project-local (2173)
 
 ### `/Users/me/ops/dotfiles-cursor-compendium`
 
@@ -590,6 +590,7 @@ Generated: 2026-09-04T13:29:34Z
 - `meeting-sync` (project-skills-dir) — `mirrors/skills-snapshots/skills/meeting-sync/SKILL.md`
 - `meeting-sync-and-synthesis` (project-skills-dir) — `mirrors/skills-snapshots/skills/meeting-sync-and-synthesis/SKILL.md`
 - `memory-leak-debugging` (project-cursor) — `mirrors/by-project/path-cidr-evictionstory-mn-9f23bc71c2b4/.cursor/skills/memory-leak-debugging/SKILL.md`
+- `merge-dependabot-prs` (project-cursor) — `mirrors/by-project/orphan-onyx-dot-app__onyx-8fd24b84f9/.cursor/skills/merge-dependabot-prs/SKILL.md`
 - `message-in-a-bottle` (project-skills-dir) — `mirrors/skills-snapshots/skills/message-in-a-bottle/SKILL.md`
 - `message-in-a-bottle` (project-cursor) — `mirrors/by-project/orphan-from-atoz-dunegon-c6b39c15b5/.cursor/skills/message-in-a-bottle/SKILL.md`
 - `message-in-a-bottle` (project-cursor) — `mirrors/by-project/github-aculich-from-atoz-private/.cursor/skills/message-in-a-bottle/SKILL.md`
@@ -607,6 +608,7 @@ Generated: 2026-09-04T13:29:34Z
 - `peeq-cidr-meeting` (project-skills-dir) — `mirrors/skills-snapshots/skills/peeq-cidr-meeting/SKILL.md`
 - `peeq-cidr-meeting` (project-cursor) — `mirrors/by-project/github-aculich-google-workspace-tools/.cursor/skills/peeq-cidr-meeting/SKILL.md`
 - `personnel-render` (project-cursor) — `mirrors/by-project/orphan-kit-512fba8992/.cursor/skills/personnel-render/SKILL.md`
+- `playwright` (project-cursor) — `mirrors/by-project/orphan-onyx-dot-app__onyx-8fd24b84f9/.cursor/skills/playwright/SKILL.md`
 - `pr-to-video` (project-skills-dir) — `mirrors/skills-snapshots/skills/pr-to-video/SKILL.md`
 - `prd` (project-skills-dir) — `mirrors/skills-snapshots/skills/prd/SKILL.md`
 - `pretext-upstream-rhythm` (project-cursor) — `mirrors/by-project/github-aculich-pretext/.cursor/skills/pretext-upstream-rhythm/SKILL.md`

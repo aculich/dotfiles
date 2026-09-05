@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-04T13:29:34Z",
+  "generated": "2026-09-05T18:04:45Z",
   "compendium_root": "/Users/me/dotfiles/cursor/compendium",
   "monorepo_root": "/Users/me/projects/agent-skills",
   "global": {
@@ -9668,6 +9668,15 @@
       "classification": "embedded"
     },
     {
+      "skill": "merge-dependabot-prs",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/orphan-onyx-dot-app__onyx-8fd24b84f9/.cursor/skills/merge-dependabot-prs/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/orphan-onyx-dot-app__onyx-8fd24b84f9/.cursor/skills/merge-dependabot-prs/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
       "skill": "message-in-a-bottle",
       "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/message-in-a-bottle/SKILL.md",
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
@@ -9817,6 +9826,15 @@
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
       "relative_path": "mirrors/by-project/orphan-kit-512fba8992/.cursor/skills/personnel-render/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "playwright",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/orphan-onyx-dot-app__onyx-8fd24b84f9/.cursor/skills/playwright/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/orphan-onyx-dot-app__onyx-8fd24b84f9/.cursor/skills/playwright/SKILL.md",
       "layout": "project-cursor",
       "classification": "embedded"
     },
