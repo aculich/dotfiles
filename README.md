@@ -32,6 +32,7 @@ home/                 # maps to $HOME (dot_zshrc → ~/.zshrc, later)
 script/setup          # Strap hook: chezmoi init --apply
 script/strap-after-setup
 docs/LEGACY.md
+docs/SHARING.md
 ```
 
 Zsh/Starship/Sheldon land in `home/` in a later commit (scenario A: OMZ as plugin catalog, not the old `.zshrc.professional` + OMZ snapshots).
