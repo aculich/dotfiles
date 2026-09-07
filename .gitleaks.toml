@@ -1,0 +1,10 @@
+# See https://github.com/gitleaks/gitleaks
+title = "aculich/dotfiles"
+
+[extend]
+useDefault = true
+
+[[rules]]
+id = "op-session"
+description = "1Password session or op:// with embedded secret-looking tokens"
+regex = '''OP_SESSION_[A-Za-z0-9]+'''

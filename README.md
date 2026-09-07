@@ -14,7 +14,11 @@ This is **not** a Brewfile and **not** macos-reinstall. Strap will look for `scr
 | Desired **text** in `$HOME` (zsh, Starship, git, sheldon, mise.toml, Cursor/agent snippets) | **chezmoi** | **Yes** |
 | Capture **binary app prefs** (plists, GUI state) | Mackup **copy** mode in macos-reinstall (`mackup-store/` gitignored) | Observe there; **re-derive** keepers into chezmoi or `apps/*/CUSTOM.md` — do not Mackup-restore as source of truth |
 | Bit-for-bit disaster | Time Machine / restic | No |
-| Secrets | 1Password (`op`); chezmoi templates can call `op` later | Never commit keys |
+| Secrets | 1Password (`op`); chezmoi `onepasswordRead` at apply | Never commit keys; see [docs/SHARING.md](docs/SHARING.md) |
+
+Keeping the GitHub repo **private** is belt-and-suspenders so a sloppy add cannot leak. Shareable **patterns** (Starship, aliases, templates with `{{ .email }}`) can go public later; **values** (email, keys, licenses) stay in 1Password or local chezmoi data. `private_` in chezmoi is only chmod 600 — it still commits the file.
+
+macos-reinstall already puts Shottr/Contexts/Raycast keys in 1Password and gitignores `mackup-store/`. Same rule here.
 
 Mackup **link** mode breaks prefs on Sonoma+. macos-reinstall already uses copy mode. Workflow: backup → read the plist/json → write a small declarative file here (or a `defaults` snippet) → `chezmoi apply`. Same path must not be owned by both Mackup and chezmoi.
 
