@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Strap runs this after Brewfile. Keep empty until we have post-dot steps
+# (whatbroke, Portless, mise install).
+set -euo pipefail
+true
