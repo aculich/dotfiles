@@ -1,0 +1,35 @@
+# ~/.zprofile  (common layer; rendered from macos-setup-factory templates/common)
+# Login-shell PATH only. Interactive things live in ~/.zshrc.
+# Every line is guarded: this file must be correct before any bottle lands.
+
+# Homebrew: adopt whatever prefix exists. Never install it from here.
+if [[ -x /opt/homebrew/bin/brew ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+elif [[ -x /usr/local/bin/brew ]]; then
+  eval "$(/usr/local/bin/brew shellenv)"
+fi
+
+# Delegate: when someone else owns the prefix, writes impersonate the owner.
+# Owner is detected at every login, so this file is the same for every account.
+if [[ -n "${HOMEBREW_PREFIX:-}" ]]; then
+  _brew_owner="$(stat -f %Su "$HOMEBREW_PREFIX" 2>/dev/null)"
+  if [[ -n "$_brew_owner" && "$_brew_owner" != "$USER" ]]; then
+    export HOMEBREW_OWNER="$_brew_owner"
+    brew() {
+      sudo -Hu "$HOMEBREW_OWNER" env \
+        HOMEBREW_NO_AUTO_UPDATE="${HOMEBREW_NO_AUTO_UPDATE:-}" \
+        HOMEBREW_NO_ENV_HINTS=1 \
+        "$HOMEBREW_PREFIX/bin/brew" "$@"
+    }
+  fi
+  unset _brew_owner
+fi
+
+# User-local bins: chezmoi (get.chezmoi.io), uv tool, mise shims.
+[[ -d "$HOME/.local/bin" ]] && path=("$HOME/.local/bin" $path)
+
+# Keg-only sqlite (Homebrew's is newer than /usr/bin/sqlite3).
+[[ -d /opt/homebrew/opt/sqlite/bin ]] && path=(/opt/homebrew/opt/sqlite/bin $path)
+
+typeset -U path
+export PATH

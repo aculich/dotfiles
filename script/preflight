@@ -1,0 +1,120 @@
+#!/usr/bin/env bash
+# script/preflight: is this Mac's machine layer good enough for a team login?
+#
+#   script/preflight          # read-only report
+#   script/preflight --fix    # repair what is safe to repair from THIS login
+#
+# A hire's Mac already has a person and maybe a stale brew. We ADOPT what is
+# there and repair it; we never duplicate (a second brew, a second R) and never
+# chown a prefix. When brew is missing this script stops and says who installs
+# it: the person, as themselves, from brew.sh. Never a team login.
+# Vendored into every rendered org repo; needs nothing from the factory.
+set -uo pipefail
+
+repo="$(cd "$(dirname "$0")/.." && pwd)"
+# shellcheck source=lib.sh
+. "$repo/script/lib.sh"
+
+fix=0
+[[ "${1:-}" == --fix ]] && fix=1
+red=0
+me="$(id -un)"
+
+ok()   { printf '  ok    %s\n' "$*"; }
+warn() { printf '  WARN  %s\n' "$*"; }
+bad()  { printf '  RED   %s\n' "$*"; red=1; }
+
+echo "preflight as $me  ($( (( fix )) && echo 'fix mode' || echo 'read-only'))"
+echo ""
+
+# --- macOS -------------------------------------------------------------------
+echo "== macOS"
+ver="$(sw_vers -productVersion)"
+major="${ver%%.*}"
+if (( major >= 15 )); then ok "macOS $ver"; else warn "macOS $ver is old; Software Update before installing casks that need 15+"; fi
+if softwareupdate -l 2>&1 | grep -q '^\*'; then
+  warn "software updates pending (System Settings > General > Software Update)"
+fi
+fv="$(fdesetup status 2>/dev/null | head -1)"
+if [[ "$fv" == *"FileVault is On"* ]]; then ok "$fv"; else warn "${fv:-FileVault status unknown}; turn it on as the person (Strap does this on a new Mac)"; fi
+
+# --- Command Line Tools -------------------------------------------------------
+echo "== Xcode Command Line Tools"
+if xcode-select -p >/dev/null 2>&1; then
+  ok "$(xcode-select -p)"
+else
+  bad "missing. Run: xcode-select --install   (GUI prompt), then re-run preflight"
+  if (( fix )); then xcode-select --install 2>/dev/null || true; fi
+fi
+
+# --- Homebrew ----------------------------------------------------------------
+echo "== Homebrew"
+if prefix="$(bootstrap_brew_prefix)"; then
+  owner="$(bootstrap_brew_owner)"
+  if [[ "$owner" == "$me" ]]; then ok "$prefix owned by you"; else ok "$prefix owned by $owner (you delegate via sudo -Hu $owner)"; fi
+  if ! id "$owner" >/dev/null 2>&1; then
+    bad "owner '$owner' is not a current account; a human decides about chown (never this script)"
+  fi
+  if [[ "$(uname -m)" == arm64 && "$prefix" == /usr/local ]]; then
+    warn "Intel-prefix brew on Apple Silicon (Rosetta). Works, but bottles are x86. Consider a fresh /opt/homebrew as the owner later."
+  fi
+  # staleness: brew's own git checkout
+  brew_git="$prefix"
+  [[ -d "$prefix/Homebrew/.git" ]] && brew_git="$prefix/Homebrew"
+  if last_epoch="$(git -C "$brew_git" log -1 --format=%ct 2>/dev/null)"; then
+    age_days=$(( ( $(date +%s) - last_epoch ) / 86400 ))
+    if (( age_days > 30 )); then
+      warn "brew last updated $age_days days ago"
+      if (( fix )); then
+        echo "        brew update ..."
+        if ! bootstrap_brew update 2>&1 | tail -2; then
+          echo "        brew update failed; trying update-reset"
+          bootstrap_brew update-reset 2>&1 | tail -2 || bad "brew update-reset failed; fix as $owner"
+        fi
+      fi
+    else
+      ok "brew updated $age_days day(s) ago"
+    fi
+  fi
+  if (( fix )); then
+    echo "        brew doctor (informational) ..."
+    bootstrap_brew doctor 2>&1 | grep -v '^Your system is ready' | sed 's/^/        /' | head -20 || true
+  fi
+  echo "        $("$prefix/bin/brew" --version | head -1)"
+else
+  bad "no Homebrew. Install it AS THE PERSON who should own it, from the official installer:"
+  echo '          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
+  echo "        Never install brew as a team login. Then re-run preflight."
+fi
+
+# --- pre-existing machine-global ecosystems (adopt, never duplicate) ----------
+echo "== Machine-global ecosystems already here"
+if [[ -d /Library/Frameworks/R.framework ]]; then
+  rvers="$(ls /Library/Frameworks/R.framework/Versions 2>/dev/null | grep -v Current | tr '\n' ' ')"
+  ok "R.framework present ($rvers) -> ern-core adopts it; do NOT brew install r"
+else
+  echo "  -     R.framework absent (ern-core installs CRAN .pkg R when needed)"
+fi
+if [[ -d /Library/TeX ]]; then ok "MacTeX present -> do NOT install TinyTeX beside it"; else echo "  -     MacTeX absent"; fi
+if [[ -d /opt/anaconda3 || -d /opt/miniconda3 || -d "$HOME/anaconda3" || -d "$HOME/miniforge3" || -d "$HOME/miniconda3" ]]; then
+  warn "conda present. Team logins ignore it (mise + uv are the mechanism). Do NOT let it shim python in ~/.zshrc.local"
+else
+  echo "  -     conda absent"
+fi
+if [[ -d /Applications/Docker.app ]]; then ok "Docker Desktop present -> local-dev adopts it (OrbStack not needed)"; fi
+if [[ -d /Applications/OrbStack.app ]]; then ok "OrbStack present"; fi
+[[ -d /Applications/Docker.app || -d /Applications/OrbStack.app ]] || echo "  -     no container runtime (wave 4 installs OrbStack)"
+if [[ -x /usr/local/bin/node && ! -e /opt/homebrew/bin/node ]]; then warn "node from a .pkg installer at /usr/local/bin; mise node will shadow it in the team login"; fi
+
+# --- accounts (the half that apply also checks) --------------------------------
+echo "== This account"
+if dseditgroup -o checkmember -m "$me" admin >/dev/null 2>&1; then ok "$me is admin"; else warn "$me is not admin; a team login needs an admin to create it"; fi
+tok="$(sysadminctl -secureTokenStatus "$me" 2>&1 | grep -Eio 'Secure token is (ENABLED|DISABLED)' | tail -1)"
+[[ "$tok" == *ENABLED* ]] && ok "SecureToken enabled" || warn "${tok:-SecureToken unknown}"
+
+echo ""
+if (( red )); then
+  echo "RED items above must be fixed before a team login is created. Re-run preflight after."
+  exit 1
+fi
+echo "OK: machine layer is good enough. Next: the brew owner runs  macos-bootstrap apply --profile <org>  (or create the account by hand, see README), then the new login runs script/setup."

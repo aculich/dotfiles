@@ -1,51 +1,52 @@
 # aculich/dotfiles
 
-Private **chezmoi** source for desired text configs (`$HOME`). Almost a green field: zsh is **not** copied from the old tree.
+The **common layer**, rendered for my own login. Same tree every team repo carries (`home/`, wave Brewfiles, `script/setup`, `justfile`), no org overlay. My personal overlay is a second chezmoi source in [aculich/dotfiles-private](https://github.com/aculich/dotfiles-private); this repo has no name, no email, no Dock, no licenses.
 
-Predecessor (do not apply): [aculich/dotfiles-pre20260906](https://github.com/aculich/dotfiles-pre20260906). What we scanned there: [docs/LEGACY.md](docs/LEGACY.md).
+Rendered from [aculich/macos-setup-factory](https://github.com/aculich/macos-setup-factory) at `6a18fd1` on 2026-09-08. Edit common things there, then `just reinit-org me`. Files in `.factory-manifest` are re-rendered; `docs/` is mine.
 
-This is **not** a Brewfile and **not** macos-reinstall. Strap will look for `script/setup` here after brew exists.
+## New Mac (machine + person)
 
-## Who writes what
-
-| Job | Tool | This repo? |
-|-----|------|------------|
-| Install apps and CLI bottles | Homebrew Bundle (`brew bundle --file`) + [macos-reinstall](https://github.com/aculich/macos-reinstall) overlay | No (packages live next door) |
-| Desired **text** in `$HOME` (zsh, Starship, git, sheldon, mise.toml, Cursor/agent snippets) | **chezmoi** | **Yes** |
-| Capture **binary app prefs** (plists, GUI state) | Mackup **copy** mode in macos-reinstall (`mackup-store/` gitignored) | Observe there; **re-derive** keepers into chezmoi or `apps/*/CUSTOM.md` — do not Mackup-restore as source of truth |
-| Bit-for-bit disaster | Time Machine / restic | No |
-| Secrets | 1Password (`op`); chezmoi `onepasswordRead` at apply | Never commit keys; see [docs/SHARING.md](docs/SHARING.md) |
-
-Keeping the GitHub repo **private** is belt-and-suspenders so a sloppy add cannot leak. Shareable **patterns** (Starship, aliases, templates with `{{ .email }}`) can go public later; **values** (email, keys, licenses) stay in 1Password or local chezmoi data. `private_` in chezmoi is only chmod 600 — it still commits the file.
-
-macos-reinstall already puts Shottr/Contexts/Raycast keys in 1Password and gitignores `mackup-store/`. Same rule here.
-
-Mackup **link** mode breaks prefs on Sonoma+. macos-reinstall already uses copy mode. Workflow: backup → read the plist/json → write a small declarative file here (or a `defaults` snippet) → `chezmoi apply`. Same path must not be owned by both Mackup and chezmoi.
-
-chezmoi **applies** generated files (replace), it does not “restore a blob dump.” That is the point.
-
-## Layout
-
-```
-.chezmoiroot          # chezmoi source is home/
-home/                 # maps to $HOME (dot_zshrc → ~/.zshrc, later)
-script/setup          # Strap hook: chezmoi init --apply
-script/strap-after-setup
-docs/LEGACY.md
-docs/SHARING.md
-```
-
-Zsh/Starship/Sheldon land in `home/` in a later commit (scenario A: OMZ as plugin catalog, not the old `.zshrc.professional` + OMZ snapshots).
-
-Machine-local overrides: `~/.zshrc.local` (ignored). Never commit `history.list` or `.env*`.
-
-## Apply
+Strap first: FileVault, Homebrew, CLT, software update. It clones `aculich/dotfiles` and runs `script/setup`, then `script/strap-after-setup` blocks until the wave chain finishes.
 
 ```bash
-brew install chezmoi   # if needed
-chezmoi init --apply git@github.com:aculich/dotfiles.git
-# or, from a clone:
-./script/setup
+git clone https://github.com/MikeMcQuaid/strap ~/src/strap
+STRAP_GITHUB_USER=aculich bash ~/src/strap/bin/strap.sh
 ```
 
-Strap: clone this repo as `username/dotfiles` and run `script/setup`.
+Then, as me, the personal overlay:
+
+```bash
+gh repo clone aculich/dotfiles-private ~/src/dotfiles-private
+cd ~/src/dotfiles && just apply-private
+```
+
+## Existing Mac
+
+```bash
+gh repo clone aculich/dotfiles ~/src/dotfiles
+~/src/dotfiles/script/setup       # shell now, Cursor at ~2 min, rest in background
+just status wait
+```
+
+## What is here
+
+| Path | Job |
+|------|-----|
+| `home/` | chezmoi source: `dot_zprofile` (brew shellenv + delegate `brew()` wrapper), `dot_zshrc` (guarded; Scenario A), `dot_gitconfig` (identity via include), Starship, mise, global gitignore |
+| `home/.chezmoiscripts/` | `00-brew-bundle` (re-run wave 0 on change), `10-macos-defaults` (common login defaults + will-cite), `30-uv-tools` |
+| `brew/00-shell` `10-common` `20-data-common` | waves 0-2 |
+| `brew/30-llm-vendor` `31-local-dev` `32-drift` | wave 4 |
+| `brew/pdf-ocr` `brew/media` | opt-in by job: `just bundle pdf-ocr` / `media` / `data-heavy` |
+| `script/setup` | the installer (waves) |
+| `script/preflight` | machine-layer check for a hire's Mac |
+| `script/strap-after-setup` | `just status wait` |
+| `justfile` | status, bundle, apply, apply-private, doctor, bench, drift |
+| `docs/` | LEGACY (what the pre-2026-09-06 tree had), SHARING (public safeguards) |
+
+Wave 5 for me is `just apply-private` when `~/src/dotfiles-private` exists.
+
+## Public later
+
+Private today. Flip to public only after `gitleaks detect --source . --log-opts=--all` is clean and a template audit finds no literal email, name, hostname or `op://` path with personal metadata. Nothing on any team depends on this repo being public: org repos carry their own rendered common tree.
+
+See `AGENTS.md` for the placement test, the heavy rule, and the Stale list.

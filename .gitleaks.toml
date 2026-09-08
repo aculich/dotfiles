@@ -1,10 +1,15 @@
-# See https://github.com/gitleaks/gitleaks
-title = "aculich/dotfiles"
+# See https://github.com/gitleaks/gitleaks  (runs in pre-commit and before any visibility flip)
+title = "me bootstrap"
 
 [extend]
 useDefault = true
 
 [[rules]]
 id = "op-session"
-description = "1Password session or op:// with embedded secret-looking tokens"
+description = "1Password session token"
 regex = '''OP_SESSION_[A-Za-z0-9]+'''
+
+[[rules]]
+id = "berkeley-calnet-password-ish"
+description = "password = literal in a config"
+regex = '''(?i)(password|passwd|secret)\s*[=:]\s*['"][^'"$]{6,}['"]'''

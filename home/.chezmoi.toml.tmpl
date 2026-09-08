@@ -1,6 +1,5 @@
-{{- $name := promptStringOnce . "name" "Full name (git)" -}}
-{{- $email := promptStringOnce . "email" "Email (git)" -}}
-
+# Written to ~/.config/chezmoi/chezmoi.toml on `chezmoi init`. No prompts:
+# identity (git name/email) is the personal or org overlay's job, not common.
 [data]
-    name = {{ $name | quote }}
-    email = {{ $email | quote }}
+    org = "me"
+    recipe = "https://github.com/aculich/dotfiles"

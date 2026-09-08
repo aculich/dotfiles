@@ -1,8 +1,8 @@
 .DS_Store
-*.local
 .env
 .env.*
 !.env.template
 history.list
 .op_session
 *.backup.*
+Brewfile.lock.json

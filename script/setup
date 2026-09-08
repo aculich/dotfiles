@@ -1,13 +1,163 @@
 #!/usr/bin/env bash
-# Strap hook: https://github.com/MikeMcQuaid/strap
+# script/setup: the ONE installer. Runs the common layer in waves so the shell
+# is usable at t=0 and Cursor opens at ~t=2min while the rest installs behind.
+#
+#   script/setup            # foreground wave 0, then background waves 1-5
+#   script/setup --waves    # (internal) the background chain
+#   just status [--wait]    # progress / block until the chain finishes
+#
+# Rules: adopt the existing /opt/homebrew (never install brew here); one brew
+# process at a time; each wave is its own Brewfile so a failure isolates;
+# delegates run every brew as the owner via sudo -Hu with the Brewfile on stdin.
+# Strap: this is the script Strap calls after brew exists. There is no
+# ~/.Brewfile, so Strap's `brew bundle --global` step is a no-op by design.
 set -euo pipefail
-cd "$(dirname "$0")/.."
-if ! command -v chezmoi >/dev/null 2>&1; then
-  if command -v brew >/dev/null 2>&1; then
-    brew install chezmoi
+
+repo="$(cd "$(dirname "$0")/.." && pwd)"
+# shellcheck source=lib.sh
+. "$repo/script/lib.sh"
+export BOOTSTRAP_SETUP=1
+export HOMEBREW_NO_ENV_HINTS=1
+
+# --- background chain (waves 1-5) -------------------------------------------
+run_waves() {
+  echo $$ >"$BOOTSTRAP_PID"
+  trap 'rm -f "$BOOTSTRAP_PID"; bootstrap_sudo_keepalive_stop' EXIT
+  bootstrap_sudo_keepalive
+  export HOMEBREW_NO_AUTO_UPDATE=1
+
+  local waves=(
+    "1|$repo/brew/10-common.Brewfile"
+    "2|$repo/brew/20-data-common.Brewfile"
+  )
+  # wave 4 = every brew/3*.Brewfile; wave 5 = every brew/4*.Brewfile (org overlay)
+  local f w4=() w5=()
+  for f in "$repo"/brew/3*.Brewfile; do [[ -f "$f" ]] && w4+=("$f"); done
+  for f in "$repo"/brew/4*.Brewfile; do [[ -f "$f" ]] && w5+=("$f"); done
+
+  # prefetch wave 1 right away
+  bootstrap_brew_fetch_file "$repo/brew/10-common.Brewfile" &
+  local fetch_pid=$!
+
+  # waves 1 and 2
+  local entry n file next
+  for entry in "${waves[@]}"; do
+    n="${entry%%|*}"; file="${entry#*|}"
+    wait "$fetch_pid" 2>/dev/null || true
+    case "$n" in
+      1) next="$repo/brew/20-data-common.Brewfile" ;;
+      2) next="${w4[0]:-}" ;;
+    esac
+    if [[ -n "$next" ]]; then bootstrap_brew_fetch_file "$next" & fetch_pid=$!; else fetch_pid=""; fi
+    bootstrap_log "== wave $n start"
+    bootstrap_brew_bundle "$file" || bootstrap_log "!! wave $n had failures (see above); continuing"
+    bootstrap_log "== wave $n done"
+  done
+
+  # wave 3: runtimes via mise, then uv tools
+  bootstrap_log "== wave 3 start (mise install, uv tools)"
+  if bootstrap_mise install -y 2>&1 | tee -a "$BOOTSTRAP_LOG"; then
+    BOOTSTRAP_SETUP= bash "$repo/home/.chezmoiscripts/run_onchange_after_30-uv-tools.sh" 2>&1 | tee -a "$BOOTSTRAP_LOG" || true
   else
-    echo "install Homebrew, then: brew install chezmoi" >&2
-    exit 1
+    bootstrap_log "!! mise install failed; uv tools skipped"
   fi
+  bootstrap_log "== wave 3 done"
+
+  # wave 4: vendor casks, local dev, drift
+  [[ -n "$fetch_pid" ]] && { wait "$fetch_pid" 2>/dev/null || true; }
+  bootstrap_log "== wave 4 start"
+  local i
+  for (( i=0; i<${#w4[@]}; i++ )); do
+    if (( i+1 < ${#w4[@]} )); then bootstrap_brew_fetch_file "${w4[$((i+1))]}" & fetch_pid=$!; else fetch_pid=""; fi
+    bootstrap_brew_bundle "${w4[$i]}" || bootstrap_log "!! $(basename "${w4[$i]}") had failures; continuing"
+    [[ -n "$fetch_pid" ]] && { wait "$fetch_pid" 2>/dev/null || true; }
+  done
+  if command -v whatbroke >/dev/null 2>&1 || [[ -x /opt/homebrew/bin/whatbroke ]]; then
+    "${HOMEBREW_PREFIX:-/opt/homebrew}/bin/whatbroke" install >>"$BOOTSTRAP_LOG" 2>&1 || true
+    bootstrap_log "whatbroke daily snapshot installed for $(id -un)"
+  fi
+  bootstrap_log "== wave 4 done"
+
+  # wave 5: org overlay (brew/4*.Brewfile, script/org-setup), or personal overlay for me
+  bootstrap_log "== wave 5 start"
+  for f in "${w5[@]}"; do
+    bootstrap_brew_bundle "$f" || bootstrap_log "!! $(basename "$f") had failures; continuing"
+  done
+  if [[ -x "$repo/script/org-setup" ]]; then
+    bootstrap_log "script/org-setup"
+    "$repo/script/org-setup" 2>&1 | tee -a "$BOOTSTRAP_LOG" || bootstrap_log "!! org-setup had failures"
+  fi
+  if [[ -d "$HOME/src/dotfiles-private" && -f "$repo/justfile" ]] && grep -q '^apply-private' "$repo/justfile"; then
+    bootstrap_log "just apply-private"
+    (cd "$repo" && just apply-private) 2>&1 | tee -a "$BOOTSTRAP_LOG" || bootstrap_log "!! apply-private had failures"
+  fi
+  bootstrap_log "== wave 5 done"
+  bootstrap_log "== chain complete. Summary:"
+  for f in "$repo"/brew/[0-4]*.Brewfile; do
+    if bootstrap_brew_bundle_check "$f"; then bootstrap_log "   ok   $(basename "$f")"; else bootstrap_log "   MISSING $(basename "$f")  -> just bundle $(basename "$f" .Brewfile)"; fi
+  done
+}
+
+if [[ "${1:-}" == --waves ]]; then
+  run_waves
+  exit 0
 fi
-chezmoi init --apply --source "$PWD"
+
+# --- foreground: guards, dotfiles, wave 0 ------------------------------------
+[[ "$(uname -s)" == Darwin ]] || bootstrap_die "macOS only"
+prefix="$(bootstrap_brew_prefix)" || bootstrap_die "no /opt/homebrew. Install Homebrew as the person who should own it (brew.sh, or Strap on a new Mac). Never as a team login."
+owner="$(bootstrap_brew_owner)"
+me="$(id -un)"
+mkdir -p "$BOOTSTRAP_LOG_DIR"
+bootstrap_log "script/setup as $me; brew prefix $prefix owned by $owner$( [[ "$owner" == "$me" ]] || echo ' (delegate: brew writes via sudo -Hu '"$owner"')' )"
+if bootstrap_chain_running; then
+  bootstrap_die "a background chain is already running (pid $(cat "$BOOTSTRAP_PID")); just status --wait"
+fi
+
+# t=0: Cursor download starts now (cask is ~250 MB); bundle later finds it cached.
+bootstrap_sudo_keepalive
+bootstrap_log "brew update (once)"
+bootstrap_brew update --quiet 2>&1 | tail -1 | tee -a "$BOOTSTRAP_LOG" || true
+export HOMEBREW_NO_AUTO_UPDATE=1
+if [[ ! -d /Applications/Cursor.app ]]; then
+  bootstrap_brew fetch --cask cursor >/dev/null 2>&1 &
+  cursor_fetch=$!
+else
+  cursor_fetch=""
+fi
+
+# dotfiles: seconds. Hooks no-op under BOOTSTRAP_SETUP=1 except the fast defaults script.
+if ! command -v chezmoi >/dev/null 2>&1 && [[ ! -x "$HOME/.local/bin/chezmoi" ]]; then
+  bootstrap_log "chezmoi via get.chezmoi.io -> ~/.local/bin (no brew needed)"
+  sh -c "$(curl -fsLS get.chezmoi.io)" -- -b "$HOME/.local/bin" >/dev/null
+fi
+CHEZMOI="$(command -v chezmoi || echo "$HOME/.local/bin/chezmoi")"
+bootstrap_log "chezmoi init --apply --source $repo"
+"$CHEZMOI" init --apply --source "$repo" --force
+
+# wave 0, foreground
+bootstrap_log "== wave 0 start (shell tools, Cursor, mise)"
+bootstrap_brew_bundle "$repo/brew/00-shell.Brewfile" || bootstrap_log "!! wave 0 had failures; the shell may be partial"
+[[ -n "$cursor_fetch" ]] && { wait "$cursor_fetch" 2>/dev/null || true; }
+bootstrap_log "== wave 0 done"
+bootstrap_sudo_keepalive_stop
+
+# hand off waves 1-5
+nohup bash "$repo/script/setup" --waves >>"$BOOTSTRAP_LOG" 2>&1 &
+disown
+sleep 1
+
+cat <<EOF
+
+  Shell is ready: open a new terminal tab (or: exec zsh).
+  Cursor is installed: opening it now. Keep working; waves 1-5 continue behind.
+
+    just status          # progress
+    just status --wait   # block until everything is in
+    tail -f $BOOTSTRAP_LOG
+
+  A manual 'brew install' during the chain just waits on Homebrew's lock.
+EOF
+if [[ -d /Applications/Cursor.app ]]; then
+  open -a Cursor "$repo" 2>/dev/null || open -a Cursor 2>/dev/null || true
+fi

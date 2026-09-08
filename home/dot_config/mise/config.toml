@@ -1,0 +1,13 @@
+# ~/.config/mise/config.toml  (common layer)
+# mise is the global runtime MECHANISM. It is not a package list.
+# Projects pin their own versions in .mise.toml / .tool-versions.
+# Do NOT add python here for the common layer; python-base (team layer) pins it.
+# Do NOT manage R with mise (CRAN .pkg / rig own R).
+
+[tools]
+node = "lts"
+uv = "latest"
+
+[settings]
+experimental = false
+idiomatic_version_file_enable_tools = ["node"]

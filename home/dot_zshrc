@@ -1,0 +1,75 @@
+# ~/.zshrc  (common layer; rendered from macos-setup-factory templates/common)
+#
+# Scenario A: plain zsh + two brew plugins + Starship. No framework, no plugin
+# manager. Everything below is guarded on the command existing, so this file is
+# correct at t=0 (before wave 0 lands) and stays under ~60 ms once it has.
+# Personal or org additions go in ~/.zshrc.local, never here.
+
+# --- history ---------------------------------------------------------------
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=50000
+SAVEHIST=50000
+setopt APPEND_HISTORY SHARE_HISTORY HIST_IGNORE_DUPS HIST_IGNORE_SPACE HIST_REDUCE_BLANKS
+setopt AUTO_CD INTERACTIVE_COMMENTS NO_BEEP
+
+# --- completion ------------------------------------------------------------
+if [[ -d "${HOMEBREW_PREFIX:-/opt/homebrew}/share/zsh/site-functions" ]]; then
+  fpath=("${HOMEBREW_PREFIX:-/opt/homebrew}/share/zsh/site-functions" $fpath)
+fi
+autoload -Uz compinit
+# Rebuild the dump once a day, not every shell.
+if [[ -n "$HOME/.zcompdump"(#qN.mh+24) ]]; then
+  compinit
+else
+  compinit -C
+fi
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+
+# --- keys ------------------------------------------------------------------
+bindkey -e
+bindkey '^[[A' history-beginning-search-backward
+bindkey '^[[B' history-beginning-search-forward
+
+# --- tools (each guarded) --------------------------------------------------
+if (( $+commands[fzf] )); then
+  source <(fzf --zsh)
+fi
+if (( $+commands[zoxide] )); then
+  eval "$(zoxide init zsh)"
+fi
+if (( $+commands[mise] )); then
+  eval "$(mise activate zsh)"
+fi
+if (( $+commands[eza] )); then
+  alias ls='eza --group-directories-first'
+  alias ll='eza -l --group-directories-first --git'
+  alias la='eza -la --group-directories-first --git'
+  alias lt='eza --tree --level=2'
+fi
+(( $+commands[bat] )) && alias cat='bat --paging=never --style=plain'
+(( $+commands[xh] ))  && alias http='xh'
+(( $+commands[fd] ))  && export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+export EDITOR="${EDITOR:-vim}"
+(( $+commands[cursor] )) && export VISUAL='cursor --wait'
+
+# --- plugins from brew (order: autosuggestions, then syntax-highlighting last)
+_zsh_plugins="${HOMEBREW_PREFIX:-/opt/homebrew}/share"
+[[ -r "$_zsh_plugins/zsh-autosuggestions/zsh-autosuggestions.zsh" ]] && \
+  source "$_zsh_plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+
+# --- prompt ----------------------------------------------------------------
+if (( $+commands[starship] )); then
+  eval "$(starship init zsh)"
+else
+  PROMPT='%F{cyan}%n@%m%f %F{blue}%~%f %# '
+fi
+
+# --- local layer (personal overlay or org overlay writes this; one writer) --
+[[ -r "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
+
+# syntax-highlighting must be sourced last
+[[ -r "$_zsh_plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]] && \
+  source "$_zsh_plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+unset _zsh_plugins

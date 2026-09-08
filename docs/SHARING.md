@@ -8,7 +8,7 @@ macos-reinstall already follows this for licenses: keys in 1Password, [licenses/
 
 | Bucket | Examples | Where it lives |
 |--------|----------|----------------|
-| **Shareable pattern** | Starship.toml, Sheldon plugins, zsh aliases with no hostnames, `brew` names, chezmoi *templates* | Git, can be **public** later |
+| **Shareable pattern** | Starship.toml, guarded zsh, aliases with no hostnames, wave Brewfiles, `script/setup` | Git, can be **public** later |
 | **Personal, not a secret** | git name/email, hostname, Hardware UUID, “I use Linear” | chezmoi `[data]` from a **local** config / `promptStringOnce`; `~/.zshrc.local`; never a committed literal |
 | **Secret / license / token** | API keys, Shottr/Contexts keys, age private key, `.env`, SSH keys, Raycast tokens | **1Password** (or Keychain). Chezmoi may *read* at apply time. Mackup store stays gitignored |
 
@@ -26,8 +26,8 @@ Official chezmoi: [1Password templates](https://www.chezmoi.io/user-guide/passwo
    ```
 
    Git contains the **op:// path**, same idea as macos-reinstall’s INDEX. Apply needs `op` signed in (Touch ID is fine).
-3. **Untracked locals.** `~/.zshrc.local`, `*.local` (already gitignored here).
-4. **Second private source (optional).** Public `dotfiles` + private `dotfiles-private` (or chezmoi extra source). Patterns public; machine email, work VPN snippets private. We have not created the private overlay yet — this whole repo *is* the private overlay until a public split is worth it.
+3. **Identity has one writer.** Common `dot_gitconfig` only *includes* `~/.config/git/identity`; the personal overlay (me) or the org overlay (team logins) writes that file. No `promptStringOnce` for name/email in this repo any more.
+4. **Second private source.** This repo is the rendered **common** layer; [aculich/dotfiles-private](https://github.com/aculich/dotfiles-private) is the personal overlay, applied with its own chezmoi config (`~/.config/chezmoi/private.toml`, own source and state) via `just apply-private`. Same target path must never be owned by both.
 5. **age + SOPS / `chezmoi add --encrypt`.** Encrypted blobs *can* live in a public git. The **age private key** stays in 1Password (macos-reinstall already does this). Prefer 1Password for licenses and passwords; encrypt files only when you need a file in git (weird plist), not as a second copy of the Shottr key.
 6. **Scanners.** gitleaks / detect-secrets / pre-commit (macos-reinstall `Brewfile.security`). Refuse `mackup-store/`, `.env`, keys.
 

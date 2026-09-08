@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
-# Strap runs this after Brewfile. Keep empty until we have post-dot steps
-# (whatbroke, Portless, mise install).
+# Strap calls this last. script/setup already started the background chain;
+# block here until it finishes so Strap ends with a complete system and never
+# starts a second installer.
 set -euo pipefail
-true
+cd "$(dirname "$0")/.."
+if command -v just >/dev/null 2>&1; then
+  just status --wait
+else
+  /opt/homebrew/bin/just status --wait
+fi

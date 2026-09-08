@@ -1,0 +1,61 @@
+# ~/.gitconfig  (common layer)
+# Identity is NOT here. One writer per login: the personal overlay (me) or the
+# org overlay (team logins) writes ~/.config/git/identity with user.name /
+# user.email. Git ignores a missing include, so this file is safe at t=0.
+
+[include]
+	path = ~/.config/git/identity
+
+[init]
+	defaultBranch = main
+
+[pull]
+	rebase = false
+
+[push]
+	autoSetupRemote = true
+	default = simple
+
+[fetch]
+	prune = true
+
+[rebase]
+	autoStash = true
+
+[diff]
+	colorMoved = default
+
+[merge]
+	conflictStyle = zdiff3
+
+[rerere]
+	enabled = true
+
+[alias]
+	st = status -sb
+	co = checkout
+	sw = switch
+	br = branch
+	ci = commit
+	lg = log --oneline --graph --decorate -20
+	last = log -1 HEAD --stat
+	unstage = reset HEAD --
+	amend = commit --amend --no-edit
+	wip = commit -am wip
+
+# git-delta arrives in wave 1; until then these fall back to less / cat.
+[core]
+	pager = command -v delta >/dev/null 2>&1 && delta || less -FRX
+	autocrlf = input
+	excludesFile = ~/.config/git/ignore
+
+[interactive]
+	diffFilter = command -v delta >/dev/null 2>&1 && delta --color-only || cat
+
+[delta]
+	navigate = true
+	line-numbers = true
+	side-by-side = false
+
+[credential]
+	helper = osxkeychain

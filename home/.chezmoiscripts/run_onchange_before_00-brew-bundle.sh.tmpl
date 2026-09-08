@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Wave 0 re-run hook. script/setup OWNS the first wave 0; this hook exists so a
+# later `chezmoi apply` re-runs wave 0 when brew/00-shell.Brewfile changes.
+# Hash of the Brewfile so chezmoi re-runs on change:
+# {{ include "../brew/00-shell.Brewfile" | sha256sum }}
+set -euo pipefail
+
+# During script/setup the waves are already running; do nothing here.
+if [[ -n "${BOOTSTRAP_SETUP:-}" ]]; then
+  exit 0
+fi
+
+repo="{{ .chezmoi.sourceDir }}/.."
+if [[ ! -x /opt/homebrew/bin/brew ]]; then
+  echo "00-brew-bundle: no /opt/homebrew; run script/setup after brew exists" >&2
+  exit 0
+fi
+# shellcheck source=/dev/null
+. "$repo/script/lib.sh"
+bootstrap_brew_bundle "$repo/brew/00-shell.Brewfile"
