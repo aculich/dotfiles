@@ -1,0 +1,125 @@
+#!/usr/bin/env bash
+# script/baseline: one-shot Darwin inventory for THIS login, written outside git.
+#
+#   script/baseline                 # -> ~/Library/Logs/bootstrap/baseline-YYYYMMDD-HHMMSS/
+#   script/baseline --diff A B      # compare two baseline dirs (sorted line diffs)
+#
+# Take one before script/setup, one after, one after the first reboot, and keep
+# them all: they are the record of what this machine looked like. Archive them
+# somewhere private (a personal overlay's inventory/ dir); never into this repo.
+# Nothing here reads a whole `defaults` domain (tokens live there); allowlist only.
+set -uo pipefail
+
+repo="$(cd "$(dirname "$0")/.." && pwd)"
+# shellcheck source=lib.sh
+. "$repo/script/lib.sh"
+
+if [[ "${1:-}" == --diff ]]; then
+  a="${2:?baseline dir A}"; b="${3:?baseline dir B}"
+  for f in "$a"/*.txt; do
+    n="$(basename "$f")"
+    [[ "$n" == MANIFEST.txt || "$n" == bootstrap.log ]] && continue
+    if [[ -f "$b/$n" ]]; then
+      d="$(diff <(sort "$f") <(sort "$b/$n") | grep '^[<>]' || true)"
+      [[ -n "$d" ]] && { echo "== $n"; echo "$d" | sed 's/^</  - /; s/^>/  + /'; }
+    else
+      echo "== $n: only in $a"
+    fi
+  done
+  for f in "$b"/*.txt; do
+    n="$(basename "$f")"; [[ -f "$a/$n" ]] || echo "== $n: only in $b"
+  done
+  exit 0
+fi
+
+ts="$(date '+%Y%m%d-%H%M%S')"
+dir="$BOOTSTRAP_LOG_DIR/baseline-$ts"
+mkdir -p "$dir"
+w() { local dest="$1"; shift; { "$@"; } >"$dest" 2>&1 || true; }
+ls_or_absent() { if [[ -d "$2" ]]; then ls -1 "$2" >"$1" 2>&1; else echo "(absent: $2)" >"$1"; fi; }
+
+# --- system -----------------------------------------------------------------
+w "$dir/sw_vers.txt" sw_vers
+w "$dir/id.txt" id
+w "$dir/xcode-select.txt" xcode-select -p
+w "$dir/clt-pkg.txt" pkgutil --pkg-info=com.apple.pkg.CLTools_Executables
+if [[ -d /Applications/Xcode.app ]]; then
+  w "$dir/xcode-version.txt" defaults read /Applications/Xcode.app/Contents/Info CFBundleShortVersionString
+else echo "(no /Applications/Xcode.app)" >"$dir/xcode-version.txt"; fi
+w "$dir/filevault.txt" fdesetup status
+w "$dir/firewall.txt" /usr/libexec/ApplicationFirewall/socketfilterfw --getglobalstate
+w "$dir/pkgutil-pkgs.txt" pkgutil --pkgs
+w "$dir/defaults-domains.txt" defaults domains
+
+# --- homebrew ---------------------------------------------------------------
+if p="$(bootstrap_brew_prefix)"; then
+  echo "$p" >"$dir/brew-prefix.txt"
+  bootstrap_brew_owner >"$dir/brew-owner.txt" 2>&1
+  bootstrap_brew_mode >"$dir/brew-mode.txt" 2>&1
+  w "$dir/brew-version.txt" "$p/bin/brew" --version
+  HOMEBREW_NO_AUTO_UPDATE=1 w "$dir/brew-list-formula.txt" "$p/bin/brew" list --formula
+  HOMEBREW_NO_AUTO_UPDATE=1 w "$dir/brew-list-cask.txt" "$p/bin/brew" list --cask
+  HOMEBREW_NO_AUTO_UPDATE=1 w "$dir/brew-taps.txt" "$p/bin/brew" tap
+else
+  for f in brew-prefix brew-owner brew-mode brew-version brew-list-formula brew-list-cask brew-taps; do echo "(no Homebrew prefix)" >"$dir/$f.txt"; done
+fi
+[[ -f /etc/paths.d/homebrew ]] && cp /etc/paths.d/homebrew "$dir/paths-d-homebrew.txt" || echo "(absent)" >"$dir/paths-d-homebrew.txt"
+
+# --- runtimes and tools under $HOME -----------------------------------------
+w "$dir/mise-ls.txt" bootstrap_mise ls
+if command -v uv >/dev/null 2>&1; then w "$dir/uv-tool-list.txt" uv tool list
+elif bootstrap_mise which uv >/dev/null 2>&1; then w "$dir/uv-tool-list.txt" "$(bootstrap_mise which uv)" tool list
+else echo "(uv absent)" >"$dir/uv-tool-list.txt"; fi
+w "$dir/local-bin.txt" ls -1 "$HOME/.local/bin"
+w "$dir/chezmoi-source.txt" sed -n 's/^sourceDir *= *//p' "$HOME/.config/chezmoi/chezmoi.toml"
+w "$dir/path.txt" tr ':' '\n' <<<"$PATH"
+
+# --- accounts ---------------------------------------------------------------
+{
+  for u in $(dscl . -list /Users UniqueID | awk '$2 >= 500 {print $1}' | sort); do
+    adm="staff"; dseditgroup -o checkmember -m "$u" admin >/dev/null 2>&1 && adm="admin"
+    tok="$(sysadminctl -secureTokenStatus "$u" 2>&1 | grep -Eio 'Secure token is (ENABLED|DISABLED)' | tail -1)"
+    echo "  $u  $adm  ${tok:-SecureToken unknown}"
+  done
+} >"$dir/accounts.txt" 2>&1
+[[ -f /etc/pam.d/sudo_local ]] && cp /etc/pam.d/sudo_local "$dir/pam-sudo-local.txt" || echo "(absent)" >"$dir/pam-sudo-local.txt"
+
+# --- apps, agents, what runs at login ----------------------------------------
+ls_or_absent "$dir/applications.txt" /Applications
+ls_or_absent "$dir/launchagents-user.txt" "$HOME/Library/LaunchAgents"
+ls_or_absent "$dir/launchagents-system.txt" /Library/LaunchAgents
+ls_or_absent "$dir/launchdaemons.txt" /Library/LaunchDaemons
+w "$dir/launchctl-user.txt" bash -c 'launchctl list | awk "NR>1 && \$3 !~ /^com\\.apple\\./ {print \$3}" | sort'
+w "$dir/running-apps.txt" bash -c 'ps -axo comm= | grep -E "^/Applications/|^/System/Applications/" | sed "s|\.app/.*|.app|" | sort -u'
+w "$dir/login-items.txt" bash -c 'sfltool dumpbtm 2>/dev/null | grep -E "^\s*(Name|URL):" | paste - - | sort -u || echo "(sfltool dumpbtm needs a GUI session or sudo)"'
+
+# --- keyboard: the keys common writes, and anything a personal layer adds -----
+{
+  echo "== NSGlobalDomain (allowlist)"
+  for k in ApplePressAndHoldEnabled KeyRepeat InitialKeyRepeat AppleKeyboardUIMode \
+           NSAutomaticQuoteSubstitutionEnabled NSAutomaticDashSubstitutionEnabled \
+           NSAutomaticPeriodSubstitutionEnabled NSAutomaticSpellingCorrectionEnabled \
+           NSAutomaticCapitalizationEnabled AppleShowAllExtensions NSDocumentSaveNewDocumentsToCloud; do
+    echo "  $k: $(defaults read NSGlobalDomain "$k" 2>/dev/null || echo '(unset)')"
+  done
+  echo "== ByHost modifier mappings"
+  defaults -currentHost read -g 2>/dev/null | grep -A3 'com.apple.keyboard.modifiermapping' | sed 's/^/  /' || echo "  (none)"
+  echo "== hidutil UserKeyMapping"
+  /usr/bin/hidutil property --get UserKeyMapping 2>&1 | sed 's/^/  /'
+} >"$dir/keyboard.txt" 2>&1
+
+ls -1 "$HOME" >"$dir/home-top.txt" 2>&1
+[[ -f "$BOOTSTRAP_LOG" ]] && cp "$BOOTSTRAP_LOG" "$dir/bootstrap.log"
+
+{
+  echo "bootstrap baseline"
+  echo "  dir:   $dir"
+  echo "  user:  $(id -un)  ($(cat "$dir/brew-mode.txt"))"
+  echo "  host:  $(scutil --get LocalHostName 2>/dev/null || hostname)"
+  echo "  when:  $(date '+%Y-%m-%d %H:%M:%S %z')"
+  echo "  repo:  $repo @ $(git -C "$repo" rev-parse --short HEAD 2>/dev/null || echo '?')"
+  echo ""
+  echo "files:"; ls -1 "$dir" | sed 's/^/  /'
+} | tee "$dir/MANIFEST.txt"
+echo ""
+echo "compare: script/baseline --diff <older-dir> $dir"

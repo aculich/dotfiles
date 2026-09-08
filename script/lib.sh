@@ -39,6 +39,21 @@ bootstrap_is_owner() {
   [[ "$(bootstrap_brew_owner 2>/dev/null)" == "$(id -un)" ]]
 }
 
+# owner    : this login owns the prefix; brew runs directly
+# delegate : admin login; brew writes impersonate the owner via sudo -Hu
+# consumer : standard login (no sudo); runs bottled CLIs, never installs.
+#            script/setup applies dotfiles and wave 3 only (everything under $HOME).
+bootstrap_brew_mode() {
+  if bootstrap_is_owner; then echo owner
+  elif dseditgroup -o checkmember -m "$(id -un)" admin >/dev/null 2>&1; then echo delegate
+  else echo consumer
+  fi
+}
+
+bootstrap_is_consumer() {
+  [[ "$(bootstrap_brew_mode)" == consumer ]]
+}
+
 # brew as the prefix owner. Owner runs it directly; a delegate impersonates the
 # owner with sudo -H so the cache lands in the owner's home, never ours.
 # Environment we care about is passed explicitly because sudo resets it.

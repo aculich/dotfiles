@@ -25,6 +25,7 @@ home/dot_gitconfig
 home/dot_zprofile
 home/dot_zshrc
 justfile
+script/baseline
 script/lib.sh
 script/preflight
 script/setup

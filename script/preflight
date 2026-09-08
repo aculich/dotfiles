@@ -37,6 +37,19 @@ if softwareupdate -l 2>&1 | grep -q '^\*'; then
 fi
 fv="$(fdesetup status 2>/dev/null | head -1)"
 if [[ "$fv" == *"FileVault is On"* ]]; then ok "$fv"; else warn "${fv:-FileVault status unknown}; turn it on as the person (Strap does this on a new Mac)"; fi
+# Application firewall. Strap writes com.apple.alf globalstate, which macOS 15+
+# ignores; socketfilterfw is the working interface and needs sudo.
+fw="$(/usr/libexec/ApplicationFirewall/socketfilterfw --getglobalstate 2>/dev/null)"
+if [[ "$fw" == *enabled* ]]; then
+  ok "application firewall on"
+else
+  warn "application firewall off (Strap's defaults write is a no-op on this macOS)"
+  if (( fix )); then
+    if sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on >/dev/null 2>&1; then ok "firewall enabled"; else warn "could not enable firewall (needs an admin sudo)"; fi
+  else
+    echo "        fix: sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on   (or: script/preflight --fix)"
+  fi
+fi
 
 # --- Command Line Tools -------------------------------------------------------
 echo "== Xcode Command Line Tools"

@@ -13,7 +13,8 @@ fi
 # Owner is detected at every login, so this file is the same for every account.
 if [[ -n "${HOMEBREW_PREFIX:-}" ]]; then
   _brew_owner="$(stat -f %Su "$HOMEBREW_PREFIX" 2>/dev/null)"
-  if [[ -n "$_brew_owner" && "$_brew_owner" != "$USER" ]]; then
+  # Consumers (standard logins) get no wrapper: read-only brew works, installs fail by design.
+  if [[ -n "$_brew_owner" && "$_brew_owner" != "$USER" && " $(id -Gn) " == *" admin "* ]]; then
     export HOMEBREW_OWNER="$_brew_owner"
     brew() {
       sudo -Hu "$HOMEBREW_OWNER" env \
