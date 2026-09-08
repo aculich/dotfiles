@@ -1,7 +1,7 @@
 # AGENTS.md
 
 Guidance for AI coding agents working in this bootstrap repo (`me`). Rendered from
-[aculich/macos-setup-factory](https://github.com/aculich/macos-setup-factory) at commit `8d723a5`.
+[aculich/macos-setup-factory](https://github.com/aculich/macos-setup-factory) at commit `21c8d66`.
 
 ## What this repo is
 
@@ -10,7 +10,7 @@ A self-contained recipe for one login: the **common** layer (everything under `h
 ## Do NOT edit the common tree here
 
 - Do NOT edit files listed in `.factory-manifest`. They are re-rendered by `just reinit-org me` in the factory and your edit will be reverted in the next PR. Change the factory instead.
-- Do edit the overlay: `brew/40-*.Brewfile`, `home/dot_zshrc.local`, `script/org-setup`, README org section.
+- Do edit the overlay: `brew/40-*.Brewfile`, `home/dot_zshrc.local`, `script/org-setup`, `org.just` (imported by the common `justfile`), `layers/`, `docs/`, README org section.
 
 ## Placement test (common vs org vs personal)
 
@@ -38,7 +38,7 @@ A package is **heavy** when it adds more than 10 new packages to the closure or 
 
 ## Stale (Do NOT add)
 
-`exa` (use `eza`), `xsv` (use `miller` / `qsv` only for multi-GB), `ag` / `ack` (use `ripgrep`), `htop` beside `btop`, `ncdu` (use `dust` / `duf`), `nvm` / `pyenv` / `rbenv` / `asdf` (use `mise`), `pipx` (use `uv tool`), `mackup`, `tldr`, `youtube-dl` (use `yt-dlp` in a personal overlay), `homebrew/cask-versions` tap, a second `curl` / `zsh` / `git` from brew as the system one, `coreutils` on PATH ahead of BSD tools, `brew python@3.x` as an interpreter (mise pins Python), `cask "gemini"` (MacPaw, not Google).
+`exa` (use `eza`), `xsv` (use `miller` / `qsv` only for multi-GB), `ag` / `ack` (use `ripgrep`), `htop` beside `btop`, `ncdu` (use `dust` / `duf`), `nvm` / `pyenv` / `rbenv` / `asdf` (use `mise`), `pipx` (use `uv tool`), `mackup`, `tldr`, `youtube-dl` (use `yt-dlp` in a personal overlay), `homebrew/cask-versions` tap, a second `curl` / `zsh` / `git` from brew as the system one, `coreutils` on PATH ahead of BSD tools, `brew python@3.x` as an interpreter (mise pins Python), `cask "gemini"` (MacPaw, not Google), `moreutils` beside GNU `parallel` (both ship `parallel`).
 
 ## Voice
 

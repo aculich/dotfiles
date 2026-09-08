@@ -1,6 +1,7 @@
 # Wave 1: common system tools. Background. Small closures only (heavy rule in
 # AGENTS.md). iTerm2 is the team terminal; Ghostty is personal.
 # Do NOT add exa, xsv, ag, ack, htop-beside-btop, ncdu, tldr here (Stale list).
+# Do NOT add moreutils: its `parallel` conflicts with GNU parallel (measured 2026-09-08). sponge/ts/vidir are personal.
 
 brew "btop"
 brew "dust"
@@ -14,7 +15,6 @@ brew "git-delta"
 brew "xh"
 brew "pv"
 brew "parallel"
-brew "moreutils"
 brew "sd"
 brew "glow"
 brew "bash"

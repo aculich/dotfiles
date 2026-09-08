@@ -21,6 +21,7 @@ export HOMEBREW_NO_ENV_HINTS=1
 
 # --- background chain (waves 1-5) -------------------------------------------
 run_waves() {
+  export BOOTSTRAP_CHAIN=1
   echo $$ >"$BOOTSTRAP_PID"
   trap 'rm -f "$BOOTSTRAP_PID"; bootstrap_sudo_keepalive_stop' EXIT
   bootstrap_sudo_keepalive
@@ -35,15 +36,13 @@ run_waves() {
   for f in "$repo"/brew/3*.Brewfile; do [[ -f "$f" ]] && w4+=("$f"); done
   for f in "$repo"/brew/4*.Brewfile; do [[ -f "$f" ]] && w5+=("$f"); done
 
-  # prefetch wave 1 right away
-  bootstrap_brew_fetch_file "$repo/brew/10-common.Brewfile" &
-  local fetch_pid=$!
-
-  # waves 1 and 2
+  # waves 1 and 2: install N now; prefetch N+1 meanwhile (brew's per-file
+  # download locks make the two processes cooperate, never duplicate).
+  local fetch_pid=""
   local entry n file next
   for entry in "${waves[@]}"; do
     n="${entry%%|*}"; file="${entry#*|}"
-    wait "$fetch_pid" 2>/dev/null || true
+    [[ -n "$fetch_pid" ]] && { wait "$fetch_pid" 2>/dev/null || true; }
     case "$n" in
       1) next="$repo/brew/20-data-common.Brewfile" ;;
       2) next="${w4[0]:-}" ;;
@@ -56,8 +55,8 @@ run_waves() {
 
   # wave 3: runtimes via mise, then uv tools
   bootstrap_log "== wave 3 start (mise install, uv tools)"
-  if bootstrap_mise install -y 2>&1 | tee -a "$BOOTSTRAP_LOG"; then
-    BOOTSTRAP_SETUP= bash "$repo/home/.chezmoiscripts/run_onchange_after_30-uv-tools.sh" 2>&1 | tee -a "$BOOTSTRAP_LOG" || true
+  if bootstrap_mise install -y 2>&1 | _bootstrap_out; then
+    BOOTSTRAP_SETUP= bash "$repo/home/.chezmoiscripts/run_onchange_after_30-uv-tools.sh" 2>&1 | _bootstrap_out || true
   else
     bootstrap_log "!! mise install failed; uv tools skipped"
   fi
@@ -73,7 +72,7 @@ run_waves() {
     [[ -n "$fetch_pid" ]] && { wait "$fetch_pid" 2>/dev/null || true; }
   done
   if command -v whatbroke >/dev/null 2>&1 || [[ -x /opt/homebrew/bin/whatbroke ]]; then
-    "${HOMEBREW_PREFIX:-/opt/homebrew}/bin/whatbroke" install >>"$BOOTSTRAP_LOG" 2>&1 || true
+    "${HOMEBREW_PREFIX:-/opt/homebrew}/bin/whatbroke" install 2>&1 | _bootstrap_out || true
     bootstrap_log "whatbroke daily snapshot installed for $(id -un)"
   fi
   bootstrap_log "== wave 4 done"
@@ -85,11 +84,11 @@ run_waves() {
   done
   if [[ -x "$repo/script/org-setup" ]]; then
     bootstrap_log "script/org-setup"
-    "$repo/script/org-setup" 2>&1 | tee -a "$BOOTSTRAP_LOG" || bootstrap_log "!! org-setup had failures"
+    "$repo/script/org-setup" 2>&1 | _bootstrap_out || bootstrap_log "!! org-setup had failures"
   fi
   if [[ -d "$HOME/src/dotfiles-private" && -f "$repo/justfile" ]] && grep -q '^apply-private' "$repo/justfile"; then
     bootstrap_log "just apply-private"
-    (cd "$repo" && just apply-private) 2>&1 | tee -a "$BOOTSTRAP_LOG" || bootstrap_log "!! apply-private had failures"
+    (cd "$repo" && just apply-private) 2>&1 | _bootstrap_out || bootstrap_log "!! apply-private had failures"
   fi
   bootstrap_log "== wave 5 done"
   bootstrap_log "== chain complete. Summary:"

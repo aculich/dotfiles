@@ -3,6 +3,9 @@
 
 set shell := ["bash", "-euo", "pipefail", "-c"]
 
+# Org overlay recipes live in org.just (not re-rendered by the factory).
+import? "org.just"
+
 repo := justfile_directory()
 log_dir := env_var('HOME') + "/Library/Logs/bootstrap"
 

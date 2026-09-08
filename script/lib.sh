@@ -7,9 +7,14 @@ BOOTSTRAP_LOG_DIR="$HOME/Library/Logs/bootstrap"
 BOOTSTRAP_PID="$BOOTSTRAP_LOG_DIR/current.pid"
 BOOTSTRAP_LOG="$BOOTSTRAP_LOG_DIR/$(date +%Y-%m-%d).log"
 
+# Inside the background chain stdout IS the log file, so do not tee twice.
+_bootstrap_out() {
+  if [[ -n "${BOOTSTRAP_CHAIN:-}" ]]; then cat; else tee -a "$BOOTSTRAP_LOG"; fi
+}
+
 bootstrap_log() {
   mkdir -p "$BOOTSTRAP_LOG_DIR"
-  printf '[%s] %s\n' "$(date '+%H:%M:%S')" "$*" | tee -a "$BOOTSTRAP_LOG"
+  printf '[%s] %s\n' "$(date '+%H:%M:%S')" "$*" | _bootstrap_out
 }
 
 bootstrap_die() {
@@ -57,7 +62,7 @@ bootstrap_brew_bundle() {
   local file="$1"
   [[ -f "$file" ]] || bootstrap_die "no Brewfile: $file"
   bootstrap_log "brew bundle  $(basename "$file")"
-  bootstrap_brew bundle install --file=- <"$file" 2>&1 | tee -a "$BOOTSTRAP_LOG"
+  bootstrap_brew bundle install --file=- <"$file" 2>&1 | _bootstrap_out
   return "${PIPESTATUS[0]}"
 }
 
