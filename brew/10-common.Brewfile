@@ -23,3 +23,7 @@ brew "trash"
 brew "gitleaks"
 
 cask "iterm2"
+# Menu-bar system monitor (https://github.com/exelban/stats). Counterpart to
+# `btop` in this file. Standalone cask, no heavy closure. Ice (hides icons)
+# stays personal; this is the monitor every login on the machine can open.
+cask "stats"
