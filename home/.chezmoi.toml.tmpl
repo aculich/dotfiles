@@ -1,5 +1,9 @@
 # Written to ~/.config/chezmoi/chezmoi.toml on `chezmoi init`. No prompts:
 # identity (git name/email) is the personal or org overlay's job, not common.
+# sourceDir is pinned to this clone (the git working tree, above home/), so a
+# plain `chezmoi apply` / `chezmoi diff` works without --source.
+sourceDir = {{ .chezmoi.workingTree | quote }}
+
 [data]
     org = "me"
     recipe = "https://github.com/aculich/dotfiles"

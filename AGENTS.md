@@ -1,7 +1,7 @@
 # AGENTS.md
 
 Guidance for AI coding agents working in this bootstrap repo (`me`). Rendered from
-[aculich/macos-setup-factory](https://github.com/aculich/macos-setup-factory) at commit `60d081f`.
+[aculich/macos-setup-factory](https://github.com/aculich/macos-setup-factory) at commit `916bae4`.
 
 ## What this repo is
 
