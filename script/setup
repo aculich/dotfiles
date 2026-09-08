@@ -80,7 +80,7 @@ run_waves() {
 
   # wave 5: org overlay (brew/4*.Brewfile, script/org-setup), or personal overlay for me
   bootstrap_log "== wave 5 start"
-  for f in "${w5[@]}"; do
+  for f in ${w5[@]+"${w5[@]}"}; do
     bootstrap_brew_bundle "$f" || bootstrap_log "!! $(basename "$f") had failures; continuing"
   done
   if [[ -x "$repo/script/org-setup" ]]; then
@@ -142,10 +142,18 @@ bootstrap_brew_bundle "$repo/brew/00-shell.Brewfile" || bootstrap_log "!! wave 0
 bootstrap_log "== wave 0 done"
 bootstrap_sudo_keepalive_stop
 
-# hand off waves 1-5
-nohup bash "$repo/script/setup" --waves >>"$BOOTSTRAP_LOG" 2>&1 &
-disown
-sleep 1
+# hand off waves 1-5 in their own session so closing this terminal (or a
+# parent that kills its process group) cannot take the chain down with it.
+if command -v perl >/dev/null 2>&1; then
+  perl -e 'use POSIX; POSIX::setsid(); exec @ARGV' -- bash "$repo/script/setup" --waves >>"$BOOTSTRAP_LOG" 2>&1 &
+elif command -v python3 >/dev/null 2>&1; then
+  python3 -c 'import os,sys; os.setsid(); os.execvp(sys.argv[1], sys.argv[1:])' bash "$repo/script/setup" --waves >>"$BOOTSTRAP_LOG" 2>&1 &
+else
+  nohup bash "$repo/script/setup" --waves >>"$BOOTSTRAP_LOG" 2>&1 &
+fi
+disown 2>/dev/null || true
+sleep 2
+bootstrap_chain_running || bootstrap_log "!! background chain did not start; run: bash $repo/script/setup --waves"
 
 cat <<EOF
 
