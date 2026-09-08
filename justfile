@@ -38,8 +38,10 @@ status mode="":
     [[ -f "$BOOTSTRAP_LOG" ]] && tail -n 5 "$BOOTSTRAP_LOG" | sed 's/^/  /'
     echo ""
     for f in "{{repo}}"/brew/[0-4]*.Brewfile; do
-        if bootstrap_brew_bundle_check "$f"; then printf '  ok       %s\n' "$(basename "$f")"; else printf '  MISSING  %s\n' "$(basename "$f")"; fi
+        if bootstrap_brew_bundle_check "$f"; then printf '  ok       %s\n' "$(basename "$f")"; else printf '  unmet    %s\n' "$(basename "$f")"; fi
     done
+    echo ""
+    echo "unmet = a package is not installed OR a cask has a newer version (brew bundle check --verbose --file=brew/<name>.Brewfile)"
 
 # Same as `just status wait`
 status-wait:
@@ -112,6 +114,10 @@ bench:
     else
         for i in 1 2 3 4 5; do /usr/bin/time -p zsh -i -c exit 2>&1 | awk '/real/{print $2 " s"}'; done
     fi
+
+# Darwin inventory for this login -> ~/Library/Logs/bootstrap/baseline-<stamp>/ (keep them; archive privately)
+baseline *args:
+    @"{{repo}}/script/baseline" {{args}}
 
 # Drift: what changed since the last whatbroke snapshot
 drift:

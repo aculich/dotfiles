@@ -2,9 +2,15 @@
 # Identity is NOT here. One writer per login: the personal overlay (me) or the
 # org overlay (team logins) writes ~/.config/git/identity with user.name /
 # user.email. Git ignores a missing include, so this file is safe at t=0.
+#
+# This file is owned by chezmoi: anything a tool writes here with
+# `git config --global` (Strap's github.user, gh's credential lines, ...) is
+# reverted on the next apply. Put machine-local keys in ~/.config/git/local:
+#   git config --file ~/.config/git/local github.user NAME
 
 [include]
 	path = ~/.config/git/identity
+	path = ~/.config/git/local
 
 [init]
 	defaultBranch = main
