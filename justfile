@@ -77,8 +77,9 @@ apply-private:
     src="$HOME/src/dotfiles-private"
     [[ -d "$src" ]] || { echo "no $src; clone aculich/dotfiles-private first" >&2; exit 1; }
     cfg="$HOME/.config/chezmoi/private.toml"
+    if [[ ! -f "$cfg" && -x "$src/script/setup" ]]; then "$src/script/setup"; fi
     [[ -f "$cfg" ]] || { echo "no $cfg; see dotfiles-private README" >&2; exit 1; }
-    chezmoi apply --config "$cfg" --source "$src"
+    chezmoi --config "$cfg" apply --force
     if [[ -f "$src/brew/personal.Brewfile" ]]; then
         . "{{repo}}/script/lib.sh"
         bootstrap_brew_bundle "$src/brew/personal.Brewfile"
