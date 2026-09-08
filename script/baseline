@@ -36,6 +36,20 @@ ts="$(date '+%Y%m%d-%H%M%S')"
 dir="$BOOTSTRAP_LOG_DIR/baseline-$ts"
 mkdir -p "$dir"
 w() { local dest="$1"; shift; { "$@"; } >"$dest" 2>&1 || true; }
+# Some Apple CLIs hang (defaults domains scans every container; osascript waits
+# on a TCC Automation click). Never block a baseline on that.
+w_timeout() {
+  local dest="$1" secs="$2"; shift 2
+  python3 -c '
+import subprocess, sys
+secs, dest, cmd = int(sys.argv[1]), sys.argv[2], sys.argv[3:]
+try:
+    r = subprocess.run(cmd, capture_output=True, timeout=secs, text=True)
+    open(dest, "w").write(r.stdout + r.stderr)
+except subprocess.TimeoutExpired:
+    open(dest, "w").write("(timed out after %ss: %s)\n" % (secs, " ".join(cmd)))
+' "$secs" "$dest" "$@" || echo "(failed: $*)" >"$dest"
+}
 ls_or_absent() { if [[ -d "$2" ]]; then ls -1 "$2" >"$1" 2>&1; else echo "(absent: $2)" >"$1"; fi; }
 
 # --- system -----------------------------------------------------------------
@@ -48,8 +62,8 @@ if [[ -d /Applications/Xcode.app ]]; then
 else echo "(no /Applications/Xcode.app)" >"$dir/xcode-version.txt"; fi
 w "$dir/filevault.txt" fdesetup status
 w "$dir/firewall.txt" /usr/libexec/ApplicationFirewall/socketfilterfw --getglobalstate
-w "$dir/pkgutil-pkgs.txt" pkgutil --pkgs
-w "$dir/defaults-domains.txt" defaults domains
+w_timeout "$dir/pkgutil-pkgs.txt" 20 pkgutil --pkgs
+w_timeout "$dir/defaults-domains.txt" 15 defaults domains
 
 # --- homebrew ---------------------------------------------------------------
 if p="$(bootstrap_brew_prefix)"; then
@@ -95,7 +109,7 @@ w "$dir/running-apps.txt" bash -c 'ps -axo comm= | grep -E "^/Applications/|^/Sy
 # The full Background Task Management list is `sfltool dumpbtm`. Unprivileged
 # dumpbtm uses Authorization Services (password dialog, no Touch ID). Root does
 # not. Use sudo only when it is already cached so a baseline never prompts.
-w "$dir/login-items.txt" bash -c 'osascript -e "tell application \"System Events\" to get the name of every login item" 2>/dev/null | tr "," "\n" | sed "s/^ *//" || echo "(none)"'
+w_timeout "$dir/login-items.txt" 10 osascript -e 'tell application "System Events" to get the name of every login item'
 if sudo -n true 2>/dev/null; then
   w "$dir/login-items-btm.txt" bash -c 'sudo -n sfltool dumpbtm 2>/dev/null | grep -E "^\s*(Name|URL):" | paste - - | sort -u'
 else
