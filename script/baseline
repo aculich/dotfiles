@@ -91,13 +91,15 @@ ls_or_absent "$dir/launchagents-system.txt" /Library/LaunchAgents
 ls_or_absent "$dir/launchdaemons.txt" /Library/LaunchDaemons
 w "$dir/launchctl-user.txt" bash -c 'launchctl list | awk "NR>1 && \$3 !~ /^com\\.apple\\./ {print \$3}" | sort'
 w "$dir/running-apps.txt" bash -c 'ps -axo comm= | grep -E "^/Applications/|^/System/Applications/" | sed "s|\.app/.*|.app|" | sort -u'
-# Login Items live in the BTM database. Unprivileged `sfltool dumpbtm` raises a
-# password dialog (Authorization Services, no Touch ID); root does not. Use sudo
-# only when it is already cached, so a baseline never prompts on its own.
+# Login Items: System Events is unprivileged (user's own Login Items only).
+# The full Background Task Management list is `sfltool dumpbtm`. Unprivileged
+# dumpbtm uses Authorization Services (password dialog, no Touch ID). Root does
+# not. Use sudo only when it is already cached so a baseline never prompts.
+w "$dir/login-items.txt" bash -c 'osascript -e "tell application \"System Events\" to get the name of every login item" 2>/dev/null | tr "," "\n" | sed "s/^ *//" || echo "(none)"'
 if sudo -n true 2>/dev/null; then
-  w "$dir/login-items.txt" bash -c 'sudo -n sfltool dumpbtm 2>/dev/null | grep -E "^\s*(Name|URL):" | paste - - | sort -u'
+  w "$dir/login-items-btm.txt" bash -c 'sudo -n sfltool dumpbtm 2>/dev/null | grep -E "^\s*(Name|URL):" | paste - - | sort -u'
 else
-  echo "(skipped: run  sudo sfltool dumpbtm  yourself; Touch ID via pam_tid, no GUI dialog)" >"$dir/login-items.txt"
+  echo "(skipped: unprivileged dumpbtm opens a password dialog. In Terminal.app: sudo sfltool dumpbtm  # Touch ID via pam_tid)" >"$dir/login-items-btm.txt"
 fi
 
 # --- keyboard: the keys common writes, and anything a personal layer adds -----
