@@ -58,7 +58,9 @@ bundle layer:
     fi
     f="{{repo}}/brew/{{layer}}.Brewfile"
     [[ -f "$f" ]] || f="$(ls "{{repo}}"/brew/*-{{layer}}.Brewfile 2>/dev/null | head -1)"
-    [[ -f "$f" ]] || { echo "no such layer: {{layer}}  (ls brew/)" >&2; exit 1; }
+    # A personal overlay may carry its own opt-in layers (e.g. keyboard-hid).
+    [[ -f "$f" ]] || f="$HOME/src/dotfiles-private/brew/{{layer}}.Brewfile"
+    [[ -f "$f" ]] || { echo "no such layer: {{layer}}  (ls brew/ and ~/src/dotfiles-private/brew/)" >&2; exit 1; }
     bootstrap_sudo_keepalive
     bootstrap_brew_bundle "$f"
 
@@ -113,4 +115,4 @@ bench:
 
 # Drift: what changed since the last whatbroke snapshot
 drift:
-    whatbroke diff || echo "whatbroke not installed yet (wave 4)"
+    whatbroke today || echo "whatbroke not installed yet (wave 4)"
