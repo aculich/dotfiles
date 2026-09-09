@@ -88,6 +88,9 @@ apply-private:
         . "{{repo}}/script/lib.sh"
         bootstrap_brew_bundle "$src/brew/personal.Brewfile"
     fi
+    if [[ -x "$src/script/prefs" ]]; then
+        "$src/script/prefs" apply
+    fi
 
 # Doctor: brew owner, chezmoi, mise, shell startup
 doctor:
