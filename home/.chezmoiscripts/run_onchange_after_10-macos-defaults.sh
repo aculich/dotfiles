@@ -67,4 +67,11 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 # --- GNU parallel citation nag (parallel ships in wave 1) -------------------
 mkdir -p "$HOME/.parallel" && touch "$HOME/.parallel/will-cite"
 
-log "done (typing, extensions, panels, save-to-disk, will-cite). Log out/in for Caps Lock to match the GUI."
+# --- Fast User Switching extra (per login; machine flag is set by apply) ------
+# Show the short account name in the menu bar so you can switch without hunting
+# Control Center. 2 = menu bar; 1 = account name (not full name, not icon).
+defaults write NSGlobalDomain userMenuExtraStyle -int 1
+defaults -currentHost write com.apple.controlcenter UserSwitcher -int 2
+killall ControlCenter 2>/dev/null || true
+
+log "done (typing, extensions, panels, save-to-disk, will-cite, FUS name in menu bar). Log out/in for Caps Lock to match the GUI."
