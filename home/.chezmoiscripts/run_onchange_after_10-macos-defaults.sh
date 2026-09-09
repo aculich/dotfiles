@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # Common login defaults. Runs for the person and for every team* login.
 # Scope: keys every account on this team wants and nobody argues about.
-# Dock, Finder, tiling, hot corners are PERSONAL (dotfiles-private) or an
-# explicit org exception (RRID Chrome-only). Karabiner never maps Caps Lock in
-# any team file: this ByHost mapping is the one writer.
+# Dock *appearance*, Finder, tiling, hot corners are PERSONAL (dotfiles-private).
+# Dock *contents* and login items are script/dock + script/login-keep (decision 65).
+# Karabiner never maps Caps Lock in any team file: this ByHost mapping is the one writer.
 # Idempotent; chezmoi re-runs it only when this file changes.
 set -euo pipefail
 

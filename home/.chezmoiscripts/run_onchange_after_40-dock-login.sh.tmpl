@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# Re-apply Dock + login allowlist when a profile YAML changes.
+# script/setup owns the first run (BOOTSTRAP_SETUP=1); this hook is day-2.
+# Hashes so chezmoi re-runs on profile edit:
+# {{ include "../dock/team.yaml" | sha256sum }}
+# {{ include "../dock/ern.yaml" | sha256sum }}
+# {{ include "../dock/cidr.yaml" | sha256sum }}
+# {{ include "../dock/rrid.yaml" | sha256sum }}
+# {{ include "../dock/demo.yaml" | sha256sum }}
+# {{ include "../login/team.yaml" | sha256sum }}
+# {{ include "../login/ern.yaml" | sha256sum }}
+# {{ include "../login/cidr.yaml" | sha256sum }}
+# {{ include "../login/rrid.yaml" | sha256sum }}
+# {{ include "../login/demo.yaml" | sha256sum }}
+set -euo pipefail
+
+if [[ -n "${BOOTSTRAP_SETUP:-}" ]]; then
+  exit 0
+fi
+
+repo="{{ .chezmoi.sourceDir }}/.."
+export PATH="${HOMEBREW_PREFIX:-/opt/homebrew}/bin:/opt/homebrew/bin:$PATH"
+[[ -x "$repo/script/dock" ]] && "$repo/script/dock" apply || true
+[[ -x "$repo/script/login-keep" ]] && "$repo/script/login-keep" apply || true

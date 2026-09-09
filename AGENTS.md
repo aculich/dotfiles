@@ -16,7 +16,7 @@ A self-contained recipe for one login: the **common** layer (everything under `h
 
 - Do put a tool in **common** only if every team needs it on day one and its closure is small.
 - Do put a tool in the **org overlay** when one team needs it (`brew/40-me.Brewfile`).
-- Do put Dock, Finder, window tiling, hot corners, paid casks, and your terminal of choice in the **personal** overlay, never here. iTerm2 is the team terminal; Ghostty is personal.
+- Do put a **team-minimal Dock** and an **empty login-item allowlist** here (`dock/*.yaml`, `login/*.yaml`). Rich Dock order and login allowlist stay in the **personal** overlay. Finder appearance, tilers, hot corners, paid casks, and your terminal of choice stay personal. iTerm2 is the team terminal; Ghostty is personal.
 
 ## Heavy rule
 

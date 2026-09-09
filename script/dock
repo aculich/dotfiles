@@ -1,0 +1,106 @@
+#!/usr/bin/env bash
+# Replace the Dock with a declared profile. Missing apps are skipped.
+#   script/dock apply [profile]
+#   script/dock list
+# Profile auto-pick: $DOCK_PROFILE, then private dock/me.yaml (login me),
+# then $repo/dock/$USER.yaml, dock/org.yaml, dock/team.yaml.
+set -euo pipefail
+repo="$(cd "$(dirname "$0")/.." && pwd)"
+# shellcheck source=lib.sh
+. "$repo/script/lib.sh"
+export PATH="${HOMEBREW_PREFIX:-/opt/homebrew}/bin:/opt/homebrew/bin:$PATH"
+
+log() { printf 'dock: %s\n' "$*"; }
+
+resolve_profile() {
+  local named="${1:-}"
+  if [[ -n "$named" ]]; then
+    if [[ -f "$named" ]]; then echo "$named"; return; fi
+    if [[ -f "$HOME/src/dotfiles-private/dock/${named}.yaml" ]]; then
+      echo "$HOME/src/dotfiles-private/dock/${named}.yaml"; return
+    fi
+    if [[ -f "$repo/dock/${named}.yaml" ]]; then echo "$repo/dock/${named}.yaml"; return; fi
+    echo "dock: no profile named $named" >&2
+    return 1
+  fi
+  if [[ -n "${DOCK_PROFILE:-}" && -f "$DOCK_PROFILE" ]]; then echo "$DOCK_PROFILE"; return; fi
+  if [[ "$(id -un)" == "me" && -f "$HOME/src/dotfiles-private/dock/me.yaml" ]]; then
+    echo "$HOME/src/dotfiles-private/dock/me.yaml"; return
+  fi
+  if [[ -f "$repo/dock/$(id -un).yaml" ]]; then echo "$repo/dock/$(id -un).yaml"; return; fi
+  if [[ -f "$repo/dock/org.yaml" ]]; then echo "$repo/dock/org.yaml"; return; fi
+  echo "$repo/dock/team.yaml"
+}
+
+resolve_app() {
+  local n="$1"
+  n="${n/#\~/$HOME}"
+  [[ -d "$n" ]] && { echo "$n"; return; }
+  local c
+  for c in \
+    "/Applications/${n}.app" \
+    "/Applications/${n}" \
+    "/System/Applications/${n}.app" \
+    "/System/Library/CoreServices/${n}.app" \
+    "/System/Cryptexes/App/System/Applications/${n}.app" \
+    "/System/Volumes/Preboot/Cryptexes/App/System/Applications/${n}.app"
+  do
+    [[ -d "$c" ]] && { echo "$c"; return; }
+  done
+  return 1
+}
+
+need_dockutil() {
+  if command -v dockutil >/dev/null 2>&1; then return 0; fi
+  log "dockutil missing (wave 1). just bundle 10-common"
+  return 1
+}
+
+cmd_list() {
+  need_dockutil || return 1
+  dockutil --list
+}
+
+cmd_apply() {
+  need_dockutil || return 1
+  local profile yq
+  profile="$(resolve_profile "${1:-}")"
+  yq="$(command -v yq || true)"
+  [[ -n "$yq" ]] || { log "yq missing (wave 2); cannot read $profile"; return 1; }
+  log "profile $profile"
+
+  dockutil --remove all --no-restart >/dev/null
+  local name path
+  while IFS= read -r name; do
+    [[ -z "$name" || "$name" == null ]] && continue
+    if path="$(resolve_app "$name")"; then
+      dockutil --add "$path" --no-restart >/dev/null
+      log "  + $path"
+    else
+      log "  skip $name (not installed)"
+    fi
+  done < <("$yq" -r '.apps[]?' "$profile")
+
+  while IFS= read -r name; do
+    [[ -z "$name" || "$name" == null ]] && continue
+    name="${name/#\~/$HOME}"
+    if [[ -e "$name" ]]; then
+      dockutil --add "$name" --view list --display folder --sort name --no-restart >/dev/null
+      log "  + folder $name"
+    else
+      log "  skip folder $name"
+    fi
+  done < <("$yq" -r '.folders[]?' "$profile")
+
+  if [[ "$("$yq" -r '.show_recents // "false"' "$profile")" == "false" ]]; then
+    defaults write com.apple.dock show-recents -bool false
+  fi
+  killall Dock 2>/dev/null || true
+  log "applied"
+}
+
+case "${1:-apply}" in
+  list) cmd_list ;;
+  apply) shift || true; cmd_apply "${1:-}" ;;
+  *) echo "usage: script/dock apply [profile] | list" >&2; exit 2 ;;
+esac

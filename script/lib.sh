@@ -136,3 +136,21 @@ bootstrap_mise() {
 bootstrap_chain_running() {
   [[ -f "$BOOTSTRAP_PID" ]] && kill -0 "$(cat "$BOOTSTRAP_PID")" 2>/dev/null
 }
+
+# Dock wipe + login-item allowlist. Runs at the end of wave 5 (and the
+# consumer path) so dockutil, yq, and the personal overlay already exist.
+# Missing tools or YAML: each script logs and returns non-zero; we continue.
+bootstrap_apply_dock_login() {
+  local repo="${1:-}"
+  if [[ -z "$repo" ]]; then
+    repo="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+  fi
+  if [[ -x "$repo/script/dock" ]]; then
+    bootstrap_log "script/dock apply"
+    "$repo/script/dock" apply 2>&1 | _bootstrap_out || bootstrap_log "!! dock apply skipped"
+  fi
+  if [[ -x "$repo/script/login-keep" ]]; then
+    bootstrap_log "script/login-keep apply"
+    "$repo/script/login-keep" apply 2>&1 | _bootstrap_out || bootstrap_log "!! login-keep apply skipped"
+  fi
+}

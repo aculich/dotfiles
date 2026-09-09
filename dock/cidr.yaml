@@ -1,0 +1,10 @@
+# cidr login: same as ern (RStudio required; Positron is extra, not Dock).
+apps:
+  - Finder
+  - iTerm
+  - Cursor
+  - RStudio
+  - Safari
+folders:
+  - ~/Downloads
+show_recents: false

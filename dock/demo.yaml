@@ -1,0 +1,9 @@
+# demo consumer login: lean, no extra casks assumed.
+apps:
+  - Finder
+  - iTerm
+  - Cursor
+  - Safari
+folders:
+  - ~/Downloads
+show_recents: false

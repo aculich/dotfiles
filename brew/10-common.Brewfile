@@ -21,6 +21,8 @@ brew "bash"
 brew "git-lfs"
 brew "trash"
 brew "gitleaks"
+# Dock cleaner: every login wipes Apple junk and applies dock/<profile>.yaml.
+brew "dockutil"
 
 cask "iterm2"
 # Menu-bar system monitor (https://github.com/exelban/stats). Counterpart to

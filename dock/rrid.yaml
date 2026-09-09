@@ -1,0 +1,9 @@
+# rrid login: Chrome-only browser (Safari stays installed, not in the Dock).
+apps:
+  - Finder
+  - iTerm
+  - Cursor
+  - Google Chrome
+folders:
+  - ~/Downloads
+show_recents: false

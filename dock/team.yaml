@@ -1,0 +1,11 @@
+# Default team login Dock. Apple junk is wiped. Missing apps are skipped.
+# Override per login with dock/<user>.yaml or dock/org.yaml, or personal
+# ~/src/dotfiles-private/dock/me.yaml on the me login.
+apps:
+  - Finder
+  - iTerm
+  - Cursor
+  - Safari
+folders:
+  - ~/Downloads
+show_recents: false

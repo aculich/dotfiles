@@ -49,6 +49,7 @@ run_waves() {
       bootstrap_log "script/org-setup"
       "$repo/script/org-setup" 2>&1 | _bootstrap_out || bootstrap_log "!! org-setup had failures"
     fi
+    bootstrap_apply_dock_login
     bootstrap_log "== chain complete (consumer). Installed tools come from the brew owner; ask them for anything missing."
     return 0
   fi
@@ -118,6 +119,7 @@ run_waves() {
     bootstrap_log "just apply-private"
     (cd "$repo" && just apply-private) 2>&1 | _bootstrap_out || bootstrap_log "!! apply-private had failures"
   fi
+  bootstrap_apply_dock_login "$repo"
   bootstrap_log "== wave 5 done"
   bootstrap_log "== chain complete. Summary:"
   for f in "$repo"/brew/[0-4]*.Brewfile; do

@@ -112,6 +112,11 @@ w "$dir/running-apps.txt" bash -c 'ps -axo comm= | grep -E "^/Applications/|^/Sy
 # dumpbtm uses Authorization Services (password dialog, no Touch ID). Root does
 # not. Use sudo only when it is already cached so a baseline never prompts.
 w_timeout "$dir/login-items.txt" 10 osascript -e 'tell application "System Events" to get the name of every login item'
+if command -v dockutil >/dev/null 2>&1; then
+  w "$dir/dock.txt" dockutil --list
+else
+  echo "(dockutil not installed)" >"$dir/dock.txt"
+fi
 if sudo -n true 2>/dev/null; then
   w "$dir/login-items-btm.txt" bash -c 'sudo -n sfltool dumpbtm 2>/dev/null | grep -E "^\s*(Name|URL):" | paste - - | sort -u'
 else

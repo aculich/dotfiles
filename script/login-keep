@@ -1,0 +1,97 @@
+#!/usr/bin/env bash
+# System Events login items = allowlist. Everything else is deleted.
+# Does NOT touch LaunchAgents (AltTab, Stats, whatbroke) or SMAppService
+# helpers (those are script/vendors-quiet in the personal overlay).
+#   script/login-keep apply [profile]
+#   script/login-keep list
+set -euo pipefail
+repo="$(cd "$(dirname "$0")/.." && pwd)"
+# shellcheck source=lib.sh
+. "$repo/script/lib.sh"
+export PATH="${HOMEBREW_PREFIX:-/opt/homebrew}/bin:/opt/homebrew/bin:$PATH"
+
+log() { printf 'login-keep: %s\n' "$*"; }
+
+resolve_profile() {
+  local named="${1:-}"
+  if [[ -n "$named" ]]; then
+    if [[ -f "$named" ]]; then echo "$named"; return; fi
+    if [[ -f "$HOME/src/dotfiles-private/login/${named}.yaml" ]]; then
+      echo "$HOME/src/dotfiles-private/login/${named}.yaml"; return
+    fi
+    if [[ -f "$repo/login/${named}.yaml" ]]; then echo "$repo/login/${named}.yaml"; return; fi
+    echo "login-keep: no profile named $named" >&2
+    return 1
+  fi
+  if [[ -n "${LOGIN_PROFILE:-}" && -f "$LOGIN_PROFILE" ]]; then echo "$LOGIN_PROFILE"; return; fi
+  if [[ "$(id -un)" == "me" && -f "$HOME/src/dotfiles-private/login/me.yaml" ]]; then
+    echo "$HOME/src/dotfiles-private/login/me.yaml"; return
+  fi
+  if [[ -f "$repo/login/$(id -un).yaml" ]]; then echo "$repo/login/$(id -un).yaml"; return; fi
+  if [[ -f "$repo/login/org.yaml" ]]; then echo "$repo/login/org.yaml"; return; fi
+  echo "$repo/login/team.yaml"
+}
+
+live_items() {
+  osascript -e 'tell application "System Events" to get the name of every login item' 2>/dev/null \
+    | tr ',' '\n' | sed 's/^ *//; s/ *$//' | grep -v '^$' || true
+}
+
+app_path() {
+  local n="$1"
+  local c
+  for c in "/Applications/${n}.app" "/Applications/${n}" "/System/Applications/${n}.app"; do
+    [[ -d "$c" ]] && { echo "$c"; return; }
+  done
+  return 1
+}
+
+cmd_list() {
+  live_items | sed 's/^/  /'
+}
+
+cmd_apply() {
+  local profile yq
+  profile="$(resolve_profile "${1:-}")"
+  yq="$(command -v yq || true)"
+  [[ -n "$yq" ]] || { log "yq missing (wave 2); cannot read $profile"; return 1; }
+  log "profile $profile"
+
+  local allow="" name
+  while IFS= read -r name; do
+    [[ -z "$name" || "$name" == null ]] && continue
+    allow="${allow}"$'\n'"${name}"
+  done < <("$yq" -r '.allow[]?' "$profile")
+
+  local live
+  live="$(live_items)"
+  while IFS= read -r name; do
+    [[ -z "$name" ]] && continue
+    if ! printf '%s\n' "$allow" | grep -qxF "$name"; then
+      osascript -e "tell application \"System Events\" to delete (every login item whose name is \"${name}\")" >/dev/null 2>&1 || true
+      log "  - $name"
+    fi
+  done <<<"$live"
+
+  while IFS= read -r name; do
+    [[ -z "$name" ]] && continue
+    if printf '%s\n' "$(live_items)" | grep -qxF "$name"; then
+      log "  keep $name"
+      continue
+    fi
+    local path
+    if path="$(app_path "$name")"; then
+      osascript -e "tell application \"System Events\" to make login item at end with properties {path:\"${path}\", hidden:false}" >/dev/null
+      log "  + $name"
+    else
+      log "  skip $name (not installed)"
+    fi
+  done <<<"$allow"
+  log "applied"
+}
+
+case "${1:-apply}" in
+  list) cmd_list ;;
+  apply) shift || true; cmd_apply "${1:-}" ;;
+  *) echo "usage: script/login-keep apply [profile] | list" >&2; exit 2 ;;
+esac

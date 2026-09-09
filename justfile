@@ -66,6 +66,14 @@ bundle layer:
     bootstrap_sudo_keepalive
     bootstrap_brew_bundle "$f"
 
+# Wipe Apple Dock junk and apply the profile YAML (dock/<user>.yaml or private dock/me.yaml)
+dock *args:
+    "{{repo}}/script/dock" {{args}}
+
+# System Events login items = allowlist (login/<user>.yaml or private login/me.yaml)
+login-keep *args:
+    "{{repo}}/script/login-keep" {{args}}
+
 # Re-apply dotfiles from this repo (hooks re-run only when their inputs changed)
 apply:
     chezmoi apply --source {{repo}}
@@ -91,6 +99,11 @@ apply-private:
     if [[ -x "$src/script/prefs" ]]; then
         "$src/script/prefs" apply
     fi
+    if [[ -x "$src/script/vendors-quiet" ]]; then
+        "$src/script/vendors-quiet" || true
+    fi
+    "{{repo}}/script/dock" apply || true
+    "{{repo}}/script/login-keep" apply || true
 
 # Doctor: brew owner, chezmoi, mise, shell startup
 doctor:

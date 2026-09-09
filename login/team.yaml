@@ -1,0 +1,3 @@
+# Team logins: no System Events login items. Do NOT auto-start vendor apps.
+# LaunchAgents (whatbroke) stay; they are not this list.
+allow: []
