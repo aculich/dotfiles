@@ -104,6 +104,8 @@ ls_or_absent "$dir/launchagents-user.txt" "$HOME/Library/LaunchAgents"
 ls_or_absent "$dir/launchagents-system.txt" /Library/LaunchAgents
 ls_or_absent "$dir/launchdaemons.txt" /Library/LaunchDaemons
 w "$dir/launchctl-user.txt" bash -c 'launchctl list | awk "NR>1 && \$3 !~ /^com\\.apple\\./ {print \$3}" | sort'
+w "$dir/launchctl-disabled.txt" bash -c 'launchctl print-disabled "gui/$(id -u)" | awk "/=> disabled/ && \$0 !~ /com\\.apple\\./"'
+w "$dir/pluginkit-findersync.txt" bash -c 'pluginkit -m -v -p com.apple.FinderSync 2>/dev/null | grep -v com.apple || true'
 w "$dir/running-apps.txt" bash -c 'ps -axo comm= | grep -E "^/Applications/|^/System/Applications/" | sed "s|\.app/.*|.app|" | sort -u'
 # Login Items: System Events is unprivileged (user's own Login Items only).
 # The full Background Task Management list is `sfltool dumpbtm`. Unprivileged
