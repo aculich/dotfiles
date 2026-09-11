@@ -1,29 +1,29 @@
 # Skills inventory (generated)
 
-Generated: 2026-09-10T13:15:36Z
+Generated: 2026-09-11T14:46:26Z
 
 ## Summary
 
-- **unique skills**: 189 (372 install rows)
+- **unique skills**: 190 (373 install rows)
 - **authored**: 62 installs / 32 unique
 - **embedded**: 95 installs / 71 unique
 - **experimental**: 1
-- **installed**: 173 installs / 105 unique
+- **installed**: 174 installs / 106 unique
 - **vendor**: 41
 
 ### Provenance (by source type)
 
 - **skill-lock**: 154 installs / 53 unique
 - **frontmatter**: 69 installs / 34 unique
-- **unknown**: 66 installs / 51 unique
+- **unknown**: 67 installs / 52 unique
 - **vendor**: 41
 - **authored**: 34 installs / 31 unique
 - **local-repo**: 8
-- **unresolved** (51): agent-meep, bootstrap-aar, bootstrap-collaborator, bootstrap-product-quickstart, bootstrap-project-umbrella, bootstrap-regen, bootstrap-tool-landscape, bootstrap-tool-quickstart, chaos-containment, cidr-client-share-tags, clarify-audience-purpose, code-to-prd, collab-sync, consulting-rate-card, converge-articulate, create-justfile, cursor-purification, dd-cli-usage, deaccession-guides-and-guards, dev-warmup, discover-channel, divergent-explore, dwim-justfile, dynamic-dev-port, email-send-verify, envision-end-state, github-trending, google-workspace-new-org, hot-livewires-preflight, message-in-a-bottle, op-project-credentials, orx, perks, prd, product-hunt-search, quick-stash, quickstart-fork-lineage, repo-evaluator, report-reforge, retroprd, rowboat-safe-startup, rowboat-upstream-digest, setup-contextualizer, socialmedia-compounding, stale-tooling-trial, standpoint-scenario-forecast, survey-creative-landscape, tidy-stash, tool-landscape-intel, unpack-the-question, voice-contrast-analysis — run `just provenance` (or `scripts/enrich-provenance.py`) to attempt web lookup
+- **unresolved** (52): agent-meep, bootstrap-aar, bootstrap-collaborator, bootstrap-product-quickstart, bootstrap-project-umbrella, bootstrap-regen, bootstrap-tool-landscape, bootstrap-tool-quickstart, change-world-editorial-desk, chaos-containment, cidr-client-share-tags, clarify-audience-purpose, code-to-prd, collab-sync, consulting-rate-card, converge-articulate, create-justfile, cursor-purification, dd-cli-usage, deaccession-guides-and-guards, dev-warmup, discover-channel, divergent-explore, dwim-justfile, dynamic-dev-port, email-send-verify, envision-end-state, github-trending, google-workspace-new-org, hot-livewires-preflight, message-in-a-bottle, op-project-credentials, orx, perks, prd, product-hunt-search, quick-stash, quickstart-fork-lineage, repo-evaluator, report-reforge, retroprd, rowboat-safe-startup, rowboat-upstream-digest, setup-contextualizer, socialmedia-compounding, stale-tooling-trial, standpoint-scenario-forecast, survey-creative-landscape, tidy-stash, tool-landscape-intel, unpack-the-question, voice-contrast-analysis — run `just provenance` (or `scripts/enrich-provenance.py`) to attempt web lookup
 
 ## Global
 
-### cursor-user (128)
+### cursor-user (129)
 
 - `accidental-data-loss-prevention` [authored] — source: https://github.com/aculich/agent-skills
 - `adhd-daily-planner` [authored] — source: https://github.com/aculich/agent-skills
@@ -46,6 +46,7 @@ Generated: 2026-09-10T13:15:36Z
 - `building-data-apps` [vendor] — source: vendor
 - `change-world-critique-quick` [authored] — source: https://github.com/aculich/agent-skills
 - `change-world-critique-quick-full` [authored] — source: https://github.com/aculich/agent-skills
+- `change-world-editorial-desk` [installed] ⚠? — source: unknown
 - `chaos-containment` [installed] ⚠? — source: unknown
 - `chatstory-preserve` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
 - `cidr-bootstrap-project` [authored] — source: https://github.com/aculich/agent-skills
@@ -410,7 +411,7 @@ Generated: 2026-09-10T13:15:36Z
 - `writing-skills` [installed] — source: https://github.com/obra/superpowers
 - `written-communication` [installed] — source: https://github.com/refoundai/lenny-skills
 
-## Project-local (2173)
+## Project-local (2174)
 
 ### `/Users/me/ops/dotfiles-cursor-compendium`
 
@@ -465,6 +466,7 @@ Generated: 2026-09-10T13:15:36Z
 - `capsules-source-to-story` (project-cursor) — `mirrors/by-project/path-storytelling-capsules-12c38336582f/.cursor/skills/capsules-source-to-story/SKILL.md`
 - `change-world-critique-quick` (project-skills-dir) — `mirrors/skills-snapshots/skills/change-world-critique-quick/SKILL.md`
 - `change-world-critique-quick-full` (project-skills-dir) — `mirrors/skills-snapshots/skills/change-world-critique-quick-full/SKILL.md`
+- `change-world-editorial-desk` (project-skills-dir) — `mirrors/skills-snapshots/skills/change-world-editorial-desk/SKILL.md`
 - `chaos-containment` (project-skills-dir) — `mirrors/skills-snapshots/skills/chaos-containment/SKILL.md`
 - `chatstory-preserve` (project-skills-dir) — `mirrors/skills-snapshots/skills/chatstory-preserve/SKILL.md`
 - `chrome-devtools` (project-cursor) — `mirrors/by-project/path-cidr-evictionstory-mn-9f23bc71c2b4/.cursor/skills/chrome-devtools/SKILL.md`

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-10T13:15:36Z",
+  "generated": "2026-09-11T14:46:26Z",
   "compendium_root": "/Users/me/dotfiles/cursor/compendium",
   "monorepo_root": "/Users/me/projects/agent-skills",
   "global": {
@@ -413,6 +413,24 @@
           "canonical_upstream_url": "https://github.com/aculich/agent-skills",
           "confidence": "high",
           "via": "authored-registry"
+        }
+      },
+      {
+        "id": "change-world-editorial-desk",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "cursor-user",
+        "path": "/Users/me/.cursor/skills/change-world-editorial-desk",
+        "resolved_path": "/Users/me/.cursor/skills/change-world-editorial-desk",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "change-world-editorial-desk",
+        "source": {
+          "type": "unknown",
+          "url": null,
+          "confidence": "none",
+          "via": "unresolved"
         }
       },
       {
@@ -8539,6 +8557,15 @@
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
       "relative_path": "mirrors/skills-snapshots/skills/change-world-critique-quick-full/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "change-world-editorial-desk",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/change-world-editorial-desk/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/change-world-editorial-desk/SKILL.md",
       "layout": "project-skills-dir",
       "classification": "embedded"
     },
@@ -27642,11 +27669,11 @@
     }
   ],
   "summary": {
-    "install_rows": 372,
-    "unique_skills": 189,
+    "install_rows": 373,
+    "unique_skills": 190,
     "by_classification": {
       "authored": 62,
-      "installed": 173,
+      "installed": 174,
       "embedded": 95,
       "vendor": 41,
       "experimental": 1
@@ -27655,12 +27682,12 @@
       "authored": 32,
       "embedded": 71,
       "experimental": 1,
-      "installed": 105,
+      "installed": 106,
       "vendor": 41
     },
     "by_source_type": {
       "authored": 34,
-      "unknown": 66,
+      "unknown": 67,
       "skill-lock": 154,
       "local-repo": 8,
       "vendor": 41,
@@ -27671,7 +27698,7 @@
       "frontmatter": 34,
       "local-repo": 8,
       "skill-lock": 53,
-      "unknown": 51,
+      "unknown": 52,
       "vendor": 41
     },
     "broken_symlinks": [],
@@ -27684,6 +27711,7 @@
       "bootstrap-regen",
       "bootstrap-tool-landscape",
       "bootstrap-tool-quickstart",
+      "change-world-editorial-desk",
       "chaos-containment",
       "cidr-client-share-tags",
       "clarify-audience-purpose",
