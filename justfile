@@ -99,6 +99,9 @@ apply-private:
     if [[ -x "$src/script/prefs" ]]; then
         "$src/script/prefs" apply
     fi
+    if [[ -x "$src/script/handlers" ]]; then
+        "$src/script/handlers" apply
+    fi
     if [[ -x "$src/script/vendors-quiet" ]]; then
         "$src/script/vendors-quiet" || true
     fi
