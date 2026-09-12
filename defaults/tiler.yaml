@@ -1,0 +1,33 @@
+# Opt-in. Never applied by 10-macos-defaults or script/setup.
+# Rectangle / FlashSpace own tiling and workspaces; Tahoe must not steal the pointer.
+name: tiler
+kill:
+  - Dock
+  - WindowManager
+logout: true
+keys:
+  - domain: com.apple.dock
+    key: mru-spaces
+    type: bool
+    value: false
+    note: System Settings → Desktop & Dock → Automatically rearrange Spaces based on most recent use (off)
+  - domain: com.apple.dock
+    key: enterMissionControlByTopWindowDrag
+    type: bool
+    value: false
+    note: Dragging a window to the top of the screen must not enter Mission Control
+  - domain: com.apple.WindowManager
+    key: EnableStandardClickToShowDesktop
+    type: bool
+    value: false
+    note: System Settings → Desktop & Dock → Click wallpaper to reveal desktop (off)
+  - domain: com.apple.WindowManager
+    key: EnableTilingByEdgeDrag
+    type: bool
+    value: false
+    note: System Settings → Desktop & Dock → Drag windows to screen edges to tile (off)
+  - domain: com.apple.WindowManager
+    key: EnableTopTilingByEdgeDrag
+    type: bool
+    value: false
+    note: System Settings → Desktop & Dock → Drag windows to menu bar to fill (off)

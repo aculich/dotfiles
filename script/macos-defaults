@@ -1,0 +1,231 @@
+#!/usr/bin/env bash
+# Opt-in macOS defaults packs (trackpad, Spaces, Tahoe windowing).
+# Do NOT call from script/setup or 10-macos-defaults. Taste, not team law.
+#   script/macos-defaults list
+#   script/macos-defaults show [pack]
+#   script/macos-defaults apply <pack>
+#
+# Allowlisted keys only — never `defaults read` a whole domain (tokens).
+# Packs live in $repo/defaults/*.yaml; a private overlay may add
+# ~/src/dotfiles-private/defaults/<name>.yaml. Composite packs `include:`
+# leaves and do not duplicate keys.
+set -euo pipefail
+repo="$(cd "$(dirname "$0")/.." && pwd)"
+# shellcheck source=lib.sh
+. "$repo/script/lib.sh"
+export PATH="${HOMEBREW_PREFIX:-/opt/homebrew}/bin:/opt/homebrew/bin:$PATH"
+
+log() { printf 'macos-defaults: %s\n' "$*"; }
+
+need_yq() {
+  if command -v yq >/dev/null 2>&1; then return 0; fi
+  log "yq missing (wave 2). just bundle 20-data-common"
+  return 1
+}
+
+resolve_pack() {
+  local named="${1:-}"
+  [[ -n "$named" ]] || { log "need a pack name"; return 1; }
+  if [[ -f "$named" ]]; then echo "$named"; return; fi
+  if [[ -f "$HOME/src/dotfiles-private/defaults/${named}.yaml" ]]; then
+    echo "$HOME/src/dotfiles-private/defaults/${named}.yaml"; return
+  fi
+  if [[ -f "$repo/defaults/${named}.yaml" ]]; then
+    echo "$repo/defaults/${named}.yaml"; return
+  fi
+  log "no pack named $named"
+  return 1
+}
+
+read_or_unset() {
+  local domain="$1" key="$2" val
+  if val="$(defaults read "$domain" "$key" 2>/dev/null)"; then
+    printf '%s' "$val"
+  else
+    printf '(unset)'
+  fi
+}
+
+# Apple stores bools as 0/1. Compare after collapsing true/false/YES/NO.
+norm_val() {
+  local v="$1"
+  case "$v" in
+    true|TRUE|yes|YES) echo 1 ;;
+    false|FALSE|no|NO) echo 0 ;;
+    *) echo "$v" ;;
+  esac
+}
+
+cmd_list() {
+  local f name
+  shopt -s nullglob
+  for f in "$repo/defaults"/*.yaml "$HOME/src/dotfiles-private/defaults"/*.yaml; do
+    [[ -f "$f" ]] || continue
+    name="$(basename "$f" .yaml)"
+    if command -v yq >/dev/null 2>&1; then
+      printf '%-24s %s\n' "$name" "$f"
+    else
+      printf '%s\n' "$name"
+    fi
+  done
+}
+
+# Expand include graph depth-first. Prints unique pack file paths.
+# Uses a space-padded seen string (bash 3.2; no associative arrays).
+_expand_files() {
+  local named="$1"
+  local f inc
+  f="$(resolve_pack "$named")" || return 1
+  case " $seen_files " in
+    *" $f "*) return 0 ;;
+  esac
+  seen_files="${seen_files} ${f}"
+  while IFS= read -r inc; do
+    [[ -z "$inc" || "$inc" == null ]] && continue
+    _expand_files "$inc" || return 1
+  done < <("$yq" -r '.include[]?' "$f")
+  printf '%s\n' "$f"
+}
+
+# Emit TSV rows: domain<TAB>key<TAB>type<TAB>value<TAB>also<TAB>note
+# One row per domain (primary, then `also` if set).
+_emit_rows() {
+  local f="$1"
+  # Sentinel "-" for missing `also` — yq @tsv drops empty fields and shifts columns.
+  "$yq" -r '
+    .keys[]? |
+    [.domain, .key, .type, (.value | tostring), (.also // "-"), (.note // "-")]
+    | @tsv
+  ' "$f"
+}
+
+collect_rows() {
+  local pack="$1" f
+  seen_files=""
+  while IFS= read -r f; do
+    [[ -n "$f" ]] || continue
+    _emit_rows "$f"
+  done < <(_expand_files "$pack")
+}
+
+collect_kill() {
+  local pack="$1" f
+  seen_files=""
+  while IFS= read -r f; do
+    [[ -n "$f" ]] || continue
+    "$yq" -r '.kill[]?' "$f"
+  done < <(_expand_files "$pack") | awk 'NF && !seen[$0]++'
+}
+
+collect_logout() {
+  local pack="$1" f flag
+  seen_files=""
+  while IFS= read -r f; do
+    [[ -n "$f" ]] || continue
+    flag="$("$yq" -r '.logout // false' "$f")"
+    [[ "$flag" == "true" ]] && return 0
+  done < <(_expand_files "$pack")
+  return 1
+}
+
+write_key() {
+  local domain="$1" key="$2" typ="$3" value="$4"
+  case "$typ" in
+    bool) defaults write "$domain" "$key" -bool "$value" ;;
+    int) defaults write "$domain" "$key" -int "$value" ;;
+    float) defaults write "$domain" "$key" -float "$value" ;;
+    string) defaults write "$domain" "$key" -string "$value" ;;
+    *) log "unknown type $typ for $domain $key"; return 1 ;;
+  esac
+}
+
+show_pack() {
+  local pack="$1"
+  local domain key typ value also note live live2 status
+  log "show $pack"
+  collect_rows "$pack" | while IFS=$'\t' read -r domain key typ value also note; do
+    [[ -n "$domain" ]] || continue
+    live="$(read_or_unset "$domain" "$key")"
+    if [[ "$(norm_val "$live")" == "$(norm_val "$value")" ]]; then
+      status="ok"
+    else
+      status="DRIFT"
+    fi
+    printf '  %s %s  live=%s  want=%s  %s\n' "$domain" "$key" "$live" "$value" "$status"
+    if [[ -n "$also" && "$also" != "-" ]]; then
+      live2="$(read_or_unset "$also" "$key")"
+      if [[ "$(norm_val "$live2")" == "$(norm_val "$value")" ]]; then
+        status="ok"
+      else
+        status="DRIFT"
+      fi
+      printf '  %s %s  live=%s  want=%s  %s\n' "$also" "$key" "$live2" "$value" "$status"
+    fi
+    [[ -n "$note" && "$note" != "-" ]] && printf '    %s\n' "$note"
+  done
+}
+
+cmd_show() {
+  local pack="${1:-}"
+  if [[ -z "$pack" ]]; then
+    local f name
+    shopt -s nullglob
+    for f in "$repo/defaults"/*.yaml; do
+      name="$(basename "$f" .yaml)"
+      show_pack "$name"
+      echo
+    done
+    return 0
+  fi
+  show_pack "$pack"
+}
+
+cmd_apply() {
+  local pack="${1:-}"
+  [[ -n "$pack" ]] || { log "apply needs a pack name"; return 2; }
+  resolve_pack "$pack" >/dev/null
+  log "apply $pack"
+  local domain key typ value also note proc
+  while IFS=$'\t' read -r domain key typ value also note; do
+    [[ -n "$domain" ]] || continue
+    write_key "$domain" "$key" "$typ" "$value"
+    log "  $domain $key = $value"
+    if [[ -n "$also" && "$also" != "-" ]]; then
+      write_key "$also" "$key" "$typ" "$value"
+      log "  $also $key = $value"
+    fi
+  done < <(collect_rows "$pack")
+
+  while IFS= read -r proc; do
+    [[ -z "$proc" || "$proc" == null ]] && continue
+    killall "$proc" 2>/dev/null || true
+    log "  killed $proc"
+  done < <(collect_kill "$pack")
+
+  if collect_logout "$pack"; then
+    log "some keys need logout/login to match System Settings (Force Click, Spaces order)"
+  fi
+  log "applied $pack"
+}
+
+yq=""
+cmd="${1:-list}"
+case "$cmd" in
+  list) shift || true; cmd_list ;;
+  show)
+    shift || true
+    need_yq || exit 1
+    yq="$(command -v yq)"
+    cmd_show "${1:-}"
+    ;;
+  apply)
+    shift || true
+    need_yq || exit 1
+    yq="$(command -v yq)"
+    cmd_apply "${1:-}"
+    ;;
+  *)
+    echo "usage: script/macos-defaults list | show [pack] | apply <pack>" >&2
+    exit 2
+    ;;
+esac

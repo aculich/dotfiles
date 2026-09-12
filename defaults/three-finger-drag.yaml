@@ -1,0 +1,46 @@
+# Opt-in. Never applied by 10-macos-defaults or script/setup.
+# Three fingers drag a window; four fingers still switch Spaces / Mission Control.
+name: three-finger-drag
+kill:
+  - Dock
+keys:
+  - domain: com.apple.AppleMultitouchTrackpad
+    also: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    key: TrackpadThreeFingerDrag
+    type: bool
+    value: true
+    note: System Settings → Accessibility → Pointer Control → Trackpad Options → Three Finger Drag
+  - domain: com.apple.AppleMultitouchTrackpad
+    also: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    key: TrackpadThreeFingerHorizSwipeGesture
+    type: int
+    value: 0
+    note: Three-finger horizontal swipe off (drag owns three fingers)
+  - domain: com.apple.AppleMultitouchTrackpad
+    also: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    key: TrackpadThreeFingerVertSwipeGesture
+    type: int
+    value: 0
+    note: Three-finger Mission Control / App Exposé off
+  - domain: com.apple.AppleMultitouchTrackpad
+    also: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    key: TrackpadFourFingerHorizSwipeGesture
+    type: int
+    value: 2
+    note: System Settings → Trackpad → More Gestures → Swipe between full-screen apps (four fingers)
+  - domain: com.apple.AppleMultitouchTrackpad
+    also: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    key: TrackpadFourFingerVertSwipeGesture
+    type: int
+    value: 2
+    note: System Settings → Trackpad → More Gestures → Mission Control (four fingers)
+  - domain: com.apple.dock
+    key: showMissionControlGestureEnabled
+    type: bool
+    value: true
+    note: Four-finger Mission Control stays on
+  - domain: com.apple.dock
+    key: showAppExposeGestureEnabled
+    type: bool
+    value: false
+    note: App Exposé three-finger swipe off

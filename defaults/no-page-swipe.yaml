@@ -1,0 +1,9 @@
+# Opt-in. Never applied by 10-macos-defaults or script/setup.
+# Two-finger scroll must not become browser Back/Forward.
+name: no-page-swipe
+keys:
+  - domain: NSGlobalDomain
+    key: AppleEnableSwipeNavigateWithScrolls
+    type: bool
+    value: false
+    note: System Settings → Trackpad → More Gestures → Swipe between pages (off)
