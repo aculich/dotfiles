@@ -1,0 +1,10 @@
+# Opt-in. Never applied by 10-macos-defaults or script/setup.
+# Composite for this machine and for any login that opts in later.
+# Leaf packs hold the keys; this file only names them.
+name: power-user
+include:
+  - force-click-off
+  - no-page-swipe
+  - three-finger-drag
+  - no-notification-swipe
+  - tiler

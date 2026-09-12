@@ -1,0 +1,30 @@
+# Opt-in. Never applied by 10-macos-defaults or script/setup.
+# Extra pressure must not Look Up / Quick Look.
+name: force-click-off
+kill:
+  - Dock
+logout: true
+keys:
+  - domain: NSGlobalDomain
+    key: com.apple.trackpad.forceClick
+    type: bool
+    value: false
+    note: System Settings → Trackpad → Point & Click → Force Click and haptic feedback
+  - domain: com.apple.AppleMultitouchTrackpad
+    also: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    key: ForceSuppressed
+    type: bool
+    value: true
+    note: Suppress Force Click on built-in and Bluetooth trackpads
+  - domain: com.apple.AppleMultitouchTrackpad
+    also: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    key: ActuateDetents
+    type: bool
+    value: false
+    note: No second-stage haptic when pressing harder
+  - domain: com.apple.AppleMultitouchTrackpad
+    also: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    key: TrackpadThreeFingerTapGesture
+    type: int
+    value: 0
+    note: System Settings → Trackpad → Point & Click → Look up & data detectors (off)

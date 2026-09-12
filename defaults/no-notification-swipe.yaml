@@ -1,0 +1,17 @@
+# Opt-in. Never applied by 10-macos-defaults or script/setup.
+# Two-finger from the right edge must not open Notification Center.
+name: no-notification-swipe
+kill:
+  - Dock
+keys:
+  - domain: com.apple.AppleMultitouchTrackpad
+    also: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    key: TrackpadTwoFingerFromRightEdgeSwipeGesture
+    type: int
+    value: 0
+    note: System Settings → Trackpad → More Gestures → Notification Center (off)
+  - domain: com.apple.dock
+    key: showNotificationCenterGestureEnabled
+    type: bool
+    value: false
+    note: Dock-side Notification Center swipe off

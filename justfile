@@ -74,6 +74,11 @@ dock *args:
 login-keep *args:
     "{{repo}}/script/login-keep" {{args}}
 
+# Opt-in trackpad / Spaces / Tahoe windowing packs. Never run by script/setup.
+#   just defaults-pack list | show [pack] | apply <pack>
+defaults-pack *args:
+    "{{repo}}/script/macos-defaults" {{args}}
+
 # Re-apply dotfiles from this repo (hooks re-run only when their inputs changed)
 apply:
     chezmoi apply --source {{repo}}
