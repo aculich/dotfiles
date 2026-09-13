@@ -1,29 +1,29 @@
 # Skills inventory (generated)
 
-Generated: 2026-09-12T15:21:35Z
+Generated: 2026-09-13T15:03:13Z
 
 ## Summary
 
-- **unique skills**: 190 (373 install rows)
+- **unique skills**: 193 (377 install rows)
 - **authored**: 62 installs / 32 unique
-- **embedded**: 95 installs / 71 unique
+- **embedded**: 97 installs / 72 unique
 - **experimental**: 1
 - **installed**: 174 installs / 106 unique
-- **vendor**: 41
+- **vendor**: 43
 
 ### Provenance (by source type)
 
 - **skill-lock**: 154 installs / 53 unique
-- **frontmatter**: 69 installs / 34 unique
+- **frontmatter**: 71 installs / 35 unique
 - **unknown**: 67 installs / 52 unique
-- **vendor**: 41
+- **vendor**: 43
 - **authored**: 34 installs / 31 unique
 - **local-repo**: 8
 - **unresolved** (52): agent-meep, bootstrap-aar, bootstrap-collaborator, bootstrap-product-quickstart, bootstrap-project-umbrella, bootstrap-regen, bootstrap-tool-landscape, bootstrap-tool-quickstart, change-world-editorial-desk, chaos-containment, cidr-client-share-tags, clarify-audience-purpose, code-to-prd, collab-sync, consulting-rate-card, converge-articulate, create-justfile, cursor-purification, dd-cli-usage, deaccession-guides-and-guards, dev-warmup, discover-channel, divergent-explore, dwim-justfile, dynamic-dev-port, email-send-verify, envision-end-state, github-trending, google-workspace-new-org, hot-livewires-preflight, message-in-a-bottle, op-project-credentials, orx, perks, prd, product-hunt-search, quick-stash, quickstart-fork-lineage, repo-evaluator, report-reforge, retroprd, rowboat-safe-startup, rowboat-upstream-digest, setup-contextualizer, socialmedia-compounding, stale-tooling-trial, standpoint-scenario-forecast, survey-creative-landscape, tidy-stash, tool-landscape-intel, unpack-the-question, voice-contrast-analysis — run `just provenance` (or `scripts/enrich-provenance.py`) to attempt web lookup
 
 ## Global
 
-### cursor-user (129)
+### cursor-user (130)
 
 - `accidental-data-loss-prevention` [authored] — source: https://github.com/aculich/agent-skills
 - `adhd-daily-planner` [authored] — source: https://github.com/aculich/agent-skills
@@ -113,6 +113,7 @@ Generated: 2026-09-12T15:21:35Z
 - `notebook-guidance` [vendor] — source: vendor
 - `op-credentials` [authored] — source: https://github.com/aculich/agent-skills
 - `op-project-credentials` [installed] ⚠? — source: unknown
+- `origin-first-gh-mirror` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
 - `orx` [installed] ⚠? — source: unknown
 - `peeq-cidr-meeting` [embedded] (symlink) — source: https://github.com/aculich/google-workspace-tools
 - `pr-to-video` [embedded] (symlink) — source: https://github.com/heygen-com/hyperframes
@@ -155,7 +156,7 @@ Generated: 2026-09-12T15:21:35Z
 - `workers-best-practices` [installed] — source: https://github.com/cloudflare/skills
 - `wrangler` [installed] — source: https://github.com/cloudflare/skills
 
-### cursor-managed (24)
+### cursor-managed (26)
 
 - `automate` [vendor] — source: vendor
 - `autopilot` [vendor] — source: vendor
@@ -164,6 +165,7 @@ Generated: 2026-09-12T15:21:35Z
 - `create-rule` [vendor] — source: vendor
 - `create-skill` [vendor] — source: vendor
 - `create-subagent` [vendor] — source: vendor
+- `deploy-with-vercel` [vendor] — source: vendor
 - `goal` [vendor] — source: vendor
 - `loop` [vendor] — source: vendor
 - `migrate-to-skills` [vendor] — source: vendor
@@ -181,6 +183,7 @@ Generated: 2026-09-12T15:21:35Z
 - `statusline` [vendor] — source: vendor
 - `update-cli-config` [vendor] — source: vendor
 - `update-cursor-settings` [vendor] — source: vendor
+- `visualize` [vendor] — source: vendor
 
 ### claude-user (87)
 
@@ -309,7 +312,7 @@ Generated: 2026-09-12T15:21:35Z
 - `workers-best-practices` [installed] — source: https://github.com/cloudflare/skills
 - `wrangler` [installed] — source: https://github.com/cloudflare/skills
 
-### agents (99)
+### agents (100)
 
 - `accidental-data-loss-prevention` [authored] — source: https://github.com/aculich/agent-skills
 - `adhd-daily-planner` [authored] — source: https://github.com/aculich/agent-skills
@@ -368,6 +371,7 @@ Generated: 2026-09-12T15:21:35Z
 - `music-to-video` [installed] — source: https://github.com/heygen-com/hyperframes
 - `northstar` [experimental] — source: https://github.com/aculich/agent-skills
 - `op-credentials` [authored] — source: https://github.com/aculich/agent-skills
+- `origin-first-gh-mirror` [embedded] (symlink) — source: https://github.com/aculich/agent-skills
 - `orx` [installed] ⚠? — source: unknown
 - `paper-fetch` [installed] — source: https://github.com/agents365-ai/paper-fetch
 - `perks` [installed] ⚠? — source: unknown
@@ -411,7 +415,7 @@ Generated: 2026-09-12T15:21:35Z
 - `writing-skills` [installed] — source: https://github.com/obra/superpowers
 - `written-communication` [installed] — source: https://github.com/refoundai/lenny-skills
 
-## Project-local (2174)
+## Project-local (2175)
 
 ### `/Users/me/ops/dotfiles-cursor-compendium`
 
@@ -606,6 +610,7 @@ Generated: 2026-09-12T15:21:35Z
 - `op-credentials` (project-skills-dir) — `mirrors/skills-snapshots/skills/op-credentials/SKILL.md`
 - `op-credentials` (project-cursor) — `mirrors/by-project/github-tomascupr-sandstorm/.cursor/skills/op-credentials/SKILL.md`
 - `op-project-credentials` (project-skills-dir) — `mirrors/skills-snapshots/skills/op-project-credentials/SKILL.md`
+- `origin-first-gh-mirror` (project-skills-dir) — `mirrors/skills-snapshots/skills/origin-first-gh-mirror/SKILL.md`
 - `orx` (project-skills-dir) — `mirrors/skills-snapshots/skills/orx/SKILL.md`
 - `peeq-cidr-meeting` (project-skills-dir) — `mirrors/skills-snapshots/skills/peeq-cidr-meeting/SKILL.md`
 - `peeq-cidr-meeting` (project-cursor) — `mirrors/by-project/github-aculich-google-workspace-tools/.cursor/skills/peeq-cidr-meeting/SKILL.md`

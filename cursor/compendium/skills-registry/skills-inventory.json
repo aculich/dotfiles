@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-12T15:21:35Z",
+  "generated": "2026-09-13T15:03:13Z",
   "compendium_root": "/Users/me/dotfiles/cursor/compendium",
   "monorepo_root": "/Users/me/projects/agent-skills",
   "global": {
@@ -1819,6 +1819,26 @@
         }
       },
       {
+        "id": "origin-first-gh-mirror",
+        "classification": "embedded",
+        "lifecycle": "curated",
+        "tier": "cursor-user",
+        "path": "/Users/me/.cursor/skills/origin-first-gh-mirror",
+        "resolved_path": "/Users/me/projects/agent-skills/skills/.curated/origin-first-gh-mirror",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": null,
+        "name": "origin-first-gh-mirror",
+        "symlink_target": "/Users/me/projects/agent-skills/skills/.curated/origin-first-gh-mirror",
+        "source": {
+          "type": "frontmatter",
+          "url": "https://github.com/aculich/agent-skills",
+          "confidence": "high",
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
+        }
+      },
+      {
         "id": "orx",
         "classification": "installed",
         "lifecycle": "installed",
@@ -2815,6 +2835,25 @@
         }
       },
       {
+        "id": "deploy-with-vercel",
+        "classification": "vendor",
+        "lifecycle": "installed",
+        "tier": "cursor-managed",
+        "path": "/Users/me/.cursor/skills-cursor/deploy-with-vercel",
+        "resolved_path": "/Users/me/.cursor/skills-cursor/deploy-with-vercel",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "deploy-with-vercel",
+        "source": {
+          "type": "vendor",
+          "url": null,
+          "confidence": "high",
+          "via": "vendor-registry",
+          "note": "vendored bundle / cursor-managed; not a public repo"
+        }
+      },
+      {
         "id": "goal",
         "classification": "vendor",
         "lifecycle": "installed",
@@ -3129,6 +3168,25 @@
         "symlink_ok": true,
         "version": null,
         "name": "update-cursor-settings",
+        "source": {
+          "type": "vendor",
+          "url": null,
+          "confidence": "high",
+          "via": "vendor-registry",
+          "note": "vendored bundle / cursor-managed; not a public repo"
+        }
+      },
+      {
+        "id": "visualize",
+        "classification": "vendor",
+        "lifecycle": "installed",
+        "tier": "cursor-managed",
+        "path": "/Users/me/.cursor/skills-cursor/visualize",
+        "resolved_path": "/Users/me/.cursor/skills-cursor/visualize",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "visualize",
         "source": {
           "type": "vendor",
           "url": null,
@@ -7178,6 +7236,26 @@
         }
       },
       {
+        "id": "origin-first-gh-mirror",
+        "classification": "embedded",
+        "lifecycle": "curated",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/origin-first-gh-mirror",
+        "resolved_path": "/Users/me/projects/agent-skills/skills/.curated/origin-first-gh-mirror",
+        "is_symlink": true,
+        "symlink_ok": true,
+        "version": null,
+        "name": "origin-first-gh-mirror",
+        "symlink_target": "/Users/me/projects/agent-skills/skills/.curated/origin-first-gh-mirror",
+        "source": {
+          "type": "frontmatter",
+          "url": "https://github.com/aculich/agent-skills",
+          "confidence": "high",
+          "via": "frontmatter:upstream",
+          "canonical_upstream_url": "https://github.com/aculich/agent-skills"
+        }
+      },
+      {
         "id": "orx",
         "classification": "installed",
         "lifecycle": "installed",
@@ -9817,6 +9895,15 @@
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
       "relative_path": "mirrors/skills-snapshots/skills/op-project-credentials/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "origin-first-gh-mirror",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/skills-snapshots/skills/origin-first-gh-mirror/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/skills-snapshots/skills/origin-first-gh-mirror/SKILL.md",
       "layout": "project-skills-dir",
       "classification": "embedded"
     },
@@ -27669,37 +27756,37 @@
     }
   ],
   "summary": {
-    "install_rows": 373,
-    "unique_skills": 190,
+    "install_rows": 377,
+    "unique_skills": 193,
     "by_classification": {
       "authored": 62,
       "installed": 174,
-      "embedded": 95,
-      "vendor": 41,
+      "embedded": 97,
+      "vendor": 43,
       "experimental": 1
     },
     "by_classification_unique": {
       "authored": 32,
-      "embedded": 71,
+      "embedded": 72,
       "experimental": 1,
       "installed": 106,
-      "vendor": 41
+      "vendor": 43
     },
     "by_source_type": {
       "authored": 34,
       "unknown": 67,
       "skill-lock": 154,
       "local-repo": 8,
-      "vendor": 41,
-      "frontmatter": 69
+      "vendor": 43,
+      "frontmatter": 71
     },
     "by_source_type_unique": {
       "authored": 31,
-      "frontmatter": 34,
+      "frontmatter": 35,
       "local-repo": 8,
       "skill-lock": 53,
       "unknown": 52,
-      "vendor": 41
+      "vendor": 43
     },
     "broken_symlinks": [],
     "unknown_source": [

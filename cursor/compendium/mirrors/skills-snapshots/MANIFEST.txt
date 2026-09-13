@@ -3,6 +3,7 @@ source: /Users/me/.cursor/{skills,skills-cursor}, /Users/me/.agents/skills
 note: symlinked skills are dereferenced (real content copied into mirror)
 
 ## symlinked skills at snapshot time
+/Users/me/.agents/skills/origin-first-gh-mirror -> /Users/me/projects/agent-skills/skills/.curated/origin-first-gh-mirror
 /Users/me/.agents/skills/scienceskillscommon -> /Users/me/.agents/scienceskillscommon
 /Users/me/.agents/skills/skill-propagate-offshoot -> /Users/me/projects/agent-skills/skills/.experimental/skill-propagate-offshoot
 /Users/me/.cursor/skills/bcal-declutter -> /Users/me/tools/google-workspace-tools/.cursor/skills/bcal-declutter
@@ -26,6 +27,7 @@ note: symlinked skills are dereferenced (real content copied into mirror)
 /Users/me/.cursor/skills/meeting-sync-and-synthesis -> /Users/me/.agents/skills/meeting-sync-and-synthesis
 /Users/me/.cursor/skills/motion-graphics -> ../../.claude/skills/motion-graphics
 /Users/me/.cursor/skills/music-to-video -> ../../.claude/skills/music-to-video
+/Users/me/.cursor/skills/origin-first-gh-mirror -> /Users/me/projects/agent-skills/skills/.curated/origin-first-gh-mirror
 /Users/me/.cursor/skills/peeq-cidr-meeting -> /Users/me/tools/google-workspace-tools/.cursor/skills/peeq-cidr-meeting
 /Users/me/.cursor/skills/pr-to-video -> ../../.claude/skills/pr-to-video
 /Users/me/.cursor/skills/product-launch-video -> ../../.claude/skills/product-launch-video
