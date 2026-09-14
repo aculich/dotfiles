@@ -1,0 +1,5 @@
+# Origin-SoT dual-push (recipe named origin-gh-sync because sync already exists).
+# Pull Origin (ff-only), then push origin and github.
+
+origin-gh-sync:
+    ./scripts/origin-gh-sync.sh

@@ -1,0 +1,5 @@
+# Origin-SoT dual-push. Pull Origin (ff-only), then push origin and github.
+# Installed by origin-first-gh-mirror. Do not point origin at GitHub.
+
+sync:
+    ./scripts/origin-gh-sync.sh
