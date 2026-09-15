@@ -1,22 +1,22 @@
 # Skills inventory (generated)
 
-Generated: 2026-09-14T14:52:49Z
+Generated: 2026-09-15T14:14:36Z
 
 ## Summary
 
-- **unique skills**: 193 (377 install rows)
+- **unique skills**: 192 (376 install rows)
 - **authored**: 62 installs / 32 unique
 - **embedded**: 97 installs / 72 unique
 - **experimental**: 1
 - **installed**: 174 installs / 106 unique
-- **vendor**: 43
+- **vendor**: 42
 
 ### Provenance (by source type)
 
 - **skill-lock**: 154 installs / 53 unique
 - **frontmatter**: 71 installs / 35 unique
 - **unknown**: 67 installs / 52 unique
-- **vendor**: 43
+- **vendor**: 42
 - **authored**: 34 installs / 31 unique
 - **local-repo**: 8
 - **unresolved** (52): agent-meep, bootstrap-aar, bootstrap-collaborator, bootstrap-product-quickstart, bootstrap-project-umbrella, bootstrap-regen, bootstrap-tool-landscape, bootstrap-tool-quickstart, change-world-editorial-desk, chaos-containment, cidr-client-share-tags, clarify-audience-purpose, code-to-prd, collab-sync, consulting-rate-card, converge-articulate, create-justfile, cursor-purification, dd-cli-usage, deaccession-guides-and-guards, dev-warmup, discover-channel, divergent-explore, dwim-justfile, dynamic-dev-port, email-send-verify, envision-end-state, github-trending, google-workspace-new-org, hot-livewires-preflight, message-in-a-bottle, op-project-credentials, orx, perks, prd, product-hunt-search, quick-stash, quickstart-fork-lineage, repo-evaluator, report-reforge, retroprd, rowboat-safe-startup, rowboat-upstream-digest, setup-contextualizer, socialmedia-compounding, stale-tooling-trial, standpoint-scenario-forecast, survey-creative-landscape, tidy-stash, tool-landscape-intel, unpack-the-question, voice-contrast-analysis — run `just provenance` (or `scripts/enrich-provenance.py`) to attempt web lookup
@@ -156,7 +156,7 @@ Generated: 2026-09-14T14:52:49Z
 - `workers-best-practices` [installed] — source: https://github.com/cloudflare/skills
 - `wrangler` [installed] — source: https://github.com/cloudflare/skills
 
-### cursor-managed (26)
+### cursor-managed (25)
 
 - `automate` [vendor] — source: vendor
 - `autopilot` [vendor] — source: vendor
@@ -165,7 +165,6 @@ Generated: 2026-09-14T14:52:49Z
 - `create-rule` [vendor] — source: vendor
 - `create-skill` [vendor] — source: vendor
 - `create-subagent` [vendor] — source: vendor
-- `deploy-with-vercel` [vendor] — source: vendor
 - `goal` [vendor] — source: vendor
 - `loop` [vendor] — source: vendor
 - `migrate-to-skills` [vendor] — source: vendor

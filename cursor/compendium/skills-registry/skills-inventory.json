@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-14T14:52:49Z",
+  "generated": "2026-09-15T14:14:36Z",
   "compendium_root": "/Users/me/dotfiles/cursor/compendium",
   "monorepo_root": "/Users/me/projects/agent-skills",
   "global": {
@@ -2826,25 +2826,6 @@
         "symlink_ok": true,
         "version": null,
         "name": "create-subagent",
-        "source": {
-          "type": "vendor",
-          "url": null,
-          "confidence": "high",
-          "via": "vendor-registry",
-          "note": "vendored bundle / cursor-managed; not a public repo"
-        }
-      },
-      {
-        "id": "deploy-with-vercel",
-        "classification": "vendor",
-        "lifecycle": "installed",
-        "tier": "cursor-managed",
-        "path": "/Users/me/.cursor/skills-cursor/deploy-with-vercel",
-        "resolved_path": "/Users/me/.cursor/skills-cursor/deploy-with-vercel",
-        "is_symlink": false,
-        "symlink_ok": true,
-        "version": null,
-        "name": "deploy-with-vercel",
         "source": {
           "type": "vendor",
           "url": null,
@@ -12539,7 +12520,7 @@
       "skill": "research-project-bootstrap",
       "skill_path": "/Users/me/projects/rrid/alphaxiv-marimo/.cursor/skills/research-project-bootstrap/SKILL.md",
       "project_root": "/Users/me/projects/rrid/alphaxiv-marimo",
-      "project_slug": "path-d8e7b800db3f",
+      "project_slug": "github-com-aculich-alphaxiv-marimo",
       "relative_path": ".cursor/skills/research-project-bootstrap/SKILL.md",
       "layout": "project-cursor",
       "classification": "embedded"
@@ -27756,13 +27737,13 @@
     }
   ],
   "summary": {
-    "install_rows": 377,
-    "unique_skills": 193,
+    "install_rows": 376,
+    "unique_skills": 192,
     "by_classification": {
       "authored": 62,
       "installed": 174,
       "embedded": 97,
-      "vendor": 43,
+      "vendor": 42,
       "experimental": 1
     },
     "by_classification_unique": {
@@ -27770,14 +27751,14 @@
       "embedded": 72,
       "experimental": 1,
       "installed": 106,
-      "vendor": 43
+      "vendor": 42
     },
     "by_source_type": {
       "authored": 34,
       "unknown": 67,
       "skill-lock": 154,
       "local-repo": 8,
-      "vendor": 43,
+      "vendor": 42,
       "frontmatter": 71
     },
     "by_source_type_unique": {
@@ -27786,7 +27767,7 @@
       "local-repo": 8,
       "skill-lock": 53,
       "unknown": 52,
-      "vendor": 43
+      "vendor": 42
     },
     "broken_symlinks": [],
     "unknown_source": [
