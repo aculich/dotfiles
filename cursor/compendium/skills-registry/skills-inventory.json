@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-15T14:14:36Z",
+  "generated": "2026-09-19T14:04:59Z",
   "compendium_root": "/Users/me/dotfiles/cursor/compendium",
   "monorepo_root": "/Users/me/projects/agent-skills",
   "global": {
@@ -123,7 +123,7 @@
           "type": "local-repo",
           "url": "https://github.com/aculich/google-workspace-tools",
           "install_source_url": "https://github.com/aculich/google-workspace-tools",
-          "commit": "514deb1e135f0911dda0389bd6a8cb9d2ce27290",
+          "commit": "56445b9880a643508f675ea4e1befa731bd38c67",
           "local_path": "/Users/me/tools/google-workspace-tools",
           "confidence": "high",
           "via": "git-remote"
@@ -145,7 +145,7 @@
           "type": "local-repo",
           "url": "https://github.com/aculich/google-workspace-tools",
           "install_source_url": "https://github.com/aculich/google-workspace-tools",
-          "commit": "514deb1e135f0911dda0389bd6a8cb9d2ce27290",
+          "commit": "56445b9880a643508f675ea4e1befa731bd38c67",
           "local_path": "/Users/me/tools/google-workspace-tools",
           "confidence": "high",
           "via": "git-remote"
@@ -1053,7 +1053,7 @@
           "type": "local-repo",
           "url": "https://github.com/aculich/google-workspace-tools",
           "install_source_url": "https://github.com/aculich/google-workspace-tools",
-          "commit": "514deb1e135f0911dda0389bd6a8cb9d2ce27290",
+          "commit": "56445b9880a643508f675ea4e1befa731bd38c67",
           "local_path": "/Users/me/tools/google-workspace-tools",
           "confidence": "high",
           "via": "git-remote"
@@ -1872,7 +1872,7 @@
           "type": "local-repo",
           "url": "https://github.com/aculich/google-workspace-tools",
           "install_source_url": "https://github.com/aculich/google-workspace-tools",
-          "commit": "514deb1e135f0911dda0389bd6a8cb9d2ce27290",
+          "commit": "56445b9880a643508f675ea4e1befa731bd38c67",
           "local_path": "/Users/me/tools/google-workspace-tools",
           "confidence": "high",
           "via": "git-remote"
@@ -6108,6 +6108,56 @@
         }
       },
       {
+        "id": "business-model",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/business-model",
+        "resolved_path": "/Users/me/.agents/skills/business-model",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "business-model",
+        "source": {
+          "type": "skill-lock",
+          "url": "https://github.com/phuryn/pm-skills",
+          "install_source_url": "https://github.com/phuryn/pm-skills",
+          "install_ref": "phuryn/pm-skills",
+          "source_type": "github",
+          "folder_hash": "cdbae9e554eaf5efb8379c3dcd4d9a01a66f3d73",
+          "skill_path": "pm-product-strategy/skills/business-model/SKILL.md",
+          "installed_at": "2026-09-19T05:00:39.246Z",
+          "updated_at": "2026-09-19T05:00:39.246Z",
+          "confidence": "high",
+          "via": "skill-lock"
+        }
+      },
+      {
+        "id": "caveman",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/caveman",
+        "resolved_path": "/Users/me/.agents/skills/caveman",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "caveman",
+        "source": {
+          "type": "skill-lock",
+          "url": "https://github.com/juliusbrussee/caveman",
+          "install_source_url": "https://github.com/juliusbrussee/caveman",
+          "install_ref": "juliusbrussee/caveman",
+          "source_type": "github",
+          "folder_hash": "02b646b008b9d1e5b67e5f65fab56fd7073d9212",
+          "skill_path": "skills/caveman/SKILL.md",
+          "installed_at": "2026-09-19T02:14:13.221Z",
+          "updated_at": "2026-09-19T02:14:13.221Z",
+          "confidence": "high",
+          "via": "skill-lock"
+        }
+      },
+      {
         "id": "change-world-critique-quick",
         "classification": "authored",
         "lifecycle": "curated",
@@ -6302,6 +6352,56 @@
         }
       },
       {
+        "id": "competitive-analysis",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/competitive-analysis",
+        "resolved_path": "/Users/me/.agents/skills/competitive-analysis",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": "1.0.0",
+        "name": "competitive-analysis",
+        "source": {
+          "type": "skill-lock",
+          "url": "https://github.com/claude-office-skills/skills",
+          "install_source_url": "https://github.com/claude-office-skills/skills",
+          "install_ref": "claude-office-skills/skills",
+          "source_type": "github",
+          "folder_hash": "fa126169cb4659ca0977ad82bf7acd8847c5dfad",
+          "skill_path": "competitive-analysis/SKILL.md",
+          "installed_at": "2026-09-19T05:00:32.982Z",
+          "updated_at": "2026-09-19T05:00:32.982Z",
+          "confidence": "high",
+          "via": "skill-lock"
+        }
+      },
+      {
+        "id": "competitive-strategy",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/competitive-strategy",
+        "resolved_path": "/Users/me/.agents/skills/competitive-strategy",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "competitive-strategy",
+        "source": {
+          "type": "skill-lock",
+          "url": "https://github.com/refoundai/lenny-skills",
+          "install_source_url": "https://github.com/refoundai/lenny-skills",
+          "install_ref": "refoundai/lenny-skills",
+          "source_type": "github",
+          "folder_hash": "d9f9037e7643e0c01aa0a5b4c24882a0135f5ace",
+          "skill_path": "skills/competitive-strategy/SKILL.md",
+          "installed_at": "2026-09-19T05:00:34.170Z",
+          "updated_at": "2026-09-19T05:00:34.170Z",
+          "confidence": "high",
+          "via": "skill-lock"
+        }
+      },
+      {
         "id": "context-engineering",
         "classification": "authored",
         "lifecycle": "curated",
@@ -6321,6 +6421,31 @@
         }
       },
       {
+        "id": "continuous-discovery",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/continuous-discovery",
+        "resolved_path": "/Users/me/.agents/skills/continuous-discovery",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "continuous-discovery",
+        "source": {
+          "type": "skill-lock",
+          "url": "https://github.com/refoundai/lenny-skills",
+          "install_source_url": "https://github.com/refoundai/lenny-skills",
+          "install_ref": "refoundai/lenny-skills",
+          "source_type": "github",
+          "folder_hash": "bc0e1afa488d26a6b0f0a30ceb314c2fd87b35e4",
+          "skill_path": "skills/continuous-discovery/SKILL.md",
+          "installed_at": "2026-09-19T05:00:36.296Z",
+          "updated_at": "2026-09-19T05:00:40.394Z",
+          "confidence": "high",
+          "via": "skill-lock"
+        }
+      },
+      {
         "id": "converge-articulate",
         "classification": "installed",
         "lifecycle": "installed",
@@ -6336,6 +6461,31 @@
           "url": null,
           "confidence": "none",
           "via": "unresolved"
+        }
+      },
+      {
+        "id": "customer-interviews",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/customer-interviews",
+        "resolved_path": "/Users/me/.agents/skills/customer-interviews",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "customer-interviews",
+        "source": {
+          "type": "skill-lock",
+          "url": "https://github.com/refoundai/lenny-skills",
+          "install_source_url": "https://github.com/refoundai/lenny-skills",
+          "install_ref": "refoundai/lenny-skills",
+          "source_type": "github",
+          "folder_hash": "24a76fab078ffe6d3b56b4036a1e463e392630bf",
+          "skill_path": "skills/customer-interviews/SKILL.md",
+          "installed_at": "2026-09-19T05:00:42.959Z",
+          "updated_at": "2026-09-19T05:00:42.959Z",
+          "confidence": "high",
+          "via": "skill-lock"
         }
       },
       {
@@ -6374,6 +6524,31 @@
           "confidence": "high",
           "via": "frontmatter:upstream",
           "canonical_upstream_url": "https://github.com/aculich/agent-skills"
+        }
+      },
+      {
+        "id": "discovery-interview-prep",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/discovery-interview-prep",
+        "resolved_path": "/Users/me/.agents/skills/discovery-interview-prep",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "discovery-interview-prep",
+        "source": {
+          "type": "skill-lock",
+          "url": "https://github.com/deanpeters/product-manager-skills",
+          "install_source_url": "https://github.com/deanpeters/product-manager-skills",
+          "install_ref": "deanpeters/product-manager-skills",
+          "source_type": "github",
+          "folder_hash": "129291a5c35d4d78e73b82f0c79bd5570b7d5864",
+          "skill_path": "skills/discovery-interview-prep/SKILL.md",
+          "installed_at": "2026-09-19T05:00:39.038Z",
+          "updated_at": "2026-09-19T05:00:39.038Z",
+          "confidence": "high",
+          "via": "skill-lock"
         }
       },
       {
@@ -6460,6 +6635,31 @@
           "url": null,
           "confidence": "none",
           "via": "unresolved"
+        }
+      },
+      {
+        "id": "evaluating-startup-ideas",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/evaluating-startup-ideas",
+        "resolved_path": "/Users/me/.agents/skills/evaluating-startup-ideas",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "evaluating-startup-ideas",
+        "source": {
+          "type": "skill-lock",
+          "url": "https://github.com/refoundai/lenny-skills",
+          "install_source_url": "https://github.com/refoundai/lenny-skills",
+          "install_ref": "refoundai/lenny-skills",
+          "source_type": "github",
+          "folder_hash": "3061b9f3b1844c7e41a01fc81f1815cdeaaf2477",
+          "skill_path": "skills/evaluating-startup-ideas/SKILL.md",
+          "installed_at": "2026-09-19T05:00:48.812Z",
+          "updated_at": "2026-09-19T05:00:48.812Z",
+          "confidence": "high",
+          "via": "skill-lock"
         }
       },
       {
@@ -6782,6 +6982,31 @@
         }
       },
       {
+        "id": "gtm-strategy",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/gtm-strategy",
+        "resolved_path": "/Users/me/.agents/skills/gtm-strategy",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "gtm-strategy",
+        "source": {
+          "type": "skill-lock",
+          "url": "https://github.com/phuryn/pm-skills",
+          "install_source_url": "https://github.com/phuryn/pm-skills",
+          "install_ref": "phuryn/pm-skills",
+          "source_type": "github",
+          "folder_hash": "f0598ffb6219b241d3417b4d2a4d97df4775b456",
+          "skill_path": "pm-go-to-market/skills/gtm-strategy/SKILL.md",
+          "installed_at": "2026-09-19T05:00:43.282Z",
+          "updated_at": "2026-09-19T05:00:43.282Z",
+          "confidence": "high",
+          "via": "skill-lock"
+        }
+      },
+      {
         "id": "hyperframes",
         "classification": "installed",
         "lifecycle": "installed",
@@ -7064,6 +7289,31 @@
         }
       },
       {
+        "id": "measuring-pmf",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/measuring-pmf",
+        "resolved_path": "/Users/me/.agents/skills/measuring-pmf",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "measuring-pmf",
+        "source": {
+          "type": "skill-lock",
+          "url": "https://github.com/refoundai/lenny-skills",
+          "install_source_url": "https://github.com/refoundai/lenny-skills",
+          "install_ref": "refoundai/lenny-skills",
+          "source_type": "github",
+          "folder_hash": "a45d28865388e120fa7d7ddc88438f625f441d65",
+          "skill_path": "skills/measuring-pmf/SKILL.md",
+          "installed_at": "2026-09-19T05:00:37.345Z",
+          "updated_at": "2026-09-19T05:00:37.345Z",
+          "confidence": "high",
+          "via": "skill-lock"
+        }
+      },
+      {
         "id": "media-use",
         "classification": "installed",
         "lifecycle": "installed",
@@ -7318,6 +7568,31 @@
           "skill_path": "skills/portless/SKILL.md",
           "installed_at": "2026-03-08T01:04:37.760Z",
           "updated_at": "2026-07-13T15:12:49.516Z",
+          "confidence": "high",
+          "via": "skill-lock"
+        }
+      },
+      {
+        "id": "positioning",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/positioning",
+        "resolved_path": "/Users/me/.agents/skills/positioning",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "positioning",
+        "source": {
+          "type": "skill-lock",
+          "url": "https://github.com/refoundai/lenny-skills",
+          "install_source_url": "https://github.com/refoundai/lenny-skills",
+          "install_ref": "refoundai/lenny-skills",
+          "source_type": "github",
+          "folder_hash": "c17736a18aba7d98e28d6eb267f073c70af77c05",
+          "skill_path": "skills/positioning/SKILL.md",
+          "installed_at": "2026-09-19T05:00:45.979Z",
+          "updated_at": "2026-09-19T05:00:45.979Z",
           "confidence": "high",
           "via": "skill-lock"
         }
@@ -7878,6 +8153,31 @@
         }
       },
       {
+        "id": "startup-canvas",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/startup-canvas",
+        "resolved_path": "/Users/me/.agents/skills/startup-canvas",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "startup-canvas",
+        "source": {
+          "type": "skill-lock",
+          "url": "https://github.com/phuryn/pm-skills",
+          "install_source_url": "https://github.com/phuryn/pm-skills",
+          "install_ref": "phuryn/pm-skills",
+          "source_type": "github",
+          "folder_hash": "f3405562ab05651cd037c5b922d7fe70e8180545",
+          "skill_path": "pm-product-strategy/skills/startup-canvas/SKILL.md",
+          "installed_at": "2026-09-19T05:00:35.259Z",
+          "updated_at": "2026-09-19T05:00:35.259Z",
+          "confidence": "high",
+          "via": "skill-lock"
+        }
+      },
+      {
         "id": "survey-creative-landscape",
         "classification": "installed",
         "lifecycle": "installed",
@@ -7916,6 +8216,31 @@
           "skill_path": "skills/talking-head-recut/SKILL.md",
           "installed_at": "2026-07-03T12:35:29.663Z",
           "updated_at": "2026-07-03T12:35:29.663Z",
+          "confidence": "high",
+          "via": "skill-lock"
+        }
+      },
+      {
+        "id": "teach",
+        "classification": "installed",
+        "lifecycle": "installed",
+        "tier": "agents",
+        "path": "/Users/me/.agents/skills/teach",
+        "resolved_path": "/Users/me/.agents/skills/teach",
+        "is_symlink": false,
+        "symlink_ok": true,
+        "version": null,
+        "name": "teach",
+        "source": {
+          "type": "skill-lock",
+          "url": "https://github.com/mattpocock/skills",
+          "install_source_url": "https://github.com/mattpocock/skills",
+          "install_ref": "mattpocock/skills",
+          "source_type": "github",
+          "folder_hash": "2ab11f2f51f3c29771edb5d4258d807a49462491",
+          "skill_path": "skills/productivity/teach/SKILL.md",
+          "installed_at": "2026-09-19T02:14:09.060Z",
+          "updated_at": "2026-09-19T02:14:09.060Z",
           "confidence": "high",
           "via": "skill-lock"
         }
@@ -12265,6 +12590,15 @@
       "classification": "embedded"
     },
     {
+      "skill": "interview-coding",
+      "skill_path": "/Users/me/projects/rrid-ucb/rrid-pose-icorps/.cursor/skills/interview-coding/SKILL.md",
+      "project_root": "/Users/me/projects/rrid-ucb/rrid-pose-icorps",
+      "project_slug": "path-51e535d08cc3",
+      "relative_path": ".cursor/skills/interview-coding/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
       "skill": "pilot-comms-calendar",
       "skill_path": "/Users/me/projects/rrid-ucb/rrid-summer2026-pilot/.cursor/skills/pilot-comms-calendar/SKILL.md",
       "project_root": "/Users/me/projects/rrid-ucb/rrid-summer2026-pilot",
@@ -12400,6 +12734,24 @@
       "classification": "embedded"
     },
     {
+      "skill": "web-design-guidelines",
+      "skill_path": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp-design/.agents/skills/web-design-guidelines/SKILL.md",
+      "project_root": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp-design",
+      "project_slug": "github-com-rrid-ucb-rrid-summer2026-webapp-design",
+      "relative_path": ".agents/skills/web-design-guidelines/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "writing-guidelines",
+      "skill_path": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp-design/.agents/skills/writing-guidelines/SKILL.md",
+      "project_root": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp-design",
+      "project_slug": "github-com-rrid-ucb-rrid-summer2026-webapp-design",
+      "relative_path": ".agents/skills/writing-guidelines/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
       "skill": "commit-push-deploy-dev",
       "skill_path": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp-fix-part2-frp8/.agents/skills/commit-push-deploy-dev/SKILL.md",
       "project_root": "/Users/me/projects/rrid-ucb/rrid-summer2026-webapp-fix-part2-frp8",
@@ -12514,6 +12866,15 @@
       "project_slug": "github-com-rrid-ucb-rrid-summer2026-webapp",
       "relative_path": ".agents/skills/zod/SKILL.md",
       "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "transcript-to-todos-gdoc",
+      "skill_path": "/Users/me/projects/rrid-ucb/rrid-transcript-processing/.cursor/skills/transcript-to-todos-gdoc/SKILL.md",
+      "project_root": "/Users/me/projects/rrid-ucb/rrid-transcript-processing",
+      "project_slug": "github-com-rrid-ucb-rrid-transcript-processing",
+      "relative_path": ".cursor/skills/transcript-to-todos-gdoc/SKILL.md",
+      "layout": "project-cursor",
       "classification": "embedded"
     },
     {
@@ -27734,14 +28095,59 @@
       "relative_path": ".cursor/skills/bootstrap-aar/SKILL.md",
       "layout": "project-cursor",
       "classification": "embedded"
+    },
+    {
+      "skill": "update-voiceink",
+      "skill_path": "/Users/me/tools/voiceink-metarepo/.cursor/skills/update-voiceink/SKILL.md",
+      "project_root": "/Users/me/tools/voiceink-metarepo",
+      "project_slug": "github-com-aculich-voiceink-metarepo",
+      "relative_path": ".cursor/skills/update-voiceink/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "mlx-swift",
+      "skill_path": "/Users/me/tools/voiceink-metarepo/forks/personal/.local-build/SourcePackages/checkouts/mlx-swift/skills/mlx-swift/SKILL.md",
+      "project_root": "/Users/me/tools/voiceink-metarepo/forks/personal/.local-build/SourcePackages/checkouts/mlx-swift",
+      "project_slug": "path-eb38650503a6",
+      "relative_path": "skills/mlx-swift/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "mlx-swift-lm",
+      "skill_path": "/Users/me/tools/voiceink-metarepo/forks/personal/.local-build/SourcePackages/checkouts/mlx-swift-lm/skills/mlx-swift-lm/SKILL.md",
+      "project_root": "/Users/me/tools/voiceink-metarepo/forks/personal/.local-build/SourcePackages/checkouts/mlx-swift-lm",
+      "project_slug": "path-678a256db4e6",
+      "relative_path": "skills/mlx-swift-lm/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "mlx-swift",
+      "skill_path": "/Users/me/tools/voiceink-metarepo/forks/team/.local-build/SourcePackages/checkouts/mlx-swift/skills/mlx-swift/SKILL.md",
+      "project_root": "/Users/me/tools/voiceink-metarepo/forks/team/.local-build/SourcePackages/checkouts/mlx-swift",
+      "project_slug": "path-0299640cf860",
+      "relative_path": "skills/mlx-swift/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "mlx-swift-lm",
+      "skill_path": "/Users/me/tools/voiceink-metarepo/forks/team/.local-build/SourcePackages/checkouts/mlx-swift-lm/skills/mlx-swift-lm/SKILL.md",
+      "project_root": "/Users/me/tools/voiceink-metarepo/forks/team/.local-build/SourcePackages/checkouts/mlx-swift-lm",
+      "project_slug": "path-c1e9976bcbe6",
+      "relative_path": "skills/mlx-swift-lm/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
     }
   ],
   "summary": {
-    "install_rows": 376,
-    "unique_skills": 192,
+    "install_rows": 389,
+    "unique_skills": 205,
     "by_classification": {
       "authored": 62,
-      "installed": 174,
+      "installed": 187,
       "embedded": 97,
       "vendor": 42,
       "experimental": 1
@@ -27750,13 +28156,13 @@
       "authored": 32,
       "embedded": 72,
       "experimental": 1,
-      "installed": 106,
+      "installed": 119,
       "vendor": 42
     },
     "by_source_type": {
       "authored": 34,
       "unknown": 67,
-      "skill-lock": 154,
+      "skill-lock": 167,
       "local-repo": 8,
       "vendor": 42,
       "frontmatter": 71
@@ -27765,7 +28171,7 @@
       "authored": 31,
       "frontmatter": 35,
       "local-repo": 8,
-      "skill-lock": 53,
+      "skill-lock": 66,
       "unknown": 52,
       "vendor": 42
     },

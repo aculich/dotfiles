@@ -1,19 +1,19 @@
 # Skills inventory (generated)
 
-Generated: 2026-09-15T14:14:36Z
+Generated: 2026-09-19T14:04:59Z
 
 ## Summary
 
-- **unique skills**: 192 (376 install rows)
+- **unique skills**: 205 (389 install rows)
 - **authored**: 62 installs / 32 unique
 - **embedded**: 97 installs / 72 unique
 - **experimental**: 1
-- **installed**: 174 installs / 106 unique
+- **installed**: 187 installs / 119 unique
 - **vendor**: 42
 
 ### Provenance (by source type)
 
-- **skill-lock**: 154 installs / 53 unique
+- **skill-lock**: 167 installs / 66 unique
 - **frontmatter**: 71 installs / 35 unique
 - **unknown**: 67 installs / 52 unique
 - **vendor**: 42
@@ -311,7 +311,7 @@ Generated: 2026-09-15T14:14:36Z
 - `workers-best-practices` [installed] — source: https://github.com/cloudflare/skills
 - `wrangler` [installed] — source: https://github.com/cloudflare/skills
 
-### agents (100)
+### agents (113)
 
 - `accidental-data-loss-prevention` [authored] — source: https://github.com/aculich/agent-skills
 - `adhd-daily-planner` [authored] — source: https://github.com/aculich/agent-skills
@@ -321,6 +321,8 @@ Generated: 2026-09-15T14:14:36Z
 - `bootstrap-new-project` [authored] — source: https://github.com/aculich/agent-skills
 - `bootstrap-tool-config-repo` [authored] — source: https://github.com/aculich/agent-skills
 - `bootstrap-umbrella-client-project` [authored] — source: https://github.com/aculich/agent-skills
+- `business-model` [installed] — source: https://github.com/phuryn/pm-skills
+- `caveman` [installed] — source: https://github.com/juliusbrussee/caveman
 - `change-world-critique-quick` [authored] — source: https://github.com/aculich/agent-skills
 - `change-world-critique-quick-full` [authored] — source: https://github.com/aculich/agent-skills
 - `cidr-bootstrap-project` [authored] — source: https://github.com/aculich/agent-skills
@@ -330,14 +332,20 @@ Generated: 2026-09-15T14:14:36Z
 - `cloudflare-one` [installed] — source: https://github.com/cloudflare/skills
 - `cloudflare-one-migrations` [installed] — source: https://github.com/cloudflare/skills
 - `compendium-discover-projects` [authored] — source: https://github.com/aculich/agent-skills
+- `competitive-analysis` [installed] — source: https://github.com/claude-office-skills/skills
+- `competitive-strategy` [installed] — source: https://github.com/refoundai/lenny-skills
 - `context-engineering` [authored] — source: https://github.com/aculich/agent-skills
+- `continuous-discovery` [installed] — source: https://github.com/refoundai/lenny-skills
 - `converge-articulate` [installed] ⚠? — source: unknown
+- `customer-interviews` [installed] — source: https://github.com/refoundai/lenny-skills
 - `deeplistening-method-synthesis` [authored] — source: https://github.com/aculich/agent-skills
 - `deeplistening-session-analysis` [authored] — source: https://github.com/aculich/agent-skills
+- `discovery-interview-prep` [installed] — source: https://github.com/deanpeters/product-manager-skills
 - `divergent-explore` [installed] ⚠? — source: unknown
 - `durable-objects` [installed] — source: https://github.com/cloudflare/skills
 - `embedded-captions` [installed] — source: https://github.com/heygen-com/hyperframes
 - `envision-end-state` [installed] ⚠? — source: unknown
+- `evaluating-startup-ideas` [installed] — source: https://github.com/refoundai/lenny-skills
 - `executive-briefing` [installed] — source: https://github.com/anthropics/claude-agent-sdk-demos
 - `faceless-explainer` [installed] — source: https://github.com/heygen-com/hyperframes
 - `find-skills` [installed] — source: https://github.com/vercel-labs/skills
@@ -351,6 +359,7 @@ Generated: 2026-09-15T14:14:36Z
 - `google-agents-cli-publish` [installed] — source: https://github.com/google/agents-cli
 - `google-agents-cli-scaffold` [installed] — source: https://github.com/google/agents-cli
 - `google-agents-cli-workflow` [installed] — source: https://github.com/google/agents-cli
+- `gtm-strategy` [installed] — source: https://github.com/phuryn/pm-skills
 - `hyperframes` [installed] — source: https://github.com/heygen-com/hyperframes
 - `hyperframes-animation` [installed] — source: https://github.com/heygen-com/hyperframes
 - `hyperframes-cli` [installed] — source: https://github.com/heygen-com/hyperframes
@@ -363,6 +372,7 @@ Generated: 2026-09-15T14:14:36Z
 - `limitless-takeout-search` [authored] — source: https://github.com/aculich/agent-skills
 - `limitless-takeout-update` [authored] — source: https://github.com/aculich/agent-skills
 - `luminary-tech-radar` [authored] — source: https://github.com/aculich/agent-skills
+- `measuring-pmf` [installed] — source: https://github.com/refoundai/lenny-skills
 - `media-use` [installed] — source: https://github.com/heygen-com/hyperframes
 - `meeting-sync` [authored] — source: https://github.com/aculich/agent-skills
 - `meeting-sync-and-synthesis` [authored] — source: https://github.com/aculich/agent-skills
@@ -375,6 +385,7 @@ Generated: 2026-09-15T14:14:36Z
 - `paper-fetch` [installed] — source: https://github.com/agents365-ai/paper-fetch
 - `perks` [installed] ⚠? — source: unknown
 - `portless` [installed] — source: https://github.com/vercel-labs/portless
+- `positioning` [installed] — source: https://github.com/refoundai/lenny-skills
 - `pr-to-video` [installed] — source: https://github.com/heygen-com/hyperframes
 - `process-umbrella-incoming` [authored] — source: https://github.com/aculich/agent-skills
 - `product-launch-video` [installed] — source: https://github.com/heygen-com/hyperframes
@@ -401,8 +412,10 @@ Generated: 2026-09-15T14:14:36Z
 - `specstory-project-stats` [authored] — source: https://github.com/aculich/agent-skills
 - `specstory-session-summary` [authored] — source: https://github.com/aculich/agent-skills
 - `specstory-yak` [authored] — source: https://github.com/aculich/agent-skills
+- `startup-canvas` [installed] — source: https://github.com/phuryn/pm-skills
 - `survey-creative-landscape` [installed] ⚠? — source: unknown
 - `talking-head-recut` [installed] — source: https://github.com/heygen-com/hyperframes
+- `teach` [installed] — source: https://github.com/mattpocock/skills
 - `tools-quickstart-bootstrap` [authored] — source: https://github.com/aculich/agent-skills
 - `turnstile-spin` [installed] — source: https://github.com/cloudflare/skills
 - `unpack-the-question` [installed] ⚠? — source: unknown
@@ -414,7 +427,7 @@ Generated: 2026-09-15T14:14:36Z
 - `writing-skills` [installed] — source: https://github.com/obra/superpowers
 - `written-communication` [installed] — source: https://github.com/refoundai/lenny-skills
 
-## Project-local (2175)
+## Project-local (2184)
 
 ### `/Users/me/ops/dotfiles-cursor-compendium`
 
@@ -1013,6 +1026,10 @@ Generated: 2026-09-15T14:14:36Z
 
 - `rrid-meta-coord` (project-cursor) — `.cursor/skills/rrid-meta-coord/SKILL.md`
 
+### `/Users/me/projects/rrid-ucb/rrid-pose-icorps`
+
+- `interview-coding` (project-cursor) — `.cursor/skills/interview-coding/SKILL.md`
+
 ### `/Users/me/projects/rrid-ucb/rrid-summer2026-pilot`
 
 - `pilot-comms-calendar` (project-cursor) — `.cursor/skills/pilot-comms-calendar/SKILL.md`
@@ -1036,6 +1053,8 @@ Generated: 2026-09-15T14:14:36Z
 ### `/Users/me/projects/rrid-ucb/rrid-summer2026-webapp-design`
 
 - `hats-session-status` (project-cursor) — `.cursor/skills/hats-session-status/SKILL.md`
+- `web-design-guidelines` (project-skills-dir) — `.agents/skills/web-design-guidelines/SKILL.md`
+- `writing-guidelines` (project-skills-dir) — `.agents/skills/writing-guidelines/SKILL.md`
 
 ### `/Users/me/projects/rrid-ucb/rrid-summer2026-webapp-fix-part2-frp8`
 
@@ -1052,6 +1071,10 @@ Generated: 2026-09-15T14:14:36Z
 - `web-design-guidelines` (project-skills-dir) — `.agents/skills/web-design-guidelines/SKILL.md`
 - `webapp-testing` (project-skills-dir) — `.agents/skills/webapp-testing/SKILL.md`
 - `zod` (project-skills-dir) — `.agents/skills/zod/SKILL.md`
+
+### `/Users/me/projects/rrid-ucb/rrid-transcript-processing`
+
+- `transcript-to-todos-gdoc` (project-cursor) — `.cursor/skills/transcript-to-todos-gdoc/SKILL.md`
 
 ### `/Users/me/projects/rrid/alphaxiv-marimo`
 
@@ -3157,3 +3180,20 @@ Generated: 2026-09-15T14:14:36Z
 ### `/Users/me/tools/voiceink-metarepo`
 
 - `bootstrap-aar` (project-cursor) — `.cursor/skills/bootstrap-aar/SKILL.md`
+- `update-voiceink` (project-cursor) — `.cursor/skills/update-voiceink/SKILL.md`
+
+### `/Users/me/tools/voiceink-metarepo/forks/personal/.local-build/SourcePackages/checkouts/mlx-swift`
+
+- `mlx-swift` (project-skills-dir) — `skills/mlx-swift/SKILL.md`
+
+### `/Users/me/tools/voiceink-metarepo/forks/personal/.local-build/SourcePackages/checkouts/mlx-swift-lm`
+
+- `mlx-swift-lm` (project-skills-dir) — `skills/mlx-swift-lm/SKILL.md`
+
+### `/Users/me/tools/voiceink-metarepo/forks/team/.local-build/SourcePackages/checkouts/mlx-swift`
+
+- `mlx-swift` (project-skills-dir) — `skills/mlx-swift/SKILL.md`
+
+### `/Users/me/tools/voiceink-metarepo/forks/team/.local-build/SourcePackages/checkouts/mlx-swift-lm`
+
+- `mlx-swift-lm` (project-skills-dir) — `skills/mlx-swift-lm/SKILL.md`
