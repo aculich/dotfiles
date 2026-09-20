@@ -44,6 +44,36 @@ Import Extension from `~/.config/raycast/extensions/cursor-classic`.
 Search Recent Projects defaults to **Folders + Workspaces** (local folders and
 `.code-workspace` files). **All Types** still includes individual files.
 
+## GitHub searches (labels AND vs OR)
+
+The Store issues UI ANDs selected labels. This product needs OR because the
+listing was renamed (`cursor-recent-projects` → `cursor`):
+
+```bash
+cd ~/dotfiles/cursor
+just open-cursor-github          # print + open encoded searches
+just fetch-cursor-github         # JSON + timelines under upstream/raw/ (gitignored)
+```
+
+Triage: [upstream/TRIAGE.md](upstream/TRIAGE.md). Precision query:
+
+`label:"extension: cursor" OR label:"extension: cursor-recent-projects"`
+
+Sibling labels (`cursor-directory`, `cursor-agents`, `cursor-costs`,
+`open-in-cursor`, `cursors`, `where-is-my-cursor`) are other Store extensions.
+
+## Command audit (`--classic`)
+
+| Command | How it opens Cursor | `--classic` |
+| --- | --- | --- |
+| Search Recent Projects (local folder / `.code-workspace`) | `openInClassicCursor` via `ProjectContext` | already |
+| Open with Cursor | same helper | already |
+| Open New Window | `openNewClassicWindow` | already |
+| Show Active Workspaces | AppleScript `activate` + `AXRaise` on an existing window | do not add — focus, not open |
+| Search Recent Projects (remote / SSH rows) | `cursor://vscode-remote/...` URL | bypasses wrapper; only if Agents Window shows up |
+| Show Installed Extensions → Open in Cursor | `cursor:extension/{id}` URL | same; low priority |
+| Install / Uninstall Extension | hardcoded `Cursor.app/.../bin/cursor --install-extension` | do not add — CLI subcommand, and it should bypass the PATH wrapper |
+
 ## Re-sync from upstream
 
 ```bash

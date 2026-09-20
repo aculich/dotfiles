@@ -16,6 +16,7 @@ dotfiles   := parent_directory(cursor_dir)
 compendium := env_var_or_default("CURSOR_COMPENDIUM_ROOT", cursor_dir / "compendium")
 agent_skills := env_var_or_default("AGENT_SKILLS_ROOT", home_directory() / "projects" / "agent-skills")
 scripts    := cursor_dir / "scripts"
+classic_ext := cursor_dir / "raycast/cursor-classic-extension"
 mirror     := cursor_dir / "compendium/mirrors/skills-snapshots"
 inventory  := compendium / "skills-registry/skills-inventory.json"
 
@@ -215,6 +216,16 @@ install-raycast-classic:
 [group('config')]
 develop-raycast-classic:
     @"{{scripts}}/develop-raycast-classic-extension.sh"
+
+# Open OR/keyword GitHub searches for Store Cursor + cursor-recent-projects
+[group('config')]
+open-cursor-github:
+    @"{{classic_ext}}/scripts/open-github-searches.sh"
+
+# Sync labeled + keyword issues/PRs and timelines next to the fork
+[group('config')]
+fetch-cursor-github:
+    @"{{classic_ext}}/upstream/fetch.sh"
 
 # Show whether the Store Cursor extension JS is still patched (should be clean)
 [group('config')]

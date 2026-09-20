@@ -1,5 +1,8 @@
 .DS_Store
+# Third-party clones (any path named upstream/). Exception: Cursor Classic Store archive.
 upstream/
+!cursor/raycast/cursor-classic-extension/upstream/
+!cursor/raycast/cursor-classic-extension/upstream/**
 .vscode/extensions/*
 .op_session
 .envrc
