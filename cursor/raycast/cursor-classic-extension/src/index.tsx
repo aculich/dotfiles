@@ -33,7 +33,7 @@ import { getGitBranch } from "./utils/git";
 
 export default function Command(props: LaunchProps<{ launchContext: LaunchContext }>) {
   const { data, isLoading, error, ...removeMethods } = useRecentEntries();
-  const [type, setType] = useState<EntryType | null>(null);
+  const [type, setType] = useState<EntryType>(EntryType.FoldersAndWorkspaces);
   const { pinnedEntries, ...pinnedMethods } = usePinnedEntries();
 
   if (error) {
@@ -70,18 +70,22 @@ export default function Command(props: LaunchProps<{ launchContext: LaunchContex
   );
 }
 
+const DROPDOWN_TOP_LEVEL = new Set<string>([EntryType.FoldersAndWorkspaces, EntryType.AllTypes]);
+
 function EntryTypeDropdown(props: { onChange: (type: EntryType) => void }) {
   return (
     <ListOrGridDropdown
+      id="entry-type-v2"
       tooltip="Filter project types"
-      defaultValue={EntryType.AllTypes}
+      defaultValue={EntryType.FoldersAndWorkspaces}
       storeValue
       onChange={(value) => props.onChange(value as EntryType)}
     >
-      <ListOrGridDropdownItem title="All Types" value="All Types" />
+      <ListOrGridDropdownItem title={EntryType.FoldersAndWorkspaces} value={EntryType.FoldersAndWorkspaces} />
+      <ListOrGridDropdownItem title={EntryType.AllTypes} value={EntryType.AllTypes} />
       <ListOrGridDropdownSection>
         {Object.values(EntryType)
-          .filter((key) => key !== "All Types")
+          .filter((key) => !DROPDOWN_TOP_LEVEL.has(key))
           .sort()
           .map((key) => (
             <ListOrGridDropdownItem key={key} title={key} value={key} />

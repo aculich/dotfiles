@@ -88,24 +88,29 @@ export function isSameEntry(a: EntryLike, b: EntryLike) {
 
 // Filters
 
+export function isFolderOrWorkspace(entry: EntryLike): boolean {
+  return isFolderEntry(entry) || isWorkspaceEntry(entry);
+}
+
 export function filterEntriesByType(filter: EntryType | null) {
   switch (filter) {
-    case "All Types":
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      return (entry: EntryLike) => true;
-    case "Workspaces":
+    case EntryType.AllTypes:
+      return (_entry: EntryLike) => true;
+    case EntryType.FoldersAndWorkspaces:
+    case null:
+      return isFolderOrWorkspace;
+    case EntryType.Workspaces:
       return isWorkspaceEntry;
-    case "Folders":
+    case EntryType.Folders:
       return isFolderEntry;
-    case "Remote Folders":
+    case EntryType.RemoteFolders:
       return isRemoteEntry;
-    case "Remote Workspace":
+    case EntryType.RemoteWorkspace:
       return isRemoteWorkspaceEntry;
-    case "Files":
+    case EntryType.Files:
       return isFileEntry;
     default:
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      return (entry: EntryLike) => false;
+      return isFolderOrWorkspace;
   }
 }
 

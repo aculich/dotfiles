@@ -33,6 +33,7 @@ export type RecentEntries = {
 };
 
 export enum EntryType {
+  FoldersAndWorkspaces = "Folders + Workspaces",
   Workspaces = "Workspaces",
   Folders = "Folders",
   RemoteFolders = "Remote Folders",

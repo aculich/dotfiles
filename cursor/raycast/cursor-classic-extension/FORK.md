@@ -41,6 +41,9 @@ There is no separate Cursor project for Raycast extensions. Source of truth is
 this folder inside `~/dotfiles/cursor`. Opening macosx-tools is fine; do not
 Import Extension from `~/.config/raycast/extensions/cursor-classic`.
 
+Search Recent Projects defaults to **Folders + Workspaces** (local folders and
+`.code-workspace` files). **All Types** still includes individual files.
+
 ## Re-sync from upstream
 
 ```bash

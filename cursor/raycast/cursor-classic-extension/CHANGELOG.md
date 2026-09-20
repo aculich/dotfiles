@@ -1,5 +1,9 @@
 # Cursor Changelog
 
+## [Cursor Classic] - 2026-09-20
+
+- Default Search Recent Projects filter is **Folders + Workspaces** (local folders and `.code-workspace` files). Use **All Types** when you also want individual files.
+
 ## [New Feature] - 2026-06-15
 
 - Add "Show Active Workspaces" command to list and switch between open Cursor windows
