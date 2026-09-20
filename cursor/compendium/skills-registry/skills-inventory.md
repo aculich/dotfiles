@@ -1,6 +1,6 @@
 # Skills inventory (generated)
 
-Generated: 2026-09-19T14:04:59Z
+Generated: 2026-09-20T14:50:29Z
 
 ## Summary
 
@@ -427,7 +427,7 @@ Generated: 2026-09-19T14:04:59Z
 - `writing-skills` [installed] — source: https://github.com/obra/superpowers
 - `written-communication` [installed] — source: https://github.com/refoundai/lenny-skills
 
-## Project-local (2184)
+## Project-local (2186)
 
 ### `/Users/me/ops/dotfiles-cursor-compendium`
 
@@ -592,6 +592,7 @@ Generated: 2026-09-19T14:04:59Z
 - `hyperframes-media` (project-skills-dir) — `mirrors/skills-snapshots/skills/hyperframes-media/SKILL.md`
 - `hyperframes-registry` (project-skills-dir) — `mirrors/skills-snapshots/skills/hyperframes-registry/SKILL.md`
 - `impl-snapshot` (project-cursor) — `mirrors/by-project/github-aculich-chatstory/.cursor/skills/impl-snapshot/SKILL.md`
+- `interview-coding` (project-cursor) — `mirrors/by-project/path-rrid-pose-icorps-51e535d08cc3/.cursor/skills/interview-coding/SKILL.md`
 - `just-doit` (project-cursor) — `mirrors/by-project/github-aculich-ucsf-capralab-briefing/.cursor/skills/just-doit/SKILL.md`
 - `kiln-add-model` (project-cursor) — `mirrors/by-project/orphan-kiln__kiln-ai-4b129dc7c9/.cursor/skills/kiln-add-model/SKILL.md`
 - `kiln-check-deprecation` (project-cursor) — `mirrors/by-project/orphan-kiln__kiln-ai-4b129dc7c9/.cursor/skills/kiln-check-deprecation/SKILL.md`
@@ -690,6 +691,7 @@ Generated: 2026-09-19T14:04:59Z
 - `troubleshooting` (project-cursor) — `mirrors/by-project/path-cidr-evictionstory-mn-9f23bc71c2b4/.cursor/skills/troubleshooting/SKILL.md`
 - `turnstile-spin` (project-skills-dir) — `mirrors/skills-snapshots/skills/turnstile-spin/SKILL.md`
 - `unpack-the-conversation` (project-cursor) — `mirrors/by-project/path-cidr-org-4bd8f5480d99/.cursor/skills/unpack-the-conversation/SKILL.md`
+- `update-voiceink` (project-cursor) — `mirrors/by-project/path-voiceink-metarepo-ce2c121ea9fe/.cursor/skills/update-voiceink/SKILL.md`
 - `voice-contrast-analysis` (project-skills-dir) — `mirrors/skills-snapshots/skills/voice-contrast-analysis/SKILL.md`
 - `vue-best-practices` (project-cursor) — `mirrors/by-project/path-writing-income-e2d299d8b155/.cursor/skills/vue-best-practices/SKILL.md`
 - `web-perf` (project-skills-dir) — `mirrors/skills-snapshots/skills/web-perf/SKILL.md`

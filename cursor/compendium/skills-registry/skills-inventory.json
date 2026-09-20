@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-19T14:04:59Z",
+  "generated": "2026-09-20T14:50:29Z",
   "compendium_root": "/Users/me/dotfiles/cursor/compendium",
   "monorepo_root": "/Users/me/projects/agent-skills",
   "global": {
@@ -9935,6 +9935,15 @@
       "classification": "embedded"
     },
     {
+      "skill": "interview-coding",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/path-rrid-pose-icorps-51e535d08cc3/.cursor/skills/interview-coding/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-rrid-pose-icorps-51e535d08cc3/.cursor/skills/interview-coding/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
       "skill": "just-doit",
       "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/github-aculich-ucsf-capralab-briefing/.cursor/skills/just-doit/SKILL.md",
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
@@ -10813,6 +10822,15 @@
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
       "relative_path": "mirrors/by-project/path-cidr-org-4bd8f5480d99/.cursor/skills/unpack-the-conversation/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "update-voiceink",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/path-voiceink-metarepo-ce2c121ea9fe/.cursor/skills/update-voiceink/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-voiceink-metarepo-ce2c121ea9fe/.cursor/skills/update-voiceink/SKILL.md",
       "layout": "project-cursor",
       "classification": "embedded"
     },
