@@ -155,6 +155,12 @@ Present in [settings.json](../settings.json):
 
 Many Agents toggles from screenshots are **UI-only** (not mirrored here).
 
+## Startup / Agents Window vs classic IDE
+
+There is **no** `settings.json` key that makes workspace opens land in the classic IDE. CLI default: [cursor-classic-ide.md](cursor-classic-ide.md) (`just install-classic-cli`).
+
+**UI-only (dock / app icon):** Cursor Settings (`Cmd+Shift+J`) → **General → Startup → Window Restoration** → **Last Used Windows**. Quit from an Editor window so restore does not loop on Agents Window. Palette **Open IDE** switches an already-open Agents session.
+
 ## Power-user checklist (summary)
 
 1. Keep **Auto-Approve Mode Transitions Off**.

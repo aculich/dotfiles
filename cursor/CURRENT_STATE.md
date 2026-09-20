@@ -16,6 +16,13 @@ This document maps the current state of Cursor configuration, including existing
 - **Purpose**: Editor settings and preferences
 - **Validation**: ✅ Symlink is valid and target exists
 
+#### Cursor CLI (`--classic` wrapper)
+- **Source**: `~/dotfiles/cursor/scripts/cursor-classic-wrapper.sh`
+- **Targets**: `/opt/homebrew/bin/cursor` and (when writable) `/usr/local/bin/cursor`
+- **Leaves alone**: `~/.local/bin/cursor` when it is Cursor’s `cursor.com/install` agent shim
+- **Install**: `just install-classic-cli` — see [docs/cursor-classic-ide.md](docs/cursor-classic-ide.md)
+- **Interactive zsh**: `zsh/aliases.d/10-cursor-classic.zsh`
+
 #### 2. Keybindings Configuration
 - **Source**: `~/dotfiles/cursor/keybindings.json`
 - **Target**: `~/Library/Application Support/Cursor/User/keybindings.json`

@@ -92,6 +92,7 @@ Going forward: prefer fewer long-lived chats per active workspace; archive finis
 
 ## 5. Related docs in this tree
 
+- [cursor-classic-ide.md](cursor-classic-ide.md) — make `cursor` open the classic IDE (`--classic` wrapper)
 - [cursor-cloud-agents-vs-local.md](cursor-cloud-agents-vs-local.md) — Cloud vs local Agent
 - [cursor-home-and-plans.md](cursor-home-and-plans.md) — `~/.cursor` inventory patterns
 - [MULTIROOT-cursor-lifecycle.md](MULTIROOT-cursor-lifecycle.md) — chat history / export community tools

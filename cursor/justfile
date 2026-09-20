@@ -191,6 +191,46 @@ compendium-sync-scripts:
 config-snapshot:
     @"{{scripts}}/snapshot-cursor-config.sh"
 
+# Make `cursor` open the classic IDE (inject --classic; see docs/cursor-classic-ide.md)
+[group('config')]
+install-classic-cli:
+    @"{{scripts}}/install-cursor-classic-cli.sh"
+
+# Show whether `cursor` on PATH is the classic wrapper or Cursor.app CLI
+[group('config')]
+classic-cli-status:
+    @"{{scripts}}/install-cursor-classic-cli.sh" --status
+
+# Restore official Cursor.app `cursor` symlinks (undo classic wrapper)
+[group('config')]
+uninstall-classic-cli:
+    @"{{scripts}}/install-cursor-classic-cli.sh" --undo
+
+# Add Cursor Classic Raycast script commands (fallback; do not rewrite Store JS)
+[group('config')]
+install-raycast-classic:
+    @"{{scripts}}/install-raycast-classic-scripts.sh"
+
+# Register the local Cursor Classic Raycast extension (npm install + ray develop)
+[group('config')]
+develop-raycast-classic:
+    @"{{scripts}}/develop-raycast-classic-extension.sh"
+
+# Show whether the Store Cursor extension JS is still patched (should be clean)
+[group('config')]
+raycast-cursor-status:
+    @python3 "{{scripts}}/patch-raycast-cursor-classic.py" --status
+
+# Restore Store Cursor extension JS from pre-patch backups if any remain
+[group('config')]
+unpatch-raycast-cursor:
+    @python3 "{{scripts}}/patch-raycast-cursor-classic.py" --undo
+
+# Retired: Store JS rewrite is rejected by Raycast integrity checks
+[group('config')]
+patch-raycast-cursor:
+    @python3 "{{scripts}}/patch-raycast-cursor-classic.py"
+
 # ------------------------------------------------------------------
 # Resources / DWIM
 # ------------------------------------------------------------------

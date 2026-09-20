@@ -15,6 +15,8 @@ Companion to [MULTIROOT.md](MULTIROOT.md). That page covers **layout** (multi-ro
 
 **Friction to validate locally:** Community threads report uneven behavior (e.g. chat context favoring the first folder, repeated re-indexing when adding roots). Treat those as **signals to test**, not guarantees—see [MULTIROOT.md §2](MULTIROOT.md) for links.
 
+**Opening a workspace file:** Cursor 3 may send `.code-workspace` opens to the Agents Window. This repo wraps `cursor` so it injects `--classic` (classic IDE). See [cursor-classic-ide.md](cursor-classic-ide.md). Prefer `cursor path/to/file.code-workspace` over `open -a Cursor …`.
+
 ---
 
 ## 2. Renaming or moving a project directory

@@ -125,6 +125,7 @@ Repo boundary reminder:
 
 ## 6. Related in this repo
 
+- [cursor-origin-github-backup.md](cursor-origin-github-backup.md) — Origin-first (Start from scratch) local clone + private GitHub backup; official Sync from GitHub is the other direction
 - [CURSOR3-worktrees.md](CURSOR3-worktrees.md) — Cursor 3 playbook (includes when Cloud *is* a good default for long runs)
 - [MULTIROOT.md](MULTIROOT.md) — multi-root vs cloud checkout caveats
 - [MULTIROOT-cursor-lifecycle.md](MULTIROOT-cursor-lifecycle.md) — chats, renames, plans

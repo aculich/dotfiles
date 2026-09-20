@@ -24,6 +24,7 @@ Version-pinned architecture and tooling research (Cursor **3.13.25** / Nightly):
 - **[docs/cursor-architecture.md](docs/cursor-architecture.md)** — top-down mental model
 - **[docs/cursor-storage-map.md](docs/cursor-storage-map.md)** — on-disk / SQLite / plans / canvases
 - **[docs/cursor-settings-guide.md](docs/cursor-settings-guide.md)** — annotated settings (screenshots in `docs/assets/`)
+- **[docs/cursor-classic-ide.md](docs/cursor-classic-ide.md)** — `cursor --classic` wrapper so workspaces open in the IDE, not Agents Window
 - **[docs/cursor-canvases.md](docs/cursor-canvases.md)** — managed canvas paths + VCS patterns
 - **[docs/cursor-tools-superprd.md](docs/cursor-tools-superprd.md)** — cross-tool SuperPRD matrices
 - **[docs/cursor-tools-ontology.md](docs/cursor-tools-ontology.md)** — awesome-list provenance + tiers
