@@ -1,6 +1,6 @@
 # Skills inventory (generated)
 
-Generated: 2026-09-20T14:50:29Z
+Generated: 2026-09-21T13:15:37Z
 
 ## Summary
 
@@ -427,7 +427,7 @@ Generated: 2026-09-20T14:50:29Z
 - `writing-skills` [installed] — source: https://github.com/obra/superpowers
 - `written-communication` [installed] — source: https://github.com/refoundai/lenny-skills
 
-## Project-local (2186)
+## Project-local (2187)
 
 ### `/Users/me/ops/dotfiles-cursor-compendium`
 
@@ -627,6 +627,7 @@ Generated: 2026-09-20T14:50:29Z
 - `orx` (project-skills-dir) — `mirrors/skills-snapshots/skills/orx/SKILL.md`
 - `peeq-cidr-meeting` (project-skills-dir) — `mirrors/skills-snapshots/skills/peeq-cidr-meeting/SKILL.md`
 - `peeq-cidr-meeting` (project-cursor) — `mirrors/by-project/github-aculich-google-workspace-tools/.cursor/skills/peeq-cidr-meeting/SKILL.md`
+- `peeq-module2-sync` (project-cursor) — `mirrors/by-project/path-module-2-00a58d8de35b/.cursor/skills/peeq-module2-sync/SKILL.md`
 - `personnel-render` (project-cursor) — `mirrors/by-project/orphan-kit-512fba8992/.cursor/skills/personnel-render/SKILL.md`
 - `playwright` (project-cursor) — `mirrors/by-project/orphan-onyx-dot-app__onyx-8fd24b84f9/.cursor/skills/playwright/SKILL.md`
 - `pr-to-video` (project-skills-dir) — `mirrors/skills-snapshots/skills/pr-to-video/SKILL.md`

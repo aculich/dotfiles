@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-20T14:50:29Z",
+  "generated": "2026-09-21T13:15:37Z",
   "compendium_root": "/Users/me/dotfiles/cursor/compendium",
   "monorepo_root": "/Users/me/projects/agent-skills",
   "global": {
@@ -123,7 +123,7 @@
           "type": "local-repo",
           "url": "https://github.com/aculich/google-workspace-tools",
           "install_source_url": "https://github.com/aculich/google-workspace-tools",
-          "commit": "56445b9880a643508f675ea4e1befa731bd38c67",
+          "commit": "57ca8b05acf4656c929f1d3fa59ad954b5daca19",
           "local_path": "/Users/me/tools/google-workspace-tools",
           "confidence": "high",
           "via": "git-remote"
@@ -145,7 +145,7 @@
           "type": "local-repo",
           "url": "https://github.com/aculich/google-workspace-tools",
           "install_source_url": "https://github.com/aculich/google-workspace-tools",
-          "commit": "56445b9880a643508f675ea4e1befa731bd38c67",
+          "commit": "57ca8b05acf4656c929f1d3fa59ad954b5daca19",
           "local_path": "/Users/me/tools/google-workspace-tools",
           "confidence": "high",
           "via": "git-remote"
@@ -1053,7 +1053,7 @@
           "type": "local-repo",
           "url": "https://github.com/aculich/google-workspace-tools",
           "install_source_url": "https://github.com/aculich/google-workspace-tools",
-          "commit": "56445b9880a643508f675ea4e1befa731bd38c67",
+          "commit": "57ca8b05acf4656c929f1d3fa59ad954b5daca19",
           "local_path": "/Users/me/tools/google-workspace-tools",
           "confidence": "high",
           "via": "git-remote"
@@ -1872,7 +1872,7 @@
           "type": "local-repo",
           "url": "https://github.com/aculich/google-workspace-tools",
           "install_source_url": "https://github.com/aculich/google-workspace-tools",
-          "commit": "56445b9880a643508f675ea4e1befa731bd38c67",
+          "commit": "57ca8b05acf4656c929f1d3fa59ad954b5daca19",
           "local_path": "/Users/me/tools/google-workspace-tools",
           "confidence": "high",
           "via": "git-remote"
@@ -10246,6 +10246,15 @@
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
       "relative_path": "mirrors/by-project/github-aculich-google-workspace-tools/.cursor/skills/peeq-cidr-meeting/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "peeq-module2-sync",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/path-module-2-00a58d8de35b/.cursor/skills/peeq-module2-sync/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/path-module-2-00a58d8de35b/.cursor/skills/peeq-module2-sync/SKILL.md",
       "layout": "project-cursor",
       "classification": "embedded"
     },
