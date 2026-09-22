@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-21T13:15:37Z",
+  "generated": "2026-09-22T13:15:37Z",
   "compendium_root": "/Users/me/dotfiles/cursor/compendium",
   "monorepo_root": "/Users/me/projects/agent-skills",
   "global": {
@@ -8540,6 +8540,15 @@
       "classification": "embedded"
     },
     {
+      "skill": "admin-invoice-draft",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/github-cidrlab-llc-admin/.cursor/skills/admin-invoice-draft/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-cidrlab-llc-admin/.cursor/skills/admin-invoice-draft/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
       "skill": "admin-outbound-calendar",
       "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/github-cidrlab-llc-admin/.cursor/skills/admin-outbound-calendar/SKILL.md",
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
@@ -9104,6 +9113,15 @@
       "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
       "relative_path": "mirrors/skills-snapshots/skills/code-to-prd/SKILL.md",
       "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "codegraphcontext",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/orphan-codegraphcontext__codegraphcon-e5e6b57bf1/.cursor/skills/codegraphcontext/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/orphan-codegraphcontext__codegraphcon-e5e6b57bf1/.cursor/skills/codegraphcontext/SKILL.md",
+      "layout": "project-cursor",
       "classification": "embedded"
     },
     {
@@ -11605,6 +11623,15 @@
       "project_root": "/Users/me/projects/cidr-org/library__cidrlab",
       "project_slug": "github-com-cidrlab-library",
       "relative_path": ".cursor/skills/cidr-letterhead/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
+      "skill": "admin-invoice-draft",
+      "skill_path": "/Users/me/projects/cidr-org/llc-admin/.cursor/skills/admin-invoice-draft/SKILL.md",
+      "project_root": "/Users/me/projects/cidr-org/llc-admin",
+      "project_slug": "github-com-cidrlab-llc-admin",
+      "relative_path": ".cursor/skills/admin-invoice-draft/SKILL.md",
       "layout": "project-cursor",
       "classification": "embedded"
     },

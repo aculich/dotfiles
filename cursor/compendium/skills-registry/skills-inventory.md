@@ -1,6 +1,6 @@
 # Skills inventory (generated)
 
-Generated: 2026-09-21T13:15:37Z
+Generated: 2026-09-22T13:15:37Z
 
 ## Summary
 
@@ -427,7 +427,7 @@ Generated: 2026-09-21T13:15:37Z
 - `writing-skills` [installed] — source: https://github.com/obra/superpowers
 - `written-communication` [installed] — source: https://github.com/refoundai/lenny-skills
 
-## Project-local (2187)
+## Project-local (2190)
 
 ### `/Users/me/ops/dotfiles-cursor-compendium`
 
@@ -437,6 +437,7 @@ Generated: 2026-09-21T13:15:37Z
 - `adhd-daily-planner` (project-skills-dir) — `mirrors/skills-snapshots/skills/adhd-daily-planner/SKILL.md`
 - `adhdev` (project-cursor) — `mirrors/by-project/path-storytelling-capsules-12c38336582f/.cursor/skills/adhdev/SKILL.md`
 - `adhdev-engineering-partnership` (project-skills-dir) — `mirrors/skills-snapshots/skills/adhdev-engineering-partnership/SKILL.md`
+- `admin-invoice-draft` (project-cursor) — `mirrors/by-project/github-cidrlab-llc-admin/.cursor/skills/admin-invoice-draft/SKILL.md`
 - `admin-outbound-calendar` (project-cursor) — `mirrors/by-project/github-cidrlab-llc-admin/.cursor/skills/admin-outbound-calendar/SKILL.md`
 - `admin-outbound-mail` (project-cursor) — `mirrors/by-project/github-cidrlab-llc-admin/.cursor/skills/admin-outbound-mail/SKILL.md`
 - `agent-meep` (project-skills-dir) — `mirrors/skills-snapshots/skills/agent-meep/SKILL.md`
@@ -500,6 +501,7 @@ Generated: 2026-09-21T13:15:37Z
 - `cloudflare-one` (project-skills-dir) — `mirrors/skills-snapshots/skills/cloudflare-one/SKILL.md`
 - `cloudflare-one-migrations` (project-skills-dir) — `mirrors/skills-snapshots/skills/cloudflare-one-migrations/SKILL.md`
 - `code-to-prd` (project-skills-dir) — `mirrors/skills-snapshots/skills/code-to-prd/SKILL.md`
+- `codegraphcontext` (project-cursor) — `mirrors/by-project/orphan-codegraphcontext__codegraphcon-e5e6b57bf1/.cursor/skills/codegraphcontext/SKILL.md`
 - `collab-sync` (project-skills-dir) — `mirrors/skills-snapshots/skills/collab-sync/SKILL.md`
 - `collab-sync` (project-cursor) — `mirrors/by-project/orphan-from-atoz-dunegon-c6b39c15b5/.cursor/skills/collab-sync/SKILL.md`
 - `collab-sync` (project-cursor) — `mirrors/by-project/github-aculich-from-atoz-private/.cursor/skills/collab-sync/SKILL.md`
@@ -850,6 +852,7 @@ Generated: 2026-09-21T13:15:37Z
 
 ### `/Users/me/projects/cidr-org/llc-admin`
 
+- `admin-invoice-draft` (project-cursor) — `.cursor/skills/admin-invoice-draft/SKILL.md`
 - `admin-outbound-calendar` (project-cursor) — `.cursor/skills/admin-outbound-calendar/SKILL.md`
 - `admin-outbound-mail` (project-cursor) — `.cursor/skills/admin-outbound-mail/SKILL.md`
 - `docs-feedback-wait` (project-cursor) — `.cursor/skills/docs-feedback-wait/SKILL.md`
