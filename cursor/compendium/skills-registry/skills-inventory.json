@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-22T13:15:37Z",
+  "generated": "2026-09-23T13:15:36Z",
   "compendium_root": "/Users/me/dotfiles/cursor/compendium",
   "monorepo_root": "/Users/me/projects/agent-skills",
   "global": {
@@ -11198,7 +11198,7 @@
       "skill": "android-auto-dhu",
       "skill_path": "/Users/me/projects/agy-android-macos-setup/templates/workspace-skeleton/.agents/skills/android-auto-dhu/SKILL.md",
       "project_root": "/Users/me/projects/agy-android-macos-setup",
-      "project_slug": "path-7c301c865d78",
+      "project_slug": "github-com-aculich-agy-android-macos-setup",
       "relative_path": "templates/workspace-skeleton/.agents/skills/android-auto-dhu/SKILL.md",
       "layout": "project-skills-dir",
       "classification": "embedded"
@@ -11207,7 +11207,7 @@
       "skill": "android-auto-dhu",
       "skill_path": "/Users/me/projects/agy-android-macos-setup/.agents/skills/android-auto-dhu/SKILL.md",
       "project_root": "/Users/me/projects/agy-android-macos-setup",
-      "project_slug": "path-7c301c865d78",
+      "project_slug": "github-com-aculich-agy-android-macos-setup",
       "relative_path": ".agents/skills/android-auto-dhu/SKILL.md",
       "layout": "project-skills-dir",
       "classification": "embedded"
@@ -11216,7 +11216,7 @@
       "skill": "android-cli",
       "skill_path": "/Users/me/projects/agy-android-macos-setup/templates/workspace-skeleton/.agents/skills/android-cli/SKILL.md",
       "project_root": "/Users/me/projects/agy-android-macos-setup",
-      "project_slug": "path-7c301c865d78",
+      "project_slug": "github-com-aculich-agy-android-macos-setup",
       "relative_path": "templates/workspace-skeleton/.agents/skills/android-cli/SKILL.md",
       "layout": "project-skills-dir",
       "classification": "embedded"
@@ -11225,7 +11225,7 @@
       "skill": "android-cli",
       "skill_path": "/Users/me/projects/agy-android-macos-setup/.agents/skills/android-cli/SKILL.md",
       "project_root": "/Users/me/projects/agy-android-macos-setup",
-      "project_slug": "path-7c301c865d78",
+      "project_slug": "github-com-aculich-agy-android-macos-setup",
       "relative_path": ".agents/skills/android-cli/SKILL.md",
       "layout": "project-skills-dir",
       "classification": "embedded"
@@ -11234,7 +11234,7 @@
       "skill": "android-doctor",
       "skill_path": "/Users/me/projects/agy-android-macos-setup/templates/workspace-skeleton/.agents/skills/android-doctor/SKILL.md",
       "project_root": "/Users/me/projects/agy-android-macos-setup",
-      "project_slug": "path-7c301c865d78",
+      "project_slug": "github-com-aculich-agy-android-macos-setup",
       "relative_path": "templates/workspace-skeleton/.agents/skills/android-doctor/SKILL.md",
       "layout": "project-skills-dir",
       "classification": "embedded"
@@ -11243,7 +11243,7 @@
       "skill": "android-doctor",
       "skill_path": "/Users/me/projects/agy-android-macos-setup/.agents/skills/android-doctor/SKILL.md",
       "project_root": "/Users/me/projects/agy-android-macos-setup",
-      "project_slug": "path-7c301c865d78",
+      "project_slug": "github-com-aculich-agy-android-macos-setup",
       "relative_path": ".agents/skills/android-doctor/SKILL.md",
       "layout": "project-skills-dir",
       "classification": "embedded"
