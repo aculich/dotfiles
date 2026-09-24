@@ -1,5 +1,5 @@
 import { createContext, useContext, ReactNode } from "react";
-import { showHUD } from "@raycast/api";
+import { closeMainWindow, showHUD } from "@raycast/api";
 import { run } from "../integrations/cursor-directory";
 import { runAppleScriptSync } from "run-applescript";
 import { LaunchContext } from "../integrations/types";
@@ -15,6 +15,8 @@ const ProjectContext = createContext<ProjectContextType | undefined>(undefined);
 export function ProjectProvider({ children, launchContext }: { children: ReactNode; launchContext?: LaunchContext }) {
   const openProject = async (uri: string, closeOtherWindows: boolean) => {
     try {
+      // Dismiss Raycast as soon as a project is chosen; the open continues in the background.
+      const closingRaycast = closeMainWindow({ clearRootSearch: true });
       if (closeOtherWindows) {
         runAppleScriptSync(`
             tell application "System Events"
@@ -26,7 +28,7 @@ export function ProjectProvider({ children, launchContext }: { children: ReactNo
             end tell
             `);
       }
-      await openInClassicCursor(uri);
+      await Promise.all([closingRaycast, openInClassicCursor(uri)]);
 
       const { cursorDirectory, callbackLaunchOptions } = launchContext || {};
 

@@ -44,6 +44,9 @@ Import Extension from `~/.config/raycast/extensions/cursor-classic`.
 Search Recent Projects defaults to **Folders + Workspaces** (local folders and
 `.code-workspace` files). **All Types** still includes individual files.
 
+Choosing a local project calls `closeMainWindow` and `openInClassicCursor`
+together, so the Raycast window dismisses while Cursor starts.
+
 ## GitHub searches (labels AND vs OR)
 
 The Store issues UI ANDs selected labels. This product needs OR because the
