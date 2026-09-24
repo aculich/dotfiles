@@ -1,6 +1,6 @@
 # Skills inventory (generated)
 
-Generated: 2026-09-23T13:15:36Z
+Generated: 2026-09-24T13:15:39Z
 
 ## Summary
 
@@ -427,7 +427,7 @@ Generated: 2026-09-23T13:15:36Z
 - `writing-skills` [installed] — source: https://github.com/obra/superpowers
 - `written-communication` [installed] — source: https://github.com/refoundai/lenny-skills
 
-## Project-local (2190)
+## Project-local (2193)
 
 ### `/Users/me/ops/dotfiles-cursor-compendium`
 
@@ -631,6 +631,7 @@ Generated: 2026-09-23T13:15:36Z
 - `peeq-cidr-meeting` (project-cursor) — `mirrors/by-project/github-aculich-google-workspace-tools/.cursor/skills/peeq-cidr-meeting/SKILL.md`
 - `peeq-module2-sync` (project-cursor) — `mirrors/by-project/path-module-2-00a58d8de35b/.cursor/skills/peeq-module2-sync/SKILL.md`
 - `personnel-render` (project-cursor) — `mirrors/by-project/orphan-kit-512fba8992/.cursor/skills/personnel-render/SKILL.md`
+- `plain-prose` (project-cursor) — `mirrors/by-project/github-evictionresearch-ern-boundless-metarepo/.cursor/skills/plain-prose/SKILL.md`
 - `playwright` (project-cursor) — `mirrors/by-project/orphan-onyx-dot-app__onyx-8fd24b84f9/.cursor/skills/playwright/SKILL.md`
 - `pr-to-video` (project-skills-dir) — `mirrors/skills-snapshots/skills/pr-to-video/SKILL.md`
 - `prd` (project-skills-dir) — `mirrors/skills-snapshots/skills/prd/SKILL.md`
@@ -898,6 +899,10 @@ Generated: 2026-09-23T13:15:36Z
 - `superpowers-writing-plans` (project-skills-dir) — `.skills/skills/superpowers-writing-plans/SKILL.md`
 - `youtube-channel-catchup` (project-cursor) — `.cursor/skills/youtube-channel-catchup/SKILL.md`
 
+### `/Users/me/projects/ern-boundless-metarepo`
+
+- `plain-prose` (project-cursor) — `.cursor/skills/plain-prose/SKILL.md`
+
 ### `/Users/me/projects/from-atoz-dunegon`
 
 - `bootstrap-collaborator` (project-cursor) — `.cursor/skills/bootstrap-collaborator/SKILL.md`
@@ -1015,6 +1020,10 @@ Generated: 2026-09-23T13:15:36Z
 - `wip-distill` (project-skills-dir) — `skills/wip-distill/SKILL.md`
 - `wip-harvest` (project-skills-dir) — `skills/wip-harvest/SKILL.md`
 - `wip-publish` (project-skills-dir) — `skills/wip-publish/SKILL.md`
+
+### `/Users/me/projects/plain-prose-skill`
+
+- `plain-prose` (project-skills-dir) — `skills/plain-prose/SKILL.md`
 
 ### `/Users/me/projects/proposal-studio`
 

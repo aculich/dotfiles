@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-23T13:15:36Z",
+  "generated": "2026-09-24T13:15:39Z",
   "compendium_root": "/Users/me/dotfiles/cursor/compendium",
   "monorepo_root": "/Users/me/projects/agent-skills",
   "global": {
@@ -10286,6 +10286,15 @@
       "classification": "embedded"
     },
     {
+      "skill": "plain-prose",
+      "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/github-evictionresearch-ern-boundless-metarepo/.cursor/skills/plain-prose/SKILL.md",
+      "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
+      "project_slug": "github-com-aculich-dotfiles-cursor-compendium",
+      "relative_path": "mirrors/by-project/github-evictionresearch-ern-boundless-metarepo/.cursor/skills/plain-prose/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
       "skill": "playwright",
       "skill_path": "/Users/me/ops/dotfiles-cursor-compendium/mirrors/by-project/orphan-onyx-dot-app__onyx-8fd24b84f9/.cursor/skills/playwright/SKILL.md",
       "project_root": "/Users/me/ops/dotfiles-cursor-compendium",
@@ -11897,6 +11906,15 @@
       "classification": "embedded"
     },
     {
+      "skill": "plain-prose",
+      "skill_path": "/Users/me/projects/ern-boundless-metarepo/.cursor/skills/plain-prose/SKILL.md",
+      "project_root": "/Users/me/projects/ern-boundless-metarepo",
+      "project_slug": "github-com-evictionresearch-ern-boundless-metarepo",
+      "relative_path": ".cursor/skills/plain-prose/SKILL.md",
+      "layout": "project-cursor",
+      "classification": "embedded"
+    },
+    {
       "skill": "bootstrap-collaborator",
       "skill_path": "/Users/me/projects/from-atoz-dunegon/.cursor/skills/bootstrap-collaborator/SKILL.md",
       "project_root": "/Users/me/projects/from-atoz-dunegon",
@@ -12550,6 +12568,15 @@
       "project_root": "/Users/me/projects/peeq-voicegen-audiocast",
       "project_slug": "github-com-aculich-peeq-voicegen-audiocast",
       "relative_path": "skills/wip-publish/SKILL.md",
+      "layout": "project-skills-dir",
+      "classification": "embedded"
+    },
+    {
+      "skill": "plain-prose",
+      "skill_path": "/Users/me/projects/plain-prose-skill/skills/plain-prose/SKILL.md",
+      "project_root": "/Users/me/projects/plain-prose-skill",
+      "project_slug": "github-com-aculich-plain-prose-skill",
+      "relative_path": "skills/plain-prose/SKILL.md",
       "layout": "project-skills-dir",
       "classification": "embedded"
     },
